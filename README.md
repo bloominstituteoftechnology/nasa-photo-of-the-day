@@ -1,68 +1,113 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Module Project: Component Side Effects- NASA APOD
 
-## Available Scripts
+In this project you will consume the NASA API to fetch the "Astromony Photo Of The Day" or APOD. Once you fetch the data, you will build a few components that will render different pieces of data in your interface.
 
-In the project directory, you can run:
+## Instructions
 
-### `npm start`
+---
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Read these instructions carefully. Understand exactly what is expected before starting this project.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Commits
 
-### `npm test`
+Commit your code regularly and meaningfully. This helps both you and your team lead in case you ever need to return to old code for any number of reasons.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Description
 
-### `npm run build`
+In this project you will build out a calculator using React. You have been given a design file to follow, and a data file to include for your button components to display.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project Set Up
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This project was put together using create-react-app (CRA). You will not need to install CRA in order to make this project work. Follow the steps below to setup the project with the proper dependencies.
 
-### `npm run eject`
+- [ ] Create a forked copy of this project.
+- [ ] Add your team lead as collaborator on Github.
+- [ ] Clone your OWN version of the repository in your terminal
+- [ ] CD into the project base directory `cd component-calculator`
+- [ ] Download project dependencies by running one of these two commands `yarn` or `npm install`
+- [ ] Using the same command tool (yarn or npm) start up the app using `yarn start` or `npm start`
+- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
+      Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+- [ ] Push commits: git push origin `<firstName-lastName>`.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Follow these steps for completing your project.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [ ] Submit a Pull-Request to merge Branch into master (student's Repository). **Please don't merge your own pull request**
+- [ ] Add your team lead as a reviewer on the pull-request
+- [ ] Your team lead will count the project as complete by merging the branch back into master.
+- [ ] Do your magic!
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# _Project - NASA APOD_
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- This is a really fun project, and one to show your family and friends when you've finished.
+- You will be starting from scratch and building the entire app
+- You don't have any design specs to follow for this project, so you may want to start by building a basic wireframe first. Make it simple at the beginning, since you don't know what data you'll be getting back from NASA
+- Once you get the data back, there may be more than you expected, or less than you expected, so your design plans may change. That's totally fine, and very normal in the real world. Just make the proper adjustments and move forward!
 
-## Learn More
+## Directions
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**STEP 1 - Planning**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- If you want, this is the time to make a simple design spec (look up "simple wireframes" to see and example)
+- Once you have a design plan in mind, break down the designs into individual components
+- Plan which components will hold state, what data each needs from props (if any), and where you will be making your data fetch
+- Now it's time to jump into the code!
 
-### Code Splitting
+**Step 2 - File structure**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+- Take a look at what you planned and create the folders and files you need for each component
+- Leave most of them blank for now - You need to get your data from the API before you can really get these built
 
-### Analyzing the Bundle Size
+**Step 3 - Fetching the Data**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+- In `App.js` (or where ever you wanted to fetch the data) add state for the data you'll be getting from NASA
+- Add an effect hook to handle the API call side effect
+- Go to the [NASA APOD API docs](https://api.nasa.gov/api.html#apod) and read through the docs to see how to make the API call
+- You don't _need_ an API key, but feel free to get one if you'd like
+- Using the endpoint given, fetch the data using `axios`
+- In your `.then()` make sure to console.log the response so you can get your first look at the data 😃
+- Before you add your data to state, make sure your effect hook has a dependency array (probably empty, since we don't want this effect synced up to any state/props), otherwise you will start an infinite loop, and you will exceed the API rate limits of the DEMO_KEY and need to use a real API_KEY:
 
-### Making a Progressive Web App
+DEMO KEY rate limits:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+> Hourly Limit: 30 requests per IP address per hour
+> Daily Limit: 50 requests per IP address per day
 
-### Advanced Configuration
+_Note: if the photo url is NOT a photo, you will need to learn how to display a video in a React app on your own, OR just fetch the APOD from a different date by adding this to the back of the API endpoint: `&date=2012-03-14`_
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+**STEP 4 - Adding the Data to State**
 
-### Deployment
+- Once you have made the call correctly, and logged the data, add the data to the state property you built
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+**STEP 5 - Display the Data**
+Now is the time to build out your other components. Compose your UI, and then pass the data to your children components via props so you can render it on the DOM.
 
-### `npm run build` fails to minify
+## _MVP Requirements:_
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- Use the effect hook to fetch the APOD data when the component mounts
+- Display the APOD data in different components that are composed to build your UI
+
+## Pro Tips:
+
+- You may run into an error where your components try to access object properties before your data is finished being fetched - ie. `Cannot read property 'url' of undefined`. This means that the data you passed as props is undefined, when you were expecting it to be an object. You can fix this by simply adding something like this to any component that needs to read data from your state object:
+
+```js
+// Display a loading message while the data is fetching
+if (!props.photoOfTheDay) return <h3>Loading...</h3>;
+
+// Display your component as normal after the data has been fetched
+return (
+  {* your normal JSX here *}
+);
+```
+
+- Read through the API docs carefully. You will read through technical docs a lot as a developer, so start now to try and understand them.
+
+## Stretch Problems
+
+Do not attempt stretch problems until MVP has been reached and a final commit has been made.
+
+- Notice the optional query param `date`? You can pass a different date in your url like this `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2012-03-14` to get the APOD from a different date. Add a date dropdown that allows you to select a different date and see that APOD. This will be quite a bit of work, but it will be a fantastic exercise to go through a little more complicated logic and interaction in your app. This is also a very common type of interaction, so it would be good to try this out
+- Make another app that consumes another one of NASA's other APIs listed on the same website
