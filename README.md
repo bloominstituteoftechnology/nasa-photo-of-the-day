@@ -14,7 +14,7 @@ Commit your code regularly and meaningfully. This helps both you and your team l
 
 ## Description
 
-In this project you will build out a calculator using React. You have been given a design file to follow, and a data file to include for your button components to display.
+In this project you will build out a appication to show the nasa photo of the day.
 
 ## Project Set Up
 
