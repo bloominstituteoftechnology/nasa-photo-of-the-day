@@ -19,7 +19,7 @@ function MediaCard(props) {
           <img src={props.media.hdurl} alt="media" className="image" />
         </div>
       );
-    } else if (props.media.media_type === "video") {
+    } else {
       return (
         <div className="media-container">
           <iframe

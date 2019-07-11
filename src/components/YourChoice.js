@@ -34,7 +34,7 @@ function YourChoice() {
       <h3>Your Choice</h3>
 
       <form onSubmit={handleSubmit}>
-        <label htmlFor="dateInput">Pick a Date </label>
+        <label htmlFor="dateInput">Pick a Earlier Date: </label>
         <input
           type="date"
           id="date"
