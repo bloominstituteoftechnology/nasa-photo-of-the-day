@@ -1,40 +1,32 @@
 import React from "react";
 import Loader from "react-loader-spinner";
 import Moment from "react-moment";
+import { Image, Container, Grid } from "semantic-ui-react";
 
 function MediaCard(props) {
-  console.log(props);
+  const loading = () => {
+    return (
+      <>
+        <Loader type="ThreeDots" color="#00BFFF" height="100" width="100" />
+        <p>Loading...</p>
+      </>
+    );
+  };
 
-  function cardContent() {
-    if (!props.media) {
+  const mediaType = () => {
+    if (props.media.media_type === "image") {
       return (
-        <>
-          <Loader type="ThreeDots" color="#00BFFF" height="100" width="100" />
-          <p>Loading...</p>
-        </>
-      );
-    } else if (props.media.media_type === "image") {
-      return (
-        <div className="media-container">
-          <img src={props.media.hdurl} alt="media" className="image" />
-        </div>
+        <Image src={props.media.hdurl} alt="media" className="image" fluid />
       );
     } else {
-      return (
-        <div className="media-container">
-          <iframe
-            src={props.media.url}
-            title={props.media.title}
-            className="video"
-          />
-        </div>
-      );
+      return <iframe src={props.media.url} title="video" height="100%" />;
     }
-  }
+  };
 
   return (
     <div className="card-container">
-      {cardContent()} <h3>{props.media.title}</h3>
+      {!props.media ? loading() : mediaType()}
+      <h3>{props.media.title}</h3>
       <span>
         Shared by NASA on{" "}
         <Moment format="MMMM DD, YYYY">{props.media.date}</Moment>
