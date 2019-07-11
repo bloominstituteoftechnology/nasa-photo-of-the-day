@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import moment from "moment";
 
 import MediaCard from "./MediaCard";
 
@@ -21,7 +22,6 @@ function YourChoice() {
 
   function handleChange(e) {
     updateDateInput(e.target.value);
-    console.log(e.target.value);
   }
 
   function handleSubmit(e) {
@@ -34,10 +34,12 @@ function YourChoice() {
       <h3>Your Choice</h3>
 
       <form onSubmit={handleSubmit}>
+        <label htmlFor="dateInput">Pick a Date </label>
         <input
           type="date"
           id="date"
           value={dateInput}
+          name="dateInput"
           onChange={handleChange}
         />
         <button type="submit">Go!</button>
