@@ -2,17 +2,17 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-  max-width: 500px;
+  width: 100%;
   margin: 0 auto;
 `;
 
 const Heading = styled.h2`
-  padding: 0 2rem;
+  // padding: 0 2rem;
 `;
 
 const Paragraph = styled.p`
   text-align: justify;
-  padding: 0 2rem;
+  // padding: 0 2rem;
 `;
 
 function Intro() {
