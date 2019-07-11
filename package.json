@@ -4,9 +4,11 @@
   "private": true,
   "dependencies": {
     "axios": "^0.19.0",
+    "moment": "^2.24.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-loader-spinner": "^2.3.0",
+    "react-moment": "^0.9.2",
     "react-scripts": "3.0.1"
   },
   "scripts": {

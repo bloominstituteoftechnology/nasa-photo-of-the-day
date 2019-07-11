@@ -8,9 +8,7 @@ function Today() {
   const apiKey = "HL7Cmszg6ukeCduFdzUnboaD2ummKzuYzfYIyQRL";
   useEffect(() => {
     axios
-      .get(
-        `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=1995-06-16&hd=true`
-      )
+      .get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}&hd=true`)
       .then(res => updateMedia(res.data))
       .catch(err => console.log(err));
   }, []);
