@@ -1,11 +1,17 @@
 import React from "react";
+import Loader from "react-loader-spinner";
 
 function MediaCard(props) {
   console.log(props);
 
   function cardContent() {
     if (!props.media) {
-      return "Loading...";
+      return (
+        <>
+          <Loader type="ThreeDots" color="#00BFFF" height="100" width="100" />
+          <p>Loading...</p>
+        </>
+      );
     } else if (props.media.media_type === "image") {
       return (
         <>
