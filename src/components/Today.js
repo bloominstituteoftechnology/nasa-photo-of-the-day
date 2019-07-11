@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+import MediaCard from "./MediaCard";
+
 function Today() {
   const [media, updateMedia] = useState("");
   const apiKey = "HL7Cmszg6ukeCduFdzUnboaD2ummKzuYzfYIyQRL";
@@ -12,10 +14,11 @@ function Today() {
       .then(res => updateMedia(res.data))
       .catch(err => console.log(err));
   }, []);
+
   return (
     <div className="today-container">
       <h3>Today's Inspiration</h3>
-      {media.explanation}
+      <MediaCard media={media} />
     </div>
   );
 }

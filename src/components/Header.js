@@ -1,5 +1,4 @@
 import React from "react";
-import { exportDefaultDeclaration } from "@babel/types";
 
 function Header() {
   return (
