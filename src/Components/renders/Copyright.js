@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 
- var Explanation = props => {
+ var Copyright = props => {
     const [open, setOpen] = useState(false);
     const toggle = () => {
         setOpen(!open);
@@ -8,12 +8,12 @@ import React,{useState} from 'react';
     return(
         <div>
             
-            <button onClick = {toggle}> Toggle explanation</button>
+            <button onClick = {toggle}> Show copyright or nah?</button>
        {
-           open ? props.explanation: undefined
+           open ? props.copyright: undefined
        }
         </div>
     )
 }
 
-export default Explanation;
+export default Copyright;

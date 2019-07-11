@@ -5,6 +5,10 @@ import Media from './Media';
 import Explanation from './Explanation';
 
 import "./App.css";
+import DataList from "./Components/Test/DataList";
+import Day from "./Components/renders/Day";
+import Title from "./Components/renders/Title";
+import Copyright from "./Components/renders/Copyright"
 // const API = "5WcQTPzJe6S99BQybOzlTvWi3XvYxO7xKmdSPuDZ"
 // function App(props) {
 //   const NasaPictures = () => {
@@ -31,6 +35,7 @@ import "./App.css";
 function App() {
 
   const [data, setData] = useState({});
+  console.log(data)
 
   const fetchData = () => {
     axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
@@ -44,13 +49,17 @@ function App() {
   }
 
   useEffect(fetchData, []);
-  
+  console.log(data);
 
   return (
-    <div className="App">Hey
-      
+    <div className="App">
+      <Title title = {data.title}/>
+      <Day date={data.date}/>
+
+      {/* <DataList data ={fetchData}/> */}
         {/* <Media data={data}  /> */}
       <Explanation explanation={data.explanation} />
+      <Copyright date={data.copyright}/>
       
       
     </div>
