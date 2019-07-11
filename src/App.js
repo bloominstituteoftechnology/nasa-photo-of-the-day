@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./App.css";
 
 import Header from "./components/Header";
+import Today from "./components/Today";
+import YourChoice from "./components/YourChoice";
 
 function App() {
-  const [media, updateMedia] = useState("");
-
   return (
     <div className="App">
       <Header />
+      <Today />
+      <YourChoice />
     </div>
   );
 }
