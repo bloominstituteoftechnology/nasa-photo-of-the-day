@@ -8,10 +8,12 @@ import Today from "./components/Today";
 import YourChoice from "./components/YourChoice";
 
 const BodyContainer = styled.div`
-  padding: 2rem;
+  padding: 2rem 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
 `;
 
 function App() {

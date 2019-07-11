@@ -1,6 +1,11 @@
 import React from "react";
 import Loader from "react-loader-spinner";
 import Moment from "react-moment";
+import styled from "styled-components";
+
+const Card = styled.div`
+  // display: flex;
+`;
 
 function MediaCard(props) {
   const loading = () => {
@@ -47,18 +52,20 @@ function MediaCard(props) {
   };
 
   return (
-    <div columns={2} className="card-container" style={{ padding: "1rem" }}>
+    <Card>
       <div
         style={{
           position: "relative",
           width: "100%",
+          // maxWidth: "500px",
+          // maxHeight: "500px",
           height: "0",
           paddingBottom: "80%"
         }}
       >
         {!props.media ? loading() : mediaType()}
       </div>
-      <div style={{ padding: "0 1rem" }}>
+      <div>
         <h3>{props.media.title}</h3>
         <span>
           Shared by NASA on{" "}
@@ -66,7 +73,7 @@ function MediaCard(props) {
         </span>
         <p>{props.media.explanation}</p>
       </div>
-    </div>
+    </Card>
   );
 }
 

@@ -3,12 +3,16 @@ import styled from "styled-components";
 
 const Container = styled.div`
   max-width: 500px;
+  margin: 0 auto;
 `;
 
-const Heading = styled.h2``;
+const Heading = styled.h2`
+  padding: 0 2rem;
+`;
 
 const Paragraph = styled.p`
   text-align: justify;
+  padding: 0 2rem;
 `;
 
 function Intro() {

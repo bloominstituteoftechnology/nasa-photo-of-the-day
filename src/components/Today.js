@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import styled from "styled-components";
 
 import MediaCard from "./MediaCard";
+
+const CardContainer = styled.div``;
 
 function Today() {
   const [media, updateMedia] = useState("");
@@ -14,10 +17,10 @@ function Today() {
   }, []);
 
   return (
-    <div className="today-container">
+    <CardContainer className="today-container">
       <h3>Today's Inspiration</h3>
       <MediaCard media={media} />
-    </div>
+    </CardContainer>
   );
 }
 
