@@ -5,23 +5,38 @@ import styled from "styled-components";
 
 const Card = styled.div`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5rem;
+  background-color: white;
+  color: black;
+
+  @media screen and (max-width: 600px) {
+    box-shadow: none;
+  }
+`;
+
+const Top = styled.div`
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 80%;
 `;
 
 const Text = styled.div`
   padding: 1rem;
+
   text-align: left;
+
+  h3 {
+    margin: 0;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
 `;
 
 function MediaCard(props) {
-  const loading = () => {
-    return (
-      <>
-        <Loader type="ThreeDots" color="#00BFFF" height="100" width="100" />
-        <p>Loading...</p>
-      </>
-    );
-  };
-
   const mediaType = () => {
     if (props.media.media_type === "image") {
       return (
@@ -58,18 +73,16 @@ function MediaCard(props) {
 
   return (
     <Card>
-      <div
-        style={{
-          position: "relative",
-          width: "100%",
-          // maxWidth: "500px",
-          // maxHeight: "500px",
-          height: "0",
-          paddingBottom: "80%"
-        }}
-      >
-        {!props.media ? loading() : mediaType()}
-      </div>
+      <Top>
+        {!props.media ? (
+          <div>
+            <p>Loading...</p>
+            <Loader type="ThreeDots" color="#00BFFF" height="100" width="100" />
+          </div>
+        ) : (
+          mediaType()
+        )}
+      </Top>
       <Text>
         <h3>{props.media.title}</h3>
         <span>

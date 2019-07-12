@@ -9,13 +9,19 @@ const HeaderDiv = styled.header`
   color: white;
   padding: 2rem 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  font-family: "Audiowide", cursive;
 `;
 
-const Logo = styled.img`
+const LogoLeft = styled.img`
   height: 5rem;
+`;
+
+const LogoRight = styled.img`
+  height: 5rem;
+  transform: scaleX(-1);
 `;
 
 const Title = styled.div`
@@ -26,8 +32,9 @@ function Header() {
   return (
     <>
       <HeaderDiv>
-        <Logo src={rocket} alt="rocket" />
+        <LogoLeft src={rocket} alt="rocket" />
         <Title>CosmoScout</Title>
+        <LogoRight src={rocket} alt="rocket" />
       </HeaderDiv>
     </>
   );

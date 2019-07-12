@@ -2,27 +2,29 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
+  margin: 0;
+  padding: 0;
   width: 100%;
-  margin: 0 auto;
-`;
-
-const Heading = styled.h2`
-  // padding: 0 2rem;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5rem;
 `;
 
 const Paragraph = styled.p`
   text-align: justify;
-  // padding: 0 2rem;
+  padding: 0rem;
+  @media screen and (max-width: 600px) {
+    padding: 1rem;
+  }
 `;
 
 function Intro() {
   return (
     <Container>
-      <Heading>Welcome to CosmoScout</Heading>
       <Paragraph>
-        Thank you for joining us on a visual tour of the cosmos, brought to us
-        by NASA. Here you'll see NASA's astronomy image of the day. Below that,
-        you can also choose to see past imagery by selecting a previous date.
+        Thank you for joining us on a visual tour of the cosmos, brought to you
+        by NASA and Dave Irwin, a web and application developer creating cool
+        things. Here you'll see NASA's astronomy image of the day. Or, pick a
+        previous date and view the image or video from that date in history.
       </Paragraph>
     </Container>
   );

@@ -4,8 +4,8 @@ import "./App.css";
 
 import Header from "./components/Header";
 import Intro from "./components/Intro";
-import Today from "./components/Today";
-import YourChoice from "./components/YourChoice";
+import DatePick from "./components/DatePick";
+import Footer from "./components/Footer";
 
 const BodyContainer = styled.div`
   padding: 2rem 0;
@@ -14,6 +14,7 @@ const BodyContainer = styled.div`
   justify-content: center;
   max-width: 600px;
   margin: 0 auto;
+  color: white;
 `;
 
 function App() {
@@ -22,9 +23,9 @@ function App() {
       <Header />
       <BodyContainer>
         <Intro />
-        <Today />
-        <YourChoice />
+        <DatePick />
       </BodyContainer>
+      <Footer />
     </div>
   );
 }
