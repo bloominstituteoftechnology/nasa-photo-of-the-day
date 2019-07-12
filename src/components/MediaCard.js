@@ -9,6 +9,7 @@ const Card = styled.div`
   line-height: 1.5rem;
   background-color: white;
   color: black;
+  border-radius: 5px;
 
   @media screen and (max-width: 600px) {
     box-shadow: none;
@@ -49,7 +50,8 @@ function MediaCard(props) {
             top: "0",
             left: "0",
             width: "100%",
-            height: "100%"
+            height: "100%",
+            borderRadius: "5px 5px 0 0"
           }}
         />
       );
@@ -75,7 +77,15 @@ function MediaCard(props) {
     <Card>
       <Top>
         {!props.media ? (
-          <div style={{ margin: "0 auto" }}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              width: "100%",
+              justifyContent: "center",
+              alignItems: "center"
+            }}
+          >
             <p>Loading...</p>
             <Loader type="ThreeDots" color="#00BFFF" height="100" width="100" />
           </div>
@@ -84,11 +94,11 @@ function MediaCard(props) {
         )}
       </Top>
       <Text>
-        <h3>{props.media.title}</h3>
-        <span>
+        <h2 style={{ margin: "0" }}>{props.media.title}</h2>
+        <div style={{ marginTop: ".5rem" }}>
           Shared by NASA on{" "}
           <Moment format="MMMM DD, YYYY">{props.media.date}</Moment>
-        </span>
+        </div>
         <p>{props.media.explanation}</p>
       </Text>
     </Card>
