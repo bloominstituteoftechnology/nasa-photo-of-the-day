@@ -50,6 +50,6 @@ Follow these steps for completing your project.
 Do not attempt stretch problems until MVP has been reached and a final commit has been made.
 
 - Read the documentation for MeterialUI and use it in your app.
-- Try out tailwind css. It's a little tough to get it started in your app, but it's a great library that is gaining poularity very quickly. Here are the [docs](https://tailwindcss.com/), and here is an [article](https://medium.com/@mikeeeeeeey/create-react-app-tailwind-css-feat-postcss-631d9e33ba8c) to help you get it started in a React app.
+- Try out tailwind css. It's a little tough to get it started in your app, but it's a great library that is gaining poularity very quickly. Here are the [docs](https://tailwindcss.com/), and here is an [article](https://medium.com/@pipecork/using-tailwind-in-react-quickstart-4b06c10317b5) to help you get it started in a React app (written by [Max David](https://medium.com/@pipecork), a Lambda student).
  
 ## Part I - [Component Side Effects](README.md)
