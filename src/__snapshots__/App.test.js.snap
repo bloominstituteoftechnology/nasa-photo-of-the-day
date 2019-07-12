@@ -1,0 +1,213 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> should match snapshot 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="sc-bdVaJa hvwPOV"
+  >
+    <img
+      alt="rocket"
+      className="sc-bwzfXH ikzahH"
+      src="rocket.png"
+    />
+    <div
+      className="sc-bxivhb eBifmg"
+    >
+      CosmoScout
+    </div>
+    <img
+      alt="rocket"
+      className="sc-htpNat eUKOfV"
+      src="rocket.png"
+    />
+  </header>
+  <div
+    className="sc-VigVT eeTbbs"
+  >
+    <div
+      className="sc-ifAKCX kAjDYx"
+    >
+      <p
+        className="sc-EHOje kzhRCj"
+      >
+        Thank you for joining us on a visual tour of the cosmos, brought to you by NASA and Dave Irwin, a web and application developer creating cool things. Here you'll see NASA's astronomy image of the day. Or, pick a previous date and view the image or video from that date in history.
+      </p>
+    </div>
+    <div
+      className="your-choice-container"
+    >
+      <div
+        className="sc-bZQynM fSvOIX"
+      >
+        <div
+          className="sc-gzVnrw jHmqrk"
+        >
+          <div
+            style={
+              Object {
+                "margin": "0 auto",
+              }
+            }
+          >
+            <p>
+              Loading...
+            </p>
+            <div>
+              <svg
+                fill="#00BFFF"
+                height="100"
+                viewBox="0 0 120 30"
+                width="100"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="15"
+                  cy="15"
+                  r="15"
+                >
+                  <animate
+                    attributeName="r"
+                    begin="0s"
+                    calcMode="linear"
+                    dur="0.8s"
+                    from="15"
+                    repeatCount="indefinite"
+                    to="15"
+                    values="15;9;15"
+                  />
+                  <animate
+                    attributeName="fillOpacity"
+                    begin="0s"
+                    calcMode="linear"
+                    dur="0.8s"
+                    from="1"
+                    repeatCount="indefinite"
+                    to="1"
+                    values="1;.5;1"
+                  />
+                </circle>
+                <circle
+                  attributeName="fillOpacity"
+                  cx="60"
+                  cy="15"
+                  from="1"
+                  r="9"
+                  to="0.3"
+                >
+                  <animate
+                    attributeName="r"
+                    begin="0s"
+                    calcMode="linear"
+                    dur="0.8s"
+                    from="9"
+                    repeatCount="indefinite"
+                    to="9"
+                    values="9;15;9"
+                  />
+                  <animate
+                    attributeName="fillOpacity"
+                    begin="0s"
+                    calcMode="linear"
+                    dur="0.8s"
+                    from="0.5"
+                    repeatCount="indefinite"
+                    to="0.5"
+                    values=".5;1;.5"
+                  />
+                </circle>
+                <circle
+                  cx="105"
+                  cy="15"
+                  r="15"
+                >
+                  <animate
+                    attributeName="r"
+                    begin="0s"
+                    calcMode="linear"
+                    dur="0.8s"
+                    from="15"
+                    repeatCount="indefinite"
+                    to="15"
+                    values="15;9;15"
+                  />
+                  <animate
+                    attributeName="fillOpacity"
+                    begin="0s"
+                    calcMode="linear"
+                    dur="0.8s"
+                    from="1"
+                    repeatCount="indefinite"
+                    to="1"
+                    values="1;.5;1"
+                  />
+                </circle>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div
+          className="sc-htoDjs jCaCFF"
+        >
+          <h3 />
+          <span>
+            Shared by NASA on
+             
+            <time
+              dateTime={"2019-07-12T04:46:09.693Z"}
+            >
+              July 11, 2019
+            </time>
+          </span>
+          <p />
+        </div>
+      </div>
+      <form
+        className="sc-dnqmqq lmHooI"
+        onSubmit={[Function]}
+      >
+        <label
+          htmlFor="dateInput"
+        >
+          Pick Today or Earlier
+        </label>
+        <input
+          className="sc-iwsKbI fKOYpk"
+          id="date"
+          name="dateInput"
+          onChange={[Function]}
+          type="date"
+          value=""
+        />
+        <button
+          className="sc-gZMcBi eWYCDg"
+          type="submit"
+        >
+          Let's Explore!
+        </button>
+      </form>
+    </div>
+  </div>
+  <footer
+    className="sc-gqjmRU hTerDI"
+  >
+    <p>
+      API data provided by
+       
+      <a
+        href="https://api.nasa.gov/api.html#apod"
+      >
+        NASA
+      </a>
+      . Application created by 
+      <a
+        href="http://github.com/redirwin"
+      >
+        Dave Irwin
+      </a>
+      .
+    </p>
+  </footer>
+</div>
+`;
