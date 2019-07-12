@@ -11,6 +11,11 @@ const FooterDiv = styled.footer`
   align-items: center;
   font-family: "Open Sans", sans-serif;
   line-height: 1.5rem;
+  text-align: center;
+
+  p {
+    padding: 0 1rem;
+  }
 
   a {
     text-decoration: none;

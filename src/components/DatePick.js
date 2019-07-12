@@ -19,11 +19,11 @@ const Form = styled.form`
   @media screen and (max-width: 600px) {
     padding: 0 1rem;
     justify-content: center;
-    margin: 1rem;
+    margin: 1rem 0;
     width: 90%;
 
   input, button {
-    width: 100%
+    width: 90%
     margin-top: 1rem;
   }
 `;
