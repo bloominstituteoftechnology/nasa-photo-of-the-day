@@ -75,7 +75,7 @@ function MediaCard(props) {
     <Card>
       <Top>
         {!props.media ? (
-          <div>
+          <div style={{ margin: "0 auto" }}>
             <p>Loading...</p>
             <Loader type="ThreeDots" color="#00BFFF" height="100" width="100" />
           </div>
