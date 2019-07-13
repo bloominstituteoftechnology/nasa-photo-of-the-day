@@ -15,6 +15,7 @@ const FooterDiv = styled.footer`
 
   p {
     padding: 0 1rem;
+    font-size: 0.8rem;
   }
 
   a {
