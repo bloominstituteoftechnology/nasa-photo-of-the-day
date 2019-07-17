@@ -13,7 +13,7 @@ function App() {
   const [nasaTitle, setNasaTitle] = useState('')
   const [nasaExplanation, setNasaExplanation] = useState('')
   const [nasaMediaType, setNasaMediaType] = useState('')
-  //&date=2019-07-15
+  //&date=2019-07-15 temporary code I will use for buttons
 
   useEffect( () => {
     axios.get("https://api.nasa.gov/planetary/apod?api_key=o3mte2eiRqwJgxSDRY04yt9QdHLoqv5FzHqkNiwX")
