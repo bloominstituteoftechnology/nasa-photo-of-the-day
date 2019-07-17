@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"
@@ -27,5 +28,23 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patrickb42/react-american-football-scoreboard.git"
+  },
+  "author": "patrickb42",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/patrickb42/react-american-football-scoreboard/issues"
+  },
+  "homepage": "https://github.com/patrickb42/react-american-football-scoreboard#readme",
+  "devDependencies": {
+    "@types/react": "^16.8.23",
+    "@types/react-dom": "^16.8.4",
+    "tslint": "^5.18.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "tsutils": "^3.14.0",
+    "typescript": "^3.5.3"
   }
 }
