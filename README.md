@@ -14,7 +14,7 @@ Commit your code regularly and meaningfully. This helps both you and your team l
 
 ## Description
 
-In this project you will build out a calculator using React. You have been given a design file to follow, and a data file to include for your button components to display.
+In this project you will build out a appication to show the nasa photo of the day.
 
 ## Project Set Up
 
@@ -25,7 +25,6 @@ This project was put together using create-react-app (CRA). You will not need to
 - [ ] Create a forked copy of this project.
 - [ ] Add your team lead as collaborator on Github.
 - [ ] Clone your OWN version of the repository in your terminal
-- [ ] CD into the project base directory `cd component-calculator`
 - [ ] Download project dependencies by running one of these two commands `yarn` or `npm install`
 - [ ] Using the same command tool (yarn or npm) start up the app using `yarn start` or `npm start`
 - [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
@@ -34,7 +33,7 @@ This project was put together using create-react-app (CRA). You will not need to
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge Branch into master (student's Repository). **Please don't merge your own pull request**
+- [ ] Submit a Pull-Request to merge Branch into master (student's Repository).
 - [ ] Add your team lead as a reviewer on the pull-request
 - [ ] Your team lead will count the project as complete by merging the branch back into master.
 - [ ] Do your magic!

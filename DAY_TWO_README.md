@@ -1,6 +1,6 @@
 
 # NASA APOD Part II - Advanced Styling Techniques
-In this project you will refactor the styling you completed in the APOD app. You will style it usingone of the styling libraries you learned in this module.
+In this project you will refactor the styling you completed in the APOD app. You will style it using one of the styling libraries you learned in this module.
 
 ## Instructions
 
@@ -25,7 +25,7 @@ This homework is a continuation of the work you have done previously.
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge Branch into master (student's Repository). **Please don't merge your own pull request**
+- [ ] Submit a Pull-Request to merge Branch into master (student's Repository).
 - [ ] Add your team lead as a reviewer on the pull-request
 - [ ] Your team lead will count the project as complete by merging the branch back into master.
 - [ ] Do your magic!
