@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import MediaCard from "./MediaCard";
+
 import axios from "axios";
+import VidData from "./VidData";
 
 export default function MediaGrid({ limit }) {
-  const [nasaData, setNasaData] = useState([]);
+  const [nasaData, setNasaData] = useState({});
+  console.log(nasaData);
 
   useEffect(() => {
     axios
@@ -11,20 +14,20 @@ export default function MediaGrid({ limit }) {
         `https://api.nasa.gov/planetary/apod?api_key=CCXbV8XxG8yA3RamUcCcG6p7d1ZETE3FVa4y3mxf`
       )
       .then(res => {
-        console.log("I am visisble", res);
+        console.log("I am visisble", res.data);
+        setNasaData(res.data);
+        console.log(res.data);
+      })
+      .catch(err => {
+        console.log("oh noes....", err);
       });
-  });
+  }, []);
 
   return (
     <div className="media-grid">
-      {nasaData.map(nasaUrl => {
-        return <MediaCard imgUrl={nasaUrl} />;
-      })}
-      <div className="media-card">
-        <img
-          src="https://adorbs-as-a-service.herokuapp.com/api/v1/300w/200h/"
-          alt="notadog!"
-        />
+      <MediaCard passData={nasaData} />;
+      <div className="video-container">
+        <VidData passData={nasaData} />;
       </div>
     </div>
   );

@@ -7,14 +7,10 @@ function App() {
     <div className="App">
       <h1>NASA place holder!!</h1>
 
-      <ul>
-        <li>why do you want to go to the moon</li>
-        <li>how could they fake a moon landing?</li>
-      </ul>
+      <ul />
 
       <section>
-        <b>build a card list here!</b>
-        <MediaGrid limit={10} />
+        <MediaGrid />
       </section>
     </div>
   );

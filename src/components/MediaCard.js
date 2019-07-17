@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function MediaCard({ imgUrl }) {
-  return <div className="media-card">{imgUrl}</div>;
+export default function MediaCard(props) {
+  return <div className="media-card">{props.passData.title}</div>;
 }
