@@ -3,7 +3,9 @@ import React from "react";
 function Footer() {
   return (
     <div className="footer">
-      <a className="visitNasa" href="https://www.NASA.gov" target="_blank">Visit NASA</a>
+      <p>Astronomy Photo of the Day</p>
+
+      <a href="https://www.github.com/GCJ2" target="_blank">@GCJ2</a>
     </div>
   )
 }
