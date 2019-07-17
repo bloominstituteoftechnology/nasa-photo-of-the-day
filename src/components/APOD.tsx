@@ -21,6 +21,7 @@ function APOD({ data }: APODProps) {
     <div>
       <h1>{title}</h1>
       { media_type === 'image' ? <img src={url} alt="space stuff"/> : null }
+      {console.log(data)}
       { explanation !== undefined ? <p>{explanation}</p> : null }
     </div>
   );

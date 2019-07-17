@@ -23,7 +23,6 @@ function App() {
             },
           }),
         );
-        console.log(new Date().toISOString().slice(0, 10));
       } catch (e) {
         console.log(e);
       }
@@ -32,11 +31,7 @@ function App() {
   useEffect(retrieveAPOD, []);
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
-      {apodData !== undefined ? <APOD data={apodData} /> : <h3>Loading...</h3>}
+      {apodData !== undefined ? <APOD data={apodData.data} /> : <h3>Loading...</h3>}
     </div>
   );
 }
