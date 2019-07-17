@@ -1,7 +1,22 @@
 import React from "react";
 import "./App.css";
+import { useState, useEffect} from "react";
+import axios from "axios";
 
 function App() {
+
+  const [nasaUrl, setNasaUrl] = useState('')
+  useEffect( () => {
+    axios.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
+      .then( request => {
+        console.log(request.data.url)
+        setNasaUrl(request.data.url)
+      })
+      .catch( error => {
+        console.log(error)
+      });
+  }, []);
+
   return (
     <div className="App">
       <p>
@@ -18,9 +33,11 @@ function App() {
           </nav>
         </header>
         <div className='body'>
-          <body>
-            im the body
-          </body>
+          <div>
+            <iframe width='420' height='315'
+              src={nasaUrl}>
+            </iframe>
+          </div>
           <div className='footer'>
             <footer>
               im the footer
