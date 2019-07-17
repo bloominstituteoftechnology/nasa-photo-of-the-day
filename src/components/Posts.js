@@ -1,10 +1,11 @@
 import React from "react" 
 
 
-    export default function Posts() {
+    export default function Posts(props) {
         return (
             <div>
-                fasdfasdf 
+                <h1>{props.title}</h1>
+                <iframe title="video" src={props.nasaVid}></iframe>
             </div>
         )
     }
