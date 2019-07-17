@@ -1,12 +1,12 @@
 import React from "react";
 
-function ImageCard( {imgUrl }) {
+export default function ImageCard( {imgURL} ) {
 
   return (
     <div className="imageCard">
-      <img src={imgUrl} style={{ maxWidth: "175px" }} />
-      <p>Image card </p>
+      <img src={imgURL} style={{ maxWidth: "500px" }} />
+      {/*<p> {imgTitle} </p>*/}
+
     </div>
   );
 }
-export default ImageCard;

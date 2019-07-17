@@ -1,8 +1,9 @@
-import React, { useEffect, useState} from "react";
+import React from "react";
 import axios from "axios";
-import "./App.css";
-import ImageCard from "./components/ImageCard"
 import ImageGrid from "./components/ImageGrid"
+
+
+import "./App.css";
 
 function App() {
   return (
