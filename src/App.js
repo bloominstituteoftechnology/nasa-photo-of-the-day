@@ -1,13 +1,13 @@
-import React from "react";
+import React, { useEffect, useState} from "react";
+import axios from "axios";
 import "./App.css";
+import ImageCard from "./components/ImageCard"
+import ImageGrid from "./components/ImageGrid"
 
 function App() {
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+      <ImageGrid />
     </div>
   );
 }
