@@ -35,7 +35,7 @@ Follow these steps for completing your project.
 - This will be a continuation of the project you've already started.
 - Our goal here is to apply advance styling techniques for your React application.
 - You don't need to start from scratch. Use the work you did previously.
-- Let's say that the designs have changed. There are new ways and implimintations of doing things as time goes by. As stated earlier, these are normal in the real world. It's time for us to dig into the code to make it better.
+- Let's say that the designs have changed. There are new ways and implementations of doing things as time goes by. As stated earlier, these are normal in the real world. It's time for us to dig into the code to make it better.
 
 
 ## _MVP Requirements:_
@@ -49,7 +49,7 @@ Follow these steps for completing your project.
 
 Do not attempt stretch problems until MVP has been reached and a final commit has been made.
 
-- Read the documentation for MeterialUI and use it in your app.
-- Try out tailwind css. It's a little tough to get it started in your app, but it's a great library that is gaining poularity very quickly. Here are the [docs](https://tailwindcss.com/), and here is an [article](https://medium.com/@pipecork/using-tailwind-in-react-quickstart-4b06c10317b5) to help you get it started in a React app (written by [Max David](https://medium.com/@pipecork), a Lambda student).
+- Read the documentation for MaterialUI and use it in your app.
+- Try out tailwind css. It's a little tough to get it started in your app, but it's a great library that is gaining popularity very quickly. Here are the [docs](https://tailwindcss.com/), and here is an [article](https://medium.com/@pipecork/using-tailwind-in-react-quickstart-4b06c10317b5) to help you get it started in a React app (written by [Max David](https://medium.com/@pipecork), a Lambda student).
  
 ## Part I - [Component Side Effects](README.md)
