@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: black;
 }
 
 .App-logo {
@@ -30,4 +31,33 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.imageGrid {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 75%;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.imageGridWrapper {
+  padding-bottom: 40px;
+  /* margin: 0 auto; */
+}
+
+.imgInfo {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.header {
+  color: white;
+  margin-top: -20px;
+  padding: 20px;
+}
+
+.header a {
+  color: white;
 }

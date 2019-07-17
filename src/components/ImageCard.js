@@ -4,10 +4,10 @@ export default function ImageCard( {imgURL, imgTitle, imgInfo, imgDate} ) {
 
   return (
     <div className="imageCard">
-      <img src={imgURL} alt="red sun" style={{ maxWidth: "500px" }} />
-      <p className="imgTitle"> {imgTitle} </p>
-      <p className="imgDate"> {imgDate} </p>
-      <p className="imgInfo"> {imgInfo} </p>
+    <p className="imgTitle"> {imgTitle} </p>
+    <p className="imgDate"> {imgDate} </p>
+    <img className="mainImage" src={imgURL} alt="red sun" style={{ maxWidth: "300px" }} />
+    <p className="imgInfo"> {imgInfo} </p>
 
     </div>
   );

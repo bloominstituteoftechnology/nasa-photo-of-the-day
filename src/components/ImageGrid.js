@@ -31,8 +31,10 @@ export default function ImageGrid () {
 
 
   return (
-    <div className = "imageGrid">
-     <ImageCard key={photo} imgURL={photo} imgTitle={photoTitle} imgDate={date} imgInfo = {info} />
+    <div className = "imageGridWrapper">
+      <div className = "imageGrid">
+       <ImageCard key={photo} imgURL={photo} imgTitle={photoTitle} imgDate={date} imgInfo = {info} />
+      </div>
     </div>
   )
 }
