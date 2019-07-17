@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import "./App.css";
 import Header from "./Components/Header";
+import Title from "./Components/display/Title";
+import Photo from "./Components/Photo";
+import DateInput from "./Components/Dateinput";
+import Date from "./Components/display/Date";
 
 
 function App() {
@@ -25,8 +29,10 @@ function App() {
   console.log(data);
   
   return (
-    <div className="App">
-      
+    <div className="todays-pick">
+      <h2> Today's Photo Of The Day </h2>
+      <DateInput />
+        <Photo />
      
     </div>
   );
