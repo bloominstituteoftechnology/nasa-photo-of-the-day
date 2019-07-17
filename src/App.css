@@ -43,7 +43,7 @@
 }
 
 .imageGridWrapper {
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   /* margin: 0 auto; */
 }
 
@@ -57,7 +57,20 @@
   margin-top: -20px;
   padding: 20px;
 }
+.header p {
+  font-size: 20px;
+}
 
-.header a {
+.visitNasa {
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.footer {
+  padding-bottom: 20px;
   color: white;
 }
