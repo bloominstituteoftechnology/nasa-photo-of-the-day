@@ -13,11 +13,12 @@ function App() {
   const [nasaTitle, setNasaTitle] = useState('')
   const [nasaExplanation, setNasaExplanation] = useState('')
   const [nasaMediaType, setNasaMediaType] = useState('')
+  //&date=2019-07-15
 
   useEffect( () => {
-    axios.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
+    axios.get("https://api.nasa.gov/planetary/apod?api_key=o3mte2eiRqwJgxSDRY04yt9QdHLoqv5FzHqkNiwX")
       .then( response => {
-        console.log("nasa api", response.data)
+        console.log("nasa api:", response)
         setNasaUrl(response.data.url)
         setNasaDate(response.data.date)
         setNasaTitle(response.data.title)
