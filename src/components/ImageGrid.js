@@ -7,6 +7,8 @@ export default function ImageGrid () {
 
   const [photo, setPhoto] = useState([]);
   const [photoTitle, setPhotoTitle] = useState([]);
+  const [date, setDate] = useState([]);
+  const [info, setInfo] = useState([]);
   const axios = require('axios')
 
   useEffect(() => {
@@ -18,13 +20,19 @@ export default function ImageGrid () {
         const imgTitle = response.data.title;
         console.log(imgTitle);
         setPhotoTitle(imgTitle);
+        const imgDate = response.data.date;
+        console.log(imgDate);
+        setDate(imgDate);
+        const imgInfo = response.data.explanation;
+        console.log(imgInfo);
+        setInfo(imgInfo);
       });
   }, []);
 
 
   return (
     <div className = "imageGrid">
-     <ImageCard key={photo} imgURL={photo} imgTitle={photoTitle} />
+     <ImageCard key={photo} imgURL={photo} imgTitle={photoTitle} imgDate={date} imgInfo = {info} />
     </div>
   )
 }
