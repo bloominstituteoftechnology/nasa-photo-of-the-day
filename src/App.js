@@ -6,11 +6,20 @@ import axios from "axios";
 function App() {
 
   const [nasaUrl, setNasaUrl] = useState('')
+  const [nasaDate, setNasaDate] = useState('')
+  const [nasaTitle, setNasaTitle] = useState('')
+  const [nasaExplanation, setNasaExplanation] = useState('')
+  const [nasaMediaType, setNasaMediaType] = useState('')
+
   useEffect( () => {
     axios.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
-      .then( request => {
-        console.log(request.data.url)
-        setNasaUrl(request.data.url)
+      .then( response => {
+        console.log("nasa api", response.data)
+        setNasaUrl(response.data.url)
+        setNasaDate(response.data.date)
+        setNasaTitle(response.data.title)
+        setNasaExplanation(response.data.explanation)
+        setNasaMediaType(response.data.media_type)
       })
       .catch( error => {
         console.log(error)
@@ -20,17 +29,19 @@ function App() {
   return (
     <div className="App">
       <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
+        {
+        // Read through the instructions in the README.md file to build your NASA
+        // app! Have fun 🚀!
+        }
       </p>
       <div className='header'>
         <header>
-          im the header
           <nav>
-            <a>link1</a>
-            <a>link2</a>
-            <a>link3</a>
+            <button onClick={ () => alert(nasaDate) }>Date</button>
+            <button onClick={ () => alert(nasaTitle) }>Title</button>
+            <button onClick={ () => alert(nasaExplanation) }>Explanation</button>
           </nav>
+          <p></p> {/*temporary spacing*/}
         </header>
         <div className='body'>
           <div>
@@ -40,7 +51,9 @@ function App() {
           </div>
           <div className='footer'>
             <footer>
-              im the footer
+              <h3>Extra Info:</h3>
+              <p>Media Type: {nasaMediaType}</p>
+              <p>URL: {nasaUrl}</p>
             </footer>
           </div>
         </div>
