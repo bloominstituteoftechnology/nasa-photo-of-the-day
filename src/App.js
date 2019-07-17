@@ -2,6 +2,9 @@ import React from "react";
 import "./App.css";
 import { useState, useEffect} from "react";
 import axios from "axios";
+import Header from './components/header.js'
+import Body from './components/body.js'
+import Footer from './components/footer.js'
 
 function App() {
 
@@ -37,23 +40,28 @@ function App() {
       <div className='header'>
         <header>
           <nav>
-            <button onClick={ () => alert(nasaDate) }>Date</button>
-            <button onClick={ () => alert(nasaTitle) }>Title</button>
-            <button onClick={ () => alert(nasaExplanation) }>Explanation</button>
+            <Header
+              propsDate={nasaDate}
+              propsTitle={nasaTitle}
+              propsExplanation={nasaExplanation}
+            />
           </nav>
           <p></p> {/*temporary spacing*/}
         </header>
         <div className='body'>
           <div>
-            <iframe width='420' height='315'
-              src={nasaUrl}>
-            </iframe>
+            <Body
+              propsUrl={nasaUrl}
+              propsMediaType={nasaMediaType}
+            />
           </div>
           <div className='footer'>
             <footer>
               <h3>Extra Info:</h3>
-              <p>Media Type: {nasaMediaType}</p>
-              <p>URL: {nasaUrl}</p>
+              <Footer
+                propsMediaType={nasaMediaType}
+                propsUrl={nasaUrl}
+              />
             </footer>
           </div>
         </div>
