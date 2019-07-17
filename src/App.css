@@ -31,3 +31,47 @@
     transform: rotate(360deg);
   }
 }
+
+.appBody{
+  padding: 20px;
+  margin: 20px;
+  border: 1 px solid red;
+  width: auto
+}
+
+header{
+  margin-bottom: 100px;
+  border: 1px solid blue;
+  background-color: dodgerblue;
+}
+
+.nasaCard{
+  padding: 15px;
+  border: 1 px solid purple;
+  background-color: slateblue;
+}
+
+.imageWrap{
+  padding: 15px;
+  border: 1px solid gold;
+  background-color: darkorange;
+  margin: 20px 0;
+}
+
+article{
+  padding: 15px;
+  border: 1px solid black;
+  background-color: grey;
+}
+
+article .imageTitle{
+  padding: 10px 0;
+  background-color: ghostwhite;
+}
+
+article .imageDescription{
+  padding: 10px 0;
+  background-color: ghostwhite;
+}
+
+
