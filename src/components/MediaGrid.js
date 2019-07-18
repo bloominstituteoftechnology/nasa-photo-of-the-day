@@ -3,6 +3,7 @@ import MediaCard from "./MediaCard";
 
 import axios from "axios";
 import VidData from "./VidData";
+import Explain from "./Explain";
 
 export default function MediaGrid({ limit }) {
   const [nasaData, setNasaData] = useState({});
@@ -28,6 +29,9 @@ export default function MediaGrid({ limit }) {
       <MediaCard passData={nasaData} />;
       <div className="video-container">
         <VidData passData={nasaData} />;
+      </div>
+      <div className="story-card">
+        <Explain passData={nasaData} />
       </div>
     </div>
   );
