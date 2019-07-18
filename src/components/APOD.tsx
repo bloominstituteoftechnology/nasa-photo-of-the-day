@@ -27,7 +27,9 @@ function APOD({ response }: APODProps) {
   return (
     <div>
       <h1>{title}</h1>
-      { media_type === 'image' ? <img src={url} alt="space stuff"/> : null }
+      { media_type === 'image' ?
+        <img src={url} alt="space stuff"/> :
+        <iframe title={title} src={url}></iframe> }
       { explanation !== undefined ? <p>{explanation}</p> : null }
     </div>
   );
