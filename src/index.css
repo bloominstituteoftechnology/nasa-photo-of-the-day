@@ -1,13 +1,26 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+    background-color: #344a6e;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.NASA{
+    display: flex;
+    justify-content: center;
+    width: 400px;
+}
+.TITLE{
+    font-size: 2rem;
+    text-align: center;
+
+}
+.SHUTTLE{
+    display: flex;
+}
+.EXPLANATION{
+    text-indent: 15px;
+    padding-bottom: 20px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.DATE{
+    text-align: center;
 }
