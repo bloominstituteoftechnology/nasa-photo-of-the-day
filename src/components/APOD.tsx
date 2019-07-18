@@ -1,5 +1,5 @@
 import React from 'react';
-import './APOD.scss';
+// import './APOD.scss';
 
 interface APODDataProps {
   copyright: string;
@@ -30,7 +30,7 @@ function APOD({ response }: APODProps) {
       { media_type === 'image' ?
         <img src={url} alt="space stuff"/> :
         <iframe title={title} src={url}></iframe> }
-      { explanation !== undefined ? <p>{explanation}</p> : null }
+      <p>{explanation}</p>
     </div>
   );
 }

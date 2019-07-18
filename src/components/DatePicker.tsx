@@ -1,5 +1,6 @@
 import React from 'react';
-import './DatePicker.scss';
+// import './DatePicker.scss';
+import Input from '@material-ui/core/Input';
 
 interface DatePickerProps {
   selectedDate: string;
@@ -7,11 +8,12 @@ interface DatePickerProps {
 }
 function DatePicker({ selectedDate, setSelectedDate }: DatePickerProps) {
   return (
-    <input type="date" defaultValue={selectedDate}
+    <Input type="date" value={selectedDate}
       onInput={(e) => {
-        setSelectedDate(e.currentTarget.value);
-        console.log(e.currentTarget.value);
-      }}></input>
+        const input = e.currentTarget.querySelector('input');
+        if (!input) return;
+        setSelectedDate(input.value);
+      }}></Input>
   );
 }
 

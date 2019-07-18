@@ -13,7 +13,14 @@ function App() {
     date: Date;
   }
   function dateToCurrISO({ date }: DateToCurrISOArg) {
-    return (`${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`);
+    const fullYear = `${date.getFullYear()}`;
+    const fullMonth = date.getMonth().toLocaleString().length !== 2
+      ? `0${date.getMonth() + 1}`
+      : `${date.getMonth() + 1}`;
+    const fullDate = date.getDate().toLocaleString().length !== 2
+      ? `0${date.getDate()}`
+      : `${date.getDate()}`;;
+    return (`${fullYear}-${fullMonth}-${fullDate}`);
   }
 
   function retrieveAPOD() {
