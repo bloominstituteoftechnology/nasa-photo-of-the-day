@@ -9,7 +9,7 @@ function App() {
  const [data, setData] = useState([])
 
  const fetch = () => {
-   axios.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
+   axios.get("https://api.nasa.gov/planetary/apod?api_key=0s3J6875aUstguzbJl69eKvyEqKw1AzddA9FeBBp")
    .then(response => {
       setData(response.data)
    })
@@ -21,7 +21,7 @@ function App() {
   console.log(data)
   return (
     <div className="App">
-       <Posts nasaVid={data.url} title={data.title}/>
+       <Posts nasaPic={data.url} title={data.title}/>
 
     </div>
   )

@@ -7,7 +7,7 @@ export default function Post(props){
     return(
         <div>
           <h2>{props.title}</h2> 
-          <iframe className="nasaVid"title ="vid" src ={props.nasaVid}/>
+          <img className="nasaPic"title ="Moon" src ={props.nasaPic}/>
             </div>
     )
 }
