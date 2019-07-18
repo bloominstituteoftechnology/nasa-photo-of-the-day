@@ -9,7 +9,7 @@ function App() {
 
   
   useEffect(() => {
-    axios.get("https://api.nasa.gov/planetary/apod?api_key=7TEedvatBtcZa95WqVIdCySPyv7Fed6GNGxpefyi&date=2012-03-14")//&date=2012-03-14 for img test
+    axios.get("https://api.nasa.gov/planetary/apod?api_key=7TEedvatBtcZa95WqVIdCySPyv7Fed6GNGxpefyi")//&date=2012-03-14 for img test
     .then((response) => {
       setNasa(response.data)
     }).catch((error) => {
