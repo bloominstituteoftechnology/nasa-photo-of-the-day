@@ -13,10 +13,7 @@ function App() {
     date: Date;
   }
   function dateToCurrISO({ date }: DateToCurrISOArg) {
-    return (`${date.getFullYear()}
-      -${date.getMonth() + 1}
-      -${date.getDate()}`.replace(/\s/g, '')
-    );
+    return (`${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`);
   }
 
   function retrieveAPOD() {
