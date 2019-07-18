@@ -8,11 +8,20 @@ const StyledHeader = styled.header`
   margin-bottom: 15px;
 `;
 
+const StyledVisitNasa = styled.a`
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 20px;
+`;
+
 function Header() {
   return (
     <StyledHeader>
       <p>Astronomy Picture of the Day</p>
-      <a className="visitNasa" href="https://www.NASA.gov" target="_blank">Visit NASA</a>
+      <StyledVisitNasa href="https://www.NASA.gov" target="_blank">Visit NASA</StyledVisitNasa>
     </StyledHeader>
   )
 }
