@@ -56,6 +56,7 @@
   color: white;
   margin-top: -20px;
   padding: 20px;
+  margin-bottom: 15px;
 }
 .header p {
   font-size: 20px;
@@ -69,6 +70,7 @@
   border-radius: 5px;
   padding: 10px;
   font-size: 20px;
+  /* margin-bottom: 100px; */
 }
 
 .footer {
@@ -78,7 +80,7 @@
   justify-content: space-around;
   /* border: 1px solid white; */
   align-items: center;
-  max-width: 500px;
+  width: 75%;
   margin: 0 auto;
 }
 
