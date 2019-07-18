@@ -51,7 +51,7 @@
   text-align: left;
   margin-bottom: 20px;
 }
-
+/
 .header {
   color: white;
   margin-top: -20px;
@@ -78,7 +78,7 @@
   color: white;
   display: flex;
   justify-content: space-around;
-  /* border: 1px solid white; */
+  border: 1px solid white;
   align-items: center;
   width: 75%;
   margin: 0 auto;

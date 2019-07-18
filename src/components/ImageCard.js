@@ -1,14 +1,15 @@
 import React from "react";
 
-export default function ImageCard( {imgURL, imgTitle, imgInfo, imgDate} ) {
 
+
+export default function ImageCard (props) {
 
   return (
     <div className="imageCard">
-    <p className="imgTitle"> {imgTitle} </p>
-    <p className="imgDate"> {imgDate} </p>
-    <img className="mainImage" src={imgURL} alt="red sun" style={{ maxWidth: "80%" }} />
-    <p className="imgInfo"> {imgInfo} </p>
+    <p className="imgTitle"> {props.imgTitle} </p>
+    <p className="imgDate"> {props.imgDate} </p>
+    <img className="mainImage" src={props.imgURL} alt="red sun" style={{ maxWidth: "80%" }} />
+    <p className="imgInfo"> {props.imgInfo} </p>
     </div>
   );
 }

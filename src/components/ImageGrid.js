@@ -1,7 +1,20 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ImageCard from "./ImageCard";
+import styled from "styled-components"
 
+const StyledImageGridWrapper = styled.div`
+  padding-bottom: 20px;
+`;
+
+const StyledImageGrid = styled.div`
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 75%;
+  margin: 0 auto;
+  background-color: white;
+`;
 
 export default function ImageGrid () {
 
@@ -31,10 +44,10 @@ export default function ImageGrid () {
 
 
   return (
-    <div className = "imageGridWrapper">
-      <div className = "imageGrid">
+    <StyledImageGridWrapper>
+      <StyledImageGrid>
        <ImageCard key={photo} imgURL={photo} imgTitle={photoTitle} imgDate={date} imgInfo = {info} />
-      </div>
-    </div>
+      </StyledImageGrid>
+    </StyledImageGridWrapper>
   )
 }
