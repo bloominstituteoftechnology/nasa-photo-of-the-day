@@ -7,7 +7,7 @@ export default function Post(props){
     return(
         <div>
           <h2>{props.title}</h2> 
-          <img className="nasaPic"title ="Moon" src ={props.nasaPic}/>
+          <img className="nasaPic"src ={props.nasaPic} alt="Moon"/>
             </div>
     )
 }
