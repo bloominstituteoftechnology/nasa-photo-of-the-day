@@ -36,7 +36,8 @@
 
 .img-card p {
   text-align: justify;
-  margin: 1rem 2rem;
+  width: 90vw;
+  margin: 1rem 5vw;
 }
 
 @keyframes App-logo-spin {

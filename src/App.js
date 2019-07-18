@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import axios from "axios";
 import Header from "./components/Header";
-import ImgCard from "./components/ImgCard"
+import ImgCard from "./components/ImgCard";
 
 function App() {
   // create state variables
