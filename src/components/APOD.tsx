@@ -1,5 +1,5 @@
-import React from 'react';
-// import './APOD.scss';
+import React, { useState } from 'react';
+import { Modal, Button, Paper } from '@material-ui/core';
 
 interface APODDataProps {
   copyright: string;
@@ -24,13 +24,34 @@ function APOD({ response }: APODProps) {
     url = '',
   } = response !== undefined ? response.data : {};
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  interface HandleModalToggleArg {
+    isChangingToOpenState: boolean;
+  }
+  const handleModalToggle = ({ isChangingToOpenState }: HandleModalToggleArg) => {
+    return () => setIsModalOpen(isChangingToOpenState);
+  };
+
   return (
     <div>
       <h1>{title}</h1>
       { media_type === 'image' ?
         <img src={url} alt="space stuff"/> :
         <iframe title={title} src={url}></iframe> }
-      <p>{explanation}</p>
+      <Button
+        onClick={handleModalToggle({ isChangingToOpenState: true })}
+      >
+        Details
+      </Button>
+      <Modal
+        open={isModalOpen}
+        onClose={handleModalToggle({ isChangingToOpenState: false })}
+      >
+        <Paper>
+          <p>{explanation}</p>
+        </Paper>
+      </Modal>
     </div>
   );
 }

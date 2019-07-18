@@ -1,6 +1,5 @@
 import React from 'react';
-// import './DatePicker.scss';
-import Input from '@material-ui/core/Input';
+import { Input, Modal } from '@material-ui/core';
 
 interface DatePickerProps {
   selectedDate: string;

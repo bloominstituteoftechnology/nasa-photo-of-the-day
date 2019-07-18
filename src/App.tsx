@@ -3,6 +3,7 @@ import './App.scss';
 
 import APOD from './components/APOD';
 import DatePicker from './components/DatePicker';
+import { Paper } from '@material-ui/core';
 
 import Axios from 'axios';
 
@@ -19,7 +20,7 @@ function App() {
       : `${date.getMonth() + 1}`;
     const fullDate = date.getDate().toLocaleString().length !== 2
       ? `0${date.getDate()}`
-      : `${date.getDate()}`;;
+      : `${date.getDate()}`;
     return (`${fullYear}-${fullMonth}-${fullDate}`);
   }
 
@@ -45,8 +46,10 @@ function App() {
 
   return (
     <div className="App">
-      <DatePicker selectedDate={selectedDate} setSelectedDate={setSelectedDate}/>
-      <APOD response={apodData} />
+      <Paper>
+        <DatePicker selectedDate={selectedDate} setSelectedDate={setSelectedDate}/>
+        <APOD response={apodData} />
+      </Paper>
     </div>
   );
 }
