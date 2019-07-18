@@ -9,4 +9,4 @@ export default function ImgCard({imgURL,imgTitle,explanation}) {
             <br></br>
         </div>
     );
-}
+} 
