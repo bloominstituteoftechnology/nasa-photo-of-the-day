@@ -3,6 +3,7 @@ import "./App.css";
 import axios from "axios";
 import Header from "./components/Header";
 import ImgCard from "./components/ImgCard";
+import { Button } from "./components/StyledWidgets.js";
 
 function App() {
   // create state variables
@@ -39,6 +40,7 @@ function App() {
     <div className="App">
       <Header date = {date} />
       <ImgCard imgURL ={photo} imgTitle = {title} explanation = {info}/>
+      <Button type="primary" onClick={() => setInfo()}>Hide content</Button>
     </div>
   );
 }
