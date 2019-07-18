@@ -1,5 +1,13 @@
 .Posting {
     border: orange 3px solid;
-    width: 50%;
-    margin: 0 auto
+    width: 70%;
+    margin: 0 auto;
+    height: 100%
+}
+
+.picture {
+    display: flex;
+    flex-wrap: wrap;
+    width: 395px;
+    height: 300px
 }

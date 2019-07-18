@@ -1,39 +1,62 @@
 
-
-import React, {useState, useEffect} from 'react'
-import Posts from './components/Posts'
+import React, {useEffect, useState} from 'react'
+import Posts from './components/Posts.js'
 import axios from 'axios'
-import "./App.css";
-
-
+import './App.css';
 
 
 function App() {
-  const [data, setData] = useState([])
+    const [data, setData] = useState([])
 
-  const fetch = () => {
-    axios.get('https://api.nasa.gov/planetary/apod?api_key=HL7Cmszg6ukeCduFdzUnboaD2ummKzuYzfYIyQRL')
+    const fetch = () => {
+      axios.get('https://api.nasa.gov/planetary/apod?api_key=HL7Cmszg6ukeCduFdzUnboaD2ummKzuYzfYIyQRL')
       .then(response => {
         setData(response.data)
       })
-      .catch(error => { console.log( "there was an error gathering your data")}
+
+      .catch (error => {console.log("There was an error, please try your request at a later time")}
     )
-  
   }
-
-    useEffect(fetch, [])
-
-    console.log(data)
+useEffect(fetch, [])
+  console.log(data)
 
   return (
     <div className="App">
-       <Posts nasaVid = {data.url} title = {data.title} />
-       
+      <Posts date={data.date} nasaVid = {data.url} title = {data.title} paragraph = {data.explanation}  />
     </div>
-  )
-}
+    )
+} 
 
 export default App;
+
+// function App() {
+//   const [data, setData] = useState([])
+
+//   const fetch = () => {
+//     axios.get('https://api.nasa.gov/planetary/apod?api_key=HL7Cmszg6ukeCduFdzUnboaD2ummKzuYzfYIyQRL')
+//       .then(response => {
+//         setData(response.data)
+//       })
+//       .catch(error => { console.log( "there was an error gathering your data")}
+//     )
+  
+//   }
+
+//     useEffect(fetch, [])
+
+//     console.log(data)
+
+//   return (
+//     <div className="App">
+//        <Posts nasaVid = {data.url} title = {data.title} paragraph = {data.explanation} />
+       
+//     </div>
+//   )
+// }
+
+// export default App;
+
+
 
 // function App() {
 // const [data, setData] = useState([])
