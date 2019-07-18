@@ -4,6 +4,11 @@ import axios from "axios";
 import Header from "./components/Header";
 import ImgCard from "./components/ImgCard";
 import { Button } from "./components/StyledWidgets.js";
+import LoaderExampleIndeterminate from "./components/Loader";
+// import { Loader, Segment, Dimmer } from "semantic-ui-react";
+// import "semantic-ui/dist/semantic.min.css";
+
+
 
 function App() {
   // create state variables
@@ -41,7 +46,10 @@ function App() {
       <Header date = {date} />
       <ImgCard imgURL ={photo} imgTitle = {title} explanation = {info}/>
       <Button type="primary" onClick={() => setInfo()}>Hide content</Button>
+      <LoaderExampleIndeterminate/>
+
     </div>
+
   );
 }
 
