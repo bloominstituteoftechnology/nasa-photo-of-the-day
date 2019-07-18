@@ -33,7 +33,9 @@ function App() {
       }
     })();
   }
+
   useEffect(retrieveAPOD, [selectedDate]);
+
   return (
     <div className="App">
       <DatePicker selectedDate={selectedDate} setSelectedDate={setSelectedDate}/>
