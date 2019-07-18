@@ -26,9 +26,9 @@ export default function MediaGrid({ limit }) {
 
   return (
     <div className="media-grid">
-      <MediaCard passData={nasaData} />;
+      <MediaCard passData={nasaData} />
       <div className="video-container">
-        <VidData passData={nasaData} />;
+        <VidData passData={nasaData} />
       </div>
       <div className="story-card">
         <Explain passData={nasaData} />
