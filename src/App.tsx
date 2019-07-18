@@ -11,13 +11,11 @@ function App() {
   function retrieveAPOD() {
     (async () => {
       try {
-        console.log(new Date().toISOString().slice(0, 10));
+        const now = new Date();
         setApodData(
           await Axios.get('https://api.nasa.gov/planetary/apod', {
             params: {
-              // date: new Date().toISOString().slice(0, 10), // currently a video
-              // date: '2019-07-15', // this one is an image
-              date: '2019-07-17', // this one is a video
+              date: `${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}`,
               hd: false,
               api_key: 'DEMO_KEY',
             },
@@ -25,7 +23,6 @@ function App() {
         );
       } catch (e) {
         console.log(e);
-        
       }
     })();
   }
