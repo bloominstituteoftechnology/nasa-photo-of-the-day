@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { primary } from "./StyleVariable";
+// import 'semantic-ui/dist/semantic.min.css';
 
 
 export const Image = styled.img`
@@ -18,3 +18,4 @@ export const Button = styled.button`
     font-weight: 700;
     width: 90vw;
 `;
+
