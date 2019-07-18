@@ -12,16 +12,22 @@ interface APODDataProps {
   url: string;
 }
 interface APODProps {
-  data: APODDataProps;
+  response: {
+    data: APODDataProps;
+  };
 }
-function APOD({ data }: APODProps) {
-  const { explanation, media_type, title, url } = data;
+function APOD({ response }: APODProps) {
+  const {
+    explanation = '',
+    media_type = '',
+    title = 'Loading...',
+    url = '',
+  } = response !== undefined ? response.data : {};
 
   return (
     <div>
       <h1>{title}</h1>
       { media_type === 'image' ? <img src={url} alt="space stuff"/> : null }
-      {console.log(data)}
       { explanation !== undefined ? <p>{explanation}</p> : null }
     </div>
   );

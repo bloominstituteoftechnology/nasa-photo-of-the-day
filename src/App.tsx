@@ -15,7 +15,7 @@ function App() {
         setApodData(
           await Axios.get('https://api.nasa.gov/planetary/apod', {
             params: {
-              // date: new Date().toISOString().slice(0, 10) // currently a video
+              // date: new Date() // currently a video
               date: '2019-07-15', // this one is an image
               // date: '2019-07-17', // this one is a video
               hd: false,
@@ -31,7 +31,7 @@ function App() {
   useEffect(retrieveAPOD, []);
   return (
     <div className="App">
-      {apodData !== undefined ? <APOD data={apodData.data} /> : <h3>Loading...</h3>}
+      <APOD response={apodData} />
     </div>
   );
 }
