@@ -1,0 +1,25 @@
+.navbar-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    
+
+}
+
+.content-container {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+    padding-top: 15px;
+    margin: 0 auto 
+    
+    
+}
+
