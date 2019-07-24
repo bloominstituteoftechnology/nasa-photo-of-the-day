@@ -8,7 +8,7 @@ const WrapperDiv = styled.div`
 
 const H1Wrap = styled.h1`
     font-size: 2rem;
-    color: black;
+    color: #8B795E;
     padding-right: 2%;
     padding-top: 1%;
     padding-bottom: 1%;

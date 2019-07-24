@@ -9,7 +9,7 @@ import { Player } from 'video-react';
 // `;
 
 const ImgWrap = styled.img`
-    max-width: 75%;
+    max-width: 85%;
     max-height: auto;
     padding: 5%;
 

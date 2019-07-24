@@ -9,7 +9,7 @@ const WrapperDiv = styled.div`
 const H1Wrap = styled.h1`
     text-align: left;
     font-size: 1rem;
-    color: tomato;
+    color: #8B795E;
     padding-left: 45%;
     padding-top: 1%;
     padding-bottom: 1%;

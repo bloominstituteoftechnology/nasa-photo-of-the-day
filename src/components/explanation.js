@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const WrapperDiv = styled.div`
     width: 75%;
     heigh: auto;
-    background-color: tomato;
+    background-color: #FFA824;
     margin: auto;
 `;
 
