@@ -31,3 +31,28 @@
     transform: rotate(360deg);
   }
 }
+
+.header {
+  display: flex;
+  max-width: 100%;
+  justify-content: center;
+}
+
+.header .nasa-logo {
+  height: 100px;
+}
+
+.picture {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.explanation {
+  width: 75%;
+  margin: 3% auto;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 5%;
+}
