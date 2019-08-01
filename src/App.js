@@ -13,7 +13,7 @@ import Copyright from './copyright';
 //Styled AllDiv
 const AllDiv = styled.div `
   width: 100vw;
-  height: 100 vh;
+  height: 100vh;
 `;
 
 //Styled WrapperDiv
@@ -22,19 +22,20 @@ const WrapperDiv = styled.div `
   height: 100%;
   padding: auto;
   display: flex; 
+  background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/0kjHIH6/a-view-of-outer-space-flying-between-the-stars_bdt1pvas_thumbnail-full01.png")
 `;
 
 //Styled TextDiv
 const TextDiv = styled.div `
   width: 50vw;
-  height: 33vh;
+  height: 330vh;
   margin: auto;
 `;
 
 //styled ImgDiv
 const ImgDiv = styled.div `
   width: 50vw;
-  height: 33vh;
+  height: 300vh;
   margin: auto;
 `;
 

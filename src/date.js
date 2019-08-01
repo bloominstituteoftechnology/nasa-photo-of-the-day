@@ -7,11 +7,12 @@ const WrapperDiv = styled.div `
 `;
 
 const H1Wrap = styled.h1 `
-    font-size: 2rem;
-    color: blue;
+    font-size: 500%;
+    color: white;
     padding-right: 2%;
     padding-top: 1%;
     padding-bottom: 1%;
+    display: flex;
 `;
 
 
