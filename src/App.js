@@ -15,8 +15,15 @@ function App() {
   const[photo,setPhoto] = useState();
   const[title,setTitle] = useState();
   const[info,setInfo] = useState();
-  const[staticInfo] = useState();
   const[date,setDate] = useState();
+  const staticInfo = "";
+
+  // for toggling info content
+  const [showContent, setShowContent] = useState(false);
+  const toggleMode = e => {
+    e.preventDefault();
+    setShowContent(!showContent);
+  };
 
   useEffect(() => {
     axios
@@ -45,8 +52,8 @@ function App() {
   return (
     <div className="App">
       <Header date = {date} />
-      <ImgCard imgURL ={photo} imgTitle = {title} explanation = {info}/>
-      <Button type="primary" onClick={() => setInfo() }>Hide content</Button>
+      <ImgCard imgURL ={photo} imgTitle = {title} explanation = {info} showContent = {showContent}/>
+      <Button type="primary" onClick={toggleMode}>Show more info</Button>
       <LoaderExampleIndeterminate/>
 
     </div>
