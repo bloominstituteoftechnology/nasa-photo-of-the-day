@@ -54,7 +54,6 @@ function App() {
       <Header date = {date} />
       <ImgCard imgURL ={photo} imgTitle = {title} explanation = {info} showContent = {showContent}/>
       <Button type="primary" onClick={toggleMode}>Show more info</Button>
-      <LoaderExampleIndeterminate/>
 
     </div>
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { Image } from "./StyledWidgets.js";
 import { Segment } from "semantic-ui-react";
-// import 'semantic-ui/dist/semantic.min.css';
+
 
 export default function ImgCard({imgURL,imgTitle,explanation,showContent}) {
     console.log(showContent)
@@ -10,7 +10,7 @@ export default function ImgCard({imgURL,imgTitle,explanation,showContent}) {
             <div className = "img-card">
                 <h2>{imgTitle}</h2>
                 <Image src = {imgURL} alt = "nasa image of day" />
-                <Segment className="ui raised segment">
+                <Segment className="ui raised segment" className = "info-card">
                     <p>{explanation}</p>
                 </Segment>
                 <br></br>

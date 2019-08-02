@@ -32,12 +32,40 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 1rem;
 }
 
-.img-card p {
-  text-align: justify;
+.temp-header h1 {
+  font-size: 3.5rem;
+}
+
+.temp-header h3 {
+  font-size: 2rem;
+}
+
+.img-card h2 {
+  font-size: 2.5rem;
+  padding: 1rem;
+  margin: 0;
+}
+
+img {
+  margin-bottom: 1em;
+}
+
+.img-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-card {
   width: 90vw;
-  margin: 1rem 5vw;
+}
+
+.info-card p {
+  text-align: justify;
+  line-height: 1.8;
 }
 
 @keyframes App-logo-spin {
