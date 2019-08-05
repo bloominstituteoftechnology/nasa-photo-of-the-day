@@ -18,5 +18,6 @@ export const Button = styled.button`
     color: white;
     font-weight: 700;
     width: 90vw;
+    border: none;
 `;
 
