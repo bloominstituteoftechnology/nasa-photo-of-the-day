@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import moment from "moment";
-import DatePicker from "./components/DatePicker";
+import NasaCard from "./components/NasaCard";
+import DatePickerComp from "./components/DatePicker";
 import "./scss/App.css";
 
 function App() {
@@ -23,7 +23,20 @@ function App() {
 
   return (
     <div className="App">
-      <DatePicker />
+      <div className="leftCol">
+        <h1>Nasa Photo of the Day</h1>
+        <DatePickerComp
+          selectedDate={selectedDate}
+          setSelectedDate={setSelectedDate}
+        />
+      </div>
+      <NasaCard
+        title={nasaData.title}
+        media_type={nasaData.media_type}
+        date={nasaData.date}
+        url={nasaData.url}
+        explanation={nasaData.explanation}
+      />
     </div>
   );
 }
