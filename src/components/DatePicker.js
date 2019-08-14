@@ -1,17 +1,16 @@
 import React from "react";
-import DateFnsUtils from "@date-io/date-fns";
-import "date-fns";
+import MomentUtils from "@date-io/moment";
 import { DatePicker, MuiPickersUtilsProvider } from "@material-ui/pickers";
 
 const DatePickerComp = props => {
   function handleDateChange(date) {
-    //   setSelectedDate(date);
+    console.log(date);
     props.setSelectedDate(date.toISOString().split("T")[0]);
   }
 
   return (
     <div className="datePicker">
-      <MuiPickersUtilsProvider utils={DateFnsUtils}>
+      <MuiPickersUtilsProvider utils={MomentUtils}>
         <DatePicker
           autoOk
           orientation="landscape"

@@ -18,7 +18,8 @@ function App() {
       .then(res => {
         setNasaData(res.data);
         console.log("RESPONSE:", res.data);
-      });
+      })
+      .catch(err => console.log("YOU MESSED UP SOMETHING:", err));
   }, [selectedDate]);
 
   return (

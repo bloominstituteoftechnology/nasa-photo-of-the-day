@@ -28,6 +28,10 @@
   color: #dde3ff;
 }
 
+.leftCol .datePicker {
+  width: 95%;
+}
+
 .cardCont {
   max-width: 500px;
   margin: 2em auto;
