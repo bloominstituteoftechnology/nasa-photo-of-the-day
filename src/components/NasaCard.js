@@ -7,7 +7,7 @@ function NasaCard(props) {
   if (props.media_type === "video") {
     return (
       <div className="cardCont">
-        <Card className="centered fluid">
+        <Card className="centered fluid card">
           <Embed url={props.url} />
           <Card.Header className="title">{props.title}</Card.Header>
           <Card.Meta>
