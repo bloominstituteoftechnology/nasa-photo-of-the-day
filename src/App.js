@@ -1,15 +1,50 @@
 import React from "react";
-import "./App.css";
+import PhotoCardInfo from "./components/PhotoCardInfo.js";
+import {CardContainer} from "./components/CardStyles.js";
+import logo from './logo.png';
+import background from "./sky.jpg";
+import styled from "styled-components";
+import {Header, AppLogo, MainHeading} from "./components/Header.js";
 
-function App() {
+
+const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-image: url(${background});
+    background-size: cover;
+    
+
+`;
+
+function App() {  
+
   return (
-    <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
-    </div>
+    <Container>
+     
+      <Header>
+
+        <AppLogo>
+            <img src={logo} alt="logo" />
+        </AppLogo>
+
+        <MainHeading>photo of the day</MainHeading>                
+     
+      </Header>
+
+      <CardContainer>
+            
+        <PhotoCardInfo />
+
+      </CardContainer>
+
+    </Container>
   );
 }
 
 export default App;
+
+
+
