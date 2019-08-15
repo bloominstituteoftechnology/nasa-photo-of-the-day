@@ -14,6 +14,10 @@
 
 .MuiInputBase-input {
     color: red !important;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .MuiFormLabel-root {
@@ -47,6 +51,9 @@
     border-radius   : 18%;
     border          : 5px solid #2059A6;
 
+    &:hover {
+        box-shadow: 0px 8px 25px 5px rgba(255, 49, 49, 0.75);
+    }
 }
 
 .cardCont {
@@ -79,7 +86,7 @@
         }
 
         .ui.modal {
-            background-color: rgba(255, 255, 255, 0.8) !important;
+            background-color: white !important;
         }
     }
 

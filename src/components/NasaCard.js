@@ -51,13 +51,19 @@ function NasaCard(props) {
             <span className="date">{props.date}</span>
           </Card.Meta>
           <Modal trigger={<Button>More Info</Button>}>
-            <Modal.Header style={{ textAlign: "center" }}>
+            <Modal.Header
+              style={{
+                textAlign: "center",
+                color: "#2059A6",
+                fontSize: "1.2em",
+                fontFamily: "SpaceMeatballRegular"
+              }}
+            >
               {props.title}
             </Modal.Header>
             <Modal.Content>
               <Modal.Description
                 style={{
-                  backgroundColor: "rgba(0,0,0,0.6)",
                   textAlign: "center"
                 }}
               >

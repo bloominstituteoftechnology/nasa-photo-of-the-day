@@ -19,6 +19,7 @@ const DatePickerComp = props => {
           onChange={handleDateChange}
         /> */}
         <DatePicker
+          autoOk
           label="Pick a Date"
           value={props.selectedDate}
           onChange={handleDateChange}

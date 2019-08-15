@@ -21,6 +21,10 @@
   color: red !important;
 }
 
+.MuiInputBase-input:hover {
+  cursor: pointer;
+}
+
 .MuiFormLabel-root {
   color: white !important;
   font-size: 0.8em !important;
@@ -58,6 +62,11 @@
   border: 5px solid #2059A6;
 }
 
+.datePicker:hover {
+  -webkit-box-shadow: 0px 8px 25px 5px rgba(255, 49, 49, 0.75);
+          box-shadow: 0px 8px 25px 5px rgba(255, 49, 49, 0.75);
+}
+
 .cardCont {
   max-width: 500px;
   margin: 1em auto;
@@ -90,6 +99,6 @@
 }
 
 .cardCont .card .ui.modal {
-  background-color: rgba(255, 255, 255, 0.8) !important;
+  background-color: white !important;
 }
 /*# sourceMappingURL=App.css.map */
