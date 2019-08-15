@@ -3,6 +3,7 @@ import axios from "axios";
 import "./App.css";
 import PhotoCard from "./components/PhotoCard";
 
+
 function App() {
 
   const [data, setData] = useState({});
@@ -25,9 +26,11 @@ function App() {
   return (
     <div className="App">
       <header> <h1>Nasa Photo Project</h1></header>
+      {/* <Container textAlign='right'> */}
       <PhotoCard title={data.title} 
                   url={data.url}
                   explanation={data.explanation} />
+                  {/* </Container> */}
     </div>
   );
 }
