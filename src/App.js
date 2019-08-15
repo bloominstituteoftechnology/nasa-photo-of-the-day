@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import NasaCard from "./components/NasaCard";
 import DatePickerComp from "./components/DatePicker";
+import styled from "styled-components";
 import "./scss/App.css";
 
 function App() {
@@ -26,10 +27,12 @@ function App() {
     <div className="App">
       <div className="leftCol">
         <h1>Nasa Photo of the Day</h1>
-        <DatePickerComp
-          selectedDate={selectedDate}
-          setSelectedDate={setSelectedDate}
-        />
+        <div className="calendar">
+          <DatePickerComp
+            selectedDate={selectedDate}
+            setSelectedDate={setSelectedDate}
+          />
+        </div>
       </div>
       <NasaCard
         title={nasaData.title}

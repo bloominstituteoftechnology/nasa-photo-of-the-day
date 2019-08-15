@@ -6,10 +6,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -17,24 +17,50 @@
   background-size: cover;
 }
 
+.MuiInputBase-input {
+  color: red !important;
+}
+
+.MuiFormLabel-root {
+  color: white !important;
+  font-size: 0.8em !important;
+}
+
 .leftCol {
-  margin: 2em auto;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .leftCol h1 {
   font-family: 'SpaceMeatballRegular';
-  font-size: 1.9em;
+  font-size: 2.5em;
   font-weight: 400;
-  color: #dde3ff;
+  color: #fff;
 }
 
-.leftCol .datePicker {
-  width: 95%;
+.leftCol .calendar {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.datePicker {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 1em 6em;
+  font-size: 1.3em;
+  font-weight: 600;
+  border-radius: 18%;
+  border: 5px solid #2059A6;
 }
 
 .cardCont {
   max-width: 500px;
-  margin: 2em auto;
+  margin: 1em auto;
   text-align: center;
 }
 
@@ -42,6 +68,17 @@
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
+  font-family: "SpaceMeatballRegular";
+}
+
+.cardCont .card .cardImg {
+  width: 400px;
+  margin: 0.1em auto 1em;
+}
+
+.cardCont .card .cardVid {
+  width: 500px;
+  margin: 1em auto;
 }
 
 .cardCont .card .title {
@@ -50,5 +87,9 @@
 
 .cardCont .card .date {
   color: #d3d0e7;
+}
+
+.cardCont .card .ui.modal {
+  background-color: rgba(255, 255, 255, 0.8) !important;
 }
 /*# sourceMappingURL=App.css.map */
