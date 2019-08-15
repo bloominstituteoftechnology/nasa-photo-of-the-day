@@ -8,6 +8,7 @@ function App(props) {
   const [pic, setPic] = useState();
   const [date, setDate] = useState();
   const [title, setTitle] = useState();
+  const [expla, setExpla] = useState();
 
   //axios function
   useEffect(() => {
@@ -25,6 +26,11 @@ function App(props) {
         const titleNasa = response.data.title;
         console.log('Nasa title: ',titleNasa )
         setTitle(titleNasa)
+
+        const explanationNasa = response.data.explanation;
+        console.log('Nasa explanation: ',explanationNasa )
+        setExpla(explanationNasa);
+
         })
     }, [] )
 
@@ -32,11 +38,13 @@ function App(props) {
   return (
     <div className="App">
       <div className="photoOfDay">
-        <img src = {pic}></img>
+        <img style={{width: 800, height: 800}} 
+        src = {pic}></img>
       </div>
       <p>
-        Date: {date} -- Title: {title}
+        {title} || {date}
       </p>
+      <p>{expla}</p>
     </div>
   );
 }
