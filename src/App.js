@@ -5,6 +5,7 @@ import Comp from "./comps/comp";
 
 
 
+
 function App(props) {
   const [pic, setPic] = useState();
   const [date, setDate] = useState();
@@ -41,6 +42,7 @@ function App(props) {
     //normal JSX part
   return (
     <Comp picture ={pic} title={title} date={date} expla={expla} />
+    
     
   );
 }
