@@ -6,8 +6,8 @@ import axios from "axios";
 
 function App(props) {
   const [pic, setPic] = useState();
-  //const [date, setDate] = useState();
-  //const [title, setTitle] = useState();
+  const [date, setDate] = useState();
+  const [title, setTitle] = useState();
 
   //axios function
   useEffect(() => {
@@ -15,10 +15,16 @@ function App(props) {
       .then (response => {
         //console.log(response) 
         const imageNasa = response.data.hdurl;
-        //const dateNasa = response.data.date;
-        //const titleNasa = response.data.title;
         console.log("Nasa image", imageNasa)
         setPic(imageNasa);
+
+        const dateNasa = response.data.date;
+        console.log('Nasa date: ',dateNasa )
+        setDate(dateNasa)
+
+        const titleNasa = response.data.title;
+        console.log('Nasa title: ',titleNasa )
+        setTitle(titleNasa)
         })
     }, [] )
 
@@ -26,14 +32,10 @@ function App(props) {
   return (
     <div className="App">
       <div className="photoOfDay">
-        {imageNasa.map(pic => {
-          return(
-            {pic}
-          );
-        })}
+        <img src = {pic}></img>
       </div>
       <p>
-        The photo above shows NASA's Photo of the day pulled from their API! Enjoy!
+        Date: {date} -- Title: {title}
       </p>
     </div>
   );
