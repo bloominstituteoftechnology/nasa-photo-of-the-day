@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 import PhotoCard from "./PhotoCard.js";
+import styled from "styled-components";
 
 function PhotoCardInfo (props) {
 
@@ -25,14 +26,13 @@ function PhotoCardInfo (props) {
 
     return (       
 
-            <div className = "photo-map-div">
+    <div className = "photo-map-div">
 
         {/*if photoCardInfo does not contain any information, a div with "loading..." is dispayed on the screen */}
         { photoCardInfo ?
             
                 <PhotoCard key = {photoCardInfo.url}
-                        title = {photoCardInfo.title} 
-                        date = {photoCardInfo.date} 
+                        title = {photoCardInfo.title}                        
                         url = {photoCardInfo.url} 
                         explanation = {photoCardInfo.explanation} />
 
@@ -40,7 +40,7 @@ function PhotoCardInfo (props) {
         
         }                    
 
-            </div> 
+    </div> 
         
     );
 

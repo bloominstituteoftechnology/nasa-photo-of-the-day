@@ -1,16 +1,20 @@
 import React from "react";
+import styled from "styled-components";
+import {PhotoOfTheDay, Image, PictureTitle, ParagraphDescription} from "./CardStyles.js";
 
 function PhotoCard (props) {
    
     return (
-        <div className = "photocard-div">           
-            <h2>{props.title}</h2>
-            <h3>{props.date}</h3>
-            <img alt = "nasa image of the day" src = {props.url}/>
-            <p>
+        <PhotoOfTheDay>          
+            <PictureTitle>{props.title}</PictureTitle>          
+            
+                <Image alt = "nasa image of the day" src = {props.url}/>            
+
+            <ParagraphDescription>
                 {props.explanation}
-            </p>
-        </div>
+            </ParagraphDescription>
+
+        </PhotoOfTheDay>
     );
 }
 
