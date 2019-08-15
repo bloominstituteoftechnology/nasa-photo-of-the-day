@@ -4,13 +4,8 @@ import PhotoCard from "./PhotoCard.js";
 
 function PhotoCardInfo (props) {
 
-    const [photoCardInfo, setPhotoCardInfo] = useState({});
+    const [photoCardInfo, setPhotoCardInfo] = useState({});    
     
-    //const [key, setKey] = useState("");
-    //const [title, setTitle] = useState("");
-    //const [date, setDate] = useState("");
-    //const [url, setUrl] = useState("");
-    //const [explanation, setExplanation] = useState("");
 
     useEffect(() => {        
 
@@ -19,6 +14,7 @@ function PhotoCardInfo (props) {
 
         console.log(response.data);
         
+        //assign the response from the server to photoCardInfoResponse
         const photoCardInfoResponse = response.data;
         setPhotoCardInfo(photoCardInfoResponse);
 
@@ -27,18 +23,25 @@ function PhotoCardInfo (props) {
     }, []); 
  
 
-    return (
-        <div className = "photo-map-div">
-          
-            <PhotoCard key = {photoCardInfo.url}
-                       title = {photoCardInfo.title} 
-                       date = {photoCardInfo.date} 
-                       url = {photoCardInfo.url} 
-                       explanation = {photoCardInfo.explanation} />
+    return (       
 
-            )}{/*end map */}        
+            <div className = "photo-map-div">
 
-        </div>
+        {/*if photoCardInfo does not contain any information, a div with "loading..." is dispayed on the screen */}
+        { photoCardInfo ?
+            
+                <PhotoCard key = {photoCardInfo.url}
+                        title = {photoCardInfo.title} 
+                        date = {photoCardInfo.date} 
+                        url = {photoCardInfo.url} 
+                        explanation = {photoCardInfo.explanation} />
+
+        : <div>Loading.....</div>
+        
+        }                    
+
+            </div> 
+        
     );
 
 }//end PhotoCardInfo

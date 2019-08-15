@@ -1,19 +1,18 @@
 import React from "react";
 import PhotoCardInfo from "./components/PhotoCardInfo.js";
-
-
+import logo from './logo.png';
 import "./App.css";
 
-function App() {
-  
+function App() {  
 
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
 
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+                
+      </header>
+            
       <PhotoCardInfo />
 
     </div>
@@ -21,3 +20,6 @@ function App() {
 }
 
 export default App;
+
+
+
