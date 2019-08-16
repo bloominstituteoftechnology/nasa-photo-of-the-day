@@ -10,11 +10,10 @@ const CardContainer = styled.div`
     width: 80%;
     height: auto;
     font-family: sans-serif;     
-    border: 5px solid #ccc;
-    
+    border: 5px solid #ccc;   
     -moz-box-shadow:    3px 3px 5px 6px #ccc;
-  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-  box-shadow:         3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow:         3px 3px 5px 6px #ccc;
 `;
 
 const PhotoOfTheDay = styled.div`
@@ -28,7 +27,7 @@ const PhotoOfTheDay = styled.div`
 
 const PictureTitle = styled.h2`
   display: flex;  
-  font-size: 3rem;
+  font-size: 3vw;
   text-transform: uppercase;
   color: red;
 

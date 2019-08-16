@@ -36,7 +36,7 @@ const AppLogo = styled.image`
 
 const MainHeading = styled.h1`
   display: flex;  
-  font-size: 5rem;
+  font-size: 5vw;
   text-transform: uppercase;
   color: dodgerblue;
 

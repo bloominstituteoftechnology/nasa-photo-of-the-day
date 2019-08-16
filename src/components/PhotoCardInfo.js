@@ -7,6 +7,7 @@ function PhotoCardInfo (props) {
 
     const [photoCardInfo, setPhotoCardInfo] = useState({});    
     
+    
 
     useEffect(() => {        
 
@@ -19,7 +20,9 @@ function PhotoCardInfo (props) {
         const photoCardInfoResponse = response.data;
         setPhotoCardInfo(photoCardInfoResponse);
 
-        });
+        })
+
+        
 
     }, []); 
  
