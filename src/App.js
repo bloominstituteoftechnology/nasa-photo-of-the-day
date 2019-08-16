@@ -14,7 +14,7 @@ function App(props) {
 
   //axios function
   useEffect(() => {
-    //console.log("component mounted")
+    console.log("component mounted")
     axios.get('https://api.nasa.gov/planetary/apod?api_key=RlVu0xWKQ2LGh5zKsgeSnpciQJvSxmA4e0OxOBqc')
       .then (response => {
         //console.log(response) 
@@ -38,7 +38,7 @@ function App(props) {
     }, [] )
     
     
-    //console.log("Component rendered");
+    console.log("Component rendered");
     //normal JSX part
   return (
     <Comp picture ={pic} title={title} date={date} expla={expla} />

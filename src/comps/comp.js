@@ -14,13 +14,17 @@ margin: 1em;
 padding: 0.25em 1em;
 border: 2px solid palevioletred;
 border-radius: 3px;
-text-decoration: none;
-font-color: palevioletred;
+font-color: cyan;
 `;
 
 const TomatoButton = styled(Button)`
 color: tomato;
 border-color: tomato;
+`;
+
+const A = styled.a`
+text-decoration: none;
+font-color: cyan;
 `;
 
 const Image = styled.img`
@@ -44,8 +48,8 @@ function Comp(props) {
           {props.title} || {props.date}
         </TestP>
         <p>{props.expla}</p>
-        <Button> <a href="https://apod.nasa.gov/apod/astropix.html" target="_blank">Link to NASA Site</a></Button>
-        <TomatoButton> <a href="https://api.nasa.gov/api.html" target="_blank">Link to NASA API</a></TomatoButton>
+        <Button> <A href="https://apod.nasa.gov/apod/astropix.html" target="_blank">Link to NASA Site</A></Button>
+        <TomatoButton> <A href="https://api.nasa.gov/api.html" target="_blank">Link to NASA API</A></TomatoButton>
       </div>
       
     );
