@@ -9,11 +9,19 @@ const CardContainer = styled.div`
     flex-direction: column;     
     width: 80%;
     height: auto;
-    font-family: sans-serif;     
-    border: 5px solid #ccc;   
-    -moz-box-shadow:    3px 3px 5px 6px #ccc;
-    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-    box-shadow:         3px 3px 5px 6px #ccc;
+    font-family: sans-serif;  
+
+    @media screen and (max-width: 800px) {
+        width: 100%;
+          
+      }
+  
+      @media screen and (max-width: 500px) {
+        width: 100%;
+          
+      }
+    
+   
 `;
 
 const PhotoOfTheDay = styled.div`
@@ -31,17 +39,40 @@ const PictureTitle = styled.h2`
   text-transform: uppercase;
   color: red;
 
+  @media screen and (max-width: 800px) {
+   font-size: 4vw;
+      
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 4vw;
+      
+  }
+
 `;
 
 const Image = styled.img`
     width: 700px;
     height: 600px; 
     border-radius: 50%;
+
+    @media screen and (max-width: 800px) {
+        width: 100%;
+        border-radius: 25%;
+          
+      }
+  
+      @media screen and (max-width: 500px) {
+        width: 100%;
+        border-radius: 0;
+          
+      }
          
 `;
 
 const ParagraphDescription = styled.p`
     text-align: center;
+    
 
 `;
 
