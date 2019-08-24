@@ -1,94 +1,148 @@
-@import url('https://fontlibrary.org/face/space-meatball');
+@import url("https://fontlibrary.org/face/space-meatball");
 
 .App {
-    margin            : 0 auto;
-    width             : 100%;
-    height            : 100vh;
-    display           : flex;
-    flex-direction    : column;
-    justify-content   : center;
-    background        : url(../abstract-background-abstract-oil-painting-abstract-painting-1629236.jpg);
-    background-size   : cover;
-    // background     : linear-gradient(to bottom, rgba(162, 62, 193, 1) 0%, rgba(32, 124, 229, 1) 100%);
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url(../abstract-background-abstract-oil-painting-abstract-painting-1629236.jpg);
+  background-size: cover;
+  // background     : linear-gradient(to bottom, rgba(162, 62, 193, 1) 0%, rgba(32, 124, 229, 1) 100%);
 }
 
 .MuiInputBase-input {
-    color: red !important;
+  color: red !important;
 
-    &:hover {
-        cursor: pointer;
-    }
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .MuiFormLabel-root {
-    color    : white !important;
-    font-size: 0.8em !important;
+  color: white !important;
+  font-size: 0.8em !important;
 }
 
 .leftCol {
-    margin        : 0 auto;
-    display       : flex;
-    flex-direction: column;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 
-    h1 {
-        font-family: 'SpaceMeatballRegular';
-        font-size  : 2.5em;
-        font-weight: 400;
-        color      : #fff;
-    }
+  h1 {
+    font-family: "SpaceMeatballRegular";
+    font-size: 5em;
+    text-align: center;
+    font-weight: 400;
+    color: #fff;
+  }
 
-    .calendar {
-        width : 50%;
-        margin: 0 auto;
-    }
+  .calendar {
+    width: 67%;
+    margin: 0 auto;
+  }
+}
+
+.dateInput {
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .datePicker {
-    background-color: rgba(0, 0, 0, 0.4);
-    padding         : 1em 6em;
-    font-size       : 1.3em;
-    font-weight     : 600;
-    border-radius   : 18%;
-    border          : 5px solid #2059A6;
-
-    &:hover {
-        box-shadow: 0px 8px 25px 5px rgba(255, 49, 49, 0.75);
-    }
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 1em 6em;
+  font-size: 1.3em;
+  font-weight: 600;
+  border-radius: 18%;
+  border: 5px solid #2059a6;
+  &:hover {
+    box-shadow: 0px 8px 25px 5px rgba(255, 49, 49, 0.75);
+  }
 }
 
 .cardCont {
-    max-width : 500px;
-    margin    : 1em auto;
-    text-align: center;
+  max-width: 500px;
+  margin: 1em auto;
+  text-align: center;
 
-    .card {
-        padding         : 10px;
-        background-color: rgba(0, 0, 0, 0.7);
-        color           : white;
-        font-family     : "SpaceMeatballRegular";
+  .card {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-family: "SpaceMeatballRegular";
 
-        .cardImg {
-            width : 400px;
-            margin: 0.1em auto 1em;
-        }
-
-        .cardVid {
-            width : 500px;
-            margin: 1em auto;
-        }
-
-        .title {
-            font-size: 1.5em;
-        }
-
-        .date {
-            color: rgb(211, 208, 231);
-        }
-
-        .ui.modal {
-            background-color: white !important;
-        }
+    .cardImg {
+      width: 400px;
+      margin: 0.1em auto 1em;
     }
 
+    .cardVid {
+      width: 500px;
+      margin: 1em auto;
+    }
 
+    .title {
+      font-size: 1.5em;
+    }
+
+    .date {
+      color: rgb(211, 208, 231);
+    }
+
+    .ui.modal {
+      background-color: white !important;
+    }
+  }
+}
+
+@media (min-width: 470px) and (max-width: 650px) {
+  .leftCol {
+    h1 {
+      font-size: 3.5em;
+    }
+
+    .calendar {
+      width: 80%;
+    }
+  }
+}
+
+@media (max-width: 469px) {
+  .leftCol {
+    h1 {
+      font-size: 2.7em;
+    }
+
+    .calendar {
+      width: 85%;
+    }
+  }
+  .cardCont {
+    .card {
+      .cardImg {
+        width: 330px;
+      }
+    }
+  }
+}
+
+@media (max-width: 370px) {
+  .leftCol {
+    h1 {
+      font-size: 2.6em;
+    }
+
+    .calendar {
+      width: 95%;
+    }
+  }
+  .cardCont {
+    .card {
+      .cardImg {
+        width: 300px;
+      }
+    }
+  }
 }

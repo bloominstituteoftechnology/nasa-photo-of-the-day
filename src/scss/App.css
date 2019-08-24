@@ -42,15 +42,20 @@
 }
 
 .leftCol h1 {
-  font-family: 'SpaceMeatballRegular';
-  font-size: 2.5em;
+  font-family: "SpaceMeatballRegular";
+  font-size: 5em;
+  text-align: center;
   font-weight: 400;
   color: #fff;
 }
 
 .leftCol .calendar {
-  width: 50%;
+  width: 67%;
   margin: 0 auto;
+}
+
+.dateInput:hover {
+  cursor: pointer;
 }
 
 .datePicker {
@@ -59,7 +64,7 @@
   font-size: 1.3em;
   font-weight: 600;
   border-radius: 18%;
-  border: 5px solid #2059A6;
+  border: 5px solid #2059a6;
 }
 
 .datePicker:hover {
@@ -100,5 +105,38 @@
 
 .cardCont .card .ui.modal {
   background-color: white !important;
+}
+
+@media (min-width: 470px) and (max-width: 650px) {
+  .leftCol h1 {
+    font-size: 3.5em;
+  }
+  .leftCol .calendar {
+    width: 80%;
+  }
+}
+
+@media (max-width: 469px) {
+  .leftCol h1 {
+    font-size: 2.7em;
+  }
+  .leftCol .calendar {
+    width: 85%;
+  }
+  .cardCont .card .cardImg {
+    width: 330px;
+  }
+}
+
+@media (max-width: 370px) {
+  .leftCol h1 {
+    font-size: 2.6em;
+  }
+  .leftCol .calendar {
+    width: 95%;
+  }
+  .cardCont .card .cardImg {
+    width: 300px;
+  }
 }
 /*# sourceMappingURL=App.css.map */

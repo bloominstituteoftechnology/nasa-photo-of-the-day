@@ -11,14 +11,8 @@ const DatePickerComp = props => {
   return (
     <div className="datePicker">
       <MuiPickersUtilsProvider utils={MomentUtils}>
-        {/* <DatePicker
-          autoOk
-          orientation="landscape"
-          openTo="date"
-          value={props.selectedDate}
-          onChange={handleDateChange}
-        /> */}
         <DatePicker
+          className="dateInput"
           autoOk
           label="Pick a Date"
           value={props.selectedDate}
