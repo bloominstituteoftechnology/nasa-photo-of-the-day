@@ -1,14 +1,17 @@
 @import url("https://fontlibrary.org/face/space-meatball");
 
-.App {
-  margin: 0 auto;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+body {
   justify-content: center;
   background: url(../abstract-background-abstract-oil-painting-abstract-painting-1629236.jpg);
   background-size: cover;
+}
+.App {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
   // background     : linear-gradient(to bottom, rgba(162, 62, 193, 1) 0%, rgba(32, 124, 229, 1) 100%);
 }
 

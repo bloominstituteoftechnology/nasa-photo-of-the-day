@@ -1,8 +1,16 @@
 @import url("https://fontlibrary.org/face/space-meatball");
+body {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: url(../abstract-background-abstract-oil-painting-abstract-painting-1629236.jpg);
+  background-size: cover;
+}
+
 .App {
   margin: 0 auto;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10,11 +18,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background: url(../abstract-background-abstract-oil-painting-abstract-painting-1629236.jpg);
-  background-size: cover;
 }
 
 .MuiInputBase-input {
