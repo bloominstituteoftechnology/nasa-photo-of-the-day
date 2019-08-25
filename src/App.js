@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import NasaCard from "./components/NasaCard";
 import DatePickerComp from "./components/DatePicker";
-import styled from "styled-components";
 import "./scss/App.css";
 
 function App() {

@@ -129,6 +129,9 @@ body {
   .cardCont .card .cardImg {
     width: 330px;
   }
+  .cardCont .card .cardVid {
+    width: 330px;
+  }
 }
 
 @media (max-width: 370px) {
@@ -139,6 +142,9 @@ body {
     width: 95%;
   }
   .cardCont .card .cardImg {
+    width: 300px;
+  }
+  .cardCont .card .cardVid {
     width: 300px;
   }
 }
