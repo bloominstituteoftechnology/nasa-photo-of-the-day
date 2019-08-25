@@ -54,7 +54,7 @@ body {
 }
 
 .leftCol .calendar {
-  width: 67%;
+  width: 64%;
   margin: 0 auto;
 }
 
@@ -128,6 +128,9 @@ body {
   .leftCol .calendar {
     width: 85%;
   }
+  .cardCont .card {
+    font-family: "SpaceMeatballRegular";
+  }
   .cardCont .card .cardImg {
     width: 330px;
   }
@@ -142,6 +145,9 @@ body {
   }
   .leftCol .calendar {
     width: 95%;
+  }
+  .cardCont .card {
+    font-family: "SpaceMeatballRegular";
   }
   .cardCont .card .cardImg {
     width: 300px;
