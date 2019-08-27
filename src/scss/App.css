@@ -147,16 +147,16 @@ body {
     width: 95%;
   }
   .cardCont {
-    max-width: 310px;
+    max-width: 300px;
   }
   .cardCont .card {
     font-family: "SpaceMeatballRegular";
   }
   .cardCont .card .cardImg {
-    width: 290px;
+    width: 280px;
   }
   .cardCont .card .cardVid {
-    width: 290px;
+    width: 280px;
   }
 }
 /*# sourceMappingURL=App.css.map */
