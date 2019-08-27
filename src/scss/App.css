@@ -47,14 +47,14 @@ body {
 
 .leftCol h1 {
   font-family: "SpaceMeatballRegular";
-  font-size: 5em;
+  font-size: 4em;
   text-align: center;
   font-weight: 900;
   color: #fff;
 }
 
 .leftCol .calendar {
-  width: 64%;
+  width: 40%;
   margin: 0 auto;
 }
 
@@ -132,28 +132,31 @@ body {
     font-family: "SpaceMeatballRegular";
   }
   .cardCont .card .cardImg {
-    width: 330px;
+    width: 380px;
   }
   .cardCont .card .cardVid {
-    width: 330px;
+    width: 380px;
   }
 }
 
-@media (max-width: 370px) {
+@media (max-width: 400px) {
   .leftCol h1 {
     font-size: 2.6em;
   }
   .leftCol .calendar {
     width: 95%;
   }
+  .cardCont {
+    max-width: 310px;
+  }
   .cardCont .card {
     font-family: "SpaceMeatballRegular";
   }
   .cardCont .card .cardImg {
-    width: 300px;
+    width: 290px;
   }
   .cardCont .card .cardVid {
-    width: 300px;
+    width: 290px;
   }
 }
 /*# sourceMappingURL=App.css.map */
