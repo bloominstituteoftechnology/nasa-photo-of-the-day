@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import PhotoCard from './components/PhotoCard';
-// import App.test from './App.test'
 import "./App.css";
+
 // ({}) === empty object. Will use the value of 'data' in the empty object. React is able to read the 'data' and run it. 
+
 function App() {  
   const[data, setData] = useState({});
   useEffect(() => {
@@ -34,3 +35,11 @@ function App() {
 // data with Photo, url, etc are being called and 'rendered' using useState({})
 // useEffect is running only once after reading the empty array [].
 export default App;
+
+
+// If you get banned from the nasa API 
+// </p>
+// {photo.map(data => ( <PhotoCard title={data.title}
+// url = { data.url }
+// explanation = { data.explanation }
+// date = { data.date } />)}
