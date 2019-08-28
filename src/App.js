@@ -35,7 +35,6 @@ useEffect(() => {
       <PhotoCard title={data.title} url={data.url} explanation={data.explanation} date={data.date} /> 
       {/* photos && photos.map(data => (
       <PhotoCard title={data.title} url={data.url} explanation={data.explanation} date={data.date} /> */}
-      ))}
     </div>
   );
 }
