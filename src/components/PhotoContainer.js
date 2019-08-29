@@ -1,5 +1,5 @@
 import React from "react";
-import styled from 'styled-components';
+
 
 const PhotoContainer = (props) => {
     const urlStyle = {
