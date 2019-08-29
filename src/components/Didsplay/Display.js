@@ -5,8 +5,10 @@ const Display = props => {
   return (
     <>
       <DisplayImg 
-      imgSrc={props.imgSrc} 
-      title={props.title} 
+
+      imgSrc={props.imgSrc} // here is the image url 
+
+      title={props.title}  // here is the title <h1>
       description={props.description} />
     </>
   );

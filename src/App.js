@@ -1,7 +1,15 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Display from "./components/Didsplay/Display";
-import "./App.css";
+import styled from "styled-components";
+
+const AppDiv = styled.div`
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(54, 11, 11, 0.938);
+  color: #fff;
+`;
 
 function App() {
   const [data, setDate] = useState({});
@@ -14,12 +22,14 @@ function App() {
       });
   }, []);
 
-  console.log(data);
-
   return (
-    <div className="App">
-      <Display imgSrc={data.url}  title={data.title} description={data.explanation}/>
-    </div>
+    <AppDiv>
+      <Display
+        imgSrc={data.url}
+        title={data.title}
+        description={data.explanation}
+      />
+    </AppDiv>
   );
 }
 
