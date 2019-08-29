@@ -1,0 +1,9 @@
+.image-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.image {
+    max-width: 500px;
+    max-height: 500px;
+}
