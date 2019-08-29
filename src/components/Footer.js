@@ -1,10 +1,11 @@
 import React from "react";
+import styled from 'styled-components';
 
 
 const Footer = () => {
     return (
         <footer>
-            <h2>Vlad Burlutskiy ©2019</h2>
+            <h2>Burlutsky Web Solutions  ©2019</h2>
         </footer>
     );
 };
