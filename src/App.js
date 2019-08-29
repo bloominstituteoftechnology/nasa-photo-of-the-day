@@ -2,7 +2,10 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import PhotoCard from './components/PhotoCard';
-import styled from 'styled-components'
+import styled from 'styled-components';
+import StyledButton from './components/Button';
+import StyledHeaders from './components/Headers';
+import StyledP from './components/Story';
 import { Button } from 'reactstrap';
 import "./App.css";
 

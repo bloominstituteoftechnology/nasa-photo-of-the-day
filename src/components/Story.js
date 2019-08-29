@@ -1,3 +1,9 @@
-const StyledP = styled.p``;
+import styled from 'styled-components'
 
-export default Story
+const StyledP = styled.p`
+font-size; 1.6rem;
+line-height: 1.4;
+color: orange;
+`;
+
+export default StyledP

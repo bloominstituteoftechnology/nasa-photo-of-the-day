@@ -1,11 +1,11 @@
 .App {
   text-align: center;  
-  animation: pulse 15s infinite;
+  animation: pulse 12s infinite;
 }
 
    @keyframes pulse {
     0% {
-      background-color: rgb(163, 215, 236);
+      background-color: #8ddaf1;
     }
 
     100% {
