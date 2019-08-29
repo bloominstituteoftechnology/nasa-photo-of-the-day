@@ -1,16 +1,5 @@
 .App {
-  text-align: center;  
-  animation: pulse 15s infinite;
-}
-
-   @keyframes pulse {
-    0% {
-      background-color: rgb(163, 215, 236);
-    }
-
-    100% {
-      background-color: rgb(2, 9, 73);
-    }
+  text-align: center;
 }
 
 .App-logo {
@@ -42,4 +31,3 @@
     transform: rotate(360deg);
   }
 }
-
