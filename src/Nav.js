@@ -2,9 +2,9 @@ import React from "react";
 
 function Nav() {
     const navItems = ["Home", "Blog", "About", "Programs"];
-    let navigation = navItems.map(item => {
+    let navigation = navItems.map((item, index) => {
         return (
-            <a style={{margin: "0 15px", fontSize: "1.7rem", cursor: "pointer", color: "white"}}>
+            <a key={index} style={{margin: "0 15px", fontSize: "1.7rem", cursor: "pointer", color: "white"}}>
                 {item}
             </a>
         )
