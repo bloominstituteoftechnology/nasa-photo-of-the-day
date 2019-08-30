@@ -14,14 +14,16 @@ const TextWrapper = styled.p`
     text-align: justify;
     text-indent: 20px;
     line-height: 1.4rem;
-    max-width: 88%;
+    max-width: 70%;
+    column-count: 2;
+    column-gap: 40px;
     margin: 0 auto;
     border: 1px dashed blue;
     padding: 10px 10px;
 `
 
 const ImageTag =styled.img`
-    width: 90%;
+    width: 70%;
     margin-bottom: 10px;
 `
 

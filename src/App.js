@@ -4,7 +4,8 @@ import axios from "axios";
 import Navigation from "./components/Navigation";
 import Landing from "./components/PhotoContainer";
 import Footer from "./components/Footer";
-import styled from 'styled-components';
+
+
 
 function App() {
   
