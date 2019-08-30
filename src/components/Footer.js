@@ -13,6 +13,7 @@ const FooterWrapper = styled.div`
     justify-content: center;
     border-top: dashed;
     background-color: rgb(58, 135, 199);
+    margin-top: 10px;
 `
 
 const Footer = () => {
