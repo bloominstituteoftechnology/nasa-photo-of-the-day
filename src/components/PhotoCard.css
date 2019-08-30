@@ -1,0 +1,9 @@
+.photo.card {
+    width: 800px;
+    max-width: 90%;
+    img {
+        width: 100%;
+        height: 300px;
+    }
+
+}

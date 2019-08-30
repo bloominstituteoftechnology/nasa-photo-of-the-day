@@ -1,16 +1,16 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-const StyledHeaders = styled.h1`
-font-family: 'Russo One', sans-serif;
-  color: #ebee4c;
+ export const StyledH1 = styled.h1`
+  font-family: 'Russo One', sans-serif;
+  color: orange;
   font-size: 4.0rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-`;
+`
+export const StyledH2 = styled.StyledH1
 
-export default StyledHeaders
 
 // import React from 'react';
 // import styled from 'styled-components';

@@ -3,9 +3,9 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import PhotoCard from './components/PhotoCard';
 import styled from 'styled-components';
-import StyledButton from './components/Button';
-import StyledHeaders from './components/Headers';
-import StyledP from './components/Story';
+import "./components/Button.js";
+import "./components/Headers.js";
+import "./components/Story.js";
 import { Button } from 'reactstrap';
 import "./App.css";
 
