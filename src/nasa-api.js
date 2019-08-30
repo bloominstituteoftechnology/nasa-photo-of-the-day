@@ -5,9 +5,11 @@ export function NasaImages() {
     const [nasaImg, setNasaImg] = useState("");
     const [explain, setExplain] = useState("");
     const [title, setTitle] = useState("");
+    
 
     useEffect(() => { 
-        axios.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
+
+        axios.get(`https://api.nasa.gov/planetary/apod?api_key=vwb3iV4BfTbtDLyxbPwsQCVdb5MTG6gJoVWXFQwD`)
             .then(res => {
             console.log(res.data)
             setNasaImg(res.data.url)

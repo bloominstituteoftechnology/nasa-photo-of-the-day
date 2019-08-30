@@ -4,6 +4,8 @@ body {
 
 .App {
   text-align: center;
+  display: flex;
+
 }
 
 .App-logo {
