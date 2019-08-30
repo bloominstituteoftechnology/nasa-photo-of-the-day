@@ -6,4 +6,4 @@ line-height: 1.4;
 color: orange;
 `
 
-export default StyledP
+export default StyledP;

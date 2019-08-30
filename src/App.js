@@ -2,12 +2,11 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import PhotoCard from './components/PhotoCard';
-import styled from 'styled-components';
 import "./components/Button.js";
 import "./components/Headers.js";
 import "./components/Story.js";
-import { Button } from 'reactstrap';
 import "./App.css";
+
 
 // ({}) === empty object. Will use the value of 'data' in the empty object. React is able to read the 'data' and run it. 
 
@@ -32,11 +31,21 @@ function App() {
       <h1>
         Welcome to NASA picture of the day!
       </h1>
+      {/* Uncomment for array api */}
       <PhotoCard title={data.title}
        url={data.url} 
        explanation={data.explanation}
        date={data.date}
-        />
+      />
+      {/* <div className='photo-card'> 
+        {photo.map(data => {
+          <PhotoCard title={data.title}
+          url={data.url}
+          explanation={data.explanation}
+          date={data.date} />
+        })}
+      </div> */}
+
         <form>
         <input onChange={(event) => 
           setDate(event.target.value)} type={'date'}>

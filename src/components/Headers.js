@@ -9,7 +9,7 @@ import styled from 'styled-components';
   align-items: center;
   justify-content: center;
 `
-export const StyledH2 = styled.StyledH1
+export const StyledH2 = styled.StyledH1;
 
 
 // import React from 'react';

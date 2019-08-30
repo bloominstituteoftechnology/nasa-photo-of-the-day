@@ -1,7 +1,7 @@
 import React from 'react';
-import "./PhotoCard.css";
 import StyledP from "./Story";
-import { StyledH2 } from "./Headers"
+import { StyledH2 } from "./Headers";
+import "./PhotoCard.css";
 
 function PhotoCard(props) {
     return (
@@ -14,6 +14,6 @@ function PhotoCard(props) {
     )
 }
 
-export default PhotoCard
+export default PhotoCard;
 
 // <> </> === JSX (rendering)

@@ -13,4 +13,4 @@ padding: 10px;
     opacity: 0.5;
     }
 `
-export default StyledButton
+export default StyledButton;
