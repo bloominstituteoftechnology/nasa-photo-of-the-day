@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import PhotoCard from './components/PhotoCard';
+import { StyledH1 } from './components/Headers';
 import "./components/Button.js";
 import "./components/Headers.js";
 import "./components/Story.js";
@@ -28,9 +29,9 @@ function App() {
   console.log(date);
   return (
     <div className="App">
-      <h1>
+      <StyledH1>
         Welcome to NASA picture of the day!
-      </h1>
+      </StyledH1>
       {/* Uncomment for array api */}
       <PhotoCard title={data.title}
        url={data.url} 

@@ -9,7 +9,8 @@ import styled from 'styled-components';
   align-items: center;
   justify-content: center;
 `
-export const StyledH2 = styled.StyledH1;
+;
+// export const is a 'named' export and needs to imported using {}.
 
 
 // import React from 'react';
