@@ -17,10 +17,17 @@ const Info = () => {
         width: 85%;
         margin: 30px auto;
     `
+    const P = styled.p`
+        &:first-letter {
+            text-transform: capitalize;
+            color: red;
+            font-size: 2rem;
+        }
+    `
 
     return(
         <Div>
-            <p> { info } </p>
+            <P> { info } </P>
         </Div>
     )
 }

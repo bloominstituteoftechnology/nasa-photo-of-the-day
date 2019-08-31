@@ -28,10 +28,13 @@ const Header = () =>  {
         display: flex;
         justify-content: space-evenly
     `
+    const Span = styled.span`
+        color: red;
+    `
     return(
         <Wrapper>
-            <h3>DATE: { date }</h3>
-            <h3>TITLE: { text }</h3>
+            <h3><Span>DATE: </Span>{ date }</h3>
+            <h3><Span>TITLE: </Span>{ text }</h3>
         </Wrapper>
     )
 }
