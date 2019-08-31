@@ -48,7 +48,8 @@ function App() {
       </div> */}
 
         <form>
-        <input onChange={(event) => 
+        <label for='date'>Click Arrow to Select any date</label>
+        <input id='date' onChange={(event) => 
           setDate(event.target.value)} type={'date'}>
           </input>
         </form>

@@ -1,10 +1,12 @@
-.photo.card {
-    width: 800px;
-    max-width: 90%;
+.photo-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
  .photo-card img {
-     width: 85%;
+     width: 75%;
      height: 500px;
      border-radius: 10px;
  }
