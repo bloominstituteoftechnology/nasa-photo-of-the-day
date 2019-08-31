@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
+import styled from "styled-components";
 
 const Header = () =>  {
     const [text, setText] = useState('')
@@ -23,11 +24,15 @@ const Header = () =>  {
         })
     })
 
+    const Wrapper = styled.div`
+        display: flex;
+        justify-content: space-evenly
+    `
     return(
-        <div>
-            <h3>{ text }</h3>
-            <h3>{ date }</h3>
-        </div>
+        <Wrapper>
+            <h3>DATE: { date }</h3>
+            <h3>TITLE: { text }</h3>
+        </Wrapper>
     )
 }
 

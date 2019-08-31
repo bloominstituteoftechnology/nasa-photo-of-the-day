@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
-
+import styled from "styled-components";
 
 const Image = () => {
 
@@ -15,9 +15,19 @@ const Image = () => {
             })
     }, [image])
 
+    const Img = styled.img`
+        width: 85%;
+        margin: 0 auto;
+        border: 2px solid red;
+        padding: 7px;
+    `
+    const Button = styled.button`
+        background: lightgrey;
+        opacity: 0.5;
+    `
     return (
-        <button><img src={image} alt="Photo of the day" onClick={() => setImage(image + 1)} />
-        </button>
+        <Button><Img src={image} alt="Photo of the day" onClick={() => setImage(image + 1)} />
+        </Button>
     );
 };
 
