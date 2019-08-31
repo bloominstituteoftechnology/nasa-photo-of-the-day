@@ -23,6 +23,7 @@ const Info = () => {
             color: red;
             font-size: 2rem;
         }
+        line-height: 1.5;
     `
 
     return(
