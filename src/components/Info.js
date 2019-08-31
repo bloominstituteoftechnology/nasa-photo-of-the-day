@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
+import styled from "styled-components";
 
 const Info = () => {
     const [info, setInfo] = useState('')
@@ -12,10 +13,15 @@ const Info = () => {
                 })
     }, [info])
 
+    const Div = styled.div`
+        width: 85%;
+        margin: 30px auto;
+    `
+
     return(
-        <div>
-            <h3> { info } </h3>
-        </div>
+        <Div>
+            <p> { info } </p>
+        </Div>
     )
 }
 
