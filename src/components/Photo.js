@@ -16,18 +16,20 @@ const Image = () => {
     }, [image])
 
     const Img = styled.img`
-        width: 85%;
+        max-width: 85%;
         margin: 0 auto;
-        border: 2px solid red;
-        padding: 7px;
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.3),
+                    0 5px 21px rgba(255,255,255, 0.2);
+        border-radius: 5px;
+        
     `
-    const Button = styled.button`
-        background: lightgrey;
-        opacity: 0.5;
-    `
+    // const Button = styled.button`
+    //     background: lightgrey;
+    //     opacity: 0.5;
+    // `
     return (
-        <Button><Img src={image} alt="Photo of the day" onClick={() => setImage(image + 1)} />
-        </Button>
+        <Img src={image} alt="Photo of the day" onClick={() => setImage(image + 1)} />
+       
     );
 };
 

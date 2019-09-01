@@ -16,6 +16,10 @@ const Info = () => {
     const Div = styled.div`
         width: 85%;
         margin: 30px auto;
+        // background: rgba(192,192,192,0.10);
+        border-top: 5px solid rgba(192,192,192,0.10);
+        border-bottom: 5px solid rgba(192,192,192,0.10);
+
     `
     const P = styled.p`
         &:first-letter {
@@ -24,6 +28,8 @@ const Info = () => {
             font-size: 2rem;
         }
         line-height: 1.5;
+        padding: 10px 30px;
+        border-radius: 5px;
     `
 
     return(

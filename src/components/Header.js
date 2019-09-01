@@ -27,6 +27,7 @@ const Header = () =>  {
     const Wrapper = styled.div`
         display: flex;
         justify-content: space-evenly
+        margin-bottom: 20px;
     `
     const Span = styled.span`
         color: red;
