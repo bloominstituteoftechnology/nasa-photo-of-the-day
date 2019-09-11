@@ -1,9 +1,9 @@
 import React from "react";
 
-const Details = () => (
+const Details = ({ title, description }) => (
   <div className="detail-text">
-    <h2>{}</h2>
-    <p>{}</p>
+    <h2>{title}</h2>
+    <p>{description}</p>
   </div>
 );
 
