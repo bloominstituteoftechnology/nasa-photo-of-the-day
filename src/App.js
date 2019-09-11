@@ -28,9 +28,9 @@ function App() {
     return (
       <div className="App">
         <Header />
-        <Title titleText={photoData.title} />
+        <Title titleText={photoData.title} photoDate={photoData.date} />
         <Photo url={photoData.url} />
-        <Copyright copyrightOwner={photoData.copyright} copyrightDate={photoData.date} />
+        <Copyright copyrightOwner={photoData.copyright}/>
         <Description descriptionText={photoData.explanation} />
       </div>
     );
