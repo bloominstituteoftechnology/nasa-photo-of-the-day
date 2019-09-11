@@ -9,11 +9,13 @@ import Description from './Description';
 
 function App() {
 
-  const photoApi = 'https://lambda-github-api-server.herokuapp.com/';
+  const testPhotoApi = 'https://lambda-github-api-server.herokuapp.com/';
+  const livePhotoApi = 'https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY';
+  const testMode = true;
   const [photoData, setPhotoData] = useState();
 
   useEffect(() => {
-    axios.get(photoApi)
+    axios.get(testMode ? testPhotoApi : livePhotoApi)
       .then(response => {
         setPhotoData(response.data);
       })
