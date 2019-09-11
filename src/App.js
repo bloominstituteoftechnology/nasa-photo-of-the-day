@@ -1,17 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import Title from "./components/Title";
 import Figure from "./components/Figure";
 import Details from "./components/Details";
 import "./App.css";
 
-function App() {
-  const [state, setState] = React.useState({});
+const App = () => {
+  const [state, setState] = useState({});
 
   const getData = () => {
-    fetch("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
+    const api = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY";
+
+    fetch(api)
       .then(res => res.json())
       .then(data => {
         setState(data);
+      })
+      .catch(err => {
+        console.log(err);
       });
   };
 
@@ -28,6 +33,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;
