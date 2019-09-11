@@ -32,12 +32,18 @@
   }
 }
 
+.App > div {
+  display: grid;
+  grid-column: 4fr 2fr;
+}
+
 figure {
   border: thin #c0c0c0 solid;
   display: flex;
   flex-flow: column;
   padding: 5px;
   max-width: 90vw;
+  width: 100%;
   margin: auto;
 }
 

@@ -7,23 +7,23 @@ import "./App.css";
 function App() {
   const [state, setState] = React.useState({});
 
-  React.useEffect(() => {
+  const getData = () => {
     fetch("https://lambda-github-api-server.herokuapp.com/")
       .then(res => res.json())
       .then(data => {
         setState(data);
       });
-  });
+  };
+
+  React.useEffect(getData);
 
   const { title, hdurl, copyright, date, explanation } = state;
 
   return (
     <div className="App">
       <Title date={date} />
-      <div>
-        <Figure copyright={copyright} title={title} imgUrl={hdurl} />
-        <Details title={title} description={explanation} />
-      </div>
+      <Figure copyright={copyright} title={title} imgUrl={hdurl} />
+      <Details title={title} description={explanation} />
 
       {/* <p>
         Read through the instructions in the README.md file to build your NASA
