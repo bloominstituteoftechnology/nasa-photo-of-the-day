@@ -1,13 +1,16 @@
 .title {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 2%;
+  text-transform: uppercase;
 }
 
 .details {
   width: 100vw;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .detail-text {
@@ -22,7 +25,7 @@
 }
 
 .detail-text p {
-  max-width: 35rem;
+  max-width: 30rem;
 }
 
 figure {
@@ -30,22 +33,18 @@ figure {
   display: flex;
   flex-flow: column;
   padding: 5px;
-  max-width: 90vw;
   width: 32%;
-  margin: auto;
 }
 
 img {
   width: 100%;
   height: auto;
-  /* max-width: 220px; */
-  /* max-height: 150px; */
 }
 
 figcaption {
   background-color: #222;
   color: #fff;
   font: italic smaller sans-serif;
-  padding: 3px;
-  text-align: center;
+  padding: 8px 10px;
+  text-align: left;
 }
