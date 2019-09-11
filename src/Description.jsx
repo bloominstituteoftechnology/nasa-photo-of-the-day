@@ -1,7 +1,9 @@
 import React from 'react';
 
-function Description () {
-    return null;
+function Description (props) {
+    return (
+        <p>{props.descriptionText}</p>
+    );
 }
 
 export default Description;
