@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import ComponentTwo from "./Component2";
 import axios from "axios";
 
 export default function ComponentOne() {
@@ -6,6 +7,8 @@ export default function ComponentOne() {
 
     useEffect(()=> {
         axios.get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`)
+        // axios.get(`https://api.nasa.gov/planetary/apod?date=today`)
+        // axios.get(`https://api.nasa.gov/planetary/apod?hd=False`)
         .then(response => {
             // const photo = response.data;
             console.log(response)
@@ -15,13 +18,15 @@ export default function ComponentOne() {
         });
     },[]);
     return(
-        <h1>Hello!</h1>
-        {pictures.map(item =>
+        <div className="container">
+        <button onClick={() => setPictures("shuttle")}>Shuttle</button>
+        <h1>NASA Planetary</h1>
+        {pictures.map(item => {
             return (
-                <
+                <ComponentTwo/>
             )
-            )}
-    
+        })}
+        </div>
     
     
         )
