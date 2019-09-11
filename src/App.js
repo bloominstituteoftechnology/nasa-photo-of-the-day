@@ -1,13 +1,11 @@
 import React from "react";
 import "./App.css";
+import Asteroid from "./components/Asteroid"
 
 function App() {
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+      <Asteroid />
     </div>
   );
 }
