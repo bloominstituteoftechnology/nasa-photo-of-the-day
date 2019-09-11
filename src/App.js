@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
-import Asteroid from "./components/Asteroid"
+import Asteroid from "./components/Asteroid";
+import "./styles.css";
 
 function App() {
   return (
