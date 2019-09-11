@@ -15,24 +15,17 @@ function App() {
       });
   };
 
-  React.useEffect(getData);
+  React.useEffect(getData, []);
 
   const { title, hdurl, copyright, date, explanation } = state;
 
   return (
     <div className="App">
-      <Title date={date} />
-      <Figure copyright={copyright} title={title} imgUrl={hdurl} />
-      <Details title={title} description={explanation} />
-
-      {/* <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun{" "}
-        <span role="img" aria-label="">
-          🚀
-        </span>
-        !
-      </p> */}
+      <Title date={date} className="title" />
+      <div className="details">
+        <Figure copyright={copyright} title={title} imgUrl={hdurl} />
+        <Details title={title} description={explanation} />
+      </div>
     </div>
   );
 }
