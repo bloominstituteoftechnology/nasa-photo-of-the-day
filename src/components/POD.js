@@ -12,11 +12,11 @@ export default function POD() {
 
     useEffect(() => {
         axios
-        .get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`)
+        .get(`https://api.nasa.gov/planetary/apod?api_key=RBEYMHy5En71alookaNZCgQZCcSAddkar32ksjVG`)
         .then(response => {
-            const pod = response;
+            const pod = response.data;
             console.log('NASA Photo of the Day', pod);
-            setPod(pod);
+            setPod([pod]);
         })
         .catch(error => {
             console.log('Photo of the Day was not returned', error);
@@ -29,8 +29,9 @@ export default function POD() {
                 return (
                     <PODCard
                     key={photo.url}
+                    url={photo.url}
                     title={photo.title}
-                    description={photo.explanation}
+                    explanation={photo.explanation}
                     copyright={photo.copyright}
                     date={photo.date}
                     />
