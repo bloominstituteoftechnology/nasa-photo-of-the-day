@@ -22,7 +22,7 @@ function App() {
       .catch(error => {
         console.log(error);
       })
-  }, []);
+  }, [testMode]);
 
   if (!photoData) {
     return null;
