@@ -1,5 +1,7 @@
 import React from "react";
 import Title from "./components/Title";
+import Figure from "./components/Figure";
+import Details from "./components/Details";
 import "./App.css";
 
 function App() {
