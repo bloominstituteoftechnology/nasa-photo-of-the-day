@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
+import Header from './Header';
+import Title from './Title';
+import Photo from './Photo';
+import Copyright from './Copyright';
+import Description from './Description';
 
 function App() {
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+      <Header />
+      <Title />
+      <Photo />
+      <Copyright />
+      <Description />
     </div>
   );
 }
