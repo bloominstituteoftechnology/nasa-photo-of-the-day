@@ -113,4 +113,4 @@ Do not attempt stretch problems until MVP has been reached and a final commit ha
 - Make another app that consumes another one of NASA's other APIs listed on the same website
 
 
- ## Part II - [Advanced Styling Techniques](DAY_TWO_README.md)
+ ## Part II - [Advanced Styling Techniques](DAY_TWO_README.md).
