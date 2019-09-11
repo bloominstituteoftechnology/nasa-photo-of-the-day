@@ -15,15 +15,22 @@ function App() {
   const testMode = true;
   const [photoData, setPhotoData] = useState();
 
+  const today = new Date();
+  const dd = ('0' + today.getDate()).slice(-2);
+  const mm = ('0' + today.getMonth()).slice(-2);
+  const yyyy = today.getFullYear();
+  const dateToday = yyyy + '-' + mm + '-' + dd;
+  const [photoDate, setPhotoDate] = useState(dateToday);
+
   useEffect(() => {
-    axios.get(testMode ? testPhotoApi : livePhotoApi)
+    axios.get(testMode ? testPhotoApi : livePhotoApi + '&date=' + photoDate)
       .then(response => {
         setPhotoData(response.data);
       })
       .catch(error => {
         console.log(error);
       })
-  }, [testMode]);
+  }, [testMode, photoDate]);
 
   if (!photoData) {
     return null;
@@ -35,7 +42,7 @@ function App() {
         <Photo url={photoData.url} />
         <Copyright copyrightOwner={photoData.copyright}/>
         <Description descriptionText={photoData.explanation} />
-        <DateSelector />
+        <DateSelector photoDate={photoDate} setPhotoDate={setPhotoDate} />
       </div>
     );
   }
