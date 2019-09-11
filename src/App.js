@@ -8,7 +8,7 @@ function App() {
   const [state, setState] = React.useState({});
 
   const getData = () => {
-    fetch("https://lambda-github-api-server.herokuapp.com/")
+    fetch("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
       .then(res => res.json())
       .then(data => {
         setState(data);
