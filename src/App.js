@@ -1,13 +1,12 @@
-import React from "react";
-import "./App.css";
+import React from 'react';
+import './App.css';
+import POD from './components/POD';
 
 function App() {
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+      <h1>Photo of the Day</h1>
+      <POD />
     </div>
   );
 }
