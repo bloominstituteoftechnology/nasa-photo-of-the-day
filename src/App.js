@@ -22,7 +22,9 @@ function App() {
       })
   }, []);
 
-  if (photoData) {
+  if (!photoData) {
+    return null;
+  } else {
     return (
       <div className="App">
         <Header />
@@ -32,10 +34,6 @@ function App() {
         <Description descriptionText={photoData.explanation} />
       </div>
     );
-  } else {
-    return (
-      <h1>Loading...</h1>
-    )
   }
 
 }
