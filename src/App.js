@@ -1,13 +1,12 @@
 import React from "react";
+import PlanetList from "./components/PlanetList.js";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+      <h1>As the World Turns</h1>
+      <PlanetList />
     </div>
   );
 }
