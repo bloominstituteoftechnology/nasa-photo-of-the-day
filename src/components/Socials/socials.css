@@ -1,0 +1,28 @@
+.icons  {
+    display:flex;
+    justify-content: space-between;
+    width:170px;
+}
+
+.icon-class-fb {
+    font-size:1.5rem;
+    color:#3b5999;
+}
+
+.icon-class-tw {
+    font-size:1.5rem;
+    color:#55acce;
+}
+
+
+.icon-class-ml {
+    font-size:1.5rem;
+    color:#444;
+}
+
+
+.icon-class-lk {
+        font-size:1.5rem;
+    color:#000;
+}
+
