@@ -6,6 +6,7 @@ import Title from './Title';
 import Photo from './Photo';
 import Copyright from './Copyright';
 import Description from './Description';
+import DateSelector from './DateSelector';
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
         <Photo url={photoData.url} />
         <Copyright copyrightOwner={photoData.copyright}/>
         <Description descriptionText={photoData.explanation} />
+        <DateSelector />
       </div>
     );
   }

@@ -90,3 +90,22 @@ p {
 .alignLeft {
   text-align: left;
 }
+
+.date-selector {
+  border: 1px solid grey;
+  padding: 1rem;
+}
+
+.date-selector h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.date-selector input {
+  font-size: 2rem;
+}
+
+.date-selector button {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
