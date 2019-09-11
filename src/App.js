@@ -1,11 +1,27 @@
 import React, {useState, useEffect} from "react";
 import "./App.css";
-import Apod from "./components/ApodDisplay";
+import Apod from "./components/Apod";
+import axios from "axios";
 
 function App() {
+
+  const [apod, setApod] = useState({});
+  const [date, setDate] = useState("2019-09-11");
+
+  const API_KEY = "DEMO_KEY"; 
+
+  useEffect( () =>{
+    axios.get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&date=${date}`)
+      .then(response => {
+        setApod(apod => response.data);
+        console.log(apod);
+      })
+        .catch(error => console.log(`Error: ${error}`));
+  }, []);
+
   return (
     <div className="App">
-      <Apod imgUrl={"Nope"} description={"Boring.. no idea what we need here."}/>
+      <Apod title={apod.title} date={apod.date} description={apod.explanation} url={apod.url}  copyright={apod.copyright}/>
     </div>
   );
 }
