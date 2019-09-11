@@ -1,13 +1,15 @@
 import React from "react";
 
-const imgCard = props => {
+const ImgCard = props => {
   return (
-    <div className="img-card" key={props.id}>
-        <img className="photo-of-the-day-image" alt="random space image" src={props.url} />
+    <div className="img-card">
+        <img alt="Outer Space" src = {props.url} />
         <h1>{props.title}</h1>
+        <h2>{props.date}</h2>
+        <h3>{props.copyright}</h3>
         <p>{props.explanation}</p>
     </div>
   );
 };
 
-export default imgCard;
+export default ImgCard;
