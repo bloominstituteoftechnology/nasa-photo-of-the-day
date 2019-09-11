@@ -80,6 +80,16 @@
   height:100%;
 }
 
+.display-body h1{
+  font-size: 3rem;
+}
+
+
+.loading-component{
+  color:#fff;
+  font-size:3rem;
+}
+
 .display-description{
   position:absolute;
   right:0;

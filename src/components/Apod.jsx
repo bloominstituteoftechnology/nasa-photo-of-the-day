@@ -6,20 +6,16 @@ const Apod = props =>{
     console.log(props);
 
 
-    if(!props.url){
-        return (
-            <div className="wrapper">
-                <div className="display-header">
-                    <h1>NASA Astronomy Picture of the Day</h1> <div><h1>Pick a Date: </h1><select><option>{date}</option></select></div>
-                </div>
-                <div className="display-body">
-    
-                    <h1>Loading..</h1>
-    
-                </div>
+    if(!props.url) return (
+        <div className="display-body">
+            <div className="display-header">
+                <h1>NASA Astronomy Picture of the Day</h1>
             </div>
+            <div className="loading-component">
+                <h3>Loading API..</h3>
+            </div>
+        </div>
         );
-    }else{
 
     
 
@@ -41,7 +37,6 @@ const Apod = props =>{
             </div>
         </div>
     );
-}
 };
 
 export default Apod;
