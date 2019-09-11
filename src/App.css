@@ -1,5 +1,12 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  font-size:62.5%;
+}
+
 .App {
-  text-align: center;
+  width:100vw;
 }
 
 .App-logo {
@@ -30,4 +37,70 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.wrapper{
+  height:100vh;
+}
+
+.display-header{
+  background-color:#282c34;
+  color:#fff;
+  height:75px;
+  width:100vw;
+  display:flex;
+  align-items:center;
+  justify-content: space-around;
+  border-bottom: 1px solid #383c44;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:100;
+}
+
+.display-header select{
+  font-size:2rem;
+}
+
+.display-header h1{
+  font-size: 2rem;
+}
+
+.display-body{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  background-color: #181A22;
+  height:100vh;
+  padding-top:75px;
+}
+
+.display-body img{
+  height:100%;
+}
+
+.display-description{
+  position:absolute;
+  right:0;
+  bottom:40px;
+  background-color:#282c34AA;
+  padding:20px;
+  width:85%;
+  border-top-left-radius:10px;
+  border-bottom-left-radius:10px;
+  border-top: 1px solid #383c44;
+  border-bottom: 1px solid #383c44;
+  border-left: 1px solid #383c44;
+}
+
+.display-description h3{
+  color:#DDD;
+  margin:10px;
+  font-size:1.8rem;
+}
+
+.display-description p{
+  color:#DDD;
+  font-size:1.4rem;
 }
