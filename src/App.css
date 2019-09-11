@@ -89,6 +89,7 @@ p {
 
 .alignLeft {
   text-align: left;
+  margin-bottom: 2rem;
 }
 
 .date-selector {
