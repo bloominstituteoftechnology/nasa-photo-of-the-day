@@ -12,12 +12,12 @@ function App() {
 
   const testPhotoApi = 'https://lambda-github-api-server.herokuapp.com/';
   const livePhotoApi = 'https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY';
-  const testMode = true;
+  const testMode = false;
   const [photoData, setPhotoData] = useState();
 
   const today = new Date();
   const dd = ('0' + today.getDate()).slice(-2);
-  const mm = ('0' + today.getMonth()).slice(-2);
+  const mm = ('0' + (today.getMonth() + 1)).slice(-2);
   const yyyy = today.getFullYear();
   const dateToday = yyyy + '-' + mm + '-' + dd;
   const [photoDate, setPhotoDate] = useState(dateToday);
