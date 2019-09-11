@@ -1,13 +1,11 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import "./App.css";
+import Apod from "./components/ApodDisplay";
 
 function App() {
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+      <Apod imgUrl={"Nope"} description={"Boring.. no idea what we need here."}/>
     </div>
   );
 }
