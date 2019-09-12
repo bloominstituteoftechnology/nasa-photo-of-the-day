@@ -1,6 +1,10 @@
 import React from "react";
 import "./App.css";
 import NasaPic from "./NASA FOLDER/NasaPic";
+import styled from "styled-components";
+
+
+
 
 function App() {
   return (
