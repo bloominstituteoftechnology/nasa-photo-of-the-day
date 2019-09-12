@@ -4,7 +4,7 @@ const NasaCopyright = props => {
     
     return (
         <>
-            <p className="date">Photographer Copyright: {props.copyright}</p>
+            <p className="date">Photographer &copy;: {props.copyright}</p>
         </>
     );
 };

@@ -2,14 +2,20 @@
   text-align: center;
 }
 
+.container {
+  width: 60vw;
+  height:100%;
+  margin: 0 auto;
+}
+
 .nasa-photo {
   height: 60vh;
-  width: 80vw;
+  width: 60vw;
 }
 
 .explanation {
   margin: 0 auto;
-  width: 80vw;
+  width: 60vw;
 
 }
 

@@ -20,6 +20,7 @@ import axios from 'axios';
       .get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`)
       .then( response => {
           console.log(response.data);
+
           setExplanation(response.data.explanation);
           setTitle(response.data.title);
           setUrl(response.data.url);
@@ -27,7 +28,7 @@ import axios from 'axios';
           setCopyright(response.data.copyright);
       })
       .catch(error => {
-          console.log("No data was returned", error);
+          console.log("Unable to retrieve data", error);
 
       });
   }, []);
@@ -40,11 +41,11 @@ import axios from 'axios';
         <NasaPotd
           url={url} />
         <NasaExplanation 
-          explanation={explanation} />
-        <NasaDate 
-          date={date} />
+          explanation = {explanation} />
         <NasaCopyright 
-          copyright={copyright} /> 
+          copyright = {copyright} /> 
+        <NasaDate 
+          date = {date} />
         </div>
       </div>
 );
