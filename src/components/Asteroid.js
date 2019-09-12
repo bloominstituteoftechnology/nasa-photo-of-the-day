@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import AsteroidCard from './AsteroidCard';
 import axios from 'axios';
+import styled from "styled-components";
 
 export default function Asteroid() {
     const [Asteroids, setAsteroid] = useState([]);

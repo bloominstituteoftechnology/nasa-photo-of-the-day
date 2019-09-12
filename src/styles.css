@@ -30,4 +30,8 @@ span{
 .content{
     margin: 0px 10px;
 }
+.entry{
+    border: 5px solid black;
+
+}
 
