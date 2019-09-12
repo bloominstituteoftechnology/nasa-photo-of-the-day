@@ -9,6 +9,7 @@ const WholeApp = styled.div`
   margin: 0;
   padding: 0;
   width: 100vw;
+  height: 100vh;
 `
 const StyledTitle = styled.div`
   width: 100%;
@@ -55,7 +56,7 @@ const StyledDescription = styled.div`
     color: #333
   }
 `
-const StyledFooter = styled.header`
+const StyledFooter = styled.footer`
   width: 100%;
   background: peru;
   min-height: 60px; 
@@ -82,20 +83,19 @@ function App() {
         
       })
   }, []);
+
+  
 // console.log(nasaInfo);
 
   if (nasaInfo) {
     return (
       <WholeApp>
-        {/* <StyledHeader>
-          <a>{nasaInfo.logo}</a>
-        </StyledHeader> */}
         <StyledTitle>
           <h1>{nasaInfo.title}</h1>
           <p>{nasaInfo.date}</p>
         </StyledTitle>      
         <StyledImage>
-          <img src={nasaInfo.url}></img>
+          <img src={nasaInfo.url} alt=''></img>
         </StyledImage>
         <StyledDescription>
           <h2>Description</h2>
