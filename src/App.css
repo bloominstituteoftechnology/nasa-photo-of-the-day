@@ -10,6 +10,18 @@ h2{
   color: rgb(13, 13, 54);
 }
 
+.App .container{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+
+.App .container .right-side{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;

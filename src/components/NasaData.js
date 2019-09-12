@@ -20,10 +20,9 @@ function NasaImage(){
 
     return (
         <div className='dailyPic'>
-            <h1>Testing Beep Beep</h1>
                 <DataCard 
                     title = {apod.title}
-                    imageUrl = {"https://apod.nasa.gov/apod/image/1909/IRISNebulaSurroundingsNGC7023_1100.jpg"}
+                    imageUrl = {apod.url}
                     description ={apod.explanation}
                     copyright ={apod.copyright}
                 />
