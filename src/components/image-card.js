@@ -3,11 +3,11 @@ import styled from "styled-components";
 
 
 const CardContainer = styled.div`
-    background: RGBA(187,187,187,.9);
+    background: RGBA(255,255,255,.85);
     display: flex;
     justify-content: center;
-    width:80%;
-    border-radius: px;
+    width:70%;
+    border-radius: 5px;
     margin-bottom: 70px;
 
 `
@@ -30,7 +30,7 @@ align-items: center;
 const AstronomyImage = styled.img`
     // align-self: center;
     width: 80%;
-    height: 500px;
+    height: 50%;
     object-fit: scale;
     flex-shrink: 2;
     justify-content:center;
