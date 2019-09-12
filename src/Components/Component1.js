@@ -32,7 +32,6 @@ export default function ComponentOne() {
     
     return(
         <div className="container">
-          <h1>H1 Placeholder</h1>
           <ComponentTwo
           hdurl={nasa.hdurl}
           title={nasa.title}
