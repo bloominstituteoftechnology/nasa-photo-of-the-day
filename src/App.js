@@ -8,11 +8,11 @@ import NasaPotd from "./Components/NasaPotd";
 import axios from 'axios';
 
  function App(){
-  const [explanation, setExplanation] = useState('');
-  const [title, setTitle] = useState('');
-  const [url, setUrl] = useState('');
-  const [date, setDate] = useState('');
-  const [copyright, setCopyright] = useState('');
+  const [explanation, setExplanation] = useState();
+  const [title, setTitle] = useState();
+  const [url, setUrl] = useState();
+  const [date, setDate] = useState();
+  const [copyright, setCopyright] = useState();
 
 
   useEffect(() => {
