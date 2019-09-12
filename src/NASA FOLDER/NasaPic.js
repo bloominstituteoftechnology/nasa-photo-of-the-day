@@ -3,7 +3,7 @@ import Axios from "axios";
 import NasaCard from "./NasaCard";
 
 export default function NasaPic() {
-    const [pics, setPic] = useState([]);
+    const [pic, setPic] = useState([]);
 
     useEffect(() => {
         Axios
@@ -19,10 +19,10 @@ export default function NasaPic() {
     }, []);  
     return (
             <NasaCard
-            title={pics.title}
-            picture={pics.hdurl}
-            date={pics.date}
-            description={pics.explanation}
+            title={pic.title}
+            picture={pic.hdurl}
+            date={pic.date}
+            description={pic.explanation}
             />
     )
 }
