@@ -3,7 +3,7 @@ import React from 'react';
 const NasaExplanation = props => {
     return (
         <>
-            <h4>Photo Explanation: </h4>
+            <h3>Photo Explanation: </h3>
             <p className="explanation">{props.explanation}</p>
         </>
     );

@@ -2,9 +2,15 @@
   text-align: center;
 }
 
-.nasa-photo{
+.nasa-photo {
   height: 60vh;
   width: 80vw;
+}
+
+.explanation {
+  margin: 0 auto;
+  width: 80vw;
+
 }
 
 .App-logo {
