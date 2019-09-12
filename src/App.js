@@ -10,8 +10,8 @@ import styled from 'styled-components'
 
 const AppSection = styled.section `
 background: #DCDCDC;
-width: 40vw;
-margin:  auto;
+width: 50vw;
+margin: 0 auto;
 ;
 
 
@@ -29,7 +29,7 @@ margin:  auto;
 
   useEffect(() => {
       axios
-      .get(`https://api.nasa.gov/planetary/apod?api_key=U5f2h4RNWlYb3It9tOm3PduYzhvmVstZVHmiMuCa`)
+      .get(`https://api.nasa.gov/planetary/apod?api_key=U5f2h4RNWlYb3It9tOm3PduYzhvmVstZVHmiMuCa&date=2012-03-14`)
       .then( response => {
           console.log(response.data);
 

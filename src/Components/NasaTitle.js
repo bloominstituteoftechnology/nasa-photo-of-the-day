@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const TitleH1 = styled.h1`
-margin-top: 2vh;
-padding: 2vh;
-font-size: 2rem;
+margin-top: 1vh;
+padding: 1vh;
+font-size: ;
 font-family: 'Gayathri', sans-serif;
 
 
@@ -12,11 +12,11 @@ font-family: 'Gayathri', sans-serif;
 `;
 
 const TitleH2 = styled.h2`
-margin-top: 2vh;
+
 font-size: 1rem;
 line-height: 1.5;
 font-family: Arial;
-font-family: 'Gayathri', sans-serif;
+font-family: 'Shadows Into Light', cursive;
 
 
 `;
