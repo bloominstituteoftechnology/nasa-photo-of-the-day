@@ -1,6 +1,22 @@
 import React, { useState, useEffect } from "react";
 import ComponentTwo from "./Component2";
 import axios from "axios";
+import styled from "styled-components";
+
+const NasaButton = styled.button`
+    width: 100px;
+    height: 30px;
+    background: ${props => (props.primary ? "#fff" : "#2a2223")}
+    color: ${props => (props.primary ? "#2a2223" : "#fff")};
+    border: 0
+    margin: 5px 10px;
+    transition: 0.2s ease-in;
+    border-radius: 25px;
+    $:hover {
+        background: ${props => (props.primary ? "#2a2223" : "#fff")};
+        color: ${props => (props.primary ? "#fff" : "#2a2223")}'
+    }
+`;
 
 export default function ComponentOne() {
     
@@ -39,10 +55,7 @@ export default function ComponentOne() {
           explanation={nasa.explanation}
           copyright={nasa.copyright}
         />
-
-
-           
-                
+        <NasaButton>See More</NasaButton>
         </div>
         );
         

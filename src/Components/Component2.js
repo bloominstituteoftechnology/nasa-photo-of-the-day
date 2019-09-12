@@ -3,14 +3,13 @@ import {Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button} from
 
 const ComponentTwo = props => {
     return (
-        <div className="nasa-card" key={props.id}>
-            <h3>{props.date}</h3>
-            <h2>{props.title}</h2>
-            <CardText>
-            {props.explanation}
-            width="70%"
-            </CardText>
-            
+        <Card>
+            <CardBody>
+                <CardTitle><h2>{props.title}</h2></CardTitle>
+                <CardSubtitle><h3>{props.date}</h3></CardSubtitle>
+                <CardText>{props.explanation}</CardText>
+            </CardBody>
+        
             <CardImg
                 top
                 width="70%"
@@ -18,7 +17,7 @@ const ComponentTwo = props => {
                 src={props.hdurl}
             />
             <p>{props.copyright}</p>
-        </div>
+        </Card>
     )
 }
 
