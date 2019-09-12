@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
 import POD from './components/POD';
+import Navigation from './components/Navigation';
 
 function App() {
   return (
     <div className="App">
-      <h1>Photo of the Day</h1>
+      <Navigation />
       <POD />
     </div>
   );
