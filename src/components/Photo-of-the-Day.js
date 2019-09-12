@@ -19,8 +19,8 @@ align-items: center;
 
 const PageTitle = styled.h1 `
     color: #db6220;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     font-size: 50px;
     letter-spacing: 3px;
     
