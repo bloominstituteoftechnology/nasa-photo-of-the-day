@@ -49,6 +49,16 @@ export default function ComponentOne() {
     return(
         
         <div className="container">
+          <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Home
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    <button class="dropdown-item" type="button">Yesterday's Image</button>
+    <button class="dropdown-item" type="button">All Images</button>
+    <button class="dropdown-item" type="button">Tomorrow's Image</button>
+  </div>
+</div>
           <ComponentTwo
           hdurl={nasa.hdurl}
           title={nasa.title}
