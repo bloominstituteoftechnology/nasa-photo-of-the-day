@@ -4,6 +4,7 @@ import styled from 'styled-components'
 const CopyrightP = styled.p`
 margin: 2vh;
 font-size: 2rem;
+font-family: 'Gayathri', sans-serif;
 
 
 

@@ -6,6 +6,18 @@ import NasaDate from "./Components/NasaDate";
 import NasaCopyright from "./Components/NasaCopyright";
 import NasaPotd from "./Components/NasaPotd";
 import axios from 'axios';
+import styled from 'styled-components'
+
+const AppSection = styled.section `
+background: #DCDCDC;
+width: 40vw;
+margin:  auto;
+;
+
+
+`;
+
+
 
  function App(){
   const [explanation, setExplanation] = useState();
@@ -34,7 +46,7 @@ import axios from 'axios';
   }, []);
 
   return (
-    <div className="App">
+    <AppSection><section className="App">
         <div className="container">
         <NasaTitle
           title={title} />
@@ -47,7 +59,7 @@ import axios from 'axios';
         <NasaDate 
           date = {date} />
         </div>
-      </div>
+      </section></AppSection>
 );
 }
 

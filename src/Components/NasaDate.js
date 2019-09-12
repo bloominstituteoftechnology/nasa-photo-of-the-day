@@ -2,13 +2,13 @@ import React from 'react';
 import styled from 'styled-components'
 
 const NasaDateP = styled.p`
-margin: 2vh auto;
-font-size: 1rem;
+margin: 0 auto;
+padding: 1vh;
+font-size: 1.5rem;
 font-style: italic;
-background: lightgrey;
-width: 60vw;
-
-
+font-family: 'Shadows Into Light', cursive;
+background: #F5F5F5;
+width: 100%;
 
 
 `;
