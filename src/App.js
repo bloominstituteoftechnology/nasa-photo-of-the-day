@@ -2,6 +2,13 @@ import React, { useState } from 'react';
 import './App.css';
 import axios from 'axios';
 import ImageCard from './components/ImageCard';
+import styled from 'styled-components';
+
+const AppContainer = styled.div`
+	text-align: center;
+	background-image: linear-gradient(to top, #249494 0%, #330867 100%);
+	color: white;
+`;
 
 function App() {
 	let dateObj = new Date();
@@ -15,11 +22,11 @@ function App() {
 
 	console.log(newDate);
 	return (
-		<div className="App">
+		<AppContainer>
 			<h1>NASA's Picture of the Day!</h1>
 			<span>Today is: {newDate}</span>
 			<ImageCard />
-		</div>
+		</AppContainer>
 	);
 }
 
