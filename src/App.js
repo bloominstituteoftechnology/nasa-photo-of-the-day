@@ -1,12 +1,13 @@
 import React, {useState, useEffect} from "react";
 import "./App.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Apod from "./components/Apod";
 import axios from "axios";
 
 function App() {
 
   const [apod, setApod] = useState({});
-  const [date, setDate] = useState("2019-09-11");
+  const [date, setDate] = useState("2019-09-12");
 
   const API_KEY = "aW1jfVXXw65uyhdPe2exJVbGtv8uNAUmdHxJGhA7"; 
 

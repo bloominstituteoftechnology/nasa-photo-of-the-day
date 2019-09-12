@@ -13,7 +13,7 @@ const Apod = props =>{
             <div className="display-header">
                 <h1>NASA Astronomy Picture of the Day</h1>
             </div>
-            <Loader src="https://i.imgur.com/WrdYUxd.png" alt="spinner" message="Attempting to fetch requested data.." size="30"/>
+            <Loader message="Attempting to fetch data.." size="6rem"/>
         </div>
         );
 

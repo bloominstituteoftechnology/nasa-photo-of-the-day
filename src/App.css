@@ -3,6 +3,7 @@
   margin:0;
   box-sizing: border-box;
   font-size:62.5%;
+  font-size:0.8rem;
 }
 
 .App {
@@ -62,39 +63,7 @@
 }
 
 .display-body img{
-  height:90%;
-}
-
-.display-body h1{
-  font-size: 3rem;
-}
-
-.loader-spinner{
-  animation: spinner infinite 1s linear;
-  pointer-events: none;
-  
-}
-
-@keyframes spinner {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.loader-component{
-  color:#fff;
-  font-size:3rem;
-  display:flex;
-  align-items: center;
-  justify-content: space-between;
-  height:150px;
-}
-
-.loader-container{
-  padding:20px;
+  height:100%;
 }
 
 .display-description{
@@ -114,10 +83,17 @@
 .display-description h3{
   color:#DDD;
   margin:10px;
-  font-size:1.8rem;
+  font-size:2rem;
 }
 
 .display-description p{
   color:#DDD;
-  font-size:1.4rem;
+  font-size:1.0rem;
+}
+
+.date-picker{
+  font-size:1.6rem;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border:none;
 }
