@@ -1,6 +1,6 @@
 * {
-  background-color: grey;
   box-sizing: border-box;
+  background-image: url('./nasa-background.img.jpg')
 }
 
 .App {
