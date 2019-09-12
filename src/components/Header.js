@@ -6,8 +6,10 @@ import Email from '../assets/dashicons-email.svg';
 import Share from '../assets/dashicons-share.svg';
 
 const HeaderSection = styled.section`
+width: 50%;
+max-width: 520px;
 position: relative;
-margin-left: 120px;
+margin-left: 15%;
 `;
 
 const Bold = styled.span`
@@ -33,7 +35,7 @@ text-align: left;
 `;
 
 const SocialIcons = styled.div`
-width: 520px;
+width: 100%;
 text-align: left;
 margin-bottom: 15px;
 padding-bottom: 15px;

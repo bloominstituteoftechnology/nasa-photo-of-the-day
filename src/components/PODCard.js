@@ -2,10 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Card = styled.section`
-width: 520px;
-margin-top: 5%;
+width: 50%;
+max-width: 520px;
+margin-top: 40px;
 margin-bottom: 5%;
-margin-left: 120px;
+margin-left: 15%;
 `;
 
 const PoDImg = styled.img`
