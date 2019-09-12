@@ -1,11 +1,21 @@
 import React from 'react';
+import styled from 'styled-components'
+
+const CopyrightP = styled.p`
+margin: 2vh;
+font-size: 2rem;
+
+
+
+
+`;
 
 const NasaCopyright = props => {
     
     return (
-        <>
-            <p className="date">Photographer &copy;: {props.copyright}</p>
-        </>
+        <div>
+            <CopyrightP><p className="date">Photographer &copy;: {props.copyright}</p></CopyrightP>
+        </div>
     );
 };
 
