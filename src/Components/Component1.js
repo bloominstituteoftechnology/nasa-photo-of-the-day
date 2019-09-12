@@ -12,7 +12,7 @@ const NasaButton = styled.button`
     margin: 5px 10px;
     transition: 0.2s ease-in;
     border-radius: 25px;
-    $:hover {
+    &:hover {
         background: ${props => (props.primary ? "#2a2223" : "#fff")};
         color: ${props => (props.primary ? "#fff" : "#2a2223")}'
     }
@@ -47,6 +47,7 @@ export default function ComponentOne() {
     },[]);
     
     return(
+        
         <div className="container">
           <ComponentTwo
           hdurl={nasa.hdurl}
