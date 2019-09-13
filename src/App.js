@@ -5,8 +5,8 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <h1>As the World Turns</h1>
       <PlanetList />
+
     </div>
   );
 }
