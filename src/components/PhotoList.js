@@ -1,6 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import IODCard from "./IODCard";
+import { Container, Row } from "reactstrap";
+// import styled from "styled-components"
+
+// const AnotherWrapper = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+// `;
 
 export default function PhotoList(){
     const [photo, setPhoto] = useState([]);
@@ -19,14 +27,17 @@ export default function PhotoList(){
     },[]);
 
     return (
-        <div className="photo">
-            <IODCard
-            title= {photo.title}
-            picture={photo.url}
-            date={photo.date}
-            description={photo.explanation}
-            />
-
-        </div>
+        
+        <Container>
+            <Row>
+                <IODCard
+                    title= {photo.title}
+                    picture={photo.url}
+                    date={photo.date}
+                    description={photo.explanation}
+                />
+            </Row>
+        </Container>
+        
     )
 } 
