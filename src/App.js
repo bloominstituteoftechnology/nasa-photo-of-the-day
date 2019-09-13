@@ -9,7 +9,7 @@ import axios from 'axios';
 import styled from 'styled-components'
 
 const AppSection = styled.section `
-background: #DCDCDC;
+background: #AFEEEE;
 width: 50vw;
 margin: 0 auto;
 ;
@@ -29,7 +29,7 @@ margin: 0 auto;
 
   useEffect(() => {
       axios
-      .get(`https://api.nasa.gov/planetary/apod?api_key=U5f2h4RNWlYb3It9tOm3PduYzhvmVstZVHmiMuCa&date=2012-03-14`)
+      .get(`https://api.nasa.gov/planetary/apod?api_key=U5f2h4RNWlYb3It9tOm3PduYzhvmVstZVHmiMuCa`)
       .then( response => {
           console.log(response.data);
 

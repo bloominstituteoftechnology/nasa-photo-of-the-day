@@ -3,8 +3,7 @@ import styled from 'styled-components';
 
 const TitleH1 = styled.h1`
 margin-top: 1vh;
-padding: 1vh;
-font-size: ;
+padding: 2vh;
 font-family: 'Gayathri', sans-serif;
 
 
