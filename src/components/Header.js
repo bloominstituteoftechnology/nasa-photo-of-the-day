@@ -11,6 +11,16 @@ const Header = styled.header`
     height: 200px;
     font-family: sans-serif;
     margin-top: 50px;    
+
+    @media screen and (max-width: 800px) {
+      width: 100%;
+        
+    }
+
+    @media screen and (max-width: 500px) {
+      width: 100%;
+        
+    }
    
 
 `;
@@ -29,16 +39,20 @@ const AppLogo = styled.image`
         }
       }
 
-      text-align: center;
+      text-align: center;     
       
 
 `;
 
 const MainHeading = styled.h1`
   display: flex;  
-  font-size: 5rem;
+  font-size: 5vw;
   text-transform: uppercase;
   color: dodgerblue;
+
+  
+ 
+ 
 
 `;
 

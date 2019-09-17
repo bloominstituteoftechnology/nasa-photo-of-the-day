@@ -14,7 +14,17 @@ const Container = styled.div`
     justify-content: center;
     width: 100%;
     background-image: url(${background});
-    background-size: cover;
+    background-size: cover;  
+    
+    @media screen and (max-width: 800px) {
+      width: 100%;
+        
+    }
+
+    @media screen and (max-width: 500px) {
+      width: 100%;
+        
+    }
     
 
 `;
