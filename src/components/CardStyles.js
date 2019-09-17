@@ -38,6 +38,7 @@ const PictureTitle = styled.h2`
   font-size: 3vw;
   text-transform: uppercase;
   color: red;
+  text-align: center;
 
   @media screen and (max-width: 800px) {
    font-size: 4vw;
