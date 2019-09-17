@@ -4,12 +4,14 @@ import styled from "styled-components";
 
 /*card styles: card container, picture, title text, and date */
 
+//photo of the day container
 const CardContainer = styled.div`
     display: flex;    
     flex-direction: column;     
     width: 80%;
     height: auto;
     font-family: sans-serif;  
+    
 
     @media screen and (max-width: 800px) {
         width: 100%;
