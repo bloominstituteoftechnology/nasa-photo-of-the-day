@@ -1,12 +1,10 @@
 import React, {useState, useEffect} from "react"
 import axios from "axios"
-import ImageCard from "./imageCard.js"
-//import moment from "moment";    
+import ImageCard from "./imageCard.js"    
 
 export default function Card(props){
     const [card, setCard] = useState([]);
-   // const [date, setDate]=useState(moment().format("MMM Do YY"));
-//https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY TOO MANY REQUESTS
+     
     useEffect(() => {
          axios  
         .get(`https://api.nasa.gov/planetary/apod?api_key=zlqB9lUQl36nWqt1XGT211C1EaSx154A3bZVbvUW`)
@@ -28,6 +26,7 @@ export default function Card(props){
                     dateOf={card.date}
                     key={card.id} 
                     picture={card.url} 
+                    author={card.copyright}
                     description={card.explanation}
                 />
             </div> 

@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  width: 800px;
+  margin: 0 auto;
 }
 
 .App-logo {
@@ -32,9 +34,35 @@
   }
 }
 .container{
+    width: 100%;
+    margin:0px auto; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+}
+.imageBox  {
+ 
+}
+.imageBox{
+  
 }
 
 .entry{
-
+ 
 }
+.cardBox{
+  
+}
+.date-btn{
+  margin-bottom: 10px;
+  background: teal;
+  color: white;
+  text-decoration: none;
+  padding:0 20px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, .2);
+}
+
