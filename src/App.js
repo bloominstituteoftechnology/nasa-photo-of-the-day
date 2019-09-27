@@ -9,11 +9,11 @@ function App() {
 
     useEffect(() => {
         axios
-        .get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`)
+        .get(`https://api.nasa.gov/planetary/apod?api_key=fRhzD5Fq2Qcsf7R8H3XFGTiHPtp322SiK7HAVWl1`)
         .then(res => {
-            const nasa = res.data;
-            console.log(nasa);
-            setNasa(nasa);
+            const otherNasa = res.data
+            console.log(otherNasa);
+            setNasa(otherNasa);
         })
         .catch(error => {
           console.log("The data was not returned", error);
@@ -22,7 +22,9 @@ function App() {
 
   return (
     <div>
-      {nasa.map(display => {
+      <NasaCard title={nasa.title} date={nasa.date} explanation={nasa.explanation}/>
+      <img src={nasa.url}/>
+      {/* {nasa.map(display => {
         return(
           <NasaCard 
           key={display.id} 
@@ -31,7 +33,7 @@ function App() {
           explanation={display.explanation}
           />
         );
-        })}
+      })} */}
     </div>
   );
 }
