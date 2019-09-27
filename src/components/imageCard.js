@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card,  CardText, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
+import { Card,  CardText, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap';
 
 /*export default function ImageCard(props) {
     console.log(ImageCard);
@@ -37,6 +37,8 @@ const ImageCard = (props) => {
         <CardBody>
           <CardTitle>{props.titleOf}</CardTitle>
           <CardSubtitle>-by {props.author}</CardSubtitle>
+          <br></br>
+          <Button color="secondary" size="sm">{props.dateOf}</Button>
         </CardBody>
         <img width="100%" src={props.picture} alt="Card image cap" />
         <CardBody>
