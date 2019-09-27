@@ -1,6 +1,7 @@
 import React from 'react';
+import { Card,  CardText, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
 
-export default function ImageCard(props) {
+/*export default function ImageCard(props) {
     console.log(ImageCard);
     return (
             <div 
@@ -27,5 +28,24 @@ export default function ImageCard(props) {
                 <p>{props.description}</p>
              </div>
     );
+};*/
+
+const ImageCard = (props) => {
+  return (
+    <div>
+      <Card>
+        <CardBody>
+          <CardTitle>{props.titleOf}</CardTitle>
+          <CardSubtitle>-by {props.author}</CardSubtitle>
+        </CardBody>
+        <img width="100%" src={props.picture} alt="Card image cap" />
+        <CardBody>
+          <CardText>{props.description}</CardText>
+        </CardBody>
+      </Card>
+    </div>
+  );
 };
+
+export default ImageCard;
  
