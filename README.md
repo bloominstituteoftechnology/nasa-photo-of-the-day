@@ -63,7 +63,7 @@ Follow these steps for completing your project.
 
 - In `App.js` (or where ever you wanted to fetch the data) add state for the data you'll be getting from NASA.
 - Add an effect hook to handle the API call side effect.
-- Go to the [NASA APOD API docs](https://api.nasa.gov/api.html#apod) and read through the docs to see how to make the API call.
+- Go to the [NASA APOD API docs](https://api.nasa.gov/#apod) and read through the docs to see how to make the API call.
 - You don't _need_ an API key. However you may need one if you exceed the API request limits.
 - Using the endpoint given, fetch the data using `axios`.
 - In your `.then()` make sure to `console.log` the response so you can look at the shape of the data. 😃
