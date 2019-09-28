@@ -6,7 +6,7 @@ const ImgCard = () => {
     const [title, setTitle] = useState();
     const [date, setDate] = useState();
     const [image, setImage] = useState();
-    const [explanation, setExplanationText] = useState();
+    const [explanation, setExplanation] = useState();
 
     useEffect(() => {
         axios
@@ -15,7 +15,7 @@ const ImgCard = () => {
                 setTitle(response.data.title);
                 setDate(response.data.date);
                 setImage(response.data.url);
-                setExplanationText(response.data.explanation);
+                setExplanation(response.data.explanation);
                 console.log(response);
             });
     }, []);
