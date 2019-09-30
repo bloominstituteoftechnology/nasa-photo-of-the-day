@@ -16,13 +16,13 @@ const TitleH1 = styled.h1`
   `
 
   const BorderPara = styled.p`
-    font-size: 12px;
+    font-size: 14px;
     padding:2%;
     background-color: black;
     color: white;
     align-text: center;
-    border: 1.5px solid white;
-    box-shadow: 5px 5px 5px 0px slategray;
+    border: .5px solid white;
+    box-shadow: 5px 5px 5px 5px slategray;
     `;
 
 function App() {

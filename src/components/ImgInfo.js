@@ -10,10 +10,10 @@ const WrapperDiv = styled.div`
 const InfoImg = styled.img`
     width: 50%;
     height: 50%;
-    padding:2%;
+    padding:1%;
     background-color: white;
     border: 1px solid black;
-    border-radius: 5%;
+    border-radius: 2%;
     margin-bottom: 2%;
     box-shadow: 5px 5px 5px slategray;
     `;
