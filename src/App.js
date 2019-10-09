@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import Photo from "./Photo";
 
 function App() {
     return (
@@ -13,7 +14,7 @@ function App() {
                 explanation written by a professional astronomer.
             </p>
 
-            {/* COMPONENT */}
+            <Photo />
         </div>
     );
 }
