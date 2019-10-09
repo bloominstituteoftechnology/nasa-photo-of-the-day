@@ -1,7 +1,8 @@
 import React,{useEffect, useState} from "react";
 import NPOTD from "./NPOTD"
 import Axios from "axios";
-import Info from "./Info"
+import Info from "./Info";
+import Video from "./Video"
 
 
 function CardContainer(props){
@@ -17,12 +18,17 @@ function CardContainer(props){
         })
     },[props.datePicker])
 
-
-
+    function vidOrUrl(){
+        if(data.media_type == "video"){
+            return(<Video url={data.url}/>)
+        }else{
+            return(<NPOTD imgUrl={data.hdurl}/>)
+        }
+    }
 
     return(
         <div>
-        <NPOTD imgUrl={data.hdurl}/>
+        {vidOrUrl()}
         <Info date={data.date} info={data.explanation} title={data.title} />
         </div>
     )

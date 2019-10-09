@@ -6,11 +6,10 @@ import Footer from "./components/Footer/Footer"
 import DateBtn from "./components/mainContent/DateBtn"
 
 function App() {
-  let [datePicker, setDatePicker] = useState("")
+  let [datePicker, setDatePicker] = useState("");
   // setDatePicker(document.querySelector("#datee").value)
   function todayDate(){
     var dateObj = document.querySelector("#datee").value;
-    console.log(dateObj)
     setDatePicker(dateObj)
     // var month = dateObj.getUTCMonth() + 1; //months from 1-12
     // var day = dateObj.getUTCDate();
