@@ -11,9 +11,9 @@ export default function CreateCard(){
     useEffect(()=>{
     axios.get(`https://api.nasa.gov/planetary/apod?api_key=qCaZmTCH37IJ3zg81sTyn4PMYoKJIcCG44BmqmVj&date=${year}`)
     .then((res)=>{
-        console.log(res);
+        
         setNasa(res.data);
-        console.log(nasa)
+        // console.log(nasa)
     })
     },[year]);
 
@@ -24,12 +24,20 @@ export default function CreateCard(){
     }
 
     function addSelect(){
-        Kyle.forEach((k)=>{
-            let holder = document.createElement("option");
-            holder.innerText = k;
-            document.querySelector('.select').appendChild(holder);
-            });
+        if(!(document.querySelector('.select').classList.contains('hasValue'))){
+
+            Kyle.forEach((k)=>{
+                let holder = document.createElement("option");
+                holder.innerText = k;
+                document.querySelector('.select').appendChild(holder);
+                });
+                
+        }
+        
+        document.querySelector('.select').classList.toggle('hasValue');
+        console.log("toggling");
     }
+    
 
     return(
         
@@ -44,7 +52,6 @@ export default function CreateCard(){
             <MakeCard img = {nasa.hdurl} copyright = {nasa.copyright} explanation = {nasa.explanation} title = {nasa.title} date = {nasa.date}/>
             </div>
         </div>
-       
        
     );
 }

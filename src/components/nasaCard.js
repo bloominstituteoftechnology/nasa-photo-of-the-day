@@ -6,7 +6,13 @@ export const MakeCard = (props)=>{
             <h1>{props.title}</h1>
             <p>Date: {props.date}</p>
             <img src = {props.img}/>
-            <h2>Artist: {props.copyright}</h2>
+            {
+                props.copyright ?
+                <h2> Artist: {props.copyright}</h2>
+                :
+                <h2>Artist not available</h2>
+            }
+            
             <p>{props.explanation}</p>
         </div>
     );
