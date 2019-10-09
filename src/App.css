@@ -31,3 +31,21 @@
     transform: rotate(360deg);
   }
 }
+
+.cardHolder{
+  margin: 0 auto;
+  width: 70%;
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card{
+  margin: 0 auto;
+  border: 1px solid black;
+  width: 70%;
+}
+
+img{
+  width: 70%;
+}
