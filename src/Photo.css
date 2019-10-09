@@ -1,0 +1,12 @@
+img {
+    width: 100%;
+    margin: 0.5rem 0;
+}
+
+.photo {
+    margin: 1rem 0;
+}
+
+.photo > p:nth-child(6) {
+    margin: 1rem 0;
+}
