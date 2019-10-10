@@ -4,7 +4,7 @@ import axios from "axios";
 import TitleCard from "./components/TitleCard";
 import MidCard from "./components/MidCard";
 import BottomCard from "./components/BottomCard";
-
+import { Container, Row, Col} from 'reactstrap';
 
 function App() {
 
@@ -30,14 +30,25 @@ function App() {
     }, []);
 
   return (
-    <div className="App">
-      <div className="App-grid">
-      <TitleCard title = {title} image = {url}/>
-      <MidCard date = {date}/>
-      <BottomCard explanation = {explanation}/>
-      </div>
-    </div>
+ 
+   
+     <Container>
+    
+
+  <Row>
+ 
+      <Col col-md-4><TitleCard image = {url}/></Col>
+      <Col col-md-3 offset-md-3><MidCard date = {date}/>
+    <BottomCard explanation = {explanation} title ={title}/></Col> 
+
+      </Row>
+    
+      </Container>
+    
+    
   );
 }
 
 export default App;
+
+

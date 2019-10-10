@@ -1,12 +1,16 @@
 import React from "react";
-
-const BottomCard = ({explanation}) => {
+import { Card, CardText, CardBody,
+  CardTitle} from 'reactstrap';
+const BottomCard = ({explanation, title}) => {
     return (
-      <div className="explain">
-        
-        <p>{explanation}</p>
-        
-      </div>
+      <Card>
+    
+      <CardBody>
+        <CardTitle>{title}</CardTitle>
+        <CardText>{explanation}</CardText>
+
+      </CardBody>
+    </Card>
     
     );
   };

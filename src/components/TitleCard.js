@@ -1,12 +1,12 @@
 import React from "react";
 
-const TitleCard = ({title, image}) => {
+const TitleCard = ({ image}) => {
 
     return (
 
       
       <div className="title-card ">
-        <h2>{title}</h2>
+      
        <img src={image} alt=""/>
       </div>
     

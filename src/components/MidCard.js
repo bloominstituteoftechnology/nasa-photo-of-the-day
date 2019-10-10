@@ -1,13 +1,16 @@
 import React from "react";
+import {  Card, CardTitle, CardText} from 'reactstrap';
 
 const Midcard = ({date}) => {
   return (
-    <div>
-      <h3>Today is</h3>
-      <p>{date}</p>
-      
-    </div>
+    <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
+    <CardTitle>Today is</CardTitle>
+    <CardText>{date}</CardText>
+
+  </Card>
   
   );
 };
 export default Midcard;
+
+

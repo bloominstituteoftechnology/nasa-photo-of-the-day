@@ -1,59 +1,8 @@
-.App {
-  text-align: center;
-  width: 100vh;
-  height: 90vh;
-  border: 1px solid white;
+
+img {
+  width: 60vh;
+  border-radius: 20px;
+ 
 }
 
 
-
-/* .App-grid {
-
-  display: grid;
-   margin: 5%;
-  grid-template-areas:
-        "header  holder holder mid"
-        "header holder holder mid"
-        "header holder holder footer";
-} */
-
-
-.title-content{
-  border: 1px solid white;
-  width: 50vh;
-  height: 80vh;
-font-size: 1rem;
-}
-
-.mid-content{
-  border: 1px solid rgb(165, 40, 40);
-  width: 35vh;
-  height: 20vh;
-
-}
-
-
-.bottom-content{
-  border: 1px solid rgb(46, 27, 150);
-  width: 80vh;
-  margin-top:8%;
-  height: 80vh;
-
-}
-
-.explain{
-  width:100%;
-}
-
-/* .title-content{
-  grid-area: header;
-  
-}
-
-.mid-content{
-  grid-area: mid;
-}
-.bottom-content{
-  grid-area: footer;
-
-} */
