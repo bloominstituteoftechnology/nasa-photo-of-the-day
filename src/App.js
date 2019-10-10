@@ -4,6 +4,7 @@ import Logo from "./components/Logo/Logo";
 import CardContainer from "./components/mainContent/CardContainer"
 import Footer from "./components/Footer/Footer"
 import DateBtn from "./components/mainContent/DateBtn"
+import {AppContainer} from "./components/StyledElements"
 
 function App() {
   let [datePicker, setDatePicker] = useState("");
@@ -18,12 +19,12 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <AppContainer className="App">
       <Logo />
       <DateBtn datePicker={datePicker} setDatePicker={setDatePicker} todayDate={todayDate} />
       <CardContainer datePicker={datePicker} />
       <Footer />
-    </div>
+    </AppContainer>
   );
 }
 
