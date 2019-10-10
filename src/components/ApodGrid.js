@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-// import Header from "./Header";
+import Header from "./Header";
 import Photo from "./Photo";
-// import Description from "./Description";
+import Description from "./Description";
 
 
 export default function ApodGrid() {
@@ -22,13 +22,21 @@ export default function ApodGrid() {
 
     return(
         <div className="container">
-            {/* <Header />   */}
+            <div className="header">
+                <Header 
+                photoDate={photoData.date}
+                />
+            </div>
             <div className="image">
                 <Photo
                 photoTitle={photoData.title}
                 photoData={photoData.url}
                 />
-                {/* <Description /> */}
+                <div className="explanation">
+                    <Description 
+                    photoDesc={photoData.explanation}
+                    />
+                </div>
             </div>
         </div>
     )
