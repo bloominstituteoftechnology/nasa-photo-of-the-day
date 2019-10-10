@@ -1,29 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    line-height: 1.33rem;
-    box-sizing: border-box;
-}
-
-html,
 body {
-    width: 100%;
-    height: 100%;
-}
-
-.container {
-    width: 90%;
-    height: 100%;
-    margin: 1rem auto;
-    max-width: 1000px;
-    text-align: center;
-}
-
-.container img {
-    width: 100%;
-    height: auto;
-}
-
-.container h1 {
-    margin-bottom: 0.5rem;
+    background-color: whitesmoke;
+    padding: 7rem 0;
 }

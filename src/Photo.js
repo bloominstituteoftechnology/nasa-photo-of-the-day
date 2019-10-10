@@ -1,6 +1,23 @@
 import React, { useState, useEffect } from "react";
-import "./Photo.css";
 import axios from "axios";
+import styled from "styled-components";
+
+const Date = styled.p`
+    font-weight: bold;
+`;
+
+const Title = styled.p`
+    font-weight: bold;
+`;
+
+const Img = styled.img`
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    border-radius: 1rem;
+    margin: 3rem 0;
+    box-shadow: 3px 10px 10px rgba(0, 0, 0, 0.5);
+`;
 
 function Photo() {
     const [photoData, setPhotoData] = useState([]);
@@ -18,12 +35,10 @@ function Photo() {
     }, []);
 
     return (
-        <div className="photo">
-            <p>{photoData.date}</p>
-            <img src={photoData.url} alt="#" />
-            <p>
-                <strong>{photoData.title}</strong>            
-            </p>
+        <div>
+            <Date>{photoData.date}</Date>
+            <Img src={photoData.url} alt="#" />
+            <Title>{photoData.title}</Title>
             <p>
                 <strong>Image Credit: </strong>
                 <a href="https://www.nasa.gov/">NASA</a>,<a href="https://www.esa.int/About_Us/Welcome_to_ESA">ESA</a>,
