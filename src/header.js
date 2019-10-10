@@ -1,6 +1,27 @@
 import React, { useState } from "react";
+import styled from 'styled-components'
+
+const Title = styled.h1 `
+    color: Orange;
+    font-size: 5rem;
+    `
+const Button = styled.button `
+    font-size: 3rem;
+    color: lime;
+    padding: 1%;
+    margin: 1%;
+    background: red;
+`
+const ButtonContainer = styled.div `
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
+
+
 
 const Header = ({ header }) => {
+
 
     let [starwarsOn, setStarWarsOn] = useState(false);
     function starAudio() {
@@ -13,17 +34,18 @@ const Header = ({ header }) => {
     }
     return (
         <>
-            <h1>Nasa Photo</h1>
-
-            <button onClick={() => setStarWarsOn(starwarsOn == !setStarWarsOn)}>{starAudio()}>
+            <Title>Nasa Photo</Title>
+            <ButtonContainer>
+            <Button onClick={() => setStarWarsOn(starwarsOn == !setStarWarsOn)}>{starAudio()}
                 A long long time ago...
-         </button>
-            <button onClick={() => {
+         </Button>
+            <Button onClick={() => {
                 const anakin = new Audio("i-have-the-high-ground.mp3");
                 anakin.play();
             }}>
                 Oh NO!!!!
-         </button>
+         </Button>
+         </ButtonContainer>
         </>
     );
     // return <div>{displayValue}</div>;
