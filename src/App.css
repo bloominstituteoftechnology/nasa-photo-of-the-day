@@ -2,7 +2,36 @@
 img {
   width: 60vh;
   border-radius: 20px;
+  border: none;
+  box-shadow: 5px 10px 8px #272525;
  
+}
+
+.bottom-card{
+  box-shadow: 5px 5px 8px #272525;
+  /* margin-top: 5%; */
+  width: 100%;
+  display:flex;
+  text-align: justify;
+}
+
+.text-title{
+  /* box-shadow: 5px 10px 8px #272525; */
+  /* margin-top: 5%; */
+  text-align: center;
+  margin-bottom: 17%;
+  font-size: 2rem;
+}
+
+.date-text{
+  text-align: center;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  line-height: .5rem;
+  font-size: 2rem;
+  word-spacing: 1rem;
+
+  
 }
 
 

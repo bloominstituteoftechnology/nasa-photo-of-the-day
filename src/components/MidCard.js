@@ -1,11 +1,11 @@
 import React from "react";
-import {  Card, CardTitle, CardText} from 'reactstrap';
+import {  Card, CardTitle} from 'reactstrap';
 
 const Midcard = ({date}) => {
   return (
-    <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
-    <CardTitle>Today is</CardTitle>
-    <CardText>{date}</CardText>
+    <Card className="date-text" body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
+    <CardTitle>Today is {date}</CardTitle>
+   
 
   </Card>
   

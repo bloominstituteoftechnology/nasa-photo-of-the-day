@@ -3,10 +3,10 @@ import { Card, CardText, CardBody,
   CardTitle} from 'reactstrap';
 const BottomCard = ({explanation, title}) => {
     return (
-      <Card>
+      <Card >
     
-      <CardBody>
-        <CardTitle>{title}</CardTitle>
+      <CardBody >
+        <CardTitle className="text-title">{title}</CardTitle>
         <CardText>{explanation}</CardText>
 
       </CardBody>
