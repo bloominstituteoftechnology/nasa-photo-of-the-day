@@ -1,11 +1,11 @@
 import React from "react";
-import ApodImage from "./components/ApodImage";
+import ApodGrid from "./components/ApodGrid";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <ApodImage />
+      <ApodGrid />
     </div>
   );
 }
