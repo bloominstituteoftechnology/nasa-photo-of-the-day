@@ -1,14 +1,22 @@
 import React from "react";
 import App from "../App";
+import {
+    Card, CardImg, CardText, CardBody,
+    CardTitle, CardSubtitle, Button
+  } from 'reactstrap';
 
 function CreatePhoto(props){
 
     return(
         <div className="photoContainer">
-            <h1>{props.obj.title}</h1>
-            <h3>{props.obj.date}</h3>
-            <img src={props.obj.url}/>
-            <p>{props.obj.explanation}</p>
+            <Card>
+                <CardImg top width="100%" src={props.obj.url}/>
+                <CardBody>
+                    <CardTitle>{props.obj.title}</CardTitle>
+                    <CardSubtitle>{props.obj.date}</CardSubtitle>
+                    <CardText>{props.obj.explanation}</CardText>
+                </CardBody>
+            </Card>
         </div>
     );
 }
