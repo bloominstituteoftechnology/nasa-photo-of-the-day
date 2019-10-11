@@ -3,7 +3,7 @@ import {  Card, CardTitle} from 'reactstrap';
 
 const Midcard = ({date}) => {
   return (
-    <Card className="date-text" body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
+    <Card className="content bg-transparent  text-center text-warning board" >
     <CardTitle>Today is {date}</CardTitle>
    
 

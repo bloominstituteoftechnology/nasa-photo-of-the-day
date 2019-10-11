@@ -1,11 +1,11 @@
 import React from "react";
 
-const TitleCard = ({ image}) => {
+const TitleCard = ({image}) => {
 
     return (
 
       
-      <div className="title-card ">
+      <div>
       
        <img src={image} alt=""/>
       </div>

@@ -4,34 +4,58 @@ img {
   border-radius: 20px;
   border: none;
   box-shadow: 5px 10px 8px #272525;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+
  
 }
 
-.bottom-card{
-  box-shadow: 5px 5px 8px #272525;
-  /* margin-top: 5%; */
-  width: 100%;
-  display:flex;
-  text-align: justify;
+
+
+/*START OF ANIMATIONS*/
+
+.board {
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    transform: perspective(300px) rotateX(22deg);
+    transform-origin: 54% 30%;
+    text-align: justify;
+    position: absolute;
+    margin-left: -9em;
+    font-weight: bold;
+    overflow: hidden;
+    font-size: 95%;
+    width: 20em;
+    bottom: 0;
+    left: 50%;
 }
 
-.text-title{
-  /* box-shadow: 5px 10px 8px #272525; */
-  /* margin-top: 5%; */
+
+.board:after {
+  position: absolute;
+  content: ' ';
+  bottom: 34%;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+
+
+
+.content {
+  animation: scroll 80s ease-in-out 2s;
+  position: absolute;
+  top: 100%;
+}
+.title, .subtitle {
   text-align: center;
-  margin-bottom: 17%;
-  font-size: 2rem;
 }
 
-.date-text{
-  text-align: center;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  line-height: .5rem;
-  font-size: 2rem;
-  word-spacing: 1rem;
-
-  
+@keyframes scroll {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: -170%;
+    }
 }
-
-

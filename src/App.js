@@ -43,13 +43,15 @@ function App() {
   <div className="stars"></div>
 </div>
 
-  <Row>
+    <Row>
  
-      <Col col-md-4  ><TitleCard image = {url}/></Col>
-      <Col col-md-3 offset-md-3 className="bottom-card text-muted text-justify "><MidCard  date = {date}/>
-    <BottomCard explanation = {explanation} title ={title}/></Col> 
+      <Col className="col-md-4"><TitleCard image = {url}/></Col>
 
-      </Row>
+      <Col className="bottom-card   bg-transparent col-md-3 offset-md-3 ">
+        <MidCard  date = {date}/> 
+        <BottomCard explanation = {explanation} title ={title}/></Col> 
+
+    </Row>
     
       </Container>
     

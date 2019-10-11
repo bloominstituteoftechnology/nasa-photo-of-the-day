@@ -1,8 +1,10 @@
 
 
-  body {
-    font-family: "BigShoulders", sans-serif;
-    margin-top: 3%;  
+  html,body {
+    background: #000;
+    font-family: 'Orbitron', sans-serif;
+    margin: 0 auto;
+    margin-top: 2%;
   }
 
  
@@ -74,29 +76,8 @@
     }
   }
   
-  /* Demo syles 
-  ------------------------------------- */
   
-  body {
-    background: #000;
-    font-family: 'Orbitron', sans-serif;
-  }
   
-  h1 {
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    margin: -1.5em -2.5em;
-    width: 5em;
-    color: #011;
-    font-size: 5em;
-    text-align: center;
-    text-shadow: 0 0 3px #6cf;
-  }
-  h1:first-line {
-    font-size: 200%;
-  }
 
 
 
