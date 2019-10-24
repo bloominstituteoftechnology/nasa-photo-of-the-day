@@ -10,4 +10,4 @@ const MidCard = ({date}) => {
 
   );
 };
-export default Midcard; 
+export default MidCard; 
