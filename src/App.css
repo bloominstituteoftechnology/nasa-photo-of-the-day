@@ -1,14 +1,57 @@
 .App {
   text-align: center;
+  width: 100vh;
+  height: 90vh;
+  border: 1px solid white;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
+/* .App-logo { */
+  /* animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
-  pointer-events: none;
+  pointer-events: none; */
+
+/* } */
+
+.App-grid {
+  display: grid;
+   margin: 5%;
+  grid-template-areas:
+        "header  holder holder mid"
+        "header holder holder mid"
+        "header holder holder footer";
+} 
+.title-content{
+  border: 1px solid white;
+  width: 50vh;
+  height: 80vh;
+  font-size: 1rem;
+  grid-area: header;
 }
 
-.App-header {
+.mid-content{
+  border: 1px solid rgb(165, 40, 40);
+  width: 35vh;
+  height: 20vh;
+  grid-area: mid;
+}
+
+.bottom-content{
+  border: 1px solid rgb(46, 27, 150);
+  width: 80vh;
+  margin-top:8%;
+  height: 80vh;
+  grid-area: footer;
+}
+
+.explain{
+  width:100%;
+}
+
+
+
+
+
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -17,17 +60,18 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
-.App-link {
+/* .App-link {
   color: #61dafb;
-}
+} */
 
-@keyframes App-logo-spin {
+
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+} */
