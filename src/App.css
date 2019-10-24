@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -11,6 +12,7 @@
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,6 +24,22 @@
 .App-link {
   color: #61dafb;
 }
+
+
+.nasaCardClass{
+  width: 100%;
+  font-size: 1.2rem;
+ 
+
+}
+
+.img{
+  width: 60%;
+  margin-top: 50px;
+  border-radius: 5%;
+}
+
+
 
 @keyframes App-logo-spin {
   from {
