@@ -1,8 +1,12 @@
-.App {
+
+.container {
+  background:#b1d8ed;
+  display:flex;
   text-align: center;
-  width: 100vh;
-  height: 90vh;
-  border: 1px solid white;
+  width: 100%;
+  height: 100%;
+  border: 10px double black;
+  margin: 0 auto;
 }
 
 /* .App-logo { */
@@ -12,43 +16,52 @@
 
 /* } */
 
-.App-grid {
+/* .App-grid {
   display: grid;
    margin: 5%;
   grid-template-areas:
         "header  holder holder mid"
         "header holder holder mid"
         "header holder holder footer";
-} 
+}  */
 .title-content{
-  border: 1px solid white;
+  border: 1px solid black;
   width: 50vh;
   height: 80vh;
-  font-size: 1rem;
+  font-size: 3rem;
   grid-area: header;
+  margin-bottom: 25px;
 }
 
-.mid-content{
-  border: 1px solid rgb(165, 40, 40);
-  width: 35vh;
+.title-card {
+  width: 1000px;
+  margin: 0 20px 0 25px;
+  
+}
+  /* .mid-content{
+  border: 1px solid black;
+  width: 100px;
   height: 20vh;
-  grid-area: mid;
-}
 
+  grid-area: mid;
+
+} */
+
+
+.bottom-card {
+  width: 100%;
+}
 .bottom-content{
-  border: 1px solid rgb(46, 27, 150);
-  width: 80vh;
-  margin-top:8%;
+  border: 1px solid black;
+  width: 100%;
+  margin-top:10%;
   height: 80vh;
   grid-area: footer;
 }
-
-.explain{
+ 
+/* .explain{
   width:100%;
-}
-
-
-
+} */
 
 
 /* .App-header {

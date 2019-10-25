@@ -4,6 +4,7 @@ import axios from "axios";
 import TitleCard from "./Components/TitleCard";
 import MidCard from "./Components/MidCard";
 import BottomCard from "./Components/BottomCard";
+import styled from 'styled-components'; 
 
 function App() {
   const [title, setTitle] = useState([]);
@@ -31,11 +32,16 @@ function App() {
   //  console.log(data);
 
   return (
-    <div className="App">
-      <div className="App-grid">
-        <TitleCard title={title} image={url} />
+    <div className="container">
+
+      <TitleCard title={title} image={url} />
+
+      <div className="App">
+        <div> 
         <MidCard date={date} />
         <BottomCard explanation={explanation} />
+      </div>         
+        
       </div>
     </div>
   );
