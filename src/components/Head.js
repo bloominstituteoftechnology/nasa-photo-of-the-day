@@ -20,12 +20,12 @@ const ImgDate = styled.h2`
 `;
 
 
-const Head = props => {
+const Head = setImg => {
     return (
-        <HeadWrap key={props.id}>
+        <HeadWrap>
         <SiteTitle>The NASA picture of the day 🚀!</SiteTitle>
-        <ImgName>{props.title}</ImgName>
-        <ImgDate>{props.date}</ImgDate>
+        <ImgName>{setImg.title}</ImgName>
+        <ImgDate>{setImg.date}</ImgDate>
         </HeadWrap>
     );
   };

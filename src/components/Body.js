@@ -33,9 +33,7 @@ function Body() {
     return (
         <MainBody>
             
-           {nasaData.map(item => {
-            return <Head key={data} title={title} item={item} />;
-           })}
+            <Head />
 
         </MainBody>    
       
