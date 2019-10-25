@@ -27,7 +27,7 @@
 
 
 
-.photo{
+.photo {
   height: 100vh;
   width: 100%;
   font-family: 'Montserrat', sans-serif;
@@ -43,32 +43,31 @@
 .photo h1 {
   position: absolute;
   top: 0;
-  margin: 20px auto 0;
-  left: 25%;
-  color: white;
-  background-color: black;
-  border-radius: 10px;
-  padding: 10px;
-  box-shadow: 10px 10px 5px 0px rgba(52, 52, 53, 0.75)
+  margin: 15px auto 0;
+  left: 29%;
 }
 
-.photo p {
-position: absolute;
-bottom: 25px;
-width: 60%;
-text-align: center;
-left: 18%;
-background-color: white;
-padding: 20px;
-border-radius: 20px;
-box-shadow: 10px 10px 5px 0px rgba(52, 52, 53, 0.75)
+.jumbotron {
+  position: absolute;
+  top: 0;
+  margin-top: 77vh;
+  width: 90%;
+  left: 5%;
+  border-radius: 20px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.jumbotron p {
+  font-size: 18px;
 }
 
 span {
 position: absolute;
 top: 0;
 right: 0;
-margin: 10px 20px 0 0;
+margin: 15px 45px 0 0;
 z-index: 7;
 color: white;
 text-shadow: 2px 2px #0c0b0b;
@@ -79,10 +78,8 @@ h3 {
   z-index: 5;
   position: absolute;
   top: 0;
-  margin: 100px auto;
-  left: 25.2%;
-  color: white;
-  text-shadow: 1px 1px #0c0b0b;
+  margin: 90px auto;
+  left: 19.75%;
 }
 
 
