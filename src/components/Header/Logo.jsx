@@ -1,12 +1,15 @@
 import React from "react";
-
+import styled from "styled-components";
 import logo from "../../images/cool-galaxy.jpg";
 
+const LogoDiv = styled.div`
+    margin: 0;
+`
 const Logo = () => {
     return (
-        <div className="logo-container">
+        <LogoDiv className="logo-container">
             <img src={logo} alt="galaxy"/>
-        </div>
+        </LogoDiv>
     );
 };
 export default Logo;

@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import Logo from "./components/Header/Logo";
 import Title from "./components/Header/Title";
-import CardList from "./components/Body/CardList";
+import SpaceCard from "./components/Body/Card";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
         <Logo />
         <Title />
       </div>
-    <CardList />
+    <SpaceCard />
     </div>
   );
 }
