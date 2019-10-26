@@ -26,6 +26,10 @@ export default function NasaPicList() {
     return ( 
         <div>
             <NasaCard
+            date={image.date}
+            hdurl={image.hdurl}
+            service_version={image.service_version}
+            media_type={image.media_type}
             explanation={image.explanation}
             url = {image.url}
             title = {image.title}
