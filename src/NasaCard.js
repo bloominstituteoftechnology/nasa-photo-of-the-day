@@ -3,9 +3,8 @@ import React from "react";
 const NasaCard = props => {
     
     return (
-        <div>
+        <div className='img-holder'>
             <img src={props.url} alt={props.title}/>
-
         </div>
     )
 }
