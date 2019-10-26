@@ -1,6 +1,5 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import styled from "styled-components";
-import axios from "axios";
 import Head from "./Head";
 
 const MainBody = styled.div`
@@ -9,30 +8,17 @@ const MainBody = styled.div`
   margin: 0 auto;
 `;
 
+const SiteTitle = styled.h1`
+    color: white;
+`;
+
 
 
 function Body() {
-    const [nasaImg, setImg] = useState(0);
-  
-    useEffect(() => {
-      async function fetchData() {
-        try {
-          const nasaData = await axios.get('https://api.nasa.gov/planetary/apod?api_key=LNPoBywgSDLGE27u4IKuzb2ocXxz3peGPbtVxz44')
-          console.log(nasaData);
-          setImg(nasaData.data);
-        }
-        catch (err) {
-          console.log(err);
-        }
-      }
-      fetchData()
-    }, [])
-
-    
 
     return (
-        <MainBody>
-            
+        <MainBody className="main">
+            <SiteTitle>The NASA picture of the day 🚀!</SiteTitle>
             <Head />
 
         </MainBody>    
