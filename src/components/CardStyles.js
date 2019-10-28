@@ -7,11 +7,13 @@ import styled from "styled-components";
 //photo of the day container
 const CardContainer = styled.div`
     display: flex;    
-    flex-direction: column;     
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;     
     width: 80%;
     height: auto;
     font-family: sans-serif;  
-    
+        
 
     @media screen and (max-width: 800px) {
         width: 100%;

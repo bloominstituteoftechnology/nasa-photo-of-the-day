@@ -1,5 +1,6 @@
 import React from "react";
 import PhotoCardInfo from "./components/PhotoCardInfo.js";
+import DatePickerComponent from "./components/DatePickerComponent";
 import {CardContainer} from "./components/CardStyles.js";
 import logo from './logo.png';
 import background from "./sky.jpg";
@@ -40,13 +41,13 @@ function App() {
             <img src={logo} alt="logo" />
         </AppLogo>
 
-        <MainHeading>photo of the day</MainHeading>                
+        <MainHeading>photo of the day</MainHeading>                     
      
       </Header>
 
       <CardContainer>
             
-        <PhotoCardInfo />
+        <DatePickerComponent />   
 
       </CardContainer>
 
