@@ -8,7 +8,6 @@ function Photo() {
       .get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
       .then(response => {
         setPhoto(response.data.url);
-        console.log(response.data);
       })
       .catch(error => {
         console.log("The photo was not returned.");

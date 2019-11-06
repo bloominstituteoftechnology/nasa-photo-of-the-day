@@ -25,7 +25,7 @@ html {
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #f5f5f5;
 }
 
 .App-link {
@@ -44,8 +44,22 @@ p {
   color: #5f6062;
 }
 
+.date {
+  color: black;
+  font-weight: bold;
+}
+
+.about {
+  color: #f5f5f5;
+}
+
 .About-container {
-  margin: 0 10% 0 10%;
+  padding: 2% 10% 2% 10%;
+  background-color: #a7a7a7;
+}
+
+.Info-container {
+  padding: 5% 10% 5% 10%;
 }
 
 @keyframes App-logo-spin {

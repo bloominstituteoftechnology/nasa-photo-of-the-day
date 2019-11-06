@@ -4,7 +4,7 @@ function About() {
   return (
     <div className="About-container">
       <h2>A Space Pic A Day Keeps the Existential Dread at Bay!</h2>
-      <p>
+      <p className="about">
         This site is dedicated to showing you, yes, you, a fresh new shot of the
         breathtaking, indifferent expanse of space that engulfs the relatively
         microscopic planet we inhabit to remind you just how insignifigant you
