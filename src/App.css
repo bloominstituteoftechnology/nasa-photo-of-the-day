@@ -8,6 +8,13 @@
   pointer-events: none;
 }
 
+.space {
+  width: 50%;
+}
+img {
+  width: 60%;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
