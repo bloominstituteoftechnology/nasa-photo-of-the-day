@@ -2,13 +2,16 @@ import React from "react";
 
 function NavLinks() {
     return (
-        <div>
-            <nav>
-                <a>Earth</a>
-                <a>Mars</a>
-                <a>Jupiter</a>
-                <a>Saturn</a>
-            </nav>
+        <div className= "App-header">
+            <div className= "App-logo">
+                <img src="https://www.nasa.gov/sites/all/themes/custom/nasatwo/images/nasa-logo.svg" alt='nasa'/>
+            </div>
+            <div className = "links">
+                <nav >
+                    <a href="https://www.nasa.gov/">Home</a>
+                    <a href="https://api.nasa.gov/#apod">API</a>
+                </nav>
+            </div>
         </div>
     )
 }

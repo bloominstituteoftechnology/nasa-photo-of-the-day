@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from "react";
 import "./App.css";
 import NavLinks from "./Components/PageTop/NavBar";
-import Photos from "./data.js";
 import axios from "axios";
 
 function App() {
