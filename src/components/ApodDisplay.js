@@ -6,7 +6,7 @@ export default function ApodDisplay() {
     const [pod, setPod] = useState([])
 
     useEffect(() => {
-        axios.get('https://api.nasa.gov/planetary/apod?api_key=ZwUKBPgwpfcXn99ZDah8BaLHsdzDA4djyPxwApVp')
+        axios.get(`https://api.nasa.gov/planetary/apod?api_key=ZwUKBPgwpfcXn99ZDah8BaLHsdzDA4djyPxwApVp`)
         .then(response => {
             console.log(response.data)
             setPod(response.data)
