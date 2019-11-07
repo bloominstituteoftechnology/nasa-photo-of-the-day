@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
-import ImageCard from "./components/ImageCard"
+import ImageCard from "./components/ImageCard";
+import NavBar from "./components/Navbar";
 import "./App.css";
 
 function App() {
@@ -18,6 +19,7 @@ useEffect(() => {
 
   return (
     <div className="App">
+      <NavBar/>
       <ImageCard
       data = {data}/>
     </div>
