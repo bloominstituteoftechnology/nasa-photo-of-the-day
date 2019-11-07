@@ -8,8 +8,11 @@ function App() {
 useEffect(() => {
   axios.get("https://api.nasa.gov/planetary/apod?api_key=A31TdYcakaEAs1ugPSB2UIVS7CWPbehx2V5ShMb3")
   .then(res => {
-    console.log(res)
+    console.log(res.data)
     setData(res.data)
+  })
+  .catch(error =>{
+    console.log("Error", error)
   })
 }, [])
 
