@@ -20,11 +20,12 @@ function App() {
       <h2>Picture of the Day</h2>
       <h3>{photoData.title}</h3>
       <img src={photoData.hdurl} alt='vast universe'/>
+      <div className="content">
       <p>Taken by: {photoData.copyright} </p>
       <p>Description: {photoData.explanation} </p>
       <p>Date taken: {photoData.date}</p>
-    </div>
-    
+      </div>
+    </div>  
   );
 }
 

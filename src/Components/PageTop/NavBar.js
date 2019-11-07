@@ -9,7 +9,7 @@ function NavLinks() {
             <div className = "links">
                 <nav >
                     <a href="https://www.nasa.gov/">Home</a>
-                    <a href="https://api.nasa.gov/#apod">API</a>
+                    <a href="https://api.nasa.gov/#apod">APIs</a>
                 </nav>
             </div>
         </div>

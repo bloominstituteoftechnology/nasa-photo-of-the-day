@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background: #ffad87;
+  max-height: 100%;
 }
 
 .App-logo {
@@ -54,7 +56,12 @@ a {
   color: white;
 }
 
-.App p {
+
+
+.content {
+  border: #61dafb 5px solid;
+  border-radius: 10px;
   margin: 1% 10%;
+  padding: 0 2%;
 }
 
