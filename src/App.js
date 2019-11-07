@@ -1,13 +1,12 @@
 import React from "react";
 import "./App.css";
+ import PictureGrid from "./components/PictureGrid.js";
 
 function App() {
+  
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+      <PictureGrid/>
     </div>
   );
 }
