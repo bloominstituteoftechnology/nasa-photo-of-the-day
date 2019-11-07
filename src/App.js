@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import "./App.css";
 import axios from "axios";
 import POTD from "./components/PicOfTheDay/POTD"
+import PhotoDetails from "./components/PhotoDetails/PhotoDetails"
 
 function App() {
   const [photoOfTheDay, setPhotoOfTheDay] = useState([])
@@ -19,7 +20,8 @@ function App() {
 
   return (
     <div className="App">
-      <POTD img={photoOfTheDay.url}/>
+      <POTD img={photoOfTheDay.url} />
+      <PhotoDetails title={photoOfTheDay.title} date={photoOfTheDay.date} explanation={photoOfTheDay.explanation} />
       <p>
         Read through the instructions in the README.md file to build your NASA
         app! Have fun!
