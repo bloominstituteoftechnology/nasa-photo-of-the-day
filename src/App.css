@@ -11,29 +11,13 @@ html {
   height: 40vmin;
   pointer-events: none;
   margin-bottom: 50px;
-  border-radius: 200px;
+  border-radius: 100%;
+  margin-top: 100px;
   opacity: 0.75;
 }
 
-.App-header {
-  background-image: url("https://wallpapercave.com/wp/GjrkLhP.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #f5f5f5;
-}
-
 .App-link {
-  color: #61dafb;
-}
-
-.Main-photo {
-  width: 100vw;
+  color: rgba(97, 218, 251, 0.9);
 }
 
 h1 {
@@ -49,19 +33,6 @@ p {
   font-weight: bold;
 }
 
-.about {
-  color: #f5f5f5;
-}
-
-.About-container {
-  padding: 2% 10% 2% 10%;
-  background-color: #a7a7a7;
-}
-
-.Info-container {
-  padding: 5% 10% 5% 10%;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -69,4 +40,78 @@ p {
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Boucing Arrow Animation */
+@keyframes arrowbounce {
+  from {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-20px);
+    -moz-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+}
+@-moz-keyframes arrowbounce {
+  /* Firefox */
+  from {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-20px);
+    -moz-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+}
+@-webkit-keyframes arrowbounce {
+  /* Safari and Chrome */
+  from {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-20px);
+    -moz-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+}
+@-o-keyframes arrowbounce {
+  /* Opera */
+  from {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-20px);
+    -moz-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+}
+.scrollto {
+  padding: 0px 0px 0px 0px;
+  display: block;
+  color: oldlace;
+  text-decoration: none;
+  width: 200px;
+  margin: 0 auto;
+  border-bottom: none;
+}
+.scrollto--arrow {
+  padding: 10px;
+}
+.scrollto--arrow img {
+  animation: arrowbounce 1s alternate infinite;
+  -moz-animation: arrowbounce 1s alternate infinite;
+  /* Firefox */
+  -webkit-animation: arrowbounce 1s alternate infinite;
+  /* Safari and Chrome */
+  -o-animation: arrowbounce 1s alternate infinite;
+  /* Opera */
 }

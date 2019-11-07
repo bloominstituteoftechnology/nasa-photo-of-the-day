@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import styled from "styled-components";
+
+const MainPhoto = styled.img`
+  width: 100vw;
+`;
 
 function Photo() {
   const [photo, setPhoto] = useState([]);
@@ -15,11 +20,7 @@ function Photo() {
   }, []);
   return (
     <div>
-      <img
-        className="Main-photo"
-        src={photo}
-        alt="NASA Space Shot of the Day"
-      ></img>
+      <MainPhoto src={photo} alt="NASA Space Shot of the Day"></MainPhoto>
     </div>
   );
 }
