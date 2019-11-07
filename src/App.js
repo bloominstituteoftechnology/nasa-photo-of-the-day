@@ -2,7 +2,16 @@ import React, {useState, useEffect} from "react";
 import Box from "./components/box.js"
 import axios from "axios"
 import "./App.css";
+import styled from 'styled-components';
 
+
+
+const BoxDiv = styled.div`
+    background: gray;
+    @media (max-width: 800px){
+        background: yellow;
+    }
+`;
 
 function App() {
   const [nasaImg, setNasaImg] = useState([]);
@@ -17,10 +26,10 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <BoxDiv className="App">
       <header><h1>BIG PICTURE SHOW UP HERE</h1></header>
       <Box title={nasaImg.title} url={nasaImg.url} explanation={nasaImg.explanation} date={nasaImg.date} /> 
-    </div>
+    </BoxDiv>
   );
 }
 
