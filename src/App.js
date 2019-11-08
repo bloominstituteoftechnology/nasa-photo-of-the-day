@@ -1,12 +1,17 @@
 import React from "react";
 import "./App.css";
+import PicList from './components/PicList';
+
+
 
 function App() {
   return (
     <div className="App">
+      <PicList/>
+      
+      
       <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
+        
       </p>
     </div>
   );
