@@ -1,18 +1,40 @@
 import React from "react";
 import SpaceImg from "./Components/SpaceImage"
 import "./App.css";
+import styled from "styled-components"
+
+
+
+const PageContainer = styled.div`
+
+background-color: #3c4245;
+display: flex;
+flex-direction: column;
+align-items: center;
+`;
+
+const FirstLine = styled.p`
+
+  font-size: 3.5rem;
+  margin: 60px;
+
+`;
 
 
 function App() {
   return (
-    <div className="App">
+    <PageContainer className="App">
       
       {/* 🚀Read through the instructions in the README.md file to build your NASA
         app! Have fun 🚀! */}
-       <h1 className= "space"> Too much space in the outer space! </h1>
-       <SpaceImg/>
+       <FirstLine  className= "space"> Too much space in the outer space! </FirstLine >
+        
+     
+           <SpaceImg/>
+        
+       
       
-    </div>
+    </PageContainer>
   );
 }
 
