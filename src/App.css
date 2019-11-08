@@ -1,5 +1,16 @@
+p,h1,h2,h3,h4,h5,h6,a{
+  color: white;
+  font-family: 'Roboto';
+}
+
+*{
+  scroll-behavior: smooth;
+}
+
 .App {
   text-align: center;
+  background-color: black;
+  padding: 2rem;
 }
 
 .App-logo {
@@ -30,4 +41,75 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.NavItem{
+  text-decoration: none;
+  color:white;
+  margin: 0 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.logo{
+  margin: 0 2rem;
+  font-size: 1.5rem;
+}
+
+.pagesBtn{
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+
+.tabBtns{
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  align-items: center;
+}
+
+.fabtn{
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.fabtn a{
+  text-decoration: none;
+}
+
+img{
+  max-width: 100vw;
+  width: 100%;
+}
+
+.imgChips{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.imgChips .imgChip{
+  max-width: 100%;
+  overflow: hidden;
+  justify-content: left;
+}
+
+.container{
+  padding:4rem 2rem 0rem 2rem;
+}
+
+.cardsContainer{
+  display: flex;
+
+}
+
+.infoHome{
+  position: fixed;
+  top:6rem;
+  right:0;
+  z-index: 10;
+  text-align: right;
+  padding:2rem;
+  background-color: rgba(0, 0, 0, 0.5);
 }

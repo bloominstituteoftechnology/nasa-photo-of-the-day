@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from "react";
 import axios from "axios";
-import ImgCard from "./ImgCard";
+import { Typography } from "@material-ui/core";
 
 const NasaImgCard = () =>{
     const [imgData,setImgData] = useState([]);
@@ -14,7 +14,30 @@ const NasaImgCard = () =>{
 
     return(
         <div>
-        <ImgCard key={imgData.url} title={imgData.title} date={imgData.date} url={imgData.url} descrip={imgData.explanation}/>
+        
+        <div className="infoHome">
+            <Typography variant="h6">
+            Image of Today:
+            </Typography>
+
+            <br></br>
+
+            <Typography variant="h5">
+            {imgData.title}
+            </Typography>
+
+            <br></br>
+
+            <Typography component="p">
+            {imgData.date}
+            </Typography>
+
+            {/* <Typography component="p">
+            {imgData.explanation}
+            </Typography> */}
+        </div>
+
+        <img src={imgData.hdurl}></img>
         </div>
     );
 };
