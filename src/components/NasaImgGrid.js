@@ -22,7 +22,7 @@ const NasaImgGrid = () =>{
     return(
         <div>
         
-        <KeywordTabs keywords={keywords} setKeywords={setKeywords}/>
+        <KeywordTabs keywords={keywords} setKeywords={setKeywords} setPage = {setPage}/>
 
         <NextButtons page = {page} setPage = {setPage} imgListData={imgListData}/>
         
