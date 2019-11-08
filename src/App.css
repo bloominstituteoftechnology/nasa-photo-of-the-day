@@ -2,6 +2,7 @@
   text-align: center;
   background: #ffad87;
   max-height: 100%;
+  
 }
 
 .App-logo {
@@ -65,3 +66,11 @@ a {
   padding: 0 2%;
 }
 
+.styledNav {
+  background: #282c34;
+}
+
+.styledNav img {
+  width: 5%;
+
+}

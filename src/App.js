@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import "./App.css";
 import NavLinks from "./Components/PageTop/NavBar";
 import axios from "axios";
+import Example from "./Components/PageTop/styledNav"
 
 function App() {
   const [photoData, setPhotoData] = useState([]);
@@ -16,7 +17,7 @@ function App() {
 },[])
   return (
     <div className="App">
-      <NavLinks />
+      <Example/>
       <h2>Picture of the Day</h2>
       <h3>{photoData.title}</h3>
       <img src={photoData.hdurl} alt='vast universe'/>
