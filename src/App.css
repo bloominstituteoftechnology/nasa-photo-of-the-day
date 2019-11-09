@@ -11,6 +11,7 @@ p,h1,h2,h3,h4,h5,h6,a{
   text-align: center;
   background-color: black;
   padding: 2rem;
+  padding-bottom: 6rem;
 }
 
 .App-logo {
@@ -65,8 +66,8 @@ p,h1,h2,h3,h4,h5,h6,a{
 .tabBtns{
   display: flex;
   justify-content: space-between;
-  width: 50%;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .fabtn{
@@ -93,6 +94,19 @@ img{
   max-width: 100%;
   overflow: hidden;
   justify-content: left;
+  margin:0.2rem;
+}
+
+.searchAndClear{
+  margin-bottom: 4rem;
+  width: 100%;
+}
+
+.clearBtnBox{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height:100%;
 }
 
 .container{

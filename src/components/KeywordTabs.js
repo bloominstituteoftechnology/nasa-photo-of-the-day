@@ -3,8 +3,8 @@ import Chip from '@material-ui/core/Chip';
 import Tooltip from '@material-ui/core/Tooltip';
 
 const KeywordTabs = ({setPage,keywords,setKeywords}) =>{
-    const keywordData =["Star","Space","Hubble","Milky Way","Earth","Sun"];
-    const [chipColor,setChipColor] = useState(["default","default","default","default","default","default"])
+    const keywordData =["Star","Space","Hubble","Galaxy","Milky Way","Sun","Earth","Moon","NASA"];
+    const [chipColor,setChipColor] = useState(["default","default","default","default","default","default","default","default","default"]);
 
     const handleClick = (item,chipColor,i) =>{
         setPage(1);
@@ -25,8 +25,9 @@ const KeywordTabs = ({setPage,keywords,setKeywords}) =>{
     return(
         <div className="tabBtns">
             <div>
-            <h3>Select Keywords: </h3>
+            <p>Select Keywords: </p>
             </div>
+            
             <Tooltip title="click again to deselect">
             <Chip clickable color={chipColor[0]} label={keywordData[0]} onClick={()=>{handleClick(keywordData[0],chipColor,0)}} />
             </Tooltip>
@@ -44,6 +45,15 @@ const KeywordTabs = ({setPage,keywords,setKeywords}) =>{
             </Tooltip>
             <Tooltip title="click again to deselect">
             <Chip clickable color={chipColor[5]} label={keywordData[5]} onClick={()=>{handleClick(keywordData[5],chipColor,5)}} />
+            </Tooltip>
+            <Tooltip title="click again to deselect">
+            <Chip clickable color={chipColor[6]} label={keywordData[6]} onClick={()=>{handleClick(keywordData[6],chipColor,6)}} />
+            </Tooltip>
+            <Tooltip title="click again to deselect">
+            <Chip clickable color={chipColor[7]} label={keywordData[7]} onClick={()=>{handleClick(keywordData[7],chipColor,7)}} />
+            </Tooltip>
+            <Tooltip title="click again to deselect">
+            <Chip clickable color={chipColor[8]} label={keywordData[8]} onClick={()=>{handleClick(keywordData[8],chipColor,8)}} />
             </Tooltip>
                 
         </div>

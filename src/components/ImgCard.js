@@ -18,6 +18,8 @@ const ImgCard = (props) =>{
       
     const classes = useStyles();
 
+    
+
     return (
 
         <Grid item xs={12} sm={6} lg={3} >
@@ -29,7 +31,8 @@ const ImgCard = (props) =>{
                 <div className="imgChips">
                 {props.imgKeywords.map(item=>{
                   return <Chip className="imgChip" label={item} variant="outlined"/>
-                })}
+                  })
+                }
                 </div>
             </div>
             </Paper>
