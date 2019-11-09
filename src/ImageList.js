@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import ImageCard from "ImageCard";
+import ImageCard from "./ImageCard";
 
 export default function ImageList(){
   const [image, setImage] = useState([]);
@@ -8,15 +8,19 @@ export default function ImageList(){
 
   useEffect (() => {
     axios
-      .get ('https://api.nasa.gov/planetary/apod?api_key=aCoNh4Iufc6lpyCBZXknxcsi5ENPZOFNeHbuiped')
+      .get (`https://ghibliapi.herokuapp.com/films/`)
       .then(res => {
         console.log(res);
+        setImage(res.data);
       })
       .catch(err => {
         console.log(`The error was: ${err}`);
       });
   }, []);
+
 return (
-  <div className="imagescss">
-  </div>
-);}
+
+      {image.map((item, index) => {
+          return <ImageCard key={index} item={item} />;
+        })}
+  );}
