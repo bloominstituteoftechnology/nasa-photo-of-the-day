@@ -28,7 +28,7 @@ const SearchBar =({search,setSearch})=>{
     }
 
     return(
-    <div>
+    <div className="searchBarBox">
         <FormControl variant="outlined">
           <InputLabel htmlFor="outlined-adornment-password">Search By Name</InputLabel>
           <OutlinedInput

@@ -5,7 +5,7 @@ import {AppBar, Button, Toolbar, Typography} from '@material-ui/core';
 import Icon from '@material-ui/core/Icon';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
-import NasaImgCard from "./components/NasaImgCard";
+import NasaTodayImg from "./components/NasaTodayImg";
 import NasaImgGrid from "./components/NasaImgGrid";
 
 function App() {
@@ -41,7 +41,7 @@ function App() {
           <Route path="/Gallery">
             <Gallery />
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <Home />
           </Route>
         </Switch>
@@ -55,7 +55,7 @@ function App() {
 function Home() {
   return (
   <div>
-  <NasaImgCard />
+  <NasaTodayImg />
   </div>
   );
 }

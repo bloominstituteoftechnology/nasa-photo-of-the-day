@@ -102,6 +102,11 @@ img{
   width: 100%;
 }
 
+.searchBarBox{
+  display: flex;
+  justify-content: left;
+}
+
 .clearBtnBox{
   display: flex;
   align-items: center;
@@ -126,4 +131,8 @@ img{
   text-align: right;
   padding:2rem;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.descripHome{
+  text-align: left;
 }

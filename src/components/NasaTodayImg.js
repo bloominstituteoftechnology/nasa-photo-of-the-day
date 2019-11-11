@@ -2,7 +2,7 @@ import React,{useState,useEffect} from "react";
 import axios from "axios";
 import { Typography } from "@material-ui/core";
 
-const NasaImgCard = () =>{
+const NasaTodayImg = () =>{
     const [imgData,setImgData] = useState([]);
 
     useEffect(()=>{
@@ -32,14 +32,15 @@ const NasaImgCard = () =>{
             {imgData.date}
             </Typography>
 
-            {/* <Typography component="p">
-            {imgData.explanation}
-            </Typography> */}
         </div>
 
         <img src={imgData.hdurl}></img>
+
+        <div className="descripHome">
+        <p>{imgData.explanation}</p>
+        </div>
         </div>
     );
 };
 
-export default NasaImgCard;
+export default NasaTodayImg;
