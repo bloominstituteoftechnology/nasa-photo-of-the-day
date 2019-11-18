@@ -1,14 +1,28 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
+import styled from 'styled-components';
+
+
+const Card = styled.div`
+  margin: 40px;
+`;
+
+const CardImage = styled.img`
+  max-width: 100%;
+`;
+
+const CardH3 = styled.h3`
+  align-items: center;
+  color: navy;
+`;
+
 
 const ImageCard = props => {
   return(
-    <div className="imagesCard">
-    <h2>Title: {props.title}</h2>
-      <img src={props.url} alt={props.title} />
-      <p>Description: {props.description}</p>
-      <p>Director: {props.director}</p>
-      <p>Release Date: {props.release_date}</p>
-    </div>
+   <Card className="imagesCard">
+   <CardImage src={props.item.url} alt="Nasa picture of the day"/>
+   <CardH3>{props.item.title}</CardH3>
+   <p>{props.item.explanation}</p>
+   </Card>
   )
 };
 

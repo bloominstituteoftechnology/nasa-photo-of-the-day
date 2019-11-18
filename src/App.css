@@ -31,3 +31,12 @@
     transform: rotate(360deg);
   }
 }
+
+.MainTitle{
+  justify-content: center;
+}
+
+.nasa{
+  font-style: italic;
+  font-size: 12px;
+}
