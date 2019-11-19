@@ -1,7 +1,16 @@
 body {
   margin: 0;
-  padding: 5px 30px;
+  padding: 0 30px;
+  background-color: black;
 }
+
+.App {
+  background-color: white;
+  max-width: 800px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
 .date-layout p {
   text-align: right;
 }
@@ -10,12 +19,41 @@ h1, h2, .image, .image_links {
   text-align: center;
 }
 
-img {
-  max-height: 400px;
-  max-width: 800px;
+.image, img {
+  width: 100%;
 }
 
 .description_container {
   margin: 0 auto;
-  max-width: 800px;
+  padding: 10px 30px 20px 30px;
+}
+
+.layout_body {
+  display: flex;
+}
+
+.right, .left {
+  width: 50%;
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    padding: 10px;
+    background-color: white;
+  }
+  .App {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .description_container {
+    margin: 0;
+    padding: 20px;
+  }
+  .layout_body {
+    flex-direction: column;
+  }
+  .right, .left {
+    width: 100%;
+  }
 }

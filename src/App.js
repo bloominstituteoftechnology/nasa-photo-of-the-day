@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState} from "react";
 import axios from "axios";
-import "./App.css";
 import Photo from "./components/Photo";
 import Date from "./components/Date";
+
+import "./App.css";
 
 function App() {
   const [photo, setPhoto] = useState([]);
@@ -22,7 +23,7 @@ function App() {
   return (
     <div className="App">
       <Date photo={photo} />
-      <h1>NASA Photo of the Day</h1>
+      <h1>NASA Astronomy Photo of the Day</h1>
       <Photo photo={photo} />
     </div>
   );
