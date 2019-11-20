@@ -11,7 +11,7 @@ function App() {
 
   const didUpdate = () => {
     axios
-      .get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${date}`)
+      .get(`https://api.nasa.gov/planetary/apod?api_key=yGkb9ZbzwBlOn7HLLv5CLROwlrkdqgBAPiVttbWI&date=${date}`)
       .then(response => {
         setPhoto(response.data);
         console.log(response);
