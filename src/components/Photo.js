@@ -7,7 +7,7 @@ export default function Photo({ photo }) {
         <div className="layout_body">
           <div className="left">
             <div className="image">
-              <img src={`${photo.url}`} alt={photo.title}/>
+              <img src={`${photo.url}`} alt={`${photo.title}`}/>
             </div>
             <div className="image_links">
               <p><a href={`${photo.url}`}>View Full-Sized Image</a> | <a href={`${photo.hdurl}`}>HD Version</a></p>
