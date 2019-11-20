@@ -6,12 +6,12 @@ body {
 
 .App {
   background-color: white;
-  max-width: 800px;
+  max-width: 1000px;
   padding: 20px;
   margin: 0 auto;
 }
 
-.date-layout p {
+.date-layout {
   text-align: right;
 }
 
@@ -30,6 +30,9 @@ h1, h2, .image, .image_links {
 
 .layout_body {
   display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 .right, .left {

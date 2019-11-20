@@ -7,7 +7,7 @@ export default function Photo({ photo }) {
         <div className="layout_body">
           <div className="left">
             <div className="image">
-              <img src={`${photo.url}`} alt="NASA APoD"/>
+              <img src={`${photo.url}`} alt={photo.title}/>
             </div>
             <div className="image_links">
               <p><a href={`${photo.url}`}>View Full-Sized Image</a> | <a href={`${photo.hdurl}`}>HD Version</a></p>
@@ -17,7 +17,7 @@ export default function Photo({ photo }) {
             <div className="description_container">
               <p className="description">{photo.explanation}</p>
               {/* Check if there is a copyright */}
-              <p className="copyright">Copyright: {photo.copyright !== null ? `${photo.copyright}` : `In Public Domain`}</p>
+              <p className="copyright">Copyright: {photo.copyright !== undefined ? `${photo.copyright}` : `In Public Domain`}</p>
             </div>
           </div>
         </div>
