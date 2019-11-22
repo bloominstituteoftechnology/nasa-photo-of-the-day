@@ -7,10 +7,11 @@
     "bootstrap": "^4.3.1",
     "moment": "^2.24.0",
     "react": "^16.8.6",
+    "react-datepicker": "^2.10.1",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
     "reactstrap": "^8.0.1",
-    "styled-components": "^4.4.0"
+    "styled-components": "^4.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
