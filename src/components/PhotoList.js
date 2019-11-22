@@ -1,23 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import PhotoCard from './PhotoCard';
+import axios from 'axios';
+
 
 
 export default function PhotoList() {
-    const [photos, setPhotos] = useState("");
     const [title, setTitle] = useState("");
-    const [date, setDate] = useState([]);
-    const [explaination, setExplaination] = useState("");
+    const [date, setDate] = useState("");
+    const [url, setUrl] = useState("");
+    const [explanation, setExplanation] = useState("");
 
     useEffect(() => {
         axios
             .get("https://api.nasa.gov/planetary/apod?api_key=l1YmSTQeiT2I9N2BoMBIU6dMhfu28chM88RFNqOT")
             .then(response => {
                 console.log(response.data);
-                setPhotos(response.data.url);
                 setTitle(response.data.title);
                 setDate(response.data.date);
-                setExplaination(response.data.explaination);
+                setUrl(response.data.url)
+                setExplanation(response.data.explanation);
             })
             
             .catch(error => {
@@ -27,7 +28,7 @@ export default function PhotoList() {
 
     return (
         <div>
-            <PhotoCard title={photos.title} url={photos.url} explaination={photos.explaination} date={photos.date} />
+            <PhotoCard title={title} url={url} explanation={explanation} date={date} />
         </div>
     )
 }
