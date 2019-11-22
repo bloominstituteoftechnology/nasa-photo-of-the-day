@@ -1,14 +1,16 @@
 import React from "react";
 
-
-const PhotoCard = props => {
+export default function PhotoCard(props) {
     return (
-        <span>
-        {props.title}
-        </span>
+        <div className="container">
+            <div className="heading">
+                <h1>{props.title}</h1>
+                <p>Photo of the day date: {props.date}</p>
+            </div>
+            <div className="pictures">
+
+            </div>
+
+        </div>
     )
 }
-
-
-
-export default PhotoCard;

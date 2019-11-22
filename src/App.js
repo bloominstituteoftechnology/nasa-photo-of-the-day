@@ -1,17 +1,14 @@
 import React from "react";
-import PhotoDisplay from "./components/PhotoDisplay";
+import PhotoList from "./components/PhotoList";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun !
-      </p>
-      <PhotoDisplay />
+      <PhotoList />
+      
     </div>
-  );
+  )
 }
 
 export default App;
