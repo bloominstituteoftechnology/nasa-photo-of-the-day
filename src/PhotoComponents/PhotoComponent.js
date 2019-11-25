@@ -1,11 +1,16 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const PhotoDiv = styled.div`
+    border: 10px solid white;
+`;
 
 const PhotoComponent = (props) => {
     console.log(props);
     return (
-        <div className = 'photo'>
+        <PhotoDiv>
             <img src = {props.url} alt = 'NASA Pic' />
-        </div>
+        </PhotoDiv>
     )
 }
 

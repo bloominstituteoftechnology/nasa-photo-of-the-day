@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import styled from 'styled-components';
 import "./App.css";
 import Axios from 'axios';
 
@@ -24,12 +25,19 @@ function App() {
      .catch(error => console.log(error))
   }, []);
 
+  const WrapperDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: black;
+  `;
+
   return (
-    <div className="App">
+    <WrapperDiv>
       <HeaderComponent />
       <PhotoComponent url = {photo} />
       <InfoComponent title = {title} date = {date} explanation = {explanation} />
-    </div>
+    </WrapperDiv>
   );
 }
 
