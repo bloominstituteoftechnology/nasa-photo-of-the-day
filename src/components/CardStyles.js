@@ -8,8 +8,8 @@ import styled from "styled-components";
 const CardContainer = styled.div`
     display: flex;    
     flex-direction: column; 
-    align-items: center;
-    justify-content: center;     
+    justify-content: center;
+    align-content: center;       
     width: 80%;
     height: auto;
     font-family: sans-serif;  
@@ -23,23 +23,39 @@ const CardContainer = styled.div`
       @media screen and (max-width: 500px) {
         width: 100%;
           
-      }
-    
+      }   
    
+`;
+
+const PhotoAndCalendar = styled.div`
+    display: flex;
+    width: 100%;    
+    height:auto;
+    flex-direction: column;
+    
+      
 `;
 
 const PhotoOfTheDay = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;    
+    align-items: center;      
     
          
 `;
 
+const CalendarPhotoTitle = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+`;
+
 const PictureTitle = styled.h2`
   display: flex;  
-  font-size: 3vw;
+  font-size: 2vw;
   text-transform: uppercase;
   color: red;
   text-align: center;
@@ -57,10 +73,9 @@ const PictureTitle = styled.h2`
 `;
 
 const Image = styled.img`
-    width: 700px;
-    height: 600px; 
-    border-radius: 50%;
-
+    width: 100%;
+    height: 400px; 
+   
     @media screen and (max-width: 800px) {
         width: 100%;
         border-radius: 25%;
@@ -75,11 +90,25 @@ const Image = styled.img`
          
 `;
 
+const ParagraphDiv = styled.div`
+    display:flex;
+    width: 100%;       
+
+`;
+
 const ParagraphDescription = styled.p`
-    text-align: center;
-    
+    text-align: justify;    
+
+`;
+
+const InnerContainer = styled.div`
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
 
 `;
 
 
-export {CardContainer, PhotoOfTheDay, Image, PictureTitle, ParagraphDescription};
+export {CardContainer,  PhotoAndCalendar, InnerContainer, ParagraphDiv, CalendarPhotoTitle, PhotoOfTheDay, Image, PictureTitle, ParagraphDescription};

@@ -1,6 +1,7 @@
 import React from "react";
 import PhotoCardInfo from "./components/PhotoCardInfo.js";
 import DatePickerComponent from "./components/DatePickerComponent";
+import StaticDatePicker from "./components/StaticDatePicker.js";
 import {CardContainer} from "./components/CardStyles.js";
 import logo from './logo.png';
 import background from "./sky.jpg";
@@ -47,7 +48,8 @@ function App() {
 
       <CardContainer>
             
-        <DatePickerComponent />   
+        {/*<DatePickerComponent />   */}
+        <StaticDatePicker />
 
       </CardContainer>
 
