@@ -5,17 +5,16 @@ import Photo from "./Photo";
 import NavBar from "./NavBar";
 
 function App() {
-  
-  const [photoOfTheDay, setPhotoOfTheDay] = useState("")
+  const [photoTitle, setPhotoTitle] = useState("");
+  const [photoOfTheDay, setPhotoOfTheDay] = useState("");
 
   useEffect( () => {
     axios.get("https://api.nasa.gov/planetary/apod?api_key=Q6RD3lJAhyj5FK5PBQDjbzBnfmHtEtIbEcrCVWjS")
     .then(res => {
-      console.log(res.data)
-      setPhotoOfTheDay(res.data)
+      setPhotoTitle(res.data);
+      setPhotoOfTheDay(res.data);
     })
     .catch(err => {
-      console.log(err)
       setPhotoOfTheDay({
         copyright: "",
         title: "404 Photo Not Found",
@@ -31,7 +30,7 @@ function App() {
   return (
     <div className="App">
         <NavBar
-          photoOfTheDay = {photoOfTheDay}
+          photoTitle = {photoTitle.title}
         />
 
         <Photo

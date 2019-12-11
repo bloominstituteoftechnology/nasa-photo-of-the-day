@@ -1,11 +1,10 @@
 import React from "react";
 
 const NavBar = (props) => {
-    console.log(props)
     return (
         <nav>
             <p>
-                Nasa Photo Of The Day: {props.photoOfTheDay.title}
+                Nasa Photo Of The Day: {props.photoTitle}
             </p>
         </nav>
     )
