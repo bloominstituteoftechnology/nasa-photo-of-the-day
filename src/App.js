@@ -7,9 +7,9 @@ function App() {
   const [apod, setApod] = useState({});
 
   useEffect(() => {
-    axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
+    axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2018-05-29')
     .then(response => {
-      console.dir(response.data);
+      // console.dir(response.data);
       setApod(response.data);
     })
     .catch(error => {
