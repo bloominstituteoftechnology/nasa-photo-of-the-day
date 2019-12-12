@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* background: black; */
 }
 
 .App-logo {
@@ -30,4 +33,31 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+h2 {
+  font-size: 2.4rem;
+  text-align: center;
+  padding-right: 1%;
+  color: white;
+}
+
+.explanation {
+  font-size: 2rem;
+  text-align: center;
+  padding-right: 8%;
+  color: white;
+  width: 50%;
+  padding-left: 25%;
+  text-align: justify;
+}
+
+.date {
+  font-size: 2rem;
+  text-align: center;
+  padding-right: 8%;
+  color: white;
+  width: 50%;
+  padding-left: 25%;
+  text-align: center;
 }
