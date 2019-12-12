@@ -5,13 +5,16 @@ import axios from "axios";
 function CardHolder(props) {
     const [card, setCard] = usestate("");
 
-    axios.get("https://api.nasa.gov/planetary/apod?api_key=SqCWTnAiuxURR2njh4OibNOUHiuGaCuTzsKywafx")
+    useEffec(() => {
+        axios.get("https://api.nasa.gov/planetary/apod?api_key=SqCWTnAiuxURR2njh4OibNOUHiuGaCuTzsKywafx")
         .then(response => {
             console.log(response.data);
         })
         .catch(error => {
             console.log(error);
-        })
+        });
+    }, []);
+    
 
     return(
         <div>
