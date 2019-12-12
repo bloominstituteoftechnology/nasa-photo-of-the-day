@@ -1,4 +1,7 @@
 import React from "react"
+import styled from "./styles"
+
+
 
 const ImageCard= props =>{
     console.log(props);
