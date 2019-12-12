@@ -1,13 +1,10 @@
 import React from "react";
 import "./App.css";
-
+import PhotoTable from "./Components/photoTable";
 function App() {
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+     <PhotoTable />
     </div>
   );
 }
