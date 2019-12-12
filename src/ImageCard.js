@@ -20,4 +20,9 @@ const ImageCard= props =>{
         </div>
     )
 }
+const DiffImg = nasa =>{
+    <div>
+    <img src="NasaImg/nasa1-bluecircle.jpg"></img>
+    </div>
+}
 export default ImageCard;
