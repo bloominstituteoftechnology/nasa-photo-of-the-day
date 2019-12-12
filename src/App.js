@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import "./App.css";
 import Axios from "axios";
-import { HeaderComponent } from "./Components/headerComponent";
-import { SatImageComponent } from "./Components/imgComponent";
+import { HeaderComponent } from "./Components/HeaderComponent";
+import { ImageComponent } from "./Components/ImageComponent";
 
 function App() {
 
@@ -35,7 +35,7 @@ function handleLonChange (event) {
                 </label>
             </form>
         </div>
-      <SatImageComponent latProp={lat} lonProp={lon}/>
+      <ImageComponent latProp={lat} lonProp={lon}/>
     </div>
   );
 }
