@@ -2,7 +2,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  background: black;
+  /* background: black; */
 }
 
 .App-logo {

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import NASACard from "./NASACard";
+import { Container } from "reactstrap";
 // import { tsPropertySignature } from "@babel/types";
 
 
@@ -21,8 +22,9 @@ const [date, setDate] = useState("2019-11-11");
     });
   }, [date])
   return (
-    <div className="photo">
+    // change back to container if issue
+    <Container> 
       < NASACard title={photos.title} imgURL={photos.url} explanation={photos.explanation} date={photos.date}/>
-    </div>
+    </Container>
     )
 }
