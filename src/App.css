@@ -1,3 +1,38 @@
+.image {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+.desc {
+  position: absolute;
+  color: goldenrod;
+  top: 50%;
+}
+.title {
+  position: absolute;
+  text-align: center;
+  color: red;
+  top: 40%;
+  left: 30%;
+  font-size: 3rem;
+}
+.date {
+
+}
+h1 {
+  color: red;
+  font-size: 70px;
+  text-align: center;
+  margin: 2% 0 3% 0;
+}
+h3 {
+  color: midnightblue;
+}
 .App {
   text-align: center;
 }
