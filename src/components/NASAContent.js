@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import NASACard from "./NASACard";
-import { tsPropertySignature } from "@babel/types";
+// import { tsPropertySignature } from "@babel/types";
 
 export default function NASAContent() {
 const [photos, setPhotos] = useState([])
