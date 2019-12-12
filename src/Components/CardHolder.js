@@ -22,9 +22,9 @@ function CardHolder(props) {
             <Card 
                 key={card.index}
                 title={card.title}
-                imgURL={card.hdurl}
+                hdurl={card.hdurl}
                 date={card.date}
-                article={card.explanation}
+                explanation={card.explanation}
                 copyright={card.copyright}/>
         </div>
     );
