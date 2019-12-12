@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -33,12 +34,13 @@
 }
 
 .Apod-Card{
-  text-align: center;
+
   box-shadow: #282c34 1px 1px;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
   height:90vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width:60%;
 
   
@@ -48,9 +50,14 @@
  
 }
 
-.image-cards{
-  display:flex;
+
+
+
+
+.container{
+  display: flex;
   justify-content: center;
-  align-content: center;
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
-} 
+
+}
+
+
