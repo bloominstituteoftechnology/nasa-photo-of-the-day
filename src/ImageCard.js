@@ -1,5 +1,7 @@
 import React from "react"
-import styled from "./styles"
+import styled from "styled-components"
+import ImagesList from "./ImagesList"
+import styles from "./styles"
 
 
 
@@ -7,22 +9,22 @@ const ImageCard= props =>{
     console.log(props);
 
     return(
-        <div className="DayImage" key={props.date}>
-            <h1>{props.title}</h1>
-            <span>{props.date}</span>
-            <img src={props.Img}></img>
-            <p>{props.saywhat}</p>
-            <h4>{props.copyright}</h4>
+        <Wrapper>
+        
+        <Title>title={props.title}</Title>
+        <span>key={props.data} </span>
+        <img>Img={props.hdurl} </img>
+        <p>saywhat={props.explanation}</p> 
+        
+        <span>date={props.date} </span>
+        <p>copyright={props.copyright}</p>
+                
+    </Wrapper>
 
 
 
 
-        </div>
+       
     )
-}
-const DiffImg = nasa =>{
-    <div>
-    <img src="NasaImg/nasa1-bluecircle.jpg"></img>
-    </div>
 }
 export default ImageCard;

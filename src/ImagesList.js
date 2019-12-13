@@ -23,11 +23,15 @@ export default function ImagesList(){
     return(
         <div>
             {
-                <ImageCard key={image.data} title={image.title}
-                saywhat={image.explanation} Img={image.hdurl} date={image.date} copyright={image.copyright}/>
+                <ImageCard 
+                key={image.data} 
+                title={image.title}
+                saywhat={image.explanation} 
+                Img={image.hdurl} 
+                date={image.date} 
+                copyright={image.copyright}/>
             }
         </div>
     );
 }
-
 

@@ -31,3 +31,7 @@
     transform: rotate(360deg);
   }
 }
+
+.pic-day{
+  width:100%;
+}
