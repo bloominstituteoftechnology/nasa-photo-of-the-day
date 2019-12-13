@@ -1,7 +1,12 @@
 import React from "react";
 import "./App.css";
-
 import PhotoGrid from "./Components /PhotoGrid";
+import {
+  Container
+} from "reactstrap";
+
+
+
 
 function App() {
   

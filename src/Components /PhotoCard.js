@@ -1,25 +1,28 @@
 import React from "react";
 
+import {
+    Card, CardImg, CardText, CardBody,
+    CardTitle, CardSubtitle, Col
+  } from 'reactstrap';
+
+
+
 
 function PhotoCard (props) {
     return (
-        <div className ="Apod-Card">
-           
-             <img className ="Apod-img" alt ="NASA APOD" src = {props.imgUrl}/>
-            
+   <Col key ={props.id}>
+    <Card  size="sm" style={{backgroundColor: '#f1f1f1'}}>
+        <CardImg top width="100%" src= {props.imgUrl} alt="NASA APOD" />
+        <CardBody>
+          <CardTitle style={{color: 'red'}}>{props.title}</CardTitle>
+          <CardSubtitle>{props.date}</CardSubtitle>
+          <CardText>{props.explanation}</CardText>
           
-            <h1>{props.title}</h1>
-          
+        </CardBody>
+      </Card>
+    </Col>
         
-            <h2>{props.date}</h2>
-          
-            <p>{props.explanation}</p>
-         
-
-
-        </div>
-    
-    
+        
     )
 
  }
