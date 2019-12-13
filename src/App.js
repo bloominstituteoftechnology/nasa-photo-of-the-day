@@ -1,6 +1,12 @@
 import React from 'react';
 import './App.css';
-import CardCont from './Nova pasta/CardContainer';
+import styled from 'styled-components';
+import Page from './Nova pasta/Page';
+
+//styled components
+const Background = styled.html`
+  background-color: black;
+`;
 
 function App() {
   //use state
@@ -8,13 +14,11 @@ function App() {
   //use effect
 
   return (
-    <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
-      <CardCont />
-    </div>
+    <Background>
+      <div className="App">
+        <Page />
+      </div>
+    </Background>
   );
 }
 
