@@ -30,6 +30,7 @@ const ImageCard = () => {
 
 	const [ image, setImage ] = useState([]);
 	const [ date, setDate ] = useState(newDate);
+	const [ videoUrl, setVideoUrl ] = useState();
 
 	useEffect(
 		() => {
@@ -38,8 +39,12 @@ const ImageCard = () => {
 					`https://api.nasa.gov/planetary/apod?api_key=16pqveiI85N5d2lMcAECuPPFjkmauhzJFzZyMJod&date=${date}`
 				)
 				.then((response) => {
+					console.log('response log, ', response);
 					const imageInfo = response.data;
 					console.log(imageInfo);
+					let link = imageInfo.url.slice(0, imageInfo.url.indexOf('?'));
+					setVideoUrl(`${link}?autoplay=1&mute=1`);
+					console.log('video url', videoUrl);
 					setImage(imageInfo);
 				})
 				.catch((error) => {
@@ -51,7 +56,14 @@ const ImageCard = () => {
 
 	return (
 		<Container>
-			<ImageStyle className="image" src={image.url} />
+			{/* <ImageStyle className="image" src={image.url} /> */}
+
+			{image.media_type === 'video' ? (
+				<iframe width="1200" height="800" src={videoUrl} />
+			) : (
+				<ImageStyle className="image" src={image.url} />
+			)}
+
 			<ImgInfo className="image-info">
 				<h2>Title: {image.title}</h2>
 				<h3>Credit: {image.copyright}</h3>
