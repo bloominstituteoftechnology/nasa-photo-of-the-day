@@ -3,16 +3,13 @@ export const MenuData = [
         label: 'Home', 
         url: '/',
     }, 
+ 
     {
-        label: 'Map Legend', 
+        label: 'Another ', 
         url: '#',
     },
     {
-        label: 'About', 
-        url: '#',
-    },
-    {
-        label: 'Contact', 
+        label: 'Another', 
         url: '#',
     },
 
