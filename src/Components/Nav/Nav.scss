@@ -1,0 +1,114 @@
+.NavBar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+    border-bottom: #dddddd solid 1px;
+    background: #fafafa;
+
+    
+}
+
+.logo{
+    width: 40%;
+        img{
+            margin: 3%;
+            width: 75%;
+        }
+}
+
+.container{
+    position: relative;
+    display: flex;
+    margin: 2%;
+    justify-items: center;
+}
+
+.nav{
+    width: 100vw;
+    box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    // z-index: 999;
+    background-color: #fff;
+    top: -100vw;
+    right: -10px;
+}
+.nav.show {
+    top: 45px;
+    width: 100vw;
+    height: 100vw;
+    background-color:rgba(0, 102, 191, 0.75);
+        z-index: -1;
+        margin: 0;
+        right: -35px;
+}
+
+.fg-search {
+    background: white;
+    position: relative;
+    width: 300px;
+  }
+  
+  .fg-search input {
+    width: 100%;
+    padding: 20px 60px 20px 20px;
+    display: block;
+  }
+  
+  .fg-search button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 18px 20px;
+    z-index: 2;
+  }
+  
+  .fg-search input:focus + button .fa-search {
+    color: red;
+  }
+
+.menu-button {
+    position: relative;
+    z-index: 999;
+    font-size: 30px;
+    cursor: pointer;
+    color: #777;
+}
+   
+
+.menu-items{
+    padding: 0;
+    margin: 0;
+    
+}
+
+.menu-list {
+    list-style: none;
+    width: 100%;
+
+    :hover{
+        background-color: #0066bf;
+
+    }
+
+.menu-link {
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    font-size: 1.6rem;
+    justify-content: center;
+    display: flex;
+    padding: 25px 16px;
+    }
+}
+
+a.menu-link:hover{
+    color: white;
+  
+}
