@@ -1,7 +1,7 @@
 export const MenuData = [
     {
         label: 'Home', 
-        url: '#',
+        url: '/',
     }, 
     {
         label: 'Map Legend', 

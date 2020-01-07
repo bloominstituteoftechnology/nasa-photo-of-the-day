@@ -1,13 +1,9 @@
 import React from "react";
 
-const PhotoCard = (props) => {
-
-    return (
-        <div>
-            <img src={props.hdurl} />
-        </div>
-    );
-
+export default function PhotoCard({props}) {
+// export default function PhotoCard(props) {
+    // console.log("PhotoData.js: PhotoData: props:", props)
+    return <img src={props} alt="Photo of the Day" />;
+    
 }
 
-export default PhotoCard;
