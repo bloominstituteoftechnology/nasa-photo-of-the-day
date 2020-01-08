@@ -23,6 +23,24 @@
   color: #61dafb;
 }
 
+.apodCard img {
+  width: 700px;
+  height: 600px;
+  margin-top: 1%;
+}
+
+.apodCard p {
+  width: 60%;
+  margin-left: 20%;
+}
+
+.apodCard h1 {
+  background: #100f35;
+  color: white;
+  padding-top: 8px;
+  padding-bottom: 10px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
