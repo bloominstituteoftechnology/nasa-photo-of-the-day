@@ -5,9 +5,36 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image:url("https://ak0.picdn.net/shutterstock/videos/1007699020/thumb/11.jpg?ip=x480");
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h1{
+
+  font-size: 5em;
+  color:yellow;
+}
+h2{
+  color:yellow;
+}
+
+.moviePics{
+
+  outline:0.5px solid yellow;
+  margin:3%;
+}
+
+.movieListContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.movieContainer{
+  width:75%;
+  display: flex;
+  justify-content: flex-start;
 }

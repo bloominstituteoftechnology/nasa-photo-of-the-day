@@ -1,13 +1,15 @@
 import React from "react";
 import "./App.css";
+import Movies from "./Movies";
+
 
 function App() {
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+      <h1 >Star Wars Movie Reviews</h1>
+      <div className = "movieListContainer">
+        <Movies/>
+      </div>
     </div>
   );
 }
