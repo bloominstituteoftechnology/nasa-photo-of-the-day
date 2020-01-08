@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+// import axios from "axios";
 import PictureCard from "./PictureCard";
 
 export default function PictureList(){

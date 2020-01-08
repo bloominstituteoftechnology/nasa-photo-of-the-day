@@ -1,12 +1,20 @@
 import React from "react";
+import Header from "./components/html_components/Header";
+import PictureList from "./components/picture_components/PictureList";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <p>
-        Here we go!
-      </p>
+      <header className="App-header">
+        <div className="App-logo">
+          <img src=""></img>
+          <p>Photo of the Day from NASA</p>
+        </div>
+      </header>
+
+      <PictureList />
+
     </div>
   );
 }
