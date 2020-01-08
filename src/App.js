@@ -21,7 +21,7 @@ function App() {
       <PhotoData />
       </div>
       </Route>
-      <Route path='/MarsRover' exact>
+      <Route path='/marsrover' exact>
       <MarsData />
       </Route>
         </Switch>

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Nav.scss';
 import { MenuData } from './MenuData';
 
@@ -23,7 +23,7 @@ const Nav = () => {
                 <nav className= { `nav ${open ? 'hide' : 'show'}` }><ul className="menu-items">
                   {MenuData.map( item => (
                     <li className="menu-list" key={item.label}>
-                      <a className="menu-link" href={item.url}>{item.label}</a>
+                      <Link className="menu-link" to={item.url}>{item.label}</Link>
                     </li>
                   ))}
                 </ul>

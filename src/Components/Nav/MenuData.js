@@ -6,7 +6,7 @@ export const MenuData = [
  
     {
         label: 'Mars Rover ', 
-        url: '/MarsRover',
+        url: '/marsrover',
     },
     
 
