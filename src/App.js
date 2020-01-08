@@ -9,7 +9,9 @@ function App() {
       <header className="App-header">
         <div className="App-logo">
           <img src=""></img>
-          <p>Photo of the Day from NASA</p>
+        </div>
+        <div className="App Title">
+        <p>Photo of the Day from NASA</p>
         </div>
       </header>
 
