@@ -1,5 +1,5 @@
 import React from "react";
-import PictureList from "./components/picture_components/PictureList";
+import PictureList from "./components/PictureList";
 import logo from "./images/astronaut.png";
 import "./App.css";
 

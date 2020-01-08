@@ -5,18 +5,29 @@ import PictureCard from "./PictureCard";
 export default function PictureList(){
     const [picture, setPicture] = useState([])
 
-    const didUpdate = () => {
+    useEffect(() => {
         axios
             .get ("https://api.nasa.gov/planetary/apod?api_key=s0zNjpbfiiM7FI7UhsxFv0X0IqmhdkxtMJ2QzAfg")
             .then (response => {
-
                 setPicture(response.data);
                 console.log(response);
             })
             .catch(error => console.log("The data was not returned", error));
-    }
+    }, [])
+    console.log("picture", picture);
 
-    useEffect(didUpdate, []);
+    // const didUpdate = () => {
+    //     axios
+    //         .get ("https://api.nasa.gov/planetary/apod?api_key=s0zNjpbfiiM7FI7UhsxFv0X0IqmhdkxtMJ2QzAfg")
+    //         .then (response => {
+
+    //             setPicture(response.data);
+    //             console.log(response);
+    //         })
+    //         .catch(error => console.log("The data was not returned", error));
+    // }
+
+    // useEffect(didUpdate, []);
     
     return (
         <div className="picture">
