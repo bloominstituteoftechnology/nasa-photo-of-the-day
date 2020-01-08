@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import axios from "axios";
 import Header from "./components/Header";
 import Body from "./components/body-components/Body";
+import Footer from "./components/Footer";
 import "./App.css";
 
 function App() {
@@ -24,8 +25,8 @@ function App() {
   return (
     <div className="App">
       <Header date={nasa.date}/>
-      <Body picture={nasa.hdurl} description={nasa.explanation}/> 
-      
+      <Body title={nasa.title} picture={nasa.hdurl} description={nasa.explanation}/> 
+      <Footer copyright={nasa.copyright}/>
       {/* <p>
         Read through the instructions in the README.md file to build your NASA
         app! Have fun 🚀!
