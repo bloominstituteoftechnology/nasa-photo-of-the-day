@@ -35,9 +35,9 @@ export default function PictureList(){
     
     return (
         <div className="picture">
-           {picture.map(picture => {
+           {/* {picture.map(picture => {
                return <PictureCard picture={picture} copyright={picture.copyright} date={picture.date} explanation={picture.explanation} />
-           })}
+           })} */}
         </div>
     )
 

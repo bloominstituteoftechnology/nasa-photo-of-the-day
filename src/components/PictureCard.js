@@ -9,7 +9,7 @@ const pictureCard = props => {
                 <h3>{props.date}</h3>
             </div>
             <div className="card-img">
-                <img src={props.hdurl}></img>
+                <img src={props.hdurl} alt="picture of the day"></img>
             </div>
             <div className="card-description">
                 <p>{props.description}</p>
