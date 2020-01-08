@@ -16,6 +16,8 @@ export default function PictureList(){
     }, [])
     console.log("picture", picture);
 
+
+
     // const didUpdate = () => {
     //     axios
     //         .get ("https://api.nasa.gov/planetary/apod?api_key=s0zNjpbfiiM7FI7UhsxFv0X0IqmhdkxtMJ2QzAfg")
@@ -28,6 +30,8 @@ export default function PictureList(){
     // }
 
     // useEffect(didUpdate, []);
+
+
     
     return (
         <div className="picture">
