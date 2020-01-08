@@ -5,54 +5,84 @@ $background: rgba(164, 176, 245, 1);
 $alternate: rgba(187, 197, 170, 1);
 $dark-alt: rgba(64, 120, 153, 1);
 
+.wrapper {
+	padding: 10px 0 20px 0;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	h1 {
+		font-size: 3.6rem;
+		font-weight: bold;
+		color: $darkblue;
+		text-shadow: 2px 2px $background;
+	}
 
+	#date {
+		font-size: 2.4rem;
+	}
 
-.wrapper{
+	img {
+		width: 50%;
+		height: 50vh;
+		margin: 10px 0 10px 0;
+	}
+	.date {
+		font-size: 2rem;
+        color: $darkblue;
+        margin-right: 5px;
+    }
     
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    h1{
-        font-size: 3.6rem;
-        font-weight: bold;
-        color: $darkblue;
-        text-shadow: 2px 2px $background;
-    }
-
-    #date{
-      font-size: 2.4rem;  
-    }
-
-    img{
-        width: 50%;
-        height: 50vh;
-    }
-    .date{
-        font-size: 2rem;
-        color: $darkblue
-    }
-    p{
-        font-size: 1.4rem;
-        width: 50%;
-        font-family: 'Montserrat';
-        color: $darkblue;
-    }
-    .dropDown{
-        color:$darkblue
-    }
-    input{
-        height: 30px;
-        cursor: pointer;
-
-    }
-    form{
+    .date-wrapper{
         display: flex;
+        justify-content: center;
         align-items: center;
-        span{
-            margin-right: 2px;
-            color:$darkblue;
-            font-size: 1.4rem;
-        }
     }
+	p {
+		font-size: 1.2rem;
+		width: 50%;
+		font-family: 'Montserrat';
+        color: $darkblue;
+        background-color: $light;
+	}
+	.dropDown {
+		color: $darkblue;
+	}
+	.hidden {
+		display: none;
+	}
+
+	.show {
+		display: block;
+		height: 30px;
+		cursor: pointer;
+	}
+
+	form {
+		display: flex;
+		align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        input{
+            color: $darkblue;
+            height: 30px;
+            cursor: pointer;
+            font-size: 1rem;
+            text-align: center;
+        }
+        button{
+            height: 40px;
+            color: $light;
+            background-color: $darkblue;
+            border-radius: 5px;
+            margin:10px;
+            font-size: 1.2rem;
+        }
+		span {
+			margin-right: 2px;
+			color: $darkblue;
+			font-size: 1.4rem;
+			cursor: pointer;
+		}
+	}
 }

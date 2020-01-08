@@ -13,6 +13,16 @@ import {NavLink} from 'react-router-dom'
          .get(`https://api.nasa.gov/planetary/apod?api_key=j8MvcwHy1qL4XgDz8qnCW7gFaf8MqNSuKALMSpAt`)
          .then(res => setData(res.data) )
     },[])
+
+    const toggleDate = (e) => {
+        e.preventDefault()
+        const input = document.getElementById('toggle');
+        if(input.className.match('hidden')){
+            input.className="show"
+        } else {
+           input.className="hidden"
+        }
+    }
      
     const onChange = (e) => {
         e.persist()
@@ -29,15 +39,17 @@ import {NavLink} from 'react-router-dom'
  
     return (
         <div className="wrapper">
-            <NavLink to="/about">Link to Other Page</NavLink>
             <h1>{data.title}</h1>
-            <form>
-            <span>Select Date:</span><input onChange={onChange} className="dropDown" type="date"></input>
-            </form>
+            <div className="date-wrapper">
+            <span className="date">Photo From:</span>
             <Moment className="date" format='MM/DD/YYYY'>
             {data.date}
             </Moment>
+            </div>
             <img alt={data.title} src={data.url}/>
+            <form>
+            <button onClick={toggleDate}>Select Image From Different Day</button><input id="toggle" onChange={onChange} className="hidden" type="date"/>
+            </form>
             <p>{data.explanation}</p>
         </div>
     )
