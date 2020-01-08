@@ -16,6 +16,7 @@ export default function PhotoData() {
         .get(`https://api.nasa.gov/planetary/apod?api_key=JnWo6HiIwC9BG0xa2UyobaexzaMVqCbQi9h9hs6q&date=${date}`)
         .then(res => {
             console.log(res.data);
+
             setPhotos(res.data);
         })
         .catch(error => {
@@ -27,7 +28,8 @@ export default function PhotoData() {
     return (
         <div className="wrapper"> 
             <div className="photo">
-                 <PhotoCard props={photos.hdurl} />
+                 <PhotoCard 
+                 props={photos.hdurl}  />
             </div>
             
             <div className="info">
@@ -38,7 +40,7 @@ export default function PhotoData() {
                {/* Opened Button */ }
 
               { <div className={ `input ${openDate ? 'inputHide' : 'inputShow'}` }>
-                 <input className="date-input" value={date} type='text' placeholder="YYYY-MM-DD" onChange= { (e) => setDate(e.target.value) } />
+                 <input className="date-input" value={date} type='date'  onChange= { (e) => setDate(e.target.value) }/>
                    
                 </div>
               }

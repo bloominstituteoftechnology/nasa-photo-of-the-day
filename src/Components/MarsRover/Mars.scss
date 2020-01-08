@@ -1,0 +1,16 @@
+.marsWrapper{
+    padding-right: 5%;
+}
+.marsPhoto{
+    display: flex;
+    flex-wrap: wrap;
+
+    img{
+        width: 20%;
+        height: auto;
+    }
+}
+
+h1.marsHeading{
+    color: white;
+}

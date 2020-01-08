@@ -5,13 +5,10 @@ export const MenuData = [
     }, 
  
     {
-        label: 'Another ', 
-        url: '#',
+        label: 'Mars Rover ', 
+        url: '/MarsRover',
     },
-    {
-        label: 'Another', 
-        url: '#',
-    },
+    
 
     
 ];

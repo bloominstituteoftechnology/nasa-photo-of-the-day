@@ -1,3 +1,12 @@
+body{
+    font-family: 'Orbitron', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    font-family: 'Orbitron', sans-serif;
+
+}
 .wrapper{
     display: inline-table;
     margin-left: 50%;
@@ -5,7 +14,7 @@
     flex-direction: column;
     justify-content: center;
     margin: 2%;
-    width: 35%;
+    width: 75%;
     background: white;
     box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -21,11 +30,11 @@
 }
 .photo {
    
-    width: 90%;
+    width: 100%;
 
     img {
-        width: 90%;
-        padding: 10% 10% 0 10%;
+        width: 100%;
+        // padding: 5% 5% 0 5%;
     }
 }
 
@@ -47,3 +56,38 @@
   .input.inputHide {
       display: none;
   }
+
+  button{
+      background-color: dodgerblue;
+      padding: 2%;
+      border-radius: 25px;
+      color: white;
+      font-size: 1.4rem;
+      cursor: pointer;
+      outline: none;
+     
+
+  }
+
+  button:hover{
+    background-color: red;
+}
+
+.date-input {
+    margin-top: 2%;
+    width: 165px;
+    height: 35px;
+    text-align: center;
+    font-size: 1.2rem;
+    outline: none;
+
+}
+
+.photoTitle {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.photoExplanation{
+    font-family: 'Roboto', sans-serif;
+
+}

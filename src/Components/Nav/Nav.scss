@@ -26,7 +26,7 @@
     // margin: 2%;
     justify-items: center;
     height: 400px;
-    overflow: hidden;
+    // overflow: hidden;
     
 
 }
@@ -43,7 +43,7 @@
     // right: -10px;
 }
 .nav.show {
-    top: 0;
+    top: 30px;
     width: 10vw;
     height: 100vh;
    
@@ -54,6 +54,7 @@
 }
 
 .menu-button {
+    width: 50px;
     position: relative;
     z-index: 999;
     font-size: 30px;
@@ -67,7 +68,7 @@
 
 .menu-items{
     padding: 0;
-    margin: 0;
+    top: 40px;
     
 }
 
