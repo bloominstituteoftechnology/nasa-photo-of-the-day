@@ -1,0 +1,58 @@
+/* RGB */
+$light: rgba(255, 255, 242, 1);
+$darkblue: rgba(68, 100, 173, 1);
+$background: rgba(164, 176, 245, 1);
+$alternate: rgba(187, 197, 170, 1);
+$dark-alt: rgba(64, 120, 153, 1);
+
+
+
+.wrapper{
+    
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1{
+        font-size: 3.6rem;
+        font-weight: bold;
+        color: $darkblue;
+        text-shadow: 2px 2px $background;
+    }
+
+    #date{
+      font-size: 2.4rem;  
+    }
+
+    img{
+        width: 50%;
+        height: 50vh;
+    }
+    .date{
+        font-size: 2rem;
+        color: $darkblue
+    }
+    p{
+        font-size: 1.4rem;
+        width: 50%;
+        font-family: 'Montserrat';
+        color: $darkblue;
+    }
+    .dropDown{
+        color:$darkblue
+    }
+    input{
+        height: 30px;
+        cursor: pointer;
+
+    }
+    form{
+        display: flex;
+        align-items: center;
+        span{
+            margin-right: 2px;
+            color:$darkblue;
+            font-size: 1.4rem;
+        }
+    }
+}
