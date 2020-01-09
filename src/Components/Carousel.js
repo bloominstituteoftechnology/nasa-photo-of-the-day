@@ -13,7 +13,7 @@ import {Button, Card, CardImg, CardText, CardBody,
     const items = [
         {
           src: <PhotoCard 
-          props={photos.hdurl}  />
+          props={photos.hdurl}  />,
           altText: 'Slide 1',
           caption: 'Slide 1'
         },
