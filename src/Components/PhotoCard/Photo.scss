@@ -69,9 +69,9 @@ h1{
 
   }
 
-  button:hover{
-    background-color: red;
-}
+//   button:hover{
+//     background-color: red;
+// }
 
 .date-input {
     margin-top: 2%;
@@ -83,11 +83,22 @@ h1{
 
 }
 
-.photoTitle {
+.card-title {
+    margin-top: 2%;
     font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
 }
 
 .photoExplanation{
     font-family: 'Roboto', sans-serif;
 
 }
+
+button.btn.btn-primary.btn-lg{
+    margin-bottom: 2%;
+  
+}
+
+// button.btn.btn-primary.btn-lg:hover{
+//     background-color: red;
+// }

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import PhotoCard from "./PhotoCard";
 import './Photo.scss';
+import {Button, Card, CardImg, CardText, CardBody,
+    CardTitle, CardSubtitle,} from 'reactstrap';
 
 export default function PhotoData() {
 
@@ -27,18 +29,18 @@ export default function PhotoData() {
 
     return (
         <div className="wrapper"> 
-            <div className="photo">
+            {/* <div className="photo">
                  <PhotoCard 
                  props={photos.hdurl}  />
             </div>
             
             <div className="info">
-            <button onClick={() => setOpenDate(!openDate)}>
+            <Button color="primary" size="lg" onClick={() => setOpenDate(!openDate)}>
             {photos.date}
-        </button>
+        </Button>
               
                {/* Opened Button */ }
-
+{/* 
               { <div className={ `input ${openDate ? 'inputHide' : 'inputShow'}` }>
                  <input className="date-input" value={date} type='date'  onChange= { (e) => setDate(e.target.value) }/>
                    
@@ -48,8 +50,33 @@ export default function PhotoData() {
 
                 <h3 className="photoTitle">{photos.title}</h3>
                 <p className="photoExplanation">{photos.explanation}</p>
-            </div>
+            </div> */} 
+
+            <div>
+            <Card>
+                <CardImg top width="100%" src={photos.hdurl} ></CardImg>
+            </Card>
+         
+
+        <CardBody>
+                  <Button color="primary" size="lg" onClick={() => setOpenDate(!openDate)}>
+                    {photos.date}
+                </Button>
+                    {/* Opened Button */ }
+
+                    { <div className={ `input ${openDate ? 'inputHide' : 'inputShow'}` }>
+                        <input className="date-input" value={date} type='date'  onChange= { (e) => setDate(e.target.value) }/>
+                        
+                        </div>
+                    }
+                <CardTitle>{photos.title}</CardTitle>
+                <CardText>{photos.explanation}</CardText>
+                
+        </CardBody>
         </div>
+
+        </div>
+        
     );
 }
 
