@@ -3,10 +3,12 @@ import axios from 'axios';
 import './Card.scss';
 import Moment from 'react-moment';
 import moment from 'moment';
-import { NavLink } from 'react-router-dom';
+import DatePicker from "react-datepicker";
+ import "react-datepicker/dist/react-datepicker.css";
 
 function Card() {
-	const [ data, setData ] = useState({});
+    const [ data, setData ] = useState({});
+    const [date, setDate] = useState(new Date())
 	useEffect(() => {
 		axios
 			.get(`https://api.nasa.gov/planetary/apod?api_key=j8MvcwHy1qL4XgDz8qnCW7gFaf8MqNSuKALMSpAt`)
@@ -23,12 +25,10 @@ function Card() {
 		}
 	};
 
-	const onChange = (e) => {
-		e.persist();
-		console.log(e);
-		let date = e.target.valueAsDate;
-		date = date.toUTCString();
-		let formattedDate = moment(date).format('YYYY-MM-DD');
+	const onChange = (date) => {
+        setDate(date)
+        console.log(date)
+        let formattedDate = moment(date).format('YYYY-MM-DD');
 		console.log(formattedDate);
 		axios
 			.get(`https://api.nasa.gov/planetary/apod?api_key=JnWo6HiIwC9BG0xa2UyobaexzaMVqCbQi9h9hs6q&date=${formattedDate}`)
@@ -47,8 +47,9 @@ function Card() {
 			</div>
 			<img alt={data.title} src={data.url} />
 			<form>
-				<button onClick={toggleDate}>Select Image From Different Day</button>
-				<input id='toggle' onChange={onChange} className='hidden' type='date' />
+				<button className="dateSelector" onClick={toggleDate}>Select Image From Different Day</button>
+                <DatePicker selected={date} id="toggle" className="hidden" onChange={onChange}
+      />
 			</form>
 			<p>{data.explanation}</p>
 		</div>

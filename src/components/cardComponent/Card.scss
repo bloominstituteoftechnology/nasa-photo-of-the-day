@@ -45,16 +45,12 @@ $dark-alt: rgba(64, 120, 153, 1);
         color: $darkblue;
         background-color: $light;
 	}
-	.dropDown {
-		color: $darkblue;
-	}
 	.hidden {
 		display: none;
 	}
 
 	.show {
 		display: block;
-		height: 30px;
 		cursor: pointer;
 	}
 
@@ -64,13 +60,12 @@ $dark-alt: rgba(64, 120, 153, 1);
         flex-direction: column;
         justify-content: center;
         input{
-            color: $darkblue;
             height: 30px;
             cursor: pointer;
             font-size: 1rem;
             text-align: center;
         }
-        button{
+        .dateSelector{
             height: 40px;
             color: $light;
             background-color: $darkblue;
