@@ -3,6 +3,7 @@ import React from 'react';
 const Photo = (className, data) => {
     var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     const formattedDate = new Date(data.date).toLocaleDateString("en-US", options);
+    
     return (
         <div className="card">
             <h3>{formattedDate}</h3>

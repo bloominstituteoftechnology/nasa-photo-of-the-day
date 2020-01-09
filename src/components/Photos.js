@@ -6,10 +6,9 @@ const apiURL = 'https://api.nasa.gov/planetary/apod?api_key=AEtQZQCWhyJU8ASBrhdn
 
 const Photos = (props) => {
     const [photoData, setPhotoData] = useState();
-    
+
     useEffect(() => {
-        axios
-            .get(apiURL)
+        axios.get(apiURL)
             .then(res => {
                 setPhotoData(res.data)
             })
