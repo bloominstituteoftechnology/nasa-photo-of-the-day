@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.scss";
+// import "./App.scss";
 import Navigation from "./Components/Nav/Nav";
 import PhotoData from './Components/PhotoCard/PhotoData'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -23,7 +23,7 @@ function App() {
       </div>
       </Route>
       <Route path='/marsrover' exact>
-      <MarsData />
+      <MarsData key={[0]} />
       </Route>
         </Switch>
     </div>

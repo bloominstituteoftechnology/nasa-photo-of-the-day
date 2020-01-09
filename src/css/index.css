@@ -1,0 +1,282 @@
+@tailwind base; 
+@tailwind components; 
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* *********App CSS */
+
+.App {
+  text-align: center;
+
+  background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url('../assets/space.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 5vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+/* ************Nav CSS************ */
+
+.NavBar {
+  justify-content: space-between; 
+  align-items: center;
+  width: 30%;
+  height: 100vh;
+  z-index: 999;
+}
+
+img.logo {
+  width: 15%;
+  margin: 2% 0;
+}
+
+
+.container{
+  position: relative;
+  display: flex;
+  justify-items: center;
+  height: 400px;
+  }
+
+.nav{
+  width: 15%;
+  box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  background-color: #fff;
+  top: -100vw;
+
+}
+.nav.show {
+  top: 30px;
+  width: 10vw;
+  height: 100vh;
+ 
+  background-color:rgba(0, 0, 0, 0.0);
+     
+}
+
+.menu-button {
+  width: 50px;
+  position: relative;
+  z-index: 999;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  padding: 12%;
+  overflow: hidden;
+  
+}
+ 
+
+.menu-items{
+  padding: 0;
+  top: 40px;
+  
+}
+
+.menu-list {
+  list-style: none;
+  width: 100%;
+
+
+
+
+}
+
+.menu-list:hover{
+  background-color: #0066bf;
+
+}
+
+.menu-link {
+  width: 100%;
+  text-decoration: none;
+  color: white;
+  font-size: 1.6rem;
+  justify-content: center;
+  display: flex;
+  padding: 25px 0;
+  }
+
+a.menu-link:hover{
+  color: white;
+
+}
+
+button.mr-2.navbar-toggler{
+  border-width: 0;
+  outline: none;
+
+ 
+}
+
+
+/* ************PhotoCard CSS************ */
+
+body{
+  font-family: 'Orbitron', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1{
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+
+}
+.wrapper{
+  display: inline-table;
+  margin-left: 50%;
+  margin-right: 50%;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2%;
+  width: 75%;
+  background: white;
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12); 
+
+
+}
+.photo {
+ 
+  width: 100%;
+
+
+}
+.photo img {
+  width: 100%;
+}
+
+
+
+.input.inputHide {
+    display: none;
+}
+
+/* button{
+    background-color: dodgerblue;
+    padding: 2%;
+    border-radius: 25px;
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+    outline: none;
+   
+
+} */
+
+
+.date-input {
+  margin-top: 2%;
+  width: 165px;
+  height: 35px;
+  text-align: center;
+  font-size: 1.2rem;
+  outline: none;
+
+}
+
+.card-title {
+  margin-top: 2%;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+}
+
+.photoExplanation{
+  font-family: 'Roboto', sans-serif;
+
+}
+
+/* button.btn.btn-primary.btn-lg{
+  margin-bottom: 2%;
+
+} */
+
+
+/* ************Mars Rover CSS************ */
+
+
+
+
+.marsWrapper{
+  padding-right: 5%;
+}
+.marsPhoto{
+  display: flex;
+  flex-wrap: wrap;
+
+  img{
+      width: 20%;
+      height: auto;
+  }
+}
+
+h1.marsHeading{
+  color: white;
+}
+
+.marsCard{
+  padding: 2%;
+}

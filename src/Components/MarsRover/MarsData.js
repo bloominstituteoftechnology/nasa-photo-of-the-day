@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 // import MarsCard from "./MarsCard";
-import '../PhotoCard/Photo.scss';
-import '../MarsRover/Mars.scss';
+import '../../css/index.css';
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
 import Logo from '../../assets/Logo.png';
 import {
     Card, CardImg, CardText, CardBody,
@@ -12,40 +14,58 @@ import {
 export default function MarsData() {
 
     const [mars, setMars] = useState([]);
+    const roverImages = [];
     // const [openDate, setOpenDate] = useState(true)
     // const [date,setDate] = useState('')
 
     // console.warn('state Open Button', openDate)
 
+    // const roverImages = () => {
+    //   for (let i = 0; i < mars.length; i++){
+    //     roverImages.push()
+    //   }
+    // }
+
     useEffect(() => {
         axios
-        .get(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=3&api_key=JnWo6HiIwC9BG0xa2UyobaexzaMVqCbQi9h9hs6q
+        .get(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=1&api_key=JnWo6HiIwC9BG0xa2UyobaexzaMVqCbQi9h9hs6q
         `)
         .then(res => {
             console.log(res.data.photos);
-
             setMars(res.data.photos);
         })
         .catch(error => {
       console.log(error);
         })
 
-    }, [])
+    }, [1])
 
     return (
-        <div>
+        <div class="">
               <img className="logo"src={Logo} />
         
         <h1 className="marsHeading">Mars Rover Images</h1>
 
         <div className="marsCard">
-        <Card >
+        <div  >
 
-        <div className="marsPhoto" >
-                {mars.map((e, index) => {
+        <div class="" >
+                {mars.map((e, id) => {
                     return(
-                        <CardImg top width="100%" key={index} src={e.img_src}  />
-                        
+
+                      <div class="m-2 bg-white inline-block max-w-sm rounded overflow-hidden shadow-lg">
+  <img class="w-full" src={e.img_src} alt="Mars Rover Images" />
+  <div class="px-6 py-4">
+    <div class="font-bold text-xl mb-2">Rover Name:  { e.rover.name }</div>
+    <p class="text-gray-700 text-base">
+    Earth date:  { e.earth_date }    </p>
+  </div>
+  <div class="px-6 py-4">
+    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#photography</span>
+    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#travel</span>
+    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#winter</span>
+  </div>
+</div>
                     )
                 })}
             </div>
@@ -56,7 +76,7 @@ export default function MarsData() {
             <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
             <Button>Button</Button>
           </CardBody> */}
-        </Card>
+        </div>
       </div>
       </div>
 
