@@ -24,7 +24,7 @@ const Navigation = (props) => {
             <NavLink href="/">Home</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/marsrover">Mars Rover</NavLink>
+            <NavLink href="/marsrover/">Mars Rover</NavLink>
           </NavItem>
         </Nav>
       </Collapse>
