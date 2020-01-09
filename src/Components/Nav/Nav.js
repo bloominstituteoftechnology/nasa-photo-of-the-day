@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import './Nav.scss';
-import { MenuData } from './MenuData';
+// import { MenuData } from './MenuData';
 import {Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink} from 'reactstrap';
 
 
@@ -24,7 +24,7 @@ const Navigation = (props) => {
             <NavLink href="/">Home</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="./MarsRover/">Mars Rover</NavLink>
+            <NavLink tag={Link} to="./MarsRover">Mars Rover</NavLink>
           </NavItem>
         </Nav>
       </Collapse>
