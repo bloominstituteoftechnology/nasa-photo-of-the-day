@@ -4,7 +4,7 @@ import { Badge } from 'reactstrap';
 const Header = (props) => {
     return (
         <div>
-            <h1><Badge color='secondary'>NASA Photo Of The Day</Badge></h1>            
+            <h1 className='header'><Badge color='secondary'>NASA Photo Of The Day</Badge></h1>            
         </div>
     );
 }
