@@ -3,6 +3,7 @@ import PictureComponent from "./components/PictureComponent";
 import logo from "./images/astronaut.png";
 import "./App.css";
 
+
 function App() {
   return (
     <div className="App">
