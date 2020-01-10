@@ -286,3 +286,7 @@ h1.marsHeading{
   align-items: center;
   flex-direction: column;
 }
+
+.headerTitle{
+  font-size: 3rem;
+}
