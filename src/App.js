@@ -1,19 +1,20 @@
 import React from "react";
 import "./App.css";
 import NasaPicList from "./NasaPicList";
-import { Alert, Toast, ToastBody, ToastHeader } from 'reactstrap';
-import Button from '@material-ui/core/Button';
+import { Alert, AlertTitle }  from '@material-ui/lab';
 
 function App() {
   return (
     <div className="App">
-      <Alert color="primary">
+      <Alert severity="info">
+        <AlertTitle>Info</AlertTitle>
         This is the NASA image of the day!
       </Alert>
       <br />
       <NasaPicList />
       <br />
-      <Alert color="dark">
+      <Alert severity="info">
+      <AlertTitle>Info</AlertTitle>
         Check back tomorrow for a new image of the day!
       </Alert>
     </div>

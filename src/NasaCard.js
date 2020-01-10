@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import { Toast, ToastBody, ToastHeader } from "reactstrap";
+import styled from 'styled-components';
 
 const NasaCard = props => {
 
