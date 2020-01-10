@@ -5,12 +5,17 @@ $background: rgba(164, 176, 245, 1);
 $alternate: rgba(187, 197, 170, 1);
 $dark-alt: rgba(64, 120, 153, 1);
 
+$phone: "only screen and (max-width : 700px)";
+
+
+
 .wrapper {
 	padding: 10px 0 20px 0;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	width: 100%;
 	h1 {
 		font-size: 3.6rem;
 		font-weight: bold;
@@ -26,6 +31,9 @@ $dark-alt: rgba(64, 120, 153, 1);
 		width: 50%;
 		height: 50vh;
 		margin: 10px 0 10px 0;
+		@media #{$phone} {
+			width: 85%;
+		}
 	}
 	.date {
 		font-size: 2rem;
@@ -43,7 +51,10 @@ $dark-alt: rgba(64, 120, 153, 1);
 		width: 50%;
 		font-family: 'Montserrat';
         color: $darkblue;
-        background-color: $light;
+		background-color: $light;
+		@media #{$phone} {
+			width: 85%;
+		}
 	}
 	.hidden {
 		display: none;
