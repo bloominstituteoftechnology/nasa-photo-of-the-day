@@ -1,51 +1,154 @@
 import  React, {useState,useEffect} from "react";
 import axios from "axios";
-import {picList} from "./data";
+import {picList,personPicList} from "./data";
 import  MovieInfo from "./MovieInfo";
+import PersonInfo from "./PersonInfo";
+import {Alert, ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
 
-const Apod = () =>{
 
-    const[data,setData] = useState([]);
+const Movies = () =>{
+    const[personData,setPersonData] = useState([])
+    const[movieData,setMovieData] = useState([]);
+    const [dropdownOpen, setOpen] = useState(false);
+    const[option,setOption] = useState(false);
+
+  const toggle = () => setOpen(!dropdownOpen);
+
 
     useEffect(()=>{
 
-        axios.get(" https://swapi.co/api/films/")
+        axios.get("https://swapi.co/api/films/")
 
         .then(res =>{
-            setData(res.data.results);
+           
+            setMovieData(res.data.results);
+            console.log(res);
         })
     
         .catch(err=>{
-            console.log("no")
+            console.log(err,"no")
         });
 
+        axios.get("https://swapi.co/api/people/")
+
+        .then(res =>{
+            
+            setPersonData(res.data.results);
+            console.log(res.data.results);
+            
+
+        })
+
+        .catch(err =>{
+            console.log("no")
+        })
+
     },[]);
+
+movieData.sort(function(a,b){
+ return a.episode_id - b.episode_id;
+});
+    
+   const handleClickforMovies = (e)=>{
+       setOption(false);
+   }
+
+   const handleClickforPeople = (e)=>{
+       setOption(true);
+}
+
+
+
    
 
-    console.log(data);
+   
 
 
-
-
-
+ 
+if(!option){
+    
     return(
+       
 
-        <div >
-           {data.map((movie,idx)=>{
+       <div> 
+            <Alert color="warning">
+        This api doesnt have all the movies or characters!!!!!!
+      </Alert>
+           <h1>Movie Info</h1>
+
+    <ButtonDropdown isOpen={dropdownOpen} toggle={toggle}>
+    <DropdownToggle caret color="warning">
+     Choose
+    </DropdownToggle>
+    <DropdownMenu>
+     
+    
+      <DropdownItem onClick = {handleClickforMovies}>Movie Info</DropdownItem>
+      <DropdownItem divider/>
+      <DropdownItem onClick = {handleClickforPeople}>People Info</DropdownItem>
+    </DropdownMenu>
+  </ButtonDropdown>
+  
+      
+  
+        <div className = "mainContainer">
+           {movieData.map((movie,idx)=>{
                return(
                 <MovieInfo 
-                src = {picList[idx]} 
+                src = {picList[movie.episode_id]} 
                 key ={idx} 
-                src = {picList[movie.episode_id]}
                 title = {movie.title}
-                episode = {movie.episode_id} />
+                episode = {movie.episode_id}
+                description = {movie.opening_crawl} 
+                director = {movie.director}
+                release = {movie.release_date}
+                
+                />
                )
            })}
         </div>
+  </div>
+    );
+
+
+}
+    return(
+        <div>
+            <h1>Person Info</h1>
+    <ButtonDropdown isOpen={dropdownOpen} toggle={toggle}>
+    <DropdownToggle caret color="warning">
+    Choose
+    </DropdownToggle>
+    <DropdownMenu>
+    
+
+    <DropdownItem onClick = {handleClickforMovies}>Movie Info</DropdownItem>
+    <DropdownItem divider/>
+    <DropdownItem onClick = {handleClickforPeople}>People Info</DropdownItem>
+    </DropdownMenu>
+    </ButtonDropdown>
+    <div className = "mainContainer">
+
+  {personData.map((person,idx)=>{
+      return<PersonInfo 
+      src = {personPicList[idx]} 
+      gender = {person.gender}
+      birthYear = {person.birth_year}
+      name = {person.name}
+      
+      />
+      
+  })}
+
+
+    </div>
+    </div>
+
     )
+
 
 
 }
 
-export default Apod;
+export default Movies;

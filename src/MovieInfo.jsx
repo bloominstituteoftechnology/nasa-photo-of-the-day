@@ -1,13 +1,17 @@
 import React from "react"
 
 
-const MovieInfo = (props) => (
+const MovieInfo = ({src,episode,title,director,description,release}) => (
 
-    <div className ="movieContainer">
-        <img src = {props.src} className = "moviePics"  height = "300" width = "300" ></img>
-
-<h2>Ep{props.episode}: {props.title}</h2>
-    </div>
+    <div className ="container">
+        <img alt = "me" src = {src} className = "moviePics"  height = "400" width = "400" ></img>
+        <div>
+        <h2>Ep{episode}: {title} </h2>
+        <h3>Directed by : {director}</h3>
+        <p> {description}</p> 
+<p>Realease Date : {release}</p>
+        </div>
+        </div>
 
 
 

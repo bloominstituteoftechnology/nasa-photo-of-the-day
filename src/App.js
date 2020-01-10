@@ -1,12 +1,15 @@
 import React from "react";
 import "./App.css";
 import Movies from "./Movies";
+import Logo from "./Logo"
 
 
 function App() {
   return (
     <div className="App">
-      <h1 >Star Wars Movie Reviews</h1>
+      <Logo/>
+  
+
       <div className = "movieListContainer">
         <Movies/>
       </div>
