@@ -45,9 +45,7 @@ export default function MarsData() {
 
     return (
         <div class="">
-              <img class=" mt-4 mb-4 flex-auto h-48 object-center items-center" src={Logo} />
-        
-        <h1 className="marsHeading">Mars Rover Images</h1>
+             <div className="logoNasa" ><img class="mt-4 mb-4 flex-auto h-48 object-center items-center" src={Logo} /><h1 className="headerTitle">Mars Rover Photos</h1></div>
 
         <div className="marsCard">
         <div  >
