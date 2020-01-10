@@ -13,7 +13,6 @@
     "react-scripts": "^3.3.0",
     "reactstrap": "^8.2.0",
     "redux": "^4.0.5",
-    "tailwindcss": "^1.1.4",
     "video-react": "^0.14.1"
   },
   "scripts": {
@@ -37,5 +36,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "tailwindcss": "^1.1.4"
   }
 }

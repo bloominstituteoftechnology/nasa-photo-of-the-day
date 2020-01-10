@@ -17,8 +17,8 @@ function App() {
       <div className="rightWrapper">
 
       {/* eslint-disable-next-line  */}
-        <div className="logoContainer"><img className="logo"src={Logo} /><h1>Photo of the Day</h1></div>
-        
+        <div class="object-center"><img class=" m-2 flex-auto h-32 object-center items-center" src={Logo} /><h1>Photo of the Day</h1></div>
+
       <PhotoData />
       </div>
       </Route>

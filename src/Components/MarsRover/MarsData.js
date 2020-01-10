@@ -15,6 +15,7 @@ export default function MarsData() {
 
     const [mars, setMars] = useState([]);
     const roverImages = [];
+    const [page,setPage] = useState('')
     // const [openDate, setOpenDate] = useState(true)
     // const [date,setDate] = useState('')
 
@@ -28,7 +29,7 @@ export default function MarsData() {
 
     useEffect(() => {
         axios
-        .get(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=1&api_key=JnWo6HiIwC9BG0xa2UyobaexzaMVqCbQi9h9hs6q
+        .get(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=${page}&api_key=JnWo6HiIwC9BG0xa2UyobaexzaMVqCbQi9h9hs6q
         `)
         .then(res => {
             console.log(res.data.photos);
@@ -38,7 +39,9 @@ export default function MarsData() {
       console.log(error);
         })
 
-    }, [1])
+    }, [])
+
+  
 
     return (
         <div class="">
@@ -54,21 +57,28 @@ export default function MarsData() {
                     return(
 
                       <div class="m-2 bg-white inline-block max-w-sm rounded overflow-hidden shadow-lg">
-  <img class="w-full" src={e.img_src} alt="Mars Rover Images" />
+  <img class=" h-64 w-full object-cover" src={e.img_src} alt="Mars Rover Images" />
   <div class="px-6 py-4">
     <div class="font-bold text-xl mb-2">Rover Name:  { e.rover.name }</div>
     <p class="text-gray-700 text-base">
     Earth date:  { e.earth_date }    </p>
   </div>
-  <div class="px-6 py-4">
+  <div class="px-4 py-4">
     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#photography</span>
-    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#travel</span>
-    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#winter</span>
+    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#marsrover</span>
+    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#nasa</span>
   </div>
+
+
 </div>
                     )
                 })}
+        {<button value={page+1} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full shadow" 
+           onClick= { (e) => setPage(e.target.value)}>Next Page</button>}
+
+
             </div>
+
           {/* <CardImg top width="100%" src="/assets/318x180.svg" alt="Card image cap" /> */}
           {/* <CardBody>
             <CardTitle>Card title</CardTitle>

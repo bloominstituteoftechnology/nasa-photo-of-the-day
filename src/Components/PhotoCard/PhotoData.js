@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import PhotoCard from "./PhotoCard";
+// import PhotoCard from "./PhotoCard";
 import '../../css/index.css';
-import {Button, Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle,} from 'reactstrap';
+// import {Button, Card, CardImg, CardText, CardBody,
+//     CardTitle, CardSubtitle,} from 'reactstrap';
 
 export default function PhotoData() {
 
@@ -30,7 +30,7 @@ export default function PhotoData() {
     return (
 
       
-            <div class="bg-white  w-3/4 rounded-lg overflow-hidden shadow-2xl">
+            <div class="bg-white mt-4 ml-4 mb-64 w-11/12 rounded-lg overflow-hidden shadow-2xl">
                 <img class="w-full" src={photos.hdurl}  alt="Nasa photo of the day" />
                 <div class="h-3 px-6 py-4">
                     <div class="font-bold text-xl mb-2">{photos.title}  <div class="inline text-gray-500 text-sm p6">\ NASA photo of the day for {photos.date} </div></div>
@@ -38,7 +38,7 @@ export default function PhotoData() {
                 </div>
                 
                 <div class="py-4">
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full shadow" onClick={() => setOpenDate(!openDate)}>
+                <button class="outline-none focus:shadow-outline bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full shadow" onClick={() => setOpenDate(!openDate)}>
                       Select a new date
                  </button>
               

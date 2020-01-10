@@ -34,7 +34,7 @@ code {
   background-repeat: no-repeat;
   background-attachment: fixed;
   display: flex;
-
+  height: 100%;
 }
 
 .App-logo {
