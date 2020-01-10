@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Collapse, Button, CardBody, Card } from 'reactstrap';
-import styled from "styled-components";
+// import { Collapse, Button, CardBody, Card } from 'reactstrap';
+// // import styled from "styled-components";
 
 
 export default function PictureComponent(){
@@ -32,12 +32,14 @@ export default function PictureComponent(){
                 <img className="picture" src={pictureData.url} alt="picture of the day"></img>
             </div>
             <div className="card-explanation">
-                <Button color="primary" onClick={toggle} style={{ marginBottom: '1rem' }}>Explanation</Button>
+                {/* <Button color="primary" onClick={toggle} style={{ marginBottom: '1rem' }}>Explanation</Button>
                     <Collapse isOpen={isOpen}>
                         <Card>
                             <CardBody>{pictureData.explanation}</CardBody>
                         </Card>
-                    </Collapse>
+                    </Collapse> */}
+                
+                <p>{pictureData.explanation}</p>
             </div>
             
         </div>
