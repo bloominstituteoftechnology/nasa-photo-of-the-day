@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Collapse, Button, CardBody, Card } from 'reactstrap';
+import styled from "styled-components";
 
 
 export default function PictureComponent(){
