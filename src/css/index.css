@@ -280,3 +280,9 @@ h1.marsHeading{
 .marsCard{
   padding: 2%;
 }
+
+.logoNasa {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
