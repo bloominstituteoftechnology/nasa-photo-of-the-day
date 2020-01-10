@@ -1,5 +1,5 @@
 import React from "react";
-import PictureList from "./components/PictureList";
+import PictureComponent from "./components/PictureComponent";
 import logo from "./images/astronaut.png";
 import "./App.css";
 
@@ -13,7 +13,7 @@ function App() {
         </div>
       </header>
 
-      <PictureList />
+      <PictureComponent />
 
     </div>
   );
