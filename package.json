@@ -4,9 +4,12 @@
   "private": true,
   "dependencies": {
     "axios": "^0.19.1",
+    "bootstrap": "^4.4.1",
+    "moment": "^2.24.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "reactstrap": "^8.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -28,5 +31,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "chai": "^4.2.0"
   }
 }

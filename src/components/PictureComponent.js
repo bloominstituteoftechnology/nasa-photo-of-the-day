@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Collapse, Button, CardBody, Card } from 'reactstrap';
 
 
 export default function PictureComponent(){
@@ -16,6 +17,9 @@ export default function PictureComponent(){
 
     console.log("picture ", pictureData);
 
+    const [isOpen, setIsOpen] = useState(false);
+    const toggle = () => setIsOpen(!isOpen);
+
     
     return (
         <div className="picture-card">
@@ -27,7 +31,12 @@ export default function PictureComponent(){
                 <img className="picture" src={pictureData.url} alt="picture of the day"></img>
             </div>
             <div className="card-explanation">
-                <p>{pictureData.explanation}</p>
+                <Button color="primary" onClick={toggle} style={{ marginBottom: '1rem' }}>Explanation</Button>
+                    <Collapse isOpen={isOpen}>
+                        <Card>
+                            <CardBody>{pictureData.explanation}</CardBody>
+                        </Card>
+                    </Collapse>
             </div>
             
         </div>
