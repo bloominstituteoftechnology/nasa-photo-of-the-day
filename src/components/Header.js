@@ -1,9 +1,10 @@
 import React from 'react';
+import { Badge } from 'reactstrap';
 
 const Header = (props) => {
     return (
-        <div className={props.className}>
-            <h1>NASA Photo of the Day</h1>
+        <div>
+            <h1><Badge color='secondary'>NASA Photo Of The Day</Badge></h1>            
         </div>
     );
 }

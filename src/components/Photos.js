@@ -24,7 +24,8 @@ const Photos = (props) => {
                 title={photoData.title}
                 copyright={photoData.copyright}
                 explanation={photoData.explanation}
-                date={photoData.date} 
+                date={photoData.date}
+                className='card' 
             />
         </div>
     );
