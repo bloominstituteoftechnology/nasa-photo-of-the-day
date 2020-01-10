@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 
 
+
 const StyledHeadingOne = styled.h1`
     background: #d39f16;
     color: white;
@@ -17,6 +18,8 @@ const StyledImage = styled.img`
     width: 700px;
     height: 600px;
     margin-top: 1%;
+    margin-bottom: 1%;
+    border-radius: 5px;
 `;
 
 const StyledHeadingThree = styled.h3`
@@ -32,6 +35,8 @@ const StyledParagraph = styled.p`
 const StyledLogo = styled.img`
     margin-top: 1%;
 `;
+
+
 
 const ApodCard = (props) => {
     return (
