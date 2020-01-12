@@ -4,12 +4,16 @@ $darkgreen: rgba(78, 110, 88, 1);
 $background: rgba(76, 133, 119, 1);
 $alternate: rgba(151, 215, 204, 1);
 $dark-alt: rgba(122, 223, 187, 1);
+$phone: "only screen and (max-width : 700px)";
+
 .wrapper {
+	padding: 10px 0 20px 0;
 	background-color: $light;
-	height: 100vh;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	width: 100%;
 
 	h1 {
 		font-size: 3.6rem;
@@ -19,13 +23,27 @@ $dark-alt: rgba(122, 223, 187, 1);
 	}
 
 	#date {
-		font-size: 3.8rem;
+		font-size: 2.4rem;
 	}
 
 	img {
 		width: 50%;
 		height: 50vh;
 		margin: 10px 0 10px 0;
+		@media #{$phone} {
+			width: 85%;
+		}
+	}
+	.date {
+		font-size: 2rem;
+		color: $darkgreen;
+		margin-right: 5px;
+	}
+
+	.date-wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	h4 {
@@ -34,9 +52,48 @@ $dark-alt: rgba(122, 223, 187, 1);
 	}
 
 	p {
-		font-size: 1.6rem;
+		font-size: 1.2rem;
 		width: 50%;
 		font-family: 'Exo 2', sans-serif;
 		color: $light;
+		background-color: $light;
+		@media #{$phone} {
+			width: 85%;
+		}
+	}
+	.hidden {
+		display: none;
+	}
+	.show {
+		display: block;
+		cursor: pointer;
+	}
+	form {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		input {
+			height: 30px;
+			cursor: pointer;
+			font-size: 1rem;
+			text-align: center;
+			color: $darkgreen;
+		}
+		.dateSelector {
+			height: 40px;
+			color: $light;
+			background-color: $darkgreen;
+			border-radius: 5px;
+			margin-top: 15px;
+			font-size: 1.2rem;
+			margin-bottom: 10px;
+		}
+		span {
+			margin-right: 2px;
+			color: $darkgreen;
+			font-size: 1.4rem;
+			cursor: pointer;
+		}
 	}
 }
