@@ -1,6 +1,6 @@
 import React from "react";
 
-const Body = (props) => {
+function Body(props) {
     return(
         <div className="image">
             <img src={props.picture.hdurl} alt="space pic"/>

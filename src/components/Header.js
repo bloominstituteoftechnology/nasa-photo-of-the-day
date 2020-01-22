@@ -1,5 +1,11 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 
 function Header(props){
-    const 
-}
+    return(
+        <div className="date">
+<h2>{props.theDate.date}</h2>
+        </div>
+    );
+};
+
+export default Header
