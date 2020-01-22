@@ -7,6 +7,7 @@ import NasaImagecard from "./NasaImagecard";
 export default function NasaData() {
   //   const [nasaDataArray, setNasaDataArray] = useState([]);
   const [newDate, setNewDate] = useState("");
+  const [isLoading, setIsLoading]=useState(false);
   const [nasaData, setNasaData] = useState({
     copyright: "",
     date: "",
@@ -44,6 +45,7 @@ export default function NasaData() {
     <div>
       <form action="submit" onSubmit={handleSubmit}>
         <input
+        type="date"
           className="new-date-input"
           placeholder="YYYY-MM-DD"
           onChange={event => {
