@@ -5,9 +5,9 @@ const Header = (props) => {
 
     return (
       <div >
-      <h1>
+      <h3>
           NASA Picture of the Day
-      </h1>   
+      </h3>   
          
             
           

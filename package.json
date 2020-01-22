@@ -4,7 +4,9 @@
   "private": true,
   "dependencies": {
     "axios": "^0.19.2",
+    "moment": "^2.24.0",
     "react": "^16.8.6",
+    "react-date-picker": "^7.10.0",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"
   },
