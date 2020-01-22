@@ -5,7 +5,7 @@ import axios from "axios";
 import "./App.css";
 
 const Wrapper = styled.div`
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   border-radius: 8px;
   box-shadow: 0 16px 60px rgba(0, 0, 0, 0.3);

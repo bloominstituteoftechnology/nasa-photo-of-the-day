@@ -6,9 +6,8 @@ const Container = styled.div`
   display: block;
   text-align: center;
   margin: 0 auto;
-  width: 50vw;
+  width: 100%;
   max-width: 900px;
-  min-height: 70vh;
   background-size: 100% 100%;
   border-radius: 8px;
   box-shadow: 0 16px 60px rgba(0, 0, 0, 0.3);
@@ -17,6 +16,11 @@ const Container = styled.div`
   transition: all 1s ease;
   -webkit-transform: scale(0.3, 0.3);
   transform: scale(0.3, 0.3);
+
+  span {
+    color: green;
+    text-shadow: 1px 2px 1px #000;
+  }
   h3 {
     opacity: 0.5;
     -webkit-transition: all 1s ease;
