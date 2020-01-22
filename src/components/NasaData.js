@@ -41,21 +41,26 @@ export default function NasaData() {
         console.log("error: ", error);
       }, []);
   }, [newDate]);
-  return (
-    <div>
-      <form action="submit" onSubmit={handleSubmit}>
-        <input
-        type="date"
-          className="new-date-input"
-          placeholder="YYYY-MM-DD"
-          onChange={event => {
-            setNewDate(event.target.value);
-          }}
-        />
-        <button className="date-input">Submit</button>
-      </form>
-
-      <NasaImagecard nasaData={nasaData} />
-    </div>
-  );
+  if (!nasaData.hdurl) {
+    return <h3>Loading...</h3>;
+  } else {
+    
+      return (
+        <div>
+          <form action="submit" onSubmit={handleSubmit}>
+            <input
+            type="date"
+              className="new-date-input"
+              placeholder="YYYY-MM-DD"
+              onChange={event => {
+                setNewDate(event.target.value);
+              }}
+            />
+            <button className="date-input">Submit</button>
+          </form>
+    
+          <NasaImagecard nasaData={nasaData} />
+        </div>
+      );
+  }
 }
