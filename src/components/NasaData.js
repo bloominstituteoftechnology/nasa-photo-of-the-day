@@ -3,6 +3,8 @@ import axios from "axios";
 import NasaImagecard from "./NasaImagecard";
 // import moment from "moment";
 // import DatePicker from "react-date-picker";
+import Loader from 'react-loader-spinner'
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 export default function NasaData() {
   //   const [nasaDataArray, setNasaDataArray] = useState([]);
@@ -42,7 +44,19 @@ export default function NasaData() {
       }, []);
   }, [newDate]);
   if (!nasaData.hdurl) {
-    return <h3>Loading...</h3>;
+    return (<div>
+
+        <h3>Loading...</h3>
+        <Loader
+             type="Puff"
+             color="#00BFFF"
+             height={100}
+             width={100}
+             timeout={3000} //3 secs
+    
+          />
+    </div>
+    )
   } else {
     
       return (

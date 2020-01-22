@@ -4,11 +4,11 @@ import "../App.css";
 const Header = (props) => {
 
     return (
-      <div >
-      <h3>
+      <div className="header-div">
+      <h4>
           NASA Picture of the Day
-      </h3>   
-         
+      </h4>  
+      
             
           
          
