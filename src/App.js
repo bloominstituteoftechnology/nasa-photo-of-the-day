@@ -4,11 +4,15 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
+      {/* <div className='App-logo'> */}
+        {/* <img className='logo' src={logo} alt='NASA logo' /> */}
+      <h1>NASA Photo of the Day</h1>
+
       <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
+        
       </p>
     </div>
+    // </div>
   );
 }
 
