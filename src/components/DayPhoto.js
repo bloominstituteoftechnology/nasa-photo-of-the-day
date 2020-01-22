@@ -4,9 +4,13 @@ const DayPhoto = props => {
     return (
         
         <div>
-        <h2>Date: {props.data.date}</h2>
-        <p>Description: {props.data.explanation}
+        <h2>Date: {props.date}</h2>
+        
+        <p>{props.explanation}
         </p>
+
+        <img src={props.url} alt="" />
+        
         </div>
     );
 };

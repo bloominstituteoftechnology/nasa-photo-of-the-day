@@ -7,6 +7,8 @@ function App() {
     <div className="App">
       {/* <div className='App-logo'> */}
         {/* <img className='logo' src={logo} alt='NASA logo' /> */}
+
+        
       <h1>NASA Photo of the Day</h1>
     <DayPhotoContainer />
       
