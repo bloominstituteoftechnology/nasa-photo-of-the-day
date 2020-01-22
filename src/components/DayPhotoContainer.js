@@ -21,6 +21,7 @@ export default function DayPhotoContainer () {
                 key={photo.date}
                 date={photo.date}
                 explanation={photo.explanation}
+                title={photo.title}
                 url={photo.url} />
                 
             </div>
