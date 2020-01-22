@@ -17,7 +17,6 @@ export default function NasaData() {
     title: "",
     url: ""
   });
-  
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -40,7 +39,7 @@ export default function NasaData() {
       .catch(error => {
         console.log("error: ", error);
       }, []);
-  }, []);
+  }, [newDate]);
   return (
     <div>
       <form action="submit" onSubmit={handleSubmit}>
