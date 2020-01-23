@@ -22,6 +22,42 @@
 .App-link {
   color: #61dafb;
 }
+.apod-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+h2 {
+  background-color: black;
+  border-radius: 60px;
+  color: white;
+  width: 20%;
+  margin: 10% auto 3% auto;
+  
+}
+h3 {
+  background-color: black;
+  border-radius: 60px;
+  color: white;
+  width: 15%;
+  margin: 0 auto 3% auto;
+}
+.date {
+  background-color: black;
+  border-radius: 60px;
+  color: white;
+  width: 10%;
+  margin: 0 auto 3% auto;
+}
+.explanation{
+  background-color: black;
+  border-radius: 40px;
+  color: white;
+  width: 50%;
+  margin: 0 auto 3% auto;
+  padding: 0 3% 0 3%;
+}
+
 
 @keyframes App-logo-spin {
   from {

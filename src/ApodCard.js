@@ -6,7 +6,7 @@ function ApodCard(props) {
         <div className='apod-list'>
             <h2>Title: {props.data.title}</h2>
             <h3>Copyright: {props.data.copyright} </h3>
-            <p>Date: {props.data.date}</p>
+            <p className="date">Date: {props.data.date}</p>
             <div className="explanation">
                 <p>
                     Explanation: {props.data.explanation}

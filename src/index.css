@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("https://apod.nasa.gov/apod/image/2001/Hyades_Mtanous_1998.jpg");
 }
 
 code {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ApodCard from './ApodCard';
-import Image from './Img';
+import Image from './Picture';
 import "./App.css";
 import Axios from 'axios';
 
@@ -24,7 +24,6 @@ function App() {
         Read through the instructions in the README.md file to build your NASA
         app! Have fun 🚀!
       </p> */}
-      <Image/>
       <ApodCard data={data}/>
     </div>
   );
