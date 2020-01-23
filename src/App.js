@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import DayPhotoContainer from './components/DayPhotoContainer';
 
+
 function App() {
   return (
     <div className="App">
@@ -9,8 +10,8 @@ function App() {
         {/* <img className='logo' src={logo} alt='NASA logo' /> */}
 
         
-      
     <DayPhotoContainer />
+     
       
       
     </div>

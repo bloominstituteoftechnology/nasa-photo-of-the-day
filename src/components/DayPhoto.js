@@ -1,6 +1,11 @@
 import React from 'react';
 import './DayPhoto.css';
 
+
+
+
+
+
 const DayPhoto = props => {
     return (
         
