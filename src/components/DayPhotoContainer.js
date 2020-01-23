@@ -19,10 +19,11 @@ export default function DayPhotoContainer () {
             <div>
                 <DayPhoto 
                 key={photo.date}
-                date={photo.date}
+                 image={photo.hdurl} 
+                 date={photo.date}
                 explanation={photo.explanation}
                 title={photo.title}
-                url={photo.url} />
+               />
                 
             </div>
         );   
