@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import styled from 'styled-components';
+
 import {
     Carousel,
     CarouselItem,
@@ -7,20 +9,29 @@ import {
     CarouselCaption
   } from 'reactstrap';
 
+  const CarouselStyle = styled.div`
+  background: black;
+  color: white;
+    `;
+
   const Example = (props) => {
+  
   const items = [
     {
-    
-      caption: `${props.title}`
+      caption: 'NASA Photo of the Day',
     },
     {
-      
-      caption: `${props.date}`
+      caption: `${props.title}`,
+      date: `${props.date}`
     },
     {
-     
       caption: `${props.explanation}`
+    },
+    {
+      caption: `Copyright: ${props.copyright}`
+     
     }
+    
   ];
   
  
@@ -51,23 +62,27 @@ import {
           onExited={() => setAnimating(false)}
           key={item.caption}
         >
-          {item.caption}
+          {item.caption} 
+          <p>{item.date}</p>
           {/* <CarouselCaption captionText={item.caption} captionHeader={item.caption} /> */}
         </CarouselItem>
+        
       );
     });
   
     return (
+      <CarouselStyle>
       <Carousel
         activeIndex={activeIndex}
         next={next}
         previous={previous}
       >
-        <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
+        {/* <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} /> */}
         {slides}
         <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
         <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
       </Carousel>
+      </CarouselStyle>
     );
   }
   

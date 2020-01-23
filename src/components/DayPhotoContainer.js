@@ -26,6 +26,8 @@ export default function DayPhotoContainer () {
                  date={photo.date}
                 explanation={photo.explanation}
                 title={photo.title}
+                copyright={photo.copyright}
+
                  />
 
                 <DayPhoto 
