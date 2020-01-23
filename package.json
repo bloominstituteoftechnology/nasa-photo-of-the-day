@@ -9,7 +9,10 @@
     "react-date-picker": "^7.10.0",
     "react-dom": "^16.8.6",
     "react-loader-spinner": "^3.1.5",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "react-strap": "0.0.1",
+    "reactstrap": "^8.4.0",
+    "styled-components": "^5.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

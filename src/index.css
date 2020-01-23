@@ -6,11 +6,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-image: url(https://p1.pxfuel.com/preview/456/755/666/sky-view-stars-background-wallpaper-desktop-space.jpg); */
+
+  /* background-color:rgb(240, 226, 243); */
   background-image: url(https://cdn.pixabay.com/photo/2016/06/05/07/59/stars-1436950_1280.jpg);
-  background-repeat: no-repeat;
-  background-size: 200%;
-  color:white;
 }
 
 code {
@@ -18,10 +16,4 @@ code {
     monospace;
 }
 
-.footer-Img{
-  width:10%;
-}
-img{
- width:70%;
-}
 
