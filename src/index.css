@@ -31,6 +31,13 @@ code {
   height: 70px;
 }
 
+form {
+  display: flex;
+  align-items: flex-end;
+  margin-left: auto;
+  padding-right: 30px;
+}
+
 img.styledImg {
     width: 98%;
     height: 500px;
