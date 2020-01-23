@@ -10,11 +10,11 @@ function App() {
 
   useEffect( () => {
     axios.get("https://api.nasa.gov/planetary/apod?api_key=Q6RD3lJAhyj5FK5PBQDjbzBnfmHtEtIbEcrCVWjS")
-    .then(res => {
-      setPhotoTitle(res.data);
-      setPhotoOfTheDay(res.data);
+    .then(response => {
+      setPhotoTitle(response.data);
+      setPhotoOfTheDay(response.data);
     })
-    .catch(err => {
+    .catch(error => {
       setPhotoOfTheDay({
         copyright: "",
         title: "404 Photo Not Found",
@@ -23,7 +23,7 @@ function App() {
         media_type: "image",
         service_version: "yes",
         url: "https://images.unsplash.com/photo-1532003885409-ed84d334f6cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
-      })
+      }), error
     })
   },[])
   
