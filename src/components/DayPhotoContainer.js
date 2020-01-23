@@ -20,6 +20,10 @@ export default function DayPhotoContainer () {
         return (
 
             <div>
+            <DayPhoto 
+             image={photo.hdurl}
+           />
+             
                 <Example 
             
                  
@@ -30,9 +34,6 @@ export default function DayPhotoContainer () {
 
                  />
 
-                <DayPhoto 
-                 image={photo.hdurl}
-               />
                 
             </div>
         );   

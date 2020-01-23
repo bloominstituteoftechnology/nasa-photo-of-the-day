@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou&display=swap');
+
 .background-container {
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
     background-size: cover;
     background-repeat: no-repeat;

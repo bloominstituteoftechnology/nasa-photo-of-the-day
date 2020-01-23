@@ -12,13 +12,15 @@ import {
   const CarouselStyle = styled.div`
   background: black;
   color: white;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  min-height: 100px;
     `;
 
   const Example = (props) => {
   
   const items = [
     {
-      caption: 'NASA Photo of the Day',
+      caption: 'NASA Photo of the Day'
     },
     {
       caption: `${props.title}`,
@@ -71,13 +73,15 @@ import {
     });
   
     return (
+      
       <CarouselStyle>
+    
       <Carousel
         activeIndex={activeIndex}
         next={next}
         previous={previous}
       >
-        {/* <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} /> */}
+    
         {slides}
         <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
         <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
