@@ -42,7 +42,6 @@ const[photo, setPhoto] = useState([]);
 const date = formatDate(new Date());
 
 useEffect(() => {
-    
 fetchData(date)
 }, []);
 
