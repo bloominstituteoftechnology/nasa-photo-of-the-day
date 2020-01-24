@@ -3,7 +3,7 @@ import React from "react";
 function Footer(props){
     return(
         <div className="foot">
-    <p>{props.foot.copyright}</p>
+    <p>Image Credit and Copyright: {props.foot.copyright}</p>
     </div>
     );
 };

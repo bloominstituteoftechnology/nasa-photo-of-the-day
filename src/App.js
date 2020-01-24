@@ -4,6 +4,7 @@ import axios from "axios";
 import Body from "./components/Body";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Explanation from "./components/Explanation";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       
       <Body bod={data} />
       <Footer foot={data}/>
+      <Explanation explain={data}/>
     </div>
   );
 }
