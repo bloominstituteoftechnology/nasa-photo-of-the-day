@@ -22,14 +22,6 @@
 .App-link {
   color: #61dafb;
 }
-.apod-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-
-
 
 @keyframes App-logo-spin {
   from {
