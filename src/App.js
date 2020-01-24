@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from "react";
 import "./App.css";
 import axios from "axios";
-import Body from "./components/Body"
-import Header from "./components/Header"
+import Body from "./components/Body";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -19,9 +20,10 @@ function App() {
   },[])
   return (
     <div className="App">
-      <Header theDate={data}/>
+      <Header header={data}/>
       
-      <Body picture={data}/>
+      <Body bod={data} />
+      <Footer foot={data}/>
     </div>
   );
 }
