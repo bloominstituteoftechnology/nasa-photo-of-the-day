@@ -17,7 +17,7 @@ useEffect(() => {
     })
 }, []);
 return (
-  <div className="image"> 
+  <div className="container"> 
         <NasaCard
             key={nasaData.id}
             title={nasaData.title}
