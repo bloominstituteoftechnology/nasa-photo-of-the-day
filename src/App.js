@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ApodCard from './ApodCard';
-import Image from './Picture';
 import "./App.css";
 import Axios from 'axios';
-
-
 
 
 function App() {
@@ -18,12 +15,9 @@ function App() {
           console.log("Nothing to Display!", err);
       })
   }, []);
+  
   return (
     <div className="App">
-      {/* <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p> */}
       <ApodCard data={data}/>
     </div>
   );
