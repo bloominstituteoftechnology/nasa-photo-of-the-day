@@ -4,9 +4,12 @@
   "private": true,
   "dependencies": {
     "axios": "^0.19.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "bootstrap": "^4.4.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-scripts": "3.0.1",
+    "reactstrap": "^8.4.0",
+    "styled-components": "^5.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

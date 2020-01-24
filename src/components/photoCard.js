@@ -1,10 +1,10 @@
 
 import React from "react";
 import axios from "axios";
+import PhotoCard from "./photoCard";
 
 
-
-const PhotoCard = props => {
+const photoCard = props => {
     console.log(props)
 
     return (
@@ -17,4 +17,4 @@ const PhotoCard = props => {
     )
 }
 
-export default PhotoCard;
+export default photoCard;
