@@ -50,19 +50,19 @@ Follow these steps for completing your project.
 
 **Step 1 - Planning**
 
-- [ ] If you want, this is the time to make a simple design spec (look up ["simple wireframes"](https://www.google.com/search?q=simple+wireframes) to find resources & examples). **A pen & paper sketch (or outline) is often the fastest way to start your planning.**
-- [ ] Once you have a design plan in mind, break down the designs into individual components.
-- [ ] Plan which components will hold state, what data each needs from props (if any), and where you will be making your data fetch.
-- [ ] Now it's time to jump into the code!
+- [ x] If you want, this is the time to make a simple design spec (look up ["simple wireframes"](https://www.google.com/search?q=simple+wireframes) to find resources & examples). **A pen & paper sketch (or outline) is often the fastest way to start your planning.**
+- [ x] Once you have a design plan in mind, break down the designs into individual components.
+- [x ] Plan which components will hold state, what data each needs from props (if any), and where you will be making your data fetch.
+- [x ] Now it's time to jump into the code!
 
 **Step 2 - File structure**
 
-- [ ] Take a look at your planned components. Create the folders and files you need for each component.
-- [ ] Leave most of them blank for now - you need to get your data from the API before you can really get these built.
+- [ x] Take a look at your planned components. Create the folders and files you need for each component.
+- [ x] Leave most of them blank for now - you need to get your data from the API before you can really get these built.
 
 **Step 3 - Fetching the Data**
 
-- [ ] In `App.js` (or where ever you wanted to fetch the data) add state for the data you'll be getting from NASA.
+- [ x] In `App.js` (or where ever you wanted to fetch the data) add state for the data you'll be getting from NASA.
 - [ ] Add an effect hook to handle the API call side effect.
 - [ ] Go to the [NASA APOD API docs](https://api.nasa.gov/#apod) and read through the docs to see how to make the API call.
 - [ ] You don't _need_ an API key. However you may need one if you exceed the API request limits.

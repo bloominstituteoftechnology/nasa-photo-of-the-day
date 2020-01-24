@@ -1,10 +1,14 @@
 import React from "react";
 import "./Header.css";
+import styled from "styled-components";
 
-const Header = ()=>{
+const HeaderStyle = styled.h1`
+color: blue;
+`;
+const Header = () =>{
     return(
         <div>
-            <h1>Nasa Photo of the Day</h1>
+            <HeaderStyle>Nasa Photo of the Day</HeaderStyle>
         </div>
     )
 }
