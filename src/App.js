@@ -1,22 +1,9 @@
 import React, { useState, useEffect } from "react";
 import ImageContainer from "./components/ImageContainer";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import axios from "axios";
 import "./App.css";
 
-const spin = keyframes`
-0% {
-  -webkit-transform: translate(0,0%) ;
-}
-
-50% {
-  -webkit-transform: translate(0,5%)
-}
-
-100% {
-  -webkit-transform: translate(0,0%)
-}
-`;
 
 const Wrapper = styled.div`
   width: 100%;
@@ -24,10 +11,8 @@ const Wrapper = styled.div`
   margin: 0 auto;
   padding-top: 3em;
   background-image: url("https://c1.staticflickr.com/4/3935/32253842574_d3d449ab86_c.jpg");
-  background-size: 150% 120%;
-  animation: ${spin} 15s ease-in-out;
-  animation-iteration-count: infinite;
   background-color: black;
+  background-size: 100% 100%;
 `;
 
 function App() {

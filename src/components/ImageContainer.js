@@ -10,8 +10,6 @@ const Container = styled.div`
   width: 35%;
   min-width: 300px;
   background-size: 100% 100%;
-  border-radius: 10px;
-  cursor: pointer;
   -webkit-transition: all 1s ease;
   transition: all 0.65ss ease;
 `;
