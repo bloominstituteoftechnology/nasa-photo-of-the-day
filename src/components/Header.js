@@ -1,17 +1,37 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 
-const zoom = keyframes`
-0% {
-  -webkit-transform: translate(0,0%) ;
-}
+const wooble = keyframes`
 
-50% {
-  -webkit-transform: translate(0,5%)
+16.65% {
+  -webkit-transform: translateY(8px);
+  -ms-transform: translateY(8px);
+  transform: translateY(8px);
 }
-
+33.3% {
+  -webkit-transform: translateY(-6px);
+  -ms-transform: translateY(-6px);
+  transform: translateY(-6px);
+}
+49.95% {
+  -webkit-transform: translateY(4px);
+  -ms-transform: translateY(4px);
+  transform: translateY(4px);
+}
+66.6% {
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+}
+83.25% {
+  -webkit-transform: translateY(1px);
+  -ms-transform: translateY(1px);
+  transform: translateY(1px);
+}
 100% {
-  -webkit-transform: translate(0,0%)
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
 }
 `;
 
@@ -47,7 +67,7 @@ const HeaderTittle = styled.div`
     overflow: hidden;
     border-radius: 10px;
     z-index: -1;
-    animation: ${zoom};
+    animation: ${wooble};
     animation-duration: 10s;
     animation-iteration-count: infinite;
   }
