@@ -1,5 +1,5 @@
+html,
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -11,11 +11,14 @@ body {
   letter-spacing: 0.005rem;
   -webkit-font-smoothing: subpixel-antialiased;
   font-smoothing: subpixel-antialiased;
-  background-image: url("https://c1.staticflickr.com/4/3935/32253842574_d3d449ab86_c.jpg");
-  background-size: 100% 100%;
+  background-color: black;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+#root {
+  background-image: url("https://i.ytimg.com/vi/xnTGbgx7Ohw/maxresdefault.jpg");
 }
