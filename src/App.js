@@ -4,7 +4,6 @@ import ModalContainer from "./components/Modal";
 import styled from "styled-components";
 import axios from "axios";
 import "./App.css";
-import { format } from "path";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -19,24 +18,11 @@ const Wrapper = styled.div`
 function App() {
   const [nasa, setNasa] = useState([]);
 
-  // TODO:
-  // take the input value (e.target.value) and store it in the var,
-  // after that make the api call with the variable in the following format using backticks
-  // `https://api.nasa.gov/planetary/apod?date=${your variable here}api_key=DEMO_KEY`
-  // then update the state with the new api call and display the image along with the info
-  // inside the modal, add if no images available alert or something
-
-  // here is the link for your reference
-  // https://codepen.io/rachelhawa/pen/XWJEXLL?editors=1010
-
-  // FIXME:
-
-  const onChange = e => {
-    console.log(e.target.value);
-  };
   useEffect(() => {
     axios
-      .get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
+      .get(
+        "https://api.nasa.gov/planetary/apod?api_key=L6Fjl7gZtReyMZa0M3XLLvKHoXcy9ZF5cWW0t4Jc"
+      )
       .then(res => {
         setNasa(res.data);
       })
@@ -44,6 +30,20 @@ function App() {
         console.log(err);
       });
   }, []);
+
+  const onChange = e => {
+    var date = e.target.value;
+    axios
+      .get(
+        `https://api.nasa.gov/planetary/apod?date=${date}&api_key=L6Fjl7gZtReyMZa0M3XLLvKHoXcy9ZF5cWW0t4Jc`
+      )
+      .then(res => {
+        setNasa(res.data);
+      })
+      .catch(err => {
+        alert("sorry, no data available before June 16, 1995");
+      });
+  };
 
   return (
     <Wrapper>

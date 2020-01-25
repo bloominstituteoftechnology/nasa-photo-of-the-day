@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled, { keyframes } from "styled-components";
-import axios from "axios";
 
 const zoom = keyframes`
 0% {
@@ -75,11 +74,11 @@ const HeaderTittle = styled.div`
   }
 `;
 
-const Header = props => {
+const Header = ({ data }) => {
   return (
     <HeaderTittle>
       <figure>
-        <img src={props.data.hdurl} />
+        <img src={data.hdurl} alt={data.title} />
       </figure>
     </HeaderTittle>
   );
