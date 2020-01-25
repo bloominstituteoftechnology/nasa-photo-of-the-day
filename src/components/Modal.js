@@ -32,7 +32,15 @@ const ModalContainer = props => {
 
   return (
     <div>
-      <button style={{ opacity: ".5", margin: "5px" }} onClick={openModal}>
+      <button
+        style={{
+          opacity: ".9",
+          margin: "5px",
+          fontFamily: "Roboto Mono, monospace",
+          borderRadius: "5px"
+        }}
+        onClick={openModal}
+      >
         Details
       </button>
 

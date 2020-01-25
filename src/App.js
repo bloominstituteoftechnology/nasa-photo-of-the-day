@@ -50,6 +50,18 @@ function App() {
       <div
         style={{
           display: "flex",
+          justifyContent: "flex-start",
+          marginLeft: "1em"
+        }}
+      >
+        <img
+          style={{ height: "70px", width: "70px" }}
+          src="https://invention.nasa.gov/assets/images/banner-meatball.png"
+        />
+      </div>
+      <div
+        style={{
+          display: "flex",
           justifyContent: "center",
           alignContent: "baseline"
         }}
@@ -57,7 +69,7 @@ function App() {
         <ModalContainer data={nasa} />
         <input
           type="date"
-          style={{ opacity: "0.7", marginLeft: "1.5em" }}
+          style={{ opacity: "0.9", marginLeft: "1.5em", borderRadius: "10px" }}
           onChange={onChange}
         />
       </div>
