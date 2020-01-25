@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
-import Modal from 'react-modal';
+import axios from "axios";
 
 const zoom = keyframes`
 0% {
@@ -16,21 +16,6 @@ const zoom = keyframes`
 }
 `;
 
-const customStyles = {
-  content : {
-    top                   : '50%',
-    left                  : '50%',
-    right                 : 'auto',
-    bottom                : 'auto',
-    marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)',
-    width: '30%',
-    minWidth: "400px"
-    
-  }
-};
-
-
 const HeaderTittle = styled.div`
   width: 100%;
   height: 71vh;
@@ -43,25 +28,22 @@ const HeaderTittle = styled.div`
   transition: 0.65s ease-in-out;
   opacity: 1;
 
-
-
   &:hover {
     box-shadow: 0 16px 60px rgba(0, 0, 0, 1.3);
     -webkit-transform: scale(1, 11);
     transform: scale(1, 1);
     -webkit-transition: 0.65s ease-in-out;
     transition: 0.65s ease-in-out;
-    opacity: .9;
-    border:none;
-    
+    opacity: 0.9;
+    border: none;
   }
 
   figure {
     width: 100%;
-    display:block;
+    display: block;
     height: 71vh;
     margin: 0;
-    position:absolute;
+    position: absolute;
     padding: 0;
     overflow: hidden;
     border-radius: 10px;
@@ -78,8 +60,6 @@ const HeaderTittle = styled.div`
     height: 71vh;
     -webkit-transition: 1s ease-in-out;
     transition: 1s ease-in-out;
-
- 
   }
   figure > img {
     -webkit-transform: scale(1.3, 1.3);
@@ -93,46 +73,15 @@ const HeaderTittle = styled.div`
     -webkit-transition: 0.65s ease-in-out;
     transition: 0.65s ease-in-out;
   }
-
 `;
 
 const Header = props => {
-  var subtitle;
-  const [modalIsOpen,setIsOpen] = React.useState(false);
-  function openModal() {
-    setIsOpen(true);
-  }
-
-  function afterOpenModal() {
-    subtitle.style.color = '#000';
-  }
-
-  function closeModal(){
-    setIsOpen(false);
-  }
   return (
-    <div>
-              <button style={{opacity:".5", margin: "5px"}} onClick={openModal}>Details</button>
-        <Modal
-          isOpen={modalIsOpen}
-          onAfterOpen={afterOpenModal}
-          onRequestClose={closeModal}
-          style={customStyles}
-        >
-          
-
-          <h2 ref={_subtitle => (subtitle = _subtitle)}>{props.data.title}</h2>
-               <p>{props.data.explanation}</p>
-               <p>copyrights: {props.data.copyright}</p>
-               <p> {props.data.date}</p>
-          
-        </Modal>
-        <HeaderTittle>
+    <HeaderTittle>
       <figure>
         <img src={props.data.hdurl} />
       </figure>
     </HeaderTittle>
-    </div>
   );
 };
 
