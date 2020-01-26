@@ -45,7 +45,7 @@ const HeaderTittle = styled.div`
   transform: scale(0.9, 0.9);
   -webkit-transition: 0.65s ease-in-out;
   transition: 0.65s ease-in-out;
-  opacity: 1;
+  opacity: 0.9;
 
   &:hover {
     box-shadow: 0 16px 60px rgba(0, 0, 0, 1.3);
@@ -53,7 +53,7 @@ const HeaderTittle = styled.div`
     transform: scale(1, 1);
     -webkit-transition: 0.65s ease-in-out;
     transition: 0.65s ease-in-out;
-    opacity: 0.9;
+    opacity: 1;
     border: none;
   }
 
