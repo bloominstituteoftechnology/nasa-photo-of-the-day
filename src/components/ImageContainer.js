@@ -7,8 +7,13 @@ const Container = styled.div`
   flex-direction: column;
   text-align: center;
   margin: 5em auto;
-  width: 35%;
-  min-width: 300px;
+  width: 40%;
+  @media (max-width: 800px) {
+    width: 500px;
+  }
+  @media (max-width: 500px) {
+    width: 350px;
+  }
   background-size: 100% 100%;
   -webkit-transition: all 1s ease;
   transition: all 0.65ss ease;
