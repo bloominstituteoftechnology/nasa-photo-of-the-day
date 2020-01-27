@@ -7,12 +7,8 @@ import "./App.css";
 
 const Wrapper = styled.div`
   width: 100%;
-  min-height: 100vh;
   margin: 0 auto;
-  padding-top: 3em;
-  background-image: url("https://c1.staticflickr.com/4/3935/32253842574_d3d449ab86_c.jpg");
-  background-color: black;
-  background-size: 100% 100%;
+  background-color: transparent;
 `;
 
 function App() {

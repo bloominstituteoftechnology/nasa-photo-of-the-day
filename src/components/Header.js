@@ -98,7 +98,14 @@ const Header = ({ data }) => {
   return (
     <HeaderTittle>
       <figure>
-        <img src={data.hdurl} alt={data.title} />
+        {data.hdurl ? (
+          <img src={data.hdurl} alt={data.title} />
+        ) : (
+          <img
+            src="https://il5.picdn.net/shutterstock/videos/1013971/thumb/9.jpg"
+            alt="loading image"
+          />
+        )}
       </figure>
     </HeaderTittle>
   );
