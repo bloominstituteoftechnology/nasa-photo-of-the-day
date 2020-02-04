@@ -5,6 +5,7 @@ function App() {
   return (
     <div className="App">
       <p>
+        Initial commit
         Read through the instructions in the README.md file to build your NASA
         app! Have fun 🚀!
       </p>
