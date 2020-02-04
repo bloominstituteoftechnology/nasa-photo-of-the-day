@@ -1,14 +1,14 @@
 import React from "react";
+import NasaCard from "./Components/NasaStuff";
+
 import "./App.css";
 
 function App() {
+
   return (
     <div className="App">
-      <p>
-        Initial commit
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+      <h1>Welcome to the <span>NASA</span>🚀 Photo of the Day!</h1>
+      <NasaCard />
     </div>
   );
 }
