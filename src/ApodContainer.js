@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const ApodContainer = (props) => {
-    console.log(props)
+    const [data, setData] = useState(props.data)
+    
+    useEffect(() => {
+        setData(props.data)
+    }, [props])
     return (
-        <div className="apod_container">
-            <img src={props.data.url}/>
-            <h3>{props.data.date}</h3>
-            <h1>{props.data.title}</h1>
-            <p className="explanation">{props.data.explanation}</p>
+        <div className="img_container">
+            <h3>{data.date}</h3>
+            <img src={data.url} alt="If you can't see this, you're missing the whole point of this page."/>
         </div>
     );
 }
