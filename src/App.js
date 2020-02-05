@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios'
 
 import Photo from './components/photo';
+import Calendar from './components/calendar';
 
 import "./App.css";
 
@@ -21,7 +22,8 @@ function App() {
 
   return (
     <div className="App">
-      <Photo {...data} />
+      {/*<Photo {...data} />*/}
+      <Calendar />
     </div>
   );
 }

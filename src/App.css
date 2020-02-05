@@ -31,3 +31,39 @@
     transform: rotate(360deg);
   }
 }
+
+.calendar {
+  text-align: center;
+}
+
+.day {
+  border: 0.5px solid black;
+  padding: 5px;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.week {
+  display: flex;
+}
+
+.month {
+  width: 245px;
+  border: 0.5px solid black;
+}
+
+.calendar h2 {
+  background: darkslategray;
+  color: white;
+  padding: 10px 0;
+  margin: auto 0;
+}
+
+.calendar-buttons-div {
+  margin: 10px 0;
+  width: 245px;
+  display: flex;
+  justify-content: space-around;
+}
