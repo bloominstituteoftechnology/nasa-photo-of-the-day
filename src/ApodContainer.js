@@ -6,12 +6,25 @@ const ApodContainer = (props) => {
     useEffect(() => {
         setData(props.data)
     }, [props])
-    return (
-        <div className="img_container">
-            <h3>{data.date}</h3>
-            <img src={data.url} alt="If you can't see this, you're missing the whole point of this page."/>
-        </div>
-    );
+   
+    if (props.data.media_type === "video") {
+        return (
+            <div className="img_container">
+                <h3>{data.date}</h3>
+                <iframe width="720" height="480" src={data.url} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        );
+            
+    }
+    else {
+        return (
+            <div className="img_container">
+                <h3>{data.date}</h3>
+                <img src={data.url} alt="Probably waiting on the api"/>
+            </div>
+        );
+    }
+    
 }
 
 export default ApodContainer;
