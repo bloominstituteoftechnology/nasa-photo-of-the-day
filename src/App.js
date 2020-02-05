@@ -11,35 +11,37 @@ function App() {
   const [responseData, setResponseData] = useState([])
   
   const dataGetter = (date) => {
+    console.log('Axios request fired!')
     Axios.get("https://api.nasa.gov/planetary/apod?api_key=UINXdeCxgzBElfZoohNMpP8Mpfb9HutuNedtA8rz&date="+date)
     .then(response => {
       console.log(response)
       setResponseData(response.data)
     })
     .catch(error => {
-      console.log("Something went wrong with axios request", error)
+      console.log(alert(error))
     })
   }
   useEffect(() => {
     dataGetter(moment().add(datePosition, 'days').format('YYYY-MM-DD'))}, [datePosition])
   return (
     <div className="App">
-      <div className="image_and_buttons">
-        <ApodContainer data={responseData}/>
-        <button onClick={ () => {
-          setResponseData([])
-          setDatePosition(datePosition - 1);
-          console.log(datePosition)
-        }
-        }>Previous</button>
-        <button onClick={ () => {
-          setResponseData([])
-          setDatePosition(datePosition + 1);
-          console.log(datePosition)
-        }
-        }>Next</button>
+      <div className="main">
+        <div className="image_and_buttons">
+          <ApodContainer data={responseData}/>
+          <div className="buttons_div">
+            <div onClick={ () => {
+              setResponseData([])
+              setDatePosition(datePosition - 1);}
+            }>Previous</div>
+            <div onClick={ () => {
+              setResponseData([])
+              setDatePosition(datePosition + 1);}
+            }>Next</div>
+          </div>
+          
+        </div>
+        <ApodInfoContainer data={responseData}/>
       </div>
-      <ApodInfoContainer data={responseData}/>
     </div>
   );
 }
