@@ -114,3 +114,5 @@ Do not attempt stretch problems until MVP has been reached and a final commit ha
 
 
  ## Part II - [Advanced Styling Techniques](DAY_TWO_README.md)
+
+Douglas Little
