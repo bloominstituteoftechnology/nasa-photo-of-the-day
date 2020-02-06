@@ -1,5 +1,18 @@
 .App {
   text-align: center;
+  background-color: lightgrey;
+}
+
+.card h2 {
+  margin: 20px;
+}
+
+img {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  height: 70%;
 }
 
 .App-logo {
