@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
  import axios from "axios";
- import NasaCard from "./NasaStuff";
+ import NasaCard from "./NasaCard";
 
 
  export default function CardDisplay() {
