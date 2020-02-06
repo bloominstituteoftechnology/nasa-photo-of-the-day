@@ -1,13 +1,22 @@
 import React from "react";
+import { Card as Cardstyle } from "reactstrap";
+import { Container } from "reactstrap";
+import { CardTitle, CardSubtitle } from "reactstrap";
 
   const NasaCard = props => {
     return (
-      <div className="card" key={props.id}>
-        <img className="card-image" alt="NASA Image of the Day" src={props.imgUrl} />
-        <h2>{props.title}</h2>
-        <h3>{props.date}</h3>
-        <p>{props.explanation}</p>
-      </div>
+      <Container key={props.id}>
+      <br />
+      <br />
+        <Cardstyle color="dark" className="text-white">
+        <CardTitle>{props.date}</CardTitle>
+        <h3>{props.title}</h3>
+        <img width="100%" alt="Random NASA pic of the day" src={props.imgUrl} />
+        <hr></hr>
+        <CardSubtitle>{props.explanation}</CardSubtitle>
+      </Cardstyle>
+
+      </Container>
     );
   };
  export default NasaCard;

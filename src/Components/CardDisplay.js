@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
- import axios from "axios";
- import NasaCard from "./NasaCard";
+import axios from "axios";
+import { Container } from "reactstrap";
+
+import NasaCard from "./NasaCard";
 
 
  export default function CardDisplay() {
   const [cardInfo, setCardInfo] = useState([]);
 
-  //start
   function randomNum(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
@@ -17,41 +18,27 @@ import React, { useEffect, useState } from "react";
   )}`;
   console.log(randomNum(2016, 2018));
 
-//finish
-
-  useEffect(() => {
+useEffect(() => {
     axios
-    .get(
-       'https://api.nasa.gov/planetary/apod?api_key=Rj04ZLzDBooS9mgpGMQxFTS7WCXpHVfWl7nboSQJ'
-    )
+      .get(
+        `https://api.nasa.gov/planetary/apod?api_key=vONmFPwl8kgSNLKNFZ4bW5Xs5cS0XRMsCxFdzrVZ&date=${randomDate}`
+      )
+      .then(response => {
+        console.log(response.data);
+        setCardInfo(response.data);
+      });
+  }, []);
 
-
-
-    .then(response => {
-        const cardInfo = response.data;
-        (console.log(response))
-        setCardInfo([cardInfo]);
-    })
-    .catch(error => {
-        console.log("Sorry, you've got an error!", error);
-    });
-}, []);
-
-   return (
-      <div className="container">
-          <div className="entry">
-              {cardInfo.map(photo => {
-                  return ( 
-                      <NasaCard 
-                          copyright={photo.copyright}
-                          date={photo.date}
-                          title={photo.title}
-                          imgUrl={photo.url}
-                          explanation={photo.explanation}
-                      />
-                  );
-              })}
-          </div>
-      </div>
+  return (
+    <Container>
+      <NasaCard
+        key={cardInfo.url}
+        title={cardInfo.title}
+        date={cardInfo.date}
+        imgUrl={cardInfo.url}
+        explanation={cardInfo.explanation}
+      />
+    </Container>
   );
 }
+
