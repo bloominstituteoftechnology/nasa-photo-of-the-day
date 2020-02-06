@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from "react";
 
-export const Calendar = () => {
+export const Calendar = ({ fetchDataWithDate }) => {
   const [days, setDays] = useState([]);
-  const [monthName, setMonthName] = useState();
+  const [monthName, setMonthName] = useState("");
   const [month, setMonth] = useState(0);
+  const [year, setYear] = useState("");
   const [date, setDate] = useState(new Date())
+  const [ highlightDay, setHighlightDay ] = useState()
 
   const setupCalendar = (changeMonth = 0) => {
     const date = new Date();
     let currentMonth = date.getMonth();
-    date.setMonth(currentMonth - 1 + changeMonth);
+    date.setMonth(currentMonth + 1 + changeMonth);
     date.setDate(0);
     let lastDayOfMonth = date.getDate();
     let calendar = [];
@@ -31,8 +33,10 @@ export const Calendar = () => {
       week.push("");
     }
     calendar.push(week);
+    setHighlightDay()
     setDate(date)
     setMonth(changeMonth);
+    setYear(date.getFullYear().toString())
     setMonthName(date.toDateString().slice(3, 7));
     setDays(calendar);
   };
@@ -40,24 +44,31 @@ export const Calendar = () => {
       const prevDate = date;
       prevDate.setDate(day)
       setDate(prevDate)
-      console.log(prevDate.getDate())
+      setHighlightDay(day)
+      console.log(prevDate.toISOString().slice(0,10))
+      fetchDataWithDate(prevDate.toISOString().slice(0,10))
   }
 
   useEffect(setupCalendar, []);
-  console.log(date)
 
   return (
     <div className="calendar">
       <div className="month">
         <h2>{monthName}</h2>
+        <h2>{year}</h2>
         {days.map((week, i) => {
           return (
             <div className="week" key={i}>
               {week.map((day, i) => {
                 return (
-                  <div onClick={() => selectDate(day)} className="day" key={i}>
-                    {day}
-                  </div>
+                    <div 
+                        style={highlightDay === day ? {background: "yellow"} : {background: "white"}} 
+                        onClick={() => selectDate(day)} 
+                        className="day" 
+                        key={i}
+                    >
+                        {day}
+                    </div>
                 );
               })}
             </div>

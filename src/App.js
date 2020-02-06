@@ -1,29 +1,30 @@
-import React, { useState, useEffect } from "react";
-import axios from 'axios'
+import React, { useState} from "react";
 
-import Photo from './components/photo';
-import Calendar from './components/calendar';
 
+import Apod from './components/apod';
+import Asteroids from './components/asteroids';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
 
+import { Button } from 'reactstrap';
+
 function App() {
-  const [ data, setData ] = useState([])
+  const [ app, setApp ] = useState("asteroids")
 
-  const fetchData = () => {
-    axios.get("https://api.nasa.gov/planetary/apod?api_key=spKBP8PFum2CMgJT4yaFGza6lW8uJydNBKyk09jr")
-      .then(res => {
-        console.log(res.data)
-        setData(res.data)
-      })
-      .catch(err => console.log(err))
+  const switchApp = () => {
+    const appType = app === "asteroids" ? "apod" : "asteroids"
+    console.log(appType)
+    setApp(appType)
   }
-
-  useEffect(fetchData, [])
-
+  
   return (
     <div className="App">
-      {/*<Photo {...data} />*/}
-      <Calendar />
+      <h1>{app}</h1>
+      {
+        app === "apod" ? <Apod /> : <Asteroids />
+      }
+      <Button className="app-button" color="primary" size="lg" onClick={() => switchApp()}>Switch App</Button>
     </div>
   );
 }
