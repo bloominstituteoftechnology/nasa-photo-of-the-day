@@ -9,7 +9,8 @@ function App() {
     <div className="App">
       <p>
       
-      <h1>Astronomy Picture of the Day</h1>
+      <h1>Out Of This World</h1>
+      
       <Spinner type="grow" color="primary" />
       <Spinner type="grow" color="secondary" />
       <Spinner type="grow" color="dark" />
