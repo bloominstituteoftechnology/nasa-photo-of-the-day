@@ -16,6 +16,7 @@ const Container = styled.div`
 const Text = styled.h2`
     text-algin: center;
     font-size: 27px;
+    cursor: pointer;
 `
 
 const AsteroidDiv = styled.div`
@@ -57,20 +58,20 @@ export const Asteroid = ({ name, estimated_diameter, close_approach_data }) => {
                     borderRadius: "50%"
                 }}
             /> */}
-            <AsteroidDiv onClick={() => setOpen(!open)} height={height} width={width} colors={colors} />
+            <AsteroidDiv height={height} width={width} colors={colors} />
             <Collapse isOpen={open}>
                 <Card>
                     <CardBody>
                         <ul>
                             <li>Close approach date: {close_approach_date_full}</li>
-                            <li>Relative velocity: {relative_velocity.miles_per_hour}</li>
+                            <li>Relative velocity: {relative_velocity.miles_per_hour}mph</li>
                             <li>Miss distance: {miss_distance.miles}</li>
                             <li>Estimated diamter: {(est_diameter * 5)/2}meters</li>
                         </ul>
                     </CardBody>
                 </Card>
             </Collapse>
-            <Text>{name.slice(1, name.length - 1)}</Text>
+            <Text onClick={() => setOpen(!open)}>{name.slice(1, name.length - 1)}</Text>
 
         </Container>
     )

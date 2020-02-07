@@ -17,7 +17,7 @@ const Container = styled.div`
 export const Asteroids = () => {
 
     const [ data, setData ] = useState([])
-    const [ sort, setSort ] = useState(false)
+    const [ sort, setSort ] = useState('large-small')
 
     const fetchData = () => {
         axios.get(`https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015-09-08&api_key=spKBP8PFum2CMgJT4yaFGza6lW8uJydNBKyk09jr`)
@@ -30,9 +30,15 @@ export const Asteroids = () => {
 
     const sortBySize = () => {
         let sortedData = data
-        sortedData.sort((a, b) => a.estimated_diameter.meters.estimated_diameter_max - b.estimated_diameter.meters.estimated_diameter_max )
+        if (sort === 'small-large') {
+            sortedData.sort((a, b) => a.estimated_diameter.meters.estimated_diameter_max - b.estimated_diameter.meters.estimated_diameter_max )
+            setSort('large-small')
+        } else {
+            sortedData.sort((b, a) => a.estimated_diameter.meters.estimated_diameter_max - b.estimated_diameter.meters.estimated_diameter_max )
+            setSort('small-large')            
+        }
         setData(sortedData)
-        setSort(true)
+        
         console.log(sortedData)
     }
 
@@ -49,7 +55,7 @@ export const Asteroids = () => {
                     <p>Loading...</p>
                 }
             </Container>
-            <Button onClick={() => sortBySize()}>Sort</Button>
+            <Button className="asteroids-sort-button" onClick={() => sortBySize()}>Sort</Button>
         </div>
         
     )
