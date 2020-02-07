@@ -8,6 +8,7 @@ const ImgCard = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 2%;
 `;
 const ImageWrapper = styled.img`
     width: 600px;
