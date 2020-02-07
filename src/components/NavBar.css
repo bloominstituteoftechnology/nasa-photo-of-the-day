@@ -1,8 +1,11 @@
-.nav {
-    border-bottom: 1px solid #3333;
+/* .nav {
+    border-bottom: 6px solid #9d3947;
     height: 60px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background: #ffffff;
-}
+    background: #41b3a3;
+    color: #b34151;
+    text-shadow: 2px 1px #86313d;
+    letter-spacing: 1px;
+} */

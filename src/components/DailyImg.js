@@ -18,7 +18,7 @@ export default function DailyImg() {
             .catch(error => console.log(error));
     }, []);
     console.log(data);
-
+    if (!data) return <h3>Loading...</h3>;
     return (
         <div className="data">
             <NavBar date={data.date} />
@@ -27,6 +27,7 @@ export default function DailyImg() {
                 url={data.url}
                 title={data.title}
                 explanation={data.explanation}
+                copyright={data.copyright}
             />
         </div>
     );
