@@ -5,10 +5,12 @@ import ApodInfoContainer from "./ApodInfoContainer.js"
 import sampleData from "./sampleApodDataSoIDontHitApiLimitWhileTesting"
 import Axios from "axios";
 import moment from "moment";
+import { Tooltip } from "reactstrap"
 
 function App() {
   const [datePosition, setDatePosition] = useState(0);
-  const [responseData, setResponseData] = useState([])
+  const [responseData, setResponseData] = useState([]);
+  const [isTooltipOpen, setIsTooltipOpen] = useState(false);
   
   const dataGetter = (date) => {
     console.log('Axios request fired!')
@@ -36,7 +38,11 @@ function App() {
             <div onClick={ () => {
               setResponseData([])
               setDatePosition(datePosition + 1);}
-            }>Next</div>
+            }>
+              <Tooltip placement="bottom" isOpen={isTooltipOpen} target="tooltip" toggle={() => setIsTooltipOpen(!isTooltipOpen)}>
+                Don't click this if you're on today's picture
+              </Tooltip>
+              <span id="tooltip">Next</span></div>
           </div>
           
         </div>
