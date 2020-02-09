@@ -1,5 +1,5 @@
 import React from 'react';
-
+import styled from 'styled-components'
 function PhotoCard(props) {
     console.log(props);
 return (
