@@ -4,6 +4,7 @@ import ModalContainer from "./components/Modal";
 import styled from "styled-components";
 import axios from "axios";
 import "./App.css";
+import Loader from "react-loader-spinner";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -37,10 +38,10 @@ function App() {
         setNasa(res.data);
       })
       .catch(err => {
-        alert("sorry, no data available before June 16, 1995");
+        alert("sorry, no data available that date");
       });
   };
-
+  console.log(nasa);
   return (
     <Wrapper>
       <div
@@ -69,6 +70,7 @@ function App() {
           onChange={onChange}
         />
       </div>
+
       <ImageContainer data={nasa} />
     </Wrapper>
   );
