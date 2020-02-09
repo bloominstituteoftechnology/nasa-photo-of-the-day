@@ -19,6 +19,8 @@ export default function NasaPhoto() {
       });
   }, []);
 
+  if (!props.photo) return <h3>Loading...</h3>;
+
   return (
     <div className="info">
       <NasaCard
