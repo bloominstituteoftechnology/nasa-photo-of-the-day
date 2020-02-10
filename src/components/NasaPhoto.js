@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from "react";
-import NasaCard from "../components/NasaCard";
+import { NasaCard } from "../components/NasaCard";
 import axios from "axios";
+import styled from "styled-components";
 
-export default function NasaPhoto() {
+const Container = styled.div`
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+`;
+
+export default function NasaPhoto(props) {
   const [info, setInfo] = useState([]);
 
   useEffect(() => {
@@ -19,16 +26,15 @@ export default function NasaPhoto() {
       });
   }, []);
 
-  if (!props.photo) return <h3>Loading...</h3>;
-
   return (
-    <div className="info">
+    <Container className="info">
       <NasaCard
         title={info.title}
+        photo={info.url}
+        copyright={info.copyright}
         date={info.date}
         explanation={info.explanation}
-        photo={info.url}
       />
-    </div>
+    </Container>
   );
 }
