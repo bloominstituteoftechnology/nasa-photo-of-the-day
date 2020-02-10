@@ -1,14 +1,21 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
-import './Loader.css';
+import styled from 'styled-components';
 
+const LoaderDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+`;
 function Loader() {
   return (
-    <div className='loader'>
+    <LoaderDiv>
       <img
         src='https://media0.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif'
         alt='Loading'></img>
-    </div>
+    </LoaderDiv>
   );
 }
 export default Loader;

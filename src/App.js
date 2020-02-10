@@ -15,9 +15,7 @@ function App() {
   const apiKey = 'CecIldgQmXLCCTnr02fOh2srCshbmyIYKYPHc7EA';
   useEffect(() => {
     axios
-      .get(
-        `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=2012-03-14`
-      )
+      .get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
       .then(response => {
         setDate(response.data.date);
         setTitle(response.data.title);
