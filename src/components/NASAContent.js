@@ -1,30 +1,33 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect }from "react";
 import axios from "axios";
 import NASACard from "./NASACard";
-import { Container } from "reactstrap";
-// import { tsPropertySignature } from "@babel/types";
 
+const NASAContent= () => {
+    const [apod, setApod] = useState([]);
+    const [date, setDate] = useState("")
+    useEffect(() => {
+        axios
+        .get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`)
+        .then(res => {
+            console.log(res.data);
+            setApod(res.data);
+        });
+    }, []);
 
+    if (!apod) return <h3>Loading...</h3>;
 
-
-export default function NASAContent() {
-const [photos, setPhotos] = useState([]);
-const [date, setDate] = useState("2019-11-11");
-
-  useEffect(() => {
-    axios.get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${date}`)
-    .then(response => {
-      console.log(response.data);
-      setPhotos(response.data)
-    })
-    .catch(error => {
-      console.log("the data was not returned", error)
-    });
-  }, [date])
-  return (
-    // change back to container if issue
-    <Container> 
-      < NASACard title={photos.title} imgURL={photos.url} explanation={photos.explanation} date={photos.date}/>
-    </Container>
+    return (
+        <div>
+            <h1>Photo Of The Day - Stars</h1>
+            <NASACard 
+                key={apod.key}
+                title={apod.title}
+                date={apod.date}
+                explain={apod.explanation}
+                imgUrl={apod.url}
+            />
+        </div>    
     )
 }
+
+export default NASAContent;
