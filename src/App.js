@@ -66,7 +66,7 @@ function App() {
         />
       </div>
       {error && (
-        <p style={{ textAlign: "center", fontSize: "1.rem", color: "red" }}>
+        <p style={{ textAlign: "center", fontSize: "1.5rem", color: "red" }}>
           {error}
         </p>
       )}

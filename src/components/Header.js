@@ -99,21 +99,15 @@ const Header = ({ data }) => {
   return (
     <HeaderTittle>
       <figure>
-<<<<<<< HEAD
         {data.hdurl ? (
           <img src={data.hdurl} alt={data.title} />
         ) : (
-=======
-        {!data.hdurl ? (
->>>>>>> e427cd0be2337d9c2a35bc60d12af28344567978
           <Loader
             type="BallTriangle"
             color="#00BFFF"
             height={200}
             width={200}
           />
-        ) : (
-          <img src={data.hdurl} alt={data.title} />
         )}
       </figure>
     </HeaderTittle>
