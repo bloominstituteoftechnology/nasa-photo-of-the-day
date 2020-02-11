@@ -36,7 +36,7 @@ function App() {
     );
     setError("");
   };
-
+  console.log(nasa);
   return (
     <Wrapper>
       <div
