@@ -19,11 +19,11 @@ const Container = styled.div`
   transition: all 0.65ss ease;
 `;
 
-const ImageContainer = props => {
+const ImageContainer = ({ data }) => {
   return (
     <div>
       <Container>
-        <Header data={props.data} />
+        <Header data={data} />
       </Container>
     </div>
   );

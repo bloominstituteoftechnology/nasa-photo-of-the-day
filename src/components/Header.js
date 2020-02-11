@@ -1,5 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
+import Loader from "react-loader-spinner";
 
 const wooble = keyframes`
 
@@ -101,9 +102,11 @@ const Header = ({ data }) => {
         {data.hdurl ? (
           <img src={data.hdurl} alt={data.title} />
         ) : (
-          <img
-            src="https://il5.picdn.net/shutterstock/videos/1013971/thumb/9.jpg"
-            alt="loading image"
+          <Loader
+            type="BallTriangle"
+            color="#00BFFF"
+            height={200}
+            width={200}
           />
         )}
       </figure>
