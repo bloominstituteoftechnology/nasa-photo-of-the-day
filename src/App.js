@@ -36,7 +36,6 @@ function App() {
     );
     setError("");
   };
-  console.log(nasa);
   return (
     <Wrapper>
       <div
@@ -46,10 +45,12 @@ function App() {
           marginLeft: "1em"
         }}
       >
-        <img
-          style={{ height: "70px", width: "70px" }}
-          src="https://invention.nasa.gov/assets/images/banner-meatball.png"
-        />
+        <a href="https://www.nasa.gov/">
+          <img
+            style={{ height: "70px", width: "70px" }}
+            src="https://invention.nasa.gov/assets/images/banner-meatball.png"
+          />
+        </a>
       </div>
       <div
         style={{
