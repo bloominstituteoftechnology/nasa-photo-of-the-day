@@ -1,14 +1,15 @@
 import React from "react";
 import "./App.css";
-import "./Components/GetData";
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+      <Header />
+
+      <GetData />
+      <Footer />
     </div>
   );
 }
@@ -16,4 +17,3 @@ function App() {
 export default App;
 
 
-{/*api_key=LxxuQJv9MQxooAm6LVjWmS2oVhR9BouJKu0xhYYY */}
