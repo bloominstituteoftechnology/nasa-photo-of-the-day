@@ -1,5 +1,5 @@
 need 
-	f.hooks?
+	f.hooks?-to fetch data
 	f.components
 			MainImage
 			Cards if using cards- buttons

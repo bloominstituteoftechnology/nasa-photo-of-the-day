@@ -1,7 +1,6 @@
-{/*api_key=LxxuQJv9MQxooAm6LVjWmS2oVhR9BouJKu0xhYYY */}
-
 import React from "react";
 import "./App.css";
+import "./Components/GetData";
 
 function App() {
   return (
@@ -15,3 +14,6 @@ function App() {
 }
 
 export default App;
+
+
+{/*api_key=LxxuQJv9MQxooAm6LVjWmS2oVhR9BouJKu0xhYYY */}
