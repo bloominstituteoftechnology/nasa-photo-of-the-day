@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import Title from "./components/title";
-import img from "./components/img";
+import Img from "./components/img";
 import Explain from "./components/Explain";
 import axios from "axios";
 import "./App.css";
@@ -30,7 +30,7 @@ export default function App() {
 
       <p>{data.date}</p>
       <Title title={data.title}/>
-      <img src={data.url}></img>
+      <Img src={data.url}/>
       <Explain explain={data.explanation}/>
 
       {/* {data.map(item => {

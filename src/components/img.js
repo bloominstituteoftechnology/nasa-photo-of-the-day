@@ -5,7 +5,7 @@ const Img = props => {
   console.log(props, " is props in Img")
   return (
     <div className="Img-container">
-      <img src={props.url} className="img" alt="Space"></img>
+      <img src={props.src} className="img" alt="Space"></img>
     </div>
   );
 };
