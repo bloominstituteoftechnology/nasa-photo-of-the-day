@@ -2,9 +2,9 @@ import React from 'react';
 // import './title.css';
 
 const Explain = props => {
-  console.log(props, " is props in ImgCredit")
+  console.log(props, " is props in Explain")
   return (
-      <p className="explain"> Explanation: {props.explanation}</p>
+      <p className="explain">{props.explain}</p>
   );
 };
 
