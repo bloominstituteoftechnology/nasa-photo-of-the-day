@@ -1,3 +1,5 @@
+my wireframe https://www.figma.com/file/e49ugKLwm3OUlwvB3MDuz9/NASA-pic-of-the-day?node-id=0%3A1
+
 # Module Project: Component Side Effects- NASA APOD
 
 This will be a two-module project. In it you will consume the NASA API to fetch the "Astronomy Photo Of The Day" or APOD. Once you fetch the data, you will build a few components that will render different pieces of data in your interface. After the second module (in the [DAY_TWO_README.md](DAY_TWO_README.md) file) you will re-style your app using one of the libraries you learn. 
