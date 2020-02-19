@@ -1,0 +1,8 @@
+need 
+	f.hooks?
+	f.components
+			MainImage
+			Cards if using cards- buttons
+			Header
+			Pick Date? 
+		
