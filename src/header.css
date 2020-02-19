@@ -1,0 +1,21 @@
+.logoHeader{
+width: 10%;
+height: 20vh;
+border-radius: 50%;
+}
+
+.headerContainer{
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #395abd ;
+  padding: 2%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 50%;
+  color: white;
+  font-size: 2rem;
+}
