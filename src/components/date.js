@@ -1,5 +1,6 @@
 import React from 'react';
-// import './title.css';
+
+
 
 const Date = props => {
   console.log(props, " is props in Date")

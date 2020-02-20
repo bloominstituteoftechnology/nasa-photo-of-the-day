@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 
 const StyledTitle = styled.h1`
-  background: black;
-  color: white;
+  background: white;
+  color: black;
   width: 50%;
   padding: 3%;
   `;

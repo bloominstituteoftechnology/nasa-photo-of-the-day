@@ -7,11 +7,13 @@ import styled from "styled-components";
 
 import "./App.css";
 
-
-const Background = styled.div`
-  background-image: url("https://images.unsplash.com/photo-1550039120-5d6529f0c4de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3150&q=80");
-  background-color: red;
-  `;
+const Background = styled.section`
+background-image: url("https://images.unsplash.com/photo-1550039120-5d6529f0c4de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3150&q=80");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+background-color: red;
+`;
 
 export default function App() {
   const [data, setData] = useState([]);
@@ -34,20 +36,14 @@ export default function App() {
   console.log(data);
 
   return (
-    <Background className="App">
-
-      <p>{data.date}</p>
-      <Title title={data.title}/>
-      <Img src={data.url}/>
-      <Explain explain={data.explanation}/>
-
-      {/* {data.map(item => {
-        console.log(item, " is item in App.js")
-        return (<Title title={item.title} />
-        ); CANNOT MAP THROUGH
-      })} */}
-
-    </Background>
+    <div className="App">
+      <Background>
+        <p>{data.date}</p>
+        <Title title={data.title}/>
+        <Img src={data.url}/>
+        <Explain explain={data.explanation}/>
+      </Background>
+    </div>
   );
 }
 

@@ -9,7 +9,8 @@ img {
 }
   
 .frame {
-    background-color:#ddc;
+    width: 60%;
+    background-color:#806E66; 
     border:solid 5vmin #eee;
     border-bottom-color:#fff;
     border-left-color:#eee;
@@ -20,7 +21,6 @@ img {
     box-sizing:border-box;
     display:inline-block;
     margin:10vh 10vw;
-    height:50vh;
     padding:8vmin;
     position:relative;
     text-align:center;

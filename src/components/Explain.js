@@ -1,10 +1,16 @@
 import React from 'react';
-// import './title.css';
+import styled from "styled-components";
+
+const StyledExplain = styled.p `
+  background-color: white;
+  padding: 5%;
+  margin: 0 10% 10%;
+`
 
 const Explain = props => {
   console.log(props, " is props in Explain")
   return (
-      <p className="explain">{props.explain}</p>
+      <StyledExplain className="explain">{props.explain}</StyledExplain>
   );
 };
 
