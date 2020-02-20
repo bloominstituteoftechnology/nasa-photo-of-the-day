@@ -17,9 +17,9 @@ function App() {
 
   return (
     <div className="App">
-      <NasaTitle title = {nasa.title}/>
+      <NasaTitle title = {nasa.title} info = {nasa.explanation}/>
       <NasaImage image = {nasa.hdurl}/>
-      <NasaInfo info = {nasa.explanation}/>
+      {/* <NasaInfo info = {nasa.explanation}/> */}
      
     </div>
   );
