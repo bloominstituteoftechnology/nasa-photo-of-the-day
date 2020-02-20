@@ -1,6 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import axios from "axios"
 import Card from './Card'
+import styled from 'styled-components'
+import background from '../images/NASA.jpg'
+
 
 
 const CardBuilder = props => {
@@ -17,7 +20,7 @@ const CardBuilder = props => {
     },[props.date])
     return (
         <div>
-              <Card explanation = {data.explanation} title = {data.title} date = {data.date} imgUrl = {data.hdurl} /> 
+              <Card author = {data.copyright} explanation = {data.explanation} title = {data.title} date = {data.date} imgUrl = {data.hdurl} />
         </div>
     );
 }
