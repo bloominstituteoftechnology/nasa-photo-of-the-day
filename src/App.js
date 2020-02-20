@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
+import DateSelector from "./components/Date/DateSelector";
+import Navbar from "./components/Navbar/Navbar"
+
+
+
 
 function App() {
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+      <Navbar/>
+      <DateSelector/>
     </div>
   );
 }
 
 export default App;
+ 
