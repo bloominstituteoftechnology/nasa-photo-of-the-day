@@ -1,13 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-
-
 const CardWrapper = styled.section`
     padding:4px;
     width:80%;
     margin:auto;
-    background:#f0f0f0;
+    background:#f5dddd;
     border-top:1px solid #3a4454;
 `;
 
@@ -21,6 +19,8 @@ const NasaImage = styled.img`
     margin:auto;
     border:1px solid #3a4454;
     border-radius:2px;
+
+   
 `;
 
 const ImageTitle = styled.h4`
@@ -46,8 +46,10 @@ const Card = (props) => {
 
            <NasaImageContainer key={props.id} >
                <NasaImage alt="nasa photo of the day" src={props.url} />
-            </NasaImageContainer>
+
+               </NasaImageContainer>
            
+
                 <ImageTitle >
                 Image Title: {props.title}
                 </ImageTitle>
@@ -56,12 +58,14 @@ const Card = (props) => {
                    Date: {props.date}
                 </ImageDate>
 
-            <CardWrapper>
+                <CardWrapper>
 
                <ExplanationText>
-                {props.explanation}
-             </ExplanationText>
+           <p>{props.explanation}</p>
 
+           </ExplanationText>
+
+        
            </CardWrapper> 
            </div>
            
