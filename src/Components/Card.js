@@ -10,12 +10,19 @@ const CardWrapper = styled.section`
 `;
 
 const NasaImageContainer = styled.section`
-    margin:4px 0;
+   width:80%;
+    margin:auto;
 `;
 
 const NasaImage = styled.img`
     max-width:90%;
     margin:auto;
+    border:1px solid #3a4454;
+    border-radius:2px;
+
+    box-shadow: -2px -1px 17px -1px rgba(0,0,0,0.2);
+-webkit-box-shadow: -2px -1px 17px -1px rgba(0,0,0,0.2);
+-moz-box-shadow: -2px -1px 17px -1px rgba(0,0,0,0.2);
 `;
 
 const ImageTitle = styled.h4`
@@ -30,6 +37,7 @@ const ExplanationText = styled.p`
     color:#3c3c3c;
     font-weight:bold;   
     text-align:left;
+    margin:8px;
 `;
 
 
@@ -55,8 +63,7 @@ const Card = (props) => {
                 <CardWrapper>
 
                <ExplanationText>
-           <p>{props.explanation}
-           Bacon ipsum dolor amet drumstick beef ribs doner salami, pig leberkas corned beef tri-tip ham hock boudin meatball. Swine tongue burgdoggen porchetta, alcatra salami venison pastrami short ribs. Beef shankle ham hock kielbasa short loin. Filet mignon shank leberkas ham ham hock prosciutto burgdoggen tongue spare ribs pork loin fatback </p>
+           <p>{props.explanation}</p>
 
            </ExplanationText>
 
