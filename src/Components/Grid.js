@@ -8,7 +8,7 @@ const [nasaData, setNasaData] = useState({});
 
  useEffect (() => {
     axios
-    .get({/* `https://api.nasa.gov/planetary/apod?api_key=LxxuQJv9MQxooAm6LVjWmS2oVhR9BouJKu0xhYYY` */})
+    .get({/** `https://api.nasa.gov/planetary/apod?api_key=LxxuQJv9MQxooAm6LVjWmS2oVhR9BouJKu0xhYYY` */})
     .then(response => {
       console.log(response.data)
       setNasaData(response.data)
@@ -26,13 +26,7 @@ const [nasaData, setNasaData] = useState({});
               date={nasaData.date}
               explanation={nasaData.explanation}
               />
-{/** 
-          <Modal
-                title={nasaData.title}
-                explanation={nasaData.explanation}
-                date={nasaData.date}
-                key={nasaData.ida}
-              />  */}
+
     </div>
 }
 
