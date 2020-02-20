@@ -9,7 +9,7 @@ import "./App.css";
 
 
 const Background = styled.div`
-  background-image: url("./imgs/whitebrick.jpg");
+  background-image: url("https://images.unsplash.com/photo-1550039120-5d6529f0c4de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3150&q=80");
   background-color: red;
   `;
 

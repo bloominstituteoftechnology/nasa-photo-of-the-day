@@ -8,7 +8,7 @@ img {
     max-width:100%;
 }
   
-img.frame {
+.frame {
     background-color:#ddc;
     border:solid 5vmin #eee;
     border-bottom-color:#fff;
@@ -20,7 +20,7 @@ img.frame {
     box-sizing:border-box;
     display:inline-block;
     margin:10vh 10vw;
-    height:80vh;
+    height:50vh;
     padding:8vmin;
     position:relative;
     text-align:center;
