@@ -46,10 +46,8 @@ const Card = (props) => {
 
            <NasaImageContainer key={props.id} >
                <NasaImage alt="nasa photo of the day" src={props.url} />
-
-               </NasaImageContainer>
+            </NasaImageContainer>
            
-
                 <ImageTitle >
                 Image Title: {props.title}
                 </ImageTitle>
@@ -58,12 +56,11 @@ const Card = (props) => {
                    Date: {props.date}
                 </ImageDate>
 
-                <CardWrapper>
+            <CardWrapper>
 
                <ExplanationText>
                 {props.explanation}
              </ExplanationText>
-
 
            </CardWrapper> 
            </div>

@@ -18,7 +18,6 @@ const [nasaData, setNasaData] = useState({});
     });
  },[]) // [] keeps code from making infinite loop
     
-
     return <div>
               <Card key={nasaData.id} 
               url={nasaData.url}
