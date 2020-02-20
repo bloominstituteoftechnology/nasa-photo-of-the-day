@@ -3,7 +3,15 @@ import Title from "./components/title";
 import Img from "./components/img";
 import Explain from "./components/Explain";
 import axios from "axios";
+import styled from "styled-components";
+
 import "./App.css";
+
+
+const Background = styled.div`
+  background-image: url("./imgs/whitebrick.jpg");
+  background-color: red;
+  `;
 
 export default function App() {
   const [data, setData] = useState([]);
@@ -26,7 +34,7 @@ export default function App() {
   console.log(data);
 
   return (
-    <div className="App">
+    <Background className="App">
 
       <p>{data.date}</p>
       <Title title={data.title}/>
@@ -39,7 +47,7 @@ export default function App() {
         ); CANNOT MAP THROUGH
       })} */}
 
-    </div>
+    </Background>
   );
 }
 

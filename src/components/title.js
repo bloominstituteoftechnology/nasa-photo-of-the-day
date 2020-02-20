@@ -1,11 +1,19 @@
 import React from 'react';
-// import './title.css';
+import styled from "styled-components";
+
+
+const StyledTitle = styled.h1`
+  background: black;
+  color: white;
+  width: 50%;
+  padding: 3%;
+  `;
 
 const Title = props => {
   console.log(props, " is props in Title")
   return (
     <div className="Title-container">
-      <h1 className="title">{props.title}</h1>
+      <StyledTitle className="title">{props.title}</StyledTitle>
     </div>
   );
 };

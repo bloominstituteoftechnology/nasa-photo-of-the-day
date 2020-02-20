@@ -1,5 +1,5 @@
 import React from 'react';
-import "./img.css";
+
 
 const Img = props => {
   console.log(props, " is props in Img")
