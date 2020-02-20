@@ -3,7 +3,10 @@ import React from "react";
 let NasaCard = (props) =>{
     
     return (
-        <h2>NC placeholder for Date, and Description and Image</h2>
+        <div className='card-container'>
+            <img src={props.nasaData.url}/>
+            <p>{props.nasaData.explanation}</p>
+        </div>
     );
 }
 
