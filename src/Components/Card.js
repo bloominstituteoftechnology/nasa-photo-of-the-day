@@ -1,14 +1,20 @@
 import React, { userState, useEffect } from "react";
-import axios from "axios";
+
 
 {/*image uses state*/}
+const Card = (props) => {
+    return (
+        <div key={props.id}>
+            <img alt="nasa photo of the day" src={props.url} />
+           <p>{props.date}</p>
+          
+            <p>{props.title}</p>
+           <p>{props.explanation}</p>
+        </div>
+    )
+}
 
-const [image, setImage] = useState([]);
-
-
-
-
-
+export default Card;
 
 {/*<img />
 <div>

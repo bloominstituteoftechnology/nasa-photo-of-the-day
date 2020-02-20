@@ -1,12 +1,12 @@
 import React from "react";
 
-const Header = () => {
+const Title = () => {
     return(
-        <div className="header">
+        <div className="title">
             <h1>Nasa Photo of the day</h1>
         </div>
     )
 }
 
 
-export default Header;
+export default Title;

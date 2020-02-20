@@ -1,15 +1,15 @@
 import React from "react";
 import "./App.css";
-import Header from "./Components/Header";
+import Header from "./Components/Title";
 import Footer from "./Components/Footer";
-import GetData from "./Components/GetData";
+import Grid from "./Components/Grid";
 
 function App() {
   return (
     <div className="App">
       <Header />
 
-      <GetData />
+      <Grid />
       <Footer />
     </div>
   );
