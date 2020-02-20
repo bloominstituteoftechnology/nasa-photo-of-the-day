@@ -1,11 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
+
+
 const CardWrapper = styled.section`
     padding:4px;
     width:80%;
     margin:auto;
-    background:#f5dddd;
+    background:#f0f0f0;
     border-top:1px solid #3a4454;
 `;
 
@@ -19,10 +21,6 @@ const NasaImage = styled.img`
     margin:auto;
     border:1px solid #3a4454;
     border-radius:2px;
-
-    box-shadow: -2px -1px 17px -1px rgba(0,0,0,0.2);
--webkit-box-shadow: -2px -1px 17px -1px rgba(0,0,0,0.2);
--moz-box-shadow: -2px -1px 17px -1px rgba(0,0,0,0.2);
 `;
 
 const ImageTitle = styled.h4`
@@ -63,9 +61,8 @@ const Card = (props) => {
                 <CardWrapper>
 
                <ExplanationText>
-           <p>{props.explanation}</p>
-
-           </ExplanationText>
+                {props.explanation}
+             </ExplanationText>
 
 
            </CardWrapper> 
