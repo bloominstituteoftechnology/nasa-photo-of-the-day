@@ -2,13 +2,13 @@ import React from 'react';
 import styled from 'styled-components'
 
 const MainImg = styled.img`
- width: 50%;
- height: 60vh;
+ max-width: 50%;
  border-radius: 15px;
 `
 const Paragraph = styled.p`
 color: blue;
-width: 50%;
+width: 70%;
+margin: 0 auto;
 font-size: 1.5rem;
 margin: 5% auto;
 line-height: 2;

@@ -3,6 +3,7 @@ import "./App.css";
 import CardBuilder from './Components/CardBuilder'
 import Date from './Components/Date'
 import Header from './Components/Header'
+import Navigation from './Components/Navigation'
 
 function App(props) {
   let today = new window.Date();
@@ -19,7 +20,6 @@ function App(props) {
 
   function handleDate (e) {
      setDate1(e.target.value)
-
   }
   function handleSubmit (e) {
       e.preventDefault()

@@ -2,6 +2,7 @@ import React from 'react';
 import nasa from '../images/NASA_logo.svg.png'
 import styled from 'styled-components'
 import NASA1 from '../images/NASA1.jpg'
+import Navigation from './Navigation'
 
 const H1 = styled.h1`
  color: red;
@@ -21,7 +22,8 @@ const Header = (props) => {
     return (
         <StyledHeader>
           <StyledImg src={nasa}></StyledImg>
-          <H1>NASA Photo Of The Day</H1>  
+          <H1>NASA Photo Of The Day</H1>
+          <Navigation/>
         </StyledHeader>
     );
 };
