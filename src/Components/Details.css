@@ -1,0 +1,25 @@
+.info-container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+  padding-top: 1rem;
+
+  box-shadow: 0 0.7px 4.1px -10px rgba(0, 0, 0, 0.04),
+    0 1.5px 10.4px -10px rgba(0, 0, 0, 0.052),
+    0 2.6px 21.3px -10px rgba(0, 0, 0, 0.058),
+    0 4.3px 43.8px -10px rgba(0, 0, 0, 0.069),
+    0 10px 120px -10px rgba(0, 0, 0, 0.11);
+}
+
+.info-container h3 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.info-container p {
+  padding: 0 2rem;
+}
