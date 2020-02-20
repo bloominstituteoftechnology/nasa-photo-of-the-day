@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import Title from "./components/title";
 import Img from "./components/img";
 import Explain from "./components/Explain";
+import Date from "./components/date"
 import axios from "axios";
 import styled from "styled-components";
 
@@ -14,6 +15,12 @@ background-repeat: no-repeat;
 background-size: cover;
 background-color: red;
 `;
+
+const Footer = styled.p`
+  color: white;
+  background: black;
+  padding: 2%;
+  `
 
 export default function App() {
   const [data, setData] = useState([]);
@@ -38,10 +45,11 @@ export default function App() {
   return (
     <div className="App">
       <Background>
-        <p>{data.date}</p>
+        <Date date={data.date}/>
         <Title title={data.title}/>
         <Img src={data.url}/>
         <Explain explain={data.explanation}/>
+        <Footer>NASA Photo of the Day</Footer>
       </Background>
     </div>
   );

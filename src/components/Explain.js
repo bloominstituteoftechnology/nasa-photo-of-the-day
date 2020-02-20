@@ -4,7 +4,7 @@ import styled from "styled-components";
 const StyledExplain = styled.p `
   background-color: white;
   padding: 5%;
-  margin: 0 10% 10%;
+  margin: 0 10% 10% 10%;
 `
 
 const Explain = props => {

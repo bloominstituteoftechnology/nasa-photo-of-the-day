@@ -20,8 +20,8 @@ img {
     box-shadow:0 0 5px 0 rgba(0,0,0,.25) inset, 0 5px 10px 5px rgba(0,0,0,.25);
     box-sizing:border-box;
     display:inline-block;
-    margin:10vh 10vw;
-    padding:8vmin;
+    margin:5vh 10vw;
+    padding:5vmin;
     position:relative;
     text-align:center;
 }
