@@ -3,24 +3,28 @@ import styled from "styled-components";
 
 const PageTitle = styled.h1`
     font-size: 2em;
+    font-style:italic;
     text-aligned:center;
     color:blue;
+    text-align: center;
 `;
 
 //wrapper to render a section tag
-const Wrapper = styled.section`
-    padding:2rem;
+const HeaderWrapper = styled.section`
+    padding:4px;
     background: #96939b;
+    width:80%;
+    margin:auto;
 `;
 
 const Title = () => {
     return(
 
-        <Wrapper>
+        <HeaderWrapper>
             <PageTitle>
                 NASA's Photo of the Day
             </PageTitle>
-        </Wrapper>
+        </HeaderWrapper>
        
     )
 }
