@@ -5,14 +5,15 @@ const PageTitle = styled.h1`
     font-size: 2em;
     font-style:italic;
     text-aligned:center;
-    color:blue;
+    color:aliceblue;
     text-align: center;
 `;
 
 //wrapper to render a section tag
 const HeaderWrapper = styled.section`
     padding:4px;
-    background: #96939b;
+    background: #53687e
+    ;
     width:80%;
     margin:auto;
 `;
