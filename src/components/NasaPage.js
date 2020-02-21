@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from "react";
 import NasaCard from "./NasaCard";
 import Axios from "axios";
+import { Container } from 'reactstrap';
+import styled from "styled-components";
+
+let BodyContainer = styled.div`
+display: flex;
+flex-direction: column;
+align-self: center;
+width: 100%;
+`;
 
 let NasaPage = () =>{
     let [data, setData] = useState([])
@@ -16,13 +25,11 @@ let NasaPage = () =>{
         })
     }, []);
     return (
-        <div className='body-container'>
-            <h1 className='today-date'>{data.date}</h1>
-            <h1>Nasa's Photo of the Day</h1>
+        <BodyContainer>
             <NasaCard
             nasaData = {data}
             />
-        </div>
+        </BodyContainer>
     );
 }
 
