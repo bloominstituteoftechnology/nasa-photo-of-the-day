@@ -1,8 +1,21 @@
-.day{
-  padding-top: 2%;
+.day {
+  padding-top: 1%;
 }
 
-.mainBodyContainer{
-  background-color: #399cbd;
-  height: 100vh;
+.mainBodyContainer {
+  background-color: #8abfd1;
+}
+
+.imgDay {
+  width: 35%;
+}
+
+p {
+  padding-top: 1%;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+h2 {
+  padding: 1%;
 }

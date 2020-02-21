@@ -1,13 +1,13 @@
-.logoHeader{
-width: 10%;
-height: 20vh;
-border-radius: 50%;
+.logoHeader {
+  width: 10%;
+  height: 20vh;
+  border-radius: 50%;
 }
 
-.headerContainer{
+.headerContainer {
   display: flex;
   justify-content: space-evenly;
-  background-color: #395abd ;
+  background-color: #395abd;
   padding: 2%;
 }
 
@@ -18,4 +18,22 @@ border-radius: 50%;
   width: 50%;
   color: white;
   font-size: 2rem;
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+}
+
+.topBar img {
+  width: 10%;
+}
+
+.topBar h1 {
+  width: 70%;
+  font-size: 8rem;
+}
+
+.header2 {
+  margin: 5px 20px;
 }
