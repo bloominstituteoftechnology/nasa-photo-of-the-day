@@ -4,7 +4,7 @@ import "../App.css";
 function Apodinfo(props) {
   return (
     <div>
-      <h6 style={{ textDecoration: `underline`, color: `skyblue` }}>
+      <h6 style={{ textDecoration: `underline`, color: `goldenrod` }}>
         Astronomy Picture of the Day
       </h6>
       <h1>{props.title}</h1>

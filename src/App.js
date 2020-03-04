@@ -3,9 +3,10 @@ import axios from "axios";
 import "./App.css";
 import Apodinfo from "./components/Apodinfo";
 import Apod from "./components/Apod";
+import style from "./components/style";
 import Forms from "./components/Forms";
-import { Button, Section } from "./components/style";
-// note more
+import { Button, divStyle, apod, Section, padding } from "./components/style";
+
 function App() {
   const [displayshow, displayHidden] = useState(false);
   const [displaydate, changeDate] = useState(false);
@@ -13,7 +14,7 @@ function App() {
   const [info, setInfo] = useState(``);
   const [date, setDate] = useState(``);
   const [title, setTitle] = useState(``);
-// notesz
+
   const [count, setCount] = useState(2019);
   const [countday, setCountday] = useState(13);
   const [countmonth, setCountmonth] = useState(12);
@@ -54,6 +55,8 @@ function App() {
         });
       });
   }, [year, month, day]);
+
+  console.log(apod);
 
   const displaycontent = {
     show: {
@@ -156,8 +159,7 @@ function App() {
           <a onClick={toggledisplay}>
             <img
               style={{ width: `40px`, height: `40px` }}
-              src='https://image.flaticon.com/icons/png/512/1661/1661909.png'
-              alt='calandar'></img>
+              src='https://image.flaticon.com/icons/png/512/1661/1661909.png'></img>
           </a>
         </div>
         <Section style={currentTheme} className='TextCont' background='#342d39'>

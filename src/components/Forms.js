@@ -14,7 +14,7 @@ export default function Forms({
       <form onSubmit={onSubmityr}>
         <input
           style={{ textAlign: "center" }}
-          placeholder={` Year`}
+          placeholder={` Year > 1995`}
           type='text'
           name='year'
           onChange={handleyrchange}
