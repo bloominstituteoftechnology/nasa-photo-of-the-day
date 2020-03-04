@@ -1,0 +1,8 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.cursorBlinking": "expand",
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.cursorWidth": 1,
+    "editor.tabSize": 2,
+    "editor.fontFamily": "Operator, Menlo, Monaco, 'Courier New', monospace"
+}
