@@ -5,7 +5,7 @@ import Apodinfo from "./components/Apodinfo";
 import Apod from "./components/Apod";
 import Forms from "./components/Forms";
 import { Button, Section } from "./components/style";
-// note
+// note more
 function App() {
   const [displayshow, displayHidden] = useState(false);
   const [displaydate, changeDate] = useState(false);
@@ -13,7 +13,7 @@ function App() {
   const [info, setInfo] = useState(``);
   const [date, setDate] = useState(``);
   const [title, setTitle] = useState(``);
-
+// notesz
   const [count, setCount] = useState(2019);
   const [countday, setCountday] = useState(13);
   const [countmonth, setCountmonth] = useState(12);
