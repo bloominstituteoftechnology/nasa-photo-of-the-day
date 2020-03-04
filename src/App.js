@@ -5,7 +5,7 @@ import Apodinfo from "./components/Apodinfo";
 import Apod from "./components/Apod";
 import Forms from "./components/Forms";
 import { Button, Section } from "./components/style";
-
+// note
 function App() {
   const [displayshow, displayHidden] = useState(false);
   const [displaydate, changeDate] = useState(false);
