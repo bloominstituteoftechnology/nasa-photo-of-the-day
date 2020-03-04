@@ -7,7 +7,7 @@ import "./scss/App.css";
 function App() {
   const [nasaData, setNasaData] = useState([]);
   const [selectedDate, setSelectedDate] = useState(
-    new Date("2019/01/17").toISOString().split("T")[0]
+    new Date("2020/01/17").toISOString().split("T")[0]
   );
 
   useEffect(() => {
@@ -23,10 +23,10 @@ function App() {
   }, [selectedDate]);
 
   return (
-    <div className="App">
-      <div className="leftCol">
+    <div className='App'>
+      <div className='leftCol'>
         <h1>Nasa Photo of the Day</h1>
-        <div className="calendar">
+        <div className='calendar'>
           <DatePickerComp
             selectedDate={selectedDate}
             setSelectedDate={setSelectedDate}
