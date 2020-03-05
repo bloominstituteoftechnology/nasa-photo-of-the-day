@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import AstroCard from ".//components/AstroCard";
 
 function App() {
   return (
