@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import NasaCard from "./NasaCard";
+import NasaCard from "./components/NasaCard.js";
 import axios from "axios";
 
 function NasaData() {
