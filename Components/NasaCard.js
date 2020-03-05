@@ -1,4 +1,4 @@
-import React from "react";
+import React from "./node_modules/react";
 
 const NasaCard = props => {
   return (
@@ -13,4 +13,4 @@ const NasaCard = props => {
   );
 };
 
-export default nasaCard;
+export default NasaCard;

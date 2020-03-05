@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import nasaCard from "./../Components/nasaCard";
-import axios from "axios";
+import React, { useEffect, useState } from "./node_modules/react";
+import NasaCard from "./NasaCard";
+import axios from "./node_modules/axios";
 
 function NasaData() {
   let [nasaData, setNasaData] = useState([]);
@@ -30,4 +30,4 @@ function NasaData() {
   );
 }
 
-export default nasaData;
+export default NasaData;
