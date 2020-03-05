@@ -15,9 +15,9 @@ function App() {
   const [date, setDate] = useState(``);
   const [title, setTitle] = useState(``);
 
-  const [count, setCount] = useState(2019);
-  const [countday, setCountday] = useState(13);
-  const [countmonth, setCountmonth] = useState(12);
+  const [count, setCount] = useState(2017);
+  const [countday, setCountday] = useState(12);
+  const [countmonth, setCountmonth] = useState(11);
 
   const [year, setYear] = useState(count);
   const [day, setDay] = useState(countday);
@@ -118,15 +118,15 @@ function App() {
     backgroundSize: `cover`
   };
 
-  console.log(`Date`, count, countday, countmonth);
+  // console.log(`Date`, count, countday, countmonth);
 
   return (
     <div className='App' style={divStyle}>
-      <div style={{ paddingTop: `.5%` }}>
+      <div style={{ paddingTop: `6%` }}>
         <a onClick={Toggleview}>
           <img
-            style={{ width: `40px`, height: `40px` }}
-            src='http://s3.amazonaws.com/production.mediajoint.prx.org/public/piece_images/572482/Arts_Calendar_Logo-Icon_for_PRX_small.png'></img>
+            style={{ width: `85px`, height: `85px` }}
+            src='https://cdn0.iconfinder.com/data/icons/blue-marketing-ecommerce/145/blue-marketing-01-512.png'></img>
         </a>
       </div>
       <div className='formbuttondiv'>
@@ -158,11 +158,11 @@ function App() {
           className='buttoncont'>
           <a onClick={toggledisplay}>
             <img
-              style={{ width: `40px`, height: `40px` }}
-              src='https://image.flaticon.com/icons/png/512/1661/1661909.png'></img>
+              style={{ width: `90px`, height: `80px` }}
+              src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/1200px-NASA_logo.svg.png'></img>
           </a>
         </div>
-        <Section style={currentTheme} className='TextCont' background='#342d39'>
+        <Section style={currentTheme} className='TextCont' background='#342d39' onHover='curser: pointer'>
           <Apod apod={apod}></Apod>
           <Apodinfo info={info} date={date} title={title} />
         </Section>

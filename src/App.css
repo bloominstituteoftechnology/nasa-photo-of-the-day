@@ -68,6 +68,10 @@ form {
   padding-top: 0.5%;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
 .DN {
   display: none;
 }
