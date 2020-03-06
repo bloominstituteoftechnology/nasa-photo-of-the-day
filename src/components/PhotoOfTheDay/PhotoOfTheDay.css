@@ -1,0 +1,39 @@
+.image {
+    display: block;
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 5% 5%;
+  
+    font-family: 'Open Sans', sans-serif;
+    background-color: #cccccc;
+    color: blac;
+    display: flex;
+    flex-direction: column;
+  
+    -webkit-box-shadow: 5px 5px 15px 5px #000000;
+    box-shadow: 5px 5px 15px 5px #000000;
+  }
+  img {
+    width: 100%;
+  }
+  .title {
+    font-size: 30px;
+    font-weight: 900;
+    text-align: start;
+    line-height: 6rem;
+  }
+  h2 {
+    margin: 6rem 0 1rem;
+  }
+  p {
+    text-align: start;
+    width: 100%;
+  }
+  p.drop-cap:first-letter {
+    font-size: 3em;
+    float: left;
+  }
+  .endText {
+    text-align: end;
+  }
