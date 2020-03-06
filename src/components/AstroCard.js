@@ -3,10 +3,10 @@ import React from "react";
 const AstroCard = props => {
   return (
     <li className="astro-card" key={props.id}>
-      <img>{props.img}</img>
-      <h2>Today's Picture: {props.title}</h2>
-      <p>Date: {props.date} </p>
-      <p>{props.description}</p>
+      <img>{props.hdurl}</img>
+      <h1>Today's Picture: {props.title}</h1>
+      <h2>Date: {props.date} </h2>
+      <p>{props.explanation}</p>
     </li>
   );
 };

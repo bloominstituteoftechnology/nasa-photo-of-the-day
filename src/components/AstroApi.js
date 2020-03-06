@@ -5,13 +5,27 @@ import AstroCard from "./AstroCard";
 function AstroApi() {
   const [astro, setAstro] = useState([]);
   useEffect(() => {
-    axios.get("https://api.nasa.gov/planetary/apod").then(response => {
-      console.log(response);
-    });
+    axios
+      .get(
+        "https://api.nasa.gov/planetary/apod?api_key=TR47EKb2u0JSiAQmqratLcSzfuqS2vtB1iCYqrf0"
+      )
+      .then(response => {
+        setAstro(response.data);
+        console.log(response.data);
+      });
   }, []);
 
   // Pass AstroCard Component information in here.
-  return "";
+  return (
+    <div>
+      <AstroCard
+        image={astro.hdurl}
+        title={astro.title}
+        date={astro.date}
+        description={astro.explanation}
+      />
+    </div>
+  );
 }
 
 export default AstroApi;
