@@ -21,8 +21,8 @@ function AstroApi() {
       <AstroCard
         image={astro.hdurl}
         title={astro.title}
-        date={astro.date}
-        description={astro.explanation}
+        x={astro.date}
+        explanation={astro.explanation}
       />
     </div>
   );
