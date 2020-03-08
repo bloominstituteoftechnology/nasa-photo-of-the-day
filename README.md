@@ -1,6 +1,8 @@
 # Module Project: Component Side Effects- NASA APOD
 
-This will be a two-module project. In it you will consume the NASA API to fetch the "Astronomy Photo Of The Day" or APOD. Once you fetch the data, you will build a few components that will render different pieces of data in your interface. After the second module (in the [DAY_TWO_README.md](DAY_TWO_README.md) file) you will re-style your app using one of the libraries you learn. 
+This will be a two-module project. In it you will consume the NASA API to fetch the "Astronomy Photo Of The Day" or APOD. Once you 
+fetch the data, you will build a few components that will render different pieces of data in your interface. After the second module 
+(in the [DAY_TWO_README.md](DAY_TWO_README.md) file) you will re-style your app using one of the libraries you learn. 
 
 ## Instructions
 
@@ -10,7 +12,8 @@ Read these instructions carefully. Understand exactly what is expected before st
 
 ## Commits
 
-Commit your code regularly and meaningfully. This helps both you and your team lead in case you ever need to return to old code for any number of reasons.
+Commit your code regularly and meaningfully. This helps both you and your team lead in case you ever need to return to old code for any 
+number of reasons.
 
 ## Description
 
@@ -20,15 +23,16 @@ In this project you will build out a application to show the nasa photo of the d
 
 ---
 
-This project was put together using create-react-app (CRA). You will not need to install CRA in order to make this project work. Follow the steps below to setup the project with the proper dependencies.
+This project was put together using create-react-app (CRA). You will not need to install CRA in order to make this project work. Follow 
+the steps below to setup the project with the proper dependencies.
 
-- [ ] Create a forked copy of this project.
+- [X] Create a forked copy of this project.
 - [ ] Add your team lead as collaborator on Github.
-- [ ] Clone your OWN version of the repository in your terminal
-- [ ] Download project dependencies by running `npm install`
-- [ ] Start up the app using `npm start`
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-      Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+- [X] Clone your OWN version of the repository in your terminal
+- [X] Download project dependencies by running one of these two commands `yarn` or `npm install`
+- [ ] Using the same command tool (yarn or npm) start up the app using `yarn start` or `npm start`
+- [X] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
 - [ ] Push commits: git push origin `<firstName-lastName>`.
 
 Follow these steps for completing your project.
