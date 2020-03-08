@@ -4,6 +4,23 @@ import axios from 'axios';
 
 import Video from './Components/Video.js';
 import Header from './Components/Header.js';
+import styled from 'styled-components';
+
+const StyledApp = styled.div`
+  border: 3px green solid;
+  background-color: lightgreen;
+  width: 80%;
+  border-radius: 20px;
+`
+
+const StyledBox = styled.div`
+  display: flex;
+  justify-content: center;
+  border: 2px black solid;
+  width: 650px;
+  padding: 5px;
+  margin: 10px auto;
+`
 
 function App() {
 
@@ -18,10 +35,12 @@ function App() {
   console.log(nasaData);
 
   return (
-    <div className="App">
+    <StyledApp className="App">
       <div className="top_content">
         <Header title={nasaData.title} date={nasaData.date} />
-        <Video media_type={nasaData.media_type} src={nasaData.url} hdurl={nasaData.hdurl} />
+        <StyledBox>
+          <Video media_type={nasaData.media_type} src={nasaData.url} hdurl={nasaData.hdurl} />
+        </StyledBox>
       </div>
       <div className="bottom_content">
         <p className="explanation">
@@ -29,7 +48,7 @@ function App() {
           {nasaData.explanation};
       </p>
       </div>
-    </div>
+    </StyledApp>
   );
 }
 
