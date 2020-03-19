@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
-import CardInfo from "../src/Info";
+import CardInfo from "../components/Info";
 
 
-export default function Card (){
-    const [newCard, setCard] = useState({});
+export default function Card(){
+    const [newCard, setCard] = useState([]);
     console.log('These are the new cards' , newCard)
 
     useEffect (() => {
@@ -22,13 +22,14 @@ export default function Card (){
 
     return (
         <div className = "wholeCardWrapper">
-            {newCard.map( item => {
+            {newCard.map(item => {
                 return (
                     <CardInfo
-                     title = {newCard.title} 
-                     date = {newCard.date} 
-                     explanation = {newCard.explanation}
-                     copyright = {newCard.copyright}
+                     key = {item.id}
+                     title = {item.title} 
+                     date = {item.date} 
+                     explanation = {item.explanation}
+                     copyright = {item.copyright}
                      />
                 );
 

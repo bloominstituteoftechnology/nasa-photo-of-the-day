@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import Card from "../src/Card"
+import Card from "./components/Card"
 
 
 
@@ -8,11 +8,9 @@ function App() {
 
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      <Card/>
-      </p>
+      <h1>Welcome to my NASA page!</h1>
+      <Card />
+      
     </div>
   );
 }
