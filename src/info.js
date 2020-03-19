@@ -1,14 +1,15 @@
 import React from "react";
 
-const info = ({title, date, explanation, copyRight}) => {
+const CardInfo = ({title, date, explanation, copyright}) => {
+    console.log("CARD info", CardInfo);
     return (
-        <div className = "cardInfo">
-            <h2>{title}</h2>
-            <p>{date}</p>
-            <p>{explanation}</p>
-            <p>Photo Taken By: {copyRight}</p>
+        <div>
+            <div>Date: {date}</div>
+            <div>Title: {title}</div>
+            <div>Info: {explanation}</div>
+            <div>Photo Taken By: {copyright}</div>
         </div>
     );
 };
 
-export default info;
+export default CardInfo;
