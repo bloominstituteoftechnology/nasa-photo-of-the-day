@@ -1,23 +1,31 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {
+    Card, CardImg, CardText, CardBody,
+    CardHeader, CardFooter, Badge
+  } from 'reactstrap';
 
 const AstronomyCard = (props) => {
 
     const { title, url, hdurl, explanation, date, copyright } = props.data;
     return (
-        <div className="astronomy-card">
+        <Card className="astronomy-card">
 
-        <h6 className="astronomy-title">{title}</h6>
+        <CardHeader className="astronomy-title">{title}</CardHeader>
 
-        <a href={hdurl} className="astronomy-image-wrapper">
-            <img src={url} alt={title} />
-        </a>
+        <CardImg top width="100%" src={url} alt={title} />
 
-        <p>{explanation}</p>
+        <CardText>{explanation}</CardText>
 
-        <span>{date}, {copyright}</span>
+        <CardFooter>
+            <Badge color="success" >{date}, {copyright}</Badge>
+            </CardFooter>
 
-        </div>
+        </Card>
     )
 }
 
 export default AstronomyCard;
+
+// href={hdurl} className="astronomy-image-wrapper">
+//             <img src={url} alt={title} />
