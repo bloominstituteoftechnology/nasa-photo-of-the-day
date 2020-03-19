@@ -1,14 +1,19 @@
 import React from "react";
-import "./App.css";
 import Header from "./components/Header";
 import PhotoCard from "./components/PhotoCard";
+import styled from 'styled-components';
+
+const Page = styled.div`
+
+`;
+
 
 function App() {
   return (
-    <div className="App">
+    <Page>
       <Header/>
       <PhotoCard/>
-    </div>
+    </Page>
   );
 }
 

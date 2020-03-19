@@ -1,6 +1,23 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Info from "./Info";
+import styled from 'styled-components';
+
+const Card = styled.div`
+display: flex;
+flex-direction: column;
+justify-content:space-between;
+align-items: center;
+padding: 4%;
+background-color: rgb(193, 135, 216);
+`;
+
+const SpaceImg = styled.img`
+max-width: 90%;
+height: auto;
+border-radius: 4px;
+`
+
 
 export default function PhotoCard(){
     const [photoData, setPhotoData] = useState({});
@@ -20,9 +37,9 @@ export default function PhotoCard(){
 
     return (
        
-        <div className = "photo-card">
+        <Card>
 
-            <img src = {photoData.url} className = "space-img"/>
+            <SpaceImg src = {photoData.url}/>
 
             <Info
             title = {photoData.title}
@@ -31,7 +48,7 @@ export default function PhotoCard(){
             copyright = {photoData.copyright}
             />
 
-        </div>
+        </Card>
 
     )
 
