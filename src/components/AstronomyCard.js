@@ -2,7 +2,7 @@ import React from 'react';
 
 const AstronomyCard = (props) => {
 
-    const { title, url, hdurl, explaination, date, copyright } = props.data;
+    const { title, url, hdurl, explanation, date, copyright } = props.data;
     return (
         <div className="astronomy-card">
 
@@ -12,7 +12,7 @@ const AstronomyCard = (props) => {
             <img src={url} alt={title} />
         </a>
 
-        <p>{explaination}</p>
+        <p>{explanation}</p>
 
         <span>{date}, {copyright}</span>
 
