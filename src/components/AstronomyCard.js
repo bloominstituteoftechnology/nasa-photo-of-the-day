@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
-    Card, CardImg, CardText, CardBody,
+    Col, Card, CardImg, CardText, CardBody,
     CardHeader, CardFooter, Badge
   } from 'reactstrap';
 
@@ -9,6 +9,7 @@ const AstronomyCard = (props) => {
 
     const { title, url, hdurl, explanation, date, copyright } = props.data;
     return (
+        <Col sm="12" md={{ size: 6, offset: 3 }}>
         <Card className="astronomy-card">
 
         <CardHeader className="astronomy-title">{title}</CardHeader>
@@ -22,6 +23,7 @@ const AstronomyCard = (props) => {
             </CardFooter>
 
         </Card>
+        </Col>
     )
 }
 
