@@ -1,14 +1,20 @@
-import React from 'react'
+import React from "react";
+import styled from "styled-components";
 
+const Copyright = ({ copyrightData }) => {
+  console.log(copyrightData);
 
-const Copyright = ({copyrightData}) => {
-    console.log(copyrightData);
-    return (
-        <div>
-           {copyrightData} 
-        </div>
-    )
-}
+  const StyledSmall = styled.small`
+    text-align: left;
+    display: block;
+    margin-left: 10px;
+  `;
 
-export default Copyright
+  return (
+    <>
+      <StyledSmall>{copyrightData}</StyledSmall>
+    </>
+  );
+};
 
+export default Copyright;

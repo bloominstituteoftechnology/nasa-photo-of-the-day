@@ -1,14 +1,12 @@
-import React from 'react'
+import React from "react";
 
+const DailyDate = ({ dateData }) => {
+  console.log(dateData);
+  return (
+    <>
+      <h2> {dateData} </h2>
+    </>
+  );
+};
 
-const DailyDate = ({dateData}) => {
-    console.log(dateData);
-    return (
-        <div>
-            {dateData}
-        </div>
-    )
-}
-
-export default DailyDate
-
+export default DailyDate;

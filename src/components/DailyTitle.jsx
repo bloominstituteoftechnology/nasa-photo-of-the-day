@@ -1,13 +1,18 @@
-import React from 'react'
+import React from "react";
+import styled from "styled-components";
 
+const DailyTitle = ({ titleData }) => {
+  const StyledTitleDiv = styled.div`
+    font-family: "Baloo 2", cursive;
+    margin-top: 5vh
+  `;
 
-const DailyTitle = ({titleData}) => {
-    console.log(titleData)
-    return (
-        <div>
-            {titleData}
-        </div>
-    )
-}
+  console.log(titleData);
+  return (
+    <h1>
+      <StyledTitleDiv>{titleData}</StyledTitleDiv>
+    </h1>
+  );
+};
 
-export default DailyTitle
+export default DailyTitle;
