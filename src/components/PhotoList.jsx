@@ -10,7 +10,7 @@ export default function PhotoList() {
             .get("https://api.nasa.gov/planetary/apod?api_key=tdUUC5iIwCj935JbOYJlVDUtyShfIKPp2RJGh4CX")
             .then(response => {
                 
-
+                //realized after that it was not necessary to put response data into an array as it is only one object, lol.
                 let pleaseWork = [response.data]
 
                 console.log(response.data);

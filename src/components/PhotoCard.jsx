@@ -2,6 +2,8 @@ import React from "react";
 
 const PhotoCard = (props) => {
     return (
+        
+        //can probably move some of this styling over to css files instead of inline.
         <div className="photo-list" style={{  
             backgroundImage: "url(" + props.url + ")",
             backgroundPosition: 'center',
