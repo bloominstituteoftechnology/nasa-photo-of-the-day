@@ -9,15 +9,15 @@ const FontMe = styled.h1`
     margin: 4%;
 `;
 const BackgroundMe = styled.div`
-    background-color: ${props => props.visible ? "black" : "white"};
-    &:hover {background-color:  ${props => props.visible ? "white" : "black"}}
+    background: ${props => (props.visible ? "black" : "white")};
+    &:hover {background:  ${props => (props.visible ? "white" : "black")};}
 `;
 
 const CardContent = (props) =>{
     // console.log(props)
 
     return(
-        <BackgroundMe>
+        <BackgroundMe visible>
         <Card>
             <FontMe>{props.info.title}</FontMe>
             <Button>{props.info.date}</Button>
