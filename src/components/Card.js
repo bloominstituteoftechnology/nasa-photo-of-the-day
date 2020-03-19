@@ -3,7 +3,11 @@ import axios from "axios";
 import CardInfo from "../components/Info";
 
 
-export default function Card(){
+
+
+
+
+export default function CardNasa(){
     const [newCard, setCard] = useState([]);
     console.log('These are the new cards' , newCard)
 
@@ -23,19 +27,14 @@ export default function Card(){
 
     return (
         <div className = "wholeCardWrapper">
-
-                
-
              <CardInfo
                  key = {newCard.id}
+                 img = {newCard.url}
                  title = {newCard.title} 
                  date = {newCard.date} 
                  explanation = {newCard.explanation}
                  copyright = {newCard.copyright}
              />
-               
-               <img src = {newCard.url} className = "space-img"/>
-            
 
         </div>
     );
