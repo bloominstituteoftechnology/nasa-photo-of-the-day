@@ -11,6 +11,7 @@ export default function Card(){
         axios.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
         .then(response =>{
             console.log(response);
+
             setCard(response.data);
         })
         .catch(error => {
@@ -22,18 +23,18 @@ export default function Card(){
 
     return (
         <div className = "wholeCardWrapper">
-            {newCard.map(item => {
-                return (
-                    <CardInfo
-                     key = {item.id}
-                     title = {item.title} 
-                     date = {item.date} 
-                     explanation = {item.explanation}
-                     copyright = {item.copyright}
-                     />
-                );
 
-            })}
+                
+
+             <CardInfo
+                 key = {newCard.id}
+                 title = {newCard.title} 
+                 date = {newCard.date} 
+                 explanation = {newCard.explanation}
+                 copyright = {newCard.copyright}
+             />
+               
+               <img src = {newCard.url} className = "space-img"/>
             
 
         </div>
