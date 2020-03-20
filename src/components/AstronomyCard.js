@@ -5,6 +5,8 @@ import {
     CardHeader, CardFooter, Badge
   } from 'reactstrap';
 
+  import "./AstroCard.css"
+
 const AstronomyCard = (props) => {
 
     const { title, url, hdurl, explanation, date, copyright } = props.data;
@@ -26,6 +28,7 @@ const AstronomyCard = (props) => {
         </Col>
     )
 }
+
 
 export default AstronomyCard;
 

@@ -1,0 +1,12 @@
+.card {
+    background-color:black;
+    padding: 20px;
+}
+
+.card-header {
+    color: white;
+}
+.card-text {
+    color: white;
+}
+
