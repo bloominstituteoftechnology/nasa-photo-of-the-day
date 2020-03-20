@@ -1,9 +1,9 @@
 import React, {useState, useEffect } from 'react';
 import axios from 'axios';
-import PictureCard from './PictureCard'
+import PictureCard from './PictureCard';
 
 export default function MainPage (){
-    const [picture, setPicture] = useState ([]);
+    const [picture, setPicture] = useState ({});
     
 
     useEffect(() => {
@@ -18,9 +18,13 @@ export default function MainPage (){
           });
       }, []);
       return (
-        
-        <div>
-           <PictureCard/>
+        <div className= "container">
+        < img src={picture.hdurl} alt="yadda"/>
+        <div className = "texts">
+            <h2 className = "copyright">{picture.copyright}</h2>
+            <p className = "explanation">{picture.explanation}</p>
+            <p className = "date">{picture.date}</p>
+        </div>
         </div>
 
       )
@@ -34,5 +38,5 @@ export default function MainPage (){
 
   
 
-  //export default MainPage;
+
 
