@@ -4,7 +4,7 @@ body {
 .date {
   float: left;
 }
-.imgSingle {
+img .imgSingle {
   margin-left: 150px;
   margin-right: 50px;
   flex-direction: row;
