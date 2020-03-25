@@ -8,16 +8,17 @@ function CardData() {
     const [picture, setPicture] = useState([]);
     useEffect(() => {
         axios
-        .get("GET https://api. nasa.gov/planetary/apod")
+        .get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
         .then(response => {
-            // setPicture(response);
-            console.log(response);
+            setPicture(response);
+            console.log("The returned response is:",response);
         })
         .catch(error => [console.log("Something went wront, we couldn't get any data", error)]);
     },[]);
+    console.log("The picture returned is:",picture);
     return (
         <div className="">
-        <CreateCard />
+        <CreateCard copyright={picture.data.copyright} date={picture.data.date} />
         </div>
     )
 };
