@@ -5,7 +5,7 @@ import CreateCard from "./CreateCard";
 
 
 function CardData() {
-    const [picture, setPicture] useState([]);
+    const [picture, setPicture] = useState([]);
     useEffect(() => {
         axios
         .get("GET https://api. nasa.gov/planetary/apod")
@@ -15,9 +15,11 @@ function CardData() {
         })
         .catch(error => [console.log("Something went wront, we couldn't get any data", error)]);
     },[]);
-    return {
+    return (
+        <div className="">
         <CreateCard />
-    }
+        </div>
+    )
 };
 
 
