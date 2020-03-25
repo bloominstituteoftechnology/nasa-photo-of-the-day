@@ -15,6 +15,9 @@ function CardData() {
         })
         .catch(error => [console.log("Something went wront, we couldn't get any data", error)]);
     },[]);
+    return {
+        <CreateCard />
+    }
 };
 
 
