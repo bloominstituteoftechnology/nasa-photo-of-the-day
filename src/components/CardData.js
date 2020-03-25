@@ -10,15 +10,24 @@ function CardData() {
         axios
         .get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
         .then(response => {
-            setPicture(response);
-            console.log("The returned response is:",response);
+            setPicture(response.data);
+            // console.log("The returned response is:",response.data);
         })
         .catch(error => [console.log("Something went wront, we couldn't get any data", error)]);
     },[]);
-    console.log("The picture returned is:",picture);
+    console.log("The picture data returned is:",picture);
     return (
         <div className="">
-        <CreateCard copyright={picture.data.copyright} date={picture.data.date} />
+        <CreateCard 
+        copyright={picture.copyright} 
+        date={picture.date} 
+        explanation={picture.explanation}
+        url = {picture.url}
+        title = {picture.title}
+        media_type = {picture.media_type}
+        hdurl = {picture.hdurl}
+        
+          />
         </div>
     )
 };
