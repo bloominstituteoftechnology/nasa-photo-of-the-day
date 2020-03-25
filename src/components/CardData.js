@@ -9,5 +9,13 @@ function CardData() {
     useEffect(() => {
         axios
         .get("GET https://api. nasa.gov/planetary/apod")
-    })
-}
+        .then(response => {
+            // setPicture(response);
+            console.log(response);
+        })
+        .catch(error => [console.log("Something went wront, we couldn't get any data", error)]);
+    },[]);
+};
+
+
+export default CardData;
