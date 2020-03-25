@@ -1,16 +1,24 @@
 import React from "react";
 
-import "./card.less";
+import "./card.css";
 
 function CreateCard (props) {
 return (
     <div>
         <h1>{props.title} by {props.copyright}</h1>
-            <img src={props.url} />
-            <p className="">{props.date}</p>
+        <div className="imgSingle">
+            <img  src={props.url} />
+        </div>
             <p></p>
-            <h2>Description</h2>
-            <p className="">{props.explanation}</p>
+            <div className="date">
+                <h2 >Description</h2>
+                <p>{props.date}</p>
+
+            </div>
+            <br></br>
+            <p></p>
+            <p></p>
+            <p className="paraDesc">{props.explanation}</p>
         </div>
 )
 }
