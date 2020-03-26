@@ -1,23 +1,34 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 
+import dummyData from "./dummydata";
 import CreateCard from "./CreateCard";
-
+// console.log("Actual Dummy data data", Data);
 
 function CardData() {
+    // const [picture] = useState([dummyData]);
     const [picture, setPicture] = useState([]);
     useEffect(() => {
         axios
-        .get("https://api.nasa.gov/pl anetary/apod?api_key=DEMO_KEY")
+        // "https://api.nasa.gov/planeta ry/apod?api_key=DEMO_KEY"
+        .get("http://localhost/dummydata.js")
         .then(response => {
-            setPicture(response.data);
-            // console.log("The returned response is:",response.data);
+            setPicture(response);
+            console.log("The returned response is:",response);
         })
-        .catch(error => [console.log("Something went wront, we couldn't get any data", error)]);
+        .catch(error => [console.log("Something went wrong, we couldn't get any data", error)]);
     },[]);
+        // {
+//     const [picture] = setPicture(Data);
+// },[]);
+    // console.log("The picture data returned is:",picture);
+//     useEffect(() => {
+        
+    // setPicture({Data});
+//     console.log("The dummydata file is", picture);
+// },[]);
 
-    // setPicture("./");
-    console.log("The picture data returned is:",picture);
+alert("The picture.copyright prop is",picture.copyright);
     return (
         <div className="">
         <CreateCard 
