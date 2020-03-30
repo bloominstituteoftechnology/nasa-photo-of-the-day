@@ -48,7 +48,6 @@ function CardData() {
         title = {picture.title}
         media_type = {picture.media_type}
         hdurl = {picture.hdurl}
-
           />
         </div>
     )
