@@ -34,27 +34,27 @@ increase size of Title, center text
 
     <StyledDiv>
         <Row>
-            <Col sm="10">
-        <Card>
-            <CardTitle>{props.title} by {props.copyright === undefined ? "unknown" : props.copyright }</CardTitle>
-                <CardBody>
-                    <StyledImage >
-                        <CardImg  src={props.url} alt=""/>
-                    </StyledImage>
-                    
-                        <p></p>
-                        <div className="date">
-                            <CardSubtitle >Description</CardSubtitle>
-                            <p>{props.date}</p>
+            <Col sm="12">
+                <Card>
+                    <CardTitle>{props.title} {props.copyright === undefined ? "(No Credit given.)" : "by"+props.copyright }</CardTitle>
+                        <CardBody>
+                            <StyledImage >
+                                <CardImg  src={props.url} alt=""/>
+                            </StyledImage>
+                            
+                                <p></p>
+                                <div className="date">
+                                    <CardSubtitle >Description</CardSubtitle>
+                                    <p>{props.date}</p>
 
-                        </div>
-                        <br></br>
-                        <p></p>
-                        <p></p>
-                        <CardText className="paraDesc">{props.explanation}</CardText>
-                </CardBody>
-        </Card>
-        </Col>
+                                </div>
+                                <br></br>
+                                <p></p>
+                                <p></p>
+                                <CardText className="paraDesc">{props.explanation}</CardText>
+                        </CardBody>
+                </Card>
+            </Col>
         </Row>
     </StyledDiv>
 )
