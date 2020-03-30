@@ -3,7 +3,7 @@ import React from "react";
 import "./card.css";
 
 function CreateCard (props) {
-    console.log(props);
+    console.log("The props from CreateCard", props);
 return (
     <div>
         <h1>{props.title} by {props.copyright}</h1>

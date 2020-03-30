@@ -10,10 +10,10 @@ function CardData() {
     const [picture, setPicture] = useState([]);
     useEffect(() => {
         axios
-        // "https://api.nasa.gov/planeta ry/apod?api_key=DEMO_KEY"
-        .get("http://localhost/dummydata.js")
+        .get ("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
+        //.get("http://localhost/dummydata.js")
         .then(response => {
-            setPicture(response);
+            setPicture(response.data);
             console.log("The returned response is:",response);
         })
         .catch(error => [console.log("Something went wrong, we couldn't get any data", error)]);
@@ -28,7 +28,8 @@ function CardData() {
 //     console.log("The dummydata file is", picture);
 // },[]);
 
-alert("The picture.copyright prop is",picture.copyright);
+//alert("The picture.copyright prop is",picture.copyright);
+    console.log("The picture data returned is:",picture);
     return (
         <div className="">
         <CreateCard 
