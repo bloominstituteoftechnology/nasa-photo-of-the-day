@@ -1,16 +1,19 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 
-import dummyData from "./dummydata";
+
+//import dummyData from "./dummydata";
 import CreateCard from "./CreateCard";
-// console.log("Actual Dummy data data", Data);
+
+import {UncontrolledAlert} from 'reactstrap';
+
 
 function CardData() {
     // const [picture] = useState([dummyData]);
     const [picture, setPicture] = useState([]);
     useEffect(() => {
         axios
-        .get ("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
+        .get ("https://api.nasa.gov/planetary/ap od?api_key=DEMO_KEY")
         //.get("http://localhost/dummydata.js")
         .then(response => {
             setPicture(response.data);
@@ -29,9 +32,14 @@ function CardData() {
 // },[]);
 
 //alert("The picture.copyright prop is",picture.copyright);
-    console.log("The picture data returned is:",picture);
+    //console.log("The picture data returned is:",picture);
+
+
     return (
         <div className="">
+            <UncontrolledAlert color="primary">
+                Photos provided by Nasas APOD API
+            </UncontrolledAlert>
         <CreateCard 
         copyright={picture.copyright} 
         date={picture.date} 
