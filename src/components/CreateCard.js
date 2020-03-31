@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import {
     Alert, Card, CardImg, CardText, CardBody, 
-    CardTitle, CardSubtitle, Button, Row, Col
+    CardTitle, CardSubtitle, Row, Col
             } from 'reactstrap';
 
 
@@ -49,6 +49,8 @@ function CreateCard (props) {
     const StyledImage = styled.div `
         max-width: 80%;
         margin: 0 auto;
+        border-radius: 15px;
+        box-shadow: 3px 3px 25px 26px #ccc;
     `;
     const CenterCard = styled(Card)`
         margin: 0 auto;
@@ -74,12 +76,19 @@ function CreateCard (props) {
     `;
 
     const Button = styled.button`
+        white-space: normal;
+        max-width: 300px;
+        height: 400px;
         font-size: 1em;
         margin: 1em;
         padding: 0.25em 1em;
         border-radius: 5px;
         color: ${props => (!props.primary ? 'black' : 'white')};
-        ${props => (props.primary ? 'background: #2196f3;' : 'background: black;')}
+        ${props => (props.primary ? 'background: black;' : 'background: #2196f3;')}
+        &:hover {
+            color: ${props => (!props.primary ? 'white' : 'black')};
+            ${props => (props.primary ? 'background: #2196f3;' : 'background: black;')}
+        }
         `; 
 
 
@@ -98,7 +107,7 @@ increase size of Title, center text
                                 <CardImg  src={props.url} alt=""/>
                             </StyledImage>
                                 <p></p>
-                                <Button as="a" href={props.hdurl} target= "_blank" primary >HD Image (in a seperate window)</Button>
+                                <Button primary as="a" href={props.hdurl} target= "_blank"  >HD Image (in a seperate window)</Button>
                                 <div className="date">
                                     <BigCardSubTitle >Picture Description</BigCardSubTitle>
                                     <DaySubTitle>{props.dateStamp}</DaySubTitle>
@@ -111,7 +120,7 @@ increase size of Title, center text
             </Col>
         </Row>
         <p></p>
-<p></p>}
+<p></p>
 </StyledDiv>
     )
 };

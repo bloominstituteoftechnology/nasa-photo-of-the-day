@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
+import DatePicker from 'react-date-picker';
 
 
 //import dummyData from "./dummydata";
@@ -10,10 +11,25 @@ import {UncontrolledAlert} from 'reactstrap';
 
 function CardData() {
     // const [picture] = useState([dummyData]);
+    function getDate() {
+        const todaysDate = new Date();
+        const dd = todaysDate.getDate();
+        let mm = todaysDate.getMonth()+1;
+        const yyyy = todaysDate.getFullYear();
+        if(dd<10) {
+            dd ='0'+dd;
+        }
+        if (mm<10) {
+            mm = '0'+mm;
+        }
+        const today = yyyy+'-'+mm+'-'+dd;
+        return today;
+    }
+
     const [picture, setPicture] = useState([]);
     useEffect(() => {
         axios
-        .get ("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
+        .get ("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date="+getDate())
         //.get("http://localhost/dummydata.js")
         .then(response => {
             setPicture(response.data);
