@@ -17,10 +17,12 @@ function CardData() {
         //.get("http://localhost/dummydata.js")
         .then(response => {
             setPicture(response.data);
+
             console.log("The returned response is:",response);
         })
         .catch(error => [console.log("Something went wrong, we couldn't get any data", error)]);
     },[]);
+
         // {
 //     const [picture] = setPicture(Data);
 // },[]);
@@ -42,7 +44,7 @@ function CardData() {
             </UncontrolledAlert>
         <CreateCard 
         copyright={picture.copyright} 
-        date={picture.date} 
+        dateStamp={picture.date} 
         explanation={picture.explanation}
         url = {picture.url}
         title = {picture.title}

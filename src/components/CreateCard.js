@@ -7,12 +7,40 @@ import {
 
 
 // import "./card.css";
+function Type(x) { 
+    if (x === null) {
+        return 'Null';
+    }
 
+    switch (typeof x) {
+    case 'undefined': return 'Undefined';
+    case 'boolean'  : return 'Boolean';
+    case 'number'   : return 'Number';
+    case 'string'   : return 'String';
+    default         : return 'Object';
+    }
+}
+
+function Count(word) {
+    let lengthOfWord = 0;
+    while(word[lengthOfWord] !== undefined)
+        lengthOfWord++;
+    return lengthOfWord;
+}
 
 function CreateCard (props) {
     console.log("The props from CreateCard", props);
-    const StyledHeading = styled.h1 ``;
-    const StyledHeadTwo = styled.h2 ``;
+    // var pictureDate = "";
+    const pictureDate = props.dateStamp;
+    // console.log(Type(pictureDate));
+    // console.log("The contents of pictureDate variable", pictureDate);
+    // console.log("The length of pictureDate is: ",Count(pictureDate));
+    // const pictureDay = props.date.slice(props.date.length-2, props.date.length);
+    // const pictureMonth = props.date.slice(props.date.length-5, props.date.length-3);
+    // const pictureYear = props.date.slice(0, 3);
+    // console.log("The Date is: ",pictureDay+"-"+pictureMonth+"-"+pictureYear);
+    // const StyledHeading = styled.h1 ``;
+    // const StyledHeadTwo = styled.h2 ``;
     const StyledDiv = styled.div `
     max-width: 90%;
     margin: 0 auto
@@ -45,30 +73,36 @@ function CreateCard (props) {
         font-size: 15px;
     `;
 
+    const Button = styled.button`
+        font-size: 1em;
+        margin: 1em;
+        padding: 0.25em 1em;
+        border-radius: 5px;
+        color: ${props => (!props.primary ? 'black' : 'white')};
+        ${props => (props.primary ? 'background: #2196f3;' : 'background: black;')}
+        `; 
+
+
     return (
 /*Styling
-Center card/image
+Center card/image 
 increase size of Title, center text
-
 */
-
-
     <StyledDiv>
         <Row>
             <Col sm="12">
                 <CenterCard>
-                    <BigCardTitle>{props.title} {props.copyright === undefined ? "(No Credit given.)" : "by"+props.copyright }</BigCardTitle>
+                    <BigCardTitle>{props.title} {props.copyright === undefined ? "(No Credit given.)" : "by "+props.copyright }</BigCardTitle>
                         <CardBody>
                             <StyledImage >
                                 <CardImg  src={props.url} alt=""/>
                             </StyledImage>
-                            
                                 <p></p>
+                                <Button as="a" href={props.hdurl} target= "_blank" primary >HD Image (in a seperate window)</Button>
                                 <div className="date">
-                                    <BigCardSubTitle >Description</BigCardSubTitle>
-                                    <DaySubTitle>{props.date}</DaySubTitle>
+                                    <BigCardSubTitle >Picture Description</BigCardSubTitle>
+                                    <DaySubTitle>{props.dateStamp}</DaySubTitle>
                                 </div>
-                                <br></br>
                                 <p></p>
                                 <FormatText>{props.explanation}</FormatText>
                                 <p></p>
@@ -76,9 +110,11 @@ increase size of Title, center text
                 </CenterCard>
             </Col>
         </Row>
-    </StyledDiv>
-)
-}
+        <p></p>
+<p></p>}
+</StyledDiv>
+    )
+};
 
 export default CreateCard;
 
