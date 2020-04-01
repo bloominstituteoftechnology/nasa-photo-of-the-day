@@ -108,9 +108,10 @@ increase size of Title, center text
                             </StyledImage>
                                 <p></p>
                                 <Button primary as="a" href={props.hdurl} target= "_blank"  >HD Image (in a seperate window)</Button>
+                                <p></p>
                                 <div className="date">
-                                    <BigCardSubTitle >Picture Description</BigCardSubTitle>
                                     <DaySubTitle>{props.dateStamp}</DaySubTitle>
+                                    <BigCardSubTitle >Picture Description</BigCardSubTitle>
                                 </div>
                                 <p></p>
                                 <FormatText>{props.explanation}</FormatText>

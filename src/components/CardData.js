@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, Component} from "react";
 import axios from "axios";
 import DatePicker from 'react-date-picker';
 
@@ -13,11 +13,12 @@ function CardData() {
     // const [picture] = useState([dummyData]);
     function getDate() {
         const todaysDate = new Date();
-        const dd = todaysDate.getDate();
+        let dd = todaysDate.getDate();
         let mm = todaysDate.getMonth()+1;
         const yyyy = todaysDate.getFullYear();
         if(dd<10) {
-            dd ='0'+dd;
+            console.log(dd);
+            dd = '0' + dd;
         }
         if (mm<10) {
             mm = '0'+mm;
@@ -52,12 +53,20 @@ function CardData() {
 //alert("The picture.copyright prop is",picture.copyright);
     //console.log("The picture data returned is:",picture);
 
+    // class MyDate extends Component {
+    //     state = {
+    //         date: new Date(),
+    //     }
+    // }
 
     return (
         <div className="">
             <UncontrolledAlert color="primary">
                 Photos provided by Nasas APOD API
             </UncontrolledAlert>
+            <p>Select Date</p>
+            <DatePicker />
+            <p></p>
         <CreateCard 
         copyright={picture.copyright} 
         dateStamp={picture.date} 
