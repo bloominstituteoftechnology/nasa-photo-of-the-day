@@ -1,0 +1,14 @@
+.navMain {
+    border: 1px red solid;
+    height: 100vh;
+    width: 100px;
+    z-index: 100;
+    background-color: lightgray;
+    position: fixed;
+    top:0;
+    left: 0;
+}
+
+.expandBtn{
+
+}
