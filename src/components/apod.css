@@ -1,0 +1,15 @@
+.mainParentDiv{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    /* border:red 1px solid; */
+    width: fit-content;
+    margin-left: 200px;
+}
+
+.titleHead{
+    /* background-color: cyan; */
+   
+    width: 100%;
+}
