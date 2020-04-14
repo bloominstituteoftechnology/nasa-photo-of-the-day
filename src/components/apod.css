@@ -7,7 +7,13 @@
     width: fit-content;
     margin-left: 200px;
 }
-
+.cardDiv{
+    width: 50vw;
+    border: 5px solid blue;
+    background-color: grey;
+    border-radius: 5px;
+    padding: 5px;
+}
 .titleHead{
     /* background-color: cyan; */
    

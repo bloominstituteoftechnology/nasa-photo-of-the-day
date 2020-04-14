@@ -1,6 +1,10 @@
-import React, { useState, useEffect} /*{useState, useEffect}*/ from "react";
+import React, { useState, useEffect} from "react";
 import axios from "axios";
-// import ApodCard from './cards/ApodCard';
+import Discription from "./conainter/Discription";
+import ImageCont from "./conainter/ImageCont";
+
+
+// import ImageCont from "./conainter/ImageCont"
 
 import './apod.css';
 //apiKey
@@ -12,6 +16,14 @@ import {apiKey} from "../private/private";
 export default function Apod () {
 
     const [data, setData]= useState({});
+    
+    const [image,setImage]= useState({});
+    const [date, setDate] = useState([]);
+    const [exp, setExp] = useState([]);
+    const [title, setTitle] = useState([]);
+
+
+    
   
     
     useEffect(() => {
@@ -19,39 +31,42 @@ export default function Apod () {
             .then(res => {
                 console.log(res.data);
                 setData(res.data);
+                setImage(res.data.hdurl);
+                setExp(res.data.explanation);
+                // setTitle(res.data.title);
+                // setDate(res.data.date);
             })
+         
+
+          
             .catch(err => {
                 console.log(err);
             })
        
     }, []);
     return  (<div className="mainParentDiv">
+       <div className="cardDiv">
+
        <div className="titleHead">
-            <h1>{data.title}</h1>
+            
                 <p>{data.date}</p>
         </div>
        <div className="imageDiv"
        style={{
         width:"100%",
         display:"flex",
-        flexDirection:"column-reverse"
+        flexDirection:"column",
+       alignItems:"center"
        }}
        >
-           <p 
-           style={{
-               width:"50%",
-               alignSelf:"center"
-           }}
-           >{data.explanation}</p>
-       <img src={data.url} alt=""
-       style={{
-        marginTop:"10px",   
-        width:"25%",
-           borderRadius:"5%",
-           border:"3px grey solid",
-           alignSelf:"center"
-       }}
-       />
+            <ImageCont 
+           image={image}
+           /> 
+     <Discription
+                    exp={exp}
+                />
+    
+      </div>
       </div>
         </div> 
         );
@@ -61,31 +76,5 @@ export default function Apod () {
 
 
 
-// class Apod extends Component {
-    // state = {
-    //     nasa: []
-    // }
-   
-    // componentDidMount() {
-   
-    //     axios.get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}` )
-    //     .then (res => { 
-    //         console.log(res)
-    //     })
-    //     .catch (err => {
-    //         console.log(err)
-    //     })
-    // }
-//     render() {
-        
-//         return (
 
-//             <div>
-//                 <p>Text here</p>
-//             </div>
-//         )
-//     }
-// }
-
-// export default Apod
 

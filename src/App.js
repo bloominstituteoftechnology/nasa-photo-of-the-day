@@ -3,6 +3,7 @@ import "./App.css";
 //I.C.E.
 import NavBar from "./components/NavBar";
 import Apod from "./components/Apod";
+// import Cards from "./components/conainter/Cards"
 
 
 
@@ -23,13 +24,11 @@ function App() {
       <div>
       <NavBar items={items} />
       </div>
+      {/* <Cards /> */}
       <div>
         <Apod />
       </div>
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+ 
     </div>
   );
 }
