@@ -1,4 +1,5 @@
 import React from "react";
+import PicGrid from "./PicGrid"
 import "./App.css";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
         Read through the instructions in the README.md file to build your NASA
         app! Have fun 🚀!
       </p>
+      <PicGrid />
     </div>
   );
 }
