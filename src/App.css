@@ -37,16 +37,17 @@
   }
 }
 body{
-  background-color: rgb(92, 102, 99);
+  /* background-color: rgb(92, 102, 99); */
+  background-image: radial-gradient(rgb(44, 38, 38), rgb(63, 40, 84), rgb(12, 3, 79));
 }
 .heading{
-  color:rgb(39, 11, 200);
+  color:rgb(109, 157, 113);
   font-family: 'Lobster', cursive;
   text-shadow: 3px 3px white;
   font-size:4rem;
 }
 img{
-  box-shadow: 5px 5px 5px rgb(95, 86, 86);
+  box-shadow: 4px 4px 4px 4px rgb(20, 20, 20);
 }
 .explanation{
   max-width: 80%;
@@ -56,11 +57,15 @@ img{
   text-shadow: 2px 2px 2px black;
 }
 .button-wrapper{
-  padding:5px;
+  padding-top:15px;
 }
 .button{
-  background-color: rgb(39, 11, 200);
+  background-color: rgb(109, 157, 113);
+  color:white;
   border: none;
   border-radius:8px;
   padding: 12px;
+}
+.button:hover{
+  box-shadow: 3px 3px 3px 3px black;
 }
