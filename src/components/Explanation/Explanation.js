@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ExplaWrapper } from './ExplanationStyles';
+import { ExplaWrapper, ExplaText } from './ExplanationStyles';
 
 const Expla = props => {
     return (
         <ExplaWrapper>
-            <p>{props.expla}</p>
+            <ExplaText>{props.expla}</ExplaText>
         </ExplaWrapper>
     );
 };
