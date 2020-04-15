@@ -1,0 +1,30 @@
+
+  .search-form {
+    width: 150px;
+    font-size: 14px;
+    margin-left: 100px;
+  }
+  .search-form input {
+    text-align: center;
+    color: #262626;
+    background-color: #fafafa;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+
+  
+  .iconMain {
+    font-size: 40px;
+    border: 1px dotted black;
+    padding: 5px;
+    cursor: pointer;
+    filter: brightness(0) invert(1);
+  }
+  
+   
+
+
+  
+  
+ 

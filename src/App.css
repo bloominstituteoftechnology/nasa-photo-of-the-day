@@ -1,6 +1,11 @@
 .App {
   text-align: center;
 }
+@font-face {
+  font-family: 'nasalization-rg.ttf';
+  src: 
+       url('./assets/nasalization-rg.ttf') format('truetype');
+}
 
 .App-logo {
   height: 40vmin;
