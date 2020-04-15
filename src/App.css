@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+body{
+  background-color: rgb(92, 102, 99);
+}
+.heading{
+  color:rgb(39, 11, 200);
+  font-family: 'Lobster', cursive;
+  text-shadow: 3px 3px white;
+  font-size:4rem;
+}
+img{
+  box-shadow: 5px 5px 5px rgb(95, 86, 86);
+}
+.explanation{
+  max-width: 80%;
+  padding-left: 11%;
+  font-size: 1rem;
+  color:white;
+  text-shadow: 2px 2px 2px black;
+}
+.button-wrapper{
+  padding:5px;
+}
+.button{
+  background-color: rgb(39, 11, 200);
+  border: none;
+  border-radius:8px;
+  padding: 12px;
+}

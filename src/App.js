@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from 'axios';
+import DropDown from "./DropDown";
 
 function App () {
   const[nasaPic, setNasaPic] = useState({data:[]});
@@ -17,14 +18,16 @@ function App () {
   },[])
   return (
     <div className="App">
-      <h1>NASA Pic of the day!</h1>  
+      <h1 className="heading">NASA Pic of the day!</h1>  
+    
  
       <img 
         src={nasa.url} 
         alt='Nasa Pic of the Day'
         key={nasa.id} 
       />
-  <p>{nasa.explanation}</p>
+        <DropDown />
+  <p className="explanation">{nasa.explanation}</p>
 
       
     </div>
