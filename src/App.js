@@ -3,8 +3,9 @@ import "./App.css";
 //I.C.E.
 import NavBar from "./components/NavBar";
 import Apod from "./components/Apod";
-// import Cards from "./components/conainter/Cards"
 
+// import Cards from "./components/conainter/Cards"
+// import WeatherOnMars from "./components/WeatherOnMars";
 
 
 //NavBar Items array
@@ -28,7 +29,9 @@ function App() {
       <div>
         <Apod />
       </div>
- 
+    <div>
+      {/* <WeatherOnMars /> */}
+    </div>
     </div>
   );
 }

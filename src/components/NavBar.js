@@ -1,5 +1,6 @@
 import React from "react";
 import './navBar.css';
+
 // material-ui imports
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
@@ -14,7 +15,9 @@ function NavBar({ items }) {
             <List disablePadding dense>
                 {items.map(({ label, name, items: subItems, ...rest }) => {
                     return (
+                        
                         <React.Fragment key={name}>
+                            
                             <ListItem style={{  backgroundColor:"grey", width:"min-content", height: "min-content", margin: 5, }} button {...rest}>
                                 <ListItemText>{label}</ListItemText>
                             </ListItem>
