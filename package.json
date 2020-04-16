@@ -6,9 +6,17 @@
     "@testing-library/jest-dom": "^5.5.0",
     "@testing-library/react": "^10.0.2",
     "@testing-library/user-event": "^10.0.1",
+    "axios": "^0.19.2",
+    "bootstrap": "^4.4.1",
+    "moment": "^2.24.0",
     "react": "^16.13.1",
+    "react-date": "^2.0.0",
+    "react-datetime": "^2.16.3",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "react-time": "^4.3.0",
+    "reactstrap": "^8.4.1",
+    "styled-components": "^5.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
