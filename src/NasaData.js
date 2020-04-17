@@ -18,25 +18,22 @@ import axios from "axios";
 
 export default function NasaData ()  {
 
-const [nasaHook, setNasaHook] = useState();
-const [error, setError] = useState();
 
-useEffect (() => {
-
-
-    axios
-    .get("https://api.nasa.gov/planetary/apod?api_key=uwFm0A2Sz2njqOFFhhdPTxl5kDoTCylXcuaa1uN5")
-    .then(res => console.log(res.data))
-    .catch(err => setError(console.log("Oops, the moon disappeared....")))
-
-}, [])
 
 
 
 return (
 
-<div></div>
+<div>
+       {nasaHook.map((data) => {
 
-)
 
-}
+
+
+ })
+
+
+       }</div>) 
+
+
+    }

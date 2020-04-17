@@ -1,2 +1,0 @@
-//Props?: Yes
-//State?: Yes
