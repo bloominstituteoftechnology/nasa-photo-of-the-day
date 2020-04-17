@@ -48,14 +48,9 @@ body{
 }
 img{
   box-shadow: 4px 4px 4px 4px rgb(20, 20, 20);
+  max-width: 30%;
 }
-.explanation{
-  max-width: 80%;
-  padding-left: 11%;
-  font-size: 1rem;
-  color:white;
-  text-shadow: 2px 2px 2px black;
-}
+
 .button-wrapper{
   padding-top:15px;
 }
