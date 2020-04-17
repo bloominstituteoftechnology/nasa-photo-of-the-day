@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from "styled-components";
+import { InputGroup, Input } from 'reactstrap';
 
 const Title = styled.h1`
     font-size: 36px;
@@ -12,7 +13,6 @@ const Title = styled.h1`
     
 `;
 
-
 const Date = styled.p`
     font-size: 30px;
 `;
@@ -23,7 +23,12 @@ const Explanation = styled.p`
     margin-left: auto;
     margin-right: auto;
     width: 30em;
+`;
 
+const Img = styled.img `
+    border-radius: 10%;
+    width: 50%;
+    height: 50%;
 `;
 
 
@@ -36,7 +41,7 @@ const Card = props => {
             <Date>
                 <p>{props.date}</p>
             </Date>
-                <img src = {props.imgUrl}></img> 
+                <Img src = {props.imgUrl} />
             <div>
             <Explanation>
                 <p>{props.explanation}</p>

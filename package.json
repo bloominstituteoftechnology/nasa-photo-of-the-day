@@ -10,6 +10,7 @@
     "bootstrap": "^4.4.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-dropdown-date": "0.0.18",
     "react-scripts": "3.4.0",
     "reactstrap": "^8.4.1",
     "styled-components": "^5.1.0"
