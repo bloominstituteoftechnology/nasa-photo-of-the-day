@@ -22,7 +22,7 @@ export default function PhotoList() {
 	const didUpdate = () => {
 		axios
 			.get(
-				`http://api.nasa.gov/planetary/apod?api_key=gYnwcG4GoyOCmTLGsqfyDSusWt7fp5sEQwyqJFvZ&date=${photoDate}` //SET CURRENT STATE
+				`https://api.nasa.gov/planetary/apod?api_key=gYnwcG4GoyOCmTLGsqfyDSusWt7fp5sEQwyqJFvZ` //SET CURRENT STATE
 			)
 			.then((res) => {
 				console.log(res.data);
