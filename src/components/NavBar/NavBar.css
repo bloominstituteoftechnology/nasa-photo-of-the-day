@@ -2,7 +2,7 @@
   .search-form {
     width: 150px;
     font-size: 14px;
-    margin-left: 100px;
+    margin-left: 450px;
   }
   .search-form input {
     text-align: center;
@@ -22,6 +22,10 @@
     filter: brightness(0) invert(1);
   }
   
+
+  .dropdown {
+    margin-left: 40px;
+  }
    
 
 

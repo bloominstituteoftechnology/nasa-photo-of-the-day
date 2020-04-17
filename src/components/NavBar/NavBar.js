@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from 'styled-components';
 import "./NavBar.css";
-import { HeaderWrapper, ImgWrapper, LogoText, IconMain } from './NavBarStyles';
+import { HeaderWrapper, ImgWrapper, LogoText, IconMain, DropDownBar } from './NavBarStyles';
+import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+
 
 
 
@@ -10,6 +12,7 @@ const NavBar = () => {
     <HeaderWrapper>
 
       <ImgWrapper>
+
       <IconMain className="fas fa-user-astronaut iconMain"></IconMain>
    
         <LogoText>NASA Photo Of The Day</LogoText>
@@ -23,10 +26,34 @@ const NavBar = () => {
         />
       </form>
 
+<DropDownBar>
+  <DropDown></DropDown>
+</DropDownBar>
     
-
+   
     </HeaderWrapper>
   );
 };
 
 export default NavBar;
+
+
+
+const DropDown = (props) => {
+  const [dropdownOpen, setOpen] = useState(false);
+
+  const toggle = () => setOpen(!dropdownOpen);
+
+  return (
+    <ButtonDropdown isOpen={dropdownOpen} toggle={toggle}>
+      <DropdownToggle caret>
+        Menu
+      </DropdownToggle>
+      <DropdownMenu>
+        <DropdownItem>Photo Archive</DropdownItem>
+      </DropdownMenu>
+    </ButtonDropdown>
+  );
+}
+
+export { DropDown };

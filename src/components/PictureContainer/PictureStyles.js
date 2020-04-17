@@ -2,7 +2,13 @@ import styled from "styled-components";
 
 const PictureWrapper = styled.div`
 
-    margin: 30px;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 20px 140px;
+    width: 80%;
+    height: 78vh;
+    
+    
     border-radius: 10px;
     background: linear-gradient(to top, #c337637c, #1d257180);
     border: 2px solid black;
@@ -11,7 +17,7 @@ const PictureWrapper = styled.div`
 
     const Picture = styled.img`
         margin: 10px;
-        height: 80vh;
+        height: auto;
         width: 50%;
         border: 1px solid black;
         `;

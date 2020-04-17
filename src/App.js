@@ -35,7 +35,6 @@ const App = () => {
   return (
     <div className="App">
       <NavBar />
-      <Information title={title} date={date}/>
       <Pictures pic={pic}/>
       <Expla expla={expla} />
     </div>

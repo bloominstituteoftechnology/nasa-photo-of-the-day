@@ -6,7 +6,7 @@ const HeaderWrapper = styled.div`
     border: 2px solid black;
     height: 100px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background: linear-gradient(to left, #b92c2798, #1565c093);
     box-shadow: 0 1px 1px 0px black;
@@ -25,6 +25,7 @@ const LogoText = styled.p`
     cursor: pointer;
     color: white;
     font-family: 'Gugi', cursive;
+    margin-top: 20px;
     `;
 
     const IconMain = styled.i`
@@ -33,10 +34,15 @@ const LogoText = styled.p`
         padding: 5px;
         cursor: pointer;
         filter: brightness(0) invert(1);
+        margin-left: 30px;
         `;
 
+        const DropDownBar = styled.div`
+            margin-right: 50px;
+            `;
 
 
 
 
-export { HeaderWrapper, ImgWrapper, LogoText, IconMain };
+
+export { HeaderWrapper, ImgWrapper, LogoText, IconMain, DropDownBar };
