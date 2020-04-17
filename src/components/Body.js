@@ -4,18 +4,14 @@
 import React from 'react';
 
 
-// function nasaBody (props) {
+function NasaBody (props) {
+    return (
+        <article>
+            <section> <img src={props.data.hdurl} alt="nasaimage" /></section>
+            <section> <p>Date: {props.data.date}</p></section>
+            <section> <p>Description: {props.data.explanation}</p></section>
+        </article>
+    )
+}
 
-
-//     return (
-
-
-//         <section>{props.data}</section>
-
-
-//     )
-
-
-// }
-
-export default nasaBody
+export default NasaBody;

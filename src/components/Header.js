@@ -9,7 +9,7 @@ const NasaHead = (props) => {
 
     return(
         <div>
-            <h1>{props.title}</h1>
+            <h1>{props.data.title}</h1>
 
         </div>
     )

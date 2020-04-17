@@ -1,8 +1,8 @@
 // import usestate, useeffect
 import React, {useState, useEffect} from "react";
 import NasaHead from "./components/Header";
-// import NasaBody from "./components/Body";
-// import NasaFooter from "./components/Footer";
+import NasaBody from "./components/Body";
+import NasaFooter from "./components/Footer";
 import "./App.css";
 import axios from "axios";
 
@@ -14,13 +14,15 @@ function App() {
 
   //setup useEffect for nested axios call
 
-  const [apodData, setApodData] = useState();
+  const [apodData, setApodData] = useState({data: []});
   const [error, setError] = useState(console.log("Oops, the moon disappeared...."));
+  const nasa = apodData.data;
+  console.log(nasa);
 
   useEffect (() => {
       axios
       .get("https://api.nasa.gov/planetary/apod?api_key=uwFm0A2Sz2njqOFFhhdPTxl5kDoTCylXcuaa1uN5")
-      .then(res => apodData(res.data))
+      .then(res => setApodData(res))
       .catch(err => setError(err))
   }, []);
 
@@ -37,11 +39,9 @@ function App() {
   return (
     <div className="App">  
       {/* Prop drill approprate data to components*/}
-      <NasaHead data={apodData}/>
-      {/* <NasaBody data={apodData}/> */}
-      {/* <NasaFooter data={apodData}/> */}
-
-      
+      <NasaHead data={nasa}/>
+      <NasaBody data={nasa}/>
+      <NasaFooter data={nasa}/>
     </div>
   );
 }

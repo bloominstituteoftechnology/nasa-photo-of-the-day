@@ -4,16 +4,16 @@
 import React from "react";
 
 
-// function nasaFooter (props) {
+function NasaFooter (props) {
 
 
-// return (
+return (
 
-// <div>{props.data}</div>
+<section><p>Copyright: {props.data.copyright} </p></section>
 
-// )
+)
 
 
-// }
+}
 
-export default nasaFooter;
+export default NasaFooter;
