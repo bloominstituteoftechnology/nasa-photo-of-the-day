@@ -2,6 +2,7 @@
 //State?: Yes
 
 import React from "react";
+import NasaBG from "../Styles";
 
 
 function NasaFooter (props) {
@@ -9,7 +10,7 @@ function NasaFooter (props) {
 
 return (
 
-<section><p>Copyright: {props.data.copyright} </p></section>
+<NasaBG type="highlight"><p>Copyright: {props.data.copyright} </p></NasaBG>
 
 )
 

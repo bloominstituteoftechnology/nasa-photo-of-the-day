@@ -4,7 +4,12 @@ import NasaHead from "./components/Header";
 import NasaBody from "./components/Body";
 import NasaFooter from "./components/Footer";
 import "./App.css";
+import NasaBG from './Styles';
 import axios from "axios";
+
+
+
+
 
 
 // import axios
@@ -37,12 +42,12 @@ function App() {
   // url: "https://apod.nasa.gov/apod/image/2004/C2019Y4_20.04.13_1100px.jpg"
 
   return (
-    <div className="App">  
+    <NasaBG type='main' className="App">  
       {/* Prop drill approprate data to components*/}
       <NasaHead data={nasa}/>
       <NasaBody data={nasa}/>
       <NasaFooter data={nasa}/>
-    </div>
+    </NasaBG>
   );
 }
 

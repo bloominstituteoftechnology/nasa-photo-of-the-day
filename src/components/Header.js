@@ -2,16 +2,14 @@
 //State?: Yes
 
 import React from "react";
+import NasaBG from "../Styles";
 
 
 
 const NasaHead = (props) => {
 
     return(
-        <div>
-            <h1>{props.data.title}</h1>
-
-        </div>
+    <NasaBG type="highlight"><h1>{props.data.title} </h1></NasaBG>
     )
 };
 
