@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Card from "./Card"
+import Cards from "./Cards"
+
 
 const Content = props => {
 
@@ -18,7 +19,7 @@ const Content = props => {
 
     return (
         <div>
-                <Card date = {nasaInfo.date}  explanation = {nasaInfo.explanation} title = {nasaInfo.title} date = {nasaInfo.date} date= {nasaInfo.date} imgUrl = {nasaInfo.hdurl} />  
+                <Cards date = {nasaInfo.date}  explanation = {nasaInfo.explanation} title = {nasaInfo.title} imgUrl = {nasaInfo.hdurl} />  
           </div>         
             );        
 };

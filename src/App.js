@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import Content from "../src/components/Content";
-import Card from "../src/components/Card";
+import Cards from "../src/components/Cards";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         Read through the instructions in the README.md file to build your NASA
         app! Have fun 🚀!
       </p> */}
-      <Card />
+      <Cards />
       <Content />
     </div>
   );
