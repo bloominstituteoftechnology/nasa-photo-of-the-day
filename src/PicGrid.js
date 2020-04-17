@@ -1,7 +1,20 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import NasaHeader from "./NasaHeader";
 import NasaCard from "./NasaCard";
+import styled from 'styled-components'
 
+const Button = styled.button`
+    padding: 10px 30px;
+    margin: 30px;
+    border: none;
+    border-radius: 8px;
+    color: black;
+    backgroun-color: white;
+
+    ${props => (props.type ==='NASA' ? `background: #2196f3;` : null)}
+
+`;
 
 function PicGrid() {
     const [nasaData, setNasaData] = useState({})
@@ -17,11 +30,11 @@ function PicGrid() {
     }, []);
 
     return (
-        <div className="container">
-            <button>pic</button>
+        <div className="Container">
             <div className="entry">
-
-                <NasaCard {...nasaData} />
+            <NasaHeader {...nasaData} />
+            <NasaCard {...nasaData} />
+            <Button type="NASA">Click for the next NASA photo!</Button>
 
         </div>
     </div>
