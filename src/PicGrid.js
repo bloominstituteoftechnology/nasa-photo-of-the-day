@@ -4,6 +4,7 @@ import NasaHeader from "./NasaHeader";
 import NasaCard from "./NasaCard";
 import styled from 'styled-components'
 
+
 const Button = styled.button`
     padding: 10px 30px;
     margin: 30px;
@@ -31,13 +32,14 @@ function PicGrid() {
 
     return (
         <div className="Container">
-            <div className="entry">
-            <NasaHeader {...nasaData} />
-            <NasaCard {...nasaData} />
-            <Button type="NASA">Click for the next NASA photo!</Button>
-
-        </div>
-    </div>
+        
+                <div className="entry">
+                <NasaHeader {...nasaData} />
+                <NasaCard {...nasaData} />
+                <Button type="NASA">Click for the next NASA photo!</Button>
+                </div>
+        
+            </div>
     )
 }
 export default PicGrid
