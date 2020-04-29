@@ -1,15 +1,51 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
+import axios from "axios";
+import HeaderMain from "./header/headerMain"
+import Post from "./posts/post.js";
 
 function App() {
+
+	const [nasaData,updateData] = useState({});
+
+	useEffect( () => {
+		
+		axios
+
+		.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
+		
+		.then(response => {
+
+			// displaying data from api for inspection
+			console.log(response.data)
+			
+			updateData(response.data)
+
+			console.log(`${nasaData} is the data`);
+
+		})
+
+		.catch(err => {
+
+			console.log('opps you done goofed');
+
+		});
+
+
+	}, []);
+
   return (
+    
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+
+		<HeaderMain date = {nasaData.date}/>
+
+		<Post title = {nasaData.title} date = {nasaData.date} url = {nasaData.url} desc = {nasaData.explanation}/>
+
     </div>
+  
   );
+
 }
 
 export default App;
