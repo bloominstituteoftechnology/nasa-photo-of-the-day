@@ -1,10 +1,22 @@
-.submit{
-    margin-top: 10px;
-    margin-left: 45%;
-    padding: 2px;
-    width: 10%;
-    border: 1px solid black;
+button{
+    margin-left: 2%;
 }
-.submit:focus{
+.title{
+    margin-top:30px;
+    color:purple;
+}
+img{
     border:2px solid gray;
+    padding:1px;
+    margin:20px;
+    width:70%;
+    height:500px;
+
+}
+.exp{
+    border:1px dashed lightgray;
+    padding:5px;
+    margin: 0 10px;
+    margin-bottom:30px;
+    text-align: justify;
 }

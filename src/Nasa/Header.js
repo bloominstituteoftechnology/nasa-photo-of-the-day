@@ -1,13 +1,20 @@
-import React from "react";
-//https://api.nasa.gov/planetary/apod?api_key=5jhP0qzjW14HtkX9vqAyeTOSCIaKpXToTMfmA9eJ
+import React,{setState} from "react";
 
-function header (prop){
 
-    let data = prop.data;
+function header (props){
+    //console.log(props);
+    //let [data] = setState[prop]
+    //console.log(data);
+    
 
     return (
-    <div>Hello</div>
+        <div>
+            <div className="title">Title of the Image:<br/> {props.info.title}</div>
+            <img src= {props.info.url} alt="Image of the Day"></img>
+            <p className="exp">{props.info.explanation}</p>
+        </div>
     );
+
 }
 
 export default header;
