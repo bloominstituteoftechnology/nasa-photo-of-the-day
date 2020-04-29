@@ -1,0 +1,10 @@
+.submit{
+    margin-top: 10px;
+    margin-left: 45%;
+    padding: 2px;
+    width: 10%;
+    border: 1px solid black;
+}
+.submit:focus{
+    border:2px solid gray;
+}
