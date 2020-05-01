@@ -21,13 +21,20 @@ useEffect(() =>{
 
 
 
-  return (
-    <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
-      <Planet description={nasaState.explanation} />
+    return (
+        <div className="App">
+            <p>
+                Read through the instructions in the README.md file to build your NASA
+                app! Have fun 🚀!
+            </p>
+            <Planet
+                headImage={nasaState.hdurl}
+                title={nasaState.title}
+                date={nasaState.date}
+                description={nasaState.explanation}
+                imgUrl={nasaState.url} />
+                copyright={nasaState.copyright}             
+
     </div>
   );
 }
