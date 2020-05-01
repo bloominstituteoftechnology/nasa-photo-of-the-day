@@ -20,6 +20,11 @@ function Search() {
         margin-left: 1%;
         border-radius: 15%;
         cursor: pointer;
+        &:hover {
+            font-size:1.1rem;
+            color:black;
+            background-color: #768ca3;
+        };
     `;
     const Input = styled.input`
     `;
