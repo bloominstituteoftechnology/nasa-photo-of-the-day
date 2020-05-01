@@ -1,23 +1,10 @@
 
-button{
-    margin-left: 1%;
+.hide{
+    display:none;
 }
-.title{
-    margin-top:30px;
-    color:purple;
-}
-img{
-    border:2px solid gray;
-    padding:1px;
-    margin:20px;
-    width:70%;
-    height:500px;
-
-}
-.exp{
+.info{
     border:1px dashed lightgray;
     padding:5px;
-    margin: 0 10px;
-    margin-bottom:30px;
+    margin: 30px 10px;
     text-align: justify;
 }

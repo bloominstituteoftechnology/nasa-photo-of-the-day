@@ -19,6 +19,7 @@ function Search() {
         color: white;
         margin-left: 1%;
         border-radius: 15%;
+        cursor: pointer;
     `;
     const Input = styled.input`
     `;

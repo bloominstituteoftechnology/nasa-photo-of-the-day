@@ -14,6 +14,12 @@ function header (props){
     const TitleName = styled.span`
         font-size: 2rem;
     `    
+    const Content = styled.div`
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    `
     
     const Imgs = styled.img`
         border:2px solid gray;
@@ -23,21 +29,21 @@ function header (props){
         height:500px;
     `
     
-    const Info = styled.p`
-        border:1px dashed lightgray;
-        padding:5px;
-        margin: 0 10px;
-        margin-bottom:30px;
-        text-align: justify;
-        display:none;
-    `
+    function toggle(){
+       let info = document.querySelector("p.info");
+       info.classList.toggle('hide');
+    };
+
 
     return (
         <div>
             <Title>Title of the Image:<br/> <TitleName>{props.info.title}</TitleName></Title>
-            <Imgs src= {props.info.url} alt="Image of the Day"></Imgs>
-            <button type="button" class="btn btn-light">Learn more about this picture.</button>
-            <Info>{props.info.explanation}</Info>
+            <Content>
+                <Imgs src= {props.info.url} alt="Image of the Day"></Imgs>
+                <button type="button" class="btn btn-light" onClick={toggle}>Learn More</button>
+                <p className="info hide">{props.info.explanation}</p>      
+            </Content>
+            
         </div>
     );
 
