@@ -4,6 +4,7 @@ import axios from "axios";
 import HeaderMain from "./header/headerMain"
 import Post from "./posts/post.js";
 
+
 function App() {
 
 	const [nasaData,updateData] = useState({});
@@ -12,8 +13,8 @@ function App() {
 		
 		axios
 
-		.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
-		
+		.get("https://api.nasa.gov/planetary/apod?api_key=pWpgfjxi1nYC0saBotYn7f0MzZZ0eF70Eyxp9VHW")
+
 		.then(response => {
 
 			// displaying data from api for inspection
@@ -30,7 +31,6 @@ function App() {
 			console.log('opps you done goofed');
 
 		});
-
 
 	}, []);
 

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import "./post.css";
 
 export default function PostHeader(props){
