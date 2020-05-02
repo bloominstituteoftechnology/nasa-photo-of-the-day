@@ -4,8 +4,9 @@ import axios from "axios";
 import Planet from "./components/Planet.js"
 /* import ModernDatepicker from 'react-modern-datepicker'; */
 /* import Calendar from "./CalendarComponent.js"; */
-import ReactCalendar from "react-calendar";
+/* import ReactCalendar from "react-calendar"; */
 import DatePicker from 'react-datepicker';
+import moment from 'moment';
 import 'react-datepicker/dist/react-datepicker.css';
 import "./App.css";
 
@@ -17,8 +18,11 @@ const [nasaState,setNasaState] = useState({});
 
 const [selectedDate, setSelectedDate] = useState(null)
 
-useEffect(() =>{
+    /* const [modal,setModal] = useState(false); */
 
+
+
+useEffect(() =>{
     axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
          .then((response)=>{
              console.log(response.data)
@@ -27,13 +31,16 @@ useEffect(() =>{
          .catch(error => console.log(error))
 },[])
 
-    /* const Calendar = () => {
-     *     const [date, setDate] = useState(new Date());
+    /* let dateChanger = moment(selectedDate, 'ddd MM DD YYYY') */
+    /* let datechanger = selectedDate.format('YYYY/MM/DD') */
 
-     *     const onChange = () => {
-     *         setDate(date);
-     *     }
-     * }; */
+    /* console.log(datechanger) */
+
+    /* String input = selectedDate;
+       SimpleDateFormat parser = new SimpleDateFormat("EEE MMM d HH:mm:ss zzz yyyy");
+       Date date = parser.parse(input);
+       SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+       String formattedDate = formatter.format(date);
 
     return (
         <div className="App">
@@ -41,8 +48,17 @@ useEffect(() =>{
                 Read through the instructions in the README.md file to build your NASA
                 app! Have fun 🚀!
             </p>
-            <span>Select a Date:</span>
-            <DatePicker selected={selectedDate} onChange={date => setSelectedDate(date)}/>
+            <span>Select a Date: </span>
+            <DatePicker
+                selected={selectedDate}
+                onChange={date => setSelectedDate(date)}
+                dateFormat='yyyy/MM/dd'
+            />
+           
+            <div>
+                {console.log(selectedDate)}
+                {/* {console.log(nasaState)} */}
+            </div>
             <Planet
                 headImage={nasaState.hdurl}
                 title={nasaState.title}
