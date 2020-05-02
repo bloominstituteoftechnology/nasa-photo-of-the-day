@@ -1,6 +1,10 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
+/* import Calendar from "react-calendar" */
 import Planet from "./components/Planet.js"
+/* import ModernDatepicker from 'react-modern-datepicker'; */
+/* import Calendar from "./CalendarComponent.js"; */
+import ReactCalendar from "react-calendar";
 import "./App.css";
 
 /* const axios = require('axios').default; */
@@ -20,6 +24,13 @@ useEffect(() =>{
 },[])
 
 
+    const Calendar = () => {
+        const [date, setDate] = useState(new Date());
+
+        const onChange = () => {
+            setDate(date);
+        }
+    };
 
     return (
         <div className="App">
@@ -32,10 +43,11 @@ useEffect(() =>{
                 title={nasaState.title}
                 date={nasaState.date}
                 description={nasaState.explanation}
-                imgUrl={nasaState.url} />
-                copyright={nasaState.copyright}             
-
-    </div>
+                imgUrl={nasaState.url}
+                copyright={nasaState.copyright}
+                />
+            <Calendar onChange={onChange} value={date} />
+        </div>
   );
 }
 

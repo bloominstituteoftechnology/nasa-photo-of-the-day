@@ -1,3 +1,18 @@
+.color.color {
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 10px 10px 5px;
+    border-bottom: 1px solid #ebebeb!important;
+    border: none;
+    box-sizing: border-box;
+    margin-top: 22px;
+    box-shadow: none;
+    font-family: Open Sans,sans-serif;
+}
+
 .App {
   text-align: center;
 }
