@@ -5,6 +5,8 @@ import Planet from "./components/Planet.js"
 /* import ModernDatepicker from 'react-modern-datepicker'; */
 /* import Calendar from "./CalendarComponent.js"; */
 import ReactCalendar from "react-calendar";
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 import "./App.css";
 
 /* const axios = require('axios').default; */
@@ -12,6 +14,8 @@ import "./App.css";
 function App() {
 
 const [nasaState,setNasaState] = useState({});
+
+const [selectedDate, setSelectedDate] = useState(null)
 
 useEffect(() =>{
 
@@ -23,14 +27,13 @@ useEffect(() =>{
          .catch(error => console.log(error))
 },[])
 
+    /* const Calendar = () => {
+     *     const [date, setDate] = useState(new Date());
 
-    const Calendar = () => {
-        const [date, setDate] = useState(new Date());
-
-        const onChange = () => {
-            setDate(date);
-        }
-    };
+     *     const onChange = () => {
+     *         setDate(date);
+     *     }
+     * }; */
 
     return (
         <div className="App">
@@ -38,6 +41,8 @@ useEffect(() =>{
                 Read through the instructions in the README.md file to build your NASA
                 app! Have fun 🚀!
             </p>
+            <span>Select a Date:</span>
+            <DatePicker selected={selectedDate} onChange={date => setSelectedDate(date)}/>
             <Planet
                 headImage={nasaState.hdurl}
                 title={nasaState.title}
@@ -46,7 +51,8 @@ useEffect(() =>{
                 imgUrl={nasaState.url}
                 copyright={nasaState.copyright}
                 />
-            <Calendar onChange={onChange} value={date} />
+            {/* <Calendar onChange={onChange} value={date} /> */}
+            
         </div>
   );
 }
