@@ -6,7 +6,7 @@ import Planet from "./components/Planet.js"
 /* import Calendar from "./CalendarComponent.js"; */
 /* import ReactCalendar from "react-calendar"; */
 import DatePicker from 'react-datepicker';
-import moment from 'moment';
+/* import moment from 'moment'; */
 import 'react-datepicker/dist/react-datepicker.css';
 import "./App.css";
 
@@ -16,14 +16,16 @@ function App() {
 
 const [nasaState,setNasaState] = useState({});
 
-const [selectedDate, setSelectedDate] = useState(null)
+const [selectedDate, setSelectedDate] = useState(null);
 
     /* const [modal,setModal] = useState(false); */
 
+    /* let dateobj = moment(selectedDate, 'ddd MM DD YYYY HH:mm:ss Z-HH:mm')
+     * let dateformatter = dateobj.format("YYYY-MM-DD") */
 
 
 useEffect(() =>{
-    axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
+    axios.get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=`)
          .then((response)=>{
              console.log(response.data)
              setNasaState(response.data)
@@ -31,16 +33,10 @@ useEffect(() =>{
          .catch(error => console.log(error))
 },[])
 
-    /* let dateChanger = moment(selectedDate, 'ddd MM DD YYYY') */
     /* let datechanger = selectedDate.format('YYYY/MM/DD') */
 
     /* console.log(datechanger) */
 
-    /* String input = selectedDate;
-       SimpleDateFormat parser = new SimpleDateFormat("EEE MMM d HH:mm:ss zzz yyyy");
-       Date date = parser.parse(input);
-       SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-       String formattedDate = formatter.format(date);
 
     return (
         <div className="App">

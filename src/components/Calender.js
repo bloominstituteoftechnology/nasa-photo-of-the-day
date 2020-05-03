@@ -1,30 +1,19 @@
 import React from 'react';
-import ModernDatepicker from 'react-modern-datepicker';
-import moment from 'moment';
+import Calendar from 'react-calendar';
 
-export default class Example extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      startDate: moment()
-    };
-    this.handleChange = this.handleChange.bind(this);
-  }
+export default  Example (props){
+    //export state to parent components
 
-  handleChange(date) {
-    this.setState({
-      startDate: date
-    });
-  }
+    const {date,setDate} = props;
 
-  render() {
-    return <ModernDatepicker
-          date={this.state.startDate}
-          format={'DD-MM-YYYY'}
-          showBorder
-          onChange={(date) => this.handleChange(date)}
-          placeholder={'Select a date'}
-        />
+
+    return( 
+          
+        Example on
+          onChange={(date) => setDate(date)}
+    )
+       
+      
   }
 }
 
