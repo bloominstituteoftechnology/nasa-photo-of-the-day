@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React from 'react';
 import { Card,  CardText, CardBody, CardTitle, CardSubtitle, InputGroup,Input} from 'reactstrap'; 
 import styled from 'styled-components'; 
@@ -27,24 +28,34 @@ const ImageCard = (props) => {
                     <StyledHeading>
                         <CardTitle>{props.titleOf}</CardTitle>
                     </StyledHeading>
+                    {(props.author) ? (
                         <CardSubtitle>-by {props.author}</CardSubtitle>
-                            <br></br>
-                            <CardTitle>Pick a date</CardTitle>
-                                <InputGroup>
-                                    <Input
-                                    type="date"
-                                    onChange={props.handleChange}
-                                    />
-                                </InputGroup>
+                        ) : (
+                         <CardSubtitle>-by Nasa Photographer </CardSubtitle>
+                         )}
+                        <br></br>
+                        <CardTitle>Pick a date</CardTitle>
+                     <div className='input-div'>
+                     <InputGroup>
+                            <Input
+                            type="date"
+                            onChange={props.handleChange}
+                            />
+                        </InputGroup>
+                     </div>
 
                 </CardBody>
-                    <img width="100%" src={props.picture} alt="Card image cap" />
-                <CardBody>
-                    <StyledP>
-                        <h2>Description of the image</h2>
-                        <CardText>{props.description}</CardText>
-                    </StyledP>
-                </CardBody>
+                <div className="image-and-desc-div">
+                    <div className="image-div box">
+                        <img width="100%" src={props.picture} alt="Card photo-of-the-day" />
+                    </div>
+                    <CardBody className="description box">
+                        <StyledP>
+                            {/* <h2>{props.titleOf}</h2> */}
+                            <CardText>{props.description}</CardText>
+                        </StyledP>
+                    </CardBody>
+                </div>
              </StyledDiv>
         </Card>
     </div>

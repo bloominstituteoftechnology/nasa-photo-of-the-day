@@ -1,38 +1,10 @@
 .App {
   text-align: center;
-  width: 800px;
+  width: 1200px;
   margin: 0 auto;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 .container{
     width: 100%;
     margin:0px auto; 
@@ -42,18 +14,17 @@
     align-items: center;
 
 }
-.imageBox  {
- 
-}
-.imageBox{
-  
+.image-div  {
+ margin: 15px
 }
 
-.entry{
- 
+.image-and-desc-div{
+  display: flex;
+  flex-direction: row;
 }
-.cardBox{
-  
+.description{
+  width: 60% ;
+  text-align: left;
 }
 .date-btn{
   margin-bottom: 10px;
@@ -66,3 +37,8 @@
   box-shadow: 3px 3px 3px rgba(0, 0, 0, .2);
 }
 .ml-auto{background:red;}
+
+.input-div{
+  width:30%;
+  margin: 0 auto;
+}
