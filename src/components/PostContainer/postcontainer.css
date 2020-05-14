@@ -1,0 +1,23 @@
+.title-heading {
+    font-size: 25px;
+    margin: 10px 5px 10px 5px;
+}
+
+
+.main-image {
+    width: 80%;
+}
+
+.date-heading {
+    font-size: 25px;
+    margin: 5px 0 5px 0;
+}
+
+
+.explaination {
+    font-size: 18px;
+    height: 30%;
+    width: 80%;
+    margin-left: 160px;
+   
+}
