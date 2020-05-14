@@ -54,7 +54,8 @@ table {
 .header-section{
     background-color: #333;
     height: 50px;
-    text-align: center;
+	text-align: center;
+	margin-top: 10px;
     
     
 }
