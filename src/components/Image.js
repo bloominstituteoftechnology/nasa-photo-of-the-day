@@ -1,13 +1,26 @@
 import React, { useContext } from 'react';
 import { MainContext } from '../contexts/MainContext';
+import styled, { css } from 'styled-components';
+
+const Img = styled.img`
+	width: 100%;
+	height: auto;
+`;
+
+const Vid = styled.iframe`
+	width: 100%;
+	min-height: 500px;
+	height: 100%;
+	border: none;
+`;
 
 const Image = () => {
 	const { url, media } = useContext(MainContext);
 
 	if (media === 'image') {
-		return <img src={url} alt='Space Stuff'></img>;
+		return <Img src={url} alt='Space Stuff'></Img>;
 	} else if (media === 'video') {
-		return <iframe src={url} height='500' width='800' title='Space Vid' />;
+		return <Vid src={url} title='Space Vid' />;
 	} else {
 		return <></>;
 	}

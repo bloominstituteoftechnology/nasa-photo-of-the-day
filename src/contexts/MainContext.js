@@ -25,7 +25,8 @@ const MainContextProvider = (props) => {
 				setTitle(response.data.title);
 				setMedia(response.data.media_type);
 				console.log(response.data);
-			});
+			})
+			.catch((error) => console.log(error));
 	}, [date]);
 
 	return (
