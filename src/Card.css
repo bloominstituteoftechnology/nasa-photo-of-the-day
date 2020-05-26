@@ -1,0 +1,21 @@
+.card-container {
+    padding: 2%;
+}
+.daily-photo {
+    display:block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+.card-flex-container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-container {
+    width: 70%;
+}
+.photo-info {
+    width: 30%;
+}
