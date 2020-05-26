@@ -1,15 +1,24 @@
-import React from "react";
-import "./App.css";
+import React from 'react';
+import './App.css';
+import MainContextProvider from './contexts/MainContext';
+import Header from './components/Header';
+import Title from './components/Title';
+import Image from './components/Image';
+import Description from './components/Description';
+import Calender from './components/Calender';
 
 function App() {
-  return (
-    <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
-    </div>
-  );
+	return (
+		<div className='App'>
+			<MainContextProvider>
+				<Header />
+				<Title />
+				<Image />
+				<Description />
+				<Calender />
+			</MainContextProvider>
+		</div>
+	);
 }
 
 export default App;
