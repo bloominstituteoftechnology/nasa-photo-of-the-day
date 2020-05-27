@@ -1,26 +1,28 @@
 import React from "react";
-// import Card from "./Card";
+import styled from 'styled-components';
+
+const PhotoStory = styled.div` 
+    width: 30%;
+    border: 10px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    @media screen and (max-width: 1000px) {
+        width: 90%;
+    }
+`;
 
 function CardData(props) {
     console.log('props from CardData', props.data)
     
     if (!props) return <p>Loading...</p>
 
-    return (
-    <div className="photo-info">
-
-        <div className="info-header">
-            <p>Date: {props.data.date}</p>
-            <p>Copyright: {props.data.copyright}</p>
-        </div>
-        <div className="photo-story">
+    return ( 
+        <PhotoStory>
             <p>{props.data.explanation}</p>
-        </div>
-        
-    </div>
+        </PhotoStory>
+
     );
-    
-    
 }
 
 export default CardData;
