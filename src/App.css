@@ -14,8 +14,8 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: rgba(146, 146, 245, .15);
+  min-height: 15vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,6 +40,7 @@
 .btn{
   background-color: rgb(146, 146, 245);
   color: white;
+  font-size: large;
   font-weight: bolder;
   width: 50%;
   height: max-content;

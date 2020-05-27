@@ -13,7 +13,7 @@ function App() {
   }, [])
   return (
     <div className="App">
-      {/* <h1 className='App-header'>{data.data.title}</h1> */}
+      <h1 className='App-header'>NASA PHOTO TITLE HERE</h1>
       <Images />
       <button className='btn'>==Next Day Preview==></button>
     </div>
