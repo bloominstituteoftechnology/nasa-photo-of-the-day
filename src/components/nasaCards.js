@@ -14,7 +14,6 @@ return(
             <h4>Date:{props.nasaInfo.date}</h4>         
             <p>{props.nasaInfo.explanation}</p>  
         </div>
-
     </div>)
 
 }
