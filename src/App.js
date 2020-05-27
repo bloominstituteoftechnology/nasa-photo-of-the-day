@@ -14,13 +14,8 @@ useEffect(()=>{Axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
 
   return (
     <div className="App">
-      <h1>NASA picture of the day!</h1>
-      <NasaCards scrolls={nasaData}/>
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
-      
+      <h1 className="App-header">NASA picture of the day</h1>
+      <NasaCards nasaInfo={nasaData}/>      
     </div>
   );
 }

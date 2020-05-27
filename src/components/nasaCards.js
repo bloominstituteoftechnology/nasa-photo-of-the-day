@@ -1,17 +1,20 @@
-import React, {useState} from "react";
+import React from "react";
+import NasaPic from "./nasaPic"
 
 const NasaCards = (props) => {
     console.log(props)
 
 return(
-    <div>
-              <p>one</p>
-        <p>two</p>
-        <img src></img>
-        <p>{props.scrolls.explanation}</p> 
-        {/* <img src = {nasaData.img}></img>
-         */}  
-    
+    <div className="row">
+        <div>
+            <NasaPic img={props.nasaInfo.hdurl}/>
+        </div>
+        <div className="textContainer">
+            <h2>{props.nasaInfo.title}</h2>
+            <h4>Date:{props.nasaInfo.date}</h4>         
+            <p>{props.nasaInfo.explanation}</p>  
+        </div>
+
     </div>)
 
 }

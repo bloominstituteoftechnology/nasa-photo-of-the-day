@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.nasaImg{
+  height:500px;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
+.textContainer{
+  margin:40px
+}
