@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.btn{
+  background-color: rgb(146, 146, 245);
+  color: white;
+  font-weight: bolder;
+  width: 50%;
+  height: max-content;
+}
