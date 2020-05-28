@@ -45,6 +45,7 @@
   font-weight: bolder;
   width: 50%;
   height: max-content;
+  z-index: 1;
 }
 h3{
   color: whitesmoke;
