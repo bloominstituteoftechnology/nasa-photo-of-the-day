@@ -38,15 +38,6 @@
   }
 }
 
-.btn{
-  background-color: rgb(146, 146, 245);
-  color: white;
-  font-size: large;
-  font-weight: bolder;
-  width: 50%;
-  height: max-content;
-  z-index: 1;
-}
 h3{
   color: whitesmoke;
   font-size: 6rem;

@@ -14,12 +14,7 @@ function App() {
       })
 
   }, [])
-  // useEffect(() => {
-  //   Axios.get('https://api.nasa.gov/planetary/apod?api_key=mHGVbdKVXrquyz5wsMjkiKgHsQlCv7pTVEo9pjgx')
-  //     .then(Response => setData(Response.data))
-  //     .catch(err => console.log('axios call app', err))
-  // }, [])
-  // if (!data.data) return <h3>Loading...</h3>;
+
   return (
     <div className="App">
       <h1 className='App-header'>{data.title}</h1>
