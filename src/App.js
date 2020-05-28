@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import Images from './images/Images';
 import Axios from "axios";
+import Button from './Button';
 
 function App() {
   const [data, setData] = useState([]);
@@ -24,7 +25,7 @@ function App() {
     <div className="App">
       <h1 className='App-header'>{data.title}</h1>
       <Images img={data} />
-      <button className='btn'>==Archived==</button>
+      <button className='btn' btn={data.date}></button>
     </div>
   );
 }
