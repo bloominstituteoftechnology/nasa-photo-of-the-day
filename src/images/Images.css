@@ -1,6 +1,6 @@
 .imageContainer{
-    border:5px dotted white;
-    height: 80vh;
+    /* border:5px dotted white; */
+    /* height: 80vh; */
     width:80%;
     margin: 0 auto;
     display:flex;
@@ -9,9 +9,8 @@
     align-items: center;
 }
 .imageContainer img{
-    border:3px solid whitesmoke;
-    height: 40vh;
-    width: 80%;
+    height: 400px;
+    width: 70%;
     margin: 2% 0;
     
 
@@ -21,6 +20,6 @@
     background-color:rgba(146, 146, 245, .15);
     font-size: large;
     font-weight: bold;
-    padding: 5%;
-    margin: 0 2%;
+    padding: 2%;
+    /* margin: 0 2%; */
 }

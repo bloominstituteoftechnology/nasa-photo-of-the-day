@@ -6,8 +6,8 @@ function Images(props) {
     console.log('from Images', props)
     return (
         <div className='imageContainer'>
-            <img>{}</img>
-            <p className='imageInfo'>This is where the information for my nasa photo will appear in all of it's glory. INFO INFO INFO INFO INFO INFO INFO INFO INFO INFO INFO</p>
+            <img src={props.img.url} alt='random space photo'></img>
+            <p className='imageInfo'>{props.img.explanation}</p>
         </div>
     )
 }
