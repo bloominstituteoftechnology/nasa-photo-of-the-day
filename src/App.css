@@ -46,3 +46,9 @@
   width: 50%;
   height: max-content;
 }
+h3{
+  color: whitesmoke;
+  font-size: 6rem;
+  font-weight: bold;
+  text-align: center;
+}
