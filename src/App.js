@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import Images from './images/Images';
 import Axios from "axios";
-// import Button from './Button.js';
 
 function App() {
   const [data, setData] = useState([]);
