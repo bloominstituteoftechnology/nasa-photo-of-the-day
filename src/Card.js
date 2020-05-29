@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import './Card.css';
 import axios from 'axios';
 import CardData from './CardData';
 import styled from 'styled-components';
