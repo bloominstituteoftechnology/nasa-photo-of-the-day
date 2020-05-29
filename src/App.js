@@ -1,15 +1,18 @@
 import React from "react";
 import "./App.css";
-
+import CardContent from "./components/Img.js";
+import styled from 'styled-components';
 function App() {
+  const Background = styled.div`
+  background-color:lightgray;
+  `
   return (
-    <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
-    </div>
+    <Background className="App">
+      <CardContent/>
+    </Background>
   );
 }
+
+
 
 export default App;
