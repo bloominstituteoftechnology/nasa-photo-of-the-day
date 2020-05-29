@@ -9,13 +9,16 @@ width:80%;
     justify-content: center;
     align-items: center;
     `;
-const Image = styled.img`height: 400px;
+const Image = styled.img`
+    height: 400px;
+    border-radius: 10px;
     width: 70%;
     margin: 2% 0;
     `;
 const ImageInfo = styled.p`
 color:whitesmoke;
 background-color:rgba(146, 146, 245, .15);
+border-radius: 10px;
 font-size: large;
 font-weight: bold;
 padding: 2%;
