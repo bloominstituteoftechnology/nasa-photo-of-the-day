@@ -1,9 +1,10 @@
 import React from "react"
+import{CardImg} from "reactstrap"
 
 const NasaPic = (props) => {
 
     return(
-        <img className="nasaImg" src={props.img} alt='Shot from space'></img>
+        <CardImg height="400px"src={props.img} alt='Shot from space'></CardImg>
     )
 }
 

@@ -2,6 +2,9 @@ import React, { useEffect,useState }from "react";
 import NasaCards from "./components/nasaCards"
 import "./App.css";
 import Axios from "axios"
+import styled from "styled-components"
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   const [nasaData,SetNasaData] = useState([])
@@ -13,8 +16,7 @@ useEffect(()=>{Axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
 
 
   return (
-    <div className="App">
-      <h1 className="App-header">NASA picture of the day</h1>
+    <div>
       <NasaCards nasaInfo={nasaData}/>      
     </div>
   );
