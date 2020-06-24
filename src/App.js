@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get(`https://api.nasa.gov/planetary/apod?api_key=Ld5h15yFKBzDsrJFoXcegi9MuHFrYcag3ViJm3iH`)
+      .get("https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=Ld5h15yFKBzDsrJFoXcegi9MuHFrYcag3ViJm3iH")
       .then(res => {
         console.log("Here", res);
       })

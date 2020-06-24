@@ -1,6 +1,9 @@
-import React from "react";
+import React from 'react'
 
-function DataMain () {
-
+export const DataMain = ({}) => {
+    return (
+        <div>
+            
+        </div>
+    )
 }
-export default DataMain
