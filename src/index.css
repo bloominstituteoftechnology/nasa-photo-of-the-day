@@ -11,3 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.nasa {
+  height: 50px;
+}
+
+h3 {
+  margin-right: 10px;
+}
+
+.nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 20%;
+  margin-right: 10px;
+  color: white;
+  font-family: "Arial Black", Gadget, sans-serif;
+}
+
+.nav a {
+  color: white;
+}
