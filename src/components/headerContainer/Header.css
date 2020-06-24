@@ -1,0 +1,19 @@
+.date-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.left-arrow {
+    margin: 25px;
+    font-size: 3rem;
+    cursor: pointer;
+}
+.right-arrow {
+    margin: 25px;
+    font-size: 3rem;
+    cursor: pointer;
+}
+.date {
+
+    font-size: 3rem;
+}
