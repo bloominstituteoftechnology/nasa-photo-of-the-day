@@ -1,5 +1,11 @@
+body {
+  background-color: #f4f6ff;
+}
+
 .App {
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .App-logo {
@@ -35,4 +41,77 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.card {
+  width: 85vw;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #4f8a8b;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.image {
+  width: auto;
+  height: 30vh;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.info {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #f4f6ff;
+}
+
+.titleDate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  width: 20vw;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 0px;
+  color: #ea907a;
+}
+
+.date {
+  font-family: sans-serif;
+  font-weight: lighter;
+  width: 5vw;
+  font-size: 12px;
+  margin-top: 5px;
+  color: #ffcb74;
+}
+
+.explanation {
+  width: 95%;
+  font-family: sans-serif;
+  line-height: 3vh;
+  text-align: left;
+  text-indent: 50px;
+  margin-top: 10px;
+  margin-bottom: 2px;
+  font-size: 14px;
+}
+
+.copyright {
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  height: 2.7vh;
+  text-align: center;
+  width: 50%;
 }
