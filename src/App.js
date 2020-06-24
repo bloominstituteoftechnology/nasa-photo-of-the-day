@@ -1,7 +1,15 @@
-import React from "react";
+import React, {useState}from "react";
 import "./App.css";
+import axios from "axios"
 
 function App() {
+  const [pics, setPics] = useState("")
+useEffect(() => {
+  axios
+  .get("https://api.nasa.gov/planetary/apod")
+    .then(res => console.log(res))
+    .catch(err => console.log(err))
+}, []);
   return (
     <div className="App">
       <p>
