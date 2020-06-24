@@ -102,16 +102,15 @@ body {
   text-indent: 50px;
   margin-top: 10px;
   margin-bottom: 2px;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .copyright {
   font-family: sans-serif;
-  font-weight: lighter;
+  font-weight: bold;
   font-size: 12px;
-  margin-top: 10px;
+  margin-top: 2px;
   margin-bottom: 0px;
-  height: 2.7vh;
   text-align: center;
   width: 50%;
   color: #ea907a;

@@ -8,7 +8,7 @@ const App = () => {
 
   useEffect(() => {
     axios
-      .get('https://api.nasa.gov/planetary/apod?api_key=OPfamgCyYwhJvre3PNrqYoTF4OdMQEPSYJ2XNNTg&date=1998-10-11')
+      .get('https://api.nasa.gov/planetary/apod?api_key=OPfamgCyYwhJvre3PNrqYoTF4OdMQEPSYJ2XNNTg&date=2020-06-23')
       .then((res) => {
         console.log(res);
         setPicture(res.data);
