@@ -21,14 +21,14 @@ useEffect(() => {
 
 return (
   <div className="App">
-      <div>
+      <div className="Header">
     <h1>
       {Media.title} <span role="img" aria-label='go!'>🚀</span>!
     </h1>
     <h3>{Media.date}</h3>
     </div>
-    <div><img src={Media.hdurl}></img></div>
-   <div> <p><span>Explanation: </span>{Media.explanation}</p> </div>
+    <div><img  className="pic" src={Media.hdurl}></img></div>
+   <div className="Expla"> <p><span>Explanation: </span>{Media.explanation}</p> </div>
   </div>
 );
 }
