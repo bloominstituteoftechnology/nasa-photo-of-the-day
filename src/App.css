@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+.image{
+  border-radius: 20%;
+  border: solid 5px white;
+}
+*{background:content-box radial-gradient(navy, black);}
+.title,.date,.explain,.copyright{color:white;}
