@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import NasaCard from "./NasaCard";
+import styled from "styled-components";
+
+const StyledImg = styled.img`
+  height: auto%;
+  width: 80%;
+  margin-right: 10px;
+  margin-left: 10px;
+`;
 
 const NasaList = () => {
   const [nasaPhoto, setNasaPhoto] = useState({});
@@ -20,7 +28,7 @@ const NasaList = () => {
   console.log("HERE", nasaPhoto);
   return (
     <div className="photo">
-      <img className="img" src={nasaPhoto.hdurl} />
+      <StyledImg className="img" src={nasaPhoto.hdurl} />
       <NasaCard
         title={nasaPhoto.title}
         explanation={nasaPhoto.explanation}

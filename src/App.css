@@ -42,16 +42,19 @@ body {
   }
 }
 
-.img {
+/* .img {
   height: auto%;
   width: 80%;
-}
+  margin-right: 10px;
+  margin-left: 10px;
+} */
 
 .App img {
   float: right;
 }
-.nasa-card {
+/* .nasa-card {
   color: white;
   text-align: left;
   padding-left: 20px;
-}
+  padding-right: 20px;
+} */
