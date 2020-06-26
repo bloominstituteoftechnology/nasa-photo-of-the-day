@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import axios from 'axios';
-
+import DataMain from './DataMain.js'
+import NavBar from './NavBar.js'
+import Footer from './Footer'
 
 function App() {
-  // const [data,setData] =useState([]);
+  const [NasaData,setNasaData] =useState([]);
 
   useEffect(() => {
     axios
-      .get("https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=Ld5h15yFKBzDsrJFoXcegi9MuHFrYcag3ViJm3iH")
+      .get("https://api.nasa.gov/planetary/apod?api_key=Ld5h15yFKBzDsrJFoXcegi9MuHFrYcag3ViJm3iH&date=2020-06-25")
       .then(res => {
         console.log("Here", res);
+        setNasaData(res.data)
       })
       .catch(err => {
         console.log("Error", err);
@@ -19,13 +22,12 @@ function App() {
 
   return (
     <div className="App">
-      {/* {data.map(appDate = {
-        return (
-
-        )
-      })} */}
+      <NavBar />
+      <DataMain data={NasaData} />
+      <Footer />
     </div>
   );
-}
+          }
+
 
 export default App;
