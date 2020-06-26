@@ -1,7 +1,10 @@
-import React, { useState, useEffect } from "react";
-import "./App.css";
-import axios from "axios";
+import React, { useState, useEffect } from "react"
+import "./App.css"
+import axios from "axios"
 import Photo from "./Photo"
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Button from 'react-bootstrap/Button';
+
 
 function App() {
 
@@ -12,7 +15,7 @@ function App() {
 
   useEffect(() => {
     axios
-    .get("https://api.nasa.gov/planetary/apod?api_key=59u4qxyJKj9io0THIuahiScnXgdQRSqfNCIBT84f")
+    .get("https://api.nasa.gov/planetary/apod?api_key=hI7mvMrtmts3yLRICMpu41ASYPcS8rrPGgFYc2Qw&date=2020-06-25")
     .then( response => {
       console.log(photo);
       setDate(response.data.date)
@@ -27,7 +30,10 @@ function App() {
  
 
   return (
+    
+    
     <section className = "App">
+      
             
           <div className = "App-logo"></div>  
           <div className = "App-header">NASA Photo of the Day
@@ -38,6 +44,8 @@ function App() {
           
           <div className = "NPOD"> 
           
+          
+          <Button>Button</Button>
          
           </div>
 
