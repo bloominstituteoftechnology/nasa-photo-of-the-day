@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Calendar from 'react-calendar';
 import "./App.css";
 import axios from 'axios';
 import Card from './components/Card';
@@ -29,6 +30,7 @@ const App = () => {
         copyright={picture.copyright}
         imgUrl={picture.url}
       />
+      <Calendar className='calendar'/>
     </div>
   );
 }

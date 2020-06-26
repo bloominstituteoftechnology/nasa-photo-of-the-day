@@ -5,7 +5,8 @@ body {
 .App {
   text-align: center;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .App-logo {
@@ -41,6 +42,24 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+
+.calendar {
+  color: #282c34;
+  background-color: #f4f6ff;
+}
+
+button {
+  border: 1px solid #f4f6ff;
+  background-color: #424242;
+  color: #f4f6ff;
+  border-radius: 5px;
+  padding: 25px 2.5px;
+  width: 100%;
+  text-decoration: none;
+  outline-color: #ffcb74;
+  outline-width: 5px;
+  
 }
 
 /* .card {
