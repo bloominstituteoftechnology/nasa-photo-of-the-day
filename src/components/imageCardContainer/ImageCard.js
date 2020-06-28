@@ -1,46 +1,63 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
+import axios from "axios"
 import "./ImageCard.css"
-const ImageCard = ({ data, changeDate, date}) => {
-    const [currentDay, setCurrentDay] = useState(new Date())
-
-    const changeDay = (operator) => {
-        if (operator === "+" ) {
-            const next = new Date(currentDay.getTime() + (24 * 60 * 60 * 1000))
-            setCurrentDay(next)
-        } else {
-            const next = new Date(currentDay.getTime() - (24 * 60 * 60 * 1000))
-            setCurrentDay(next)
-        }
-        
-        changeDate({
-            day: currentDay.getDate(),
-            month: currentDay.getMonth() + 1,
-            year: currentDay.getFullYear()
-        })
-        
+import moment from "moment"
+// import styled, { css } from "styled-components"
+ 
+const ImageCard = () =>{
+    const [date, setDate] = useState(moment().format("YYYY-MM-DD"))
+    const [data, setdata] = useState([])
+    
+    const changeDay = (newDate) => {
+        if ((newDate.replace(/-/g, "") <= moment().format("YYYYMMDD") && newDate !== date) && (newDate.replace(/-/g, "") > "19990101")) setDate(newDate)
     }
-    console.log(date)
-    const monthArr = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
-    return (
-        <div className="img-container">
-            <div className="title">
-                <img className="logo" src="https://i.imgur.com/x2vJ26i.png"/>
-                <h1>Astronomoy Picture of the Day</h1>
-            </div>
+    useEffect(() => {
+        axios.get(`https://api.nasa.gov/planetary/apod?api_key=nUuIApI33z9ii9bOvfvcgpBhGDCqsYQyMjzIgGd0&date=${date}`)
+            .then((res) => setdata(res.data))
+            .catch((err) => console.log(err))
+    }, [date])
 
-            <div className="img-wrapper">
-                <div className="date-wrapper">
-                    <div onClick={() => changeDay("-")} className="left-arrow">&#8592;</div>
-                    <div className="date">{monthArr[currentDay.getMonth()]}&nbsp;{currentDay.getDate()}</div>
-                    <div onClick={() => changeDay("+")} className="right-arrow">&#8594;</div>
+    if (!data) return <h3>Loading...</h3>
+
+    if (data.media_type === "image") {
+        return (
+            <div className="card-container">
+                <div className="header">
+                    <img className="logo" src="https://i.imgur.com/x2vJ26i.png" alt="NASA logo" />
+
+                    <h1>NASA &nbsp;APOD</h1>
+                    <input className="calendar" onChange={(event) => changeDay(event.target.value)} type="date" />
                 </div>
-                <img src={data.url} />
-                <p className="explanation">{data.explanation}</p>
+
+                <div className="card-wrapper">
+                    <img src={data.url} alt="astronomy" />
+                    <h4>{data.title}</h4>
+                    <p>{data.explanation}</p>
+                </div>
+
             </div>
-        </div>
-        
-    )
+        )
+    } else {
+        return (
+            <div className="card-container">
+                <div className="header">
+                    <img className="logo" src="https://i.imgur.com/x2vJ26i.png" alt="NASA logo"/>
+                    <h1>NASA &nbsp;APOD</h1>
+                    <input className="calendar" onChange={(event) => changeDay(event.target.value)} type="date" />
+                </div>
+                <div className="card-wrapper">
+                    <iframe width="100%" height="500px"
+                        src={data.url}>
+                    </iframe>
+                    <h4>{data.title}</h4>
+                    <p>{data.explanation}</p>
+                </div>
+
+            </div>
+        )
+    }
+    
 }
 
 export default ImageCard

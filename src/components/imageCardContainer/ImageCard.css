@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@200&display=swap');
-
-.img-container {
+body {
+    background-color: rgb(236, 240, 249);
+}
+.card-container {
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: center;
 }
 
-.img-wrapper {
+.card-wrapper {
     border: 2px solid black;
     width: 50rem;
     display: flex;
@@ -32,6 +34,10 @@ h1 {
     color: rgba(32, 81, 201 , 1);
 }
 
+h4 {
+    font-size: 1.4rem;
+}
+
 .logo {
     width: 4rem;
     height: 4rem;
@@ -42,4 +48,26 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.calendar {
+    margin-left: 2rem;
+    background-color: rgb(236, 240, 249);
+}
+
+::-webkit-datetime-edit { padding: 1em; }
+::-webkit-datetime-edit-fields-wrapper { background: rgb(236, 240, 249) }
+::-webkit-datetime-edit-text { color: red; padding: 0 0.3em; }
+::-webkit-datetime-edit-month-field { color: rgba(32, 81, 201 , 1); }
+::-webkit-datetime-edit-day-field { color: rgba(32, 81, 201 , 1); }
+::-webkit-datetime-edit-year-field { color: rgba(32, 81, 201 , 1); }
+::-webkit-calendar-picker-indicator { color: red; padding: 10px; }
+
+.display {
+    display: none;
 }
