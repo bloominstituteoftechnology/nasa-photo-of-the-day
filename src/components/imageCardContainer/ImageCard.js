@@ -2,7 +2,40 @@ import React, { useEffect, useState } from "react"
 import axios from "axios"
 import "./ImageCard.css"
 import moment from "moment"
-// import styled, { css } from "styled-components"
+import styled, { css } from "styled-components"
+
+export const Title = styled.h1`
+    font-size: 3rem;
+    font-family: 'MuseoModerno', cursive;
+    color: rgba(32, 81, 201 , 1);
+` ;
+
+export const LogoImage = styled.img`
+    width: 4rem;
+    height: 4rem;
+    margin-right: 3rem;
+`
+export const CardContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+`
+
+export const CardWrapper = styled.div`
+    border: 2px solid black;
+    width: 50rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.7);
+`
+
+export const Header = styled.div`
+    display: flex;
+    align-items: center;
+`
  
 const ImageCard = () =>{
     const [date, setDate] = useState(moment().format("YYYY-MM-DD"))
@@ -22,39 +55,36 @@ const ImageCard = () =>{
 
     if (data.media_type === "image") {
         return (
-            <div className="card-container">
-                <div className="header">
-                    <img className="logo" src="https://i.imgur.com/x2vJ26i.png" alt="NASA logo" />
-
-                    <h1>NASA &nbsp;APOD</h1>
+            <CardContainer>
+                <Header>
+                    <LogoImage src="https://i.imgur.com/x2vJ26i.png" alt="NASA logo" />
+                    <Title>NASA &nbsp;APOD</Title>
                     <input className="calendar" onChange={(event) => changeDay(event.target.value)} type="date" />
-                </div>
-
-                <div className="card-wrapper">
+                </Header>
+                <CardWrapper>
                     <img src={data.url} alt="astronomy" />
                     <h4>{data.title}</h4>
                     <p>{data.explanation}</p>
-                </div>
-
-            </div>
+                </CardWrapper>
+            </CardContainer>
         )
     } else {
         return (
-            <div className="card-container">
-                <div className="header">
-                    <img className="logo" src="https://i.imgur.com/x2vJ26i.png" alt="NASA logo"/>
-                    <h1>NASA &nbsp;APOD</h1>
+            <CardContainer>
+                <Header>
+                    <LogoImage src="https://i.imgur.com/x2vJ26i.png" alt="NASA logo" />
+                    <Title>NASA &nbsp;APOD</Title>
                     <input className="calendar" onChange={(event) => changeDay(event.target.value)} type="date" />
-                </div>
-                <div className="card-wrapper">
+                </Header>
+                <CardWrapper>
                     <iframe width="100%" height="500px"
-                        src={data.url}>
+                        src={data.url}
+                        title={data.title}>
                     </iframe>
                     <h4>{data.title}</h4>
                     <p>{data.explanation}</p>
-                </div>
-
-            </div>
+                </CardWrapper>
+            </CardContainer>
         )
     }
     
