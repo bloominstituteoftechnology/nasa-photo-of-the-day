@@ -28,6 +28,16 @@
   color: #61dafb;
 }
 
+.photo-container{
+  width: 70%;
+  margin: 0 auto;
+
+}
+
+.apod-img{
+  width: 100%;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

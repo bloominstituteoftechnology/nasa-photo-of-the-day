@@ -4,13 +4,13 @@ import axios from 'axios'
 import Photo from './Photo'
 
 function App() {
-  const [photo, setPhoto] = useState("")
+  const [photo, setPhoto] = useState([])
 
   useEffect(() => {
     axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
     .then( res => {
       console.log("works")
-      console.log(res.data.title)
+      setPhoto(res.data)
     })
     .catch(() => {
       console.log("Failure to launch")
@@ -19,11 +19,12 @@ function App() {
   
   return (
     <div className="App">
-      <div></div>
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+      <div className ="photo-container"> 
+      <Photo
+        key = {photo.date} 
+        photo = {photo} 
+        />
+      </div>
     </div>
   );
 }
