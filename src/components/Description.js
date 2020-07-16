@@ -6,8 +6,8 @@ function Description(props){
     const { explanation, copy } = props
     return(
     <>
-        <p> {'explantion'} </p>
-        <span> {'copy'} </span>
+        <p> { explanation } </p>
+        <span> { copy } </span>
     </>
     )
 }

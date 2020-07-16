@@ -6,13 +6,13 @@ import Description from './components/Description'
 import Image from './components/Image'
 
 function App() {
-  const [nasa, setNasa] = useState()
-  const apiKey = 'DEMO_KEY'
-  const date = '2020-07-15' 
+  const [nasa, setNasa] = useState([])
+  const apiKey = 'fFAKCGUo7Gwl0xWe4eWvr8PH9DwtX7Oxbh48Hh2W'
+  
 
   useEffect(() => {
     axios
-    .get(`https://api.nasa.gov/#apod?api_key=${apiKey}&date=${date}`)
+    .get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
     .then((result) => {
       console.log(result.date)
       setNasa(result.data)
