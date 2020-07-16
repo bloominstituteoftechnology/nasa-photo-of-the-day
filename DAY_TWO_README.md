@@ -26,7 +26,7 @@ This homework is a continuation of the work you have done previously.
 
 ### Task 2b: Exit Ticket
 
-Once you begin, you will have 15 minutes to answer the questions [here](https://app.codesignal.com/public-test/J2kBzdr6YLLjXzP8N/7JLwsLBKeWdAFp).
+Once you begin, you will have 15 minutes to answer the questions [here](https://app.codesignal.com/public-test/2sgSRJ4GKfcbZfiSc/BYuYB5t4heasii).
 
 The completion of these questions is mandatory for MVP. However, passing the quiz doesn't affect your standing as a Lambda School student whatsoever. This is Lambda School testing itself! Please answer honestly and to the best of your ability without using external references.
 
