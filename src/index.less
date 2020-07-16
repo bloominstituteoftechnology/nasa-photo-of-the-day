@@ -32,6 +32,9 @@ body {
     flex-direction: column;
     width: 50%;
     margin: 0 auto;
+    @media (max-width:500px){
+      width: 90%;
+     }
   }
   .image{
     z-index: 0;
@@ -40,6 +43,9 @@ body {
     border: 2px solid white;
     box-shadow: 0px 0px 50px;
     height: 600px;
+    @media (max-width:500px){
+      height: 500px;
+     }
   }
   .infoDiv{
     box-shadow: 0px 0px 50px;
@@ -51,10 +57,13 @@ body {
     border: 2px solid white;
     border-radius: 20px;
     color: black;
-    width: 800px;
+    width: 40%;
     margin: 0 auto;
     margin-bottom: 20px;
     margin-top: -75px;
+    @media (max-width:500px){
+     width: 90%;
+    }
   }
   .buttonDiv{
     position: relative;
@@ -62,21 +71,19 @@ body {
     background-color: white;
   }
   .footer{
-    position: absolute;
+    z-index: 2000px;
+    position: relative;
     left: 0;
     bottom: 0;
     height: 100px;
     width: 100%;
-    overflow: hidden;
-    padding: 0;
-    margin: 0 auto;
-    width: 100%;
-    background: white;
-    display: flex;
-    justify-content:  center;
-    align-items: center;
+    background-color: white;
+    text-align: center;
+    margin-top: 100px;
     a{
       text-decoration: none;
+      padding: 100px;
+      font-family: 'Raleway', sans-serif;
     }
   }
  
