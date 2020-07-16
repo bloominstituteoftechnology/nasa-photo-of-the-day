@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
 import MainData from "./MainData.jsx";
+import Explanation from "./Explanation";
+import Header from "./Header";
+
 
 function App() {
   const [photo, setPhoto] = useState([])
@@ -11,9 +14,9 @@ function App() {
 
   useEffect(() => {
     axios
-    .get("https://api.nasa.gov/planetary/apod?api_key=ysbmouM5fhCOUpMLeZXAr2DbAnQCE6iun4ukTApX&date=2020-07-15")
+    .get("https://api.nasa.gov/planetary/apod?api_key=ysbmouM5fhCOUpMLeZXAr2DbAnQCE6iun4ukTApX&date=2020-07-16")
     .then( response => {
-      console.log(photo);
+      console.log(response);
       setDate(response.data.date)
       setTitle(response.data.title)
       setPhoto(response.data.url)
@@ -22,29 +25,22 @@ function App() {
     .catch( error => {
       console.log("The data was not returned", error);
     });
-   } , );
+   } , []);
+
    return (
+
     <section className = "App">
 
-    <div className = "App-logo"></div>  
-    <div className = "App-header">NASA Photo of the Day
-    <div className = "App-link">The App Link</div>
-    <div className = "outerEyeOpen"> {title} </div>
-    <img src= {photo} alt= "NPOD"/>
-    <div className = "date"> {date}</div>
+    <Header title={title} date={date} photo={photo}/>
+<MainData maindata={MainData}/>
+ 
 
     <div className = "NPOD"> 
-
-
+      <Explanation explanation={explanation} />
     </div>
-
-
-
-
-
-    <article className= "explanation">{explanation}</article>
-    </div>
-    <div className = "outerEyeClose"></div>
+    
+    
+    
 
   </section>
    );

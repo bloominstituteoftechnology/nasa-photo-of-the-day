@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import axios from "axios";
-
+import styled from "styled-components"
 
 
 function MainData (){
@@ -13,13 +13,22 @@ useEffect(() => {
       console.log(response.data)
       setMedia(response.data)
     })
-    .catch(err => {
-      console.log('err')
+    .catch(error => {
+      console.log('err', error)
     })
 }, []);
 
+const AppInfo = styled.div`
+background:black;
+color:white;
+font-size:20px;
+`;
+
+
+
+
 return (
-  <div className="App">
+  <AppInfo className="App">
       <div>
     <h1>
       {Media.title} <span role="img" aria-label='go!'>🚀</span>!
@@ -27,8 +36,8 @@ return (
     <h3>{Media.date}</h3>
     </div>
     <div><img alt="data" src={Media.hdurl}></img></div>
-   <div> <p><span>Explanation: </span>{Media.explanation}</p> </div>
-  </div>
+   <div > <p style={{margin: 0}}><span>Explanation: </span>{Media.explanation}</p> </div>
+  </AppInfo>
 );
 }
 
