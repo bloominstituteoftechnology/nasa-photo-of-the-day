@@ -5,7 +5,6 @@ import axios from 'axios'
 import POD from './components/POD'
 import Rover from './components/rovers'
 
-const APIKey = `vlDmD9bHs6m0JwmVOWY0UUop3uZDRnwwhx6yfAyy`
 
 const tempAPI = {
   "copyright": "Philipp Salzgeberfoto-webcam.euAdam Block",
@@ -25,25 +24,33 @@ function App() {
   const [curiosity, setCuriosity] = useState('')
   const [opportunity, setOpportunity] = useState('')
   const [spirit, setSpirit] = useState('')
+  const [date, setDate] = useState('')
   
-  useEffect(() => {
-    setImage(tempAPI)
-  },[])
-// useEffect(() => {
-//   axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
-//.then(res => {
-// setImage(res.data)
-// })
-// .catch(err => {
-//console.log(err)
-// })
-// }, [])
+  const APIKey = `vlDmD9bHs6m0JwmVOWY0UUop3uZDRnwwhx6yfAyy`
+  const apiDate = `&date=${date}`
+  // useEffect(() => {
+  //   setImage(tempAPI)
+  // },[])
+useEffect(() => {
+  axios.get(`https://api.nasa.gov/planetary/apod?api_key=${APIKey}${apiDate}`)
+.then(res => {
+setImage(res.data)
+})
+.catch(err => {
+console.log(err)
+})
+}, [date])
+
+const handleInput = (e) => {
+e.preventDefault()
+setDate(e.target.value);
+}
 
 
 useEffect(() => {
   axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=${APIKey}`)
 .then(res => {
-  console.log(res)
+  // console.log(res)
 setCuriosity(res.data.photos[Math.floor((Math.random() * res.data.photos.length) + 1)])
 })
 .catch(err => {
@@ -55,7 +62,7 @@ useEffect(() => {
   axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/photos?sol=1
   00&api_key=${APIKey}`)
 .then(res => {
-  console.log(res)
+  // console.log(res)
 setOpportunity(res.data.photos[Math.floor((Math.random() * res.data.photos.length) + 1)])
 })
 .catch(err => {
@@ -66,7 +73,7 @@ console.log(err)
 useEffect(() => {
   axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/spirit/photos?sol=100&api_key=${APIKey}`)
 .then(res => {
-  console.log(res)
+  // console.log(res)
 setSpirit(res.data.photos[Math.floor((Math.random() * res.data.photos.length))])
 })
 .catch(err => {
@@ -77,11 +84,8 @@ console.log(err)
 
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun! <span role="img" aria-label='go!'>🚀</span>!
-      </p>
       <POD image={image}/>
+      <input type='date' onChange={handleInput}></input>
       <Rover curiosity={curiosity} opportunity={opportunity} spirit={spirit}/>
     </div>
   );
