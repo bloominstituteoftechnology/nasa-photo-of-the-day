@@ -5,6 +5,8 @@ import axios from 'axios'
 import POD from './components/POD'
 import Rover from './components/rovers'
 
+const APIKey = `vlDmD9bHs6m0JwmVOWY0UUop3uZDRnwwhx6yfAyy`
+
 const tempAPI = {
   "copyright": "Philipp Salzgeberfoto-webcam.euAdam Block",
   "date": "2020-07-15",
@@ -20,7 +22,9 @@ const tempAPI = {
 
 function App() {
   const [image, setImage] = useState('')
-  const [rover, setRover] = useState('')
+  const [curiosity, setCuriosity] = useState('')
+  const [opportunity, setOpportunity] = useState('')
+  const [spirit, setSpirit] = useState('')
   
   useEffect(() => {
     setImage(tempAPI)
@@ -34,17 +38,41 @@ function App() {
 //console.log(err)
 // })
 // }, [])
+
+
 useEffect(() => {
-  axios.get('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=DEMO_KEY')
+  axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=${APIKey}`)
 .then(res => {
   console.log(res)
-setRover(res.data.photos[Math.floor(Math.random() * res.data.photos.length)])
-// console.log(res.data.photos[Math.floor(Math.random(res.data.photos.length))].img_src)
+setCuriosity(res.data.photos[Math.floor((Math.random() * res.data.photos.length) + 1)])
 })
 .catch(err => {
 console.log(err)
 })
 }, [])
+
+useEffect(() => {
+  axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/photos?sol=1000&api_key=${APIKey}`)
+.then(res => {
+  console.log(res)
+setOpportunity(res.data.photos[Math.floor((Math.random() * res.data.photos.length) + 1)])
+})
+.catch(err => {
+console.log(err)
+})
+}, [])
+
+useEffect(() => {
+  axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/spirit/photos?sol=1000&api_key=${APIKey}`)
+.then(res => {
+  console.log(res)
+setSpirit(res.data.photos[Math.floor((Math.random() * res.data.photos.length))])
+})
+.catch(err => {
+console.log(err)
+})
+}, [])
+
 
   return (
     <div className="App">
@@ -53,7 +81,7 @@ console.log(err)
         app! Have fun! <span role="img" aria-label='go!'>🚀</span>!
       </p>
       <POD image={image}/>
-      <Rover rover={rover}/>
+      <Rover curiosity={curiosity} opportunity={opportunity} spirit={spirit}/>
     </div>
   );
 }

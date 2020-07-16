@@ -1,14 +1,91 @@
 import React from 'react'
 
 export default function(props){
-    const {rover} = props
+    const {curiosity, opportunity, spirit} = props
 
 
     return (
         <div>
-            <img src={rover.img_src}></img>
-            {/* <h2>{image.title}</h2>
-            <p>{image.explanation}</p> */}
+            <div>
+            <img src={curiosity.img_src}></img>
+            {console.log(curiosity)}
+            </div>
+            <div>
+            <img src={opportunity.img_src}></img>
+            {console.log(opportunity)}
+            </div>
+            <div>
+            <img src={spirit.img_src}></img>
+            {console.log(spirit)}
+            </div>
+        
         </div>
     )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
