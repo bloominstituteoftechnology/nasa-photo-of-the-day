@@ -52,7 +52,8 @@ console.log(err)
 }, [])
 
 useEffect(() => {
-  axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/photos?sol=1000&api_key=${APIKey}`)
+  axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/photos?sol=1
+  00&api_key=${APIKey}`)
 .then(res => {
   console.log(res)
 setOpportunity(res.data.photos[Math.floor((Math.random() * res.data.photos.length) + 1)])
@@ -63,7 +64,7 @@ console.log(err)
 }, [])
 
 useEffect(() => {
-  axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/spirit/photos?sol=1000&api_key=${APIKey}`)
+  axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/spirit/photos?sol=100&api_key=${APIKey}`)
 .then(res => {
   console.log(res)
 setSpirit(res.data.photos[Math.floor((Math.random() * res.data.photos.length))])
