@@ -42,7 +42,7 @@ function App() {
     })
     .catch(err =>{
       console.log('error')
-      setCurrentPhoto('https://http.cat/404')
+      setCurrentPhoto('https://selzimg.s3.amazonaws.com/items/165430/sg3c2l4fhpn/original.jpg')
     })
   }, [])
   useEffect(() => {
@@ -70,7 +70,7 @@ function App() {
     let marsArrayL = marsArray.length;
     let randomPicture = Math.floor(Math.random() * (marsArrayL + 1));
     setCurrentPhoto(marsArray[randomPicture].img_src)
-    setCurrentExplain(marsArray[randomPicture].earth_date)
+    setCurrentExplain(marsArray[randomPicture].earth_date + ":Mars")
     console.log(currentPhoto)
   }
 
@@ -84,15 +84,22 @@ function App() {
         return element.url
       }
     })}
+    function isPhoto(url){
+      if (url.includes('youtube'))
+      {
+        return 'https://apod.nasa.gov/apod/image/2006/demo-2_crewedlaunchIR1100.jpg'
+      } else {
+        return url
+      }
+    }
   return (
 
     <div className="App">
       <Header />
-      <Photoheader photoUrl = {currentPhoto} />
+      <Photoheader photoUrl = {isPhoto(currentPhoto)} />
       <Info dateInfo= {photoData.date} explaination={currentExplain} />
      <div className='buttonDiv'> 
-      <RandomButton onClick={() => newMars()}> More Space mars</RandomButton>
-      <RandomButton onClick={() => newMars()}> More Space mars</RandomButton>
+      <RandomButton onClick={() => newMars()}> I want more space! </RandomButton>
       <form>
         <select
         onChange={(e)=> setDropDown(e.target.value),(e) => checkDate(monthlyData,e.target.value)}>
