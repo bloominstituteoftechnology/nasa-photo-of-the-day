@@ -4,6 +4,9 @@ import axios from 'axios'
 import Title from './components/Title'
 import Description from './components/Description'
 import Image from './components/Image'
+import styled from 'styled-components'
+
+
 
 function App() {
   const [nasa, setNasa] = useState([])

@@ -1,4 +1,6 @@
 import React from 'react'
+import styled from 'styled-components'
+import { H1 } from '../Styled/StyledTitle'
 
 function Title(props){
     const { title, date } = props
@@ -9,5 +11,6 @@ function Title(props){
         </>
     )
 }
+
 
 export default Title

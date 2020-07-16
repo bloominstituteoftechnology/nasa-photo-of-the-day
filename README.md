@@ -71,7 +71,7 @@ _Note: if the photo url is NOT a photo, you will need to learn how to display a 
 
 **Adding the Data to State**
 
-- [ ] Once you have made the call correctly, and logged the data, add the data to the state property you built.
+- [x] Once you have made the call correctly, and logged the data, add the data to the state property you built.
 
 **Display the Data**
 Now is the time to build out your other components. Compose your UI, and then pass the data to your children components via props so you can render it on the DOM.
@@ -79,7 +79,7 @@ Now is the time to build out your other components. Compose your UI, and then pa
 #### _MVP Requirements:_
 
 - [x] Use the effect hook to fetch the APOD data when the component mounts.
-- [] Display the APOD data in different components that are composed together to build your UI.
+- [x] Display the APOD data in different components that are composed together to build your UI.
 
 #### Pro Tips:
 
@@ -115,8 +115,8 @@ Do not attempt stretch problems until MVP has been reached and a final commit ha
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge Branch into `main` (student's Repository).
-- [ ] Add your team lead as a reviewer on the pull-request
+- [x] Submit a Pull-Request to merge Branch into `main` (student's Repository).
+- [x] Add your team lead as a reviewer on the pull-request
 - [ ] Your team lead will count the project as complete by merging the branch back into `main` branch.
 - [ ] Do your magic!
 
