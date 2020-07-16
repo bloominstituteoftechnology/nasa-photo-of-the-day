@@ -7,7 +7,7 @@ import Image from './components/Image'
 
 function App() {
   const [nasa, setNasa] = useState()
-  const apiKey = ''
+  const apiKey = 'DEMO_KEY'
   const date = '2020-07-15' 
 
   useEffect(() => {
@@ -22,12 +22,12 @@ function App() {
 
   return (
     <div className="App">
-      <Title date={nasa.date} title={nasa.title} />
+      <Title date={nasa && nasa.date} title={nasa && nasa.title} />
       {/* <h1> {nasa && nasa.title} </h1> */}
-      <h1> {nasa && nasa.date} </h1>
-      <Image url={nasa.url} />
+      {/* <h1> {nasa && nasa.date} </h1> */}
+      <Image url={nasa && nasa.url} />
       {/* <img src={nasa && nasa.url} alt={'Nasa Visual of the Day'}/> */}
-      <Description explanation={nasa.explanation} copy={nasa.copy} />
+      <Description explanation={nasa && nasa.explanation} copy={nasa && nasa.copy} />
       {/* <p> {nasa && nasa.explanation} </p>
       <span> {nasa && nasa.copyright} </span> */}
     </div>
