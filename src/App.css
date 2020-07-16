@@ -1,21 +1,20 @@
+
 .App {
   text-align: center;
-}
-
-img {
-  border-radius: 20 px;
-}
-
-
-.App-logo {
-  height: 25vmin;
-  pointer-events: none;
 }
 
 .Nasa-logo {
   height: 25vmin;
   pointer-events: none;
+  margin: 10%;
 }
+
+.App-logo {
+  height: 25vmin;
+  pointer-events: none;
+  margin: 10%;
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -42,12 +41,15 @@ img {
   width: 70%;
   margin: 0 auto;
 
+
+
 }
 
 .apod-img{
   width: 70%;
-  border-radius: 20px;
-
+  border-radius: 10px;
+  padding: 2%;
+  border: 5px solid #C83D39;
 }
 
 @keyframes App-logo-spin {

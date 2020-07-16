@@ -11,8 +11,10 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
+    "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.88.2",
-    "styled": "^1.0.0"
+    "styled": "^1.0.0",
+    "styled-components": "^5.1.1"
   },
   "scripts": {
     "start": "react-scripts start",

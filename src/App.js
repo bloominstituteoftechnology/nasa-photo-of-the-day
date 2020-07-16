@@ -3,6 +3,8 @@ import "./App.css";
 import axios from 'axios'
 import Photo from './Photo'
 import Header from './Header'
+import DateForm from './DateForm'
+import 'semantic-ui-css/semantic.min.css'
 
 function App() {
   const [photo, setPhoto] = useState([])
@@ -24,15 +26,7 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <div className="get-date">
-      <form>
-        <label>
-          Get photo by date:  
-          <input type="date"/>
-        </label>
-        <input type="submit" value="Submit" />
-      </form>
-      </div>
+      <DateForm/>
       <div className ="photo-container"> 
       <Photo
         key = {photo.date} 
@@ -40,6 +34,7 @@ function App() {
         />
       </div>
     </div>
+
   );
 }
 
