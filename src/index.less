@@ -5,7 +5,7 @@ body {
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: white;
+    background-color: #efefef;
   }
   
   code {
@@ -13,17 +13,17 @@ body {
       monospace;
   }
   .header{
-    background: #E6DADA;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #274046, #E6DADA);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #274046, #E6DADA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #6C63FF;
+    background: white;  /* fallback for old browsers */
+    
 
     padding: 10px;
     a{
-        color: white;
+        color: black;
         padding: 10px;
         text-decoration: none;
         &:hover{
-            color: lightgrey;
+            color: #6C63FF;
         }
     }
   }
@@ -34,6 +34,7 @@ body {
     margin: 0 auto;
   }
   .image{
+    z-index: 0;
     margin-top: 30px;
     margin-bottom: 10px;
     border: 2px solid white;
@@ -41,8 +42,41 @@ body {
     height: 600px;
   }
   .infoDiv{
-    background-color: black;
-    color: white;
-    width: 300px;
+    box-shadow: 0px 0px 50px;
+    position: relative;
+    z-index: 100;
+    padding: 15px;
+    font-family: 'Raleway', sans-serif;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 20px;
+    color: black;
+    width: 800px;
     margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: -75px;
   }
+  .buttonDiv{
+    position: relative;
+    z-index: 101;
+    background-color: white;
+  }
+  .footer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+    a{
+      text-decoration: none;
+    }
+  }
+ 
