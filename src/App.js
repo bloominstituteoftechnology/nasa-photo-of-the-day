@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from 'axios'
 import Photo from './Photo'
+import Header from './Header'
 
 function App() {
   const [photo, setPhoto] = useState([])
-  const [date, setDate] = useState("2020-07-15")
+  const [date, setDate] = useState("")
 
 
 
@@ -22,6 +23,7 @@ function App() {
   
   return (
     <div className="App">
+      <Header/>
       <div className="get-date">
       <form>
         <label>

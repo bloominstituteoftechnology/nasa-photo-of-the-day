@@ -2,8 +2,18 @@
   text-align: center;
 }
 
+img {
+  border-radius: 20 px;
+}
+
+
 .App-logo {
-  height: 40vmin;
+  height: 25vmin;
+  pointer-events: none;
+}
+
+.Nasa-logo {
+  height: 25vmin;
   pointer-events: none;
 }
 
@@ -36,6 +46,8 @@
 
 .apod-img{
   width: 70%;
+  border-radius: 20px;
+
 }
 
 @keyframes App-logo-spin {
