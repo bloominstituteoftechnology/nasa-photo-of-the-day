@@ -6,26 +6,86 @@ import Photoheader from "./components/Photoheader";
 import Header from "./components/Header";
 import Info from "./components/Info";
 
+
 function App() {
   const [photoData, setPhotoData] = useState('')
-
+  const [marsData, setMarsData] = useState('')
+  const [currentPhoto, setCurrentPhoto] = useState('')
+  const [monthlyData, setMonthlyData] = useState([]) 
+  const [dropDown, setDropDown] = useState(1)
   useEffect(() => {
     axios.get(`${BASE_URL}/planetary/apod?api_key=${API_KEY}`)
     .then(res =>{
       console.log(res.data)
       setPhotoData(res.data)
+      setCurrentPhoto(res.data.url)
+    })
+    .catch(err =>{
+      console.log('error')
+      setCurrentPhoto('https://http.cat/404')
+    })
+  }, [])
+  useEffect(() => {
+    axios.get(`${BASE_URL}/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=${API_KEY}`)
+    .then(res =>{
+      console.log(res.data)
+      setMarsData(res.data)
     })
     .catch(err =>{
       console.log('error')
     })
   }, [])
+  useEffect(() => {
+    axios.get(`https://api.nasa.gov/planetary/apod?api_key=fiJ0anE4tukk6Vd1QNH4e0NNjZNWOUAyi0brdVjK&start_date=2020-06-01&hd=true&end_date=2020-07-15`)
+    .then(res =>{
+      setMonthlyData(res.data)
+      })
+    .catch(err =>{
+      console.log('error')
+    })
+  }, [])
 
+  const newMars = () => {
+    let marsArray = marsData.photos;
+    let marsArrayL = marsArray.length;
+    let randomPicture = Math.floor(Math.random() * (marsArrayL + 1));
+    setCurrentPhoto(marsArray[randomPicture].img_src)
+    console.log(currentPhoto)
+  }
+
+  function checkDate(data,selectedDate){
+    data.forEach(element => {
+      console.log(selectedDate)
+      if (element.date === selectedDate)
+      {
+        setCurrentPhoto(element.url)
+        return element.url
+      }
+    })}
   return (
+
     <div className="App">
       <Header />
-      <Photoheader photoUrl = {photoData.url} />
+      <Photoheader photoUrl = {currentPhoto} />
       <Info dateInfo= {photoData.date} />
+      <button onClick={() => newMars()}> More Space mars</button>
+
+      <form>
+        <select
+        onChange={(e)=> setDropDown(e.target.value),(e) => checkDate(monthlyData,e.target.value)}>
+          {monthlyData.map((crrV) => {
+            return (
+              <option key={crrV.date} value={crrV.date}>
+                {crrV.date}
+                </option>
+            )
+          })}
+        </select>
+  
+      </form>
     </div>
+
+
   );
 }
 

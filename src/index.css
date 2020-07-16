@@ -20,11 +20,15 @@ code {
 .header a {
   color: white;
   padding: 10px;
+  text-decoration: none;
+}
+.header a:hover {
+  color: lightgrey;
 }
 .container {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 50%;
   margin: 0 auto;
 }
 .image {
@@ -32,8 +36,11 @@ code {
   margin-bottom: 10px;
   border: 2px solid white;
   box-shadow: 0px 0px 50px;
+  height: 600px;
 }
 .infoDiv {
   background-color: black;
   color: white;
+  width: 300px;
+  margin: 0 auto;
 }
