@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.Mars {
+  height: 40vh;
+  margin: 5vh;
+  
+}
+
+.contMars {
+  display: flex;
+  justify-content: space-evenly;
+}
