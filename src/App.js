@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from 'axios'
-import Photo from './Photo'
 import Header from './Header'
-import DateForm from './DateForm'
+import Main from './Main'
 import 'semantic-ui-css/semantic.min.css'
 
 function App() {
   const [photo, setPhoto] = useState([])
-  const [date, setDate] = useState("")
+  const [date, setDate] = useState("2020-05-24")
 
 
 
@@ -25,14 +24,15 @@ function App() {
   
   return (
     <div className="App">
+      <div>
       <Header/>
-      <DateForm/>
-      <div className ="photo-container"> 
-      <Photo
-        key = {photo.date} 
-        photo = {photo} 
-        />
+      
+      <Main
+        photo = {photo}
+      />
       </div>
+      
+      
     </div>
 
   );

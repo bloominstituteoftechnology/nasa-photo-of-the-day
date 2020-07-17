@@ -1,4 +1,6 @@
 import React from 'react'
+import DownArrow from './DownArrow'
+
 
 const Header = props => {
 
@@ -15,6 +17,8 @@ const Header = props => {
             src = 'logo512.png'
             className = "App-logo"
         />
+        <DownArrow/>
+        
         </header>
     
     )

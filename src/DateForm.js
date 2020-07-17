@@ -3,12 +3,11 @@ import 'semantic-ui-css/semantic.min.css'
 import { Divider, Form, Label, Button } from 'semantic-ui-react'
 import styled from 'styled-components'
 
-
+//styling
 const StyleDetails = styled.div`
   
   margin: 3% auto;
   width: 250px;
-  
 
   `
 
