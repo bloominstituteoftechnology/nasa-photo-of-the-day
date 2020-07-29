@@ -2,20 +2,7 @@ import React, { useState, useEffect} from "react";
 import "./App.scss";
 import axios from "axios";
 import AppCard from './components/AppCard'
-
-// axios
-//   .get('https://api.nasa.gov/planetary/apod?api_key=8JITPnChVRiIiMatNQuwh7UtkzqbqRUcR3L6WXlu')
-//   .then(response => {
-//     console.log(response);
-//     setTitle(response.data.title);
-//     setDate(response.data.date);
-//     setPotD(response.data.url);
-//     setDesc(response.data.explanation);
-//   })
-//   .catch(error => {
-//     console.log('The Data was not returned!', error);
-//   })
-
+import styled from "styled-components";
 
 function App() {
   const [title, setTitle] = useState();
@@ -40,15 +27,27 @@ function App() {
 
   return (
       <div className="App">
-        <h1>Photo of the Day!</h1>
-        <div>
+        <SiteTitle>Photo of the Day!</SiteTitle>
+        <CardContainer>
           <AppCard title={title}
             date={date}
             PotD={PotD}
             desc={desc}/>
-        </div>
+        </CardContainer>
       </div>
     );
 }
+
+const CardContainer = styled.div`
+  width: 90%;
+  background-color: lightgrey;
+  border-radius: 1.5rem;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+`;
+const SiteTitle = styled.h1`
+  font-size: 5.5rem;
+  color: #686194;
+`;
 
 export default App;
