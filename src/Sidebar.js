@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-const Sidebar = (params) => {
+const Sidebar = (props) => {
+    const {explanation}=props
     return(
         <div className="sidebar">
-          <h2>Explanation here</h2>
+          <p>{explanation}</p>
         </div>);
 }
 
