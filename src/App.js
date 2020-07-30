@@ -15,19 +15,16 @@ function App() {
         console.log("success",response)
         console.log(response.data)
         setInfo(response.data);
-        console.log(setInfo);
       })
       .catch(error => console.log("failure", error))
   }, [])
-
-  console.log(setInfo)
-    
+    console.log(info)
   return (
     <div className="App">
       <div className="Body">
-          <Data data={setInfo}/>
-          <Picture data={setInfo}/>
-           <span role="img" aria-label='go!'>🚀</span>!
+        <Picture data={info}/>  
+        <Data data={info}/>
+          <span role="img" aria-label='go!'>🚀</span>!
       </div>
     </div>
   );
