@@ -7,7 +7,7 @@ function App() {
   const [pics, setPics]= useState([])
   useEffect(() => {
     axios
-    .get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
+    .get("https://api.nasa.gov/planetary/apod?date=2020-7-30&api_key=wVGVdi1S0uVBKPFjWK9QOMHdXqmU7lFHPaqM5Oru")
     .then(res => {console.log(res);
     setPics(res.data)})
     .catch(err => console.log(err))
