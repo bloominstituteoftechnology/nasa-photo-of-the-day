@@ -11,7 +11,7 @@ const NasaPic = (props) => {
   useEffect(() => {
     axios
       .get(
-        "https://api.nasa.gov/planetary/apod?api_key=S3qhd2wVOd3lgNCrmxkfcgHACURSoJFOK6K6Pfr4"
+        "https://api.nasa.gov/planetary/apod?date=2020-07-29&api_key=5wqdQ5yxehGolrE0h0ZNEy8TERrumKxnJYewmz8J"
       )
       .then((response) => {
         console.log(response);
