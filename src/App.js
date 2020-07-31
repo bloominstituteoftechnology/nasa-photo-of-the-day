@@ -3,6 +3,7 @@ import "./App.css";
 import axios from "axios";
 import Post from "./components/post.js"
 
+
 function App() {
   const [pics, setPics]= useState([])
   useEffect(() => {
