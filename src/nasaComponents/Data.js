@@ -1,14 +1,24 @@
 import React from "react"
-import axios from 'axios';
+import styled from 'styled-components'
+
+const Text = styled.div`
+    color: rebeccapurple;
+`;
+
+const Pad = styled.p`
+    display: flex;
+    justify-content: center;
+    margin: 0% 12.5% 0% 12.5%;
+    padding-bottom: 2rem;
+`;
 
 const Data = props => {
     const {data} = props;
     return (
-        <div>
-            <p>{data.copyright}</p>
-            <p>{data.date}</p>
-            <p>{data.explanation}</p> 
-        </div>
+        <Text>
+            <p>{data.copyright} {data.date}</p>
+            <Pad>{data.explanation}</Pad> 
+        </Text>
     );
 }
 

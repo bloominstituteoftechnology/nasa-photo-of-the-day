@@ -1,18 +1,30 @@
 import React from "react"
-import axios from 'axios';
+import styled from 'styled-components'
+
+const DivWrapper = styled.div`
+    font-size: 1.5rem;
+    color: rebeccapurple;
+`;
+
+const SpaceImg = styled.img`
+    width: 15rem;
+    height: 20rem;
+`;
+
+
 
 const Picture = props => {
     const {data} = props;
-    console.log(data);
+
     return (
-        <div>
+        <DivWrapper>
             <p>{data.title}</p>
-            <img
-            alt='picture'
+            <SpaceImg
+            alt='Mars'
             className='picture' 
             src={data.url}
             />
-        </div>
+        </DivWrapper>
     )
 }
 
