@@ -6,12 +6,12 @@ import NasaInfo from "./NasaInfo";
 
 function App() {
 
-  const [photo, setPhoto] = useState([])
+  const [photo, setPhoto] = useState({})
 
   useEffect(() => {
     axios
     .get("https://api.nasa.gov/planetary/apod?api_key=KlcaosUJ0HlEb72piQHAMgUUmzGZgCgGHJony8un")
-    .then(response => { console.log(response);
+    .then(response => { console.log(response.data);
         setPhoto(response.data)})
     .catch(error => console.log(error))
 }, []);
@@ -24,8 +24,7 @@ function App() {
       </p>
       <NasaHeader/>
       <NasaInfo
-      key={photo.id}
-      title={photo.date}
+      title={photo.title}
       date={photo.date}
       explanation={photo.explanation}
       url={photo.url}
