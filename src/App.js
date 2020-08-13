@@ -10,11 +10,11 @@ function App() {
     
     <div className='App'>
        
-      <h1>NASA - Photo of the Day</h1>
+      <h1>NASA DAILY</h1>
       <PhotoList />
        
     </div>
-  );
+  )
 }
 
 export default App;

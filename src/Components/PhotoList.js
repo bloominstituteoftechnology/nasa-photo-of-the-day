@@ -26,12 +26,14 @@ return (
     
     <div className = "photo">
 
-        <PhotoCard />;
-        <img src={photos.url}/>
-        <h1> {photos.title} </h1>
+        <PhotoCard />
+        <h2> {photos.title} </h2>
+        <h3> Date:{photos.date}</h3>
+        <h4> Photo by:{photos.copyright} </h4>
         <p>{photos.explanation}</p>
+        <img src={photos.url}/>
         
-
+        
     </div>
 );    
 }
