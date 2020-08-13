@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import axios from 'axios'
 
+
 import {BASE_URL, API_KEY} from '../Components/Links'
 
 
@@ -8,11 +9,12 @@ import {BASE_URL, API_KEY} from '../Components/Links'
 
 
 
- function Images() {
-    const [nasaimage, setnasaimage] = useState()
+ function Images(props) {
+    const [nasaimage, setnasaimage] = useState('')
     const [nasadate, setnasadate] = useState()
+    console.log(props.data)
     useEffect(() => {
-        axios.get(`${BASE_URL}/planetary/apod?api_key=${API_KEY}`)
+        axios.get(`${BASE_URL}/planetary/apod?date=${props.data}&api_key=${API_KEY}`)
           .then(res => {
             setnasaimage(res.data.url)
             
@@ -24,9 +26,9 @@ import {BASE_URL, API_KEY} from '../Components/Links'
           .finally(() => {
             // this runs whether success or failure
           })
-        },[])
+        },[props.data])
         useEffect(() => {
-            axios.get(`${BASE_URL}/planetary/apod?api_key=${API_KEY}`)
+            axios.get(`${BASE_URL}/planetary/apod?date=${props.data}&api_key=${API_KEY}`)
              
               .then(res => {
                 setnasadate(res.data.date)
@@ -37,7 +39,7 @@ import {BASE_URL, API_KEY} from '../Components/Links'
               .finally(() => {
                 // this runs whether success or failure
               })
-            },[])
+            },[props.data])
     
 
 
@@ -48,7 +50,7 @@ import {BASE_URL, API_KEY} from '../Components/Links'
     return (
         <div className ="image">
             <p>{nasadate}</p>
-            <img src={nasaimage} alt='logo'></img>
+            <img src= {nasaimage} alt='logo'></img>
         </div>
         
     )

@@ -8,12 +8,12 @@ import {BASE_URL, API_KEY} from '../Components/Links'
 
 
 
- function ExplanationText() {
+ function ExplanationText(props) {
     const [extext, setExText] = useState()
     const [title, setTitle] = useState()
     const [author, setAuthor] = useState()
     useEffect(() => {
-        axios.get(`${BASE_URL}/planetary/apod?api_key=${API_KEY}`)
+        axios.get(`${BASE_URL}/planetary/apod?date=${props.data}&api_key=${API_KEY}`)
           .then(res => {
             setExText(res.data.explanation)
             
@@ -24,9 +24,9 @@ import {BASE_URL, API_KEY} from '../Components/Links'
           .finally(() => {
             // this runs whether success or failure
           })
-        },[])
+        },[props.data])
      useEffect(() => {
-        axios.get(`${BASE_URL}/planetary/apod?api_key=${API_KEY}`)
+        axios.get(`${BASE_URL}/planetary/apod?date=${props.data}&api_key=${API_KEY}`)
           .then(res => {
             setTitle(res.data.title)
             
@@ -37,9 +37,9 @@ import {BASE_URL, API_KEY} from '../Components/Links'
           .finally(() => {
             // this runs whether success or failure
           })
-        },[])
+        },[props.data])
     useEffect(() => {
-        axios.get(`${BASE_URL}/planetary/apod?api_key=${API_KEY}`)
+        axios.get(`${BASE_URL}/planetary/apod?date=${props.data}&api_key=${API_KEY}`)
             .then(res => {
             setAuthor(res.data.copyright)
                 
@@ -50,7 +50,7 @@ import {BASE_URL, API_KEY} from '../Components/Links'
         .finally(() => {
             // this runs whether success or failure
             })
-            },[])
+            },[props.data])
     
 
 
@@ -59,7 +59,7 @@ import {BASE_URL, API_KEY} from '../Components/Links'
 
 
     return (
-        <div class ="explain">
+        <div className ="explain">
             <h2>{title}</h2>
             <h3>Copyright: {author}</h3>
             <p>{extext}</p> 
