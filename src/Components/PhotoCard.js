@@ -1,14 +1,18 @@
 import React from 'react'
 
-const PhotoCard = () => {
+const PhotoCard = (props) => {
 
     return (
         <div className = "photo-OTD">
-            <h1>IMG title</h1>
-            <p>About Image</p>
+            {/* <h1>IMG title {props.title}</h1>
+            <p>About Image {props.explanation}</p> */}
             
         </div>
     )
 }
 
 export default PhotoCard
+
+
+
+// NOT REALLY USING THiS COMPONENT!!!!!!!!!!!!!!

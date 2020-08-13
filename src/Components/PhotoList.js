@@ -11,26 +11,27 @@ axios.get('https://api.nasa.gov/planetary/apod?api_key=cCT6X5kWMjBBdQfhvqzWXZY3K
 .then(response => {
     
 setPhotos(response.data)
-console.log(response.data)
-    
+
+   
 })
 .catch(error => {
     console.log("the data was not returned",error)
+    
 })
 }, [])
+
+if (!photos)  return <h1>loading.....</h1>
+
 return (
     
     <div className = "photo">
 
-    {photos.map(photo => {
-        return (
-            <PhotoCard
-            title = {photo.title}
-            about = {photo.explanation}
-             />
-        )
-    })}
+        <PhotoCard />;
+        <img src={photos.url}/>
+        <h1> {photos.title} </h1>
+        <p>{photos.explanation}</p>
+        
 
     </div>
-)    
+);    
 }
