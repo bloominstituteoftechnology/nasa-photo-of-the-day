@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import PhotoCard from './PhotoCard';
 
+
+
 export default function PhotoList() {
 
 const [photos, setPhotos] = useState([]);
@@ -22,16 +24,29 @@ setPhotos(response.data)
 
 if (!photos)  return <h1>loading.....</h1>
 
+
+
+
 return (
     
     <div className = "photo">
 
-        <PhotoCard />
-        <h2> {photos.title} </h2>
+        <PhotoCard 
+        key = {photos.index}
+        title = {photos.title}
+        date = {photos.date}
+        copyright = {photos.copyright}
+        explanation = {photos.explanation}
+        url = {photos.url}
+        
+        />
+
+       
+        {/* <h2> {photos.title} </h2>
         <h3> Date:{photos.date}</h3>
         <h4> Photo by:{photos.copyright} </h4>
         <p>{photos.explanation}</p>
-        <img src={photos.url}/>
+        <img src={photos.url}/> */}
         
         
     </div>
