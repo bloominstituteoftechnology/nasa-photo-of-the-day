@@ -1,13 +1,93 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #efefef;
 }
-
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+.header {
+  color: #6C63FF;
+  background: white;
+  /* fallback for old browsers */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+}
+.header a {
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+}
+.header a:hover {
+  color: #6C63FF;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+}
+@media (max-width: 500px) {
+  .container {
+    width: 90%;
+  }
+}
+.image {
+  z-index: 0;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  border: 2px solid white;
+  box-shadow: 0px 0px 50px;
+  height: 600px;
+}
+@media (max-width: 500px) {
+  .image {
+    height: 500px;
+  }
+}
+.infoDiv {
+  box-shadow: 0px 0px 50px;
+  position: relative;
+  z-index: 100;
+  padding: 15px;
+  font-family: 'Raleway', sans-serif;
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 20px;
+  color: black;
+  width: 40%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: -75px;
+}
+@media (max-width: 500px) {
+  .infoDiv {
+    width: 90%;
+  }
+}
+.buttonDiv {
+  position: relative;
+  z-index: 101;
+  background-color: white;
+}
+.footer {
+  z-index: 2000px;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  margin-top: 100px;
+}
+.footer a {
+  text-decoration: none;
+  padding: 100px;
+  font-family: 'Raleway', sans-serif;
 }
