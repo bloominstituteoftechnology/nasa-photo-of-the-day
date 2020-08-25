@@ -1,8 +1,5 @@
-img .pic{
-    height: 20px;
-    width: 20px;
-}
-
-body{
-    background: red;
+.check{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
 }

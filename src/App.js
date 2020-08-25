@@ -21,6 +21,7 @@ function App() {
   return (
     <div className="App">
      
+     <h1>Nasa Photo Of The Day</h1>
 
     <Card1 nasa={nasaCall} />
 
