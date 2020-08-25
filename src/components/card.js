@@ -26,7 +26,7 @@ function Card1(props) {
     const classes = useStyles();
 
     
-   console.log(props)
+    
 
 
 
