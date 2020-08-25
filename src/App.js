@@ -1,37 +1,29 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import "./App.css";
-import { Card, ICardTokens, ICardSectionStyles, ICardSectionTokens } from '@uifabric/react-cards';
-import { FontWeights, Icon, IIconStyles, Image, Stack, IStackTokens, Text, ITextStyles } from 'office-ui-fabric-react';
+import Card1 from './components/card'
+import axios from "axios";
 
 function App() {
+  const [nasaCall, setNasaCall] = useState([])
+  useEffect(() => {
+    axios.get(`https://api.nasa.gov/planetary/apod?api_key=sHSkNdRp3rJDBkhVCFN6rImj5fDs1xYi7C3wedKI&date=2012-03-14`)
+      .then(res => {
+        setNasaCall(res.data)
+        
+      }) 
+      .catch(err => {console.log(err)})
+  }, [])
+
+
+
+
+
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
-      <Card aria-label="Clickable horizontal card " horizontal  >
-          <Card.Item fill>
-            <Image src="https://placehold.it/180x135" alt="Placeholder image." />
-          </Card.Item>
-          <Card.Section>
-            <Text variant="small">
-              Contoso
-            </Text>
-            <Text>Contoso Denver expansion design marketing hero guidelines</Text>
-            <Text variant="small" >
-              Is this recommendation helpful?
-            </Text>
-          </Card.Section>
-          <Card.Section >
-            <Icon iconName="RedEye" />
-            <Icon iconName="SingleBookmark" />
-            <Stack.Item grow={1}>
-              <span />
-            </Stack.Item>
-            <Icon iconName="MoreVertical"  />
-          </Card.Section>
-        </Card>
+     
+
+    <Card1 nasa={nasaCall} />
+
     </div>
   );
 }
