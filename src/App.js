@@ -7,6 +7,7 @@ import axios from "axios";
 function App() {
   const [nasaCall, setNasaCall] = useState([])
   const [d, setnewD] = useState('2012-03-14')
+  const [loading, setLoading] = useState(true)
 
 let setD = (date) => {
   let month = date.toString().substring(4,7)
@@ -53,23 +54,35 @@ let setD = (date) => {
     axios.get(`https://api.nasa.gov/planetary/apod?api_key=sHSkNdRp3rJDBkhVCFN6rImj5fDs1xYi7C3wedKI&date=${d}`)
       .then(res => {
         setNasaCall(res.data)
+        setLoading(false)
         
       }) 
       .catch(err => {console.log(err)})
   }, [d])
 
-
+let loadingCheck = ()  => {
+  if(loading){
+    return <h1>Loading....</h1>
+  } else{
+    return (
+    <div>
+     <h1>NASA Photo Of The Day</h1>
+  
+     <Card1 nasa={nasaCall}  />
+     <h3>Pick a day to display a photo</h3>
+     <Datepicker datef={setD} />
+     </div>
+    )
+  }
+}
 
 
 
   return (
     <div className="App">
      
-     <h1>NASA Photo Of The Day</h1>
-  
-    <Card1 nasa={nasaCall}  />
-    <h3>Pick a day to display a photo</h3>
-    <Datepicker datef={setD} />
+    {loadingCheck()}
+
 
     </div>
   );
