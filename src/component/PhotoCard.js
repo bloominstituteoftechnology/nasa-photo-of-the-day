@@ -1,13 +1,32 @@
 import React from "react";
+import styled from "styled-components";
+
 
 const NasaCard = (props) => {
+  const ImageCard = styled.div`
+  border: 8px dashed black;
+  margin: 20px;
+  padding; 20px;
+  color: orange;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  `
+ const ImageStyle = styled.img`
+ width: 1200px;
+ heigth: 500px;
+ `
+const ParagraphStyle = styled.p`
+width: 1200px;
+
+`
   return (
-    <div>
-      <h1>Title:{props.data.title}</h1>
-      <h3>Date : {props.data.date}</h3>
-      <img src={props.data.hdurl} alt ={props.data.title}/>
-      <p> Explanation: {props.data.explanation} </p>
-    </div>
+    <ImageCard>
+      <h1>{props.data.title}</h1>
+      <h3> {props.data.date}</h3>
+      <ImageStyle src={props.data.hdurl} alt ={props.data.title}/>
+      <ParagraphStyle> Explanation: {props.data.explanation} </ParagraphStyle>
+    </ImageCard>
   );
 };
 
