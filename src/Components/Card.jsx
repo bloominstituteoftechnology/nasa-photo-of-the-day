@@ -6,6 +6,7 @@ const Card = props => {
         <div className="nasa-card">
             <img className = "nasa-img" alt="random" src ={props.imgUrl}/>
             <h2> {props.title}</h2>
+            <p>{props.description}</p>
         </div>
     )
 }
