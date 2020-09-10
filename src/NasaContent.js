@@ -10,6 +10,14 @@ const keyFra = keyframes `
     opacity: 1;
 }`
 
+const StyledDate = styled.h3`
+  color: ${props => props.theme.white};
+`
+
+const StyledTitle = styled.h1`
+  color: ${props => props.theme.quaternaryColor};
+`
+
 const StyledNasaContent = styled.div`
     opacity: 0;
     animation: ${keyFra} 2s forwards;
@@ -42,10 +50,12 @@ const StyledNasaContent = styled.div`
   return (content &&
     <StyledNasaContent className="App">
         <div>
-      <h1>
+
+      <StyledTitle>
         {content.title} <span role="img" aria-label='go!'>🚀</span>!
-      </h1>
-      <h3>{content.date}</h3>
+      </StyledTitle>
+
+      <StyledDate>{content.date}</StyledDate>
       </div>
       <div><img alt="data" src={content.url}></img></div>
      <div> <p><span> </span>{content.explanation}</p> </div>
