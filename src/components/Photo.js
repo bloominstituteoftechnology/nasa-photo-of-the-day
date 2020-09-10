@@ -1,5 +1,20 @@
 import React from "react";
+import styled, { keyframes } from "styled-components";
 import Content from "./Content";
+
+const kf = keyframes`
+  100% {
+    transform: scale(1)
+  }
+`;
+
+const StyledPhoto = styled.div`
+  img {
+    width: ${(pr) => pr.theme.width};
+    transform: scale(0.1);
+    animation: ${kf} 1.5s forwards;
+  }
+`;
 
 export default function Photo(props) {
   const { image } = props;
@@ -8,7 +23,9 @@ export default function Photo(props) {
 
   return (
     <div className="Photo">
-      <img src={image.hdurl} alt="nasa" width="75%"></img>
+      <StyledPhoto>
+        <img src={image.hdurl} alt="nasa"></img>
+      </StyledPhoto>
       <Content content={image} />
     </div>
   );
