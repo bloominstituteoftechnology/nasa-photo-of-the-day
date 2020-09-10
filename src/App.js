@@ -19,10 +19,17 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Nasa's Photo of the Day!</h1>
       <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
+        Here we like to showcase one photo a day from the stars! <br>Click below if you like what you see.</br>
+        <button onClick={(event) => nasaData(id)}>switch it up</button>
+         <span role="img" aria-label='go!'>🚀</span>!
       </p>
+
+      <Photo 
+      photo={nasaData}
+      />
+
     </div>
   );
 }
