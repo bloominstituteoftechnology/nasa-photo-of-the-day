@@ -1,0 +1,24 @@
+.card {
+  border: solid 2px black;
+  background-color: lightgoldenrodyellow;
+  box-shadow: 2px 2px lightgrey;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 100px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+h3 {
+  font-style: italic;
+}
+
+p {
+    width: 80%;
+    margin: 20px auto;
+}
+
+img {
+    border: 1px solid black;
+    border-radius: 5px;
+}
