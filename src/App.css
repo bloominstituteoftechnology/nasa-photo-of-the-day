@@ -13,11 +13,75 @@
   }
 }
 
+
+.cards {
+  padding:1px;
+  margin:1px;
+  height:100%;
+  width: 100%;
+}
+
+.card {
+  height:100%;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  min-height:100%;
+  min-width:15rem;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 0 1px 6px -2px #000;
+  background-color: #FFF;
+  margin-bottom: 30px;
+}
+.card-info{
+  height:100%;
+  width:100%;
+  padding-left:12px;
+  box-shadow: 1px 1px black;
+  border:1px solid black;
+}
+
+.card img {
+  width: 30%;
+  height: 60%;
+  border-radius: 1rem;
+  border-top:3px;
+}
+
+.card .name {
+  font-size: 3.4rem;
+}
+
+.card p {
+  font-size: 1.4rem;
+  margin-bottom: 3px;
+}
+
+
+
+.imgg{
+  width:90px;
+  height:100px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);

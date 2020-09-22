@@ -2,15 +2,19 @@ import React from "react";
 
 import "./App.css";
 import Astros from "./components/Astro/Astros";
-
+import SearchBar from "./components/Searchbar/SearchBar";
 function App() {
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
-      <Astros />
+      <SearchBar />
+      <div className="container">
+      
+      <div className="cards">
+        <div className="card">
+        <Astros />
+        </div>
+      </div>
+      </div>
     </div>
   );
 }
