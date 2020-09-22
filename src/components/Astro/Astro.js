@@ -2,7 +2,7 @@
 // Step 8 - Use passed props in MovieCard to render film data
 import React from "react";
 
-const Astro = (props) => {
+const Astro = ({props}) => {
   // const title = props.film.title
   // const film = props.film
   // const { film } = props
@@ -30,7 +30,7 @@ const Astro = (props) => {
 //     </div>
 //   );
 // };
-        const {data} = props;
+        const data = props;
         const title = data.title;
         const description = data.explanation;
         const url = data.url;

@@ -1,15 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React,{useState, useEffect } from "react";
 import axios from "axios";
-import Astro from "Astro.js";
+import Astro from "./Astro";
 
 
 
 const Astros = () =>{
     const [nasaPhotos,setNasaPhotos] = useState([]);
 
-
+    const reUrl = ["","https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&hd=false"] ;
+    // let url = reUlr[1];
     useEffect(() =>{
-        axios.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&hd=false")
+        axios.get(reUrl[1])
         .then((re) =>{
             console.log(re);
             setNasaPhotos(re.data);
@@ -22,7 +23,7 @@ const Astros = () =>{
 
     return (
         <div>
-            <Astro props={nasaPhotos}/>
+            <Astro key={nasaPhotos} props={nasaPhotos} />
         </div>
     );
 };

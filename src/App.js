@@ -1,6 +1,7 @@
 import React from "react";
+
 import "./App.css";
-import Astros from "./components/Astros";
+import Astros from "./components/Astro/Astros";
 
 function App() {
   return (
