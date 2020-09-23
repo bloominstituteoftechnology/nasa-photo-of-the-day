@@ -1,5 +1,4 @@
-// Step 6 - Create MovieCard with ICE
-// Step 8 - Use passed props in MovieCard to render film data
+
 import React from "react";
 
 const Astro = ({props}) => {
