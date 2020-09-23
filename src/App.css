@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+img{
+  width: 30%;
+  height: 30%;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -26,6 +30,13 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.photoCon{
+  margin-top: 10%;
+  padding: 2%;
+  background-color: black;
+  color: white;
 }
 
 @keyframes App-logo-spin {
