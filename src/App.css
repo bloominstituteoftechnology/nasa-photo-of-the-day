@@ -22,6 +22,8 @@
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   height:100%;
   width: 100%;
   padding: 20px;
@@ -42,18 +44,19 @@
   border:1px solid black;
 }
 
-.card img {
+.card div img {
   width: 30%;
   height: 60%;
   border-radius: 1rem;
-  border-top:3px;
+  
 }
 
-.card .name {
-  font-size: 3.4rem;
+.card h2 {
+  color:black;
+  font-size: 2rem;
 }
 
-.card p {
+.card div p {
   font-size: 1.4rem;
   margin-bottom: 3px;
 }

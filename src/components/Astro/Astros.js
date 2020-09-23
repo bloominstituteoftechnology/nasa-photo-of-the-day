@@ -7,7 +7,7 @@ import Astro from "./Astro";
 const Astros = () =>{
     const [nasaPhotos,setNasaPhotos] = useState([]);
 
-    const reUrl = ["","https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&hd=false"] ;
+    const reUrl = ["","https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&hd=false&start_date=2020-02-01&end_date=2020-02-03"] ;
     // let url = reUlr[1];
     useEffect(() =>{
         axios.get(reUrl[1])

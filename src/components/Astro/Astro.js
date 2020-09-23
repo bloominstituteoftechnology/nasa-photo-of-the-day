@@ -30,15 +30,21 @@ const Astro = ({props}) => {
 //     </div>
 //   );
 // };
+
         const data = props;
+        if(data[0] === undefined){
+          console.log('ki');
+        }else{
+          console.log(data[0].title);
+        }
         const title = data.title;
         const description = data.explanation;
         const url = data.url;
         const date = data.date;
         return (
-            <div>
-              <h2>{title}</h2>
-              <p>{description}</p>
+            <div className="card">
+              <h2 >{title}</h2>
+              <p className="card-info">{description}</p>
               <div>
                 <img src ={url} />
                 <p>{date}</p>

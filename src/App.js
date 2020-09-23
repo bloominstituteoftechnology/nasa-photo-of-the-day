@@ -8,12 +8,9 @@ function App() {
     <div className="App">
       <SearchBar />
       <div className="container">
-      
-      <div className="cards">
-        <div className="card">
-        <Astros />
+        <div className="cards">
+            <Astros />
         </div>
-      </div>
       </div>
     </div>
   );
