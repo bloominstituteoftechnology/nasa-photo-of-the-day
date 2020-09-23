@@ -1,6 +1,6 @@
 
 import React from "react";
-
+import {altTxt} from "../../Globals";
 const Astro = ({props}) => {
   // const title = props.film.title
   // const film = props.film
@@ -37,14 +37,14 @@ const Astro = ({props}) => {
         const url = props.url;
         const date = props.date;
 
-
+          // TODO animate the Loading... words
         if (!props.url) return <h3>Loading...</h3>;
         return (
             <div className="card">
               <h2 >What{title}</h2>
               <p className="card-info">{description}</p>
               <div>
-                <img src={url} />
+                <img src={url} alt={altTxt}/>
                 <p>{date}</p>
               </div>
             </div>
