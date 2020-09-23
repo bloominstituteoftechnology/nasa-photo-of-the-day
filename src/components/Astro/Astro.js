@@ -30,12 +30,15 @@ const Astro = ({props}) => {
 //   );
 // };
 
-        const data = props;
+        // const data = props;
 
-        const title = data.title;
-        const description = data.explanation;
-        const url = data.url;
-        const date = data.date;
+        const title = props.title;
+        const description = props.explanation;
+        const url = props.url;
+        const date = props.date;
+
+
+        if (!props.url) return <h3>Loading...</h3>;
         return (
             <div className="card">
               <h2 >What{title}</h2>
