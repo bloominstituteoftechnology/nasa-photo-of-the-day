@@ -11,15 +11,15 @@ const toggleInfo = () => {
   };
 
 return(
-<div>
-<h5>More info here!</h5>
+<div style={{margin:"auto"}}>
+<h5 style={{fontSize:"25px", fontStyle:"italic"}}>More info here!</h5>
   {infoOn && 
-    <p style={{textAlign:"left",backgroundColor:"#080808"}}>
+    <p style={{textAlign:"left",backgroundColor:"#080808",lineHeight:"28px", fontSize:"20px", fontStyle:"italic"}}>
       {info}</p>
   }
   <div>
   <button 
-     style={{color:"indianred",fontSize:"18px",borderRadius:"5px",paddingBottom:"2px",transition:"ease-in-out 3s"}}
+     style={{color:"indianred",fontSize:"18px",borderRadius:"5px",paddingBottom:"2px",transition:"ease-in-out", transitionDelay: "3s"}}
      id='expand'
      variant="outline-danger"
      onClick={toggleInfo} 
