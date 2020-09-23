@@ -2,12 +2,28 @@ import React,{useState, useEffect } from "react";
 import axios from "axios";
 import Astro from "./Astro";
 
-const astroFn = (nasaPhotos) =>{
-    return (
-        <div>
-            <Astro key={nasaPhotos} props={nasaPhotos} />
-        </div>
-    );
+const astroFn = (nasaPhotos,reqGet) =>{
+    console.log('do you work');
+    console.log(reqGet);
+    console.log('after that');
+    let ar = [{}];
+    return  reqGet.map( (el,i) =>{
+                    // console.log(re.data[0].title);
+                    console.log('else')
+                ar[i] = el;
+                  console.log(ar[i]);
+                //  setNasaPhotos(ar[i]);
+                 console.log(nasaPhotos);
+                 return
+                 
+                 <Astro key={i} props={nasaPhotos} />
+                 
+                
+                });
+            
+           
+        
+
 };
 
 const Astros = () =>{
@@ -25,19 +41,20 @@ const Astros = () =>{
         axios.get(reqUrl)
         .then((re) =>{
             let ar = [{}];
-            setReqGet(re);
+            setReqGet(re.data);
             console.log(re);
-            if(!reqGet.data ) return <h3>Loading</h3>;
+            if(!reqGet.data ) console.log('undeeefined');
             
+            console.log(reqGet);
             re.data.map( (el,i) =>{
-                console.log(re.data[0].title);
-                console.log('else')
+                // console.log(re.data[0].title);
+                // console.log('else')
             ar[i] = el;
-            //  console.log(el);
-             setNasaPhotos(ar[i]);
-             return astroFn(nasaPhotos);
+            //   console.log(ar[i]);
+             setNasaPhotos(ar);
+            //  console.log(nasaPhotos);
             });
-        
+            
         })
         .catch((er) =>{
             console.log(er);
@@ -46,7 +63,7 @@ const Astros = () =>{
     // useEffect(effectFn,[]);
 
     return (
-        astroFn(nasaPhotos)
+        astroFn(nasaPhotos,reqGet)
     );
 };
 
