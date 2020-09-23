@@ -20,10 +20,10 @@ return(
  
 <Button 
      id='expand'
+     variant="outline-danger"
      onClick={toggleInfo} 
-    variant="info"
->{infoOn ? 'Hide' : 'Show'} More Info
-</Button>
+> {infoOn ? 'Hide' : 'Show'} More Info
+</Button>{' '}
 
 
 </div>

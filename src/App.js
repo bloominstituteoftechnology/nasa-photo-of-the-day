@@ -2,11 +2,12 @@ import React, { useState,useEffect } from "react";
 import axios from "axios";
 import CheckandLoad from './Components/CheckandLoad';
 import "./App.css";
+import Card from 'react-bootstrap/Card';
 
 function App() {
   const [data,setData]=useState('');
-  const [chosenDate,setChosenDate]=useState('2020-01-01');
-  // const [chosenDate,setChosenDate]=useState('');
+  //const [chosenDate,setChosenDate]=useState('2020-01-01');
+  const [chosenDate,setChosenDate]=useState('');
   const [loading,setLoading]=useState(true);
 
   useEffect(()=>{
@@ -34,15 +35,17 @@ function App() {
   }
 
   return (
-    <div className="App" style={{margin:'0 auto', color:'indianred',backgroundColor:'black'}}>
+    <Card style={{backgroundColor:"black"}}>
+    <div className="App" style={{margin:'0 auto', color:'indianred',display:'flex', flexDirection:"column"}}>
       <h1>
-        NASA Picture of the Day!<span role="img" aria-label='go!'>🚀</span>!
+        NASA Picture of the Day !<span role="img" aria-label='go!'>🚀</span>
       </h1>
       <CheckandLoad 
       data={data}
       loading={loading}
       updateChosenDate={updateChosenDate}/>
     </div>
+    </Card>
   );
 }
 

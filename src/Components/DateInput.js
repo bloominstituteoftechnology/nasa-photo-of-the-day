@@ -8,7 +8,7 @@ import moment from "moment";
 function DateInput({updateChosenDate}){
     const [myDate, setMyDate] = useState("");
     return(
-    <div style={{ margin:"10px"}}>
+    <div style={{ margin:"50px",textAlign:"left"}}>
     Choose Your Date :
     <DatePicker
      placeholderText="Click to choose your Date !"
