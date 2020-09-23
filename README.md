@@ -3,7 +3,6 @@
 https://www.notion.so/Component-Side-Effects-4f0c3f52868e4ccd8743100ac97a6b28
 
 
-
 # Module Project: Component Side Effects- NASA APOD
 
 This will be a two-module project. In it you will consume the NASA API to fetch the "Astronomy Photo Of The Day" or APOD. Once you fetch the data, you will build a few components that will render different pieces of data in your interface. After the second module (in the [DAY_TWO_README.md](DAY_TWO_README.md) file) you will re-style your app using one of the libraries you learn. 
