@@ -11,22 +11,26 @@ const astroFn = (nasaPhotos) =>{
 };
 
 const Astros = () =>{
-    const [nasaPhotos,setNasaPhotos] = useState({});
+
     // Set a new apikey if there is no more room for this one
     const [apiKey, setApiKey] = useState('7MH99v254pwUt83ewWyggb86uQjDcbUCJrAzM2xf');
    
-
+    const [nasaPhotos,setNasaPhotos] = useState([{}]);
     const reUrl = ["https://api.nasa.gov/planetary/apod?api_key="+apiKey+"&hd=false&start_date=2020-02-01&end_date=2020-02-01","https://api.nasa.gov/planetary/apod?api_key="+apiKey+"&hd=false&start_date=2020-01-01&end_date=2020-01-02"] ;
     const [reqUrl,setReqUrl] = useState(reUrl[1]);
     // let url = reUlr[1];
     useEffect(() =>{
+        
         axios.get(reqUrl)
         .then((re) =>{
+            let ar = [{}];
             re.data.map( (el,i) =>{
                 // console.log(re.data[0].title);
-            setNasaPhotos(el);
-             console.log(el,i);
-            return astroFn(nasaPhotos);
+            
+            ar[i] = el;
+             console.log(ar);
+             setNasaPhotos(ar[i]);
+             return astroFn(nasaPhotos);
             });
         })
         .catch((er) =>{
