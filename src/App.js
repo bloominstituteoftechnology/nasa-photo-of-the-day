@@ -20,7 +20,7 @@ function App() {
       setLoading(false);
     })
     .catch(err=>{
-    console.log('Ops there is an error in axios call',err)
+    console.log('Ops Error in axios call',err)
     })  
     }
 
