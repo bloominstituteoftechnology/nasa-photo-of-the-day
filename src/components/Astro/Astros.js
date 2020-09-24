@@ -1,7 +1,8 @@
 import React,{useState, useEffect } from "react";
 import axios from "axios";
 import Astro from "./Astro";
-
+// import DatePicker from "react-datepicker";
+// import "react-datepicker/dist/react-datepicker.css";
 const astroFn = (nasaPhotos,reqGet) =>{
     console.log('do you work');
     console.log(reqGet);
@@ -14,10 +15,9 @@ const astroFn = (nasaPhotos,reqGet) =>{
                   console.log(ar[i]);
                 //  setNasaPhotos(ar[i]);
                  console.log(nasaPhotos);
-                 return
-                 
-                 <Astro key={i} props={nasaPhotos} />
-                 
+                 return(
+                    <Astro key={nasaPhotos} props={nasaPhotos} />
+                 )
                 
                 });
             
@@ -50,9 +50,16 @@ const Astros = () =>{
                 // console.log(re.data[0].title);
                 // console.log('else')
             ar[i] = el;
-            //   console.log(ar[i]);
-             setNasaPhotos(ar);
-            //  console.log(nasaPhotos);
+              console.log(ar);
+              if(nasaPhotos === null){
+                   setNasaPhotos(ar[i]);
+              }else{
+                  console.log(nasaPhotos);
+                  setNasaPhotos(ar[i])
+              }
+              
+             console.log('fom')
+             console.log(nasaPhotos);
             });
             
         })
@@ -63,7 +70,7 @@ const Astros = () =>{
     // useEffect(effectFn,[]);
 
     return (
-        astroFn(nasaPhotos,reqGet)
+        <Astro key={nasaPhotos} props={nasaPhotos} />
     );
 };
 

@@ -38,7 +38,8 @@ const Astro = ({props}) => {
         const date = props.date;
 
           // TODO animate the Loading... words
-        if (!props.url) return <h3>Loading...</h3>;
+        if (!props.url) return <h3>Loading...</h3>; 
+        else{
         return (
             <div className="card">
               <h2 >What{title}</h2>
@@ -49,6 +50,7 @@ const Astro = ({props}) => {
               </div>
             </div>
           );
+        }
 };
 
 export default Astro;

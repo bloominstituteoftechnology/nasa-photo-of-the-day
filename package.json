@@ -13,7 +13,10 @@
     "axios": "^0.20.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.3"
+    "react-player": "^1.9.3",
+    "react-scripts": "^3.4.3",
+    "redux": "^4.0.5",
+    "video-react": "^0.14.1"
   },
   "scripts": {
     "start": "react-scripts start",
