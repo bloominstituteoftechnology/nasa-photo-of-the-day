@@ -1,7 +1,7 @@
 import React from "react";
 import "../../App.css";
 import Astros from "../Astro/Astros";
-
+import Vplayer from "../Vid/Vplayer";
 // import "./App.css";
 // import Astros from ".../Astro/Astros";
 // import SearchBar from "./components/Searchbar/SearchBar";
@@ -10,6 +10,7 @@ function Container() {
     <div className="container">
         <div className="cards">
             <Astros />
+            <Vplayer />
         </div>
       </div>
   );
