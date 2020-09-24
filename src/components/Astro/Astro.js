@@ -1,11 +1,11 @@
 
-import React from "react";
+import React,{useState} from "react";
 import {altTxt} from "../../Globals";
-
+import Media from "../Vid/Media";
 import Vplayer from "../Vid/Vplayer";
 
 
-const Astro = ({props}) => {
+const Astro = ({props,isImg}) => {
   // const title = props.film.title
   // const film = props.film
   // const { film } = props
@@ -35,21 +35,30 @@ const Astro = ({props}) => {
 // };
 
         // const data = props;
-
+        // const [isImg,setIsImg] = useState(true);
         const title = props.title;
         const description = props.explanation;
         const url = props.url;
         const date = props.date;
+        // const isI = true;
+        console.log('in astro');
+        console.log(isImg);
+        // if(props.media_type != 'image'){
+        //   setIsImg(false);
+        // }else{
+        //   setIsImg(true);
+        // }
+        
 
           // TODO animate the Loading... words
         if (!props.url) return <h3>Loading...</h3>; 
         else{
         return (
-            <div className="card">
+            <div  key={props.id} className="card">
               <h2>{title}</h2>
               <p className="card-info">{description}</p>
-              <div>
-                <img src={url} alt={altTxt}/>
+              <div >
+                <Media url={url} isImg={isImg}/>
                 <p>{date}</p>
               </div>
             </div>
