@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: bisque;
 }
 
 img{
@@ -33,10 +34,10 @@ img{
 }
 
 .photoCon{
-  margin-top: 10%;
+  /* margin-top: 10%;
   padding: 2%;
   background-color: black;
-  color: white;
+  color: white; */
 }
 
 @keyframes App-logo-spin {
