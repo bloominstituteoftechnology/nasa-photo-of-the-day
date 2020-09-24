@@ -1,6 +1,10 @@
 
-import React from "react";
+import React,{useState} from "react";
 import {altTxt} from "../../Globals";
+import ReactDOM from 'react-dom';
+import Vplayer from "../Vid/Vplayer";
+
+
 const Astro = ({props}) => {
   // const title = props.film.title
   // const film = props.film
@@ -31,7 +35,8 @@ const Astro = ({props}) => {
 // };
 
         // const data = props;
-
+const [vPlay,setVplayer] = useState(false);
+        setVplayer(true);
         const title = props.title;
         const description = props.explanation;
         const url = props.url;
@@ -45,7 +50,7 @@ const Astro = ({props}) => {
               <h2 >What{title}</h2>
               <p className="card-info">{description}</p>
               <div>
-                <img src={url} alt={altTxt}/>
+                vPlay ? <Vplayer /> :  <img src={url} alt={altTxt}/>
                 <p>{date}</p>
               </div>
             </div>
