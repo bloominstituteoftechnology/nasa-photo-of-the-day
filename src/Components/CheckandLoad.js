@@ -3,26 +3,24 @@ import DateInput from './DateInput';
 import GetImage from './GetImage';
 import MoreInfo from './MoreInfo';
 
-
 function CheckandLoad({data,loading,updateChosenDate}){
     if (loading)
-    return  <h2>Still loading...Please wait ! </h2>    
+    return  <h2> Still loading...Please wait ! </h2>    
     else
     {
     return(
-    <div >
-    <h4>Date:{data.date}</h4>
-    <h2 style={{ fontFamily: "Helvetica", fontStyle:"oblique",fontSize:"32px",margin:"0 auto"}}>{data.title}</h2>
-
-    <div style={{display:"flex", justifyContent:"left"}} >
+    <div className="load" style={{backgroundColor:"black" ,margin:"10px auto", }}>  
+    <p style={{fontFamily: "Helvetica", fontStyle:"oblique",fontSize:"32px",}}>{data.title} <span style={{fontSize:"16px"}}>(Date: {data.date})</span></p>
+   
+    <div style={{display:"flex"}}>
     <DateInput
     updateChosenDate={updateChosenDate}
     />
+    </div>
     <MoreInfo
      info={data.explanation} 
     />
     {/* <span>---</span> */}
-    </div>
     <GetImage 
       imageUrl={data.url}
       mediaType={data.media_type}

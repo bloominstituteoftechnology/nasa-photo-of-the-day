@@ -6,8 +6,8 @@ import Card from 'react-bootstrap/Card';
 
 function App() {
   const [data,setData]=useState('');
-  //const [chosenDate,setChosenDate]=useState('2020-01-01');
-  const [chosenDate,setChosenDate]=useState('');
+   const [chosenDate,setChosenDate]=useState('2020-09-12');
+  //const [chosenDate,setChosenDate]=useState('');
   const [loading,setLoading]=useState(true);
 
   useEffect(()=>{
@@ -36,9 +36,9 @@ function App() {
 
   return (
     <Card style={{backgroundColor:"black"}}>
-    <div className="App" style={{margin:'0 auto', color:'indianred',display:'flex', flexDirection:"column"}}>
+    <div className="App" style={{margin:'0 auto', color:'indianred',display:'flex', flexDirection:"column",flexWrap:"wrap",backgroundColor:"black"}}>
       <h1>
-        NASA Picture of the Day !<span role="img" aria-label='go!'>🚀</span>
+        NASA Picture of the Day !<span classname="App-logo" role="img" aria-label='go!'>🚀</span>
       </h1>
       <CheckandLoad 
       data={data}

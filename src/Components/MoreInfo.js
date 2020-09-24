@@ -14,7 +14,7 @@ return(
 <div style={{margin:"auto"}}>
 <h5 style={{fontSize:"25px", fontStyle:"italic"}}>More info here!</h5>
   {infoOn && 
-    <p style={{textAlign:"left",backgroundColor:"#080808",lineHeight:"28px", fontSize:"20px", fontStyle:"italic"}}>
+    <p style={{textAlign:"left",backgroundColor:"#080808",lineHeight:"28px", fontSize:"16px", fontStyle:"italic",width:"70rem"}}>
       {info}</p>
   }
   <div>
