@@ -8,5 +8,5 @@ import App from "./App";
 
 ReactDOM.render(<App />, document.getElementById("root"));
 ReactDOM.render(<Container />, document.getElementById("r"));
-ReactDOM.render(<Vplayer />, document.getElementById("rr"));
+// ReactDOM.render(<Vplayer />, document.getElementById("rr"));
 

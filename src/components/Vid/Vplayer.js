@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
 import ReactPlayer from 'react-player';
+// import "./Vplayer.css";
 import ReactDOM from 'react-dom';
 
 
