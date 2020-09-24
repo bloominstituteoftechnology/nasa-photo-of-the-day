@@ -7,11 +7,7 @@ function App() {
   return (
     <div className="App">
       <SearchBar />
-      <div className="container">
-        <div className="cards">
-            <Astros />
-        </div>
-      </div>
+      
     </div>
   );
 }
