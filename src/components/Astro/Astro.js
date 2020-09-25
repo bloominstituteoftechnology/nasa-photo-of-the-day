@@ -54,10 +54,10 @@ const Astro = ({props,isImg}) => {
         if (!props.url) return <h3>Loading...</h3>; 
         else{
         return (
-            <div  key={props.id} className="card">
+            <div  className="card">
               <h2>{title}</h2>
               <p className="card-info">{description}</p>
-              <div >
+              <div className="imgD" >
                 <Media url={url} isImg={isImg}/>
                 <p>{date}</p>
               </div>
