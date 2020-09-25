@@ -16,7 +16,7 @@ const Media = ({url,isImg}) => {
           );
         }else if(isImg === 'video'){
             return (
-                <Vplayer />
+                <Vplayer src={url}/>
           );
         }else{
             return (

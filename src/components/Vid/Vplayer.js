@@ -1,23 +1,33 @@
 
 import React, { Component } from 'react';
 import ReactPlayer from 'react-player';
-// import "./Vplayer.css";
+import "./Vplayer.css";
 import ReactDOM from 'react-dom';
+import styled from "styled-components";
 
+
+let PlayerWrapper = styled.div`
+    position: relative;
+    padding-top: 1.25%; /* 720 / 1280 = 0.5625 */
+    width:100%;
+    height:100%;
+    background-color: beige;
+
+`;
 
 
 class Vplayer extends React.Component {
     render () {
       return (
-          <div className='player-wrapper'>
-          <ReactPlayer
-            url='https://vimeo.com/243556536'
-            className='react-player'
-            playing
-            width='100%'
-            height='100%'
-          />
-        </div>
+          <PlayerWrapper>
+            <ReactPlayer
+                url={this.props.src}
+                className='react-player'
+                playing
+                width='100%'
+                height='100%'
+            />
+        </PlayerWrapper>
       )
     }
   }

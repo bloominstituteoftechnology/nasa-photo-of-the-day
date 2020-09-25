@@ -34,7 +34,7 @@ const Astros = () =>{
     const [theImg, setTheImg] = useState(null);
     const [nasaPhotos,setNasaPhotos] = useState([{}]);
     const reUrl = ["https://api.nasa.gov/planetary/apod?api_key="+apiKey+"&hd=false&start_date=2020-02-01&end_date=2020-02-01","https://api.nasa.gov/planetary/apod?api_key="+apiKey+"&hd=false&start_date=2020-02-02&end_date=2020-02-03"] ;
-    const [reqUrl,setReqUrl] = useState(reUrl[0]);
+    const [reqUrl,setReqUrl] = useState(reUrl[1]);
     // let url = reUlr[1];
     useEffect(() =>{
         

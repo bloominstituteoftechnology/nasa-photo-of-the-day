@@ -43,11 +43,6 @@ const Astro = ({props,isImg}) => {
         // const isI = true;
         console.log('in astro');
         console.log(isImg);
-        // if(props.media_type != 'image'){
-        //   setIsImg(false);
-        // }else{
-        //   setIsImg(true);
-        // }
         
 
           // TODO animate the Loading... words
