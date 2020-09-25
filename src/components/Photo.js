@@ -1,15 +1,18 @@
-import React from "react"
-import Text from "./Text"
+import React from "react";
+import Text from "./Text";
+import { Card, Button, CardImg, CardBody,
+    CardTitle, CardText } from 'reactstrap';
 
 const Photo = (props) => {
     return(
-    <div>
-        <div>
-            <img src={props.data.url} alt="#"></img>
-        </div>
-        <Text exp = {props.data.explanation} title = {props.data.title}/>
-        
-    </div>
+        <Card>
+        <CardBody>
+            <CardTitle tag="h1">{props.data.title}</CardTitle>
+            <CardImg src={props.data.url} alt="#"/>
+            <CardText>{props.data.explanation}</CardText>
+        <Button>{props.data.date}</Button>
+        </CardBody>
+    </Card>
     )
 }
 
