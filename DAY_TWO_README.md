@@ -24,12 +24,6 @@ This homework is a continuation of the work you have done previously.
 - [ ] Refactor your project using a component library that was covered in class (Reactstrap or styled-components).
 - [ ] Implement and use at least a few styled components to beautify your project.
 
-### Task 2b: Exit Ticket
-
-Once you begin, you will have 15 minutes to answer the questions [here](https://app.codesignal.com/public-test/2sgSRJ4GKfcbZfiSc/BYuYB5t4heasii).
-
-The completion of these questions is mandatory for MVP. However, passing the quiz doesn't affect your standing as a Lambda School student whatsoever. This is Lambda School testing itself! Please answer honestly and to the best of your ability without using external references.
-
 ### Task 3: Stretch Problems
 
 Do not attempt stretch problems until MVP has been reached and a final commit has been made.
@@ -43,9 +37,6 @@ Do not attempt stretch problems until MVP has been reached and a final commit ha
 Follow these steps for completing your project.
 
 - [ ] Submit a Pull-Request to merge Branch into `main` (student's Repository).
-- [ ] Add your team lead as a reviewer on the pull-request
-- [ ] Your team lead will count the project as complete by merging the branch back into `main` branch.
-- [ ] Do your magic!
 
 -----
 
