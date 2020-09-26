@@ -32,8 +32,11 @@ const Astros = () =>{
     const [apiKey, setApiKey] = useState('7MH99v254pwUt83ewWyggb86uQjDcbUCJrAzM2xf');
     const [reqGet, setReqGet] = useState([{}]);
     const [theImg, setTheImg] = useState(null);
+    const [count,setCount] = useState(4);
     const [nasaPhotos,setNasaPhotos] = useState([{}]);
-    const reUrl = ["https://api.nasa.gov/planetary/apod?api_key="+apiKey+"&hd=false&start_date=2020-02-01&end_date=2020-02-01","https://api.nasa.gov/planetary/apod?api_key="+apiKey+"&hd=false&start_date=2020-02-02&end_date=2020-02-03"] ;
+    const reUrl = ["https://api.nasa.gov/planetary/apod?api_key="+apiKey+"&hd=false&start_date=2020-02-01&end_date=2020-02-01",
+    "https://api.nasa.gov/planetary/apod?api_key="+apiKey+"&hd=false&start_date=2020-02-02&end_date=2020-02-03",
+    "https://api.nasa.gov/planetary/apod?api_key="+apiKey+"&hd=false&count="+count] ;
     const [reqUrl,setReqUrl] = useState(reUrl[1]);
     // let url = reUlr[1];
     useEffect(() =>{
@@ -82,8 +85,14 @@ const Astros = () =>{
     // useEffect(effectFn,[]);
 
     return (
-        <Astro key={nasaPhotos} props={nasaPhotos} isImg={theImg} />
+        <div>
+        {
+            reqGet.map( (e) =>{
+               return  <Astro key={e} props={e} isImg={e.media_type} />
+            })
+        }
+        </div>
     );
-};
+}
 
 export default Astros;
