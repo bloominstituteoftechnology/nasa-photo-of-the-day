@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import axios from "axios";
 
 import "./App.css";
-import "react-datepicker/dist/react-datepicker.css";
-import Card from "./components/card";
+import NasaImg from "./components/NasaImg";
+import NasaBody from "./components/NasaBody";
+import { Card, Container, Row, Col } from "reactstrap";
 
 function App() {
   const [apod, setApod] = useState({});
@@ -28,15 +30,21 @@ function App() {
       .catch((err) => {
         console.log(err);
       });
-
   }, [startDate]);
 
   return (
     <div className="App">
-      <div>
-        <DatePicker selected={startDate} onChange={handleChange} />
-      </div>
-      <Card props={apod} />
+      <Container>
+        <Row>
+          <Col sm="12" md={{ size: 8, offset: 2 }}>
+            <Card>
+              <NasaImg props={apod} />
+              <DatePicker selected={startDate} onChange={handleChange} />
+              <NasaBody props={apod} />
+            </Card>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }
