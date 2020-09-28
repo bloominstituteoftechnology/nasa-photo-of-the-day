@@ -1,4 +1,23 @@
+body{
+ margin: 0;
+  
+}
+
+
+
+
+
+
+
 .App {
+  text-align: center;
+}
+h1{
+
+  font-size: 60px;
+}
+
+.text{
   text-align: center;
 }
 
