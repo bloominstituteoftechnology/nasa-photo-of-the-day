@@ -1,30 +1,23 @@
 /* eslint-disable no-unused-vars */
-import React, {useEffect, useState} from "react";
-import axios from "axios";
+import React from "react"
+import {StyledDiv} from './components/Pics'
 
 
+function NasaPics (props) {
+    return(
+        < StyledDiv className="nasaPics">
 
-export default function NasaPic(){
+        <title>test</title>
+        <h1>{props.data.title}</h1>
+        <h2>{props.data.date}</h2>
+        <img src = {props.data.url} />
+        <div className = "text">
+            <p>{props.data.explanation}</p>
+        </div>
 
-const [pics, setPics] =useState([]);
+        </StyledDiv>
+           
 
-const effectFn =() =>{
-    axios
-    .get("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=fhaz&api_key=DEMO_KEY")
-   .then(response => {
-    console.log(response.data);
-    setPics(response.data)
-
-   });
+    )
 }
-
-useEffect(effectFn, []);
-
-return (
-    <div className="pictures">
-    
-    </div>
-    );
-
-
-}
+export default NasaPics;

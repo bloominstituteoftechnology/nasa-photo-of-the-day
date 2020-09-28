@@ -1,17 +1,29 @@
-import React from "react";
+import React from 'react'
+import styled from 'styled-components'
 
-const Pics = () => {
+
+export const StyledDiv = styled.div `
+margin: 0;
+text-align: center;
+background-color:gray;
+color: #fff;
+
+`
 
 
-    return(
+export const title = styled.h1 `
 
-        <div className="pic-list">
-            <h2>Picture Title</h2>
-            <p>text</p>
-            <p>text</p>
-        </div>        
+text-align:Center;
+font-size:20px;
+color:white;
+background-color:red;
 
-    )
-}
 
-    export default Pics;
+`
+
+
+
+
+
+
+;
