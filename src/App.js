@@ -4,17 +4,41 @@ import axios from 'axios'
 
 import { API_KEY, BASE_URL } from './constants/index'
 
-console.log(API_KEY)
 
-function App() {
+export default function App() {
+  const [imageSet, setImageSet] = useState([])
+  const [currentCamera, setCurrentCamera] = useState(null)
+  const rovers = ['curiosity', 'opportunity']
+
+  console.log(rovers)
+  const openImage = cameraName => {
+    setCurrentCamera(cameraName)
+  }
+
+  const closeImage = () => {
+    setCurrentCamera(null)
+  }
+
+  // useEffect(() => {
+  //   axios.get(`${BASE_URL}`)
+  // })
+
+  const Rovers = props => {
+    <div className="rover">
+
+    </div>
+  }
+
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+      <h1>Choose a rover: </h1>
+        <div className="rover">
+          {rovers[0]}
+          <button onClick={() => openImage(rovers[0])}>
+            See Image
+          </button>
+        </div>
     </div>
   );
 }
 
-export default App;
