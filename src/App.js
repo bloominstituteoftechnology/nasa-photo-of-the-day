@@ -20,6 +20,7 @@ export default function App() {
     setCurrentCamera(null);
   };
 
+  // console.log(`${BASE_URL}${camera}/photos?earth_date=2015-10-6&api_key=${API_KEY}`)
   // useEffect(() => {
   //   axios.get(`${BASE_URL}`)
   // })
