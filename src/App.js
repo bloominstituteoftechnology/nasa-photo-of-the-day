@@ -9,11 +9,13 @@ import Image from './components/Image'
 export default function App() {
   const [imageSet, setImageSet] = useState([]);
   const [currentCamera, setCurrentCamera] = useState(null);
+  const [reClick, setReClick] = useState(0)
   const rovers = [{id: 0, name:"curiosity"}, {id: 1, name:"opportunity"}];
 
   console.log(rovers);
   const openImage = (cameraName) => {
     setCurrentCamera(cameraName);
+    setReClick(reClick + 1)
   };
 
   const closeImage = () => {
@@ -43,7 +45,7 @@ export default function App() {
       }
       </div>
       {
-        currentCamera && <Image camera={currentCamera} close={closeImage} />
+        currentCamera && <Image camera={currentCamera} close={closeImage} reClick={reClick}/>
       }
     </div>
   );
