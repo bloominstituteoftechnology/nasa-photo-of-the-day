@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import axios from 'axios'
 import Search from "./Components/Search"
 import Title from "./Components/Title"
-import Explaination from './Components/Explaination'
+import Explanation from './Components/Explaination'
 import Image from './Components/Image'
 import "./App.css";
 
@@ -24,13 +24,14 @@ function App() {
 
   
 
-
-
+ console.log(info.explanation)
+  
   return (
     <div className="App">
       <Title title = {info.title} />
+      <Explanation explain = {info.explanation} />
       {/* <Search/>
-      <Explaination/>
+      <Explanation explain = {info.explanation}/>
       <Image/> */}
     </div>
   );
