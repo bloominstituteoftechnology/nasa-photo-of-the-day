@@ -1,15 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 
-function App() {
+import Main from "./components/main"
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Button } from 'reactstrap';
+
+
+export default function App() {
+ 
   return (
-    <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+
+    <div>
+      {/* <Button color="warning">warning</Button>{' '} */}
+      
+     <Main />
+     
     </div>
-  );
+    
+    
+  )
 }
 
-export default App;
+

@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+.Header{
+  background-color: cadetblue;
+  width: 70%;
+  margin: auto;
+}
+.pic{
+  width: 60%;
+  margin: auto;
+}
+ p{
+width: 70%;
+margin: auto;
+padding: 20px;
+}
+span{
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.jumbo{
+  height: 250px;
+}
