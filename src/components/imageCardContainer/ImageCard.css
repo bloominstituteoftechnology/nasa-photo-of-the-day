@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@200&display=swap');
+body {
+    background-color: rgb(236, 240, 249);
+} 
+
+img {
+    width: 50rem;
+}
+
+.explanation {
+    width: 90%;
+    line-height: 1.45;
+    text-align: justify;
+}
+
+h4 {
+    font-size: 1.4rem;
+}
+
+
+.calendar {
+    margin-left: 2rem;
+    background-color: rgb(236, 240, 249);
+}
+
+::-webkit-datetime-edit { padding: 1em; }
+::-webkit-datetime-edit-fields-wrapper { background: rgb(236, 240, 249) }
+::-webkit-datetime-edit-text { color: red; padding: 0 0.3em; }
+::-webkit-datetime-edit-month-field { color: rgba(32, 81, 201 , 1); }
+::-webkit-datetime-edit-day-field { color: rgba(32, 81, 201 , 1); }
+::-webkit-datetime-edit-year-field { color: rgba(32, 81, 201 , 1); }
+::-webkit-calendar-picker-indicator { color: red; padding: 10px; }
+
+.display {
+    display: none;
+}
