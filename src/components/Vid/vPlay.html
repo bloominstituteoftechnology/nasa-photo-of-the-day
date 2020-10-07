@@ -1,0 +1,25 @@
+<div id='video-player'></div>
+<button onClick='javascript: playPlayer()'>Play</button>
+<button onClick='javascript: pausePlayer()'>Pause</button>
+
+<script src="https://cdn.jsdelivr.net/npm/react-player@1.9.3/dist/ReactPlayer.standalone.js"></script>
+<script>
+
+    // onl lib used is CookPete's ReactPlayer.standalone.js
+const url = 'https://www.youtube.com/watch?v=9W0Dy1nM-zU'
+const container = document.getElementById('video-player')
+
+
+window.playPlayer = function () {
+  renderReactPlayer(container,
+		{ url, playing: true, controls: true } // controls = YouTube GUI
+	)
+}
+
+window.pausePlayer = function () {
+  renderReactPlayer(container, { url, playing: false })
+}
+
+playPlayer()
+</script>
+
