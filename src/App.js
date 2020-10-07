@@ -3,7 +3,6 @@ import './App.css';
 import axios from 'axios';
 import Picture from './Picture';
 import Body from './Body';
-import Details from './Details';
 
 //https://api.nasa.gov/planetary/apod?api_key=LabCyKL7gIyHaawiEtA52wYBzwYer6GcZWpgDBEx
 
@@ -26,12 +25,6 @@ function App(props) {
 		<div className="App">
 			<Picture data={nasaData} />
 			<Body data={nasaData} />
-			<p>
-				Read through the instructions in the README.md file to build your NASA app! Have fun{' '}
-				<span role="img" aria-label="go!">
-					🚀
-				</span>!
-			</p>
 		</div>
 	);
 }
