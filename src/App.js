@@ -15,11 +15,12 @@ const kf = keyframes`
 
 const StyledApp = styled.div`
   background-color: ${pr => pr.theme.black};
-  padding-bottom: 5vh;
+  color: ${pr => pr.theme.blueLight};
   h1 {
-    color: ${pr => pr.theme.blueLight};
     font-size: ${pr => pr.theme.fontSize.header};
-    padding: 2vh 0;
+  }
+  h2 {
+    padding-bottom: 2rem;
   }
   
 `
@@ -81,6 +82,7 @@ export default function App() {
   return (
     <StyledApp className='App'>
       <h1>Choose A Rover</h1>
+      <h2>Random Image: sol: 1000</h2>
       <StyledButtonsContainer className='rovers'>
         {
         rovers.map(rv => {

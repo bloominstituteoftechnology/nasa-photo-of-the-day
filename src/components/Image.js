@@ -11,7 +11,7 @@ const StyledImageFrame = styled.div`
   align-items: center;
   width: 50%;
   margin: auto;
-  padding-top: 5%;
+  padding-top: 1rem;
   color: ${(pr) => pr.theme.blueLight};
   text-transform: capitalize;
   button {
