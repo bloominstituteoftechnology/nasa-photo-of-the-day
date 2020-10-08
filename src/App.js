@@ -21,6 +21,7 @@ const StyledApp = styled.div`
     font-size: ${pr => pr.theme.fontSize.header};
     padding: 2vh 0;
   }
+  
 `
 
 const StyledRover = styled.div`
@@ -40,12 +41,18 @@ const StyledRover = styled.div`
       transition: all 0.4s ease-in-out;
       /* animation: ${kf} 0.5s ease-in forwards; */
     }
+    @media (max-width: 1000px) {
+    font-size: ${pr => pr.theme.fontSize.small};
+  }
   }
 `
 
 const StyledButtonsContainer = styled.div`
-  width: 20vw;
+  width: 17vw;
   margin: auto;
+  @media (max-width: 1000px) {
+    width: 10rem;
+  }
 `
 
 export default function App() {

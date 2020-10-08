@@ -12,22 +12,29 @@ const StyledImageFrame = styled.div`
   width: 50%;
   margin: auto;
   padding-top: 5%;
-  color: ${pr => pr.theme.blueLight};
+  color: ${(pr) => pr.theme.blueLight};
   text-transform: capitalize;
   button {
-    background-color: ${pr => pr.theme.blueLight};
-    color: ${pr => pr.theme.pale};
-    font-size: ${pr => pr.theme.fontSize.large};
-    border: solid 3px ${pr => pr.theme.pale};
+    background-color: ${(pr) => pr.theme.blueLight};
+    color: ${(pr) => pr.theme.pale};
+    font-size: ${(pr) => pr.theme.fontSize.large};
+    border: solid 3px ${(pr) => pr.theme.pale};
     border-radius: 15px;
     padding: 5px;
-    margin-bottom: 5%;
+    margin: 5%;
     width: 20%;
     &:hover {
-      background-color: ${pr => pr.theme.pale};
-      color: ${pr => pr.theme.black};
+      background-color: ${(pr) => pr.theme.pale};
+      color: ${(pr) => pr.theme.black};
       transition: all 0.4s ease-in-out;
     }
+    @media (max-width: 1000px) {
+      font-size: ${(pr) => pr.theme.fontSize.small};
+      width: 6rem;
+    }
+  }
+  @media (max-width: 1000px) {
+    width: 80%;
   }
 `;
 
@@ -61,7 +68,10 @@ export default function Image(props) {
 
   return (
     <StyledImageFrame className='image'>
-      <h2> {camera}: {imageData.earth_date}</h2>
+      <h2>
+        {" "}
+        {camera}: {imageData.earth_date}
+      </h2>
       <div className='image-container'>
         <StyledImage src={imageData.img_src} alt='NASA_image'></StyledImage>
       </div>
