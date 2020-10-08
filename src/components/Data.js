@@ -4,25 +4,30 @@ import axios from 'axios'
 import NasaCard from "../components/NasaCard";
 
 
-function Data(props) {
-    const [nasaInfo, setNasaInfo] = useState([])
+
+function Data() {
+
+    const [nasaInfo, setnasaInfo] = useState([]);
 
     useEffect(() => {
-        axios.get('https://api.nasa.gov/planetary/apod?api_key=K3sHNgJzsB3jrEvkYuKTc6CsT5JNFFaEkYPbxmnc')
+        axios
+            .get(`https://api.nasa.gov/planetary/apod?api_key=rDLuS1OxbD26VJPygpmoRhTKPA0l6bb4sIHGGQJi&date=2020-04-20`)
             .then(res => {
-                console.log('Res data :', res)
-                setNasaInfo.apply(res.data)
+                console.log("Res data : ", res);
+                setnasaInfo(res.data);
             })
+
             .catch(err => {
-                console.log('YOU MESSED UP!')
-            })
-    }, [])
-    
+                console.log("Err msg : ", err);
+            });
+    }, []);
+
     return (
-        <div className='dataContainer'>
-        <NasaCard dat = {nasaInfo} />
-    </div>
-)
+        <div className="dataContainer">
+            <NasaCard data={nasaInfo} />
+        </div>
+    )
+}
 
 
 export default Data;
