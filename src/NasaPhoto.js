@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from "react";
-
 import "./index.css";
+import styled from 'styled-components'
+import theme from "./theme"
 
-const apiKey = process.env.REACT_APP_NASA_KEY
+const apiKey = process.env.REACT_APP_NASA_KEY;
+
+const StyledNasaPhoto = styled.div`
+background-color: ${tm => tm.theme.secondaryBackgroundColor};
+color: ${tm => tm.theme.primaryTextColor};
+`;
 
 export default function NasaPhoto() {
     const [photoData, setPhotoData] = useState(null)
@@ -23,6 +29,7 @@ export default function NasaPhoto() {
     if(!photoData) return <h3>Loading...</h3> // if rendering of fetchPhoto() or photoData is too slow or fails this will create a loading... replacement instead of throwing error
 
     return (
+        <StyledNasaPhoto>
         <div>
             {photoData.media_type === "image" ? (
             <img                                        // image
@@ -46,5 +53,7 @@ export default function NasaPhoto() {
                 <p>About this image:  {photoData.explanation}</p>
             </div>
         </div>
+        </StyledNasaPhoto>
     )       // ^^^ returns photoData content in JSX ^^^
 }
+
