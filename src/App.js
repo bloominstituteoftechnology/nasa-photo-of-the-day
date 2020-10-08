@@ -3,9 +3,17 @@ import "./App.css";
 import axios from 'axios'
 import Info from './Info.js'
 import Picture from './Picture.js'
+import styled from 'styled-components'
 
+const StyledH1 = styled.h1`
 
+  color:pink;
 
+  &:hover{
+    transform: scale(1.25);
+    transition: all 0.3s ease-in-out;
+  }
+`;
 
 function App() {
 
@@ -28,7 +36,7 @@ const [info, setInfo] = useState([])
 
   return (
     <div className="App">
-      <h1>{info.title}</h1>
+      <StyledH1>{info.title}</StyledH1>
   <Picture source={info.url}/>
     <Info copywrite={info.copyright} date={info.date} explanation={info.explanation}/> 
     </div>
