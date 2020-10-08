@@ -1,8 +1,18 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
 import axios from "axios";
+import styled, { keyframes } from 'styled-components'
 
 import { API_KEY, BASE_URL } from "../constants/index";
+
+const StyledImageFrame = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+`
+
+
 
 export default function Image(props) {
   const { camera, close, reClick } = props;
@@ -24,14 +34,15 @@ export default function Image(props) {
       .catch((err) => {
         debugger;
       });
-    console.log(imageData);
   }, [camera, reClick]);
-//   console.log(imageData);
+
 
   return (
-    <div className='image'>
+    <StyledImageFrame className='image'>
+      <div className='image-container'>
       <img src={imageData.img_src} alt='NASA_image'></img>
+      </div>
       <button onClick={close}>Close</button>
-    </div>
+    </StyledImageFrame>
   );
 }
