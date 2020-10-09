@@ -3,20 +3,17 @@ import Apod from "./Apod";
 import Head from "./Head";
 import axios from "axios";
 
-// nasa api https://api.nasa.gov/planetary/apod
-
 
 function Nasa(){
     const [apod, setApod] = useState({});
     const [apod1, setApod1] = useState({});
     const [apod2, setApod2] = useState({});
   const dates = [
-    '2019-2-26',
-    '2019-2-27',
-    '2019-2-28'
+    '2020-2-26',
+    '2020-2-27',
+    '2020-2-28'
   ];
 
-  //first 
     useEffect(() => {
       axios
         .get(`https://api.nasa.gov/planetary/apod?date=${dates[0]}&api_key=87qfeH0SHge3BLvWRDlbFTSOcIkYlaJ04ZF7yHB6`)
@@ -28,7 +25,7 @@ function Nasa(){
           console.log(err);
         });
     }, []);
-    //second 
+
     useEffect(() => {
       axios
         .get(`https://api.nasa.gov/planetary/apod?date=${dates[1]}&api_key=87qfeH0SHge3BLvWRDlbFTSOcIkYlaJ04ZF7yHB6`)
@@ -40,7 +37,7 @@ function Nasa(){
           console.log(err);
         });
     }, []);
-    //third 
+
     useEffect(() => {
       axios
         .get(`https://api.nasa.gov/planetary/apod?date=${dates[2]}&api_key=87qfeH0SHge3BLvWRDlbFTSOcIkYlaJ04ZF7yHB6`)

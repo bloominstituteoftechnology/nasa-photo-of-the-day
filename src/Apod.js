@@ -2,8 +2,8 @@ import React from "react";
 import styled from 'styled-components';
 
 const AnyThing = styled.div`
-color :  #CC0099;
-background:lavenderblush;
+color :  royalblue;
+background:black;
 margin:20px;
 h2{
     color:purple;

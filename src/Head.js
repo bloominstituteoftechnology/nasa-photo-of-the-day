@@ -2,9 +2,9 @@ import React from "react";
 import styled from 'styled-components';
 
 const App = styled.header`
-color : #471f94;
-background:lavenderblush;
-margin:20px;
+color : royalblue;
+background:black;
+margin:30px;
 `;
 
 const Head = props => {
