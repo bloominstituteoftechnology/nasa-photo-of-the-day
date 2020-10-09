@@ -4,19 +4,18 @@ import axios from 'axios';
 import Picture from './Picture';
 import Body from './Body';
 
-//https://api.nasa.gov/planetary/apod?api_key=LabCyKL7gIyHaawiEtA52wYBzwYer6GcZWpgDBEx
-
 function App(props) {
 	const [ nasaData, setNasaData ] = useState([]);
 	useEffect(() => {
 		axios
-			.get('https://api.nasa.gov/planetary/apod?api_key=LabCyKL7gIyHaawiEtA52wYBzwYer6GcZWpgDBEx')
+			.get('https://api.nasa.gov/planetary/apod?api_key=f3CoPyGXLpvzo0qvVplXS5OKifiR7CSOQ7aKt8Jc')
 			.then((res) => {
 				console.log(res.data);
 				setNasaData(res.data);
 			})
 			.catch((err) => {
-				debugger;
+				console.log('failed to get');
+				// debugger;
 			});
 	}, []);
 	console.log('nasadata1', nasaData);
