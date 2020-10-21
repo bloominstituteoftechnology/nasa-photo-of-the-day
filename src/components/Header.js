@@ -4,8 +4,8 @@ function Header() {
   return (
    
       <div className="header__container">
-       <h1>nasa</h1>
-        <a><i class="fab fa-github"></i></a>
+       <h1>>_nasapod</h1>
+        <a href="https://github.com/rmscrlos/nasa-photo-of-the-day/tree/carlos-ramos"><i className="fab fa-github"></i></a>
       </div>
   
   )

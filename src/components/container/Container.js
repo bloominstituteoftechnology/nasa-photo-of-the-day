@@ -1,9 +1,13 @@
-import React from 'react'
+import React, {useState} from 'react'
+import Image from "./ImgContainer";
+import Content from "./Content";
 
-function Container() {
+
+const Container = props => {
   return (
-    <div>
-      
+    <div className="container">
+      <Image imgUrl={props.nasaData.url}/>
+      <Content content={props.nasaData}/>
     </div>
   )
 }
