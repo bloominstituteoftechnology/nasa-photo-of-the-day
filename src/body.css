@@ -1,0 +1,221 @@
+.body {
+    display: flex;
+    width: 99vw;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.body__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 0.45;
+    overflow: hidden;
+    padding: 5vw;
+    align-items: center;
+}
+
+.body__right {
+    flex: 0.55;
+    align-items: center;
+}
+
+.body__right img {
+    width: 100%;
+    height: auto;
+}
+
+h2 {
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    margin-top: -6vh;
+}
+
+h3 {
+    font-weight: bolder;
+    margin-top: -3vh;
+}
+
+p {
+    font-size: clamp(0.5rem, 1vw, 1.2rem);
+    line-height: 170%;
+    font-weight: bold;
+}
+
+.body__buttonWrapper {
+    padding: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    background: transparent;
+    color: black;
+    border: 2px solid black;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding: 15px 50px;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-block;
+    margin: 15px 30px;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+button:hover {
+    color: white;
+    background-color: black;
+}
+
+@media (max-width: 1000px) {
+    .body {
+        flex-direction: column-reverse;
+    }
+
+    .body__left {
+        padding: 35px 10vw;
+    }
+
+    h2 {
+        margin-top: 0;
+    }
+
+    h3 {
+        margin-top: 0;
+    }
+
+    p {
+        font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+    }
+
+}
+
+@media (max-width: 500px) {
+    button {
+        font-size: 15px;
+        padding: 10px 35px;
+        margin: 0 20px;
+    }
+
+    .body__right {
+        padding-top: 3vh;
+    }
+}
+
+/* ANIMATIONS!!! */
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scale-up {
+    from {
+        transform: scale(0);
+    }
+}
+
+@keyframes enter {
+    from {
+        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        -o-transform: translateX(100%);
+    }
+
+    to {
+        transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+    }
+}
+
+@keyframes reverse-enter {
+    from {
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
+    }
+
+    to {
+        transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+    }
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(100%);
+        -webkit-transform: translateY(100%);
+        -moz-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+        -o-transform: translateY(100%);
+    }
+
+    to {
+        transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+    }
+}
+
+/* animating individual elements */
+
+* {
+    animation-delay: var(--delay);
+    animation-duration: var(--duration);
+    animation-timing-function: var(--ease);
+    animation-fill-mode: both;
+}
+
+.body__right img {
+    --delay: 0s;
+    --duration: 1s;
+    animation-name: enter, fade-in;
+}
+
+h2 {
+    --delay: 0.5s;
+    --duration: 1s;
+    animation-name: reverse-enter, fade-in;
+}
+
+h3 {
+    --delay: 0.75s;
+    --duration: 1s;
+    animation-name: scale-up;
+}
+
+p {
+    --delay: 1s;
+    --duration: 1s;
+    animation-name: slide-up, fade-in;
+}
+
+button {
+    --delay: 1s;
+    --duration: 1s;
+    animation-name: scale-up, fade-in;
+}
