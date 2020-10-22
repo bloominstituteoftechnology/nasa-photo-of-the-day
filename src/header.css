@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: space-between;
+    height: 8vw;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    height: 110%;
+}
+
+img {
+    height: 100%;
+    width: auto;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    padding-right: 5vw;
+}
