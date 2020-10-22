@@ -13,7 +13,7 @@ function App() {
   // Set the default data that will load with page
   useEffect(() => {
     fetch(
-      "https://api.nasa.gov/planetary/apod?api_key=9tGhuvgAgFXb1lZYVgJnaXwZzNw9aEtheCNmfAzQ&date=2020-10-21"
+      "https://api.nasa.gov/planetary/apod?api_key=9tGhuvgAgFXb1lZYVgJnaXwZzNw9aEtheCNmfAzQ"
     )
       .then((response) => response.json())
       .then((data) => {
