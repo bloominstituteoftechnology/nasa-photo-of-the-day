@@ -13,7 +13,7 @@ function App() {
   // Set the default data that will load with page
   useEffect(() => {
     fetch(
-      "https://api.nasa.gov/planetary/apod?api_key=9tGhuvgAgFXb1lZYVgJnaXwZzNw9aEtheCNmfAzQ"
+      "https://api.nasa.gov/planetary/apod?api_key=9tGhuvgAgFXb1lZYVgJnaXwZzNw9aEtheCNmfAzQ&date=2020-10-21"
     )
       .then((response) => response.json())
       .then((data) => {
@@ -28,7 +28,17 @@ function App() {
       });
   }, []);
 
-  const goBack = async () => {
+  useEffect(() => {
+    fetch(
+      `https://api.nasa.gov/planetary/apod?api_key=9tGhuvgAgFXb1lZYVgJnaXwZzNw9aEtheCNmfAzQ&date=${year}-${month}-${day}`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        setData(data);
+      });
+  }, [day, month, year]);
+
+  const goBack = () => {
     if (day > 1) {
       setDay(day - 1);
     } else if (month > 1 && month !== 3) {
@@ -44,18 +54,9 @@ function App() {
     }
 
     setCounter(counter + 1);
-    console.log(`Decrease ${day}`);
-
-    await fetch(
-      `https://api.nasa.gov/planetary/apod?api_key=9tGhuvgAgFXb1lZYVgJnaXwZzNw9aEtheCNmfAzQ&date=${year}-${month}-${day}`
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        setData(data);
-      });
   };
 
-  const goForeward = async () => {
+  const goForeward = () => {
     if (counter === 0) {
       return;
     } else if (day < 30 && month !== 2) {
@@ -72,15 +73,6 @@ function App() {
     }
 
     setCounter(counter - 1);
-    console.log(`Increase ${day}`);
-
-    await fetch(
-      `https://api.nasa.gov/planetary/apod?api_key=9tGhuvgAgFXb1lZYVgJnaXwZzNw9aEtheCNmfAzQ&date=${year}-${month}-${day}`
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        setData(data);
-      });
   };
 
   return (
