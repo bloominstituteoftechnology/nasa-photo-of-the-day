@@ -1,19 +1,27 @@
 import React from "react";
 import Button from "./Button";
+import {
+  PictureInfo,
+  Image,
+  Container,
+  PictureTitle,
+  PictureDate,
+} from "./Styles";
 
 export default function PhotoContainer(props) {
   return (
-    <div className="photo-container">
+    <Container className="photo-container">
       <div className="photo">
-        <img src={props.props.hdurl} alt="Astronomy"></img>
+        <Image src={props.props.hdurl} alt="Astronomy"></Image>
         {console.log(props.props)}
       </div>
       <div className="description">
-        <h1>{props.props.title}</h1>
-        <h5>{props.props.date}</h5>
-        <p>{props.props.explanation}</p>
+        <PictureTitle>{props.props.title}</PictureTitle>
+        <PictureDate>{props.props.date}</PictureDate>
+        <PictureInfo>{props.props.explanation}</PictureInfo>
+        <br />
         <Button />
       </div>
-    </div>
+    </Container>
   );
 }
