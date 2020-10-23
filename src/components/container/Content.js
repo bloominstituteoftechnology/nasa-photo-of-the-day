@@ -20,7 +20,7 @@ const TopContent = styled.div`
 
 
 const Content = props => {
-  console.log(props.content)
+  // console.log(props.content)
   return (
     <ContentContainer className="content">
       <TopContent className="top__content">

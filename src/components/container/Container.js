@@ -28,7 +28,7 @@ const CalendarContainer = styled.div`
 const Container = () => {
   const [show, setShow] = useState(false);
   const [data, setData] = useState([]);
-  const [date, setDate] = useState();
+  const [date, setDate] = useState('');
   
  
   useEffect(()=> {
@@ -66,7 +66,7 @@ const Container = () => {
     <MainContainer>
       <CalendarContainer>
         <i onClick={onChange} className="far fa-calendar-alt calendar__icon"></i>
-        {show && <Calendar onClickDay={changeDate} className="calendar" />}
+        {show && <Calendar onChange={changeDate} maxDate={new Date()} className="calendar" />}
       </CalendarContainer>
       <Image imgUrl={data.url}/>
       <Content content={data}/>
