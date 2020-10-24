@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from   'react';
 import axios from "axios";
-import PhotoSection from "./PhotoSection"
+import PhotoSection from "./PhotoSection";
 import Explanation from './Explanation';
+import "./Header.css";
+import {Card,  CardText, CardBody, CardSubtitle, CardHeader, Container} from 'reactstrap';
 
 
 
@@ -22,13 +24,30 @@ const Header = props =>  {
         }, []);
 
         return(
+            
             <div>
-                <h1>Nasa Photo of the Day</h1>
-                <h2>Today's Date:   {data.date}</h2>
-                <h2>Photo: {data.title}</h2>
-                <h4>By: {data.copyright}</h4>
-                <PhotoSection  url={data.url}/>
-                <Explanation explanation ={data.explanation}/>
+            <Container>
+                    <Card fluid={true}>
+                        
+                            <CardHeader class="headerCardSection" tag="h1">NASA Photo of the Day</CardHeader>
+                            <CardBody>
+                                <CardSubtitle> 
+                                <h2>Today's Date:{data.date}</h2>
+                                <h2>Photo: {data.title}</h2>
+                                <h4>By: {data.copyright}</h4> 
+                                </CardSubtitle>
+
+                               <div class="photo"><PhotoSection  url={data.url}/></div>
+                                
+                                </CardBody>
+                                    <CardBody>
+                                    <CardText><Explanation explanation ={data.explanation}/></CardText>
+                                </CardBody>
+                            </Card>
+                </Container>
+               
+                
+                
                 
                 
             </div>
