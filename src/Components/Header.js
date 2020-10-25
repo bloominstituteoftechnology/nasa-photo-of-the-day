@@ -7,7 +7,7 @@ import {Card,  CardText, CardBody, CardSubtitle, CardHeader, Container} from 're
 
 
 
-const Header = props =>  {
+const Header = () =>  {
 
     const [data, setData] = useState({})
     
@@ -26,25 +26,28 @@ const Header = props =>  {
         return(
             
             <div>
-            <Container>
+            <Container className="container">
                     <Card fluid={true}>
                         
-                            <CardHeader class="headerCardSection" tag="h1">NASA Photo of the Day</CardHeader>
-                            <CardBody>
+                            <CardHeader className="headerCardSection" tag="h1">NASA Photo of the Day</CardHeader>
+                            
+                            <CardBody className="body1">
                                 <CardSubtitle> 
                                 <h2>Today's Date:{data.date}</h2>
-                                <h2>Photo: {data.title}</h2>
-                                <h4>By: {data.copyright}</h4> 
                                 </CardSubtitle>
 
-                               <div class="photo"><PhotoSection  url={data.url}/></div>
-                                
+                                <div className="photo">
+                                   <PhotoSection  url={data.url}/>
+                                </div>
                                 </CardBody>
-                                    <CardBody>
+
+                                <CardBody>
+                                    <h4>Photo: {data.title}</h4>
+                                    <h5>By: {data.copyright}</h5> 
                                     <CardText><Explanation explanation ={data.explanation}/></CardText>
                                 </CardBody>
-                            </Card>
-                </Container>
+                    </Card>
+            </Container>
                
                 
                 

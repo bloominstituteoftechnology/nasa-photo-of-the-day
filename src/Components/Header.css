@@ -1,0 +1,17 @@
+
+.headerCardSection{
+    text-align: center;
+}
+
+.body1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    height: auto;
+}
