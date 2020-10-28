@@ -16,8 +16,8 @@ In this project you will refactor the styling you completed in the APOD app. You
 
 This homework is a continuation of the work you have done previously.
 
-- [ ] CD into your old project
-- [ ] Continue to make changes and push to the same branch
+- [x] CD into your old project
+- [x] Continue to make changes and push to the same branch
 
 ### Task 2a: MVP Requirements
 
