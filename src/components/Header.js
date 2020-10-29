@@ -1,4 +1,15 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const Styledh1 = styled.h1`
+    font-size: 10rem;
+    margin: 0;
+`
+
+const Styledh2 = styled.h2`
+    font-size: 3rem;
+    margin-top: 0.1rem;
+`
 
 export default function Header(){
     const title = "NASA APOD";
@@ -6,8 +17,8 @@ export default function Header(){
     
     return(
     <div>
-        <h1>{title}</h1>
-        <h2>{subTitle}</h2>
+        <Styledh1>{title}</Styledh1>
+        <Styledh2>{subTitle}</Styledh2>
     </div>
     )
 }

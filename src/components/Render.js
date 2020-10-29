@@ -1,7 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Header from './Header'
-import Main from './Main'
+import styled from 'styled-components'
+import Header from './Header';
+import Main from './Main';
+
+const RenderSection = styled.section`
+    display: flex;
+    flex-direction: column;
+    width: 1024px;
+    height: 100%;
+    margin 0 auto;
+    align-items: center;
+    color: grey;
+`;
 
 
 const today = new Date();
@@ -39,9 +50,9 @@ export default function Render() {
     }
 
     return (
-        <section>
+        <RenderSection>
             <Header/>
             <Main nasaData={nasaData}/>
-        </section>
+        </RenderSection>
     )
 }
