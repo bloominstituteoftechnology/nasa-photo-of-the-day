@@ -3,7 +3,11 @@ import styled from 'styled-components';
 
 const Styledh1 = styled.h1`
     font-size: 10rem;
-    margin: 0;
+    color: #36454f;
+    margin: -3rem 0 1rem 0;
+    padding: 1rem;
+    border-radius: 10px;
+    background: gray;
 `
 
 const Styledh2 = styled.h2`

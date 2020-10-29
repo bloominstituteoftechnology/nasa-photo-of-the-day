@@ -1,18 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import Media from './Media';
+import Text from './Text';
 
 const MainSection = styled.section`
+    display: flex;
+    flex-direction: column;
     margin-top: 1em;
-`;
-const ImageContainer = styled.div`
-    height: fit-content;
-    background-color: gray;
-    border: 0.5rem solid gray;
-    border-radius: 2px;
-`;
-
-const NasaImage = styled.img`
-    vertical-align: middle;
+    align-items: center;
 `;
 
 
@@ -21,15 +16,8 @@ export default function Main(props){
 
     return(
         <MainSection>
-            <ImageContainer>
-                <NasaImage src={nasaData.url}></NasaImage>
-            </ImageContainer>
-            
-            
-            <h3>{nasaData.title}</h3>
-            <div>
-                <p>{nasaData.explanation}</p>
-            </div>
+            <Media url={nasaData.url} mediaType={nasaData.media_type}/>
+            <Text title={nasaData.title} explanation={nasaData.explanation}/>
         </MainSection>
     )
 }

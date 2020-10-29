@@ -21,8 +21,8 @@ This homework is a continuation of the work you have done previously.
 
 ### Task 2a: MVP Requirements
 
-- [ ] Refactor your project using a component library that was covered in class (Reactstrap or styled-components).
-- [ ] Implement and use at least a few styled components to beautify your project.
+- [x] Refactor your project using a component library that was covered in class (Reactstrap or styled-components).
+- [x] Implement and use at least a few styled components to beautify your project.
 
 ### Task 3: Stretch Problems
 
