@@ -6,7 +6,7 @@ import Text from './Text';
 const MainSection = styled.section`
     display: flex;
     flex-direction: column;
-    margin-top: 1em;
+    margin: 1em;
     align-items: center;
 `;
 
