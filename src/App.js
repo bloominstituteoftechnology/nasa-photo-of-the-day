@@ -13,3 +13,5 @@ function App() {
 }
 
 export default App;
+
+//This is the main app
