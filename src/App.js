@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
+import axios from 'axios'
 
 function App() {
+  const [image, setImage] = useState();
+
+  useEffect(() =>{
+    axios
+    .get('https://api.nasa.gov/planetary/apodn?api_key=K0TUCGzB15EY9tgypOdtpK1dfueWlvUyCVCdPDLQ')
+    .then((res) =>{
+      setImage(res.data);
+    })
+  }, [])
+
+
   return (
     <div className="App">
       <p>
