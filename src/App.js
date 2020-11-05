@@ -1,13 +1,25 @@
-import React from "react";
+import React, {useState} from "react";
+
+import Banner from "./components/Banner";
+import Image from "./components/Image";
+import ViewSpace from "./components/ViewSpace";
+
 import "./App.css";
 
-function App() {
+// const axios = require('axios').default;
+
+const App = () => {
+  const [imageOn, setImageOn] = useState(false)
+  const showImage = evt => {
+    
+  }
+  
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+      <Banner />
+      <Image />
+     <ViewSpace showImage={showImage}/>
+      {/* <HideSpace /> */}
     </div>
   );
 }
