@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from 'axios';
-import Image from './components/image';
+import Photo from './components/image';
 import Header from './components/header';
 
+
 function App() {
-  const [image, setImage] = useState('');
+  const [image, setImage] = useState();
 
   useEffect(() =>{
     axios
-    .get('https://api.nasa.gov/planetary/apodn?api_key=K0TUCGzB15EY9tgypOdtpK1dfueWlvUyCVCdPDLQ')
+    .get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
     .then((res) =>{
-      setImage(res.data);
+      // console.log(res.data);
+      setImage(res.data.url);
     })
     .catch((err) =>{
         console.log(err, 'error');
@@ -21,7 +23,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Image image={image} />
+      <Photo image={image} />
     </div>
   );
 }
