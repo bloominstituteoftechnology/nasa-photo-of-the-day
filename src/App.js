@@ -3,10 +3,9 @@ import "./App.css";
 import PageHeader from './components/PageHeader';
 import PictureContainer from "./components/PictureContainer";
 import axios from 'axios';
-import DateTaken from "./components/WhoWhen";
 import WhoWhen from "./components/WhoWhen";
 
-// axios.get(https://api.nasa.gov/planetary/apod?QEhbxzq339dxAQWStj8mJvw4cWfVgvugqD3bQjfB);
+
 
 function App() {
   
