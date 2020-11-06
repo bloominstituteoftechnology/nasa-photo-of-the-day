@@ -28,7 +28,7 @@ export default function Header() {
     return(
         <div>
             <Title>PHOTO OF THE DAY FROM NASA<span role="img" aria-label='go!'>🚀</span>!</Title>
-            <Button>Click for Photo of the Day</Button>
+            <Button onClick={() => console.log("clicked")}>Click for Photo of the Day</Button>
         </div>
         
     )
