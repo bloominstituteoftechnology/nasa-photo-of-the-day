@@ -4,7 +4,7 @@ const Explanation = (props) => {
     const {} = props;
 
     return (
-        <div></div>
+        <div className="explanation"></div>
     )
 }
 

@@ -18,11 +18,11 @@ const axios = require('axios').default;
 
 
 const App = () => {
-  const [imageState, setImageState] = useState(true)
+  const [imageState, setImageState] = useState(false)
   const [imageUrl, setImageUrl] = useState('')
   
   
-  const endPoint = "https://api.nasa.gov/planetary/apod?api_key=nucIeDL0aUJlrbCdOpPOaPvvcfqxjzbUr0dIMLm9"
+  const endPoint = "https://api.nasa.gov/planetary/apod?api_key=nucIeDL0aUJlrbCdOpPOaPvvcfqxjzbUr0dIMLm9&date=2012-03-14"
   
   const showImage = () => {
     setImageState (true);
