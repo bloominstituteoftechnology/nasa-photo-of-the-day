@@ -34,7 +34,7 @@ function App() {
 
 const StyledRoot = styled.div`
   background: yellow;
-  height: 100vh;
+  height: 120vh;
   width: 100vw;
   text-align: center;
   
