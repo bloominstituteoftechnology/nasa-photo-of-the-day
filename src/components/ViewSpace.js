@@ -4,7 +4,7 @@ const ViewSpace = (props) => {
 const {showImage} = props;
 
     return (
-        <button onClick={showImage}>Let's look at space</button>
+        <button onClick= {showImage}>Show me the universe!</button>
     )
 }
 
