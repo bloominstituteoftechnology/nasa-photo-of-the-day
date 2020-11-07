@@ -8,7 +8,7 @@ const TextDiv = styled.div `
     padding: 1rem 1rem 1rem 1rem;
     border-radius: 10px;
     color:  #36454f;
-    width: 150%;
+    max-with: 110%;
 `;
 
 const Styledh3 = styled.h3`
@@ -23,6 +23,7 @@ const ExplanationDiv = styled.div `
     border: none;
     border-radius: 10px;
     font-size: 1.5rem;
+    max-width: 100%;
 `
 
 export default function Text(props){

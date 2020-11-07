@@ -17,7 +17,8 @@ const RenderSection = styled.section`
 
 const today = new Date();
 console.log(today);
-const dateParam = `${today.getFullYear()}-${today.getMonth()}-${today.getDate()}`;
+console.log(today.getMonth());
+const dateParam = `${today.getFullYear()}-${today.getMonth()+1}-${today.getDate()}`;
 console.log(dateParam);
 const apiKey = 'T1nb8B9a9boKrWQ9T1tx0AsUbhntIMLFlzTewDTb';
 
