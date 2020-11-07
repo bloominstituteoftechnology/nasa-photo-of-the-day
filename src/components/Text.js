@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Media from './Media'
+
 
 const TextDiv = styled.div `
     margin: 2em 0 0 0;
