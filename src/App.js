@@ -1,39 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import styled from "styled-components";
+import MediaContainer from "./Components/MediaContainer/MediaContainer";
 import "./App.css";
-import axios from 'axios';
-import Header from './Header'
-import Card from './Card'
-import Footer from './Footer'
-import styled from 'styled-components'
+import PageTitle from "./Components/PageTitle/PageTitle";
 
-const AppStyle = styled.div
-
-
+const WrapperDiv = styled.div`
+  margin: auto;
+  padding: 40px;
+  max-width: 1024px;
+  text-align: center;
+  background-color: #fbfbfb;
+`;
 
 export default function App() {
-  const [data, setData]  = useState([])
-  useEffect(()=>{
-    axios.get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`)
-    .then(res=>{
-      setData(res.data)
-      console.log(res.data)
-    })
-    .catch(err =>{
-      console.log(err)
-    })
-  },[])
   return (
-    <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-        <AppStyle>
-          <Header/>
-          <Card photo={data} content={data} title={data}/>
-          <Footer/>
-        </AppStyle>          
-      </p>
-    </div>
+    <WrapperDiv>
+      <PageTitle />
+      <MediaContainer />
+    </WrapperDiv>
   );
 }
-
