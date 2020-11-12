@@ -22,7 +22,7 @@ function App() {
       <Data />
         
       <p>
-       This is the first part of this project. Styling will be done later.<span role="img" aria-label='go!'>🚀</span>!
+       Nasa Photo Of The Day<span role="img" aria-label='go!'>🚀</span>!
       </p>
       
     </div>
