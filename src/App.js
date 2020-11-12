@@ -3,6 +3,7 @@ import './App.css';
 import axios from 'axios';
 import Picture from './Picture';
 import Body from './Body';
+import styles from './index.css';
 
 function App(props) {
 	const [ nasaData, setNasaData ] = useState([]);
@@ -21,10 +22,11 @@ function App(props) {
 	console.log('nasadata1', nasaData);
 
 	return (
-		<div className="App">
-			<Picture data={nasaData} />
-			<Body data={nasaData} />
-		</div>
+		<Picture data={nasaData}>
+				<div className='container'>
+				</div>
+				<Body data={nasaData} />
+		</Picture>
 	);
 }
 
