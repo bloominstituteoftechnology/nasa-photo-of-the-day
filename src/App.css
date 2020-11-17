@@ -7,6 +7,9 @@
   pointer-events: none;
 }
 
+body {
+  background-color: #d1d1d1;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -35,4 +38,52 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.title-apod-container {
+  height: 60vh;
+  width: auto;
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25%;
+}
+
+.title-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 50%;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: #2f2f2f;
+}
+
+.image-container {
+  border: 1px solid blue;
+  height: 100%;
+}
+
+.image-box {
+  border: 1px solid red;
+  height: 75%;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.apod-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  /* add cover to image */
+}
+
+.apod-description {
+  border: 1px solid black;
+  margin: 15px;
 }
