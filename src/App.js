@@ -19,7 +19,7 @@ function App() {
   return (
   <div>
   <Header title={data.title} />
-  <Main/>
+  <Main url={data.url} title={data.title}/>
   <Footer/>
   </div>
   );

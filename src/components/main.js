@@ -5,7 +5,7 @@ import React from 'react';
 function Main(props) {
 	return (   
 	  <div>
-		  <p>Main</p>
+		  <img src={props.url} alt={props.title}/>
 	  </div>
 	);
    };
