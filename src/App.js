@@ -1,13 +1,22 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import axios from 'axios';
 import "./App.css";
+import NasaCard from './NasaCard';
 
 function App() {
+const [spaceData, setSpaceData] = useState({});
+
+useEffect(() => {
+axios.get(`https://api.nasa.gov/planetary/apod?api_key=xW8tvx9T1fPT8yv72RGWnhqRzsemcqTAymQonuGb`)
+.then(res => {
+  console.log(res)
+  setSpaceData(res.data)
+})
+.catch(err => console.log(err));
+},[])
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+      <NasaCard spaceData={spaceData} />
     </div>
   );
 }
