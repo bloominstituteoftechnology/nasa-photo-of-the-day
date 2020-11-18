@@ -138,6 +138,10 @@ body {
     margin: 10px;
   }
 
+  .image-box {
+    height: 50%;
+  }
+
   .calendar-container {
     margin-top: 10px;
   }
