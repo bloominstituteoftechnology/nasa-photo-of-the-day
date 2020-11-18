@@ -56,6 +56,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 15%;
+  width: 100%;
 }
 
 .title-box {
@@ -123,12 +124,21 @@ body {
     font-size: 1.5rem;
   }
 
+  .title-container {
+    height: ;
+  }
+
   .main-container {
     width: 100%;
+    height: 100vh;
     margin-bottom: -10px;
   }
 
+  .text-container {
+    margin: 10px;
+  }
+
   .calendar-container {
-    margin-top: 0px;
+    margin-top: 10px;
   }
 }
