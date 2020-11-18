@@ -101,7 +101,7 @@ function App() {
           <div className="image-container">
             {/* // insert dynamic image into image tag */}
             <div className="image-box">
-              <img src={data.hdurl} className="apod-image" alt="space image" />
+              <img src={data.hdurl} className="apod-image" alt={data.title} />
             </div>
             <div className="text-container">
               <div className="apod-description">
