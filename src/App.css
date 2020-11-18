@@ -117,3 +117,18 @@ body {
   border: 2px solid darkgray;
   margin-top: 10px;
 }
+
+@media only screen and (max-width: 500px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .main-container {
+    width: 100%;
+    margin-bottom: -10px;
+  }
+
+  .calendar-container {
+    margin-top: 0px;
+  }
+}
