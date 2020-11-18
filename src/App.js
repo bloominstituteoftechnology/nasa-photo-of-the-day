@@ -1,14 +1,19 @@
-import React from "react";
+import React, {useState, useEffect} from 'react';
 import "./App.css";
+import axios from 'axios';
+import Header from './components/header.js';
+import Main from './components/main.js';
+import Footer from './components/footer.js'
 
 function App() {
+  const [data, setData] = useState("");
+  
   return (
-    <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
-    </div>
+  <div>
+  <Header/>
+  <Main/>
+  <Footer/>
+  </div>
   );
 }
 
