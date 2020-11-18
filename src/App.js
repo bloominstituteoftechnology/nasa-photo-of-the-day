@@ -60,6 +60,7 @@ function App() {
       console.log(data);
       setData(data.data);
       setLoading(false);
+      setValue(event);
     } catch (error) {
       setError(true);
       setLoading(false);
@@ -100,7 +101,7 @@ function App() {
           <div className="image-container">
             {/* // insert dynamic image into image tag */}
             <div className="image-box">
-              <img src={data.hdurl} className="apod-image" />
+              <img src={data.hdurl} className="apod-image" alt="space image" />
             </div>
             <div className="text-container">
               <div className="apod-description">
