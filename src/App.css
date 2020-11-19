@@ -7,6 +7,10 @@
   pointer-events: none;
 }
 
+body {
+  background-color: #d1d1d1;
+  margin: 10px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -34,5 +38,115 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+.page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-container {
+  height: 75vh;
+  width: 100%;
+}
+
+.title-container {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  height: 15%;
+  width: 100%;
+}
+
+.title-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 75%;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #2f2f2f;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75%;
+}
+
+.image-box {
+  width: 65%;
+  height: 85%;
+  margin: 25px;
+  border: 5px solid black;
+}
+
+.image-container .image-box .apod-image {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* add cover to image */
+}
+
+.text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 22vh;
+  width: 80%;
+}
+
+.apod-description {
+  border: 1px dotted black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 100%;
+}
+
+.apod-description-title {
+  font-size: 1.3rem;
+  width: auto;
+  font-style: italic;
+  color: #2f2f2f;
+}
+
+.calendar-container {
+  border: 2px solid darkgray;
+  margin-top: 50px;
+}
+
+@media only screen and (max-width: 500px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .main-container {
+    width: 100%;
+    height: 100vh;
+    margin-bottom: -10px;
+  }
+
+  .text-container {
+    margin: 10px;
+  }
+
+  .image-box {
+    height: 65%;
+  }
+
+  .calendar-container {
+    margin-top: 10px;
   }
 }
