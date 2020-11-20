@@ -3,10 +3,18 @@ import "./App.css";
 import Title from "./Title";
 import Photo from "./Photo";
 import Caption from "./Caption";
+import styled from 'styled-components';
+
+const Header = styled.h1`
+text-align: center;
+color: green;
+`;
+
 function App() {
   return (
     <div className="App">
-      <h1>Astronomy Photo of the Day</h1>
+      <img className ='logo' src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" alt='nasa logo'></img>
+      <Header>Astronomy Photo of the Day</Header>
       
       <Title />
       <Photo />
