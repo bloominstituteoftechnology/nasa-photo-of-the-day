@@ -3,7 +3,7 @@ import React from 'react';
 function PicInfo(props) {
     return (
     <>
-        <p>{props.spaceData.explanation}</p>
+        <p style={{fontSize: '20px'}}>{props.spaceData.explanation}</p>
     </>
     )
 }

@@ -7,7 +7,7 @@ function App() {
 const [spaceData, setSpaceData] = useState({});
 
 useEffect(() => {
-axios.get(`https://api.nasa.gov/planetary/apod?api_key=xW8tvx9T1fPT8yv72RGWnhqRzsemcqTAymQonuGb`)
+axios.get(`https://api.nasa.gov/planetary/apod?api_key=xW8tvx9T1fPT8yv72RGWnhqRzsemcqTAymQonuGb&date=2020-11-19`)
 .then(res => {
   console.log(res)
   setSpaceData(res.data)
