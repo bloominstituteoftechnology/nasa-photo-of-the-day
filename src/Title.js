@@ -7,10 +7,13 @@ const phDate = new Date();
 const dateFormat = phDate.getFullYear()+'-'+(phDate.getMonth()+1)+'-'+phDate.getDate();
 const URL = 'https://api.nasa.gov/planetary/apod?api_key=cpIVh1n5cT7gdxurNPJfIw7fYEakx1I89h1UEoYT';
 
-const APODTitle = styled.div`
-background-color: red;
+const APODTitle = styled.h2`
+font-size: 2rem;
+font-weight: 200;
+border-bottom: 0.2rem solid #FC3D21;
+padding-bottom: 1rem;
 
-`
+`;
 
 const Title = () => {
     const [photoTitle , setPhotoTitle] = useState('');
@@ -23,10 +26,10 @@ const Title = () => {
             .catch(err => err);
                 },[photoTitle])
                 return (
-                <APODTitle>
-                    <h2>{photoTitle}</h2>
+                <div>
+                    <APODTitle>{photoTitle}</APODTitle>
                     <p>{dateFormat}</p>
-                </APODTitle>
+                </div>
                 
                 )
 

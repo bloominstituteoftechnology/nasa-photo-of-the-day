@@ -9,7 +9,9 @@ const URL = 'https://api.nasa.gov/planetary/apod?api_key=cpIVh1n5cT7gdxurNPJfIw7
 const Img = styled.img`
 width: 30rem;
 height: 30rem;
+border: 0.5rem solid #fff;
 object-fit: cover;
+margin: 3rem auto;
 `;
 
 const Photo = () => {
