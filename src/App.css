@@ -1,14 +1,14 @@
-* {
+/* * {
   background-color: #31312F;
   color: white;
   text-align: center;
-}
+} */
 
-html {
+/* html {
   border: solid yellow 8px;
-}
+} */
 
-.imgContainer {
+/* .imgContainer {
   display: flex;
   width: 100%;
   max-width: 100%;
@@ -33,4 +33,4 @@ html {
   width: 80%;
   font-weight: 500;
   font-size: 16px;
-}
+} */ 
