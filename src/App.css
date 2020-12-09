@@ -2,10 +2,15 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nasaPic {
+  width: 75%;
+  height: 70vh;
 }
+.description {
+  margin-left: 12%;
+  width: 75%;
+  height: 30%;
+} 
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -13,15 +18,9 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App {
+  background-color: rgb(9, 122, 214);
+  text-align: center;
 }
 
 .App-link {
