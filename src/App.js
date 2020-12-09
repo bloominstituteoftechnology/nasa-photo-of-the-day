@@ -1,7 +1,26 @@
-import React from "react";
+//Importing React and Hooks
+import React, { useState, useEffect } from "react";
+//Importing the necesary to fetch the NASA API
+import axios from 'axios'
+//NASA API
+import { BASE_URL, API_KEY } from './constants'
+
+//CSS Styles
 import "./App.css";
 
 function App() {
+
+  useEffect(() => {
+    axios
+      .get(`${BASE_URL}?api_key=${API_KEY}`)
+      .then((res) => {
+        console.log("Yey!")
+      })
+      .catch((err) => {
+        console.log('Ups!')
+      })
+  }, [])
+
   return (
     <div className="App">
       <p>
