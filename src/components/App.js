@@ -10,11 +10,13 @@ import "../App.css";
 
 function App() {
 
+  const [currentMedia, setCurrentMedia] = useState([])
+
   useEffect(() => {
     axios
       .get(`${BASE_URL}?api_key=${API_KEY}`)
       .then((res) => {
-        console.log(res.data)
+        setCurrentMedia(res.data)
       })
       .catch((err) => {
         console.log('Ups!')
