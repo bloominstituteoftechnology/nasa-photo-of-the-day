@@ -57,6 +57,14 @@ This project was put together using create-react-app (CRA). You will not need to
 - [ ] Add an effect hook to handle the API call side effect.
 - [ ] Go to the [NASA APOD API docs](https://api.nasa.gov/#apod) and read through the docs to see how to make the API call.
 - [ ] You don't _need_ an API key. However you may need one if you exceed the API request limits.
+<!--           
+          Your API key for mmurph917@gmail.com is:
+
+          wDhtM0iiz4v9puJ8o0dmffW2hvx6W724caHOcazZ
+          You can start using this key to make web service requests. Simply pass your key in the URL when making a web request. Here's an example:
+
+          https://api.nasa.gov/planetary/apod?api_key=wDhtM0iiz4v9puJ8o0dmffW2hvx6W724caHOcazZ -->
+          
 - [ ] Using the endpoint given, fetch the data using `axios`.
 - [ ] In your `.then()` make sure to `console.log` the response so you can look at the shape of the data. 😃
 - [ ] Before you add your data to state, make sure your effect hook has a dependency array (probably empty, since we don't want this effect synced up to any state/props), otherwise you will start an **infinite loop, and you will exceed the API rate limits of the DEMO_KEY and need to use a real API_KEY.**
