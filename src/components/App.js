@@ -5,6 +5,9 @@ import axios from 'axios'
 //NASA API
 import { BASE_URL, API_KEY } from '../constants'
 
+//Own Components
+import Header from '../components/Header'
+
 //CSS Styles
 import "../App.css";
 
@@ -24,12 +27,14 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
-    </div>
+    <Header />
+
+    // <div className="App">
+    //   <p>
+    //     Read through the instructions in the README.md file to build your NASA
+    //     app! Have fun <span role="img" aria-label='go!'>🚀</span>!
+    //   </p>
+    // </div>
   );
 }
 
