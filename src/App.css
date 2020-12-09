@@ -1,12 +1,43 @@
 .App {
   text-align: center;
 }
-
+.
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+.pictureOfTheDay{
+  width: 80%;
+  height: 75vh
+}
 
+.description{
+  margin: 20px 18%;
+  font-size: 1.1rem ;
+}
+.DateSelect{
+  display: flex;
+  justify-content:center;
+}
+.DateSelect p{
+  width: 15%;
+  font-size: 1.2rem;
+}
+.DateSelect input{
+  width: 35%
+}
+.title{
+  margin-top: 4%;
+}
+.header{
+  display:flex;
+  justify-content: center;
+}
+.header a{
+  margin: 1% 2% 3% 2%;
+  text-decoration: none;
+  color:black;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
