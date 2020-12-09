@@ -3,10 +3,10 @@ import React, { useState, useEffect } from "react";
 //Importing the necesary to fetch the NASA API
 import axios from 'axios'
 //NASA API
-import { BASE_URL, API_KEY } from './constants'
+import { BASE_URL, API_KEY } from '../constants'
 
 //CSS Styles
-import "./App.css";
+import "../App.css";
 
 function App() {
 
@@ -14,7 +14,7 @@ function App() {
     axios
       .get(`${BASE_URL}?api_key=${API_KEY}`)
       .then((res) => {
-        console.log("Yey!")
+        console.log(res.data)
       })
       .catch((err) => {
         console.log('Ups!')
