@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Information = (props) => {
-    const { date, title, explanation } = props
+    const { date = "2010-10-10", title = "Galactic cow, to infinity and beyond", explanation = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." } = props
 
     return (
         <div className="info">

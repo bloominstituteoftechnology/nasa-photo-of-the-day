@@ -28,7 +28,8 @@ function App() {
         setCurrentMedia(res.data)
       })
       .catch((err) => {
-        console.log('Ups!')
+        alert("It looks like the API has left to a better place. So! Here we have some dummy data just for you.")
+        console.log(err)
       })
   }, [])
 
@@ -40,7 +41,7 @@ function App() {
       <div className="media">
         {
           currentContent === 'Media'
-          ? <SelectMedia media_type={currentMedia.media_type} title={currentMedia.title} url={currentMedia.url} />
+          ? <SelectMedia media_type={'Image'} title={currentMedia.title} url={currentMedia.url} />
           : <Information title={currentMedia.title} date={currentMedia.date} explanation={currentMedia.explanation} />
         }
 

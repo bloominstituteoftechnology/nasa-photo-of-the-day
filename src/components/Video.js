@@ -3,7 +3,7 @@ import ReactPlayer from 'react-player'
 import PropTypes from 'prop-types'
 
 const Video = (props) => {
-    const { title, url } = props
+    const { title = "Charlie Puth - Mother [Official Video]", url = "https://www.youtube.com/watch?v=jTMzLbz9_r0" } = props
 
     return (
         <>
