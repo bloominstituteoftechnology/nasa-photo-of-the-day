@@ -1,0 +1,16 @@
+.mainPhoto {
+  width: 300px;
+  height: auto;
+  z-index: 999;
+  border: 10px darkblue solid;
+  margin: 2rem 0;
+}
+
+.contents p {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.contents {
+  margin-bottom: 4rem;
+}

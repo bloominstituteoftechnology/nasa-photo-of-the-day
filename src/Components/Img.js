@@ -1,9 +1,14 @@
 import React from "react";
+import "./img.css";
 
-export default function Contents() {
+function Img(props) {
+  const { data } = props;
+
   return (
-    <div className="contents">
-      <h1>NASA's Photo of the Day</h1>
+    <div>
+      <img className="mainPhoto" src={data.url} alt="Photo" />
     </div>
   );
 }
+
+export default Img;

@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Contents from "./Components/Contents.js";
@@ -5,14 +6,14 @@ import Img from "./Components/Img.js";
 import "./App.css";
 
 function App() {
-  const [data, setData] = useState();
+  const [data, setData] = useState([]);
   // const [error, setError] = useState();
   console.log(data);
 
   useEffect(() => {
     axios
       .get(
-        "https://api.nasa.gov/planetary/apod?api_key=yPU7r41IChRWpyYKhpGzZNsIKxTmIZoAf0alYBgE"
+        "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2020-12-08"
       )
       .then((res) => {
         console.log(res.data);
@@ -25,9 +26,9 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <Contents />
-      <Img data={data} />
       <h1>NASA's Photo of the Day</h1>
+      <Img data={data} />
+      <Contents data={data} />
     </div>
   );
 }
