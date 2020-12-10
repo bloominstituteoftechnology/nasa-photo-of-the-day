@@ -70,15 +70,15 @@ _Note: if the photo url is NOT a photo, you will need to learn how to display a 
 
 **Adding the Data to State**
 
-- [ ] Once you have made the call correctly, and logged the data, add the data to the state property you built.
+- [x] Once you have made the call correctly, and logged the data, add the data to the state property you built.
 
 **Display the Data**
 Now is the time to build out your other components. Compose your UI, and then pass the data to your children components via props so you can render it on the DOM.
 
 #### _MVP Requirements:_
 
-- [ ] Use the effect hook to fetch the APOD data when the component mounts.
-- [ ] Display the APOD data in different components that are composed together to build your UI.
+- [x] Use the effect hook to fetch the APOD data when the component mounts.
+- [x] Display the APOD data in different components that are composed together to build your UI.
 
 #### Pro Tips:
 

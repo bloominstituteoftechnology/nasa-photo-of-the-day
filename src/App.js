@@ -42,7 +42,7 @@ import axios from "axios";
       {/* We are going to render three things here, header, APOD, and 
       imagecon */}
       <Header />
-      <APOD video={apod} />
+      <APOD apod={apod} />
       {
       epic.map(ep => {
         return <Imagecon arr={ep} />
