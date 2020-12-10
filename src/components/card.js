@@ -1,45 +1,14 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import {
-  Card,
-  CardBody,
-  CardTitle,
-  CardText,
-  CardImg,
-  CardImgOverlay,
-  CardHeader,
-  Modal,
-  ModalBody,
-} from 'reactstrap';
+import { Card, CardBody, CardTitle, CardText, CardHeader } from 'reactstrap';
+import CardImage from './cardimg';
 
 function CardMain({ copyright, date, explanation, title, url }) {
-  const toggle = () => setModal(!modal);
-
-  const [modal, setModal] = useState(false);
-
   return (
     <StyledCard>
       <Card className='card'>
         <CardHeader tag='h1'>NASA Photo of the Day</CardHeader>
-        <div className='cardimg'>
-          <CardImg
-            top
-            width='100%'
-            src={url}
-            alt='NASA Photo of the Day'
-            onClick={toggle}
-          ></CardImg>
-          <CardImgOverlay>
-            <CardText className='zoomtext' tag='h2'>
-              Click to Zoom
-            </CardText>
-          </CardImgOverlay>
-        </div>
-        <Modal isOpen={modal} toggle={toggle} className='test' size='xl'>
-          <ModalBody>
-            <img src={url} alt='Zoomed'></img>
-          </ModalBody>
-        </Modal>
+        <CardImage url={url} />
         <CardBody>
           <CardTitle tag='h2'>{title}</CardTitle>
           <CardText>{date}</CardText>
@@ -62,29 +31,6 @@ const StyledCard = styled.div`
 
   .card {
     background-color: whitesmoke;
-  }
-
-  .cardimg {
-    padding: 7px;
-    position: relative;
-    text-align: center;
-    display: flex;
-  }
-
-  .zoomtext {
-    opacity: 0;
-    text-shadow: 2px 2px black;
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  &:hover {
-    .zoomtext {
-      opacity: 1;
-    }
   }
 `;
 
