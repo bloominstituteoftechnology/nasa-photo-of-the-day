@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import axios from 'axios'
 import "./App.css";
 import Media from './components/media'
+import styled from 'styled-components'
 
 function App() {
   const [data, setData] = useState({})
@@ -18,12 +19,20 @@ function App() {
   return (
     <div className="App">
       <Media url={data.url} title={data.title}/>
-      <p>
+      <StyledText>
        {data.explanation}
-      </p>
+      </StyledText>
 
     </div>
   );
 }
+const StyledText = styled.p`
+  font-size: 1.2rem;
+  font-weight:lighter;
+  width: 90%;
+  margin: 0 auto;
+
+`
+
 
 export default App;
