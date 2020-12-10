@@ -8,6 +8,7 @@ import { BASE_URL, API_KEY } from '../constants'
 //Own Components
 import Header from '../components/Header'
 import SelectMedia from '../components/SelectMedia'
+import Information from '../components/Information'
 
 
 //CSS Styles
@@ -36,23 +37,22 @@ function App() {
     <>
       <Header />
 
-      <SelectMedia media_type={currentMedia.media_type} title={currentMedia.title} url={currentMedia.url} />
+      <div className="media">
+        {
+          currentContent === 'Media'
+          ? <SelectMedia media_type={currentMedia.media_type} title={currentMedia.title} url={currentMedia.url} />
+          : <Information title={currentMedia.title} date={currentMedia.date} explanation={currentMedia.explanation} />
+        }
 
-      {
-        currentContent === 'Media'
-        ? <button className="btn-see-more" onClick={() => setCurrentContent('Info')}>Mostrar Information</button>
-        : <button className="btn-see-more" onClick={() => setCurrentContent('Media')}>Mostrar Media File</button>
-      }
+        {
+          currentContent === 'Media'
+          ? <button className="btn-see-more" onClick={() => setCurrentContent('Info')}>👀 + 📓</button>
+          : <button className="btn-see-more" onClick={() => setCurrentContent('Media')}>👀 + 🚀</button>
+        }
+      </div>
 
     </>
 
-
-    // <div className="App">
-    //   <p>
-    //     Read through the instructions in the README.md file to build your NASA
-    //     app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-    //   </p>
-    // </div>
   );
 }
 

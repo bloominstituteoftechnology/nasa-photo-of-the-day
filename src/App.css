@@ -1,44 +1,3 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
-
 
 /* MY OWN STYLES */
 
@@ -53,7 +12,7 @@ h1, h2, h3, h4, h4 {
 }
 
 .header {
-  padding: .8rem;
+  padding: 1rem;
   font-size: 0.6rem;
 }
 .header h1 {
@@ -63,7 +22,7 @@ h1, h2, h3, h4, h4 {
 
 
 .media {
-  /* height: calc( 100vh - 48px ); */
+  height: calc( 100vh - 54px );
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,31 +31,43 @@ h1, h2, h3, h4, h4 {
 .media .video {
   display: block;
   width: 50%;
-  height: 60vh;
+  height: 50vh;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
 }
 .media img {
   display: block;
-  width: 50%;
-  height: 60vh;
+  height: 50vh;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
 }
 .media h2 {
-  margin: 18px 0;
-  font-size: 1rem;
+  margin: 30px 0 20px 0;
+  font-size: 1.5rem;
   font-weight: 400;
   color: #333;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
+}
+.media .info {
+  width: 50%;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+.media .info p {
+  text-align: justify;
+  line-height: 1.5rem;
 }
 
 
 
 .btn-see-more {
-  padding: 10px 40px;
+  padding: 15px 30px;
   cursor: pointer;
-  color: #333;
+  color: WHITESMOKE;
   font-size: 1rem;
-  font-weight: 300;
-  text-decoration: underline;
+  font-weight: 500;
+  text-transform: uppercase;
   border: none;
   border-radius: 5px;
-  background-color: pink;
+  background-color: BLUE;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
 }

@@ -5,7 +5,7 @@ const SelectMedia = (props) => {
     const { media_type, title, url } = props
 
     return (
-        media_type == 'Image'
+        media_type === 'Image'
         ? <Image title={title} url={url} />
         : <Video title={title} url={url} />
     )
