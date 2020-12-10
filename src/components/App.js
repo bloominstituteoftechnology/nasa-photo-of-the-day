@@ -14,6 +14,7 @@ import Information from '../components/Information'
 //CSS Styles
 import 'normalize.css';
 import "../App.css";
+import styled from 'styled-components'
 
 function App() {
 
@@ -35,7 +36,8 @@ function App() {
 
 
   return (
-    <>
+    <StyleApp>
+
       <Header />
 
       <div className="media">
@@ -52,9 +54,15 @@ function App() {
         }
       </div>
 
-    </>
-
+    </StyleApp>
   );
 }
 
 export default App;
+
+const StyleApp = styled.div`
+  color: red;
+  button {
+    color: red;
+  }
+`;
