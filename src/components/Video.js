@@ -1,17 +1,8 @@
 import React from 'react'
 import ReactPlayer from 'react-player'
 
-
-const Media = (props) => {
-    const { media_type, url } = props
-
-    const showImage = () => {
-        console.log('Soy una imagen sexi!')
-    }
-
-    const showVideo = () => {
-        console.log('Reproduceme!')
-    }
+const Video = (props) => {
+    const { title, url } = props
 
     return (
         <div className="media">
@@ -22,8 +13,9 @@ const Media = (props) => {
                     height='100%'
                 />
             </div>
+            <h2>{ 'Soy un Video' }</h2>
         </div>
     )
 }
 
-export default Media
+export default Video

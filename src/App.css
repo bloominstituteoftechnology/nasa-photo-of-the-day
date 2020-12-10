@@ -45,7 +45,7 @@
 body {
   text-align: center;
   font-family: 'Roboto', sans-serif;
-  background-color: ANTIQUEWHITE;
+  background-color: WHITESMOKE;
 }
 
 h1, h2, h3, h4, h4 {
@@ -63,14 +63,40 @@ h1, h2, h3, h4, h4 {
 
 
 .media {
-  height: calc( 100vh - 48px );
+  /* height: calc( 100vh - 48px ); */
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: blue;
+  flex-direction: column;
 }
 .media .video {
   display: block;
   width: 50%;
   height: 60vh;
+}
+.media img {
+  display: block;
+  width: 50%;
+  height: 60vh;
+}
+.media h2 {
+  margin: 18px 0;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #333;
+  text-transform: uppercase;
+}
+
+
+
+.btn-see-more {
+  padding: 10px 40px;
+  cursor: pointer;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 300;
+  text-decoration: underline;
+  border: none;
+  border-radius: 5px;
+  background-color: pink;
 }

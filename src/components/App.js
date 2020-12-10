@@ -7,7 +7,8 @@ import { BASE_URL, API_KEY } from '../constants'
 
 //Own Components
 import Header from '../components/Header'
-import Media from '../components/Media'
+import SelectMedia from '../components/SelectMedia'
+
 
 //CSS Styles
 import 'normalize.css';
@@ -16,7 +17,7 @@ import "../App.css";
 function App() {
 
   const [currentMedia, setCurrentMedia] = useState([])
-  // With currentContent we will defined witch Component will be mount on DOM
+  // With currentContent we will defined witch Component will be mount on DOM: Media or Info
   const [currentContent, setCurrentContent] = useState('Media')
 
   useEffect(() => {
@@ -30,10 +31,19 @@ function App() {
       })
   }, [])
 
+
   return (
     <>
       <Header />
-      <Media media_type={currentMedia.media_type} url={currentMedia.url} />
+
+      <SelectMedia media_type={currentMedia.media_type} title={currentMedia.title} url={currentMedia.url} />
+
+      {
+        currentContent === 'Media'
+        ? <button className="btn-see-more" onClick={() => setCurrentContent('Info')}>Mostrar Information</button>
+        : <button className="btn-see-more" onClick={() => setCurrentContent('Media')}>Mostrar Media File</button>
+      }
+
     </>
 
 
