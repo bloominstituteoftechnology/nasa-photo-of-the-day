@@ -8,13 +8,7 @@ import {
   ModalBody,
 } from 'reactstrap';
 
-export default function CardImage({
-  copyright,
-  date,
-  explanation,
-  title,
-  url,
-}) {
+export default function CardImage({ url }) {
   const toggle = () => setModal(!modal);
 
   const [modal, setModal] = useState(false);
