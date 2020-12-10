@@ -7,13 +7,17 @@ import { BASE_URL, API_KEY } from '../constants'
 
 //Own Components
 import Header from '../components/Header'
+import Media from '../components/Media'
 
 //CSS Styles
+import 'normalize.css';
 import "../App.css";
 
 function App() {
 
   const [currentMedia, setCurrentMedia] = useState([])
+  // With currentContent we will defined witch Component will be mount on DOM
+  const [currentContent, setCurrentContent] = useState('Media')
 
   useEffect(() => {
     axios
@@ -27,7 +31,11 @@ function App() {
   }, [])
 
   return (
-    <Header />
+    <>
+      <Header />
+      <Media media_type={currentMedia.media_type} url={currentMedia.url} />
+    </>
+
 
     // <div className="App">
     //   <p>

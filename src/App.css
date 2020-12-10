@@ -42,8 +42,35 @@
 
 /* MY OWN STYLES */
 
-body
+body {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  background-color: ANTIQUEWHITE;
+}
 
-.mauricio {
+h1, h2, h3, h4, h4 {
+  margin: 0;
+}
+
+.header {
+  padding: .8rem;
+  font-size: 0.6rem;
+}
+.header h1 {
+  color: RED;
+}
+
+
+
+.media {
+  height: calc( 100vh - 48px );
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: blue;
+}
+.media .video {
+  display: block;
+  width: 50%;
+  height: 60vh;
 }

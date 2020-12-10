@@ -2,7 +2,7 @@ import React from 'react'
 
 const Header = () => {
     return (
-        <div className="mauricio">
+        <div className="header">
             <h1>{ '{ NASA APIs }' }</h1>
         </div>
     )
