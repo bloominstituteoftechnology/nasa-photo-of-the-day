@@ -6,6 +6,7 @@ import {
   CardTitle,
   CardText,
   CardImg,
+  CardImgOverlay,
   CardHeader,
   Modal,
   ModalBody,
@@ -28,6 +29,11 @@ function CardMain({ copyright, date, explanation, title, url }) {
             alt='NASA Photo of the Day'
             onClick={toggle}
           ></CardImg>
+          <CardImgOverlay>
+            <CardText className='zoomtext' tag='h2'>
+              Click to Zoom
+            </CardText>
+          </CardImgOverlay>
         </div>
         <Modal isOpen={modal} toggle={toggle} className='test' size='xl'>
           <ModalBody>
@@ -60,6 +66,25 @@ const StyledCard = styled.div`
 
   .cardimg {
     padding: 7px;
+    position: relative;
+    text-align: center;
+    display: flex;
+  }
+
+  .zoomtext {
+    opacity: 0;
+    text-shadow: 2px 2px black;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    .zoomtext {
+      opacity: 1;
+    }
   }
 `;
 
