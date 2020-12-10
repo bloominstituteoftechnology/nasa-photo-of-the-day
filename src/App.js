@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 import './index.css';
-import Title from './title';
-import Image from './image';
-import Info from './info';
+
+import CardMain from './components/card';
 
 function App() {
   const [imageData, setImageData] = useState([]);
@@ -14,7 +13,7 @@ function App() {
     const fetchImage = () => {
       axios
         .get(
-          'https://api.nasa.gov/planetary/apod?api_key=xI9ypauVaNQDdIHdhi9cDZoiXTdfZH8cxLJcBp5o&date=2012-03-14'
+          'https://api.nasa.gov/planetary/apod?api_key=xI9ypauVaNQDdIHdhi9cDZoiXTdfZH8cxLJcBp5o&date=2012-03-14',
         )
         .then((res) => {
           setImageData(res.data);
@@ -26,9 +25,8 @@ function App() {
 
   return (
     <div className='App'>
-      <Title />
-      <Image url={hdurl} />
-      <Info
+      <CardMain
+        url={hdurl}
         copyright={copyright}
         date={date}
         explanation={explanation}
