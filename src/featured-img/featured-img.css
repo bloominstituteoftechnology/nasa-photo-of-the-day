@@ -1,0 +1,26 @@
+.featured-img {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.img-container img {
+  height: 80vh;
+  max-width: 60vw;
+}
+.featured-img {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.image-text {
+  max-width: 50%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.image-text ul {
+  padding-right: 5%;
+}
+.image-text li {
+  margin-bottom: 5%;
+}
