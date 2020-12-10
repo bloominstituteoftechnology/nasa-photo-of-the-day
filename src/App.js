@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import "./App.css";
+import Contents from './Contents'
 
 function App() {
 
@@ -12,7 +13,7 @@ function App() {
   useEffect(()=>{
     const fetchPhoto = () => {
       axios
-      .get(`${BASE_URL}/planetary/apod?api_key=${API_KEY}`)
+      .get(`${BASE_URL}/planetary/apod?api_key=${API_KEY}&date=2012-03-14`)
       .then(res => {
         console.log(res.data)
         setPhoto(res.data)
@@ -30,7 +31,8 @@ function App() {
         Read through the instructions in the README.md file to build your NASA
         app! Have fun <span role="img" aria-label='go!'>🚀</span>!
       </p>
-      <iframe src ={photo.url} width="100%" height="300"></iframe>
+      <Contents photo={photo.url} explanation={photo.explanation}/>
+      {/* <img src ={photo.url} alt ="nasa" width="500wh" height="500vh"/> */}
     </div>
   );
 
