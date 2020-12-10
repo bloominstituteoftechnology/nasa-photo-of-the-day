@@ -1,10 +1,10 @@
 import React from "react";
 import styled from 'styled-components';
 
-const AnyThing = styled.div`
+/*const AnyThing = styled.div`
 color :  royalblue;
 background:black;
-margin:20px;
+margin:19px;
 h2{
     color:purple;
 }
@@ -16,13 +16,13 @@ img{
 iframe{
     border:2px solid hotpink;
     width: 100%;
-    height: 600px;
+    height: 599px;
 }
-`;
+`;*/
 
 
 const Apod = props => {
-        {if (props.media_type === "image") {
+        {if (props.media_type === "imag") {
             return (
                 <AnyThing className =  "Apod" key = {props.date}>
                     <p>Date: {props.date}</p>
