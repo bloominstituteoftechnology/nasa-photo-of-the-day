@@ -16,13 +16,13 @@ In this project you will refactor the styling you completed in the APOD app. You
 
 This homework is a continuation of the work you have done previously.
 
-- [ ] CD into your old project
-- [ ] Continue to make changes and push to the same branch
+- [x] CD into your old project
+- [x] Continue to make changes and push to the same branch
 
 ### Task 2a: MVP Requirements
 
-- [ ] Refactor your project using a component library that was covered in class (Reactstrap or styled-components).
-- [ ] Implement and use at least a few styled components to beautify your project.
+- [x] Refactor your project using a component library that was covered in class (Reactstrap or styled-components).
+- [x] Implement and use at least a few styled components to beautify your project.
 
 ### Task 3: Stretch Problems
 
