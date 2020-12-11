@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import axios from 'axios'
 import "./App.css";
-import Picture from './Components/Picture'
+import Styled from 'styled-components'
 
 
 
@@ -18,23 +18,30 @@ function App() {
 })
 
   },[])
-
+  
   return (
-
+    
     <div className="App">
         
-        <Picture image={data.url} title={data.title}/>
-        <img alt='space' src={data.url}/>
-        <h3>{data.url}</h3>
-      <p>
-       {data.explanation}
-      </p>
-      <p></p>
+        <div className='container'>
+        <Title>
+        <h1>{data.title}</h1>
+        </Title>
+        <img src={data.url}/>
+        <h3>"{data.url}"</h3>
+        <p>{data.explanation}</p>
 
-      
+      </div>
       
     </div>
+    
   );
 }
+
+const Title = Styled.div`
+  color: black;
+  &:hover {
+    color: red;
+`
 
 export default App;
