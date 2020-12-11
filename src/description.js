@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from "react";
 
 const Desc = (props) => {
-    const { apod } = props
+    const { desi } = props
     return <div>
-        <p>{apod.explanation}</p>
+        <p>{desi}</p>
     </div>
 }
 
-export default Desc
+export default Desc;

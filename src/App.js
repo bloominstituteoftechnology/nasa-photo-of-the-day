@@ -2,14 +2,13 @@ import React, {useState, useEffect} from "react";
 import "./App.css";
 import APOD from "./APOD"
 import Header from "./Components/Header/header"
-import Imagecon from "./Components/Imagecon/imagecon"
-import { API_KEY, APOD_URL, EPIC_URL } from "./Constants/index"
+import { API_KEY, APOD_URL } from "./Constants/index"
 import axios from "axios";
+import Footer from "./Components/Footer/footer";
 
 
  function App() {
 
-  const [epic, setEpic] = useState([])
   const [apod, setApod] = useState({})
   
   useEffect( () => {
@@ -24,16 +23,6 @@ import axios from "axios";
     })
   }, [] )
 
-  useEffect( () => {
-    axios.get(`${EPIC_URL}?api_key=${API_KEY}`)
-    .then((res) => {
-      setEpic(res.data)
-      console.log(res)
-    })
-    .catch((err) => {
-      console.log(err)
-    })
-  }, [] )
 
   
   return (
@@ -43,15 +32,12 @@ import axios from "axios";
       imagecon */}
       <Header />
       <APOD apod={apod} />
-      {
-      epic.map(ep => {
-        return <Imagecon arr={ep} />
-      })
-      
-      }  
+      <Footer />
     </div>
 
   );
 }
 
 export default App;
+
+

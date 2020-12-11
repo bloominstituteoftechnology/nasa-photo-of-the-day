@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from "react";
-import "./header.css"
+import styled from "styled-components"
+
 const Header = (props) => {
     return (
+        <StyledHeader>
         <div className="main">
             <h1>EPIC NASA PAGE</h1>
             <nav>
@@ -11,10 +13,13 @@ const Header = (props) => {
                 <a href="#">Other</a>
             </nav>
         </div>
+        </StyledHeader>
     )
 }
 
 export default Header
 
 
-//Only hard coded part of this project. 
+const StyledHeader = styled.div`
+    color: yellow;
+`;
