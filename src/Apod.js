@@ -1,7 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 
-/*const AnyThing = styled.div`
+const AnyThing = styled.div`
 color :  royalblue;
 background:black;
 margin:19px;
@@ -18,7 +18,7 @@ iframe{
     width: 100%;
     height: 599px;
 }
-`;*/
+`;
 
 
 const Apod = props => {
