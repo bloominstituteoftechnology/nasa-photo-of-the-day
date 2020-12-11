@@ -4,6 +4,7 @@ export default {
     extraColor: "royalblue",
     darkColor: "darkgrey",
     lightColor: "white",
+    black: "black",
 
     breakpoints: {
         mobile: "(max-width: 550px)",
