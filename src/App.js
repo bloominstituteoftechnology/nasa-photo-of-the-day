@@ -4,6 +4,7 @@ import axios from "axios";
 import Contents from "./Components/Contents.js";
 import Img from "./Components/Img.js";
 import "./App.css";
+import Header from "./Components/Header.js";
 
 function App() {
   const [data, setData] = useState([]);
@@ -16,7 +17,7 @@ function App() {
         "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2020-12-08"
       )
       .then((res) => {
-        console.log(res.data);
+        console.log(res.data, "RES.DATA");
         setData(res.data);
       })
 
@@ -26,6 +27,7 @@ function App() {
   }, []);
   return (
     <div className="App">
+      <Header />
       <h1>NASA's Photo of the Day</h1>
       <Img data={data} />
       <Contents data={data} />
