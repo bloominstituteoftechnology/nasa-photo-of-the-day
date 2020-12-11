@@ -4,17 +4,6 @@ body {
   background-color: WHITESMOKE;
 }
 
-h1, h2, h3, h4, h4 {
-  margin: 0;
-}
-
-.header {
-  padding: 1rem;
-  font-size: 0.6rem;
-}
-.header h1 {
-  color: RED;
-}
 
 
 
@@ -57,7 +46,7 @@ h1, h2, h3, h4, h4 {
 
 
 
-.btn-see-more {
+/* .btn-see-more {
   padding: 15px 30px;
   cursor: pointer;
   color: WHITESMOKE;
@@ -68,4 +57,4 @@ h1, h2, h3, h4, h4 {
   border-radius: 5px;
   background-color: BLUE;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-}
+} */

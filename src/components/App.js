@@ -62,7 +62,4 @@ export default App;
 
 const StyleApp = styled.div`
   color: red;
-  button {
-    color: red;
-  }
 `;
