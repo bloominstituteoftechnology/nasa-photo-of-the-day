@@ -61,5 +61,8 @@ function App() {
 export default App;
 
 const StyleApp = styled.div`
-  color: red;
+  button {
+    color: ${(pr) => pr.theme.primaryColor};
+    box-shadow: ${(pr) => pr.theme.buttonShadow};
+  }
 `;
