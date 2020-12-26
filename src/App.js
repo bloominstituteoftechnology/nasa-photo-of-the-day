@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./App.css";
-import Title from "./Title";
-import Photo from "./Photo";
-import Caption from "./Caption";
+// import Title from "./Title";
+// import Photo from "./Photo";
+// import Caption from "./Caption";
+import InfoCard from "./InfoCard"
 import styled from 'styled-components';
 
 const phDate = new Date();
 const dateFormat = phDate.getFullYear()+'-'+(phDate.getMonth()+1)+'-'+phDate.getDate();
 const URL = 'https://api.nasa.gov/planetary/apod?api_key=cpIVh1n5cT7gdxurNPJfIw7fYEakx1I89h1UEoYT';
+
 
 const Body = styled.div`
     background-color: #000;
@@ -42,17 +44,19 @@ function App() {
       {/* <img src='../src/logo/NASA_logo.scg
     '></img> */}
       <Header>Astronomy Photo of the Day</Header>
+      <InfoCard
+     title = {state.title}
+     date = {state.date}
+     photo = {state.url}
+     caption = {state.explanation}
+     
+     />
       
-      <Title title={state.title} date = {state.date} />
-      <Photo photo = {state.url}/>
-      <Caption caption ={state.explanation} />
 
-      {/* <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p> */}
+    
     </Body>
   );
 }
 
 export default App;
+console.log(dateFormat)
