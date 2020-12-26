@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./App.css";
-// import Title from "./Title";
-// import Photo from "./Photo";
-// import Caption from "./Caption";
+import logo from "./logo/NASA_logo.svg"
 import InfoCard from "./InfoCard"
 import styled from 'styled-components';
 
@@ -40,9 +38,7 @@ function App() {
             },[])
   return (
     <Body className="App">
-      <img className ='logo' src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" alt='nasa logo'></img>
-      {/* <img src='../src/logo/NASA_logo.scg
-    '></img> */}
+      <img src={logo} alt="official nasa logo"></img>
       <Header>Astronomy Photo of the Day</Header>
       <InfoCard
      title = {state.title}
