@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import {DatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
+import DateFnsUtils from '@date-io/date-fns';
+
 import "./App.css";
 import logo from "./logo/NASA_logo.svg"
 import InfoCard from "./InfoCard"
@@ -27,7 +30,7 @@ padding: 2rem 0.1rem;
 
 function App() {
   const [state,setState] = useState({});
-
+  const [selectedDate, handleDateChange] = useState(new Date());
   useEffect( () => {
     axios.get(`${URL}&date=${dateFormat}`)
         .then( res => {
@@ -48,7 +51,13 @@ function App() {
      
      />
       
-
+      <MuiPickersUtilsProvider utils={DateFnsUtils}>
+        <DatePicker
+        label = "Date Picker"
+        value={selectedDate}
+        onChange={handleDateChange}
+        />
+    </MuiPickersUtilsProvider>
     
     </Body>
   );
