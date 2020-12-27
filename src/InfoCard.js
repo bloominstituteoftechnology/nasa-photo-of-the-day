@@ -30,8 +30,7 @@ const InfoCard = (props) => {
     return (
         <div>
           <APODTitle>{props.title}</APODTitle>
-            <p>{props.date}</p>
-           
+            <div>{props.date}</div>
             <Img src = {props.photo} alt = 'daily astronomy'></Img>
             <Info>{props.caption}</Info>
         </div>
