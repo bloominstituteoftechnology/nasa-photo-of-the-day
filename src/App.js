@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import {DatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
+import red from "@material-ui/core/colors/red";
+import lime from "@material-ui/core/colors/lime";
 import DateFnsUtils from '@date-io/date-fns';
-
+import { createMuiTheme } from "@material-ui/core";
+import { ThemeProvider } from "@material-ui/styles";
 import "./App.css";
 import logo from "./logo/NASA_logo.svg"
 import InfoCard from "./InfoCard"
@@ -28,6 +31,15 @@ background-color: #0B3D91;
 padding: 2rem 0.1rem; 
 `;
 
+
+
+const defaultMaterialTheme = createMuiTheme({
+  palette: {
+    primary: red,
+    secondary: lime
+  },
+});
+
 function App() {
   const [state,setState] = useState({});
   const [selectedDate, handleDateChange] = useState(new Date());
@@ -50,15 +62,20 @@ function App() {
      caption = {state.explanation}
      
      />
-      
-      <MuiPickersUtilsProvider utils={DateFnsUtils}>
-        <DatePicker
-        label = "Date Picker"
-        value={selectedDate}
-        onChange={handleDateChange}
-        />
-    </MuiPickersUtilsProvider>
-    
+     
+      <ThemeProvider theme={defaultMaterialTheme}>
+        <MuiPickersUtilsProvider utils={DateFnsUtils}>
+          <DatePicker
+          type = 'input'
+          variant ="inline"
+          disableFuture='true'
+          format="yyyy/MM/dd"
+          label = " Date Picker"
+          value={selectedDate}  
+          onChange={handleDateChange}
+          />
+      </MuiPickersUtilsProvider>
+    </ThemeProvider>
     </Body>
   );
 }
