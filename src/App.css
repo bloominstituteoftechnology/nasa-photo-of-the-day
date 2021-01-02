@@ -1,3 +1,7 @@
+* {
+  background-color: lightcyan;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +39,68 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.VideoPlayer {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-left: 25%;
+  margin-right: 25%;
+  font-size: 1.4rem;
+}
+
+.ImageTitle {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.ButtonDiv {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.ButtonDiv button {
+  color: red;
+  font-size: 1.3rem;
+  background-color: white;
+}
+
+.ImageClass {
+  display: flex;
+  flex-flow: row;
+  margin: auto;
+  justify-content: center;
+}
+
+.ImageClass img {
+  height: 400px;
+  margin-top: 10px;
+}
+
+.TitleDiv {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+
+.TitleDiv h2 {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.PDiv {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.NavBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
