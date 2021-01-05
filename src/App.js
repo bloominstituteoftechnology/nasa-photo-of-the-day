@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import axios from 'axios';
+import DropDown from "./Dropdown";
 import PhotoImport from './NasaPotd';
 
 
@@ -9,13 +9,13 @@ import PhotoImport from './NasaPotd';
 
 
 
-
-
 function App() {
   
   return (
     <div className="App">
-      
+      <DropDown />
+      <PhotoImport />
+
     </div>
   );
 }

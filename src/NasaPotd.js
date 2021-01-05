@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react"
 import axios from 'axios'
 
 
+
 export default function PhotoImport() {
     
-const [copyright, setCopyright] = useState([]);
-const [date, setDate] = useState([]);
-const [explain, setExplain] = useState([]);
-const [title, setTitle] = useState([]);
-const [url, setUrl] = useState([]);
+const [copyright, setCopyright] = useState(null);
+const [date, setDate] = useState(null);
+const [explain, setExplain] = useState(null);
+const [title, setTitle] = useState(null);
+const [url, setUrl] = useState(null);
 
     
 useEffect( () => {
@@ -28,15 +29,19 @@ useEffect( () => {
 
 
     return (
+        
+
 
         <div className = 'photo-info'>
-            <h1>Welcome to the NASA Photo of the day for ${date}</h1>
-            <h3>Title: {title}</h3>
+            <h1>Welcome to the NASA Photo of the day 🚀 [{date}]</h1>
+            <h3>Title: "{title}" by {copyright}</h3>
             <img src= {url} />
             <h3>Description:</h3>
             <p>{explain}</p>
 
             </div>
+
+        
         )
 
     }
