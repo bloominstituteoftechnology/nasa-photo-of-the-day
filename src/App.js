@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     axios.get(`https://api.nasa.gov/planetary/apod?api_key=4J1JlA79VniuhWfwEtHe663WQrN9RA2WmxqFPDdR&date=2012-03-14`)
     .then(res => setNasaData(res.data))
-    .catch(() => console.log("Nothing to show"))
+    .catch(() => console.log("Opps check your code"))
   },[nasaData.url, nasaData.date])
 
   console.log(nasaData)
