@@ -1,12 +1,20 @@
-import React from "react";
+import React, {useState} from "react";
 import "./App.css";
+import Photo from './Photo'
+import Date from './Date'
+import Gallery from './Gallery'
 
 function App() {
+  const [date, setDate] = useState()
+  const [] = useState()
+  const [] = useState()
+
   return (
     <div className="App">
       <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
+        <Date />
+        <Photo />
+        <Gallery />
       </p>
     </div>
   );
