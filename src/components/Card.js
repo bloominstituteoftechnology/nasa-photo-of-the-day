@@ -17,7 +17,8 @@ export default function Card() {
     <div>
       <h1>{title}</h1>
       <h2>PICTURE OF THE DAY: {date}</h2>
-      <img src={hdurl} />
+      <img src={hdurl} alt="NASA Astronomy Picture of the Day" />
+      <button onClick={() => console.log("clicked")}>Learn more</button>
     </div>
   );
 }
