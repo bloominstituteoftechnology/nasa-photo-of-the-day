@@ -4,14 +4,22 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Jumbotron from "react-bootstrap/JumboTron";
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
+import { ParallaxProvider } from "react-scroll-parallax";
 //axios
 import axios from "axios";
 //resources
 import astronaut from "./resources/Astronaut.jpg";
-import nasalogo from "./resources/nasa-logo.png";
+import nasalogo from "./resources/nasalogo.png";
 import nebula from "./resources/nebula.jpg";
+import moon from "./resources/moon.jpg";
+import launch from "./resources/launch.jpg";
 import PhotoBooth from "./PhotoBooth.js";
+import Apollo from "./resources/apollo.jpg";
+import Columbia from "./resources/columbia.jpeg";
+import ProjectMercury from "./resources/project_mercury.jpg";
+import ShuttlePatch from "./resources/shuttle-patch.jpg";
+import Skylab from "./resources/skylab.jpg";
+
 
 function App() {
   const [astro, setAstro] = useState(astronaut);
@@ -34,59 +42,42 @@ function App() {
   }, []);
 
   return (
-    <div style={{ backgroundColor: "black" }}>
+    <div>
       <img
-        className="justify-content-md-center"
+        className=" justify-content-md-center background "
         src={galaxy}
         alt="nebula sky"
-        style={{
-          position: "fixed",
-          right: 0,
-          bottom: 0,
-          width: "100%",
-          height: "100%",
-        }}
       />
-      <Container
-        style={{
-          backgroundColor: "#AAA",
-          paddingBottom: "5rem",
-          paddingTop: "1rem",
-          opacity: 0.75,
-        }}
-      >
-        <Jumbotron
-          className="justify-content-md-center"
-          style={{
-            backgroundColor: "#FFF",
-            paddingTop: "3rem",
-            paddingBottom: ".5rem",
-
-            height: "4000px",
-          }}
-        >
+      <Container className=" container ">
+        <Jumbotron className="justify-content-md-center jumbotron">
           <div className="App">
             <h1
               className="display-4"
-              style={{ paddingTop: "3rem", paddingBottom: "1rem" }}
+              style={{ paddingTop: "2rem", paddingBottom: "1rem" }}
             >
-              NASA Astronaut Picture of the Day
+              NASA Astronomy Picture of the Day
             </h1>
             <img
-              className="mx-auto d-block img-fluid w-50"
+              className="mx-auto d-block img-fluid"
               src={nasa}
               alt="nasa logo"
-              style={{ width: "15rem", paddingBottom: "15%" }}
+              style={{ width: "50rem", paddingTop: "2rem", paddingBottom: "15%" }}
             />
             <hr style={{ width: "50%" }}></hr>
-            <img
-              className="mx-auto d-block img-fluid w-100"
-              src={astro}
-              alt="spaceman"
-              style={{ paddingTop: "30%", paddingBottom: "3rem" }}
-            />
-
-            <p className="text-dark txt" style={{ paddingBottom: "40%", fontSize: "1.5rem"}}>
+            <div className="parallax">
+              <ParallaxProvider>
+                <img
+                  className="mx-auto d-block img-fluid w-100"
+                  src={astro}
+                  alt="spaceman"
+                  style={{ paddingTop: "30%", paddingBottom: "3rem" }}
+                />
+              </ParallaxProvider>
+            </div>
+            <p
+              className="text-dark txt"
+              style={{ paddingBottom: "20%", fontSize: "1.5rem" }}
+            >
               Take a virtual trip through the cosmos with the NASA Astronaut
               Picture of the Day{" "}
               <span role="img" aria-label="go!">
@@ -94,14 +85,74 @@ function App() {
               </span>
               !
             </p>
+            <div>
+              <img
+                className="mx-auto d-block img-fluid w-50 "
+                src={moon}
+                alt="moon over hawaii"
+              />
+              <p>A great shot of the moon over Honolulu, Hawaii</p>
+            </div>
           </div>
           <div className="App">
-            <h2 className="display-5-dark" style={{ paddingBottom: "3rem" }}>
+            <h2
+              className="display-4"
+              style={{ paddingBottom: "3rem", paddingTop: "30%" }}
+            >
               Today's Photo
             </h2>
             <PhotoBooth data={data} />
           </div>
+          <div style={{ paddingTop: "5rem" }}>
+            <img
+              src={launch}
+              className="mx-auto d-block img-fluid w-50 "
+              alt="shuttle launch"
+            />
+            <p>
+              Engines rumble as the space shuttle Discovery rockets off into the
+              sunset
+            </p>
+          </div>
+          <div className="row" style={{ paddingTop: "7rem" }}>
+            <img
+              src={Skylab}
+              className="col-sm-2 mx-auto d-block img-fluid"
+              alt="skylab"
+              style={{ height: "8%" }}
+            />
+            <img
+              src={Apollo}
+              className="col-sm-2 mx-auto d-block img-fluid"
+              alt="apollo"
+              style={{ height: "8%" }}
+            />
+            <img
+              src={Columbia}
+              className="col-sm-2 mx-auto d-block img-fluid"
+              alt="columbia"
+              style={{ height: "8%" }}
+            />
+            <img
+              src={ProjectMercury}
+              className="col-sm-2 mx-auto d-block img-fluid"
+              alt="project mercury"
+              style={{ height: "8%" }}
+            />
+            <img
+              src={ShuttlePatch}
+              className="col-sm-2 mx-auto d-block img-fluid"
+              alt="shuttle patch"
+              style={{ height: "10%" }}
+            />
+          </div>
         </Jumbotron>
+        <div style={{ textAlign: "center" }}>
+          <h4>Visit our other sites</h4>
+          <button className="glow-on-hover">
+            <a href="https://apod.nasa.gov/apod/archivepix.html" style={{color: "white"}}>Archive</a>
+          </button>
+        </div>
       </Container>
     </div>
   );
