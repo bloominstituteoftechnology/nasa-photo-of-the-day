@@ -77,7 +77,7 @@ Now is the time to build out your other components. Compose your UI, and then pa
 #### _MVP Requirements:_
 
 - [x] Use the effect hook to fetch the APOD data when the component mounts.
-- [xx] Display the APOD data in different components that are composed together to build your UI.
+- [x] Display the APOD data in different components that are composed together to build your UI.
 
 #### Pro Tips
 
@@ -106,7 +106,7 @@ Do not attempt stretch problems until MVP has been reached and a final commit ha
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge Branch into `main` (student's Repository).
+- [x] Submit a Pull-Request to merge Branch into `main` (student's Repository).
 
 ----
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
+import "./PhotoContainer.css";
+import App from "./App"; // do I need this?
 
 // ReactDOM.render(<App />, document.getElementById("root"));
 
@@ -16,15 +16,15 @@ export default function PhotoContainer(props) {
    return (
     <div className="photo-container">
         <div className="photo">
-          <img src={data.url} alt="NASA Photo Of The Day"></img>
+          <img id="photo-of-the-day" src={data.url} alt="NASA Photo Of The Day"></img>
         </div>
         
         <div className="photo-info">
           <div>
-            <h3>Name: {data.title}</h3>
+            <h2>{data.title}</h2>
             <p>By: {data.copyright}</p>
             <p>Date: {data.date}</p>
-            <p>Description: {data.explanation}</p>
+            <p>{data.explanation}</p>
             {/* <p><button onClick={() => changeStatus(friend.id)}>change status</button></p> */}
           </div>
         </div>

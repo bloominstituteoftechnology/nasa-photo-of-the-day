@@ -7,16 +7,50 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* THIS IS THE FIXED BACKGROUND FOR PARALLAX */
+.background-picture-container {
+  background-image: url("https://cdn.pixabay.com/photo/2018/08/15/13/10/galaxy-3608029_1280.jpg");
+    /* Set a specific height */
+    height: 700px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300vh;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+    color: #444444;
 }
 
 h1 {
   font-family: 'Orbitron', sans-serif;
-  color: dodgerblue;
+  color: white;
+  font-size: 60px;  
 }
 
-h3 {
+#landing-page-title {
+  font-size: 60px;  
+}
+
+h2 {
   font-family: 'Orbitron', sans-serif;
+  color: #444444;
+}
+
+.title {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-top: 30vh;
+}
+
+.scroll-up {
+  top: 70%;
+  left: 50%;
+  position: absolute;
+  margin-left: auto;
 }

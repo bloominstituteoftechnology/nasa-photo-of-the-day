@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import PhotoContainer from './PhotoContainer';
+import button from './button';
 import axios from 'axios';
-
-
+import { Card } from 'reactstrap';
+import { Button } from 'reactstrap';
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
       // Which we then set to state
       .then(res => {
         setData(res.data);
-      console.log("fetch data", res.data);
+      // console.log("fetch data", res.data);
       })
       // Always include error handling
       .catch(err => console.log(err));
@@ -28,13 +29,14 @@ function App() {
 
   return (
     <div className="App">
-      <h1>NASA Photo of the Day</h1>
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
-      <PhotoContainer data={data} />
+      <Card class="card">
+        <PhotoContainer data={data} />
+      </Card>
+      <button class="button" type="button" >Click Me Button One!</button>
+      <Button props={data}/>
     </div>
+
+
   );
 }
 
