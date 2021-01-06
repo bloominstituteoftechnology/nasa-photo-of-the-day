@@ -34,9 +34,9 @@ useEffect( () => {
 
         <div className = 'photo-info'>
             <h1>Welcome to the NASA Photo of the day 🚀 [{date}]</h1>
-            <h3>Title: "{title}" by {copyright}</h3>
+            <h3>Title: "{title}"</h3>
             <img src= {url} />
-            <h3>Description:</h3>
+            <h3>Photo Credit: <strong>{copyright}</strong></h3>
             <p>{explain}</p>
 
             </div>
