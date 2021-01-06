@@ -15,6 +15,7 @@ export default function PhotoContainer(props) {
 
    return (
     <div className="photo-container">
+        <img class="scroll-up" src="./public/icons8-scroll-up-64.png" alt="Scroll up to view more icon" width="70" height="70"></img>
         <div className="photo">
           <img id="photo-of-the-day" src={data.url} alt="NASA Photo Of The Day"></img>
         </div>
