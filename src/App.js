@@ -9,7 +9,7 @@ import { Button } from 'reactstrap';
 
 function App() {
   const [data, setData] = useState({});
-  const [spacePic, setSpacePic] = useState("");
+  // const [spacePic, setSpacePic] = useState("");
 
   useEffect(() => {
     // This axios GET request will return a single image
