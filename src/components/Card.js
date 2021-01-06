@@ -1,68 +1,7 @@
-body {
-  background-color: #f4f6ff;
-}
+import React from 'react';
+import styled, { css } from 'styled-components';
 
-.App {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.calendar {
-  color: #282c34;
-  background-color: #f4f6ff;
-}
-
-button {
-  border: 1px solid #f4f6ff;
-  background-color: #424242;
-  color: #f4f6ff;
-  border-radius: 5px;
-  padding: 25px 2.5px;
-  width: 100%;
-  text-decoration: none;
-  outline-color: #ffcb74;
-  outline-width: 5px;
-  
-}
-
-/* .card {
+const CardDiv = styled.div`
   width: 85vw;
   margin-top: 2vh;
   margin-bottom: 2vh;
@@ -71,49 +10,49 @@ button {
   border-radius: 10px;
   background-color: #4f8a8b;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
+`;
 
-.image {
+const StyledImg = styled.img`
   width: auto;
   height: 30vh;
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
-}
+`;
 
-.info {
+const StyledInfo = styled.div`
   height: 30vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #f4f6ff;
-}
+`;
 
-.titleDate {
+const StyledTitleDate = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
+`;
 
-.title {
+const StyledTitle = styled.h2`
   width: 20vw;
   font-family: sans-serif;
   font-weight: bold;
   font-size: 20px;
   margin-bottom: 0px;
   color: #ea907a;
-}
+`;
 
-.date {
+const StyledDate = styled.p`
   font-family: sans-serif;
   font-weight: lighter;
   width: 5vw;
   font-size: 12px;
   margin-top: 5px;
   color: #ffcb74;
-}
+`;
 
-.explanation {
+const StyledExplanation = styled.p`
   width: 95%;
   font-family: sans-serif;
   line-height: 3vh;
@@ -122,9 +61,9 @@ button {
   margin-top: 10px;
   margin-bottom: 2px;
   font-size: 12px;
-}
+`;
 
-.copyright {
+const StyledCopyright = styled.p`
   font-family: sans-serif;
   font-weight: bold;
   font-size: 12px;
@@ -133,4 +72,23 @@ button {
   text-align: center;
   width: 50%;
   color: #ea907a;
-} */
+`;
+
+const Card = ({ copyright, date, explanation, title, imgUrl }) => {
+  return (
+    <CardDiv>
+      <StyledImg src={imgUrl}/>
+      <StyledInfo>
+        <StyledTitleDate>
+          <StyledTitle>{title}</StyledTitle>
+          <StyledDate>{date}</StyledDate>
+        </StyledTitleDate>
+        <StyledExplanation>{explanation}</StyledExplanation>
+        <StyledCopyright>{copyright}</StyledCopyright>
+      </StyledInfo>
+    </CardDiv>
+  );
+};
+
+export default Card;
+
