@@ -1,4 +1,3 @@
-
 p {
   text-align: center;
 }
@@ -11,7 +10,6 @@ hr {
 .App {
   text-align: center;
 }
-
 
 .App-header {
   background-color: #282c34;
@@ -29,20 +27,19 @@ hr {
   background-repeat: no-repeat;
   background-attachment: fixed;
   width: "100%";
-  height: "80%"
+  height: "80%";
 }
-
 
 .background {
   position: fixed;
   right: 0;
   bottom: 0;
   width: 100%;
-  height: 100%
+  height: 100%;
 }
 
 .container {
-  background-color: #AAA;
+  background-color: #aaa;
   padding-bottom: 5rem;
   padding-top: 1rem;
   opacity: 0.67;
@@ -50,10 +47,10 @@ hr {
 }
 
 .jumbotron {
-  background-color: #FFF;
+  background-color: #fff;
   padding-top: 3rem;
-  padding-bottom: .2rem;
-  height: 5000px
+  padding-bottom: 0.2rem;
+  height: 5000px;
 }
 
 .button-style {
@@ -76,11 +73,22 @@ hr {
 }
 
 .glow-on-hover:before {
-  content: '';
-  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
   position: absolute;
   top: -2px;
-  left:-2px;
+  left: -2px;
   background-size: 400%;
   z-index: -1;
   filter: blur(5px);
@@ -88,12 +96,12 @@ hr {
   height: calc(100% + 4px);
   animation: glowing 20s linear infinite;
   opacity: 0;
-  transition: opacity .3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
   border-radius: 10px;
 }
 
 .glow-on-hover:active {
-  color: #000
+  color: #000;
 }
 
 .glow-on-hover:active:after {
@@ -106,7 +114,7 @@ hr {
 
 .glow-on-hover:after {
   z-index: -1;
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
@@ -117,7 +125,13 @@ hr {
 }
 
 @keyframes glowing {
-  0% { background-position: 0 0; }
-  50% { background-position: 400% 0; }
-  100% { background-position: 0 0; }
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }

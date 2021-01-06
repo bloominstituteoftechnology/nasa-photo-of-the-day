@@ -20,7 +20,6 @@ import ProjectMercury from "./resources/project_mercury.jpg";
 import ShuttlePatch from "./resources/shuttle-patch.jpg";
 import Skylab from "./resources/skylab.jpg";
 
-
 function App() {
   const [astro, setAstro] = useState(astronaut);
   const [nasa, setNasa] = useState(nasalogo);
@@ -61,7 +60,11 @@ function App() {
               className="mx-auto d-block img-fluid"
               src={nasa}
               alt="nasa logo"
-              style={{ width: "50rem", paddingTop: "2rem", paddingBottom: "15%" }}
+              style={{
+                width: "50rem",
+                paddingTop: "2rem",
+                paddingBottom: "15%",
+              }}
             />
             <hr style={{ width: "50%" }}></hr>
             <div className="parallax">
@@ -150,7 +153,12 @@ function App() {
         <div style={{ textAlign: "center" }}>
           <h4>Visit our other sites</h4>
           <button className="glow-on-hover">
-            <a href="https://apod.nasa.gov/apod/archivepix.html" style={{color: "white"}}>Archive</a>
+            <a
+              href="https://apod.nasa.gov/apod/archivepix.html"
+              style={{ color: "white", textDecoration: "none"  }}
+            >
+              Archive
+            </a>
           </button>
         </div>
       </Container>

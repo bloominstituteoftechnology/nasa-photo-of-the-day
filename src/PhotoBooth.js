@@ -1,21 +1,18 @@
 import React, { useState } from "react";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import DatePicker from "react-datepicker";
+
+import "react-datepicker/dist/react-datepicker.css";
 
 export default function PhotoBooth(props) {
   const { data } = props;
   const [startDate, setStartDate] = useState(new Date());
+  console.log(data);
 
   return (
     <div className="justify-content-lg-center">
-      <h3
-        className="display-5"
-        style={{ paddingTop: "2rem", paddingBottom: "2rem" }}
-      >
-        Courtesy of: {data.copyright}
-      </h3>
+      <h4 style={{ marginBottom: "4rem", marginTop: "5rem" }}>{data.title}</h4>
       <img
         className="mx-auto d-block img-fluid w-100"
         src={data.url}
@@ -27,24 +24,24 @@ export default function PhotoBooth(props) {
       >
         {data.date}
       </h3>
-      <h4>{data.title}</h4>
+
       <p>{data.explanation}</p>
-      <div style={{marginTop: "2rem"}}>
+      <div style={{ marginTop: "2rem" }}>
         <button className="glow-on-hover" style={{ marginRight: "1rem" }}>
-          Yesterday's Photo
+          <a href="#" style={{ color: "white", textDecoration: "none" }}>
+            Yesterday's Photo
+          </a>
         </button>
         <button type="button" className="glow-on-hover">
-          Tomorrow's Photo
+          <a href="#" style={{ color: "white" , textDecoration: "none"}}>
+            Tomorrow's Photo
+          </a>
         </button>
       </div>
       <br></br>
       <br></br>
       <p style={{ paddingTop: ".5rem" }}>or choose a date!</p>
-      <DatePicker
-        selected={startDate}
-        onSelect={(date) => setStartDate(date)}
-        onChange={(date) => setStartDate(date)}
-      />
+      <DatePicker />
     </div>
   );
 }
