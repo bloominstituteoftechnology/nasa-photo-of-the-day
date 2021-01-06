@@ -1,15 +1,15 @@
 import React from 'react'
-import Copyright from './Copyright'
 
 function Photo(props) {
     console.log(props)
-
     return (
         <div>
-            <img src={props.data.photo} alt='Nasa Photo' />
-            <Copyright />
+            <h1>{props.data.title}</h1>
+            <h2>{props.data.date}</h2>
+            <img src={props.data.url} alt='Daily Nasa' />
+            <p>{props.data.copyright}</p>
+            <p>{props.data.explanation}</p>
         </div>
-        
     )
 }
 
