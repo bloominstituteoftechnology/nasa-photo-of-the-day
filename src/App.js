@@ -20,11 +20,10 @@ import ProjectMercury from "./resources/project_mercury.jpg";
 import ShuttlePatch from "./resources/shuttle-patch.jpg";
 import Skylab from "./resources/skylab.jpg";
 
-
 function App() {
-  const [astro, setAstro] = useState(astronaut);
-  const [nasa, setNasa] = useState(nasalogo);
-  const [galaxy, setGalaxy] = useState(nebula);
+ // const [astro, setAstro] = useState(astronaut);
+ // const [nasa, setNasa] = useState(nasalogo);
+ // const [galaxy, setGalaxy] = useState(nebula);
   const [data, setData] = useState({});
 
   //console.log(data);
@@ -45,7 +44,7 @@ function App() {
     <div>
       <img
         className=" justify-content-md-center background "
-        src={galaxy}
+        src={nebula}
         alt="nebula sky"
       />
       <Container className=" container ">
@@ -59,16 +58,20 @@ function App() {
             </h1>
             <img
               className="mx-auto d-block img-fluid"
-              src={nasa}
+              src={nasalogo}
               alt="nasa logo"
-              style={{ width: "50rem", paddingTop: "2rem", paddingBottom: "15%" }}
+              style={{
+                width: "50rem",
+                paddingTop: "2rem",
+                paddingBottom: "15%",
+              }}
             />
             <hr style={{ width: "50%" }}></hr>
             <div className="parallax">
               <ParallaxProvider>
                 <img
                   className="mx-auto d-block img-fluid w-100"
-                  src={astro}
+                  src={astronaut}
                   alt="spaceman"
                   style={{ paddingTop: "30%", paddingBottom: "3rem" }}
                 />
@@ -150,7 +153,12 @@ function App() {
         <div style={{ textAlign: "center" }}>
           <h4>Visit our other sites</h4>
           <button className="glow-on-hover">
-            <a href="https://apod.nasa.gov/apod/archivepix.html" style={{color: "white"}}>Archive</a>
+            <a
+              href="https://apod.nasa.gov/apod/archivepix.html"
+              style={{ color: "white", textDecoration: "none"  }}
+            >
+              Archive
+            </a>
           </button>
         </div>
       </Container>
