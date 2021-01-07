@@ -12,15 +12,22 @@ import Explanation from "./components/Explanation"
 
 function App() {
 
-  const [data, setData] = useState(dummyData)
+  const [data, setData] = useState({})
+  
+  
+  // !!!!! I RAN OUT OF REQUESTS WHILE DOING THE PROJECT!
+  // !!!!! I WILL FIX THIS AND POST THE REQUEST WHEN IM ABLE TO REQUEST AGAIN!
+  useEffect (() => {
+    axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
+     .then(response => {
+       setData(response.data)
+     })
+     .catch(err => console.log(err))
+  }, [])
+
+  console.log(data, "HERE")
   const {copyright, date, explanation, hdurl, title, url} = data;
-
   
-  
-  // axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
-  //   .then(response => setData(response))
-  //   .catch(err => console.log(err))
-
  
 
   return (
