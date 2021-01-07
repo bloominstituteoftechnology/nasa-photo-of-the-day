@@ -1,3 +1,4 @@
+import React from "react";
 import "./PhotoContainer.css";
 
 // ReactDOM.render(<App />, document.getElementById("root"));
