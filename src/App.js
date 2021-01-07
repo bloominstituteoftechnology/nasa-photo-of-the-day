@@ -3,7 +3,7 @@ import { Card } from 'reactstrap';
 import axios from 'axios';
 import "./App.css";
 import PhotoContainer from './PhotoContainer';
-import Button from './Button';
+import Button from './Button.js';
 
 
 
