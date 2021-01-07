@@ -9,7 +9,7 @@ body {
 
 /* THIS IS THE FIXED BACKGROUND FOR PARALLAX */
 .background-picture-container {
-  background-image: url("https://cdn.pixabay.com/photo/2018/08/15/13/10/galaxy-3608029_1280.jpg");
+  background-image: url("./galaxy.jpg");
     /* Set a specific height */
     height: 700px;
     /* Create the parallax scrolling effect */

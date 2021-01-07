@@ -5,9 +5,6 @@ import "./button.css"
 const Button = props => {
   return (
     <>
-
-
-      
         <ButtonWrapper
           aria-label={props.label}
           className="anchor"
@@ -15,8 +12,6 @@ const Button = props => {
           href={props.href}
         >Button Text
         </ButtonWrapper>
-     
-
     </>
   )
 }
