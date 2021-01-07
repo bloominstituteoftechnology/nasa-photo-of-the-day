@@ -10,17 +10,16 @@ function App() {
     axios
     .get('https://api.nasa.gov/planetary/apod?api_key=d3tlUqH6cnLcnkFV80WFFgFzSycHd4IlbiI4X5ZZ')
     .then(response => {
-        //console.log(response);
+        console.log(response);
         setData(response.data);
       })
     .catch(err => console.log(err))
   }, [])
 
-
   return (
-    <div className="App">
+    <App className="App">
         <Photo data={data}/>
-    </div>
+    </App>
   );
 }
 
