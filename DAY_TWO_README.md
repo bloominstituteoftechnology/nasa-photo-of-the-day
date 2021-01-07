@@ -40,3 +40,4 @@ Follow these steps for completing your project.
 -----
 
 ## Part I - [Component Side Effects](README.md)
+

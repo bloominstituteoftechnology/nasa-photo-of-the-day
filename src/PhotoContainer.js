@@ -1,7 +1,4 @@
-import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom";
 import "./PhotoContainer.css";
-import App from "./App"; // do I need this?
 
 // ReactDOM.render(<App />, document.getElementById("root"));
 
@@ -17,7 +14,7 @@ export default function PhotoContainer(props) {
     <div className="photo-container">
         <img class="scroll-up" src="./public/icons8-scroll-up-64.png" alt="Scroll up to view more icon" width="70" height="70"></img>
         <div className="photo">
-          <img id="photo-of-the-day" src={data.url} alt="NASA Photo Of The Day"></img>
+          <img id="photo-of-the-day" src={data.url} alt="NASA"></img>
         </div>
         
         <div className="photo-info">
