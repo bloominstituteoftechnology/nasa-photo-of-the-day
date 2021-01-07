@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { Card } from 'reactstrap';
+import axios from 'axios';
 import "./App.css";
 import PhotoContainer from './PhotoContainer';
-import button from './button';
-import axios from 'axios';
-import { Card } from 'reactstrap';
-import { Button } from 'reactstrap';
+import Button from './Button';
+
+
+
 
 
 function App() {
@@ -32,7 +34,7 @@ function App() {
       <Card class="card">
         <PhotoContainer data={data} />
       </Card>
-      <button class="button" type="button" >Click Me Button One!</button>
+
       <Button props={data}/>
     </div>
 

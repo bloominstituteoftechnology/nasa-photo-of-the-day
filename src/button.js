@@ -1,23 +1,22 @@
 import React from "react"
 import styled from "styled-components"
+import "./Button.css"
 
 const Button = props => {
   return (
     <>
-      {props.anchor ? (
+
+
+      
         <ButtonWrapper
           aria-label={props.label}
           className="anchor"
           as="a"
           href={props.href}
-        >
-          {props.cta}
+        >Button Text
         </ButtonWrapper>
-      ) : (
-        <ButtonWrapper aria-label={props.label} type={props.type}>
-          {props.cta}
-        </ButtonWrapper>
-      )}
+     
+
     </>
   )
 }
@@ -40,10 +39,12 @@ const ButtonWrapper = styled.button`
   border-radius: 30px;
   border: none;
   z-index: 1;
+  margin: 20px;
 
   &:hover {
     cursor: pointer;
     animation: animate 8s linear infinite;
+    text-decoration: none;
 
     &::before {
       filter: blur(20px);
