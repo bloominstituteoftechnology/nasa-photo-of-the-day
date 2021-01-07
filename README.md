@@ -42,11 +42,15 @@ This project was put together using create-react-app (CRA). You will not need to
 - [x ] If you want, this is the time to make a simple design spec (look up ["simple wireframes"](https://www.google.com/search?q=simple+wireframes) to find resources & examples). **A pen & paper sketch (or outline) is often the fastest way to start your planning.**
 - [x ] Once you have a design plan in mind, break down the designs into individual components.
 - [ x] Plan which components will hold state, what data each needs from props (if any), and where you will be making your data fetch.
+        - The entire photo is the single component, 
+        - the photo component will need the data (author, date, image, description) from props
+        -
 - [ x] Now it's time to jump into the code!
 
 **File structure**
 
 - [ x] Take a look at your planned components. Create the folders and files you need for each component.
+      -I created a file for my component - Photo.js, that will hold all my functions for each of those data elements.
 - [x ] Leave most of them blank for now - you need to get your data from the API before you can really get these built.
 
 **Fetching the Data**

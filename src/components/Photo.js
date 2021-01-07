@@ -1,36 +1,30 @@
-import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom";
-//import "./PhotoContainer.css";
+import React from "react";
+//import ReactDOM from "react-dom";
 
+//ReactDOM.render(<App />, document.getElementById("root")); //This is on the home index page
 
-// ReactDOM.render(<App />, document.getElementById("root"));
+export default function Photo(props) {//This props becomes the 'dark-blue' data from App.js
 
-export default function PhotoContainer(props) {
-
-  const { data } = props;
+  const { nasaData } = props; // this is the destructuring, since we're not changing state within the photo container 
   //  const { copyright, date, explanation, hdurl, title, url } = props;
-  console.log("Data in photoContainer:", data);
-
-   console.log("Title:", data.title);
-
+    console.log("Data:", nasaData);
+    //console.log("Title:", data.title);
+//To be sure we are receiving our data
    return (
-    <div className="photo-container">
-        <img class="scroll-up" src="./public/icons8-scroll-up-64.png" alt="Scroll up to view more icon" width="70" height="70"></img>
-        <div className="photo">
-          <img id="photo-of-the-day" src={data.url} alt="NASA Photo Of The Day"></img>
+    <div className="photo-card">
+        <div className="photo"> 
+            <img id="thing-of-the-day" src={nasaData.url} alt="NASA Pic Of The Day"></img>
         </div>
         
         <div className="photo-info">
           <div>
-            <h2>{data.title}</h2>
-            <p>By: {data.copyright}</p>
-            <p>Date: {data.date}</p>
-            <p>{data.explanation}</p>
-            {/* <p><button onClick={() => changeStatus(friend.id)}>change status</button></p> */}
+            <h2>{nasaData.title}</h2>
+            <p>By: {nasaData.copyright}</p>
+            <p>Date: {nasaData.date}</p>
+            <p>{nasaData.explanation}</p>
+            
           </div>
         </div>
-    </div> 
-   
+    </div>
   );
-
-}
+} 
