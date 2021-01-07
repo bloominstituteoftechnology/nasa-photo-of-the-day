@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import DatePicker from "react-datepicker";
@@ -7,7 +7,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
 export default function PhotoBooth(props) {
   const { data } = props;
-  const [startDate, setStartDate] = useState(new Date());
+
   console.log(data);
 
   return (
@@ -28,12 +28,12 @@ export default function PhotoBooth(props) {
       <p>{data.explanation}</p>
       <div style={{ marginTop: "2rem" }}>
         <button className="glow-on-hover" style={{ marginRight: "1rem" }}>
-          <a href="#" style={{ color: "white", textDecoration: "none" }}>
+          <a href="https://codepen.io/artofmayhem" style={{ color: "white", textDecoration: "none" }}>
             Yesterday's Photo
           </a>
         </button>
         <button type="button" className="glow-on-hover">
-          <a href="#" style={{ color: "white" , textDecoration: "none"}}>
+          <a href="https://codepen.io/artofmayhem" style={{ color: "white" , textDecoration: "none"}}>
             Tomorrow's Photo
           </a>
         </button>

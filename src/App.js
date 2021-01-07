@@ -21,9 +21,9 @@ import ShuttlePatch from "./resources/shuttle-patch.jpg";
 import Skylab from "./resources/skylab.jpg";
 
 function App() {
-  const [astro, setAstro] = useState(astronaut);
-  const [nasa, setNasa] = useState(nasalogo);
-  const [galaxy, setGalaxy] = useState(nebula);
+ // const [astro, setAstro] = useState(astronaut);
+ // const [nasa, setNasa] = useState(nasalogo);
+ // const [galaxy, setGalaxy] = useState(nebula);
   const [data, setData] = useState({});
 
   //console.log(data);
@@ -44,7 +44,7 @@ function App() {
     <div>
       <img
         className=" justify-content-md-center background "
-        src={galaxy}
+        src={nebula}
         alt="nebula sky"
       />
       <Container className=" container ">
@@ -58,7 +58,7 @@ function App() {
             </h1>
             <img
               className="mx-auto d-block img-fluid"
-              src={nasa}
+              src={nasalogo}
               alt="nasa logo"
               style={{
                 width: "50rem",
@@ -71,7 +71,7 @@ function App() {
               <ParallaxProvider>
                 <img
                   className="mx-auto d-block img-fluid w-100"
-                  src={astro}
+                  src={astronaut}
                   alt="spaceman"
                   style={{ paddingTop: "30%", paddingBottom: "3rem" }}
                 />
