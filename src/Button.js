@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import "./Button.css"
+import "./button.css"
 
 const Button = props => {
   return (
