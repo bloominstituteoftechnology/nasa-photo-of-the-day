@@ -1,0 +1,36 @@
+import React, { useState, useEffect } from "react";
+import ReactDOM from "react-dom";
+//import "./PhotoContainer.css";
+
+
+// ReactDOM.render(<App />, document.getElementById("root"));
+
+export default function PhotoContainer(props) {
+
+  const { data } = props;
+  //  const { copyright, date, explanation, hdurl, title, url } = props;
+  console.log("Data in photoContainer:", data);
+
+   console.log("Title:", data.title);
+
+   return (
+    <div className="photo-container">
+        <img class="scroll-up" src="./public/icons8-scroll-up-64.png" alt="Scroll up to view more icon" width="70" height="70"></img>
+        <div className="photo">
+          <img id="photo-of-the-day" src={data.url} alt="NASA Photo Of The Day"></img>
+        </div>
+        
+        <div className="photo-info">
+          <div>
+            <h2>{data.title}</h2>
+            <p>By: {data.copyright}</p>
+            <p>Date: {data.date}</p>
+            <p>{data.explanation}</p>
+            {/* <p><button onClick={() => changeStatus(friend.id)}>change status</button></p> */}
+          </div>
+        </div>
+    </div> 
+   
+  );
+
+}
