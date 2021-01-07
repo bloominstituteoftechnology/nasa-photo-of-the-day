@@ -2,7 +2,12 @@ import React from 'react'
 
 const Title = ({title}) => {
     return (
-        <div>
+        <div 
+            style = {
+            {
+            color: 'white'
+        }
+    }>
             <h1>{title}</h1>
         </div>
     )

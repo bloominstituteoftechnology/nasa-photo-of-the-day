@@ -19,7 +19,11 @@ function App() {
   console.log(nasaData)
 
   return (
-    <div className="App">
+    <div 
+      style ={{
+        backgroundColor: 'black'
+      }}
+      className="App">
          <NasaCard data={nasaData}/>
     </div>
   );

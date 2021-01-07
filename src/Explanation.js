@@ -2,7 +2,10 @@ import React from 'react';
 
 const Explanation = ({explanation}) => {
     return (
-        <div>
+        <div 
+            style = {{
+                color: 'white'
+            }}>
             <p>{explanation}</p>
         </div>
     )

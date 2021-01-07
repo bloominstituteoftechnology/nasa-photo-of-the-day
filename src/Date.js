@@ -3,7 +3,10 @@ import React from 'react';
 
 const Date = ({date}) => {
     return (
-        <div>
+        <div 
+            style = {{
+                color: 'pink'
+            }}>
             {date}
         </div>
     )
