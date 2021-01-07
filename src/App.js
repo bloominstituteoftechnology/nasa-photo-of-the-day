@@ -1,6 +1,7 @@
 import React, {useState, useEffect } from "react";
 import axios from 'axios'
 import "./App.css";
+import styled from 'styled-components'
 
 import { BASE_URL, API_KEY } from './constants '
 import AstronomyPicture from './components/AstronomyPicture/AstronomyPicture'
@@ -10,12 +11,12 @@ import AstronomyEventDetails from './components/AstronomyEventDetails/AstronomyE
 function App() {
 
   const [dailyAstronomyEvent , setdailyAstronomyEvent] = useState({})
+ const [ date , setdate] = useState("")
 
   let newDate = new Date()
   let day = newDate.getDate();
   let month = newDate.getMonth()+ 1;
   let year = newDate.getFullYear();
- 
 
 
   useEffect(() => {
@@ -29,7 +30,7 @@ function App() {
 
 
   return (
-    <div className="App">
+    <Container className="App">
       <h1> Astronomy Picture of the Day </h1>
       <p>
        Discover the cosmos<span role="img" aria-label='go!'>🚀</span>! 
@@ -38,8 +39,13 @@ function App() {
       <p> {year + '-' + month + '-' + day}</p>
       <AstronomyPicture dailyAstronomyEvent = {dailyAstronomyEvent}/>
       <AstronomyEventDetails dailyAstronomyEvent = {dailyAstronomyEvent}/>
-    </div>
+    </Container>
   );
 }
+
+const Container = styled.div
+` background-color: cornsilk
+display: flex;
+`
 
 export default App;
