@@ -8,31 +8,33 @@ function Photo(props) {
     font-family: 'Mukta', sans-serif;
   `
   const Header = styled.h1`
-
-  `
-  const Date = styled.p`
-
-  `
-  const Title = styled.h2`
-
+    font-size: 3rem;
   `
   const Photo = styled.img`
-
+    border: 1rem solid;
   `
-  const Copyright = styled.p`
-
+  const Date = styled.p`
+    font-size: 1rem;
+    font-color: gray;
+  `
+  const Title = styled.h2`
+    font-size: 1rem;
   `
   const Explanation = styled.p`
-
+    font-size: 0.5rem;
   `
+  const Copyright = styled.p`
+    font-size: 0.25rem;
+  `
+  
   return (
     <Container>
       <Header>Daily Nasa Photo</Header>
+      <Photo> src={props.data.url} alt='Daily Nasa'</Photo>
       <Date>{props.data.date}</Date>
       <Title>{props.data.title}</Title>
-      <Photo> src={props.data.url} alt='Daily Nasa'</Photo>
-      <Copyright>{props.data.copyright}</Copyright>
       <Explanation>{props.data.explanation}</Explanation>
+      <Copyright>©{props.data.copyright}</Copyright>
     </Container>
   )
 }
