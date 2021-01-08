@@ -73,7 +73,7 @@ export const PageContainer2 = styled.div`
 
 display: flex;
 align-items: center;
-padding: 10px;
+padding: 1px;
 width: 50%;
 margin-top: 10px;
 justify-content: center;
@@ -98,13 +98,14 @@ text-align: center;
 
 export const ButtonStyle = styled.button`
 
-margin-left: 60px;
+
 color: white;
 font-weight: bold;
 background-color: #a400ffb3;
 padding: 10px;
-margin-top: 50px;
-margin-bottom: 50px;
+margin: 50px;
+margin-top: 30px;
+margin-bottom: 30px;
 font-family: sans-serif;
 border-radius: 10px;
 &:hover {
