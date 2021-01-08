@@ -1,59 +1,25 @@
-.App {
-  text-align: center;
-  /* background-color: black; */
-  background-image: url('./trans-bg.png');
- 
+import React from "react"
+import styled from "styled-components"
+import "./button.css"
+
+const Button = props => {
+  return (
+    <>
+        <ButtonWrapper
+          aria-label={props.label}
+          className="anchor"
+          as="a"
+          href={props.href}
+        >Button Text
+        </ButtonWrapper>
+    </>
+  )
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.card {
-  padding: 20px;
-  margin-top: 50vh;
-  margin-left: auto;
-  margin-right: auto;
-  width: 85%;
-  /* margin-bottom: 50px; */
-}
-
-.button {
+const ButtonWrapper = styled.button`
   position: relative;
   display: inline-block;
   padding: 0 20px;
-  margin-top: 20px;
   height: 50px;
   text-align: center;
   line-height: 50px;
@@ -68,10 +34,12 @@
   border-radius: 30px;
   border: none;
   z-index: 1;
+  margin: 20px;
 
   &:hover {
     cursor: pointer;
     animation: animate 8s linear infinite;
+    text-decoration: none;
 
     &::before {
       filter: blur(20px);
@@ -93,7 +61,6 @@
     border-radius: 40px;
     opacity: 0;
     transition: 0.5s;
-    overflow: visible;
   }
 
   @keyframes animate {
@@ -104,6 +71,6 @@
       background-position: 400%;
     }
   }
+`
 
-
-}
+export default Button
