@@ -11,7 +11,15 @@
     * request your data inside the useEffect, set to an empty array, so you are not making a infinite amount of API calls.
 5. .get --> fetches the data, .then --> handles the success promise, .catch --> error handling
 6. After you complete the API call in the function, return the formatted JSX holding the data
-7.
+                            ///IN THE BEGINNING...///
+7. To create a BRAND spankin' new React App from scratch - npx create-react-app my-app
+    *This will create essentially a boilerplate of json files/dependencies to start off of. 
+    Here is the order(typed into your terminal): 
+          npx create-react-app 'my-app-name'
+          npm i (or the longhand - npm install) - to get your dependencies set up
+          npm install axios - if axios is not installed
+          npm start - to get it live on the server
+          
 */ 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -19,6 +27,8 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import Photo from './components/Photo.js';
 import axios from 'axios';
+
+
 
 
 
