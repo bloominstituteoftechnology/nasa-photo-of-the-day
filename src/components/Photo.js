@@ -1,5 +1,9 @@
 import React from "react";
-//import ReactDOM from "react-dom";
+
+import {
+    Card, CardImg, CardText, CardBody,
+    CardTitle, CardSubtitle, Button
+  } from 'reactstrap';
 
 //ReactDOM.render(<App />, document.getElementById("root")); //This is on the home index page
 
@@ -11,20 +15,21 @@ export default function Photo(props) {//This props becomes the 'dark-blue' data 
     //console.log("Title:", data.title);
 //To be sure we are receiving our data
    return (
-    <div className="photo-card">
+       
+    <Card className="photo-card">
         <div className="photo"> 
-            <img id="thing-of-the-day" src={nasaData.url} alt="NASA Pic Of The Day"></img>
+            <CardImg id="thing-of-the-day" src={nasaData.url} alt="NASA Pic Of The Day"/>
         </div>
         
         <div className="photo-info">
-          <div>
-            <h2>{nasaData.title}</h2>
+          <CardBody>
+            <CardTitle tag='h2'>{nasaData.title}</CardTitle>
             <p>By: {nasaData.copyright}</p>
             <p>Date: {nasaData.date}</p>
             <p>{nasaData.explanation}</p>
             
-          </div>
+          </CardBody>
         </div>
-    </div>
+    </Card>
   );
 } 

@@ -19,7 +19,14 @@
           npm i (or the longhand - npm install) - to get your dependencies set up
           npm install axios - if axios is not installed
           npm start - to get it live on the server
-          
+
+8. The JSX - this is the structure/content of the page that renders in the return. 
+       **(How do html, and css pages all work into all of this then, if we can write in the JS and CSS with JSX and premade components like ReactStrap? )
+       **(Can we review how to structure JSX/ do you have a good resource for referencing JSX format?) 
+
+9. Now you need to make it b-e-a-utiful. You can use reactstrap for some template component styles. 
+10. reactstrap - read the documentation, make sure to import reactstrap & the components you are using, destructured(a.k.a. inside some curlies).
+11. 
 */ 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -28,7 +35,9 @@ import "./App.css";
 import Photo from './components/Photo.js';
 import axios from 'axios';
 
+import { Container, Row, Col } from 'reactstrap';
 
+import styled from 'styled-components';
 
 
 
@@ -53,18 +62,24 @@ function App() {
   console.log("Data: ", data);
 
   return (
-    <div className="App">
-      
-        <Photo nasaData={data}/>
-      
-      
-     
-        
-       
-    </div>
-
+  <Container>
+    <Row>
+      <Col sm='12' md='6' lg='3'>
+        <PhotoContainer className="App">
+          
+            <Photo nasaData={data}/>
+          
+        </PhotoContainer>
+      </Col>
+    </Row>
+  </Container>
 
   );
 }
-
+//Added in the reactstrap here in the overall App.js so it applies to the entire app
 export default App;
+
+const PhotoContainer = styled.div`
+  background-color: red;
+`;
+
