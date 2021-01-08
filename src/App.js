@@ -7,6 +7,8 @@ import Title from "./components/Title"
 import Image from "./components/Image"
 import Copyright from "./components/Copyright"
 import Explanation from "./components/Explanation"
+import { Alert, Button } from 'reactstrap'
+import styled from 'styled-components'
 
 
 
@@ -15,8 +17,7 @@ function App() {
   const [data, setData] = useState({})
   
   
-  // !!!!! I RAN OUT OF REQUESTS WHILE DOING THE PROJECT!
-  // !!!!! I WILL FIX THIS AND POST THE REQUEST WHEN IM ABLE TO REQUEST AGAIN!
+ 
   useEffect (() => {
     axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
      .then(response => {
@@ -25,21 +26,30 @@ function App() {
      .catch(err => console.log(err))
   }, [])
 
-  console.log(data, "HERE")
+
   const {copyright, date, explanation, hdurl, title, url} = data;
   
  
 
   return (
-    <div className="App">
-      <h1>Welcome to NASA's Astronomy Picture of the Day for: {date}</h1>
+    <Body className="App"> 
+      
+    <h1 style={{marginBottom: "3rem"}}>NASA's Astronomy Picture of the Day for: {date}</h1>
     <Title title = {title} />
+    <Copyright copyright = {copyright} />
     {/* <Date date = {date} /> */}
     <Image imageURL = {url} />
     <Explanation explanation = {explanation} />
-    <Copyright copyright = {copyright} />
-    </div>
+    
+
+    </Body>
   );
 }
+
+const Body = styled.div`
+  background-color: black;
+  color: white;
+`
+
 
 export default App;

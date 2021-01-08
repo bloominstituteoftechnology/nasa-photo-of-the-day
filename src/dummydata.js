@@ -7,6 +7,6 @@ const dummyData =
         media_type:"image",
         service_version:"v1",
         title:"The Small Cloud of Magellan",
-        url:"https://apod.nasa.gov/apod/image/2101/SMC_Mtanous_960.jpg"}
+        url:"https://apod.nasa.gov/apod/image/2101/Tse_2020_400mm_dmwa-rot.jpg"}
 
 export default dummyData;

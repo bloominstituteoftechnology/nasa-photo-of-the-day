@@ -6,7 +6,7 @@ const Image = props => {
     console.log(`"${imageURL}"`)
 
     return (
-        <div>
+        <div style={{marginBottom : "1rem"}}>
             <img src={imageURL} alt={"Space"}/>
         </div>
     )
