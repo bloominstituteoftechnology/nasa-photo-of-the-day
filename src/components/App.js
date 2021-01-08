@@ -17,9 +17,9 @@ function App() {
   }, [])
 
   return (
-    <App className="App">
-        <Photo data={data}/>
-    </App>
+    <div className="App">
+       <Photo data={data}/>
+    </div>
   );
 }
 
