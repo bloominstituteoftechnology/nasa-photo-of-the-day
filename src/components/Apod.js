@@ -2,10 +2,19 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Copyright from "./Copyright";
+import Explanation from "./Explanation";
+import {
+  Card,
+  CardText,
+  CardBody,
+  CardLink,
+  CardTitle,
+  CardSubtitle,
+} from "reactstrap";
 
 export default function Apod() {
   const [apod, setApod] = useState([]);
-  const { title, date, hdurl, explanation } = apod;
+  const { title, date, hdurl } = apod;
 
   useEffect(() => {
     axios
@@ -16,19 +25,23 @@ export default function Apod() {
 
   return (
     <div>
-      <h1>{title}</h1>
-      <h2>PICTURE OF THE DAY: {date}</h2>
-      <img
-        src={hdurl}
-        alt="NASA Astronomy of the Day"
-        width="90%"
-        height="600"
-      />
-      <div>
-        <h3>Explanation</h3>
-        <p>{explanation}</p>
-        <Copyright data={apod} />
-      </div>
+      <Card>
+        <CardBody>
+          <CardTitle tag="h5" style={{ textTransform: "uppercase" }}>
+            {title}
+          </CardTitle>
+          <CardSubtitle tag="h6" className="mb-2 text-muted">
+            PICTURE OF THE DAY: {date}
+          </CardSubtitle>
+        </CardBody>
+        <img width="100%" src={hdurl} alt="NASA Astronomy of the Day" />
+        <CardBody>
+          <CardText>
+            <Explanation data={apod} />
+          </CardText>
+          <Copyright data={apod} />
+        </CardBody>
+      </Card>
     </div>
   );
 }
