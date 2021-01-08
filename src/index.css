@@ -1,6 +1,6 @@
-body {
+/*body {
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -9,19 +9,19 @@ body {
   
   
   
-}
+}*/
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-h1 {
+/*h1 {
   color: blue;
 
-}
+}*/
 
-h3 {
+/*h3 {
   color: white;
   width: 776px;
   border: 2px solid black;
@@ -30,27 +30,27 @@ h3 {
   margin-top: 0px;
   background-color: black;
 
-}
+}*/
 
-p {
+/*p {
  font-weight: bold;
  font-family: sans-serif;
  color: black;
  width: 62.33%;
  text-align: justify;
-}
+}*/
 
-img {
+/*img {
   height: 500px;
-  width: 800px;
+  width: 50%;
 
-}
+}*/
 
-.photo-info {
+/*.photo-info {
   
   display: flex;
   flex-direction: column;
   align-items: center;
   
   
-}
+}*/
