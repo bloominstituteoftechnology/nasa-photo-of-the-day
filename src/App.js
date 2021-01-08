@@ -21,9 +21,9 @@ import ShuttlePatch from "./resources/shuttle-patch.jpg";
 import Skylab from "./resources/skylab.jpg";
 
 function App() {
- // const [astro, setAstro] = useState(astronaut);
- // const [nasa, setNasa] = useState(nasalogo);
- // const [galaxy, setGalaxy] = useState(nebula);
+  // const [astro, setAstro] = useState(astronaut);
+  // const [nasa, setNasa] = useState(nasalogo);
+  // const [galaxy, setGalaxy] = useState(nebula);
   const [data, setData] = useState({});
 
   //console.log(data);
@@ -48,7 +48,7 @@ function App() {
         alt="nebula sky"
       />
       <Container className=" container ">
-        <Jumbotron className="justify-content-md-center jumbotron">
+        <div className="justify-content-md-center jumbotron">
           <div className="App">
             <h1
               className="display-4"
@@ -149,13 +149,13 @@ function App() {
               style={{ height: "10%" }}
             />
           </div>
-        </Jumbotron>
+        </div>
         <div style={{ textAlign: "center" }}>
           <h4>Visit our other sites</h4>
           <button className="glow-on-hover">
             <a
               href="https://apod.nasa.gov/apod/archivepix.html"
-              style={{ color: "white", textDecoration: "none"  }}
+              style={{ color: "white", textDecoration: "none" }}
             >
               Archive
             </a>
