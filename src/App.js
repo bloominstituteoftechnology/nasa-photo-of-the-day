@@ -37,7 +37,7 @@ import axios from 'axios';
 
 import { Container, Row, Col } from 'reactstrap';
 
-import styled from 'styled-components';
+//import styled from 'styled-components';
 
 
 
@@ -65,11 +65,11 @@ function App() {
   <Container>
     <Row>
       <Col sm='12' md='6' lg='3'>
-        <PhotoContainer className="App">
+        <div className="App">
           
             <Photo nasaData={data}/>
           
-        </PhotoContainer>
+        </div>
       </Col>
     </Row>
   </Container>
@@ -79,7 +79,7 @@ function App() {
 //Added in the reactstrap here in the overall App.js so it applies to the entire app
 export default App;
 
-const PhotoContainer = styled.div`
+/*const PhotoContainer = styled.div`
   background-color: red;
-`;
+`;*///this is with the styled-components, not reactstrap
 
