@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import "../App.css";
-import Photo from './Photo'
+import Content from './Content'
 import axios from 'axios'
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-       <Photo data={data}/>
+       <Content data={data}/>
     </div>
   );
 }
