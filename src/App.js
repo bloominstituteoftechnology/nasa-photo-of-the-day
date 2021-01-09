@@ -65,7 +65,10 @@ function App() {
                 paddingBottom: "15%",
               }}
             />
-            <hr style={{ width: "50%" }}></hr>
+            <h3>
+              Check back daily to see the mysteries of the cosmos courtesy of
+              NASA
+            </h3>
             <div className="parallax">
               <ParallaxProvider>
                 <img
