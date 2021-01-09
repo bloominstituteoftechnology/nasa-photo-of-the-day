@@ -26,13 +26,13 @@ export default function PhotoBooth(props) {
       </h3>
 
       <p>{data.explanation}</p>
-      <div style={{ marginTop: "2rem" }}>
-        <button className="glow-on-hover" style={{ marginRight: "1rem" }}>
+      <div className= "d-flex justify-content-around" style={{ marginTop: "2rem"}}>
+        <button className="glow-on-hover">
           <a href="https://codepen.io/artofmayhem" style={{ color: "white", textDecoration: "none" }}>
             Yesterday's Photo
           </a>
         </button>
-        <button type="button" className="glow-on-hover">
+        <button type="button" className="glow-on-hover col-example">
           <a href="https://codepen.io/artofmayhem" style={{ color: "white" , textDecoration: "none"}}>
             Tomorrow's Photo
           </a>

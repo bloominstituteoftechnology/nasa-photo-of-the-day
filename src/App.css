@@ -42,7 +42,7 @@ hr {
   background-color: #aaa;
   padding-bottom: 5rem;
   padding-top: 1rem;
-  opacity: 0.67;
+  opacity: 0.8;
   color: black;
 }
 
@@ -50,7 +50,7 @@ hr {
   background-color: #fff;
   padding-top: 3rem;
   padding-bottom: 0.2rem;
-  height: 5200px;
+  height: 5500px;
 }
 
 .button-style {

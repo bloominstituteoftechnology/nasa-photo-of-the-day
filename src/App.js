@@ -20,9 +20,9 @@ import ShuttlePatch from "./resources/shuttle-patch.jpg";
 import Skylab from "./resources/skylab.jpg";
 
 function App() {
- // const [astro, setAstro] = useState(astronaut);
- // const [nasa, setNasa] = useState(nasalogo);
- // const [galaxy, setGalaxy] = useState(nebula);
+  // const [astro, setAstro] = useState(astronaut);
+  // const [nasa, setNasa] = useState(nasalogo);
+  // const [galaxy, setGalaxy] = useState(nebula);
   const [data, setData] = useState({});
 
   //console.log(data);
@@ -154,7 +154,7 @@ function App() {
           <button className="glow-on-hover">
             <a
               href="https://apod.nasa.gov/apod/archivepix.html"
-              style={{ color: "white", textDecoration: "none"  }}
+              style={{ color: "white", textDecoration: "none" }}
             >
               Archive
             </a>
