@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 //bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
-import Jumbotron from "react-bootstrap/JumboTron";
 import Container from "react-bootstrap/Container";
 import { ParallaxProvider } from "react-scroll-parallax";
 //axios
@@ -63,10 +62,14 @@ function App() {
               style={{
                 width: "50rem",
                 paddingTop: "2rem",
-                paddingBottom: "15%",
+                paddingBottom: "10%",
               }}
             />
-            <hr style={{ width: "50%" }}></hr>
+            <h3>
+              Check back daily to see the mysteries of the cosmos courtesy of
+              NASA
+            </h3>
+
             <div className="parallax">
               <ParallaxProvider>
                 <img
