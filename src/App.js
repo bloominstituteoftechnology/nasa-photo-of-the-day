@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 //bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
-import Jumbotron from "react-bootstrap/JumboTron";
 import Container from "react-bootstrap/Container";
 import { ParallaxProvider } from "react-scroll-parallax";
 //axios
@@ -48,7 +47,7 @@ function App() {
         alt="nebula sky"
       />
       <Container className=" container ">
-        <Jumbotron className="justify-content-md-center jumbotron">
+        <div className="justify-content-md-center jumbotron">
           <div className="App">
             <h1
               className="display-4"
@@ -149,7 +148,7 @@ function App() {
               style={{ height: "10%" }}
             />
           </div>
-        </Jumbotron>
+        </div>
         <div style={{ textAlign: "center" }}>
           <h4>Visit our other sites</h4>
           <button className="glow-on-hover">
