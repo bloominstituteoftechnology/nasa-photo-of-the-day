@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import "./App.css";
-import Title from "./Title";
-import Photo from "./Photo";
-import Caption from "./Caption";
+import logo from "./logo/NASA_logo.svg"
+import InfoCard from "./InfoCard"
 import styled from 'styled-components';
+import { format } from 'date-fns'
+import DatePicker from 'react-datepicker'
+import 'react-datepicker/dist/react-datepicker.css'
+
+const URL = 'https://api.nasa.gov/planetary/apod?api_key=cpIVh1n5cT7gdxurNPJfIw7fYEakx1I89h1UEoYT';
+
 
 const Body = styled.div`
     background-color: #000;
@@ -21,23 +27,44 @@ padding: 2rem 0.1rem;
 `;
 
 function App() {
+  
+  const [state,setState] = useState({});
+  const [startDate, setStartDate] = useState(format(new Date(), 'yyyy-MM-dd'));
+  
+  useEffect( () => {
+    axios.get(`${URL}&date=${startDate}`)
+        .then( res => {
+            console.log(res.data);
+            setState(res.data)   
+        })
+        .catch(err => err);
+            },[startDate])
   return (
     <Body className="App">
-      <img className ='logo' src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" alt='nasa logo'></img>
-      {/* <img src='../src/logo/NASA_logo.scg
-    '></img> */}
+      <img src={logo} alt="official nasa logo"></img>
       <Header>Astronomy Photo of the Day</Header>
-      
-      <Title />
-      <Photo />
-      <Caption />
+      <InfoCard
+     title = {state.title}
+     date = {  <DatePicker
+      selected={new Date()}
+      onChange= { 
+        date => { const newDate = format( date , 'yyyy-MM-dd')
+        setStartDate(newDate)} }
+      label = " Date Picker"
+      maxDate = {new Date()}
+      value = {startDate}
+      />}
+     
+     photo = {state.url}
+     caption = {state.explanation}
+     
+     />
+   
 
-      {/* <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p> */}
+    
     </Body>
   );
 }
 
 export default App;
+// console.log(getDate)
