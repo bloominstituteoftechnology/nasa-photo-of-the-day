@@ -16,7 +16,7 @@ export default function PhotoBooth(props) {
       <img
         className="mx-auto d-block img-fluid w-100"
         src={data.url}
-        alt="NASA Shot"
+        alt="Nasa"
       ></img>
       <h3
         className="display-5"

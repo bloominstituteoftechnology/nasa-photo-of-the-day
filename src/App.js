@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 //bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import Container from "react-bootstrap/Container";
 import { ParallaxProvider } from "react-scroll-parallax";
 //axios
