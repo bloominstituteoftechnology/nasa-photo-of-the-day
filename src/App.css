@@ -36,3 +36,30 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  margin: 0;
+  background-color: black;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+Nav {
+  background-color: lightblue;
+}
+
+h1 {
+  color: white;
+}
+h2 {
+  color: white
+}
+
+p {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  color: white;
+}
