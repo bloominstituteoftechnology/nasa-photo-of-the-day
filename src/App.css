@@ -38,65 +38,28 @@
 }
 
 body {
-  height: 100vh;
-  overflow: hidden;
-  background: radial-gradient(circle at bottom, navy 0, black 100%);
-  height: 100vh;
-  overflow: hidden;
+  margin: 0;
+  background-color: black;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.space {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  background: center / 200px 200px round;
-  bottom: 0;
-  left: 0;
-  position: ;
-  right: 0;
-  top: 0;
-}
-
-.stars1 {
-  background-image:
-    radial-gradient(
-      1px 1px at 25px 5px, 
-      white, 
-      rgba(255, 255, 255, 0)
-    ),
-    radial-gradient(
-      1px 1px at 50px 25px, 
-      white, 
-      rgba(255, 255, 255, 0)
-    ),
-    radial-gradient(
-      1px 1px at 125px 20px, 
-      white, 
-      rgba(255, 255, 255, 0)
-    ),
-    radial-gradient(
-      1.5px 1.5px at 50px 75px, 
-      white, 
-      rgba(255, 255, 255, 0)
-    ),
-    radial-gradient(
-      2px 2px at 15px 125px, 
-      white, 
-      rgba(255, 255, 255, 0)
-    ),
-    radial-gradient(
-      2.5px 2.5px at 110px 80px, 
-      white, 
-      rgba(255, 255, 255, 0)
-    );
+Nav {
+  background-color: lightblue;
 }
 
 h1 {
   color: white;
-  background-color: black;
-  margin-top: auto;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+}
+h2 {
+  color: white
+}
+
+p {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  color: white;
 }
