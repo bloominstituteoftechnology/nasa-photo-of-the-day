@@ -1,16 +1,17 @@
 import { render } from '@testing-library/react'
-import React from 'react'
+import React, {useState, useEffect} from 'react'
+import axios from 'axios'
 
 
-
-
-function Photo (data) {
-    const[nasa, SetNasa] = useState('')
+function Photo () {
+    const[nasa, setNasa] = useState('')
     useEffect(() => {
-    axios.get('https://api.nasa.gov/#apod/${data}')
-    .then(res => SetNasa(res.data)) 
+    axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2012-03-14')
+    .then(res => {
+        console.log(res.data)
+        setNasa(res.data)}) 
     .catch(err =>console.log(err))
-    SetNasa(data)
+    
     
     }, [])
 
@@ -20,7 +21,7 @@ function Photo (data) {
     return (
        <div className='Photo'>
        <h1>Beautiful space</h1>
-        <img src ={nasa} alt= 'space pic'/>
+        <img src ={nasa.url} alt= 'space pic'/>
 
        </div>
     )

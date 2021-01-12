@@ -16,7 +16,7 @@ function App() {
       <p>
         API from Americas space station <span role="img" aria-label='go!'>🚀</span>!
       </p>
-        <Photo nasaPic={Photo}/>
+        <Photo/>
        
       </div>
   );
