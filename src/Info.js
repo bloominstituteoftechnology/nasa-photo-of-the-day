@@ -6,13 +6,14 @@ import styled from 'styled-components'
 
 
 
-function Info(words) {
 
 
-    return(
-<h1> These are pictures from the beautiful Nasa space station </h1>
-    )
-}
+
+
+const Info = styled.h1`
+position: relative;
+    top: 25%;
+`
 
 
 export default Info

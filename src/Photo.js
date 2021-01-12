@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react'
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
-
+import styled from 'styled-components'
 
 function Photo () {
     const[nasa, setNasa] = useState('')
@@ -11,6 +11,8 @@ function Photo () {
         console.log(res.data)
         setNasa(res.data)}) 
     .catch(err =>console.log(err))
+
+    
     
     
     }, [])
@@ -20,11 +22,17 @@ function Photo () {
 
     return (
        <div className='Photo'>
-       <h1>Beautiful space</h1>
-        <img src ={nasa.url} alt= 'space pic'/>
+       <h1>A Photo of Mercury in Gatorade</h1>
+        {nasa.url ? <Img src ={nasa.url} alt= 'space pic'/>: <p>..loading</p>}
 
        </div>
     )
 }
+
+const Img = styled.img`
+width: 500px;
+margin: 40px;
+
+`
 
 export default Photo 
