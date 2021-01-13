@@ -11,3 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* for mobile - with Media Pixel of up to 500px display column*/
+@media only screen and (max-width: 600px){
+  Card .app{
+    max-width:100px;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+  }
+  .load{
+    flex-direction: column;
+  }
+  .getimage{
+    flex-direction: column;
+  }
+  }
