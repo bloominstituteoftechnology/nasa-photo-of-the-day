@@ -20,7 +20,6 @@ function App() {
 
   return (
     <div className="App">
-      { console.log(data) }
       <Image src={data.hdurl} title={data.title} />
       <Description explanation={data.explanation} />
       <Date date={data.date} />
