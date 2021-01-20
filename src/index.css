@@ -1,13 +1,68 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: whitesmoke;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* All my useless old CSS lol */
+
+/* 
+.App {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 50%;
+  height: auto;
+  margin: 5% auto;
+  background: url('./media/spaceBG.jpg') no-repeat powderblue;
+  background-size: 100% 100%;
+  box-shadow: 5px 5px 7px 8px lightgray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  object-fit: cover;
+}
+
+.container {
+  width: 90%;
+  margin-top: 20px;
+  background-color: aliceblue;
+  border-radius: 10px;
+  border: 5px solid black;
+  width: 80%;
+}
+
+.image-container {
+  height: 40rem;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  padding: 7px;
+}
+
+.text-content {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.text-content h2 {
+  font-size: 3.5rem;
+}
+
+.text-content p {
+  padding: 20px;
+}
+
+.copyright {
+  padding-bottom: 10px;
+} */
