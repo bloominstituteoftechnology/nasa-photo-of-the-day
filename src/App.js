@@ -15,6 +15,16 @@ const Body = styled.div`
     background-color: #000;
     padding: 1rem;
     color: #fff;
+    .react-datepicker-wrapper {
+      input {
+        width:100%;
+        background-color:#000;
+        color:#fff;
+        padding: 0.5rem 0;
+        text-align:center;
+        border: 0.1rem solid #FC3D21;
+      }
+    }
 `;
 
 const Header = styled.h1`
@@ -45,21 +55,23 @@ function App() {
       <Header>Astronomy Photo of the Day</Header>
       <InfoCard
      title = {state.title}
-     date = {  <DatePicker
-      selected={new Date()}
-      onChange= { 
-        date => { const newDate = format( date , 'yyyy-MM-dd')
-        setStartDate(newDate)} }
-      label = " Date Picker"
-      maxDate = {new Date()}
-      value = {startDate}
+
+     date = { 
+     <DatePicker
+        className = "date-picker"
+        selected={new Date()}
+        onChange= { 
+            date => { const newDate = format( date , 'yyyy-MM-dd')
+            setStartDate(newDate)} }
+        label = " Date Picker"
+        maxDate = {new Date()}
+        value = {startDate}
       />}
      
      photo = {state.url}
      caption = {state.explanation}
      
      />
-   
 
     
     </Body>
