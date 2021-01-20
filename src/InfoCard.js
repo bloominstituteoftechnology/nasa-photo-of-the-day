@@ -10,16 +10,16 @@ padding-bottom: 1rem;
 `
 
 const Img = styled.img`
-width: 30rem;
-height: 30rem;
+width: 90%;
 border: 0.5rem solid #fff;
-object-fit: cover;
 margin: 3rem auto;
 `;
 
 
 const Info = styled.p`
-    margin: auto 3rem;
+    width:90%;
+    height:auto;
+    margin: 1rem auto;
     text-align: justify;
     text-justify: auto;
 `
@@ -28,12 +28,12 @@ const InfoCard = (props) => {
 
     if (!props.photo) return <h3>Loading...</h3>
     return (
-        <div>
+        <section className = 'infor-card'>
           <APODTitle>{props.title}</APODTitle>
             <div>{props.date}</div>
             <Img src = {props.photo} alt = 'daily astronomy'></Img>
             <Info>{props.caption}</Info>
-        </div>
+        </section>
     )
 }
 
