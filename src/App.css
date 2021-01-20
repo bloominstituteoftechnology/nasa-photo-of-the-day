@@ -1,17 +1,40 @@
+body{
+  min-width: 375px;
+}
 .App {
   text-align: center;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.MuiInputBase-input {
+  font: inherit;
+  color: white !important;
+  width: 100%;
+  border: 0;
+  height: 1.1876em;
+  margin: 0;
+  display: block;
+  padding: 6px 0 7px;
+  min-width: 0;
+  background: none;
+  box-sizing: content-box;
+  animation-name: mui-auto-fill-cancel;
+  letter-spacing: inherit;
+  animation-duration: 10ms;
+  -webkit-tap-highlight-color: transparent;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.MuiFormLabel-root {
+  color:white !important;
+  padding: 0;
+  font-size: 1rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.00938em;
 }
+
 
 .App-header {
   background-color: #282c34;
@@ -24,15 +47,3 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
