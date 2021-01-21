@@ -1,9 +1,14 @@
 import React from "react";
+import styled from "styled-components";
 
-export default function () {
+const StyledFooter = styled.div`
+  color: white;
+`;
+
+export default function Footer() {
   return (
-    <div>
+    <StyledFooter>
       <p>Copyright 2021 Naj Oladuwa</p>
-    </div>
+    </StyledFooter>
   );
 }

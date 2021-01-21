@@ -5,10 +5,17 @@ import { BASE_URL, API_KEY } from "./constants/index";
 import Header from "./Header";
 import Footer from "./Footer";
 import Photo from "./NASApod";
+import NavBar from "./NavBar";
+import RoverCarousel from "./RoverCarousel";
+import styled from "styled-components";
+import { getSuggestedQuery } from "@testing-library/react";
+
+const StyledWrapper = styled.div``;
 
 function App() {
   const [nasaData, setNasaData] = useState({});
-  console.log(nasaData);
+
+  // console.log(nasaData);
   useEffect(() => {
     const fetchPhoto = () => {
       axios
@@ -26,11 +33,13 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <StyledWrapper className="App">
+      <NavBar />
       <Header nasaData={nasaData} />
       <Photo nasaData={nasaData} />
+      <RoverCarousel />
       <Footer />
-    </div>
+    </StyledWrapper>
   );
 }
 
