@@ -44,7 +44,7 @@ This project was put together using create-react-app (CRA). You will not need to
 - [ ] Plan which components will hold state, what data each needs from props (if any), and where you will be making your data fetch.
 - [ ] Now it's time to jump into the code!
 
-**File structure**
+**File structure** 
 
 - [ ] Take a look at your planned components. Create the folders and files you need for each component.
 - [ ] Leave most of them blank for now - you need to get your data from the API before you can really get these built.
