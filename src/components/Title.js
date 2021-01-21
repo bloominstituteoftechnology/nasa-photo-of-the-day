@@ -1,2 +1,16 @@
 import React from "react"
-import axios from "axios"
+
+export default function Title(props){
+
+    const {title} = props;
+
+    return (
+
+        <h1>{title}</h1>
+
+    )
+
+
+
+
+}

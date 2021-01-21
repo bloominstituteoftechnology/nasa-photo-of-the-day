@@ -1,8 +1,9 @@
 import React, {useState, useEffect}  from "react"
-
-import Photo from "./Photo"
-import Title from "./Title"
+import Image from "./Image"
 import Summary from "./Summary"
+import Title from "./Title"
+
+
 import axios from "axios"
 
 export default function Apod ( props ){
@@ -24,19 +25,26 @@ export default function Apod ( props ){
         fetchData()
     },[])
 
-    //const {date} = props
 
-    //const [details, setDetails] = useState({})
+
 
     return (
         <div className='Apod'>
 
-        {/* <Title/>
-        <Photos/>
-        <Summary/> */}
-        <h1>{data.title}</h1>
+
+
+        <Title title={data.title}/>
+        <Image img={data.url} alt={data.title}/>
+        <Summary sum={data.explanation}/>
+
+
+
+        {/* <h1>{data.title}</h1>
         <img src = {data.url}/>
-        <p>{data.explanation}</p>
+        <p>{data.explanation}</p> */}
+
+
+        
         </div>
 
 

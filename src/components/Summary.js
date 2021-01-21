@@ -1,24 +1,16 @@
-import React, {useState} from "react"
-import axios from "axios"
-import API from "./API"
+import React from "react"
 
+export default function Summary(props){
 
-const Summary = (props) => {
-
-
-    const { text }  = props;
+    const {sum} = props;
 
     return (
 
-        <div className = 'Summary' >
-            {props.data.summary}
-        </div>
-
+        <p>{sum}</p>
 
     )
 
 
 
-}
 
-export default Summary
+}

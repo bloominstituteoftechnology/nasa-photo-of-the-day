@@ -1,14 +1,11 @@
-import React, {useState} from "react";
+import React from "react";
 import "../App.css";
 import Apod from "./Apod"
-import axios from "axios"
 
 
 
-// let today = new Date();
-// let day = today.getDay()
-// let month = today.getMonth() + 1.padStart(2,'0')
-// let year = today.getYear
+
+
 
 
 
