@@ -5,6 +5,7 @@ import { URL, API_KEY } from './App';
 export default function GetDescription() {
 
     const [details, setDetails] = useState('');
+    const [likes, setLikes] = useState(0);
 
     useEffect(() => {
         axios
@@ -15,7 +16,12 @@ export default function GetDescription() {
             .catch((err) => console.log(err));
     }, []);
 
+    
     return (
-        <p>{details}</p>
+        <>
+            <p>{likes}</p>
+            <button onClick={e => setLikes(likes + 1)}>Like</button>
+            <p>{details}</p>
+        </>
     )
 }
