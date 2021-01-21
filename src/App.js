@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import Navbar from "./Componets/Navbar";
 import TopLogo from "./Componets/TopLogo";
+import AboveImage from "./Componets/aboveImage";
 import Imagefile from "./Componets/Imagefile";
 import ImageText from "./Componets/ImageText";
 import axios from "axios";
 import { BASE_URL, API_KEY } from "./constants/index";
+import styled from "styled-components";
 
 function App() {
 	const [nasaData, setNasaData] = useState({});
@@ -17,24 +19,21 @@ function App() {
 			})
 			.catch((err) => console.log(err));
 	}, []);
-	console.log(nasaData);
 	return (
-		<div className="App">
+		<AppDiv>
 			<TopLogo />
 			<Navbar />
-			<h1>{nasaData.title}</h1>
-
-			<p>
-				The Nasa Photo of the Day for Today {nasaData.date} is ...{" "}
-				<span role="img" aria-label="go!">
-					🚀
-				</span>
-				!
-			</p>
+			<AboveImage date={nasaData.date} title={nasaData.title} />
 			<Imagefile imageurl={nasaData.url} />
 			<ImageText imagetext={nasaData.explanation} />
-		</div>
+		</AppDiv>
 	);
 }
+const AppDiv = styled.div`
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	background-color: black;
+`;
 
 export default App;
