@@ -1,13 +1,15 @@
 import React from "react";
+import ImageDisplay from './components/ImageDisplay'
 import "./App.css";
+import { useState } from "react";
 
 function App() {
   return (
     <div className="App">
       <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
+        <span role="img" aria-label='go!'>🚀🚀🚀🚀🚀🚀🚀</span>
       </p>
+      <ImageDisplay />
     </div>
   );
 }
