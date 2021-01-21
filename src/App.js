@@ -6,7 +6,7 @@ import { BASE_URL } from './Url/baseUrl'
 import { API_KEY } from './Url/baseUrl'
 import Display from './Components/display'
 function App() {
-  const [nasaData, setNasaData] = useState(null);
+  const [nasaData, setNasaData] = useState({});
 
 
   useEffect(() => {
@@ -21,7 +21,7 @@ function App() {
   
   return (
     <div className="App">
-      <Display date={nasaData.date}/>
+      <Display date={nasaData.date} url={nasaData.url}/>
     </div>
   );
 }

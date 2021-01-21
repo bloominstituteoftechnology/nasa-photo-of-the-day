@@ -3,7 +3,13 @@ import React from 'react';
 const Display = props => {
     const {date, title, url, explain} = props
 
-    return <p>{date}</p>
+    return (
+        <div>
+    <p>{date}</p>
+    <img src={url}/>
+    
+    </div>
+    )
 
 }
 // function Display({nasaData}) {
