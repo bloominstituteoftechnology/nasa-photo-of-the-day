@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+body {
+  background-image: url("./Images/night.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
