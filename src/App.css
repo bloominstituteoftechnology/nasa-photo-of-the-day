@@ -7,6 +7,7 @@
   pointer-events: none;
 }
 
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -35,4 +36,21 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* borders for fun */
+.header-container {
+  border: solid 2px black;
+  background-color: rgb(77, 85, 165);
+}
+.header-item {
+  border: solid 2px orange;
+}
+.display-container {
+  border: solid 2px green;
+  margin: auto 10%;
+}
+.display-item {
+  border: solid 2px purple;
+  
 }

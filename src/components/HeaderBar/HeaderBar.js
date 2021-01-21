@@ -7,8 +7,8 @@ const HeaderBar = (props) => {
 
     return(
         
-        <div className="header-bar">
-            <div> {data.title} </div>
+        <div className="header-container">
+            <div className="header-item"> {data.title} </div>
             <div> Astronomy Picture of the Day</div>
             <div> {data.date} </div>
         </div>
