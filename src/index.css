@@ -5,6 +5,8 @@ body {
     -moz-osx-font-smoothing: grayscale;
     background: linear-gradient(95deg, #2e003b, #0c0079, #000000);
     color: rgb(207, 207, 207);
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 code {
