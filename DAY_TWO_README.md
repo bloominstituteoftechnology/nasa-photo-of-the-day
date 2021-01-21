@@ -24,6 +24,8 @@ This homework is a continuation of the work you have done previously.
 - [x] Refactor your project using a component library that was covered in class (Reactstrap or styled-components).
 - [x] Implement and use at least a few styled components to beautify your project.
 
+- [x] Style your app using styled-components.
+
 ### Task 3: Stretch Problems
 
 Do not attempt stretch problems until MVP has been reached and a final commit has been made.
