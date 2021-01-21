@@ -39,7 +39,7 @@ This project was put together using create-react-app (CRA). You will not need to
 ### Task 2: MVP
 
 **Planning**
-
+Done
 - [x] If you want, this is the time to make a simple design spec (look up ["simple wireframes"](https://www.google.com/search?q=simple+wireframes) to find resources & examples). **A pen & paper sketch (or outline) is often the fastest way to start your planning.**
 - [x] Once you have a design plan in mind, break down the designs into individual components.
 - [x] Plan which components will hold state, what data each needs from props (if any), and where you will be making your data fetch.
