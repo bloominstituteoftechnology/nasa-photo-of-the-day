@@ -7,7 +7,7 @@ import { BASE_URL, API_KEY } from "./constants/index";
 
 function App() {
 
-const [data, setData] = useState("test")
+const [data, setData] = useState([])
 
   useEffect(() => {
     axios

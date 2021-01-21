@@ -10,7 +10,7 @@ const HeaderBar = (props) => {
         <div className="header-bar">
             <div> {data.title} </div>
             <div> Astronomy Picture of the Day</div>
-            <div>  </div>
+            <div> {data.date} </div>
         </div>
     );
     

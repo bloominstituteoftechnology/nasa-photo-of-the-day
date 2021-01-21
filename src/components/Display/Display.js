@@ -8,9 +8,9 @@ const Display = (props) => {
     return(
         <div className="container">
             <div>
-                <img alt="picture of the day"></img>
+                <img alt="picture of the day" src={data.url}></img>
             </div>
-            <div> Explanation </div>
+            <div> {data.explanation} </div>
         </div>
     );
 };
