@@ -21,7 +21,7 @@ function App() {
   
   return (
     <div className="App">
-      <Display date={nasaData.date} url={nasaData.url}/>
+      <Display date={nasaData.date} url={nasaData.url} title={nasaData.title} explain={nasaData.explanation}/>
     </div>
   );
 }
