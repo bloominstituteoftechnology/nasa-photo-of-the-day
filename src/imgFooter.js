@@ -3,8 +3,9 @@ import axios from 'axios';
 import "./App.css";
 import { URL, API_KEY } from './App';
 import { Button, Card, CardBody, CardHeader } from 'reactstrap';
+import styled from 'styled-components';
 import "bootstrap/dist/css/bootstrap.css";
-//import { Button } from 'react-bootstrap';
+//import button from './styles.js';
 
 
 export default function GetDescription() {
@@ -24,18 +25,19 @@ export default function GetDescription() {
     
     return (
         <>
-            <p>{likes}</p>
-            <Button className='button' variant='danger' onClick={e => setLikes(likes + 1)} size='lg' active>Like</Button>
-            <Button className='button' variant='secondary' onClick={e => setLikes(likes - 1)} size='lg' active>Hate</Button>
+            <p>❤️{likes}❤️</p>
+            <Button style={Des} className='button' variant='danger' onClick={e => setLikes(likes + 1)} size='lg' active>Like</Button>
+            <Button style={Des} 
+            className='button' variant='secondary' onClick={e => setLikes(likes - 1)} size='lg' active>Hate</Button>
             <Card>
-                <CardHeader>Image Description</CardHeader>
-                <CardBody>
+                <CardHeader> - Image Description - </CardHeader>
+                <CardBody className= 'bg'>
                     <blockquote className='blockquote mb-0'>
                         <p>
                             {details}
                         </p>
-                        <footer className='blockquote-footer'>
-                            Taken by NASA
+                        <footer style={{color: 'white'}} className='blockquote-footer'>
+                            Taken by NASA 🚀
                         </footer>
                     </blockquote>
                 </CardBody>
@@ -44,3 +46,10 @@ export default function GetDescription() {
     )
 }
 
+const Des = {
+    padding: '6px 10px',
+    margin: '5px',
+    border: 'none',
+    borderRadius: '3px',
+    color: 'royalblue',
+}
