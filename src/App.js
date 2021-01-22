@@ -6,7 +6,7 @@ import POD from './POD.js'
 function App() {
   const [picture, setPicture]= useState([])
 useEffect(( )=> {
-const data = axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY').then((response)=> {console.log(response) 
+const data = axios.get('https://api.nasa.gov/planetary/apod?api_key=0HiOdkPqAbX6r4SgVCG5CsviJfkGcsBvWwm0xgkl').then((response)=> {console.log(response) 
 setPicture(response.data)}).catch((error )=> { console.log(error)})
 console.log(data)
 },[])
