@@ -1,4 +1,15 @@
 import React from "react"
+import styled from "styled-components"
+
+
+const Imagestyle = styled.img`
+
+    width: 600px;
+    height: 600px;
+    display: flex;
+
+
+`
 
 
 export default function Image(props){
@@ -7,7 +18,7 @@ export default function Image(props){
     
 
     return (
-        <img src={img} alt={alt}/>
+        <Imagestyle src={img} alt={alt}/>
     )
 
 

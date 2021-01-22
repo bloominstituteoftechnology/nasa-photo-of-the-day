@@ -3,8 +3,19 @@ import Image from "./Image"
 import Summary from "./Summary"
 import Title from "./Title"
 
-
 import axios from "axios"
+
+import styled from "styled-components"
+
+
+const Wrapper = styled.div`
+
+    display:flex;
+    margin: 0;
+
+`
+
+
 
 export default function Apod ( props ){
     const [data, setData] = useState([])
@@ -24,19 +35,20 @@ export default function Apod ( props ){
         }
         fetchData()
     },[])
-
-
-
+    
 
     return (
+
+       
         <div className='Apod'>
 
 
 
         <Title title={data.title}/>
-        <Image img={data.url} alt={data.title}/>
-        <Summary sum={data.explanation}/>
-
+        <Wrapper>
+            <Image img={data.url} alt={data.title}/>
+            <Summary sum={data.explanation}/>
+    
 
 
         {/* <h1>{data.title}</h1>
@@ -44,9 +56,9 @@ export default function Apod ( props ){
         <p>{data.explanation}</p> */}
 
 
-        
+        </Wrapper>
         </div>
-
+        
 
 
     )
