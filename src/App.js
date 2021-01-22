@@ -4,12 +4,24 @@ import axios from "axios";
 import Display from "./Display.js";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import styled from "styled-components";
 
+const StyledApp = styled.div`
+background-image:url("../src/components/stars.jpeg");
+text-align: center;
+background-color: #15161C;
+breakpointMobile: "(max-width: 550px)",
+breakpoints: {
+  mobile: "(max-width: 550px)",
+  tablet: "(max-width: 800px)",
+}
+
+`
 function App() {
 
   const [pictures, setPictures] = useState([])
   useEffect(() => {
-    const data = axios.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
+    const data = axios.get("https://api.nasa.gov/planetary/apod?api_key=FUMv74J1sIq2fJsjs9XpucbSbDMCaSNZYXDxHU7b")
       .then((res) => {
         console.log(res)
         setPictures(res.data)
@@ -22,7 +34,7 @@ function App() {
 
   if (!pictures.data) {
     return (
-      <div className="App">
+      <StyledApp className="App">
         <Header 
       date={pictures.date}
         />
@@ -37,7 +49,7 @@ function App() {
           date={pictures.date}
           title={pictures.title}
           />
-      </div>
+      </StyledApp>
     );
   }
   return <h2><span role="img" aria-label='go!'>🚀</span> En Route to Picture!<span role="img" aria-label='go!'>🚀</span></h2>
