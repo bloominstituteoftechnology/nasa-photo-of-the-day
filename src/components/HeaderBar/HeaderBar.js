@@ -9,9 +9,9 @@ const HeaderBar = (props) => {
 
     return(
         <StyledHeader>
-            <HeaderItem> title {data.title} </HeaderItem>
+            <HeaderItem> {data.title} </HeaderItem>
             <HeaderItem> Astronomy Picture of the Day</HeaderItem>
-            <HeaderItem> date {data.date} </HeaderItem>
+            <HeaderItem> {data.date} </HeaderItem>
         </StyledHeader>
     );
     
@@ -22,6 +22,7 @@ const HeaderBar = (props) => {
 export default HeaderBar;
 
 const StyledHeader = styled.div `
+    font-family: sans-serif;
     background-color: #393B45;
     color: white;
     display: flex;
