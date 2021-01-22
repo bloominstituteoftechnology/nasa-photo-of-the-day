@@ -38,19 +38,6 @@
   }
 }
 
-/* borders for fun */
-.header-container {
-  border: solid 2px black;
-  background-color: rgb(77, 85, 165);
-}
-.header-item {
-  border: solid 2px orange;
-}
-.display-container {
-  border: solid 2px green;
-  margin: auto 10%;
-}
-.display-item {
-  border: solid 2px purple;
-  
-}
+/* first steps
+- figure out imports, styled components reactstrap
+- should be easy from there */
