@@ -11,10 +11,23 @@ import styled from "styled-components"
 const Wrapper = styled.div`
 
     display:flex;
-    margin: 0;
+    margin-top: 140px;
+    
+    
+    width: 100%;
+    justify-content: space-evenly;
+    align-items:center;
+    
+
 
 `
-
+const Wrapper2 = styled.div`
+    margin-left: -150px;
+    display: flex;
+    flex-direction: column;
+   
+    width: 32vw;
+`
 
 
 export default function Apod ( props ){
@@ -44,11 +57,15 @@ export default function Apod ( props ){
 
 
 
-        <Title title={data.title}/>
+        
         <Wrapper>
             <Image img={data.url} alt={data.title}/>
+        
+        <Wrapper2>
+            <Title title={data.title}/>
             <Summary sum={data.explanation}/>
-    
+        </Wrapper2>
+        </Wrapper>
 
 
         {/* <h1>{data.title}</h1>
@@ -56,7 +73,7 @@ export default function Apod ( props ){
         <p>{data.explanation}</p> */}
 
 
-        </Wrapper>
+        
         </div>
         
 

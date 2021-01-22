@@ -7,6 +7,8 @@ const Imagestyle = styled.img`
     width: 600px;
     height: 600px;
     display: flex;
+    padding-left: 75px;
+    
 
 
 `

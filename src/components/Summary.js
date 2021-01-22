@@ -3,10 +3,10 @@ import styled from "styled-components"
 
 
 const Wrapper = styled.p`
-
-    width: 265px;
+    color: white;
+    width: 100%;
     margin: 0px;
-    display: flex;
+    text-align: justify;
     
 
 `;

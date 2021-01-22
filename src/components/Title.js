@@ -2,12 +2,14 @@ import React from "react"
 
 import styled from "styled-components"
 
-const Headtitle = styled.h1`
+const Headtitle = styled.div`
     
     color: blue;
     font-size: 5em;
     margin: 0;
-    padding: 50px;
+  
+    width: 100%;
+
    
 
 
