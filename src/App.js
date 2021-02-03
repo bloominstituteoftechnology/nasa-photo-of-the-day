@@ -8,7 +8,7 @@ import ReactPlayer from "react-player"
 
 function App() {
   const [currPic, setPic] = useState();
-  
+  const [date, setDate] = useState();
  useEffect(()=>{
    function getRandomDate(max, min){
      return Math.floor(Math.random() * (max - min) + min);
@@ -26,6 +26,8 @@ function App() {
    console.log(month);
    console.log(day);
 
+   setDate(`${month}/${day}/${year}`);
+
    const apiURL =`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${year}-${month}-${day}`
 
    axios.get(apiURL)
@@ -33,10 +35,39 @@ function App() {
      setPic(res.data.url)
     console.log(res.data.url)
     
+    
     })
    
    .catch(err=> console.log(err));
  }, []);
+
+ function getRandomPicture(){
+  function getRandomDate(max, min){
+    return Math.floor(Math.random() * (max - min) + min);
+  }
+  var year = getRandomDate(2021, 2000);
+  var month = getRandomDate(1,13)
+  var day =getRandomDate(1,32)
+  if(month < 10){
+    month = "0" + month;
+  }
+  if(day < 10){
+    day = "0" + day;
+  }
+  setDate(`${month}/${day}/${year}`);
+  console.log(year);
+  console.log(month);
+  console.log(day);
+
+  const apiURL =`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${year}-${month}-${day}`
+
+  axios.get(apiURL)
+  .then(res=> {
+    setPic(res.data.url)
+  console.log(res.data.url)
+  
+  })
+}
   return (
     <div className="App">
       <p>
@@ -47,9 +78,16 @@ function App() {
        { currPic ? <img src={currPic} alt=""></img> :
         <ReactPlayer url={currPic}/>}
       </p>
+      <p>It was taken on {date}</p>
+      <button onClick={getRandomPicture}>Get Random Picture</button>
 
     </div>
   );
 }
 
+
+
 export default App;
+
+
+
