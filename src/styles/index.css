@@ -1,0 +1,21 @@
+@import-normalize;
+
+/**general styles*/
+html{
+    font-size:62.5%; /*then 1rem === 10px - and it gives the user control*/
+}
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Montserrat', serif; /* serif fonts are easy to read in large block of text */
+    font-size:1.6rem;
+    background-color: #010508;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+}
+a{
+    text-decoration:none;
+}

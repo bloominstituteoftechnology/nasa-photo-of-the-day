@@ -1,0 +1,49 @@
+.App {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-flow: column wrap;
+    height: 100vh;
+    width: 100%;
+    /* background-color: pink; */
+}
+.App::after {
+    content: "";
+    background-image: url(../assets/images/space.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1; 
+}
+
+
+/* ----------------- */
+
+.Nav {
+    display: block;
+    margin-top: 20px;
+}
+.Nav > ul {
+    display: block;
+}
+.Nav > ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 10px;
+}
+.Nav > ul li a {
+    color: #FFF;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 10px 0;
+}
+.Nav > ul li a:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
