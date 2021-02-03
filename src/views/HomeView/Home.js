@@ -1,5 +1,6 @@
 import React from 'react'
 import Nav from '../../components/Nav'
+import Card from '../../components/Card'
 //importing style
 import '../../styles/App.css'
 //importing nasa logo
@@ -17,10 +18,14 @@ const Home = () => {
                 <div className="title">
                     <h2>
                         <span>The sky is the limit,</span>
-                        <span><i>luckily</i> we go APIs</span>
+                        <span><i>luckily</i> we got APIs</span>
                     </h2>
                 </div>
             </div>
+            
+            <Card />
+
+
         </div>
     )
 }
