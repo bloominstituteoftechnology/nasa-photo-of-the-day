@@ -1,10 +1,11 @@
 import React from 'react'
 import Nav from '../../components/Nav'
-import Card from '../../components/Card'
+import Cards from '../../components/Cards'
 //importing style
 import '../../styles/App.css'
 //importing nasa logo
 import logo from '../../assets/images/logo.png'
+
 
 const Home = () => {
     return (
@@ -23,8 +24,7 @@ const Home = () => {
                 </div>
             </div>
             
-            <Card />
-
+            <Cards />
 
         </div>
     )
