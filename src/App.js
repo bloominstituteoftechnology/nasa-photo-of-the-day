@@ -4,12 +4,30 @@ import axios from 'axios';
 import ReactPlayer from "react-player"
 
 
-const apiURL ='https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2012-03-14'
+
 
 function App() {
   const [currPic, setPic] = useState();
   
  useEffect(()=>{
+   function getRandomDate(max, min){
+     return Math.floor(Math.random() * (max - min) + min);
+   }
+   var year = getRandomDate(2021, 2000);
+   var month = getRandomDate(1,13)
+   var day =getRandomDate(1,31)
+   if(month < 10){
+     month = "0" + month;
+   }
+   if(day < 10){
+     day = "0" + day;
+   }
+   console.log(year);
+   console.log(month);
+   console.log(day);
+
+   const apiURL =`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${year}-${month}-${day}`
+
    axios.get(apiURL)
    .then(res=> {
      setPic(res.data.url)
