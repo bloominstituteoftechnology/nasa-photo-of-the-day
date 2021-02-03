@@ -6,12 +6,12 @@ import "./styles/App.css";
 function App() {
 
   //this slice of state will help to mount and unmount components
-  const [view, setView] = useState('APOD')
+  const [view, setView] = useState('HOME')
 
   return (
     <div className="App">
-      { view === 'HOME' && <Home /> }
-      { view === 'APOD' && <Apod /> }
+      { view === 'HOME' && <Home view={view} setView={setView} /> }
+      { view === 'APOD' && <Apod setView={setView} /> }
     </div>
   );
 }

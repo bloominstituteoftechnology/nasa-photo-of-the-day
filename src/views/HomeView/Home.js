@@ -7,7 +7,7 @@ import '../../styles/App.css'
 import logo from '../../assets/images/logo.png'
 
 
-const Home = () => {
+const Home = ({ view, setView }) => {
     return (
         <div className='Home'>
             <Nav />
@@ -24,7 +24,8 @@ const Home = () => {
                 </div>
             </div>
             
-            <Cards />
+            { view === 'HOME' && <Cards setView={setView} /> }
+            
 
         </div>
     )

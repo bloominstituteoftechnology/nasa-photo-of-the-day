@@ -170,10 +170,11 @@
     font-weight: 500;
     line-height: 2rem;
 }
-.Card > a {
+.Card > button {
     background-image: linear-gradient(to right, #0575E6 0%, #021B79  51%, #0575E6  100%);
     background-size: 200% auto;
     border-radius: 3px;
+    border: none;
     box-shadow: 0 0 20px rgba(0, 24, 158, 0.4);
     color: #FFF;
     display: inline-block;
@@ -182,6 +183,7 @@
     font-weight: 500;
     margin-top: 2rem;
     line-height: 2rem;
+    outline: none;
     transition: 0.5s;
 }
 .Card > a:hover {
@@ -259,6 +261,23 @@
 
 
 
+
+/* VIDEO COMPONENT -------------- */
+
+
+
+.Video {
+    background-color: #000;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+    display: block;
+    margin-top: 30px;
+}
+
+
+
+
+
+
 /* TEXT COMPONENT -------------- */
 
 
@@ -267,10 +286,10 @@
     background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
     border-radius: 8px;
     border: 1px solid #CCC;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     display: inline-block;
     margin-top: 30px;
     width: 100%;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 .Text span {
     display: block;
@@ -279,24 +298,34 @@
     font-weight: 400;
     line-height: 2.6rem;
 }
+
+
+
+
+
 
 /* CLOSEBUTTON COMPONENT -------------- */
 
 
-.Text {
-    /* background-color: skyblue; */
-    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+.CloseButton {
+    background-image: linear-gradient(to right, #e43a15 0%, #FF4545  51%, #e43a15  100%);
+    background-size: 200% auto;
     border-radius: 8px;
-    border: 1px solid #CCC;
+    box-shadow: 0 0 20px rgba(255, 36, 36, 0.4);
+    border-radius: 8px;
+    border: none;
+    color: #fff;
     display: inline-block;
+    transition: 0.5s;
+    padding: 18px;
     margin-top: 30px;
-    width: 100%;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-}
-.Text span {
-    display: block;
-    padding: 30px;
     font-size: 1.6rem;
-    font-weight: 400;
-    line-height: 2.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    outline: none;
 }
+.CloseButton:hover {
+    background-position: right center; /* change the direction of the change here */
+    text-decoration: none;
+ }
+

@@ -1,10 +1,8 @@
 import React from 'react'
 
-const CloseButton = () => {
+const CloseButton = ({ setView }) => {
     return (
-        <div>
-            
-        </div>
+        <button onClick={() => setView('HOME')} className="CloseButton">Go Back 🚀</button>
     )
 }
 

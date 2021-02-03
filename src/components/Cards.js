@@ -45,39 +45,23 @@ const CardsContainer = styled.div`
   /* background-color: yellow; */
 `;
 
-const SampleCard = styled.div`
-  position: relative;
-  height: 300px;
-  width: 500px;
-  background-color: red;
-  margin-right: 75px;
-  flex-shrink: 0;
-`;
-
-const SampleCards = React.memo(() =>
-  Array(5)
-    .fill(0)
-    .map((_e, i) => <SampleCard key={`sampleCard-${i}`} />)
-);
 
 
 // END HORIZONTAL SCROLL
 
 
 
-const Cards = () => {
+const Cards = ({ setView }) => {
     return (
         <>
             <HorizontalSection>
                 <HorizontalScroll>
                     <CardsContainer>
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                        {/* <SampleCards /> */}
+                      <Card setView={setView} />
+                      <Card setView={setView} />
+                      <Card setView={setView} />
+                      <Card setView={setView} />
+                      <Card setView={setView} />
                     </CardsContainer>
                 </HorizontalScroll>
             </HorizontalSection>

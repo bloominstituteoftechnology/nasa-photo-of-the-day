@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Image = ({ src, alt, credits }) => {
+const Image = ({ src, alt, date }) => {
     return (
         <div className="Image">
             <img src={src} alt={alt} />
-            <span>{ credits }</span>
+            <span><strong>Date:</strong> { date }</span>
         </div>
     )
 }
