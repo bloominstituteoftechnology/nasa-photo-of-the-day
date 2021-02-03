@@ -1,7 +1,14 @@
 .picture-details {
     width: 100%;
     max-width: 700px;
+    background: #fff;
+    padding: 0 20px 20px;
+    margin: 50px 0;
+    border-radius: 50px;
 }
 .picture-details img {
     width: 100%;
+}
+.picture-details p {
+    line-height: 1.5;
 }

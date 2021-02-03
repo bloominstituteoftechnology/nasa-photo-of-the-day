@@ -1,9 +1,10 @@
 import React from 'react';
+import './DatePicker.css';
 
 function DatePicker(props) {
     const {setSelectedDate} = props
     return (
-        <div>
+        <div className="date-picker-wrapper">
             <label><span role="img" aria-label="rocket">🚀</span> Enter a date: </label>
             <input 
                 type="date"
