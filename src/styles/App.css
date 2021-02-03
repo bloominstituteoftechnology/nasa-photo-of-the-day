@@ -22,15 +22,60 @@
     z-index: -1; 
 }
 
+/* HOME VIEW ------------------ */
 
-/* ----------------- */
+.Home {
+    align-content: center;
+    display: flex;
+    flex-flow: column wrap;
+    height: calc(100vh - 57px);
+    background-color: yellow;
+}
+
+.Home > .hero {
+    margin: 0 auto;
+    width: 940px;
+    background-color: skyblue;
+}
+.Home > .hero .brand {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    /* background-color: skyblue; */
+}
+.Home > .hero .brand img {
+    width: 60px;
+}
+.Home > .hero .brand h1 {
+    color: #FFF;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+.Home > .hero .title {
+    background-color: pink;
+}
+.Home > .hero .title h2 {
+    color: #FFF;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+
+
+/* NAV COMPONENT -------------- */
+/* FIX THE WITH OF THE ELEMENT LATER SO I CAN DELETE: text-align: center; */
 
 .Nav {
-    display: block;
     margin-top: 20px;
+    /* background-color: skyblue; */
 }
 .Nav > ul {
     display: block;
+    text-align: center;
 }
 .Nav > ul li {
     display: inline-block;
