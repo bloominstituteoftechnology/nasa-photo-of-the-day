@@ -12,6 +12,7 @@ function App() {
   const fetchPictureDetails = () => {
     axios.get(`${BASE_URL}?api_key=${API_KEY}&date=${selectedDate}`)
     .then((response) => {
+      console.log(response.data)
       setPictureDetails(response.data);
     })
     .catch((error) => console.log(error));
