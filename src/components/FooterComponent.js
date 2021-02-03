@@ -1,6 +1,6 @@
 import React from "react";
 
-function FooterComponent (){
+const FooterComponent = ()=>{
  
  return (
      <div className = "foot-container">
