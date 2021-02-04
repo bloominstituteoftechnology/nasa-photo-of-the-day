@@ -17,13 +17,10 @@ function App() {
       setApod(response.data)
     })
       .catch((error) =>{
-        console.log("APOD GET FAILED!!", error)
+      console.log("APOD GET HAS FAILED!", error)
       })
       console.log(data)
-  }, [])
-
-
-
+  },[])
   if (!apod.data) {
      return (
   <div class="App">
@@ -38,8 +35,7 @@ function App() {
         <Footer date={apod.date} title={apod.title}/>
   </div>
   )}
-  return <h1><span role="img" aria-label='We in space!'> Takeoff!</span> The vastness of the universe can hold beautiful creations<span role='img' aria-label='We in space!'></span></h1>
-  }
+}
   
   
 export default App;
