@@ -1,11 +1,50 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import styled from 'styled-components'
+
+const Header = styled.h1`
+color: orange;
+
+
+&:hover {
+    color:yellow;
+    font-size:4rem;
+}
+`
+const Explanation = styled.p`
+border:1px solid black;
+margin: 2% 31% 2% 31%;
+font-size:20px;
+
+&:hover{
+    background-color:grey;
+    font-size: 30px;
+    margin: 0%0%0%0%;
+  }
+`
+const Image = styled.img`
+width: 600px;
+`
+
+const Inputs = styled.div`
+border: 5px solid red;
+margin: 2% 31% 2% 31%;
+padding:1%;
+`
+
+const Input = styled.input`
+:hover{
+    font-size:2rem;
+    background-color:lightblue;
+    color:red;
+}
+`
 
 function BodyComponent () {
     const [nasaData, setNasaData] = useState ([]);
-    const [year, setYear] = useState(2021)
-    const [month, setMonth] = useState (2)
-    const [day, setDay] = useState (2)
+    const [year, setYear] = useState(2020)
+    const [month, setMonth] = useState (8)
+    const [day, setDay] = useState (4)
 
 
     const handleChange1 = e => {
@@ -28,41 +67,45 @@ function BodyComponent () {
         })
         .catch(err => console.log(err))
     }, [year, month, day])
+    
 
     return (
     <>
        <div>
-           <h1>{nasaData.date}</h1>
-           <img src = {nasaData.url}/>
-           <p>Description: {nasaData.explanation}</p>
+           <Header>Impelment the current day code bellow</Header>  
+           {/* span.textContent = new Date().toUTCString().split(" ").splice(0,4) */}
+           <Image src = {nasaData.url}/>
+           <Explanation>Description: {nasaData.explanation}</Explanation>
            <p>What Photo of the Day would you like to see from NASA?</p>
 
-           <div>
+           <Inputs>
                YEAR:
-               <input
+               <Input
                 type="text"
                 placeholder="YEAR"
                 value={year}
                 onChange={handleChange1}
                />
                 MONTH:
-               <input
+               <Input
                 type="text"
                 placeholder="MONTH"
                 value={month}
                 onChange={handleChange2}
                />
                 DAY:
-               <input
+               <Input
                 type="text"
                 placeholder="DAY"
                 value={day}
                 onChange={handleChange3}
                />
-           </div>
+           </Inputs>
        </div>
     </> 
     )
 }
 
 export default BodyComponent;
+
+// How to impletemetn the current day, how to show dubble picture , how to implement event lister
