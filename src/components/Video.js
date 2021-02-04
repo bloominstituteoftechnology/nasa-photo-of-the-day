@@ -1,9 +1,10 @@
 import React from 'react'
+import ReactPlayer from 'react-player'
 
 const Video = ({ src }) => {
     return (
         <div className="Video">
-            <iframe width="100%" height="361" src={src} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <ReactPlayer url={src} width='100%' />
         </div>
     )
 }

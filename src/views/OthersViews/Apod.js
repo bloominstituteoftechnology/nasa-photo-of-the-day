@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { BASE_URL, APY_KEY } from '../../constants/index'
+import dummyData from '../../constants/dummy'
 import Title from '../../components/Title'
 import Image from '../../components/Image'
 import Video from '../../components/Video'
@@ -17,6 +18,7 @@ const Apod = ({ setView }) => {
                 setDataApod(res.data)
             })
             .catch(err => {
+                setDataApod(dummyData)
                 console.log('We just ran out of petitions')
             })
     }
