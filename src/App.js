@@ -1,13 +1,17 @@
-import React from "react";
-import "./App.css";
+import React, { useState } from "react";
+import Home from './views/HomeView/Home'
+import Apod from './views/OthersViews/Apod'
+import "./styles/App.css";
 
 function App() {
+
+  //this slice of state will help to mount and unmount components
+  const [view, setView] = useState('HOME')
+
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+      { view === 'HOME' && <Home view={view} setView={setView} /> }
+      { view === 'APOD' && <Apod setView={setView} /> }
     </div>
   );
 }

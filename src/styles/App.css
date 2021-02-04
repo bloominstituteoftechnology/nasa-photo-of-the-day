@@ -1,0 +1,332 @@
+.App {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-flow: column wrap;
+    height: 100vh;
+    width: 100%;
+    /* background-color: pink; */
+}
+.App::after {
+    content: "";
+    background-image: url(../assets/images/space.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    opacity: 0.9;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1; 
+}
+
+/* HOME VIEW ------------------ */
+
+.Home {
+    /* background-color: yellow; */
+}
+
+.Home > .hero {
+    align-content: center;
+    display: flex;
+    flex-flow: column wrap;
+    height: 50vh;
+    justify-content: center;
+    margin: 0 auto;
+    min-height: 350px;
+    width: 940px;
+    /* background-color: skyblue; */
+}
+.Home > .hero .brand {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    /* background-color: skyblue; */
+}
+.Home > .hero .brand img {
+    width: 60px;
+}
+.Home > .hero .brand h1 {
+    color: #FFF;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+.Home > .hero .title {
+    margin-top: 20px;
+    /* background-color: pink; */
+}
+.Home > .hero .title h2 {
+    color: #FFF;
+    text-shadow: 0 0 18px rgba(0, 0, 0, 0.6);
+    font-size: 6rem;
+    font-weight: 900;
+    line-height: 6.5rem;
+}
+.Home > .hero .title h2 span {
+    display: block;
+}
+.Home > .hero .title h2 span i {
+    color: #FF4545;
+    text-transform: uppercase;
+    font-style: normal;
+}
+
+
+
+/* NAV COMPONENT -------------- */
+/* FIX THE WITH OF THE ELEMENT LATER SO I CAN DELETE: text-align: center; */
+
+.Nav {
+    margin-top: 20px;
+    /* background-color: skyblue; */
+}
+.Nav > ul {
+    display: block;
+    text-align: center;
+}
+.Nav > ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 10px;
+}
+.Nav > ul li a {
+    color: #FFF;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 10px 0;
+}
+.Nav > ul li a:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+
+
+
+
+
+/* APOD VIEW ------------------ */
+
+
+.Apod {
+    /* background-color: yellow; */
+}
+
+.Apod {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 30px 0;
+    width: 940px;
+    /* background-color: pink; */
+}
+
+
+
+
+
+
+
+
+/* CARD COMPONENT -------------- */
+
+.Card {
+
+    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+    border-radius: 8px;
+    border: 1px solid #CCC;
+    display: inline-block;
+    padding: 40px 25px 25px;
+    margin-right: 70px;
+    width: 300px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+.Card > i {
+    font-size: 5rem;
+    font-style: normal;
+    margin-bottom: 2rem;
+}
+.Card > h4 {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+.Card > h3 {
+    margin-bottom: 2rem;
+    color: #021B79;
+    font-size: 3rem;
+    font-weight: 800;
+}
+.Card > p {
+    color: #333;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2rem;
+}
+.Card > button {
+    background-image: linear-gradient(to right, #0575E6 0%, #021B79  51%, #0575E6  100%);
+    background-size: 200% auto;
+    border-radius: 3px;
+    border: none;
+    box-shadow: 0 0 20px rgba(0, 24, 158, 0.4);
+    color: #FFF;
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-top: 2rem;
+    line-height: 2rem;
+    outline: none;
+    transition: 0.5s;
+}
+.Card > a:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+}
+
+
+
+
+
+
+/* TITLE COMPONENT -------------- */
+
+
+
+.Title {
+    display: block;
+    width: 100%;
+    /* background-color: skyblue; */
+}
+.Title > .brand {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-bottom: 1rem;
+    /* background-color: skyblue; */
+}
+.Title > .brand img {
+    width: 40px;
+}
+.Title > .brand h3 {
+    color: #FFF;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-left: 10px;
+}
+.Title > h4 {
+    color: #FFF;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+
+
+
+
+/* IMAGE COMPONENT -------------- */
+
+
+
+.Image {
+    /* background-color: skyblue; */
+    display: block;
+    margin-top: 30px;
+}
+.Image img {
+    display: block;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+    width: 100%;
+    /* background-color: skyblue; */
+}
+.Image span {
+    display: block;
+    color: #FFF;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 30px;
+    /* background-color: skyblue; */
+}
+
+
+
+
+/* VIDEO COMPONENT -------------- */
+
+
+
+.Video {
+    background-color: #000;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+    display: block;
+    margin-top: 30px;
+}
+
+
+
+
+
+
+
+/* TEXT COMPONENT -------------- */
+
+
+.Text {
+    /* background-color: skyblue; */
+    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+    border-radius: 8px;
+    border: 1px solid #CCC;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    margin-top: 30px;
+    width: 100%;
+}
+.Text span {
+    display: block;
+    padding: 30px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.6rem;
+}
+
+
+
+
+
+
+/* CLOSEBUTTON COMPONENT -------------- */
+
+
+.CloseButton {
+    background-image: linear-gradient(to right, #e43a15 0%, #FF4545  51%, #e43a15  100%);
+    background-size: 200% auto;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(255, 36, 36, 0.4);
+    border-radius: 8px;
+    border: none;
+    color: #fff;
+    display: inline-block;
+    transition: 0.5s;
+    padding: 18px;
+    margin-top: 30px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    outline: none;
+}
+.CloseButton:hover {
+    background-position: right center; /* change the direction of the change here */
+    text-decoration: none;
+ }
+
