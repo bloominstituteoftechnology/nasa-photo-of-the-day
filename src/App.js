@@ -1,13 +1,28 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import "./App.css";
+import styled from 'styled-components'
+
+
+const StyledImg = styled.img`
+  width: 90vw;
+  border-radius:10px;
+`
+const StyledInfo = styled.div`
+  width:90vw;
+  margin:auto;
+  text-align: left;
+`
+const StyledCopy = styled.p`
+  font-size: .8em;
+`
 
 function App() {
     const [data, setData] = useState([]);
 
     //  API
     const fetchData = () => {
-        axios.get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2012-03-14`)
+        axios.get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`)
         .then(res => {
             console.log(res);
             setData(res.data)
@@ -22,7 +37,7 @@ function App() {
     function NasaImg(props) {
       return (
         <a href={props.hdurl} target='_blank'>
-        <img 
+        <StyledImg
           src={props.url}
           alt={props.title}
         />
@@ -49,11 +64,11 @@ function App() {
     //  Nasa Image Info Component
     function NasaImgInfo(props) {
       return (
-        <div className='imgInfo'>
+        <StyledInfo>
           <NasaExp explanation={props.explanation}/>
           <NasaHD hdurl={props.hdurl} />
-          <p className='copy'>Copyright &#169;{props.copyright}</p>
-        </div>
+          {props.copyright && <StyledCopy>Copyright &#169;{props.copyright}</StyledCopy>}
+        </StyledInfo>
       )
     }
 
