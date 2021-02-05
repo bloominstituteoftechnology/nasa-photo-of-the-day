@@ -4,6 +4,17 @@ import "./App.css";
 import DatePicker from './components/date-picker/DatePicker';
 import PictureDetails from './components/picture-details/PictureDetails';
 import { BASE_URL, API_KEY } from './constants/index';
+import styled from 'styled-components';
+
+const StyledApp = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  padding: 50px;
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom right, #e4efe9, #93a5cf);
+`;
 
 function App() {
   const [pictureDetails, setPictureDetails] = useState([]);
@@ -32,11 +43,11 @@ function App() {
   useEffect(setMaxDate, []);
 
   return (
-    <div className="App">
+    <StyledApp>
       <h1>Astronomy Picture of the Day</h1>
       <DatePicker setSelectedDate={setSelectedDate} />
       <PictureDetails pictureDetails={pictureDetails} />
-    </div>
+    </StyledApp>
   );
 }
 

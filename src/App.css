@@ -1,9 +1,0 @@
-.App {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column nowrap;
-  padding: 50px;
-  min-height: 100vh;
-  background-image: linear-gradient(to bottom right, #e4efe9, #93a5cf);
-}
