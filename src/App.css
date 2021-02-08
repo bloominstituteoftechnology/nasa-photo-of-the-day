@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.header {
+    color: blue;
+    font-size: 30px;
+  };
+
+  .header .h1 {
+    color: red;
+  }
+
+  body {
+    background-color: darkslategrey;
+  }

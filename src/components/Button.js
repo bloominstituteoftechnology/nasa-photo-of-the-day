@@ -4,7 +4,7 @@ export default function Button () {
     return <button onclick="location.href = './FirstPhoto';" id="myButton" class="float-left submit-button" >First NASA Photo!</button>
 }
 
-const Button = ({title, date, url, explanation, copyright}) => {
+const button = ({title, date, url, explanation, copyright}) => {
     return (
     <div>
         

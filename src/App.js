@@ -3,7 +3,6 @@ import "./App.css";
 import axios from "axios";
 import Header from './components/Header'
 import PhotoContainer from './components/PhotoContainer'
-import FirstPhoto from './components/FirstPhoto'
 
 function App() {
   const [photo, setPhoto] = useState([]);
