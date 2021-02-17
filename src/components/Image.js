@@ -1,4 +1,11 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const ImageWrap = styled.img`
+    width: 854px;
+    height: 480px;
+    border: 6px solid #348E8F;
+`
 
 const Image = props => {
 
@@ -6,7 +13,7 @@ const Image = props => {
 
     return (
         <div>
-            <img src={URL} alt={title}/>
+            <ImageWrap src={URL} alt={title}/>
         </div>
     )
 }

@@ -1,4 +1,15 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const TitleWrap = styled.h2`
+    font-size: 1.75rem;
+    color:lightgray;
+`
+
+const DateWrap = styled.p`
+    font-size: 1.25rem;
+    color:lightgray;
+`
 
 const Title = props => {
 
@@ -7,11 +18,14 @@ const Title = props => {
     // console.log(`title`, props.dailyTitle.title)
 
     return (
+
         <div>
-            <h2>{title}</h2>
-            <p>{date}</p>
+            <TitleWrap>{title}</TitleWrap>
+            <DateWrap>{date}</DateWrap>
         </div>
+
     )
+
 }
 
 export default Title
