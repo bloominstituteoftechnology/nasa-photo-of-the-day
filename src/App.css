@@ -3,7 +3,7 @@ p {
 }
 
 hr {
-  height: .25rem;
+  height: .2rem;
   background: black;
 }
 
@@ -38,6 +38,7 @@ hr {
   height: 100%;
 }
 
+
 .container {
   background-color: #aaa;
   padding-bottom: 5rem;
@@ -50,7 +51,7 @@ hr {
   background-color: #fff;
   padding-top: 3rem;
   padding-bottom: 0.2rem;
-  height: 5500px;
+  min-height: 100%;
 }
 
 .button-style {
