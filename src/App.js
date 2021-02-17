@@ -3,22 +3,27 @@ import "./App.css";
 import Header from "./Header";
 import Center from "./Center";
 import { useState, useEffect } from "react";
+import { API_KEY, BASE_URL } from "./constants";
+import axios from "axios";
 
 function App() {
-  const [imgSrc, setimgSrc] = useState("");
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`${BASE_URL}?api_key=${API_KEY}`)
+      .then((res) => {
+        setData(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   return (
     <div className="App">
-      <Header />
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun{" "}
-        <span role="img" aria-label="go!">
-          🚀
-        </span>
-        !
-      </p>
-      <Center imgSrc={imgSrc} />
+      <Header data={data} />
+      <Center data={data} />
     </div>
   );
 }
