@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+/* PicOfTheDay */
+.welcome {
+  /* width: 70%; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* background-color: black; */
+  /* color: white; */
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  padding: 0;
+}
