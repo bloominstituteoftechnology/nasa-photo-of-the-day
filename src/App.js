@@ -1,5 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import "./App.css";
+import axios from 'axios'
+import APODData from './dummy-data/dummy'
+
+const API_KEY = `S4BSTHbyAzZp4XrreYaSUMkFEq1O7jPL0efEZT4B`;
 
 function App() {
   return (
