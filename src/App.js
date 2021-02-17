@@ -159,7 +159,7 @@ function App() {
           {/* MARS PICTURES  */}
 
           <div className='d-flex justify-content-center align-items-center flex-column'>
-            <h1 style={{marginTop: '3rem'}}>Mars Rover Pictures</h1>
+            <h1 style={{marginTop: '3rem'}}>Mars Rover Images</h1>
             <img src={cameraChart} alt='cam chart' style={{maxWidth: '70%'}} />
             <div className='d-flex justify-content-center flex-column' style={{margin: '2rem 0 ', textAlign: 'center'}}>
               <label htmlFor='rover' style={{marginTop: '1rem'}}>Enter Rover name: </label>
@@ -182,7 +182,7 @@ function App() {
               style={{textAlign: 'center'}}
               onChange={(e) => setCamera(e.target.value)}
             />
-            <label htmlFor='sol' style={{marginTop: '1rem'}}>Enter Mission Day Number: </label>
+            <label htmlFor='sol' style={{marginTop: '1rem'}}>Enter Mission Sol (Martian Day) Number: </label>
             <input
               onSubmit={handleSolSubmit}
               name='sol'
