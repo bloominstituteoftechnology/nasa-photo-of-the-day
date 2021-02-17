@@ -7,6 +7,23 @@
   pointer-events: none;
 }
 
+.header-cont {
+  width: 100%;
+  background-color: cadetblue;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3%;
+}
+
+.main-photo.cont {
+  display: flex;
+  flex-direction: column;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
