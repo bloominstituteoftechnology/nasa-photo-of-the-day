@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import './styles.less'
+import './styles.css'
 import axios from "axios";
 import Details from './Details';
 import { BASE_URL, API_KEY} from './constants/index';
@@ -24,9 +24,9 @@ function App() {
   }, [photo.id]);
 
   const Photo = (props) => (
-    <div className="friend">
+    <div className="photo">
       <a href = {photo.url} >
-        <img src={photo.url} alt={photo.title} />
+        <img className="photo_img" src={photo.url} alt={photo.title} />
         </a>
     </div>
   );
@@ -34,15 +34,21 @@ function App() {
   return (
     <div className="container">
       <Header />
+      <div className="content">
       <h1>Astro Photo of the Day!</h1>
-        <h2>{photo.title}:</h2>
+       <blockquote> 
+         <h3>	{photo.title}:</h3>
+         </blockquote>
+        <div className="photo">
       {
         
          <Photo key={photo.id} info={photo} />
       }
+      </div>
       {photo && (
         <Details data = {photo}  />
       )}
+      </div>
     </div>
   );
 }

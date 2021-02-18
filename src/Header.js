@@ -1,11 +1,13 @@
 import React from 'react'
-import './styles.less'
+import './styles.css'
 
 export default function Header() {
 
     return(
-    <div className="header">
-        <h1> AMAZING IMAGERY</h1>
+    <div id="header">
+        <section className="header-section">
+        <h1> AMAZING NASA IMAGERY</h1>
+        </section>
     </div>
     )
 };
