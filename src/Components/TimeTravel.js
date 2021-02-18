@@ -11,6 +11,7 @@ const time = props => {
         <div>
          <h2>{title}</h2>   
          <img src = {image}/>
+         
          <p>{summary}</p>
          <button onClick = {past}>Back A Day</button>
          <button onClick = {present}>Today</button>

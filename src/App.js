@@ -9,13 +9,12 @@ function App() {
   const toGetDate = '&date='
   const getData = () => {
     
-    axios.get(`${baseUrl}${toGetDate}`)
+    axios.get(`${baseUrl}${toGetDate}${tdate}`)
     .then((res) => {
         console.log(res.data)
         setSummary(res.data.explanation)
         setVideo(res.data.media_type === 'video' ? res.data.url : undefined)
         setTitle(res.data.title)
-        setTdate(theDate())
         setImage(res.data.url)
         console.log(image)
     }).catch(err => {
@@ -34,7 +33,7 @@ function App() {
   } 
   console.log(theDate())
   
-  const [tdate, setTdate] = useState(null);
+  const [tdate, setTdate] = useState(theDate());
   
   function past() {
     const yesterday = new Date()
