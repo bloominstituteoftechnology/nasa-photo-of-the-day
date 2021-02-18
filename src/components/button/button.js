@@ -1,26 +1,21 @@
 import React from 'react';
 
 const Button = props => {
+const {myFunction} = props;
+    
 
-  
     return(
         <div className="button">
-            <button onClick={() => { console.log('button works')} }>Touch Me!</button>
+            <button onClick={myFunction}>Touch Me!</button>
             <form className="search-day">
-        <input
-          type="text"
-          placeholder="Day"
-        />
+        <input id="textday" placeholder="Day"/>
       </form>
       <form className="search-month">
-        <input
-          type="text"
-          placeholder="Month"
-        />
+        <input id="textmonth" placeholder="Month" />
       </form>
       <form className="search-year">
         <input
-          type="text"
+          id="textyear"
           placeholder="Year"
         />
       </form>

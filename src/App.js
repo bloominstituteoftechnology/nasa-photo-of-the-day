@@ -31,7 +31,24 @@ function App() {
     })
   }
   fetchData()
-},[])
+},[day])
+
+
+  // useEffect(()=>{
+  const myFunction = () => {
+    let dayH,monthH,yearH;
+    dayH = document.querySelector('#textday').value;
+    monthH = document.querySelector('#textmonth').value;
+    yearH = document.querySelector('#textyear').value;
+    if (dayH>=1 && dayH<=31 && monthH>=1 && monthH<=12 && yearH>=2015 &&yearH<=2030){
+        setDay(dayH);
+        setMonth(monthH);
+        setYear(yearH);
+    }
+    else(console.log('nothing!!!!!!'))
+    }
+    // return myFunction
+  // },[])
 
   return (
     <div className="App">
@@ -42,7 +59,7 @@ function App() {
       <TextOnTop title={title}/>
       <Picture pictureUrl={pictureUrl} />
       <MiddleText explanation={explanation} />
-      <Button day={day} month={month} year ={year}/>
+      <Button myFunction={myFunction}/>
     </div>
   );
 }
