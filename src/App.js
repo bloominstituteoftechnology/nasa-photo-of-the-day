@@ -20,20 +20,19 @@ function App() {
 			.catch((err) => console.log(err));
 	}, []);
 	return (
-		<AppDiv>
+		<WynBaby>
 			<TopLogo />
 			<Navbar />
 			<AboveImage date={nasaData.date} title={nasaData.title} />
 			<Imagefile imageurl={nasaData.url} />
 			<ImageText imagetext={nasaData.explanation} />
-		</AppDiv>
+		</WynBaby>
 	);
 }
-const AppDiv = styled.div`
+const WynBaby = styled.div`
 	text-align: center;
 	display: flex;
 	flex-direction: column;
-	background-color: black;
 `;
 
 export default App;

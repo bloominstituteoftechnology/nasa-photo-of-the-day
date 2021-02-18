@@ -5,7 +5,15 @@ import styled from "styled-components";
 function TopLogo() {
 	return (
 		<StyledDiv>
-			<StyledH1>🚀NASA Image of the Day🚀</StyledH1>
+			<StyledH1>
+				<span role="img" aria-label="go!">
+					🚀
+				</span>
+				Nasa Image Of The Day
+				<span role="img" aria-label="go!">
+					🚀
+				</span>
+			</StyledH1>
 		</StyledDiv>
 	);
 }
