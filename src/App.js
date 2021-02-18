@@ -23,7 +23,7 @@ import cameraChart from './resources/cameras.png'
 
 const API_KEY = "aW4mba0GtK7XjhiRZpoV3FudBspsIYDqtl7CZ0VP";
 const initialRoverValue = {
-  value: "curiosity",
+  value: "spirit",
 };
 const initialCameraValue = {
   camera: "fhaz",
