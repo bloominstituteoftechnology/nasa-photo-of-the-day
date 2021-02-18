@@ -15,7 +15,7 @@ const Post = props => {
     const Info = props => {
       return ( 
         <div className='info'>
-            <button onClick={() => openDetails(props.data.date)}>
+            <button onClick={() => openDetails(data.date)}>
                 See Details
             </button>
         </div>)
@@ -24,11 +24,11 @@ const Post = props => {
     const Details = props =>{
         return (
             <div className='wrapper'>
-                <h2>The photographer is {props.copyright}</h2>
+                <h2>The photographer is {data.copyright}</h2>
                 {props &&
                 <>
-                  <p>{props.explanation}</p>
-                  <p>Photo was featured on {props.date}</p>
+                  <p>{data.explanation}</p>
+                  <p>Photo was featured on {data.date}</p>
                 </>
                 }
                 <button onClick={closeDetails}>Close</button>
