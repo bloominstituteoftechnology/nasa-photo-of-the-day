@@ -29,7 +29,7 @@ const initialCameraValue = {
   camera: "fhaz",
 };
 
-const initialSolValue = '1000'
+const initialSolValue = '1'
 
 function App() {
   const [mars, setMars] = useState();
