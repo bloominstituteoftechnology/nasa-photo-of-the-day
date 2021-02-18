@@ -7,6 +7,7 @@ import Instructions from "./Instructions";
 
 
 
+
 function App() {
   const [nasaData, setNasaData] = useState([])
 
@@ -30,6 +31,7 @@ function App() {
 
 
   return (
+    
     <div className="App">
       <Title />
       <NasaPhoto data={nasaData}/>
@@ -42,6 +44,7 @@ function App() {
         app! Have fun <span role="img" aria-label='go!'>🚀</span>!
       </p>
     </div>
+    
   );
 }
 
