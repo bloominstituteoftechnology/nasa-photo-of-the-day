@@ -1,22 +1,32 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import axios from "axios";
-import { API_KEY, BASE_URL } from "./constants";
+import { useState } from "react";
 
 const Center = (props) => {
-  const { data } = props;
+  const { data, isVideo } = props;
   const [showDesc, setshowDesc] = useState(false);
   const style = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    marginTop: "20px",
   };
 
   return (
     <div className="main-photo-cont" style={style}>
-      <h2>{data.title}</h2>
-      <img className="main-img" src={data.url} alt="NASA of the day" />
-      <button onClick={() => setshowDesc(!showDesc)}>Description</button>
+      <h2 style={{ fontSize: "18px" }}>{data.title}</h2>
+      {isVideo ? (
+        <iframe
+          src="https://www.w3schools.com"
+          title="W3Schools Free Online Web Tutorials"
+        ></iframe>
+      ) : (
+        <img className="main-img" src={data.url} alt="NASA of the day" />
+      )}
+      {!showDesc && (
+        <button style={{ margin: "2%" }} onClick={() => setshowDesc(!showDesc)}>
+          Description
+        </button>
+      )}
       {showDesc && <div> {data.explanation} </div>}
     </div>
   );
