@@ -1,27 +1,30 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 
 const Post = props => {
+    
+    const [infoOpen, setInfoOpen ] = useState(false)
 
-    const openDetails = date => {
-        setCurrentDate()
-    }
-
-    const closeDetails = () => {setCurrentDate(null)};
+    const openButton = () => setInfoOpen(!infoOpen)
 
     const{url, data, setCurrentDate} = props
     console.log(`the props are`,props)
 
-    const Info = props => {
+
+
+    const Info = props => {   //this is the open button on the page
       return ( 
         <div className='info'>
-            <button onClick={() => openDetails(data.date)}>
-                See Details
+            {
+              infoOpen && <Details />
+            }
+            <button onClick={openButton}>
+                {openButton === false ? 'Show Details' : 'Hide Details'}
             </button>
         </div>)
     }
 
-    const Details = props =>{
+    const Details = props =>{ //Info of the photographer
         return (
             <div className='wrapper'>
                 <h2>The photographer is {data.copyright}</h2>
@@ -31,7 +34,7 @@ const Post = props => {
                   <p>Photo was featured on {data.date}</p>
                 </>
                 }
-                <button onClick={closeDetails}>Close</button>
+               
             </div>
         )
     }
@@ -44,9 +47,7 @@ const Post = props => {
       </div>
       <div>
           <Info />
-          {
-              data.date && <Details />
-          }
+          
           
       </div>
     </div>

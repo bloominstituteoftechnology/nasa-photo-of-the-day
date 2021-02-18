@@ -9,19 +9,16 @@ const baseURL = `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`
 
 function App() {
 
-  const [currentDate, setCurrentDate] = useState(baseURL);
+  const [currentDate, setCurrentDate] = useState({});
 
 
   useEffect(() =>{
     const fetchPhoto = () =>{
       axios.get(`${baseURL}`)
       .then(res => {
-
         setCurrentDate(res.data)
-
       })
       .catch ( err =>{
-
         console.log(err)
       })
     }
@@ -32,9 +29,8 @@ function App() {
 
   return (
     <div className="App">
-      <Post url={currentDate.url} data={currentDate} setCurrentDate={setCurrentDate} />
-      
-      
+
+      <Post url={currentDate.url} data={currentDate} setCurrentDate={setCurrentDate} />     
     </div>
   );
 }
