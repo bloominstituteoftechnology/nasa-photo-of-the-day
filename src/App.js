@@ -3,7 +3,7 @@ import './styles.less'
 import axios from "axios";
 import Details from './Details';
 import { BASE_URL, API_KEY} from './constants/index';
-
+import Header from './Header'
 
 function App() {
   const [photo, setPhoto] = useState([]);
@@ -21,7 +21,7 @@ function App() {
     };
     fetchPhoto();
    
-  }, [photo]);
+  }, [photo.id]);
 
   const Photo = (props) => (
     <div className="friend">
@@ -33,6 +33,7 @@ function App() {
 
   return (
     <div className="container">
+      <Header />
       <h1>Astro Photo of the Day!</h1>
         <h2>{photo.title}:</h2>
       {

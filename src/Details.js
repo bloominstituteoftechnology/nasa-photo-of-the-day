@@ -1,22 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { API_CODE } from "./constants/index";
 import axios from "axios";
+import './styles.less'
 
 export default function Details(props) {
-    const { dataId} = props;
     const [details, setDetails] = useState([]);
-
-    useEffect(() => {
-        const handleClick = (evt) => {
-          // console.log(`Here is a random number: ${Math.random()}`);
-        };
-        document.addEventListener("click", handleClick);
-        return () => {
-          console.log(`👻 CLEANING UP SILLY CLICK LISTENER`);
-          document.removeEventListener("click", handleClick);
-        };
-      }, []);
-
 
     useEffect(() => {
     axios
@@ -33,6 +21,8 @@ export default function Details(props) {
     };
   }, [details.url]);
 
+  console.log(details)
+  console.log(details.url)
   return (
     <div className="container">
     
