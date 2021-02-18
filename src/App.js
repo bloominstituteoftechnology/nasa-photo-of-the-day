@@ -120,7 +120,7 @@ function App() {
               className="text-dark txt"
               style={{ paddingBottom: "20%", fontSize: "1.5rem" }}
             >
-              Take a virtual trip through the cosmos with the NASA Astronaut
+              Take a virtual trip through the cosmos with the NASA Astronomy
               Picture of the Day{" "}
               <span role="img" aria-label="go!">
                 🚀
