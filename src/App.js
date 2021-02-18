@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import "./App.css";
 import axios from 'axios';
 import TimeTravel from './Components/TimeTravel.js'
-
+import styled from 'styled-components'
 function App() {
   
   const baseUrl = 'https://api.nasa.gov/planetary/apod?api_key=UAznML7VzzxW9Uax4B6JloejqZNEpB0daySt1Usp'
@@ -20,7 +20,7 @@ function App() {
         setSummary(res.data.explanation)
         setVideo(res.data.media_type === 'video' ? res.data.url : undefined)
         setTitle(res.data.title)
-        setImage(res.data.url)
+        setImage(res.data.hdurl)
         console.log(image)
     }).catch(err => {
     console.log(err)
@@ -33,7 +33,7 @@ function App() {
 
   function theDate(){
     const today = new Date();
-    today.setDate(today.getDate() - 1)
+    today.setDate(today.getDate()-1)
     return today.toISOString().slice(0,10);
   } 
   console.log(theDate())
@@ -57,12 +57,15 @@ function App() {
     return setTdate(tomorrow.toISOString().slice(0,10))
   }
 
+  const Sapp = styled.div`
+  background-color:black;
+  `
 
 
   return (
-    <div className="App">
+    <Sapp className="App">
       <TimeTravel tdate = {tdate} past = {past} present = {present} future = {future} baseUrl = {baseUrl} toGetDate = {toGetDate} summary = {summary} video = {video} title = {title} image = {image} />
-    </div>
+    </Sapp>
   );
 }
 
