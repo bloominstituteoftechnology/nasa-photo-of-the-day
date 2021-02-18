@@ -83,7 +83,7 @@ function App() {
         alt="nebula sky"
       />
       <Container className=" container ">
-        <div className="justify-content-md-center jumbotron">
+        <div className="justify-content-md-center bg-dark jumbotron">
           <div className="App">
             <h1
               className="display-4"
@@ -96,12 +96,11 @@ function App() {
               src={nasalogo}
               alt="nasa logo"
               style={{
-                width: "50rem",
-                paddingTop: "2rem",
-                paddingBottom: "10%",
+                width: "100vw",
+                margin: '3rem 0'
               }}
             />
-            <h3>
+            <h3 style={{margin: '5rem 0'}}>
               Check back daily to see the mysteries of the cosmos courtesy of
               NASA
             </h3>
@@ -112,12 +111,12 @@ function App() {
                   className="mx-auto d-block img-fluid w-100"
                   src={astronaut}
                   alt="spaceman"
-                  style={{ paddingTop: "30%", paddingBottom: "3rem" }}
+                  style={{ margin: "5rem 0" }}
                 />
               </ParallaxProvider>
             </div>
             <p
-              className="text-dark txt"
+              className="text-light txt"
               style={{ paddingBottom: "20%", fontSize: "1.5rem" }}
             >
               Take a virtual trip through the cosmos with the NASA Astronomy
@@ -132,6 +131,7 @@ function App() {
                 className="mx-auto d-block img-fluid w-50 "
                 src={moon}
                 alt="moon over hawaii"
+                style={{margin: '1.5rem 0'}}
               />
               <p>A great shot of the moon over Honolulu, Hawaii</p>
             </div>
@@ -160,7 +160,7 @@ function App() {
 
           <div className='d-flex justify-content-center align-items-center flex-column'>
             <h1 style={{marginTop: '3rem', textAlign: 'center'}}>Mars Rover Images</h1>
-            <img src={cameraChart} alt='cam chart' style={{maxWidth: '70%'}} />
+            <img src={cameraChart} alt='cam chart' style={{maxWidth: '70%', boxShadow: '0 0 1.5rem black', marginTop: '3rem'}} />
             <div className='d-flex justify-content-center flex-column' style={{margin: '2rem 0 ', textAlign: 'center'}}>
               <label htmlFor='rover' style={{marginTop: '1rem'}}>Enter Rover name: </label>
             <input

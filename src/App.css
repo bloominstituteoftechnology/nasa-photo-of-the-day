@@ -10,7 +10,7 @@ hr {
 .App {
   text-align: center;
   font-family: 'Play', sans-serif;
-}
+  }
 
 .App-header {
   background-color: #282c34;
@@ -39,13 +39,17 @@ hr {
   height: 100%;
 }
 
+img {
+  box-shadow: 0 0 1.5rem black;
+}
+
 
 .container {
-  background-color: #aaa;
+  background-color: #222;
   padding-bottom: 5rem;
   padding-top: 1rem;
   opacity: 0.8;
-  color: black;
+  color: white;
 }
 
 .jumbotron {
