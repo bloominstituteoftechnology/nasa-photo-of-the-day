@@ -31,7 +31,7 @@ function App() {
     })
   }
   fetchData()
-},[day])
+},[day,month,year])
 
 
   // useEffect(()=>{
