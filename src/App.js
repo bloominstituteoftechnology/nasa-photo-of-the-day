@@ -1,11 +1,9 @@
 import React from "react";
-import "./App.css";
-import Header from "./Header";
-import Center from "./Center";
+import Header from "./components/Header";
+import Center from "./components/Center";
 import { useState, useEffect } from "react";
 import { API_KEY, BASE_URL } from "./constants";
 import axios from "axios";
-import "react-datepicker/dist/react-datepicker.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -49,24 +47,27 @@ function App() {
         "-" +
         ("0" + dateForm.getDate()).slice(-2)
     );
-    console.log(dateForm);
-    console.log(date);
-  }, [daysBehind]);
+  }, [daysBehind, date, dateForm]);
 
   return (
-    <div className="App">
-      <Header data={data} />
-      <img
-        src="http://logosvg.com/wp-content/uploads/2016/09/NASA_logo.png"
-        alt="NASA Logo"
-        style={{ alignSelf: "center", width: "125px", margin: "0", top: "0px" }}
-      />
-      <div style={{ display: "flex", alignSelf: "center" }}>
-        <button style={{ width: "100%" }} onClick={moveDate}>
-          See Another Photo
-        </button>
+    <div>
+      <div class="flex flex-col items-center">
+        <Header data={data} />
+        <img
+          class="w-1/12 m-6 "
+          src="http://logosvg.com/wp-content/uploads/2016/09/NASA_logo.png"
+          alt="NASA Logo"
+        />
+        <div>
+          <button
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded mb-8"
+            onClick={moveDate}
+          >
+            See Another Day
+          </button>
+        </div>
+        <Center data={data} isVideo={isVideo} />
       </div>
-      <Center data={data} isVideo={isVideo} />
     </div>
   );
 }
