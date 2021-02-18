@@ -4,7 +4,7 @@ import axios from "axios";
 
 export default function Details(props) {
     const { dataId} = props;
-    const [details, setDetails] = useState(null);
+    const [details, setDetails] = useState([]);
 
     useEffect(() => {
         const handleClick = (evt) => {
@@ -29,9 +29,9 @@ export default function Details(props) {
       });
 
     return () => {
-      console.log(`📲 old dataId was ${dataId}. This is cleanup`);
+      console.log(`📲 old dataId was ${details.url}. This is cleanup`);
     };
-  }, [dataId]);
+  }, [details.url]);
 
   return (
     <div className="container">

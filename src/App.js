@@ -21,7 +21,7 @@ function App() {
     };
     fetchPhoto();
    
-  }, []);
+  }, [photo]);
 
   const Photo = (props) => (
     <div className="friend">
