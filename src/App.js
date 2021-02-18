@@ -8,12 +8,14 @@ import Button from './components/button/button'
 
 function App() {
 
-  const [year, setYear] = useState('2021');
-  const [month, setMonth] = useState('01');
-  const [day, setDay] = useState('01');
+  const [year, setYear] = useState('2011');
+  const [month, setMonth] = useState('11');
+  const [day, setDay] = useState('1');
   const [pictureUrl,setPictureUrl] = useState('');
   const [explanation, setExplanation] = useState('');
   const [title, setTitle] = useState('');
+  const [videoUrl, setVideoUrl] = useState('');
+  const [media,setMedia] = useState('');
   
   useEffect(() =>{
   const fetchData = () => {
@@ -23,11 +25,13 @@ function App() {
       console.log(res);
       console.log(res.data);
       setPictureUrl(res.data.hdurl);
+      setVideoUrl(res.data.url);
+      setMedia(res.data.media_type)
       setExplanation(res.data.explanation);
       setTitle(res.data.title);
     })
     .catch(err => {
-        console.log(err)
+        console.log(`No data for this date!!!!!  ${err}`)
     })
   }
   fetchData()
@@ -40,7 +44,7 @@ function App() {
     dayH = document.querySelector('#textday').value;
     monthH = document.querySelector('#textmonth').value;
     yearH = document.querySelector('#textyear').value;
-    if (dayH>=1 && dayH<=31 && monthH>=1 && monthH<=12 && yearH>=2015 &&yearH<=2030){
+    if (dayH>=1 && dayH<=31 && monthH>=1 && monthH<=12 && yearH<=2021){
         setDay(dayH);
         setMonth(monthH);
         setYear(yearH);
@@ -57,7 +61,7 @@ function App() {
         app! Have fun <span role="img" aria-label='go!'>🚀</span>!
       </p>
       <TextOnTop title={title}/>
-      <Picture pictureUrl={pictureUrl} />
+      <Picture pictureUrl={pictureUrl} videoUrl={videoUrl} media={media}/>
       <MiddleText explanation={explanation} />
       <Button myFunction={myFunction}/>
     </div>
