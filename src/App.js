@@ -195,7 +195,7 @@ function App() {
  {/* /            {mars.map((item, idx) => {
               return <img key={idx} src={mars[idx].img_src} alt={mars.photos[idx].name} />
             })} */}
-            <img src={mars} alt='mars' style={{maxWidth: '100%', padding: '3rem 0'}}></img>
+            <img src={mars} alt='mars' style={{maxWidth: '100%', margin: '3rem 0'}}></img>
           </div>
 
           <div className="row" style={{ paddingTop: "7rem" }}>
