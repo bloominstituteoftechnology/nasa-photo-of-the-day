@@ -17,11 +17,10 @@ body {
   margin: 0 auto;
   border: 1px solid rgb(210, 210, 210);
   box-shadow: 0px 1px 6px -2px rgb(128, 127, 127);
-  border-radius: 8px;
   padding: 12px 16px 12px 16px;
 }
-.photo {
-
+.photo-frame {
+  padding: 10px;
 }
 
 .photo_img{
@@ -29,7 +28,8 @@ body {
   margin: 0 auto;
   width: 93%;
   box-shadow: 0px 1px 6px -2px slategray;
-  border-radius: 8px;
+  border: 2px solid #94cbe2;
+  padding: 10px;
 }
 
 #header {
@@ -41,7 +41,6 @@ body {
   background-color: #0093D2;
   color:white;
   text-align: center; 
-
 }
 .header-section h1{
   font-family: 'Montserrat', sans-serif;
@@ -49,10 +48,8 @@ body {
   font-weight: bold;
 }
 
-.header-section{
-  
+.header-section{  
   text-align: center;
- 
 }
 
 .content{
@@ -73,7 +70,7 @@ h3{
   text-align: center;
 }
 blockquote {
-  background-color: #84cceb;
+  border: 1px solid slategray;
   width: 50%;
 
 }
@@ -86,4 +83,21 @@ p{
 .details{
   padding: 12px 25px 12px 25px;
 
+}
+
+.footer{
+  background-color: #034561;
+  color: white;
+  margin: 0;
+}
+.footer-section{
+  width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+}
+.footer-section a{
+  color: #94cbe2;
+}
+.footer-section p{
+  text-align: center;
 }

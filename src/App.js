@@ -3,7 +3,8 @@ import './styles.css'
 import axios from "axios";
 import Details from './Details';
 import { BASE_URL, API_KEY} from './constants/index';
-import Header from './Header'
+import Header from './Header';
+import Footer from './Footer';
 
 function App() {
   const [photo, setPhoto] = useState([]);
@@ -24,31 +25,35 @@ function App() {
   }, [photo.id]);
 
   const Photo = (props) => (
-    <div className="photo">
+    <div className="photo-frame">
+      <div className="photo">
       <a href = {photo.url} >
         <img className="photo_img" src={photo.url} alt={photo.title} />
         </a>
+        </div>
     </div>
   );
 
   return (
+    <div>
+    <Header />
     <div className="container">
-      <Header />
       <div className="content">
       <h1>Astro Photo of the Day!</h1>
        <blockquote> 
          <h3>	{photo.title}:</h3>
-         </blockquote>
+        </blockquote>
         <div className="photo">
       {
-        
-         <Photo key={photo.id} info={photo} />
+        <Photo key={photo.id} info={photo} />
       }
       </div>
       {photo && (
         <Details data = {photo}  />
       )}
       </div>
+        </div>
+        <Footer />
     </div>
   );
 }
