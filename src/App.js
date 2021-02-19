@@ -1,7 +1,19 @@
-import React from "react";
 import "./App.css";
+import React, {useState, useEffect } from 'react';
+import axios from 'axios';
+import Pic from './components/Pic.js';
+
+
 
 function App() {
+  const [image, setImage] = useState([]);
+  useEffect(() => {
+    const nasaAPI = axios.get('https://api.nasa.gov/planetary/apod').then(res => {
+      console.log(res);
+    }
+    },
+    
+  }, [])
   return (
     <div className="App">
       <p>
