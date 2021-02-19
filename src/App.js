@@ -1,10 +1,20 @@
 import React,{useState, useEffect} from "react";
 import "./App.css";
 import axios from 'axios';
+import Image from './components/imageOnTop/imageOnTop';
 import TextOnTop from './components/topText/toptext';
 import Picture from './components/picture/picture';
 import MiddleText from './components/middleText/middletext';
 import Button from './components/button/button'
+import styled from "styled-components";
+
+
+const MainTheme = styled.div`
+background-color:${props => props.theme.primaryColor};
+font-family: sans-serif;
+color: ${props => props.theme.white};
+font-size:large;
+`;
 
 function App() {
 
@@ -20,7 +30,7 @@ function App() {
   useEffect(() =>{
   const fetchData = () => {
     axios
-    .get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${year}-${month}-${day}`)
+    .get(`https://api.nasa.gov/planetary/apod?api_key=HAnJQwlst6NnzPOlbmWX5uZdqJIGttsdyqBYaKe5&date=${year}-${month}-${day}`)
     .then(res => {
       console.log(res);
       console.log(res.data);
@@ -38,7 +48,6 @@ function App() {
 },[day,month,year])
 
 
-  // useEffect(()=>{
   const myFunction = () => {
     let dayH,monthH,yearH;
     dayH = document.querySelector('#textday').value;
@@ -51,20 +60,18 @@ function App() {
     }
     else(console.log('nothing!!!!!!'))
     }
-    // return myFunction
-  // },[])
+ 
 
   return (
+    <MainTheme>
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+      <Image />
       <TextOnTop title={title}/>
       <Picture pictureUrl={pictureUrl} videoUrl={videoUrl} media={media}/>
       <MiddleText explanation={explanation} />
       <Button myFunction={myFunction}/>
     </div>
+    </MainTheme>
   );
 }
 
