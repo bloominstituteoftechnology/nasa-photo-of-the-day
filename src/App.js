@@ -79,11 +79,19 @@ const H3 = styled.h3`
 const Blockquote = styled.blockquote`
   border: 1px solid slategray;
   width: 50%;
-
 `;
+
+const Styled = styled.div`
+color: red;
+`
+
+function Foo(props) {
+return <Styled>{props.children}</Styled>
+}
   return (
     <div>
     <Header />
+    <br></br>
     <Container>
       <Content>
       <H2>Astro Photo of the Day!</H2>
@@ -99,6 +107,7 @@ const Blockquote = styled.blockquote`
       )}
       </Content>
         </Container>
+        <br></br>
         <Footer />
     </div>
   );
