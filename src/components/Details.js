@@ -2,9 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 const ContainerDiv = styled.div`
-    width: 80%;
-    text-align:center;
-    
+    margin: 2rem;
+    text-align:justify;
 `
 
 
