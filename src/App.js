@@ -17,6 +17,7 @@ const [date, setDate] = useState(today);
 useEffect(() => {
 axios.get(`https://api.nasa.gov/planetary/apod?api_key=xW8tvx9T1fPT8yv72RGWnhqRzsemcqTAymQonuGb&date=${date}`)
 .then(res => {
+  console.log(res);
   setSpaceData(res.data)
 })
 .catch(err => console.log(err));
