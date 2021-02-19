@@ -1,13 +1,18 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const ContainerDiv = styled.div`
+    width: 80%;
+    text-align:center;
+    
+`
 
 
 const Details = props =>{
     
     const {data} = props
-
-    //Info of the photographer
     return (
-        <div className="container-fluid">
+        <ContainerDiv>
             <h2>The photographer is {data.copyright}</h2>
             {props &&
             <>
@@ -16,7 +21,7 @@ const Details = props =>{
             </>
             }
            
-        </div>
+        </ContainerDiv>
     )
 }
 

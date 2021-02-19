@@ -1,16 +1,9 @@
-import React, {useState} from 'react'
-import Details from './Details'
+import React from 'react'
 import Info from './Info'
 
-
 const Post = props => {  
-    
-   
+       
     const{url, data, setCurrentDate} = props
-
-   
-
-   
 
     return(
     <div className='container'>
@@ -19,9 +12,7 @@ const Post = props => {
         <img src={url} ></img>
       </div>
       <div>
-          <Info data={data} />
-          
-          
+          <Info data={data} />                    
       </div>
     </div>
   

@@ -1,5 +1,10 @@
 import React, {useState}  from 'react'
 import Details from './Details'
+import styled from 'styled-components'
+
+const StyledInfo = styled.div`
+  
+ `
 
 const Info = props => {  
 
@@ -10,14 +15,16 @@ const Info = props => {
 
     //this is the open button on the page
     return ( 
-      <div className='info'>
+      <StyledInfo>
+        <h2>The photographer is {data.copyright}</h2>
+        <button onClick={openButton}>
+              {openButton === false ? 'Show Details' : 'Hide Details'}
+        </button>
           {
             infoOpen && <Details data={data} />
           }
-          <button onClick={openButton}>
-              {openButton === false ? 'Show Details' : 'Hide Details'}
-          </button>
-      </div>)
+          
+      </StyledInfo>)
 }
 
   export default Info

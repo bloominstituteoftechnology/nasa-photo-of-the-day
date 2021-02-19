@@ -3,14 +3,12 @@ import "./App.css";
 import axios from 'axios'
 import Post from './components/Post'
 
-
 const API_KEY = `S4BSTHbyAzZp4XrreYaSUMkFEq1O7jPL0efEZT4B`;
-const baseURL = `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`
+const baseURL = `https://api.nasa.gov/planetary/apod?api_key=S4BSTHbyAzZp4XrreYaSUMkFEq1O7jPL0efEZT4B`
 
 function App() {
 
   const [currentDate, setCurrentDate] = useState({});
-
 
   useEffect(() =>{
     const fetchPhoto = () =>{
@@ -25,11 +23,8 @@ function App() {
     fetchPhoto();
   },[])
 
-  
-
   return (
     <div className="App">
-
       <Post url={currentDate.url} data={currentDate} setCurrentDate={setCurrentDate} />     
     </div>
   );
