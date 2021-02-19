@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { API_CODE } from "./constants/index";
 import axios from "axios";
-import './styles.css'
+import styled from 'styled-components';
+
 
 export default function Details(props) {
     const [details, setDetails] = useState([]);
@@ -26,23 +27,37 @@ export default function Details(props) {
     fontWeight: "bold",
     fontSize: "0.8rem"
   }
+const Details = styled.div`
+    padding: 12px 25px 12px 25px; 
+    `;
 
+  const Span = styled.span`
+  font-weight: bold;
+  font-size: 0.8rem;
+  `;
+
+  const P = styled.p`
+    font-family: 'Roboto', sans-serif;
+    font-weight: 350;
+    word-spacing: 3px;
+    text-align: justify
+  `;
   return (
-    <div className="details">
+    <Details>
     
       {details && (
         <>
-          <p>
+          <P>
            Published:  {details.date}  
-          </p>
-          <p>
-            <span style={style}>Source: {details.copyright}
-            </span>
-          </p>
-          <p>{details.explanation}</p>
+          </P>
+          <P>
+            <Span>Source: {details.copyright}
+            </Span>
+          </P>
+          <P>{details.explanation}</P>
      </>
       )}
       
-    </div>
+    </Details>
   );
 }
