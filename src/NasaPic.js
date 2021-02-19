@@ -9,7 +9,7 @@ function NasaPic(props) {
     else {
         return (
             <iframe 
-            src={props.spaceData.url} width={600} height={300}>
+            title={props.spaceData.title} src={props.spaceData.url} width={600} height={300}>
             </iframe>
         )
     }
