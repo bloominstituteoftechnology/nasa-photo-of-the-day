@@ -1,11 +1,19 @@
 import React from 'react';
 import "./App.css";
+import styled from 'styled-components';
+
+const StyledPicture = styled.div`
+border-top: ${props => props.theme.border};
+border-bottom: ${props => props.theme.border};
+padding: 20px;
+margin-top: 20px;
+`
 
 function Picture(props) {
     const {picData} = props;
 
     return (
-      <div className="App">
+      <StyledPicture className="App">
         <div>
           {picData.title}
         </div>
@@ -20,7 +28,7 @@ function Picture(props) {
         </div>
                      
 
-      </div>
+      </StyledPicture>
     );
 }
 export default Picture;
