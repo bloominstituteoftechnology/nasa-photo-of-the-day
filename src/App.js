@@ -10,8 +10,9 @@ const API_KEY = 'C1fqRgcG5cp1VtQ8rKju45mWqlLQfQ25X1kPLmuM'
 
   useEffect(() => {
 axios.get(`${BASE_URL}apod?api_key=${API_KEY}`)
-.then(({hdurl}) => setDailyImage(hdurl))
-}, [dailyImage])
+.then(res => setDailyImage(res.data.url)
+) }, [dailyImage])
+
 
   return (
     <div className="App">
