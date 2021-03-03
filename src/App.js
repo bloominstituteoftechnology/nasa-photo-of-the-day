@@ -1,31 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./App.css";
-import axios from 'axios';
-import { BASE_URL } from './constants/constants.js'
-import image from './assets/grapefruit-slice-332-332.jpg'
+import InfoContainer from './components/info_container.js';
+import NASAimage from './components/image.js'
+import Header from './components/header.js'
 
 function App() {
-  const [image, setImage] = useState();
-  const [explain, setExplain] = useState();
-  const [date, setDate] = useState();
-  const [title, setTitle] = useState();
 
-  useEffect(() => {
-    axios.get(`${BASE_URL}`)
-    .then(({ data }) => {
-      console.log(data)
-      setImage(data.url)
-      setExplain(data.explanation)
-      setTitle(data.title)
-      setDate(data.date)
-    });
-  }, []);
   return (
     <div className="App">
-    <img src={ image } />
-    <h2>{ title }</h2>
-    <p>{ date }</p>
-    <p>{ explain }</p>
+    <Header />
+    <NASAimage />
+    <InfoContainer />
+
     </div>
   );
 }
