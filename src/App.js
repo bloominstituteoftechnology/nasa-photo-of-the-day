@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Photo from './components/Photo'
 import Title from './components/Title'
 import Explanation from './components/Explanation'
+import Date from './components/Date'
 import axios from 'axios'
 import "./App.css";
 
@@ -22,6 +23,7 @@ function App() {
     <div className="App">
       <Header/>
       <Title title={photo.title}/>
+      <Date date={photo.date}/>
       <Photo url={photo.url}/> 
       <Explanation explanation={photo.explanation}/>
 
