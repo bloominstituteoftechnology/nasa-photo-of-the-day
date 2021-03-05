@@ -1,13 +1,18 @@
 import React from "react";
 import "./App.css";
+import InfoContainer from './components/info_container.js';
+import NASAimage from './components/image.js';
+import Header from './components/header.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+    <Header />
+    <NASAimage />
+    <InfoContainer />
+
     </div>
   );
 }

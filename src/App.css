@@ -1,7 +1,13 @@
 .App {
-  text-align: center;
+  margin: 0 30%;
 }
 
+@media screen and (max-width: 1200px) {
+  .App {
+    margin: 0 5%;
+  }
+}
+/*
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +41,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
