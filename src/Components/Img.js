@@ -1,5 +1,20 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import styled from 'styled-components'
+
+
+const StyledImg=styled.div`
+img{
+    border-radius: 20px;
+
+&:hover{
+  opacity: 50%;
+  
+  
+ 
+}
+}
+`
 
 const Img = () =>{
 const [img, setimg] = useState({})
@@ -12,10 +27,10 @@ const [img, setimg] = useState({})
     },[])
         
       return( 
-           <div>
+           <StyledImg>
                <img src = {img.url} alt = "" />
                
-           </div>
+           </StyledImg>
        )
       } 
    
