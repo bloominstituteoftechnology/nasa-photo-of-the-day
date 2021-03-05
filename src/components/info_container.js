@@ -16,10 +16,10 @@ function InfoContainer() {
     });
   });
   return (
-    <div>
-    <h2>{ title }</h2>
-    <p>{ date }</p>
-    <p>{ info }</p>
+    <div class="mr-5 ml-5">
+    <h2 class="text-center">{ title }</h2>
+    <p class="text-center font-weight-bold">{ date }</p>
+    <p class="text-center mr-5 ml-5 text-secondary">{ info }</p>
     </div>
   );
 }

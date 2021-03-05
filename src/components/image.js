@@ -14,11 +14,10 @@ function NASAimage() {
   }, []);
   return (
     <div>
-    <img src={ image } />
+    <img class="img-fluid mx-auto d-block shadow-lg mb-3" alt="NASA pic of the day" width="500" height="500" src={ image } />
     </div>
-  )
+  );
 
-}
-
+};
 
 export default NASAimage;
