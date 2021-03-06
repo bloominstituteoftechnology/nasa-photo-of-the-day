@@ -1,10 +1,10 @@
-import React, { useState, useEffect} from 'react';
-import axios from 'axios';
+import React from 'react';
+
   
 export default function Header(props){
-    console.log(props)
  return (
-     <>{props.title} </>
+
+     <><h1>{props.title} </h1></>
  )
 
 }

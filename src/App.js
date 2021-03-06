@@ -32,16 +32,9 @@ console.log(res)
   return (
     <div className="App" >
       < Header title = {todayPhotos.title}/>
-      <h1>
-        build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </h1>
-      <>
-        <Main image = {todayPhotos.hdurl}/>
-      </>
-      <>
-        <Footer footer = {todayPhotos.copyright}/>
-      </>
+      <Main image = {todayPhotos.url} info = {todayPhotos.explanation}/>
+      <Footer footer = {todayPhotos.copyright}/>
+      
     </div>
   );
 }
