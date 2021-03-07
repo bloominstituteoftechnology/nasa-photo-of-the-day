@@ -21,14 +21,6 @@ console.log(res)
 
 
 
-
-
-
-
-
-
-
-
   return (
     <div className="App" >
       < Header title = {todayPhotos.title}/>
