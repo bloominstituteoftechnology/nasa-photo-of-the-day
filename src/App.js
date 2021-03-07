@@ -24,11 +24,9 @@ function App() {
 
   return (
     <div className="App">
-      <Header title = {imageOfToday.title}/>
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+      <Header title = {imageOfToday.title} />
+      <Body image = {imageOfToday.url} info = {imageOfToday.explanation}/>
+      <Footer footer = {imageOfToday.copyright}/>
 
     </div>
   );
