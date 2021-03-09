@@ -1,16 +1,10 @@
 import React from 'react';
-import styled, {keyframes} from 'styled-components';
-const kd = keyframes`
-100% {
-    opacity: 1;
-}
+import styled from 'styled-components';
 
-`
 
 
 const Heade = styled.div`
-opacity: 0;
-animation: ${kd} 0.5s ease-out forward;
+
 background-color: ${props => props.theme.primaryColor};
 color: ${props => props.theme.fontColor};
 border: 1px solid #d2d2d2;

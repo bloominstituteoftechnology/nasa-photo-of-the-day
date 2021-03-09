@@ -1,15 +1,9 @@
 import React from 'react';
-import styled, {keyframes} from 'styled-components';
-const kl = keyframes`
-100% {
-   opacity: 1;
-}
+import styled from 'styled-components';
 
-`
 
 const Body = styled.div`
-opacity: 0;
-animation: ${kl} 0.5s ease-out forward;
+
 background-color: ${props => props.theme.dar};
 color: ${props => props.theme.white};
 
