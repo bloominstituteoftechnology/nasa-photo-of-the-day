@@ -108,6 +108,6 @@ Follow these steps for completing your project.
 
 - [ ] Submit a Pull-Request to merge Branch into `main` (student's Repository).
 
-----
+
 
 ## Part II - [Advanced Styling Techniques](DAY_TWO_README.md)

@@ -30,13 +30,3 @@ function App() {
 
 export default App;
 
-
-
-//     .get(`https://api.nasa.gov/planetary/apod?api_key=uptwa3GqYp2nlUdtNa7h2UO3nmQT8pBdgxWiU0Me`)
-//       .then(res => {
-//         setDetails(res.data)
-//       })
-//       .catch( err => {
-//         console.log(err);
-//       })
-//   }, [])
