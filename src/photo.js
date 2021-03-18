@@ -1,13 +1,13 @@
 import React from 'react'
 
-const Photo = (props) => {
+const help = (props) => {
 
-    const {data} = props
-    console.log(data)
+    const {help} = props
+    // console.log(data)
     return (
-            <img src={data.hdurl} alt=''></img>
+            <img src={help.hdurl} alt=''></img>
         )
     
 }
 
-export default Photo
+export default help
