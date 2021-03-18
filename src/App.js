@@ -3,7 +3,8 @@ import "./App.css";
 import axios from"axios"
 import Photo from"./photo"
 import Para from"./para"
-
+import Title from"./title"
+import Footer from"./Footer"
 
 function App() {
   const [details, setDetails] = useState([])
@@ -22,12 +23,15 @@ function App() {
   return (
     <div className="App">
       <header> 
-        <h1>{details.title}</h1>
+        <Title data={details}/>
       </header>
       <div className="imgPara">
         <Photo help={details}/>
         <Para data={details}/>
       </div>
+      <footer>
+        <Footer data={details}/>
+      </footer>
       
     </div>
   
