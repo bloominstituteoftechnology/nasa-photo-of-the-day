@@ -11,7 +11,7 @@ function App() {
     .get('https://api.nasa.gov/planetary/apod?api_key=NBcGHZZgey82OChKxtEQgJ6UFP6ps8VeXWXKycec')
     .then(res => {
       setDetails(res.data)
-      console.log(res.data.url)
+      console.log(res.data)
     })
     .catch(error => {
       console.log(error)
@@ -19,9 +19,6 @@ function App() {
   }, [])
   return (
     <div className="App">
-      <header> 
-        <h1>{details.title}</h1>
-      </header>
       <div className="imgPara">
         <Photo help={details}/>
       </div>

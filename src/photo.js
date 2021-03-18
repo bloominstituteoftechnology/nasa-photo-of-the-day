@@ -5,9 +5,10 @@ const {help} = props
 return (
     <div>  
     <header> 
-      <h1>{props.title}</h1>
+      <h1>{help.title}</h1>
     </header>
         <img src={help.hdurl} alt ='space'></img>
+        <p>{help.explanation}</p>
     </div>
 )
 }
