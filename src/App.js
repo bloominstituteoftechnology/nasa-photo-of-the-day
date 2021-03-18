@@ -27,14 +27,14 @@ function App() {
 
   return (
     <div className="App">
-      <h1 id="h1">OUTLANDIA</h1>
+      <h1 id="h1">NASAGRAM</h1>
       <div className="picDiv">
         <div className="pic">
           <img className="picpic" src={info.url}></img>
         </div>
       </div>
       <p> {info.explanation} </p>
-      <button onClick={() => (info.date)}>ANOTHER</button>
+      <button>ANOTHER</button>
     </div>
   );
 }
