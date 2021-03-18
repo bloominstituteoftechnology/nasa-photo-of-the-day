@@ -1,0 +1,36 @@
+.search-bar-wrapper {
+    border-bottom: 1px solid #3333;
+    height: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: row;
+    background: #fafafa;
+
+}
+.search-form {
+    width: 150px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.search-form input {
+    text-align: center;
+    color: #262626;
+}
+.social-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+.social {
+    width: 70px;
+}
+.social button {
+    margin-top: 10px;
+    color:  #e60d2e;
+    padding: 4px;
+    border-radius: 5px;
+    border-color:#ffffff;
+    background-color: #ffffff;
+    font-size: 18px;
+}
+
+  
