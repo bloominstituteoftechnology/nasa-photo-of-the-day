@@ -1,5 +1,5 @@
 
-# NASA APOD Part II - Advanced Styling Techniques
+# test NASA APOD Part II - Advanced Styling Techniques
 
 In this project you will refactor the styling you completed in the APOD app. You will style it using [Styled Components](https://github.com/LambdaSchool/nasa-photo-of-the-day.git), although you are welcome to _also_ use one or two [Reactstrap](https://reactstrap.github.io/) components if you wish.
 
@@ -21,7 +21,7 @@ This homework is a continuation of the work you have done previously.
 
 ### Task 2a: MVP Requirements
 
-- [ ] Style your app using styled-components.
+- [X] Style your app using styled-components.
 
 ### Task 3: Stretch Problems
 

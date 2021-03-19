@@ -2,7 +2,7 @@ export default {
     primaryColor: "royalblue",
     secondaryColor: "crimson",
     tertiaryColor: "mediumseagreen",
-    danger: "orange",
+    danger: "lime",
     black: "black",
     white: "white",
     }
