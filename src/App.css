@@ -1,6 +1,70 @@
+/* 🌸🌸🌸 Student Work 🌸🌸🌸 */
+
 .App {
-  text-align: center;
+  text-align: center; 
+  color: white;
+  font-family: 'Syne Mono', monospace;
 }
+
+html {
+  background-image: url('https://images.unsplash.com/photo-1505506874110-6a7a69069a08?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2468&q=80');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+
+
+img {
+  width: 50%;
+  border-radius: 20px;
+  border: 15px inset #A0A0A0;
+  animation: fadeIn ease 10s;
+  }
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+
+.text {
+  width: 70%;
+  margin: 0 auto;
+}
+
+
+/* make the <div> that the date is in smaller so the scroller does not go to the length of the screen. Something = to the length of the text??? */
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #A0A0A0; /* The typwriter cursor */
+  white-space: wrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 30s steps(40, end),
+    blink-caret .75s step-end infinite;
+  
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+
+
+
+
+
+/* Existing Lambda Work below */
 
 .App-logo {
   height: 40vmin;
@@ -14,7 +78,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #282C34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,7 +89,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #61DAFB;
 }
 
 @keyframes App-logo-spin {
