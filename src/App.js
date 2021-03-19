@@ -8,6 +8,7 @@ import Title from './Components/Title'
 import "./App.css";
 
 
+
 // declare the name of the Component and invoke it
 function App() {
   const [data, setData] = useState({})   // data is the declaration of an empty object that will be filled with the information from the API request below, and the master App Component will return the invocations of other components below... setData changes what is inside data, once it is fetched from the API, or if there is an event. 
@@ -24,7 +25,7 @@ const baseURL = 'https://api.nasa.gov/planetary/apod?api_key=1XcrC3xroozQArT3QJT
         console.log(err);
       })
   }, [])
-  
+
   // below is the return of all the components linked to this App. The invocations are in <JSX /> form, and must declare the prop needed =equal to= the API Keys' Value you want to use. 
 
   // all of the components need to be inside an <>empty</> div so that all of the components are returned inside on div itself, the App's output MUST be ONE thing. It can only return ONE THING.

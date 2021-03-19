@@ -1,12 +1,29 @@
 import React from "react";
+import styled from 'styled-components'
+
+
+// Styled Components are built outside of the component they serve
+// Capitalize the Styled Component
+// Dont forget semi-colons
+
+const StyledTitle = styled.h1`
+    color: #6CCAC7;
+    font-weight: bold;
+
+    &:hover {
+        color: #218683;
+    }
+`
+
+
 
 const Title = props => {
     const {title} = props
     return (
-        <h1>
+        <StyledTitle>
             {title}
-        </h1>
+        </StyledTitle>
     )
 }
 
-export default Title;
+export default Title

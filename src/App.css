@@ -1,5 +1,7 @@
+/* 🌸🌸🌸 Student Work 🌸🌸🌸 */
+
 .App {
-  text-align: center;
+  text-align: center; 
   color: white;
   font-family: 'Syne Mono', monospace;
 }
@@ -9,6 +11,14 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+
 
 img {
   width: 50%;
@@ -50,6 +60,11 @@ img {
 }
 
 
+
+
+
+
+/* Existing Lambda Work below */
 
 .App-logo {
   height: 40vmin;
