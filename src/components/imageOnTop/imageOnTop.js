@@ -2,8 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ImageDesign = styled.img`
-width:20%;
+width:30%;
 text-align:center;
+@media(max-width:1100px){
+    width:70%;
+}
 `;
 
 export default function Image(props){

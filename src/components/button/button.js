@@ -30,6 +30,12 @@ padding-bottom:10%;
 const Button = props => {
 const {myFunction} = props;
 
+document.onkeypress = (e => {
+  if (e.key === 'Enter'){
+    myFunction();
+  }
+})
+
     return(
           <Style>
       <div className="button">
@@ -44,7 +50,7 @@ const {myFunction} = props;
       <Form className="search-year">
         <input
           id="textyear"
-          placeholder="Year"
+          placeholder="Year" 
         />
       </Form>
       </div>

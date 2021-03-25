@@ -18,34 +18,43 @@ font-size:large;
 
 function App() {
 
-  const [year, setYear] = useState('2011');
-  const [month, setMonth] = useState('11');
-  const [day, setDay] = useState('1');
+  const yearRandom = Math.floor(Math.random()*24 + 1996);
+  const monthRandom = Math.floor(Math.random()*11 + 1);
+  const dayRandom = Math.floor(Math.random()*30 +1);
+
+  const [year, setYear] = useState(yearRandom);
+  const [month, setMonth] = useState(monthRandom);
+  const [day, setDay] = useState(dayRandom);
+  const [date, setDate] = useState('');
   const [pictureUrl,setPictureUrl] = useState('');
   const [explanation, setExplanation] = useState('');
   const [title, setTitle] = useState('');
   const [videoUrl, setVideoUrl] = useState('');
   const [media,setMedia] = useState('');
+  const [isTrue,setIsTrue] = useState(false);
+
+
   
   useEffect(() =>{
   const fetchData = () => {
     axios
     .get(`https://api.nasa.gov/planetary/apod?api_key=HAnJQwlst6NnzPOlbmWX5uZdqJIGttsdyqBYaKe5&date=${year}-${month}-${day}`)
     .then(res => {
-      console.log(res);
-      console.log(res.data);
+      // console.log(res);
+      // console.log(res.data);
       setPictureUrl(res.data.hdurl);
       setVideoUrl(res.data.url);
       setMedia(res.data.media_type)
       setExplanation(res.data.explanation);
       setTitle(res.data.title);
+      setDate(res.data.date);
     })
     .catch(err => {
         console.log(`No data for this date!!!!!  ${err}`)
     })
   }
   fetchData()
-},[day,month,year])
+},[day,month,year,date])
 
 
   const myFunction = () => {
@@ -53,22 +62,38 @@ function App() {
     dayH = document.querySelector('#textday').value;
     monthH = document.querySelector('#textmonth').value;
     yearH = document.querySelector('#textyear').value;
+
+   for (let i=1;i<10;i++){
+     if (dayH === '0' + i){
+       dayH=i;
+     };
+   }
+   for (let i=1;i<10;i++){
+    if (monthH === '0' + i){
+      monthH=i;
+    };
+  }
+
     if (dayH>=1 && dayH<=31 && monthH>=1 && monthH<=12 && yearH<=2021){
         setDay(dayH);
         setMonth(monthH);
         setYear(yearH);
     }
-    else(console.log('nothing!!!!!!'))
+    else{
+      console.log('nothing!!!!!!');
+    alert(`Error!
+    We can't find a picture for this date or this date doesn't exist. Please enter a new date.`)}
     }
+    
  
 
   return (
     <MainTheme>
     <div className="App">
       <Image />
-      <TextOnTop title={title}/>
+      <TextOnTop title={title} date={date}/>
       <Picture pictureUrl={pictureUrl} videoUrl={videoUrl} media={media}/>
-      <MiddleText explanation={explanation} />
+      <MiddleText explanation={explanation} isTrue={isTrue} setIsTrue={setIsTrue}/>
       <Button myFunction={myFunction}/>
     </div>
     </MainTheme>

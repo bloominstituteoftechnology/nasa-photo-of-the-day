@@ -1,10 +1,14 @@
-import React,{useState,useEffect} from 'react';
+import React from 'react';
 import ReactPlayer from 'react-player';
 import styled from 'styled-components';
 
 
 const MainPicStyle = styled.img`
-width:60%;
+width:50%;
+
+@media(max-width:1000px){
+  width:100%;
+}
 `
 const VideoStyle = styled.div`
 text-align:center;
@@ -24,13 +28,14 @@ margin: 0 auto;
   left: 0;
 }
 
-@media (max-width: 900px){
+@media (max-width: 1100px){
     width:70%;
 }
 `
 
 const Picture = props => {
     const {pictureUrl,videoUrl,media} = props;    
+   
     if (media === 'video'){
     return (
         <VideoStyle>
