@@ -3,28 +3,31 @@ import "./DataMain.css"
 import styled from "styled-components";
 
 const Container =styled.div`
-display: flex;
-max-width: 1295px;
-margin-right: auto;
+margin-right: auto; 
 margin-left: auto;
+display: grid;
+grid-template-columns: 2fr 400px;
+grid-auto-rows: max(300px, auto);
+
 `
 
 const StyledDiv = styled.div`
 position: relative;
-display: inline-block;
+display: block;
 `;
 
 const StyledImage = styled.img`
-max-width: 70%;
+max-width: 80%;
 max-height: auto;
-align-items: center;
+grid-column: 1 ;
+grid-row: 1;
 `;
 
 const ExplainP = styled.p`
 color: white;
 margin-bottom: auto;
-margin-top: 80px;
-width: 30%;
+margin-top: 2%;
+width: 80%;
 background-color: #4682B4;
 padding: 10px;
 `;
@@ -39,27 +42,36 @@ left: 0;
 right: 0;
 top: 0%; 
 text-align: center;
-width: 60%;
+width: 80%;
 background-color: white;
-opacity: 70%;
-
+opacity: 65%;
 `
+
+const TodayDate = styled.h2`
+font-size: 14px;
+background-image: url('https://www.jpl.nasa.gov/images/earth/20200416/EarthRise-main-16.jpg');
+text-decoration:underline; 
+padding: 100px;
+background-size: 150%;
+border: 2px solid #696969;
+margin-left: 30%;
+`;
 
 function DataMain (props) {
 
     return (
         <Container>
-
             <StyledDiv>
                 <AboutTitle>
                     {props.data.title}
                     <br></br>
-                    {props.data.date}
                 </AboutTitle>
             <StyledImage src ={props.data.url} alt="nasa daily"></StyledImage>
             </StyledDiv>
-
+ 
         <ExplainP>{props.data.explanation}</ExplainP>
+
+        <TodayDate>Todays Date :<br></br> {props.data.date}</TodayDate>
         </Container>
     )
 }

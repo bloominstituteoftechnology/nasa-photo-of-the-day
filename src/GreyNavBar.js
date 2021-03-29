@@ -7,19 +7,20 @@ background-color: #696969;
 display:flex;
 justify-content: center;
 align-items: center;
-margin-left: 550px;
+margin-left: 400px;
 margin-bottom: 50px;
-width: 50%;
+width: 60%;
 padding: 10px;
 
 `;
 
 const SecondLinks =styled.a`
+text-align: center;
 color: white;
 margin: 5px;
 text-decoration: none;
 font-size: 14px;
-border-right: 1px solid #C0C0C0;
+border-right: 2px solid #C0C0C0;
 padding-right: 5px;
 :hover {
     background-color: grey;

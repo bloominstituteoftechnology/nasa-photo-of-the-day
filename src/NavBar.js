@@ -29,7 +29,7 @@ margin-top: 20px;
 }
 `
 const NasaLogo = styled.img`
-max-width:200px;
+max-width:100px;
 align-items:center;
 margin-right: 60px;
 `
@@ -37,7 +37,7 @@ function NavBar() {
     return (
         <div>    
         <NavBarDiv>
-            <NasaLogo src = "./logo.jpg"></NasaLogo>
+            <NasaLogo src = "./Logo.png"></NasaLogo>
             <Links href="">Missions |</Links>
             <Links href="">Galleries |</Links>
             <Links href="">NASA TV |</Links>
