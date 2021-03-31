@@ -1,13 +1,13 @@
-import React from "react";
+import React , {useEffect, useState} from "react";
 import "./App.css";
+import Details from './Details'
 
 function App() {
+  
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+     <h1>Awsome picture from NASA</h1>
+     <Details />
     </div>
   );
 }
