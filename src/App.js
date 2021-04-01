@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Photo from "./Photo.js";
 import "./App.css";
 
 function App() {
@@ -21,11 +22,7 @@ function App() {
   console.log(data);
   return (
     <div className="App">
-      <img href={data.url}></img>
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+      <Photo photo={data}/>
     </div>
   );
 }
