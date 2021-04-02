@@ -1,12 +1,12 @@
 import React from "react";
-import "./App.css";
 import NasaPhoto from "./NasaPhoto";
+import {AppContainer} from './Styles'
 
 function App() {
   return (
-    <div className="App">
+    <AppContainer>
       <NasaPhoto />
-    </div>
+    </AppContainer>
   );
 }
 

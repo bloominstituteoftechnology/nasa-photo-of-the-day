@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "../src/NasaPhoto.css";
+import { InfoContainer, MediaSummary } from "./Styles";
 
 const NasaPhoto = () => {
   const [photoData, setPhotoData] = useState("");
@@ -20,13 +20,23 @@ const NasaPhoto = () => {
   }, []);
 
   return (
-    <div className="container">
+    <InfoContainer>
       <h1>{photoData.title}</h1>
       <p>{photoData.data}</p>
-      <img src={photoData.url} alt={photoData.title} />
-      <p>{photoData.explanation}</p>
+      {/* render photo conditionally */}
+      {photoData.media_type === "video" ? (
+        <iframe
+          src={photoData.url}
+          type={photoData.media_type}
+          width="680px"
+          height="480px"
+        />
+      ) : (
+        <img src={photoData.url} alt={photoData.title} />
+      )}
+      <MediaSummary>{photoData.explanation}</MediaSummary>
       <p>{photoData.copyright}</p>
-    </div>
+    </InfoContainer>
   );
 };
 
