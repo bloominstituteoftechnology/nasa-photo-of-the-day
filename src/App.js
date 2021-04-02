@@ -1,13 +1,17 @@
-import React , {useEffect, useState} from "react";
+import React from "react";
 import "./App.css";
-import Details from './Details'
+import HeaderComponent from './components/HeaderComponent'
+import Details from './components/Details'
+import RoverPhotoComponent from './components/RoverPhotoComponent'
+import {Button} from 'reactstrap'
 
 function App() {
   
   return (
     <div className="App">
-     <h1>Awsome picture from NASA</h1>
+     <HeaderComponent />
      <Details />
+     <RoverPhotoComponent />
     </div>
   );
 }
