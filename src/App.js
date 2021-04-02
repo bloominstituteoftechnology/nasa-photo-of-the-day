@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from  'React';
 import "./App.css";
+import index from  './index'
 import Gallery from './gallery'
 import Header from './header'
 import Details from './details'
@@ -25,10 +26,7 @@ function App() {
 
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+      
       <Header headerData={data}/>
       <Gallery imgData={data}/>
       <Details info={data}/>
