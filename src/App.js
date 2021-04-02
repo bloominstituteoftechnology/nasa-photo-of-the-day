@@ -1,13 +1,17 @@
 import React from "react";
 import "./App.css";
+import HeaderComponent from './components/HeaderComponent'
+import Details from './components/Details'
+import RoverPhotoComponent from './components/RoverPhotoComponent'
+import {Button} from 'reactstrap'
 
 function App() {
+  
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+     <HeaderComponent />
+     <Details />
+     <RoverPhotoComponent />
     </div>
   );
 }
