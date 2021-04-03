@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
+import styled from "styled-components";
 
 function App() {
 	const API_KEY = "uEjFKZiKGM7fqna0nF87RUGCZjH45AXCzJyF9S82";
@@ -20,6 +21,7 @@ function App() {
 	];
 	const [data, setData] = useState({});
 	const [request, setRequest] = useState(null);
+	const [msg, setMsg] = useState("");
 
 	useEffect(() => {
 		axios
@@ -34,25 +36,40 @@ function App() {
 				setRequest(true);
 			})
 			.catch((error) => {
-				console.log(error);
+				console.log(error.results.data.message);
+				setMsg(error.results.data.message);
 				setRequest(false);
 			});
 	}, []);
+
+	const Image = styled.img`
+		height: 300px;
+		width: 300px;
+	`;
+
+	const Content = styled.div`
+		width: 60%;
+		margin: auto;
+	`;
+
+	const Paragraph = styled.p`
+		text-align: center;
+	`;
 
 	return (
 		<div className="App">
 			{request === false ? (
 				<div>
-					<h1>Request failed. Check console</h1>
+					<h1>Request failed. {msg}</h1>
 				</div>
 			) : (
-				<div>
+				<Content>
 					<h1>Astronomy Picture of the Day</h1>
 					<p>{data.date}</p>
-					<img alt="nasa" src={data.url} />
+					<Image src={data.url} alt="Nasa" />
 					<h2>{data.title}</h2>
-					<p>{data.explanation}</p>
-				</div>
+					<Paragraph>{data.explanation}</Paragraph>
+				</Content>
 			)}
 		</div>
 	);
