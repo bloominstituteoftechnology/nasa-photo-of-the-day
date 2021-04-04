@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import axios from "axios";
+import {Wrapper, Photo, Text} from "./Styles"
 
 const NasaPhoto = function(){
   const [nasaData, setNasaData] = useState("");
@@ -21,12 +22,13 @@ const NasaPhoto = function(){
   console.log(nasaData);
 
   return (
-    <div>
-      <img src={nasaData.data.url} />
-      <h1>{nasaData.data.title}</h1>
-      <p>{nasaData.data.explanation}</p>
-      <h4>&copy; {nasaData.data.copyright}</h4>
-    </div>
+    <Wrapper>
+      <h1>Nasa Photo Of The Day</h1>
+      <Photo src={nasaData.data.url} alt={nasaData.data.title} />
+      <h2>{nasaData.data.title}</h2>
+      <Text>{nasaData.data.explanation}</Text>
+      {nasaData.data.copyright ? <h4> &copy; {nasaData.data.copyright}</h4> : <h4>Photographer unknown</h4>}
+    </Wrapper>
   )
 }
 
