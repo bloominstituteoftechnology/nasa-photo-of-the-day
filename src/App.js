@@ -10,6 +10,7 @@ function App() {
     try {
       const res = await axios.get(url);
       const picture = await res.data;
+      console.log(picture)
       setData(picture);
     } catch(err) {
       console.log(err)
