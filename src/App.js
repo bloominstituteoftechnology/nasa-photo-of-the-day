@@ -24,6 +24,10 @@ function App() {
   return (
     <div className="App">
       <Image picOfTheDay={nasaData.url} />
+      <Body title={nasaData.title} 
+      explanation={nasaData.explanation}
+      date={nasaData.date}
+     />
 
     </div>
   )
