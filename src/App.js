@@ -24,7 +24,7 @@ function App() {
 
   }
 
-  list.push(current.day.toString());
+  list.push(current.day.toString().match(/^[0-9]$/) ? '0' + current.day.toString() : current.day.toString());
 
   // console.log(list);
 
@@ -69,7 +69,7 @@ function App() {
         app! Have fun <span role="img" aria-label='go!'>🚀</span>!
       </p>
       {Dropdown({ date, setDate, list, current })}
-      {Image(data)}
+      {Image({ url: data.url })}
     </div>
   );
 }

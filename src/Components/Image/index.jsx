@@ -1,9 +1,9 @@
 import React from 'react';
 import './index.css';
 
-const Image = (data) => {
+const Image = (props) => {
 
-  const { url } = data;
+  const { url } = props;
 
   return (
     <div className="Image">
