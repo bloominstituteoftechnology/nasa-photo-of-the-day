@@ -8,7 +8,7 @@ import styled from 'styled-components';
 const BodyDiv = styled.div`
 margin: auto%;
 padding: 3%;
-background-image: linear-gradiant(#000, #4d4c4c, #a8a3a3); 
+background-color: #6a7a94; 
 text-align: center;
 `;
 

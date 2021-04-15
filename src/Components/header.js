@@ -11,7 +11,7 @@ text-align: center;
 
 
  function Head(props) {
-    const {data} = [props]
+    // const {data} = [props]
 
     
     return (
