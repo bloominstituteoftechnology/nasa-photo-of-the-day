@@ -1,14 +1,14 @@
 import React, {useState, useEffect} from "react";
 import "./App.css";
-import Header from './Components/header';
+import Head from './Components/header';
 import Body from './Components/body';
 import axios from 'axios';
 import styled from 'styled-components';
 
-const bodyDiv = styled.div`
-margin: 2%;
+const BodyDiv = styled.div`
+margin: auto%;
 padding: 3%;
-background-color: #5577aa; 
+background-image: linear-gradiant(#000, #4d4c4c, #a8a3a3); 
 text-align: center;
 `;
 
@@ -28,10 +28,10 @@ useEffect(() => {
 }, []);
 
   return (
-    <bodyDiv className="App">
-    <Header data={nasaData}/>
+    <BodyDiv className="App">
+    <Head data={nasaData}/>
     <Body data = {nasaData}/>
-    </bodyDiv>
+    </BodyDiv>
   );
 }
 
