@@ -21,6 +21,10 @@ const StyledBody = styled.div`
   h1 {
     font-weight: bold;
   }
+
+  p:nth-of-type(2) {
+    color: ${pr => pr.theme.white};
+  }
     
   
 `
