@@ -1,18 +1,14 @@
-import React from 'react'
+import React from "react";
 
-const Body = (props) => {
-const { title, explanation, date} = props;
-
-return (
+const Body = ( { title, explanation, date } ) => {
+  
+  return (
     <div>
-        <h1>{title}</h1>;
-        <p>{explanation}</p>;
-        <p>{date}</p>
+      <h1>{title}</h1>
+      <p>{explanation}</p>
+      <p>{date}</p>
     </div>
-)
+  );
+};
 
-}
-
-
-
-export default Body
+export default Body;

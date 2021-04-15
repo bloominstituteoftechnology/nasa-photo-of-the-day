@@ -1,36 +1,28 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import axios from 'axios';
-import {NASA_URL} from '../src/index'
-import  Image  from './components/Image'
-import Body from './components/Body'
+import axios from "axios";
+import { NASA_URL } from "../src/index";
+import Card from "./components/Card";
 
 function App() {
-  const [nasaData, setNasaData] = useState([])
+  const [nasaData, setNasaData] = useState(null);
 
   useEffect(() => {
     axios
       .get(NASA_URL)
       .then((res) => {
-        setNasaData(res.data)
+        setNasaData(res.data);
       })
       .catch((err) => {
-        return err
-      })
-  }, [])
-    
-  console.log(nasaData);
+        return err;
+      });
+  }, []);
 
   return (
     <div className="App">
-      <Image picOfTheDay={nasaData.url} />
-      <Body title={nasaData.title} 
-      explanation={nasaData.explanation}
-      date={nasaData.date}
-     />
-
+      <Card nasaData={nasaData} />
     </div>
-  )
+  );
 }
 
 export default App;
