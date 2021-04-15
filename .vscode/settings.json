@@ -1,0 +1,8 @@
+{
+    "powermode.presets": "flames",
+    "powermode.shakeIntensity": 1,
+    "powermode.enableStatusBarComboTimer": false,
+    "powermode.enableStatusBarComboCounter": false,
+    "powermode.enableShake": false,
+    "powermode.explosionFrequency": 1
+}
