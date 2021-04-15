@@ -1,16 +1,31 @@
 import React from 'react';
-import './index.css';
+
+import styled from 'styled-components';
+
+const StyledContainer = styled.div`
+  // background-color: lightgray;
+`;
+
+const StyledAnchor = styled.a`
+  // width: 100%;
+`;
+
+const StyledImage = styled.img`
+  width: 1010px;
+  margin-bottom: -4px;
+  box-shadow: 0 0 10px #000000;
+`;
 
 const Image = (props) => {
 
   const { url } = props;
 
   return (
-    <div className="Image">
-      <a href={url}>
-        <img src={url} alt='NASA' />
-      </a>
-    </div>
+    <StyledContainer className="Image">
+      <StyledAnchor href={url} target='_blank'>
+        <StyledImage src={url} alt='NASA' />
+      </StyledAnchor>
+    </StyledContainer>
   );
 
 };

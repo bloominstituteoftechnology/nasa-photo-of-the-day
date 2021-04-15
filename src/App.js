@@ -5,17 +5,19 @@ import Axios from 'axios';
 
 import { API_KEY } from './Configuration/Key.json';
 
+import Nav from './Components/Nav';
 import Image from './Components/Image';
 import Dropdown from './Components/Dropdown';
+import Footer from './Components/Footer';
 
 function App() {
 
   const list = [];
 
   const current = {
-    year: new Date().getFullYear(),
+    year: new Date().getFullYear().toString(),
     month: (new Date().getMonth() + 1).toString().match(/^[0-9]$/) ? '0' + (new Date().getMonth() + 1).toString() : (new Date().getMonth() + 1).toString(),
-    day: new Date().getDate()
+    day: new Date().getDate().toString()
   };
 
   for (let i = 1; i <= current.day; i++) {
@@ -64,12 +66,14 @@ function App() {
 
   return (
     <div className="App">
-      <p>
+      {/* <p>
         Read through the instructions in the README.md file to build your NASA
         app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
-      {Dropdown({ date, setDate, list, current })}
+      </p> */}
+      {Nav()}
       {Image({ url: data.url })}
+      {Dropdown({ date, setDate, list, current })}
+      {Footer()}
     </div>
   );
 }
