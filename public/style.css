@@ -1,0 +1,12 @@
+* {
+	font-family: sans-serif;
+}
+
+.profile {
+	display: flex;
+}
+
+.profile img {
+	height: 100px;
+	border-radius: 100%;
+}
