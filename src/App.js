@@ -3,6 +3,8 @@ import "./App.css";
 import Header from './Components/header';
 import Body from './Components/body';
 import axios from 'axios';
+import styled from 'styled-components';
+
 
 function App() {
 const [nasaData, setNasaData] = useState([]);

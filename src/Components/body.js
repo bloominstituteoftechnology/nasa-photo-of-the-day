@@ -1,5 +1,7 @@
 // import App from 'App.js';
 import React from 'react';
+import styled from 'styled-components';
+
 
 function Body(props) {
     const {data} = props
