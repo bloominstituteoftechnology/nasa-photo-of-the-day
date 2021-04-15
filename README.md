@@ -27,37 +27,38 @@ In this project you will build out a application to show the NASA photo of the d
 
 This project was put together using create-react-app (CRA). You will not need to install CRA in order to make this project work. Follow the steps below to setup the project with the proper dependencies.
 
-- [ ] Create a forked copy of this project.
-- [ ] Clone your OWN version of the repository in your terminal
-- [ ] Download project dependencies by running `npm install`
-- [ ] Start up the app using `npm start`
-- [ ] Create a new branch: `git checkout -b <firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+- [ 1] Create a forked copy of this project.
+- [2 ] Clone your OWN version of the repository in your terminal
+- [3 ] Download project dependencies by running `npm install`
+- [4 ] Start up the app using `npm start`
+- [ 5] Create a new branch: `git checkout -b <firstName-lastName>`.
+- [ 6] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
 - [ ] Push commits: `git push origin <firstName-lastName>`.
 
 ### Task 2: MVP
 
 **Planning**
 
-- [ ] If you want, this is the time to make a simple design spec (look up ["simple wireframes"](https://www.google.com/search?q=simple+wireframes) to find resources & examples). **A pen & paper sketch (or outline) is often the fastest way to start your planning.**
-- [ ] Once you have a design plan in mind, break down the designs into individual components.
-- [ ] Plan which components will hold state, what data each needs from props (if any), and where you will be making your data fetch.
-- [ ] Now it's time to jump into the code!
+- [ 1] If you want, this is the time to make a simple design spec (look up ["simple wireframes"](https://www.google.com/search?q=simple+wireframes) to find resources & examples). **A pen & paper sketch (or outline) is often the fastest way to start your planning.**
+- [ 2] Once you have a design plan in mind, break down the designs into individual components.
+- [3 ] Plan which components will hold state, what data each needs from props (if any), and where you will be making your data fetch.
+- [ 4] Now it's time to jump into the code!
 
 **File structure**
 
-- [ ] Take a look at your planned components. Create the folders and files you need for each component.
-- [ ] Leave most of them blank for now - you need to get your data from the API before you can really get these built.
+- [ 5] Take a look at your planned components. Create the folders and files you need for each component.
+- [] Leave most of them blank for now - you need to get your data from the API before you can really get these built.
 
 **Fetching the Data**
 
-- [ ] In `App.js` (or where ever you wanted to fetch the data) add state for the data you'll be getting from NASA.
-- [ ] Add an effect hook to handle the API call side effect.
-- [ ] Go to the [NASA APOD API docs](https://api.nasa.gov/#apod) and read through the docs to see how to make the API call.
-- [ ] You don't _need_ an API key. However you may need one if you exceed the API request limits.
-- [ ] Using the endpoint given, fetch the data using `axios`.
-- [ ] In your `.then()` make sure to `console.log` the response so you can look at the shape of the data. 😃
-- [ ] Before you add your data to state, make sure your effect hook has a dependency array (probably empty, since we don't want this effect synced up to any state/props), otherwise you will start an **infinite loop, and you will exceed the API rate limits of the DEMO_KEY and need to use a real API_KEY.**
+- [ 6] In `App.js` (or where ever you wanted to fetch the data) add state for the data you'll be getting from NASA.
+- [ ] Add an effect hook to handle the
+https://api.nasa.gov/#apod) API call side effect.
+- [ 1] Go to the [NASA APOD API docs]( and read through the docs to see how to make the API call.
+- [ 2] You don't _need_ an API key. However you may need one if you exceed the API request limits.
+- [ 3] Using the endpoint given, fetch the data using `axios`.
+- [ 4] In your `.then()` make sure to `console.log` the response so you can look at the shape of the data. 😃
+- [ 5] Before you add your data to state, make sure your effect hook has a dependency array (probably empty, since we don't want this effect synced up to any state/props), otherwise you will start an **infinite loop, and you will exceed the API rate limits of the DEMO_KEY and need to use a real API_KEY.**
 
 DEMO KEY rate limits:
 
@@ -69,7 +70,7 @@ _Note: if the photo url is NOT a photo, you will need to learn how to display a 
 
 **Adding the Data to State**
 
-- [ ] Once you have made the call correctly, and logged the data, add the data to the state property you built.
+- [ 1] Once you have made the call correctly, and logged the data, add the data to the state property you built.
 
 **Display the Data**
 Now is the time to build out your other components. Compose your UI, and then pass the data to your children components via props so you can render it on the DOM.
