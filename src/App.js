@@ -5,24 +5,24 @@
 // STEP 5: useEffect IS NECESSARY FOR IMPORTING API'S, AXIOS USED. LINE 23
 // STEP 6: LINE 26 IS HOW WE ARE CALLING AND PUSHING DATA INTO OUR EMPTY ARRAY CREATED IN LINE 20.  
 // STEP 7: RETURN ALL THE COMPONENTS WE HAVE CREATED. <componentName props={data.url}/> *ORDER SPECIFIC* LINES 42 - 46
+// STEP 8: MOVE TO OUR COMPONENT THAT COMES FIRST, IN THIS INSTANCE IMAGE.
 
 import React, {useState, useEffect} from "react";
-import "./App.css";
+import axios from 'axios';
 import Image from './components/Image';
 import Title from './components/Title';
 import Description from './components/Description';
 import Date from './components/Date';
 import Copyright from './components/Copyright';
-import axios from 'axios';
-
+import "./App.css";
 
 
 function App() {
-  const [data, setData] = useState({});
+  const [data, setData] = useState({})
   
   useEffect(() => {
-    axios 
-      .get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
+    axios
+      .get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
       .then((results) => {
         setData(results.data)
       })
@@ -31,19 +31,13 @@ function App() {
       })
   }, []);
 
-
-
-
-
-
-
   return (
     <div className="App">
-      <Image image= {data.url}/>
-      <Title title= {data.title}/>
-      <Description description= {data.explanation}/>
-      <Date date= {data.date}/>
-      <Copyright copyright= {data.copyright}/>
+      <Image image={data.url}/>
+      <Title title={data.title}/>
+      <Description description={data.explanation}/>
+      <Date date={data.date}/>
+      <Copyright copyright={data.copyright}/>
     </div>
   );
 }
