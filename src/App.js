@@ -5,7 +5,7 @@ import { useState } from "react";
 import axios from "axios";
 import UpperSection from "./components/UpperSection";
 import LowerSection from "./components/LowerSection";
-import Pictures from "./components/Pictures";
+
 
 // Beginning of WebPage
 function App() {
@@ -17,6 +17,7 @@ function App() {
     axios
     .get('https://api.nasa.gov/planetary/apod?api_key=v6KZ17xVdXHN6V6TWPzbPFWqRLwVSiHl5GgNpXe4')
     .then(res => {
+      
       console.log(res.data);
       setData(res.data);
       setImg(res.data.hdurl);
