@@ -6,7 +6,10 @@ const h1Style = styled.h1 `
 font-weight: bold;
 font-size: 1.2rem;
 color: grey;
+text-align: center;
 `;
+
+
  function Head(props) {
     const {data} = [props]
 

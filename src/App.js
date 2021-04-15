@@ -9,6 +9,7 @@ const bodyDiv = styled.div`
 margin: 2%;
 padding: 3%;
 background-color: #5577aa; 
+text-align: center;
 `;
 
 function App() {

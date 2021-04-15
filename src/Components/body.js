@@ -3,16 +3,16 @@ import React from 'react';
 import styled from 'styled-components';
 
 const styleP = styled.p`
-margin: 3%;
-padding: 2%;
+margin: 5px;
+padding: 3px;
 width: 75%;
 color: grey;
 text-align: center;
+line-height:  1.5;
 `;
 const divBody = styled.div`
 width: 75%;
-display: flex;
-justify-content: space-around;
+text-align: center;
 `;
 
 
