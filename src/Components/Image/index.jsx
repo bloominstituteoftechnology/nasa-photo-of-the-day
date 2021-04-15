@@ -11,9 +11,9 @@ const StyledAnchor = styled.a`
 `;
 
 const StyledImage = styled.img`
-  width: 1010px;
+  width: calc(1000px + ${pr => pr.theme.space});
   margin-bottom: -4px;
-  box-shadow: 0 0 10px #000000;
+  box-shadow: 0 0 ${pr => pr.theme.space} ${pr => pr.theme.black};
 `;
 
 const Image = (props) => {

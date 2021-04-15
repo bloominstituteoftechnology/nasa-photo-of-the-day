@@ -14,8 +14,8 @@ const StyledContainer = styled.div`
 `;
 
 const StyledLabel = styled.div`
-  color: #FFFFFF;
-  background-color: #202020;
+  color: ${pr => pr.theme.white};
+  background-color: ${pr => pr.theme.background};
   cursor: pointer;
   padding: 5px;
   margin: 0 auto;
@@ -37,15 +37,15 @@ const StyledItem = styled.div`
 `;
 
 const StyledButton = styled.div`
-  color: #BEBEBE;
-  background-color: #202020;
+  color: ${pr => pr.theme.gray};
+  background-color: ${pr => pr.theme.background};
   cursor: pointer;
   padding: 5px;
   margin: 0 auto;
   width: 1000px;
   transition: ease-in-out 0.20s;
   &:hover {
-    color: #FFFFFF;
+    color: ${pr => pr.theme.white};
   }
 `;
 

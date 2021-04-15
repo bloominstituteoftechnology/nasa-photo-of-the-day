@@ -9,11 +9,11 @@ const StyledContainer = styled.div`
 `;
 
 const StyledSignature = styled.div`
-  background-color: #202020;
-  color: #FFFFFF;
+  background-color: ${pr => pr.theme.background};
+  color: ${pr => pr.theme.white};
   padding: 5px;
   margin: 0 auto;
-  width: calc(100% - 10px);
+  width: calc(100% - ${pr => pr.theme.space});
   margin-top: 50px;
 `;
 
