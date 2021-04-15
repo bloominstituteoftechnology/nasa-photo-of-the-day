@@ -43,4 +43,7 @@ import axios from "axios";
     </Details>
   );
 }
+
+
+
 export default Details
