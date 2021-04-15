@@ -5,6 +5,11 @@ import Body from './Components/body';
 import axios from 'axios';
 import styled from 'styled-components';
 
+const bodyDiv = styled.div`
+margin: 2%;
+padding: 3%;
+background-color: #5577aa; 
+`;
 
 function App() {
 const [nasaData, setNasaData] = useState([]);
@@ -22,10 +27,10 @@ useEffect(() => {
 }, []);
 
   return (
-    <div className="App">
+    <bodyDiv className="App">
     <Header data={nasaData}/>
     <Body data = {nasaData}/>
-    </div>
+    </bodyDiv>
   );
 }
 

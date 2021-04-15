@@ -1,9 +1,11 @@
 // import App from './App.js';
 import React from 'react';
-import sytled from 'styled-components';
+import styled from 'styled-components';
 
-const h1Style = style `
-
+const h1Style = styled.h1 `
+font-weight: bold;
+font-size: 1.2rem;
+color: grey;
 `;
  function Head(props) {
     const {data} = [props]
@@ -11,7 +13,7 @@ const h1Style = style `
     if(!data) return <h2>Loading...</h2>;
     return (
         <>
-        <h1 className="root">`${data.title}` </h1>
+        <h1Style className="root">`${data.title}` </h1Style>
         </>
     )
 }
