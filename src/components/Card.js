@@ -2,11 +2,11 @@ import React from "react";
 import Image from "./Image";
 import Body from "./Body";
 
-const Card = (props) => {
-  if (!props.nasaData) {
+const Card = ({nasaData}) => {
+  if (!nasaData) {
     return <h3>Loading......</h3>;
   }
-  const { title, explanation, date, url } = props.nasaData;
+  const { title, explanation, date, url } = nasaData;
 
   return (
     <div>

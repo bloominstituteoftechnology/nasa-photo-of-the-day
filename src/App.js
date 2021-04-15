@@ -8,6 +8,8 @@ function App() {
   const [nasaData, setNasaData] = useState(null);
 
   useEffect(() => {
+    
+    const fetchData = () => {
     axios
       .get(NASA_URL)
       .then((res) => {
@@ -16,6 +18,10 @@ function App() {
       .catch((err) => {
         return err;
       });
+    }
+
+    fetchData()
+
   }, []);
 
   return (
