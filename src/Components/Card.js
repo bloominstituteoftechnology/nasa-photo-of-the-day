@@ -1,6 +1,12 @@
 import React from 'react'
 import Picture from './Picture'
 import Body from './Body'
+import styled from 'styled-components'
+
+const StyledCard = styled.div`
+    color: white;
+    background-color: gray;
+`
 
 
 const Card = (props) => {
@@ -9,11 +15,12 @@ const Card = (props) => {
     } 
        const {title, explanation, date}=props.nasaData
        return (
-           <div>
+           <StyledCard>
                <Picture pictureOfTheDay={'https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY'}/>
                <Body title={title} explanation={explanation} date={date}/>
-           </div>
+           </StyledCard>
        ) 
 }
 
 export default Card
+

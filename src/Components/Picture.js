@@ -1,11 +1,16 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const StyledPicture = styled.div`
+    background-color: #337099;
+`
 
 const Picture = (props) => {
     const {image}=props
     return (
-        <div>
-            <img src={image} alt='Space picture'/>
-        </div>
+        <StyledPicture>
+            <img src={image} alt='' />
+        </StyledPicture>
     )
 }
 
