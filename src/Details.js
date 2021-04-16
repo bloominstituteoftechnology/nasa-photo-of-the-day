@@ -61,6 +61,7 @@ const Details = styled.div`
      </>
       )}
       
+    
     </Details>
   );
 }
