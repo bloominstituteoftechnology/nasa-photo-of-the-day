@@ -7,10 +7,10 @@ const {date, apod, close} = props
 const [contents, setContents] = useState(null)
 
 useEffect(() => {
-    axios.get(`${BASE_URL}?api_key=${API_KEY}&date=${apod.date}`)
+    axios.get(`${BASE_URL}?api_key=${API_KEY}&date=${date}`)
     .then(({data}) => setContents(data))
     .catch(err => console.log(err))
-}, [apod.date])
+}, [date])
 
 return (
     <div className='container'>
