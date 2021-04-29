@@ -1,11 +1,17 @@
 import React from 'react'
+import styled from 'styled-components'
 
 const Title = (props) => {
 
     const { data } = props
-    
+
+    const Title = styled.h1`
+        text-align: center;
+        color: #eeeeee;
+    `
+
     return (
-        <h1>Photo of the Day: {data.title}</h1>
+        <Title>Photo of the Day: {data.title} </Title>
     )
 }
 
