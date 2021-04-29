@@ -6,14 +6,15 @@ import axios from 'axios';
 function App() {
   const [data, setData] = useState({});
 
-  axios
-  .get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
-  .then(res =>{
-    console.log(res)
-  })
-  .catch(err =>{
-    console.log('this is the error', err)
-  })
+useEffect(()=>{
+  getNasaPicture()
+  
+  async function getNasaPicture(){
+    try{
+      const {data} = await axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
+    }
+  }
+})
 
   return (
     <div className="App">
