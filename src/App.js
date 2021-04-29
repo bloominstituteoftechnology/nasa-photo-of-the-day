@@ -2,6 +2,11 @@ import React, { useState, useEffect } from 'react'
 import "./App.css";
 import axios from 'axios';
 import Media from './components/Media/Media'
+import {
+  Col, Row, Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button, CardHeader
+} from 'reactstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
@@ -21,13 +26,19 @@ function App() {
 
   return (
     <div className="App">
-      <div className="container">
-        <h1 className="pageTitle"> NASA Picture of the Day</h1>
-        <Media pod={apod} />
-        <h3 className="mediaTitle">{apod.title}</h3>
-        <p className="date">{apod.date}</p>
-        <p className="explanation">{apod.explanation}</p>
-      </div>
+      <Row>
+        <Col sm="12" md={{ size: 8, offset: 2 }}>
+          <Card body className="container">
+            <CardHeader tag='h1'> NASA Picture of the Day</CardHeader>
+            <Media pod={apod} />
+            <CardBody>
+              <CardTitle tag="h5" className="text-left">{apod.title}</CardTitle>
+              <CardSubtitle tag="h6" className="mb-2 text-left text-muted">{apod.date}</CardSubtitle>
+              <CardText className="text-left">{apod.explanation}</CardText>
+            </CardBody>
+          </Card>
+        </Col>
+      </Row>
     </div>
   );
 }
