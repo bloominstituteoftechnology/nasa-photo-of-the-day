@@ -13,16 +13,21 @@ function App() {
       })
       .catch(err => console.log(err))
   }, [])
-  
-  
+
+  const imgSrc = {
+    maxHeight: 700,
+    maxWidth: 700 
+  }
 
   return (
     <div className="App">
-      <h1>Photo of the Day</h1>
-      <img src={photo.url} alt="Nasa All Day!"/>
+      <h1>NASA: Photo of the Day</h1>
       <p>{photo.title}</p>
       <p>{photo.date}</p>
       <p>{photo.explanation}</p>
+      <img src={photo.url} alt="NASA all day!" style={imgSrc}/>
+      <br></br>
+      <button color="primary" size="lg" block>I Come In Peace!</button>
       <h4>Tamara Taylor</h4>
     </div>
   );

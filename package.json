@@ -9,7 +9,8 @@
     "axios": "^0.21.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "styled-components": "^5.2.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -30,6 +31,12 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ],
+    "resolutions": [
+      "styles-components: ^5"
     ]
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.12.0"
   }
 }
