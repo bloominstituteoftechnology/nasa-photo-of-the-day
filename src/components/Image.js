@@ -2,22 +2,32 @@ import React from 'react';
 import styled from 'styled-components';
 
 
-export default function Image({title, photo, date, details}){
+export default function Image({nasaPhoto}){
 
-    if (!photo) return <h3>Loading...</h3>;
+    if (!nasaPhoto) return <h3>Loading...</h3>;
 
     return(
         <StyledImage className = 'image'>
             <div className='photo-container'>
-                <h2>{title}</h2>
-                <img src={photo} alt='Photo of the day from NASA'/>
+                <h2>{nasaPhoto.title}</h2>
+                {nasaPhoto.media_type === 'image' ? 
+                    <div className="media-container">
+                        <div>
+                            <img src={nasaPhoto.url} alt={`NASA's Image of the day for ${nasaPhoto.date}`} />
+                        </div>
+                    </div>
+                    : <div className="media-container">
+                        <div>
+                            <iframe title="NASA video of the day" width="800" height="500" src={nasaPhoto.url + "?controls=0"}></iframe>
+                        </div>
+                    </div>
+                }
             </div>
             <div className='photo-details'>
-                <StyledP>{date}</StyledP>
-                <StyledP>{details}</StyledP>
+                <StyledP>{nasaPhoto.date}</StyledP>
+                <StyledP>{nasaPhoto.explanation}</StyledP>
             </div>
         </StyledImage>
-        
     )
 }
 
