@@ -45,6 +45,7 @@ function App() {
     getData()
   },[])
 
+
 return (
   <Card style={card}>
     <CardBody>
@@ -56,4 +57,5 @@ return (
   </Card>
 )
 }
+
 export default App;
