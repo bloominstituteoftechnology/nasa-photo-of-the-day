@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from "react";
 import "./App.css";
 import axios from 'axios';
+import Header from './Components/head.js';
+import Body from './Components/body.js';
 
 function App() {
   const [nasaData, setNasaData] = useState([]);
@@ -17,10 +19,8 @@ function App() {
   }, [])
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+     <Header data={nasaData}/>
+     <Body data={nasaData}/>
     </div>
   );
 }
