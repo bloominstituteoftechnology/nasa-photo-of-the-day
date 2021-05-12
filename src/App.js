@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from "react";
 import "./App.css";
 import axios from "axios";
-import Post from './components/Posts/Post'
-import Header from './components/Header/Header'
+import Post from './components/Posts/Post';
+import Header from './components/Header/Header';
 
 function App() {
   const [data, setData] = useState([])
