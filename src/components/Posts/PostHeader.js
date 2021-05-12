@@ -6,12 +6,12 @@ const PostHeader = props => {
 
     return (
          <div>
-            <div>
-              <h3>{title}</h3>
-            </div> 
             <div>  
               <img src={image} alt="space image from Nasa"></img> 
             </div>
+            <div>
+              <h3>{title}</h3>
+            </div> 
         </div>
     )
 }
