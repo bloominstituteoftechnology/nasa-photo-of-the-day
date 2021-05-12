@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from "react";
 import "./App.css";
 import axios from "axios";
-// import component
-// import component
+import Post from './components/Posts/Post'
+import Header from './components/Header/Header'
 
 const App = () => {
 
@@ -43,6 +43,8 @@ function App() {
     <div className="App">
       <p>
         {/* add child components and props to inject in each appropriate child(ex = <Pictures picture={picture}/>) */}
+        {/* <Header />
+        <Posts /> */}
         Read through the instructions in the README.md file to build your NASA
         app! Have fun <span role="img" aria-label='go!'>🚀</span>!
       </p>
