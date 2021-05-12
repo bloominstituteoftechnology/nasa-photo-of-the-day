@@ -13,7 +13,6 @@ function App() {
       .then(function (response) {
         console.log('Response: ', response.data);
         setNasaData(response.data);
-        console.log('nasaData1: ', nasaData);
       })
       .catch(function (error) {
         console.log('Error: ', error);
@@ -21,12 +20,14 @@ function App() {
   }, []);
   console.log('nasaData2: ', nasaData);
 
+  if (!nasaData) return <h3>Loading...</h3>
+
   return (
     <div className="App">
       <p>
         Image should display below this.
       </p>
-      <Image src={nasaData.url} alt={nasaData.explanation} />
+      <Image src={nasaData.url} alt={nasaData.title} />
     </div>
   );
 }
