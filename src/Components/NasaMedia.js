@@ -5,7 +5,7 @@ const Container = styled.div`
 display:flex;
 justify-content:center;
 flex-direction: column;
-background:#fcf8e8;
+background:#ecb390;
 `
 
 const ImageOfDay = styled.img`

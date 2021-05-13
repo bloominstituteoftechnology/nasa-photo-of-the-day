@@ -1,7 +1,7 @@
 import React from 'react';
 
 const EmojiMaker = props => (
-  return <span
+    <span
     className="emoji"
     role="img"
     aria-label={props.label ? props.label : ""}

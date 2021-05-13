@@ -1,5 +1,5 @@
 import React from 'react'
-
+import styles from 'styled-components'
 function NasaInfo(props) {
     
     const {explanation, title, date} = props
