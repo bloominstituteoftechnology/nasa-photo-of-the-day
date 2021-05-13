@@ -3,6 +3,13 @@ import "./App.css";
 import axios from 'axios';
 import Header from './Components/head.js';
 import Body from './Components/body.js';
+import styled from 'styled-components';
+
+const Appstyle = styled.div`
+  background-color: #545375;
+  margin: auto;
+  padding: 2%;
+`;
 
 function App() {
   const [nasaData, setNasaData] = useState([]);
@@ -18,10 +25,10 @@ function App() {
     })
   }, [])
   return (
-    <div className="App">
+    <Appstyle className="App">
      <Header data={nasaData}/>
      <Body data={nasaData}/>
-    </div>
+    </Appstyle>
   );
 }
 
