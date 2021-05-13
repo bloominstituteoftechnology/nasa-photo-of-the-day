@@ -2,6 +2,16 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import axios from 'axios';
 import Image from './Image';
+import styled from 'styled-components';
+
+const Container = styled.div`
+  color: #33322f;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  `;
 
 function App() {
   
@@ -23,12 +33,10 @@ function App() {
   if (!nasaData) return <h3>Loading...</h3>
 
   return (
-    <div className="App">
-      <p>
-        Image should display below this.
-      </p>
+    <Container>
+      <h1>Nasa Photo of the Day</h1>
       <Image src={nasaData.url} alt={nasaData.title} />
-    </div>
+    </Container>
   );
 }
 
