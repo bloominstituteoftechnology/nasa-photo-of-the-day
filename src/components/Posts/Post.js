@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 const StyledPost = styled.div`
     padding: 2.5%;
+    background-color: lightgrey;
 `
 
 

@@ -1,18 +1,24 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const StyledPostHeader = styled.div `
+  padding: 2%;
+  text-decoration: underline;
+`
 
 const PostHeader = props => {
 
     const { title, image  } = props;
 
     return (
-         <div>
+         <StyledPostHeader>
             <div>  
               <img src={image} alt="space image from Nasa"></img> 
             </div>
             <div>
-              <h3>{title}</h3>
+              <h2>{title}</h2>
             </div> 
-        </div>
+        </StyledPostHeader>
     )
 }
 
