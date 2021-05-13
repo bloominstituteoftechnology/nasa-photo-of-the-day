@@ -15,6 +15,7 @@ const EmojiMaker = props => (
 const Container = styled.div`
 display:flex;
 justify-content:center;
+background:#df7861;
 `
 const EmojiDiv = styled.div`
 display:flex;
@@ -31,7 +32,7 @@ function Title(props) {
             </EmojiDiv>
                 <h1>Nasa Photo/Video Of The Day!</h1>
             <EmojiDiv>
-                <EmojiMaker label="vulcan" symbol="🖖🏻"/>
+                <EmojiMaker label="vulcan" symbol="👨‍🚀"/>
             </EmojiDiv>
         </Container>
     )

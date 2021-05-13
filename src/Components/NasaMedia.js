@@ -1,12 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
 
+const Container = styled.div`
+display:flex;
+justify-content:center;
+flex-direction: column;
+background:#fcf8e8;
+`
+
 const ImageOfDay = styled.img`
-width:75rem;
+padding:10rem;
+justify-content:center;
+align-items: center;
 `
 
 const ImageH1 = styled.h1`
-background-color:turquoise;
+font-size:5rem;
+background:#d4e2d4;
+margin:0;
 `
 
 const EmojiMaker = props => (
@@ -25,10 +36,10 @@ function NasaMedia (props) {
     const {nasaImg, mediaType} = props
 
     return (
-        <div>
+        <Container>
             <ImageOfDay src={nasaImg}/>
-            <ImageH1><EmojiMaker label="vulcan" symbol="🖖🏻"/>{mediaType==="image" ? "Image" : "Video"} of the Day</ImageH1>
-        </div>
+            <ImageH1><EmojiMaker label="vulcan" symbol="🌌"/>{mediaType==="image" ? "Image" : "Video"} of the Day</ImageH1>
+        </Container>
     )
 }
 
