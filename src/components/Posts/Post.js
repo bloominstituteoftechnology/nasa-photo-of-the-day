@@ -13,8 +13,8 @@ const Post = (props) => {
 const { data } = props;
 return (
     <StyledPost>
-        <PostHeader title={data.title} image={data.url}/>
-        <PostDetails date={data.date} explanation={data.explanation}/>
+        <PostHeader image={data.url} title={data.title} date={data.date} />
+        <PostDetails explanation={data.explanation}/>
     </StyledPost>
  )
 }
