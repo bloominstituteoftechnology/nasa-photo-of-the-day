@@ -1,12 +1,13 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import Header from "./Header"
+import Images from "./Images"
+import Hero from "./Hero"
 const apiKey = "3XhlqxAbaPj8VO9eBcshjX9EP9gVvcTdy6rbroht";
 
 function App() {
   const [nasaData, setNasaData] = useState()
-  const [count, setCount] = useState(5)
+  const [count, setCount] = useState(4)
 
   useEffect(() => {
     axios
@@ -17,13 +18,15 @@ function App() {
     .catch((err) => {
       console.log(err)
     })
-  }, [])
+  }, [count])
+   
+
 
   return (
     <div className="App">
-      {
-        nasaData && <Header nasaData={nasaData} date={nasaData.date}/>
-      }
+      { nasaData && <Hero heroImage={nasaData} />}
+      { nasaData && <Images nasaData={nasaData.slice(1)} date={nasaData.date} setCount={setCount} count={count}/>}
+      
     </div>
   );
 }
