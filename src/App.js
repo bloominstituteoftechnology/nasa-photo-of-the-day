@@ -5,6 +5,19 @@ import Title from './Components/Title'
 import NasaMedia from './Components/NasaMedia'
 import NasaInfo from './Components/NasaInfo'
 
+export const EmojiMaker = props => (
+  <span
+  className="emoji"
+  role="img"
+  aria-label={props.label ? props.label : ""}
+  aria-hidden={props.label ? "false" : "true"}
+>
+  {props.symbol}
+</span>
+)
+
+
+
 function App() {
 
   const [nasaMediaType, setNasaMediaType] = useState()
@@ -40,7 +53,7 @@ function App() {
   return (
     <div className="App">
       <Title />
-      <NasaMedia mediaType={nasaMediaType} nasaImg={nasaImg}/>
+      <NasaMedia EmojiMaker={EmojiMaker} mediaType={nasaMediaType} nasaImg={nasaImg}/>
       <NasaInfo date={nasaDate} explanation={explanation} mediaType={nasaMediaType}  title={nasaTitle}/>
     </div>
   );
