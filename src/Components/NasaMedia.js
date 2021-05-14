@@ -5,7 +5,7 @@ const Container = styled.div`
 display:flex;
 justify-content:center;
 flex-direction: column;
-background:#ecb390;
+background:#1cc5dc;
 `
 
 const ImageOfDay = styled.img`
@@ -16,7 +16,7 @@ align-items: center;
 
 const ImageH1 = styled.h1`
 font-size:5rem;
-background:#d4e2d4;
+background:#890596;
 margin:0;
 `
 

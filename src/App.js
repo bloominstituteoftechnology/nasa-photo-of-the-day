@@ -4,6 +4,7 @@ import axios from 'axios'
 import Title from './Components/Title'
 import NasaMedia from './Components/NasaMedia'
 import NasaInfo from './Components/NasaInfo'
+import styled from "styled-components"
 
 export const EmojiMaker = props => (
   <span
@@ -16,6 +17,10 @@ export const EmojiMaker = props => (
 </span>
 )
 
+const Container = styled.div`
+background:#f5f7b2;
+height:200vh;
+`
 
 
 function App() {
@@ -34,7 +39,7 @@ function App() {
   useEffect(() => {
     axios.get("https://api.nasa.gov/planetary/apod?api_key=8DzApwJb2t9VBex2dKLyY7FqiPVYR8ImjjanFyVy")
     .then(res => {
-      console.log(res.data)
+      // console.log(res.data)
       setNasaMediaType(res.data.media_type)
       setNasaImg(res.data.hdurl)
       setNasaDate(res.data.date)
@@ -51,11 +56,11 @@ function App() {
 
 
   return (
-    <div className="App">
+    <Container className="App">
       <Title />
       <NasaMedia EmojiMaker={EmojiMaker} mediaType={nasaMediaType} nasaImg={nasaImg}/>
       <NasaInfo date={nasaDate} explanation={explanation} mediaType={nasaMediaType}  title={nasaTitle}/>
-    </div>
+    </Container>
   );
 }
 

@@ -15,7 +15,7 @@ const EmojiMaker = props => (
 const Container = styled.div`
 display:flex;
 justify-content:center;
-background:#df7861;
+background:#cf0000;
 `
 const EmojiDiv = styled.div`
 display:flex;
