@@ -22,6 +22,7 @@ const H3Style = styled.h3`
 border-bottom:5px solid #cf0000;
 width:50%;
 margin-left:25rem;
+padding:3rem;
 `
 const SpanColor = styled.span`
 color:#890596;
@@ -29,6 +30,7 @@ color:#890596;
 const PStyle = styled.p`
 font-size:1rem;
 font-weight:bold;
+padding:3rem;
 `
 
 const BottomLink = styled.a`

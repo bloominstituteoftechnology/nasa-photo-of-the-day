@@ -16,7 +16,8 @@ const Container = styled.div`
 display:flex;
 justify-content:center;
 background:#cf0000;
-font-size:1.5rem;
+font-size:2rem;
+padding:2rem;
 `
 const EmojiDiv = styled.div`
 display:flex;

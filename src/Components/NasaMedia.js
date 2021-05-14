@@ -10,19 +10,22 @@ color:#890596;
 `
 
 const ImageOfDay = styled.img`
-padding:0 10rem;
+padding:2rem 10rem;
 justify-content:center;
 align-items: center;
 `
 
 const ImageH1 = styled.h1`
 border-bottom:5px solid #cf0000;
-font-size:5rem;
+font-size:8rem;
 background:#1cc5dc;
 margin:0;
+padding:3rem;
 `
 const Quote = styled.h3`
 font-size:2rem;
+padding-left:30rem;
+width:50%;
 `
 
 
