@@ -15,8 +15,10 @@ align-items: center;
 `
 
 const ImageH1 = styled.h1`
+color:#890596;
+border-bottom:5px solid #cf0000;
 font-size:5rem;
-background:#890596;
+background:#1cc5dc;
 margin:0;
 `
 
