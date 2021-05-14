@@ -31,15 +31,24 @@ font-size:1rem;
 font-weight:bold;
 `
 
+const BottomLink = styled.a`
+font-size:2rem;
+color:dodgerblue;
+margin-top:5rem;
+`
+
 function NasaInfo(props) {
     
     const {explanation, title, date} = props
     
+
+
     return (
         <Container>
             <H3Style>The Title Of This Picture Is: <SpanColor>{title}</SpanColor></H3Style>
             <H3Style>The Date Of The Picture Is: <SpanColor>{date}</SpanColor> </H3Style>
             <PStyle>{explanation}</PStyle>
+            <BottomLink href="https://nasa.gov">Visit Nasa's Website</BottomLink>
         </Container>
     )
 }

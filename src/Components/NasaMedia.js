@@ -6,21 +6,25 @@ display:flex;
 justify-content:center;
 flex-direction: column;
 background:#1cc5dc;
+color:#890596;
 `
 
 const ImageOfDay = styled.img`
-padding:10rem;
+padding:0 10rem;
 justify-content:center;
 align-items: center;
 `
 
 const ImageH1 = styled.h1`
-color:#890596;
 border-bottom:5px solid #cf0000;
 font-size:5rem;
 background:#1cc5dc;
 margin:0;
 `
+const Quote = styled.h3`
+font-size:2rem;
+`
+
 
 const EmojiMaker = props => (
     <span
@@ -39,6 +43,7 @@ function NasaMedia (props) {
 
     return (
         <Container>
+            <Quote>"He who can no longer pause to wonder and stand rapt in awe, is as good as dead; his eyes are closed." - Albert Einstein</Quote>
             <ImageOfDay src={nasaImg}/>
             <ImageH1><EmojiMaker label="vulcan" symbol="🌌"/>{mediaType==="image" ? "Image" : "Video"} of the Day</ImageH1>
         </Container>
