@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-
+//smallchange
 const StyledInstructions = styled.div`
   color: royalblue;
 `
@@ -8,7 +8,7 @@ const StyledInstructions = styled.div`
 
 function Instructions(props) {
     return (
-      <StyledInstructions>
+      <StyledInstructions> 
         <div>
           <p>This is today's NASA Photo of the Day</p>
         </div>
