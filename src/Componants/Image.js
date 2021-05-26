@@ -15,6 +15,7 @@ export default function Image(props){
                 <ReactPlayer url={picture.url} alt={picture.title} />
 
                 <h4> {picture.explanation} </h4>
+                
                 </diV>
             )
 
