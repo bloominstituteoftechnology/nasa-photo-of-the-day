@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  /* width: 80%;
+  height: 100%; */
 }
 
 .App-logo {
@@ -36,3 +41,28 @@
     transform: rotate(360deg);
   }
 }
+
+.container {
+  width: 80%;
+  border: 1px solid blue;
+  display: flex;
+  justify-content: center;
+}
+
+.nasaBox {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  min-height: 200px;
+}
+
+.nasaInfo {
+  width: 25%;
+  text-align: right;
+}
+
+.nasaPhoto {
+  width: 70%
+}
+
+
