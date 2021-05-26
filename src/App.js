@@ -1,15 +1,43 @@
-import React from "react";
-import "./App.css";
+import React, { useState, useEffect } from  'React';
+	import "./App.css";
+	import index from  './index'
+	import Gallery from './Gallery'
+	import Header from './Header'
+	import Detail from './Detail'
+	import axios from 'axios'
+	
 
-function App() {
-  return (
-    <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
-    </div>
-  );
-}
+	function App() {
+	  const [data, setData] = useState([])
+	
 
-export default App;
+	
+
+	  useEffect(()=> {
+	    axios
+	    .get("https://apod.nasa.gov/apod/image/2105/AgCar_HubbleSchmidt_2212.jpg")
+	    .then(res => {
+	      setData(res.data)
+	      console.log(res.data)
+	    })
+	    .catch(err => {
+	      console.log(err)
+	    })
+	  },[])
+	
+
+	
+
+	
+
+	  return (
+	    <div className="App">
+	      
+	      <Header headerData={data}/>
+	      <Gallery imgData={data}/>
+	      <Detail info={data}/>
+	
+
+	    </div>
+	  );
+	}
