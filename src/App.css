@@ -1,10 +1,13 @@
 .App {
   text-align: center;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   justify-content: center;
   /* width: 80%;
   height: 100%; */
+  margin-top: 50px;
+  background-color: rgb(37, 37, 37);
+  color: white;
 }
 
 .App-logo {
@@ -44,25 +47,30 @@
 
 .container {
   width: 80%;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   display: flex;
   justify-content: center;
 }
 
 .nasaBox {
   display: flex;
-  justify-content: space-between;
-  width: 80%;
+  justify-content: center;
+  width: 95%;
   min-height: 200px;
 }
 
 .nasaInfo {
   width: 25%;
   text-align: right;
+  margin-right: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .nasaPhoto {
-  width: 70%
+  
 }
+
 
 
