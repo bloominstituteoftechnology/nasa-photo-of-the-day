@@ -6,8 +6,33 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+
+
+#main-container {
+  border: 2px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 1REM;
+  /* text-align: center; */
+  /* align-items: center; */
+}
+
+#left-box {
+  border: 2px solid grey;
+  margin: 5REM;
+} 
+
+#right-box {
+  border: 2px solid grey;
+  margin: 5REM;
+} 
+
+p {
+  margin: 1REM;
 }
