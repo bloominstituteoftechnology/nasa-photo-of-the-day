@@ -1,3 +1,7 @@
+/* * {
+  background-color: rgb(145, 142, 142);
+} */
+
 .App {
   text-align: center;
 }
@@ -36,3 +40,17 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+/*
+#main-container {
+  border: 2px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 1REM;
+   text-align: center; 
+   align-items: center; 
+}
+*/
