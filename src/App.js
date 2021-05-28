@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import axios from 'axios';
+import moment from 'moment';
 
 import DateDisplay from './Components/DateDisplay'
 import Explanation from './Components/Explanation'
@@ -8,8 +9,11 @@ import NasaImage from './Components/NasaImage'
 
 function App() {  
 
-  let today = new Date()
-  let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+  // let today = new Date()
+  // let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+
+  const date = moment().format('YYYY-MM-DD')
+
 
   const [nasaData, setNasaData] = useState({})
   const [photoDate, setPhotoDate] = useState(date)
