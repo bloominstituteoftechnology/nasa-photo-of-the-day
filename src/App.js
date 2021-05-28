@@ -8,14 +8,25 @@ import NasaImage from './Components/NasaImage'
 
 function App() {  
 
+  let today = new Date()
+  let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+
   const [nasaData, setNasaData] = useState({})
+  const [photoDate, setPhotoDate] = useState(date)
   // const [query, setQuery] = useState("react")
+
+  // const updateDate = (action) => {
+  //   if (action === backward) {
+      
+  //   }
+  // }
 
   useEffect(() => {
 
     const baseUrl = 'https://api.nasa.gov/planetary/apod?api_key='
     const myApiKey = '36Ay75GJu8qDILEhICjcDR1t8JbXKdwe9YW1Yf3m'
-    const fullUrl = `${baseUrl}${myApiKey}`
+    // let myDate = new Date()
+    const fullUrl = `${baseUrl}${myApiKey}&date=${photoDate}`
     
     axios
       .get(fullUrl)
@@ -39,7 +50,7 @@ function App() {
             <h1>
               NASA ASTRONOMY PHOTO OF THE DAY
             </h1>
-            <DateDisplay date={nasaData.date} />
+            <DateDisplay date={nasaData.date} photoDate={photoDate}/>
             <Explanation nasaExplanation={nasaData.explanation} nasaImageTitle={nasaData.title}/>
             </div>
             <NasaImage nasaPhotoUrl={nasaData.url} nasaPhotoTitle={nasaData.title}/>         
