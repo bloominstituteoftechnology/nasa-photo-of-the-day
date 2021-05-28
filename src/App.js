@@ -23,7 +23,7 @@ function App() {
       <div className="App">
         <Date />
         <Image picture={image} />
-        <DatePicker />
+        
       </div>
 
       
