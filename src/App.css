@@ -1,5 +1,14 @@
 .App {
   text-align: center;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  /* width: 80%; */
+  height: 80vh;
+  margin-top: 50px;
+  background-color: rgb(37, 37, 37);
+  /* color: white; */
+  font-size: 62%;
 }
 
 .App-logo {
@@ -36,3 +45,47 @@
     transform: rotate(360deg);
   }
 }
+
+.container {
+  /* width: 80vw; */
+  /* border: 1px solid blue; */
+  display: flex;
+  justify-content: center;
+  font-family: 'Exo', sans-serif;
+}
+
+.nasaBox {
+  display: flex;
+  justify-content: center;
+  width: 95%;
+  min-height: 200px;
+}
+
+.nasaInfo {
+  /* width: 40%; */
+  text-align: right;
+  margin-right: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+/* .nasaPhoto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nasaPhoto > img {
+  max-height: 75%;
+} */
+
+p {
+  font-size: 1.4em;
+}
+
+h1 {
+  color: white;
+}
+
