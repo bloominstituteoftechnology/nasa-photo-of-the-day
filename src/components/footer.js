@@ -1,5 +1,11 @@
 import React from 'react';
+import styled from 'styled-components';
 
+const StyledFooter = styled.div `
+  text-align: center;
+  font-weight: bold;
+  padding: 2% 10%;
+`
 
 const Footer = props => {
 
@@ -7,9 +13,9 @@ const Footer = props => {
 
     return (
         
-            <div>
+            <StyledFooter>
                 <p>{explanation}</p>
-            </div>
+            </StyledFooter>
         
     )
 }

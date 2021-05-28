@@ -1,13 +1,20 @@
 import React from 'react';
 
+import styled from 'styled-components';
 
+const StyledImageDetails = styled.div `
+  padding: 2% 10%;
+  border-bottom: 3px solid black
+`
 
 const imagedetails = props => {
 
     const { image, title, date } = props;
 
     return (
-        <div>
+
+
+        <StyledImageDetails>
             <div>  
               <img src={image} alt="space image from Nasa"></img> 
             </div>
@@ -17,7 +24,7 @@ const imagedetails = props => {
             <div>
                <p>Date: {date}</p>
             </div>
-            </div>
+            </StyledImageDetails>
             )
 }
 

@@ -1,6 +1,12 @@
 import React from 'react';
 import imagedetails from './imagedetails';
 import footer from './footer';
+import styled from 'styled-components';
+
+const StyledDetails = styled.div`
+    padding: 2.5%;
+    background-color: lightgrey;
+`
 
 
 
@@ -9,10 +15,10 @@ import footer from './footer';
 const details = (props) => {
 const { data } = props;
 return (
-    <div>
+    < StyledDetails>
         <imagedatails image={data.url} title={data.title} date={data.date} />
         <footer explanation={data.explanation}/>
-    </div>
+    </ StyledDetails>
  )
 }
 
