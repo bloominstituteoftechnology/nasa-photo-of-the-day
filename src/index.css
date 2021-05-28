@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: lavender;
+  background-color: #838E83;
 }
 
 code {
@@ -13,7 +13,4 @@ code {
     monospace;
 }
 
-.photoDiv img{
-  border-radius: 50%;
-  
-}
+
