@@ -3,16 +3,16 @@ import "../App.css";
 
 
 
-// Child
-function Info(props){
 
-const apodData = props;
+// Child
+export default function Info(props){
+
+// const data = props.apodData; // Simply removes the need to type 'props'
     return (
         <>
-            <div>{props.apodData}</div>
+            <h1>{props.apodData.title}</h1>
+            <div>{props.apodData.date}</div> {/* Cannot do props.apodData. Must be props.apodData.something. */}
+            <p>{props.apodData.explanation}</p>
         </>
     )
 }
-
-
-export default Info;
