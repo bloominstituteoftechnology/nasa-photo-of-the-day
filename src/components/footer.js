@@ -1,10 +1,11 @@
 import React from 'react';
+//import axios from 'axios'
 import styled from 'styled-components';
 
 const StyledFooter = styled.div `
-  text-align: center;
-  font-weight: bold;
-  padding: 2% 10%;
+  text-align: left;
+  
+  padding: 1%;
 `
 
 const Footer = props => {

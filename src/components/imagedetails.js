@@ -1,5 +1,5 @@
 import React from 'react';
-
+//import axios from 'axios'
 import styled from 'styled-components';
 
 const StyledImageDetails = styled.div `
@@ -7,7 +7,7 @@ const StyledImageDetails = styled.div `
   border-bottom: 3px solid black
 `
 
-const imagedetails = props => {
+const Imagedetails = props => {
 
     const { image, title, date } = props;
 
@@ -16,7 +16,7 @@ const imagedetails = props => {
 
         <StyledImageDetails>
             <div>  
-              <img src={image} alt="space image from Nasa"></img> 
+              <img src={image} alt="space Show from Nasa"></img> 
             </div>
             <div>
               <h2>{title}</h2>
@@ -24,8 +24,8 @@ const imagedetails = props => {
             <div>
                <p>Date: {date}</p>
             </div>
-            </StyledImageDetails>
+         </StyledImageDetails>
             )
 }
 
-export default imagedetails;
+export default Imagedetails;

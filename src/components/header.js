@@ -6,13 +6,13 @@ const StyledHeader = styled.div`
     background-color: #282c34;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    
     justify-content: center;
-    font-size: calc(10px + 2vmin);
+    
     color: white;
     /* min-height: 100vh; */
 `
-const header = props => {
+const Header = props => {
 
     const {   } = props;
 
@@ -28,4 +28,4 @@ const header = props => {
 
 }
 
-export default header;
+export default Header;
