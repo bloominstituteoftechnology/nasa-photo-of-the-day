@@ -6,6 +6,9 @@ export default function Home() {
         
     <div>
         <Link to="/nasaphoto"> See into the stars!</Link>
+        
+        <h2>NASA Photo Of The Day</h2>
+       
     </div>
     )
 }
