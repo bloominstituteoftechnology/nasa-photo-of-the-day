@@ -17,9 +17,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get(
-        "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=2017-07-01&end_date=2017-07-30"
-      )
+      .get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=2017-07-01&end_date=2017-07-30")
       .then((response) => {
         console.log("2. here is future data", response);
         setNasaData(response.data);
@@ -39,16 +37,11 @@ function App() {
     <div className="App">
       <Header></Header>
       <Img nasaData={nasaData} currentIndex={currentIndex} />
-      <Buttons
-        nasaData={nasaData}
-        currentIndex={currentIndex}
-        setCurrentIndex={setCurrentIndex}
-      />
+      <Buttons nasaData={nasaData} currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} />
       <TextContainer nasaData={nasaData} currentIndex={currentIndex} />
 
       <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun{" "}
+        Read through the instructions in the README.md file to build your NASA app! Have fun{" "}
         <span role="img" aria-label="go!">
           🚀
         </span>
@@ -59,3 +52,4 @@ function App() {
 }
 
 export default App;
+//test
