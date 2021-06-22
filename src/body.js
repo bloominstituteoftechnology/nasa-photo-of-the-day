@@ -6,6 +6,7 @@ function Body(props) {
         <div>
             <img src={photo}
                 className="bodyPic" />
+            <h3>Read below to learn more about the photo of the day from NASA!</h3>
             <p>{info}</p>
 
         </div>

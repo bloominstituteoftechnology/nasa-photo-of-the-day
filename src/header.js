@@ -5,8 +5,8 @@ function Header(props) {
     return (
         <div>
             <h1>{title}</h1>
-            <h2 className='todaysDate'>{date}</h2>
-            <h2>NASA Photo of the Day!!!</h2>
+            <h2 className='todaysDate'>today's date is: {date}</h2>
+            <h2>And now for something you'll really like!</h2>
         </div>
     )
 }

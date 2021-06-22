@@ -41,4 +41,20 @@
 p{
   font-family: 'Courier New', Courier, monospace;
   font-weight: 300;
+  padding-right:10%;
+  padding-left:10%;
+  padding-top:5%;
+  padding-bottom:3%;
+}
+
+h1{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 5rem;
+}
+
+
+h3{
+  text-align: center;
+  font-weight: 700;
+  font-size: 3rem;
 }
