@@ -5,7 +5,6 @@ import "./App.css";
 function App() {
   const [photo, setPhoto] = useState()
   const [date, setDate] = useState()
-  const [data, setData] = useState()
   const [title, setTitle] = useState()
   const [info, setinfo] = useState()
  
@@ -14,9 +13,16 @@ function App() {
   // the API call
   useEffect(() => {
     axios.get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`)
-    .then(({data}) => setPhoto(data))
-    .catch(err => console.log('Error getting picture of the day, API limit? ', err))
-  }, [])
+    .then(info => {
+      setDate(info.data.date);
+      setPhoto(info.data.url); 
+      setTitle(info.data.title);
+      setinfo(info.data.explanation);
+
+      console.log('here is the info', info.data)
+    })
+}, [])
+
 
 
 
