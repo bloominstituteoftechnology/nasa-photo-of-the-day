@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+
+p{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 300;
+}
