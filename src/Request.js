@@ -15,6 +15,7 @@ const [photo, setPhoto] = useState([])
 			console.log(err)
 		})
 	}, [])
+	//the empty array makes sure that the use effect only calls the api once
 
 	return (
 		<p>
@@ -22,6 +23,5 @@ const [photo, setPhoto] = useState([])
 		</p> 
 	)
 }
-//the empty array makes sure that the use effect only calls the api once
 
 
