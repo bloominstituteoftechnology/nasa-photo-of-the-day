@@ -1,0 +1,15 @@
+.header{
+	display: flex;
+	flex-direction: row;
+	justify-content:space-around;
+}
+
+.nasa-logo{
+	width: 200px;
+	height: 180px;
+}
+
+.coder{
+	display: flex;
+	align-items: flex-end;
+}
