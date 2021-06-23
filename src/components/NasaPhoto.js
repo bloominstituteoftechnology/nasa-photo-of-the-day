@@ -7,6 +7,7 @@ const apiKey = process.env.REACT_APP_NASA_KEY;
 
 
 export default function NasaPhoto(){
+    
     const [photoData, setPhotoData] = useState(null);
     useEffect(() =>{
         fetchphoto();
