@@ -7,6 +7,7 @@ import "./App.css";
 export default function App() {
   return (
     <BrowserRouter>
+    
       <div className="app">
           <Route component={Home} path="/" exact />
           <Route component={NasaPhoto} path="/nasaphoto" />
