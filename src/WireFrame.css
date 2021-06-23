@@ -1,7 +1,15 @@
+
 .header{
 	display: flex;
 	flex-direction: row;
 	justify-content:space-around;
+}
+
+.header h2{	
+	font-size: 50px;
+}
+.header span{
+	font-size: 12px;
 }
 
 .nasa-logo{
@@ -12,4 +20,20 @@
 .coder{
 	display: flex;
 	align-items: flex-end;
+}
+
+.title-header{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	font-size: 30px;
+	margin: 0 auto;
+}
+
+.photo-explanation{
+	display: flex;
+	justify-content: start;
+	font-size: 20px;
+	margin: 0 auto;
+	flex-wrap: wrap;
 }

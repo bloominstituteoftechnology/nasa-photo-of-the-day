@@ -5,22 +5,22 @@ import WireFrame from './WireFrame'
 
 export default function Request() {
 const [photo, setPhoto] = useState([])
-	// useEffect(() => {
-	// 	axios
-	// 	.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
-	// 	.then(res => {
-	// 		console.log(res)
-	// 		setPhoto(res.data)
-	// 	})
-	// 	.catch(err => {
-	// 		console.log(err)
-	// 	})
-	// }, [])
+	useEffect(() => {
+		axios
+		.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2021-06-01')
+		.then(res => {
+			console.log(res)
+			setPhoto(res.data)
+		})
+		.catch(err => {
+			console.log(err)
+		})
+	}, [])
 	//the empty array makes sure that the use effect only calls the api once
 
 	return (
 		<div>
-			<WireFrame photo={photo}/>
+			<WireFrame key="photo.id" photo={photo}/>
 		</div>
 		 
 	)
