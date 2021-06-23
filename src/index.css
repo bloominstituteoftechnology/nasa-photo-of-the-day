@@ -24,10 +24,10 @@ img {
 }
 h2.pic-title {
   font-size: 1.75rem;
-  color: pink;
+  color: rgb(228, 120, 250)
 }
 p.pic-info, p.pic-title, p.date-info {
-
+  color: rgb(228, 120, 250)
 }
 div.outer-container{
   display: inline-block;
@@ -40,7 +40,24 @@ div.container {
   align-items: center;
   padding-left: 2%;
   padding-right: 2%;
-  background-color: crimson;
+  background-color: rgba(220, 20, 60, 0.13);
   color: #fff;
   border-radius: 2%;
+}
+div.button-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+button.nasa-website{
+  padding: 2%;
+  border-radius: 6%;
+  color: rgb(6, 232, 248);
+  background-color: rgb(73, 20, 220);
+  border-color:rgb(255, 135, 135);
+  border-style: solid;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2%;
 }
