@@ -3,6 +3,14 @@ import axios from 'axios'
 import "./App.css";
 import Header from './header'
 import Body from './body'
+import styled from 'styled-components'
+
+export const Button = styled.button`
+background: blue;
+color: white;
+padding: 3%;
+font-size: 2rem;
+`
 
 function App() {
   const [photo, setPhoto] = useState()
@@ -35,6 +43,8 @@ function App() {
       <Header title={title} date={date} />
       <Body photo={photo}
         info={info} />
+        <Button>this is a styled component</Button>
+       
     </div>
   );
 }
