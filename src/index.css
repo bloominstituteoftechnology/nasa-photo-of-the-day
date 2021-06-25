@@ -61,3 +61,13 @@ button.nasa-website{
   font-weight: bold;
   margin-bottom: 2%;
 }
+
+button.info-button {
+  padding: 2%;
+  margin-bottom: 2%;
+  background-color: crimson;
+  border-radius: 6%;
+  color: pink;
+  font-weight: bold;
+  font-size: 1rem;
+}

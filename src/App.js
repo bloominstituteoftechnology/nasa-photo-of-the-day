@@ -4,9 +4,12 @@ import axios from 'axios'
 import { BASE_URL, api_key } from './nasa'
 import AboutInfo from "./aboutInfo";
 import Buttons from "./cta-login";
+import Modal from './modal.js'
+import './modal.css';
 
 function App() {
   const [nasaData, setNasaData] = useState([])
+  const [show, setShow] = useState(false)
   const picOfTheDay = nasaData.url
   
 //api call
@@ -21,7 +24,12 @@ function App() {
       <h1><span role="img" aria-label="stars emoji">✨</span> Welcome Stargazer <span role="img" aria-label="rocket emoji">🚀</span></h1>
       <p className='subtitle'>NASA photo of the day</p>
       <img src={picOfTheDay} alt="NASA pic of the day"></img>
-        {<AboutInfo />}
+        <div>
+          <button className='info-button' onClick={() => setShow(true) }>More Info</button>
+        </div>
+        <Modal title='My Modal' onClose={() => setShow(false)} show={show}>
+          <AboutInfo/>
+        </Modal>
         {<Buttons />}
     </div>
   );
