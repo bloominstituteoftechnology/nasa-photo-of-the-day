@@ -3,37 +3,59 @@ import "./App.css";
 import Header from './Head';
 import Body from './Body';
 import axios from "axios";
+import styled from 'styled-components';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
-  const [apod, setApod] = useState();
   const [photo, setPhoto] = useState([]);
   const [date, setDate] = useState([]);
-  const [expl, setExpl] = useState ([]);
+  const [explanation, setExplanation] = useState ([]);
   const [title, setTitle] = useState ([]);
-  const [url, setUrl] = useState ([]);
 
 
   useEffect(() => {
-    axios.get (`https://api.nasa.gov/planetary/apod?api_key=qB9nmHMUHqVtE07BKXKcnscg9XPTOFoxy0Birzgb&date=2021-06-22`)
+    axios.get ('https://api.nasa.gov/planetary/apod?api_key=qB9nmHMUHqVtE07BKXKcnscg9XPTOFoxy0Birzgb&date=2021-06-22')
     .then(res => {
       console.log('it worked!!!!', res)
       setTitle(res.data.title)
       setPhoto(res.data.url)
-      setExpl(res.data.expl)
+      setExplanation(res.data.explanation)
       setDate(res.data.date)
-      setUrl(res.data.url)
     })
     .catch(err => console.log('error'))
   },[])
-
+  // [] used to trigger useEffect once only
   return (
-    <div className ="nasa-blog">
-      <Header title = {title} date = {date} />
-      <Body photo = {photo} info = {expl} />
-    </div>
+    <Container className ="nasa-blog">
+      <Head>
+        <Header title = {title} date = {date} />
+      </Head>
+      
+      <Bod>
+        <Body photo = {photo} explanation = {explanation}/>
+      </Bod>
+      
+    </Container>
   );
 }
+
+const Container = styled.div`
+background-color: #DCE1E3;
+`
+const Head = styled.div`
+text-align: center;
+padding: 15px;
+`
+const Bod = styled.div`
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+text-align: center;
+padding: 20px;
+`
+
 
 
 export default App;
