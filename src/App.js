@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from 'axios'
+import styled from 'styled-components'
 
 function App() {
   const [photo, setPhoto] = useState([])
@@ -15,21 +16,37 @@ function App() {
   }, [])
 
   const imgSrc = {
-    maxHeight: 700,
-    maxWidth: 700
+    maxHeight: 500,
+    maxWidth: 500
   }
 
+  const StyledH1 = styled.h1`
+  color: purple;
+  font-size: 3.5rem;
+  `;
+
+  const StyledDiv = styled.div`
+  background-color: lightblue;
+  `;
+
+  const PWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  `;
+
   return (
-    <div className="App">
-      <h1>NASA: Photo of the Day</h1>
+    <StyledDiv className="App">
+      <StyledH1>NASA: Photo of the Day</StyledH1>
       <p>{photo.title}</p>
       <p>{photo.date}</p>
+      <PWrapper>
       <p>{photo.explanation}</p>
+      </PWrapper>
       <img src={photo.url} alt='NASA All Day!' style={imgSrc}/>
       <br></br>
       <button color='primary' size='lg' block>I Come In Peace!</button>
       <h4>Tamara Taylor</h4>
-    </div>
+    </StyledDiv>
   );
 }
 
