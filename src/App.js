@@ -3,7 +3,7 @@ import "./App.css";
 import axios from 'axios'
 import Photo from './components/Photo'
 import { Button } from 'reactstrap';
-import Example from './components/Example'
+
 
 function App() {
 
@@ -12,7 +12,7 @@ function App() {
 
   useEffect(() => {
     console.log(today)
-    axios.get(`https://api.nasa.gov/planetary/apod?api_key=gGa6hgmeKLSEJWTyugiafAgj9sY8H6esdgAYbM6P&date=2021-06-24`)
+    axios.get(`https://api.nasa.gov/planetary/apod?api_key=gGa6hgmeKLSEJWTyugiafAgj9sY8H6esdgAYbM6P&date=${today}`)
       .then(({ data }) => setPhoto(data))
       .catch(err => console.log(err))
     return () => console.log('Cleaning up')
