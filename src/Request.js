@@ -7,7 +7,7 @@ export default function Request() {
 const [photo, setPhoto] = useState([])
 	useEffect(() => {
 		axios
-		.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2021-06-01')
+		.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
 		.then(res => {
 			console.log(res)
 			setPhoto(res.data)
