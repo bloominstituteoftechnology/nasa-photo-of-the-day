@@ -1,6 +1,6 @@
 import React from 'react'
 import './WireFrame.css'
-import {Toast, Card, CardTitle, CardImg} from 'reactstrap'
+import {Toast, Card, CardTitle, CardImg, CardText, CardBody} from 'reactstrap'
 
 const WireFrame = props => {
 	return (
@@ -15,14 +15,15 @@ const WireFrame = props => {
 				</Toast>
 			</Toast>
 
-			<Card>
-				<CardTitle className="title-header">
-						<div className="title">{props.photo.title}</div>
-				</CardTitle>
-						<div className="date">{props.photo.date}</div>
-				<CardImg style={{ width: '50%', height: '100%', margin: '0 auto'}} src={props.photo.url} alt="nasa apod" className="photo" />
-					<p className="photo-explanation">{props.photo.explanation}</p>
-				
+				<Card>
+					<CardBody>
+						<CardTitle className="title-header">
+								<div className="title">{props.photo.title}</div>
+						</CardTitle>
+								<div className="date">{props.photo.date}</div>
+						<CardImg style={{ width: '50%', height: '100%', margin: '0 auto'}} src={props.photo.url} alt="nasa apod" className="photo" />
+							<CardText>{props.photo.explanation}</CardText>
+					</CardBody>
 				</Card>
 			</div>
 		
