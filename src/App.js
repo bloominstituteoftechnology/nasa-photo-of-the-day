@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import axios from 'axios'
-import Card from './Card'
+import PhotoCard from './PhotoCard'
 import Hero from './Hero'
+
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
   return (
     <div className="App">
       <Hero />
-      <Card text={nasaPhoto.explanation} title={nasaPhoto.title} img={nasaPhoto.url}/>
+      <PhotoCard text={nasaPhoto.explanation} title={nasaPhoto.title} img={nasaPhoto.url}/>
     </div>
   );
 }

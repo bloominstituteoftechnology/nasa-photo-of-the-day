@@ -11,3 +11,36 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.header-title {
+  font-size: 10rem;
+  font-family: 'roboto';
+  color: palevioletred;
+}
+
+.header-btn {
+  font-size: 2rem;
+  font-family: 'roboto';
+  text-decoration: none;
+  color: palevioletred;
+}
+
+#card {
+  height: 100vh;
+  padding-top: 100px;
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#card h5 {
+  font-family: 'roboto';
+  font-size: 2rem;
+  color: papayawhip;
+}
+
+#card p {
+  font-family: 'roboto';
+  font-size: 1.5rem;
+  color: papayawhip;
+}
