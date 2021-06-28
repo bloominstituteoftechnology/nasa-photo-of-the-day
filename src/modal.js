@@ -1,13 +1,16 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 // import styled from 'styled-components'
+
+// const Button = styled.button`
+//  color: black;
+// `;
 
 const Modal = props => {
    
-
     return (
         // <DarkContainer>
         <div className={`modal ${props.show ? 'show' : ''}`} onClick={props.onClose}>
-            {/* <ModalContent> */}
+            
                 <div className='modal-content' onClick={e => e.stopPropagation()}>
                 <div className='modal-header'>
                     <h4 className='modal-title'>{props.title}</h4>
@@ -17,7 +20,7 @@ const Modal = props => {
                     <button onClick={props.onClose} className='button'>Close</button>
                 </div>
             </div> 
-             {/* </ModalContent>    */}
+              
         </div>
         // </DarkContainer>
     )
@@ -27,8 +30,5 @@ const Modal = props => {
 
 // `
 
-// const DarkContainer = styled(ModalContent)`
-
-// `
 
 export default Modal

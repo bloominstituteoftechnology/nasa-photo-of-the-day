@@ -6,6 +6,18 @@ import AboutInfo from "./aboutInfo";
 import Buttons from "./cta-login";
 import Modal from './modal.js'
 import './modal.css';
+import styled from "styled-components";
+
+const Button = styled.button`
+  padding: 2%;
+  margin-bottom: 2%;
+  background-color: crimson;
+  border-radius: 6%;
+  color: pink;
+  font-weight: bold;
+  font-size: 1rem;
+`;
+
 
 function App() {
   const [nasaData, setNasaData] = useState([])
@@ -25,12 +37,12 @@ function App() {
       <p className='subtitle'>NASA photo of the day</p>
       <img src={picOfTheDay} alt="NASA pic of the day"></img>
         <div>
-          <button className='info-button' onClick={() => setShow(true) }>More Info</button>
+          <Button className='info-button' onClick={() => setShow(true) }>More Info</Button>
         </div>
         <Modal title='My Modal' onClose={() => setShow(false)} show={show}>
           <AboutInfo/>
         </Modal>
-        {<Buttons />}
+        {<Buttons NasaButton/>}
     </div>
   );
 }
