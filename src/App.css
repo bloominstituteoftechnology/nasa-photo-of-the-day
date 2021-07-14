@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+.title {
+  color: blue;
+  font-size: .8rem;
+}
+
+.exp {
+  color: purple;
+  font-weight: bold;
+}
+body {
+  background-color: black;
+}
+.date {
+  color: green;
+  font-size: 0.5rem;
+}
