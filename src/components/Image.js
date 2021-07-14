@@ -1,4 +1,3 @@
 import React from "react";
 
-const Image = props => {
-}
+export default ({data}) => <img src={data.url}/>;
