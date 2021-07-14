@@ -113,4 +113,4 @@ Follow these steps for completing your project.
 ## Part II - [Advanced Styling Techniques](DAY_TWO_README.md)
 
 ## Rick's Pull Request
-  - [Pull Request link]()
+  - [Pull Request link](https://github.com/LambdaSchool/nasa-photo-of-the-day/pull/540)
