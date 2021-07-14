@@ -23,6 +23,9 @@ function App() {
   console.log(data);
   return (
     <div className="App">
+      <header>
+        <h1>Photo of the day:</h1>
+      </header>
       <Photo photo={data}/>
     </div>
   );
