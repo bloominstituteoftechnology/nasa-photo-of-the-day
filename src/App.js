@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
-import Image from "./components/Image"
 import Title from "./components/Title"
+import Image from "./components/Image"
+import Copyright from "./components/Copyright"
 import Date from "./components/Date"
-// import Explanation from "./components/Explanation"
+import Explanation from "./components/Explanation"
 import "./App.css";
 const dummyData = {
   "copyright": "Alan FriedmanAverted Imagination",
@@ -38,6 +39,7 @@ function App() {
     <div className="App">
       <Title data={data}/>
       <Image data={data}/>
+      <Copyright data={data}/>
       <Date data={data}/>
     </div>
   );
