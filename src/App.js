@@ -41,6 +41,7 @@ function App() {
       <Image data={data}/>
       <Copyright data={data}/>
       <Date data={data}/>
+      <Explanation data={data}/>
     </div>
   );
 }
