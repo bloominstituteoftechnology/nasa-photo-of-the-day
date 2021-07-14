@@ -1,6 +1,6 @@
 /**Thomas Bielawski
  * Lambda School WEB45
- * 2.2.3 Nasa APOD Video.js
+ * 2.2.3 Nasa APOD Media.js
  * 7/14/2021
  */
 
@@ -13,6 +13,7 @@ export default function Media({url})
     console.log("This is the url " + {url});
     //Return the url of the video
     return  <div className = "video-responsiveness">
+        {/**iframe to center the video player */}
         <iframe
             width="853"
             height="480"
@@ -22,5 +23,5 @@ export default function Media({url})
             allowFullScreen
             title="Embedded youtube" 
         />
-        </div>
+    </div>
 };

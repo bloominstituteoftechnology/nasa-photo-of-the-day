@@ -19,7 +19,7 @@ import Media from "./components/Media";
 //App function definition
 function App() 
 {
-  //
+  //Declare the state variable, init empty
   const [data, setData] = useState({});
 
   //effect hook function
@@ -27,18 +27,22 @@ function App()
   {
     //Axios gets data from the url
     axios.get("https://api.nasa.gov/planetary/apod?api_key=qlkWEOda9rWNiLcFqebrTUZcf1a60KVcCAYV2RYH")
+
     //then() function
     .then(res => 
     {
       //Log the results
       console.log(res.data);
-      //Invoke setDat() 
+
+      //Invoke setData() to set the data
       setData(res.data);
     })
 
     //Catch() function
     .catch(err => console.log("There was an error. Fix your code!" + err))
-  }, [])
+
+  //empty array to prevent infinite calls 
+  }, []) 
 
   //Return function
   return(
@@ -49,17 +53,17 @@ function App()
       {/**Render the title */}
       <Title title = {data.title} />
 
-      {/**Render the date, comes through as h2 */}
+      {/**Render the date */}
       <Date date = {data.date} />
 
-      {/**Show the Info */}
+      {/**Show the info */}
       <Info explanation = {data.explanation} />
 
       {/**Render the video player */}
       <Media url =  {data.url} />
-           
     </div>
   );
 }
 
+//App export statement
 export default App;

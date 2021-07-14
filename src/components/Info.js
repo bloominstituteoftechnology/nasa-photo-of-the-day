@@ -1,6 +1,6 @@
 /**Thomas Bielawski
  * Lambda School WEB45
- * 2.2.3 Nasa APOD info.js
+ * 2.2.3 Nasa APOD Info.js
  * 7/14/2021
  */
 
