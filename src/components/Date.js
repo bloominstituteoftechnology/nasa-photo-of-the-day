@@ -1,3 +1,3 @@
 import React from "react";
 
-export default ({data}) => <div>{data.date}</div>;
+export default ({data}) => <p>{data.date}</p>;
