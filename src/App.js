@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 import Image from "./components/Image"
+import Title from "./components/Title"
 import "./App.css";
 const dummyData = {
   "copyright": "Alan FriedmanAverted Imagination",
@@ -33,7 +34,8 @@ function App() {
 
   return (
     <div className="App">
-      <Image data={data}/>
+      <Title data={data}/>;
+      <Image data={data}/>;
     </div>
   );
 }

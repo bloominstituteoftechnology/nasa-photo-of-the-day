@@ -1,3 +1,3 @@
 import React from "react";
 
-export default ({data}) => <img src={data.}/>;
+export default ({data}) => <h3>{data.title}</h3>;
