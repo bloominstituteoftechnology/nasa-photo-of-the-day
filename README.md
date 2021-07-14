@@ -1,5 +1,19 @@
 # Module Project: Component Side Effects- NASA APOD
 
+- [Module Project: Component Side Effects- NASA APOD](#module-project-component-side-effects--nasa-apod)
+  - [Instructions](#instructions)
+  - [Commits](#commits)
+  - [Introduction](#introduction)
+  - [Instructions](#instructions-1)
+    - [Task 1: Project Set Up](#task-1-project-set-up)
+    - [Task 2: MVP](#task-2-mvp)
+      - [_MVP Requirements:_](#mvp-requirements)
+      - [Pro Tips](#pro-tips)
+    - [Task 3: Stretch](#task-3-stretch)
+  - [Submission Format](#submission-format)
+  - [Part II - Advanced Styling Techniques](#part-ii---advanced-styling-techniques)
+  - [Rick's Pull Request](#ricks-pull-request)
+
 This will be a two-module project. In it you will consume the NASA API to fetch the "Astronomy Photo Of The Day" or APOD. Once you fetch the data, you will build a few components that will render different pieces of data in your interface. After the second module (in the [DAY_TWO_README.md](DAY_TWO_README.md) file) you will re-style your app using [Styled Components](https://github.com/LambdaSchool/nasa-photo-of-the-day.git).
 
 ## Instructions
