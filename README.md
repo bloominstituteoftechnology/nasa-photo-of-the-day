@@ -111,3 +111,6 @@ Follow these steps for completing your project.
 ----
 
 ## Part II - [Advanced Styling Techniques](DAY_TWO_README.md)
+
+## Rick's Pull Request
+  - [Pull Request link]()
