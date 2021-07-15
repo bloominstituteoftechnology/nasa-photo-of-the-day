@@ -14,6 +14,7 @@
   - [Part II - Advanced Styling Techniques](#part-ii---advanced-styling-techniques)
   - [Rick's Pull Request](#ricks-pull-request)
   - [Date Picker](#date-picker)
+  - [Rick's Notes](#ricks-notes)
 
 This will be a two-module project. In it you will consume the NASA API to fetch the "Astronomy Photo Of The Day" or APOD. Once you fetch the data, you will build a few components that will render different pieces of data in your interface. After the second module (in the [DAY_TWO_README.md](DAY_TWO_README.md) file) you will re-style your app using [Styled Components](https://github.com/LambdaSchool/nasa-photo-of-the-day.git).
 
@@ -128,8 +129,25 @@ Follow these steps for completing your project.
 ## Part II - [Advanced Styling Techniques](DAY_TWO_README.md)
 
 ## Rick's Pull Request
-  - [Pull Request link](https://github.com/LambdaSchool/nasa-photo-of-the-day/pull/540)
 
-## Date Picker 
-  - [react date picker](https://www.npmjs.com/package//react-datepicker)
-  - [react video player](https://www.npmjs.com/package/react-player)
+- [Pull Request link](https://github.com/LambdaSchool/nasa-photo-of-the-day/pull/540)
+
+## Date Picker
+
+- [react date picker](https://www.npmjs.com/package//react-datepicker)
+- [react video player](https://www.npmjs.com/package/react-player)
+
+## Rick's Notes
+
+- npm i-g create-react-app
+- npm i bootstrap reactstrap
+- import 'bootstrap/dist/css/bootstrap.min.css
+- vs.
+- npm i styled-components
+- May need json "Scripts": {
+  - "predeploy": "npm run build", 
+  - "deploy": "gh-pages -d build",
+  - "start": "react-scripts start",
+  - remove "build": "react-scripts build"
+}
+see ![scripts](designs/f2c98dad0aed9c7267f9f5816c7c4a00-png.jpg)
