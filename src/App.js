@@ -4,12 +4,11 @@ import axios from 'axios'
 import Title from './components/Title'
 import  VideoPlayer  from "react-video-js-player";
 
-
 function App() {
 const[title, setTitle] = useState([])
 const[date,setDate] = useState([])
 const[explanation,setExplanation] = useState([])
-const[img, setImg] = useState("")
+const[img, setImg] = useState([])
 
   const takeNewData = () =>{
     axios.get(`https://api.nasa.gov/planetary/apod?api_key=WscU2prYd7VBNSf7t33LfWOLSQscDvTlHrHcSoVB
@@ -38,7 +37,7 @@ const[img, setImg] = useState("")
 
   return (
     <div className="App">
-      <Title title={title} date={date} src={img} explanation={explanation} />
+      <Title title={title} date={date} explanation={explanation} url={img}/>
         
     </div>
   );
