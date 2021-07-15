@@ -18,5 +18,5 @@ export default function Explanation(){
             <p>{ex}</p>
         </div>
     )
-
+//fixing a push
 }
