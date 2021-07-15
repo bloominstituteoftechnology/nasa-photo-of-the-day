@@ -4,6 +4,8 @@ import { BASE_URL, API_KEY } from "../constants";
 import axios from "axios";
 import Title from "./Title";
 import Video from "./Video";
+import Explanation from "./Explanation";
+import Date from "./Date";
 
 function App() {
   const [apod, setApod] = useState({});
@@ -22,20 +24,13 @@ function App() {
 
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun{" "}
-        <span role="img" aria-label="go!">
-          🚀
-        </span>
-      </p>
       <Title title={apod.title} />
+      <Date date={apod.date} />
 
       <Video url={apod.url} />
 
-      <p>{apod.explanation}</p>
+      <Explanation explanation={apod.explanation} />
     </div>
   );
 }
-//<ReactPlayer url='apod.url' />
 export default App;
