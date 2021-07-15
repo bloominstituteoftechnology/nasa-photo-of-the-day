@@ -21,6 +21,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1>NASA APOD</h1>
       <Title data={data}/>
       <Image data={data}/>
       <Copyright data={data}/>
@@ -30,4 +31,4 @@ function App() {
   );
 }
 
-export default App;
+export default App; 
