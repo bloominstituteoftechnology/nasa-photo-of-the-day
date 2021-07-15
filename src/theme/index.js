@@ -1,3 +1,5 @@
+//created theme Obj to be use by the entire App.js
+
 export default {
     primaryColor: 'Maroon',
     secondaryColor: 'lightcoral',

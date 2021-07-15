@@ -3,14 +3,13 @@ import '../App.css';
 import  VideoPlayer  from "react-video-js-player";
 import styled,{keyframes} from 'styled-components'
 
+//created styling components 
 const kf = keyframes`
 100%{
     opacity : 1;
     transform: scale(1) rotateZ(0);
 }
 `
-
-
 const StyledTitle = styled.div`
 width: 100%;
 justify-content: space-between;
@@ -42,7 +41,7 @@ h3 {
 }
 
 }`
-
+//added styled components
 const Title = (props) => {
     return <StyledTitle>
     <h1>{props.title}</h1>
