@@ -9,13 +9,16 @@ import { BASE_URL, API_KEY} from './constants/key';
    const [nasa, setNasa] =useState([]);
 
   useEffect(() => {
+    const fetchNasaData = () =>{
     axios.get(`${BASE_URL}${API_KEY}`)
     .then(res => {
-      setNasa(res.data)
+      setNasa(res.data);
     })
     .catch(err => {
       debugger
     })
+  }
+  fetchNasaData();
   }, []);
 
   return (
