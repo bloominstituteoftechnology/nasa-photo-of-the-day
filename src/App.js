@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from 'axios'
 import Title from './components/Title'
-import NasaPhoto from './components/NasaPhoto'
-import Explanation from './components/Explanation'
+import  VideoPlayer  from "react-video-js-player";
+
 
 function App() {
 const[title, setTitle] = useState([])
@@ -38,7 +38,7 @@ const[img, setImg] = useState("")
 
   return (
     <div className="App">
-      <Title title={title} date={date} explanation={explanation} src={img}/>
+      <Title title={title} date={date} src={img} explanation={explanation} />
         
     </div>
   );
