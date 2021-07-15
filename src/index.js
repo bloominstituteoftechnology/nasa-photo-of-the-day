@@ -1,18 +1,16 @@
+/**Thomas Bielawski
+ * Lambda School WEB45
+ * 2.2.3 Nasa APOD index.js
+ * 7/14/2021
+ * 2.2.4 Nasa APOD advanced styling
+ * 7/15/2021
+ */
+
+
+//Import statements
 import React from "react";
 import ReactDOM from "react-dom";
-
-// import {render} from "react-dom";
-// import {ThemeProvider} from "styled-components";
-
 import App from "./App";
-// import themePassedIn from "./theme/index.js";
-
-
-// const SpaceFriend =  styled.div` 
-
-//   //Change the background color from index.js theme
-//   background-color: blue;
-// `
 
 
 ReactDOM.render(<App />, document.getElementById("root"))

@@ -2,6 +2,8 @@
  * Lambda School WEB45
  * 2.2.3 Nasa APOD Info.js
  * 7/14/2021
+ * 2.2.4 Advanced styling
+ * 7/15/2021
  */
 
 //import react

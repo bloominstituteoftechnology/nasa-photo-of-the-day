@@ -3,6 +3,7 @@
  * 2.2.3 Nasa APOD app.js
  * 7/14/2021
  * 2.2.4 Nasa APOD advanced styling
+ * 7/15/2021
  */
 
 
@@ -16,13 +17,14 @@ import Info from "./components/Info";
 import Media from "./components/Media";
 import styled from 'styled-components'
 
-
+//Defined a div style for the main page, assigned to SpaceFriend
 const SpaceFriend = styled.div`
   background-color: blue;
   &:hover{background-color: gray}
   color:white;
 `;
 
+//Defined a div style for the  spans, assigned to SpaceSpan
 const SpaceSpan = styled.span`
     display: flex;
     flex-direction: column;
@@ -32,6 +34,7 @@ const SpaceSpan = styled.span`
     flex-basis: content;
 `;
 
+//Defined a div style for the explanation span, assigned to SpaceSpanExp
 const SpaceSpanExp = styled.span`
   display: flex;
     flex-direction: column;
@@ -79,22 +82,25 @@ function App()
        NASA APOD <span role="img" aria-label='go!'>🚀</span>!
       </p>
 
-      <SpaceSpan className = "Span">{/**Render the title */}
+      {/**Render the title */}
+      <SpaceSpan className = "Span">
       <Title title = {data.title} />
       </SpaceSpan>
       
-      <SpaceSpan className = "Span">{/**Render the date */}
+      {/**Render the date */}
+      <SpaceSpan className = "Span">
       <Date date = {data.date} />
       </SpaceSpan>
       
-      <SpaceSpanExp className = "Span">{/**Show the info */}
+      {/**Show the info */}
+      <SpaceSpanExp className = "Span">
       <Info explanation = {data.explanation} />
       </SpaceSpanExp>
       
-      <SpaceSpan className = "Span">{/**Render the video player */}
+      {/**Render the video player */}
+      <SpaceSpan className = "Span">
       <Media url =  {data.url} />
       </SpaceSpan>
-      
       
     </SpaceFriend>
     
