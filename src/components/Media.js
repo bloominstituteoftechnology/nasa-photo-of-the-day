@@ -10,11 +10,13 @@ import React from "react";
 //Default function definition, pass in {url}
 export default function Media({url})
 {
-    console.log("This is the url " + {url});
-    //Return the url of the video
-    return  <div className = "video-responsiveness">
+    if (`${url}`.includes("youtube") == true)
+    {
+        console.log("This is the url " + {url});
+        //Return the url of the video
+        return  <div className = "video-responsiveness">
         {/**iframe to center the video player */}
-        <iframe
+            <iframe
             width="853"
             height="480"
             src={`${url}`}
@@ -22,6 +24,15 @@ export default function Media({url})
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             title="Embedded youtube" 
-        />
-    </div>
+            />;
+        </div>
+    }
+
+    else 
+    {
+        return <div className = "image"> 
+        <img src = {`${url}`} alt  = "alternate text"></img></div>
+    }
 };
+
+ 

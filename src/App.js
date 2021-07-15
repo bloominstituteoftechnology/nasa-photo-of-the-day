@@ -2,6 +2,7 @@
  * Lambda School WEB45
  * 2.2.3 Nasa APOD app.js
  * 7/14/2021
+ * 2.2.4 Nasa APOD advanced styling
  */
 
 
@@ -13,12 +14,39 @@ import Date from "./components/Date";
 import Title from "./components/Title";
 import Info from "./components/Info";
 import Media from "./components/Media";
+import styled from 'styled-components'
 
 
+const SpaceFriend = styled.div`
+  background-color: blue;
+  &:hover{background-color: gray}
+  color:white;
+`;
+
+const SpaceSpan = styled.span`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: solid black;
+    flex-basis: content;
+`;
+
+const SpaceSpanExp = styled.span`
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: solid black;
+    padding-left: 10%;
+    padding-right: 10%;
+    flex-basis: content;
+`;
 
 //App function definition
 function App() 
 {
+
   //Declare the state variable, init empty
   const [data, setData] = useState({});
 
@@ -46,22 +74,30 @@ function App()
 
   //Return function
   return(
-    <div className="App"> 
+    <SpaceFriend className="App"> 
       <p>
        NASA APOD <span role="img" aria-label='go!'>🚀</span>!
       </p>
-      {/**Render the title */}
+
+      <SpaceSpan className = "Span">{/**Render the title */}
       <Title title = {data.title} />
-
-      {/**Render the date */}
+      </SpaceSpan>
+      
+      <SpaceSpan className = "Span">{/**Render the date */}
       <Date date = {data.date} />
-
-      {/**Show the info */}
+      </SpaceSpan>
+      
+      <SpaceSpanExp className = "Span">{/**Show the info */}
       <Info explanation = {data.explanation} />
-
-      {/**Render the video player */}
+      </SpaceSpanExp>
+      
+      <SpaceSpan className = "Span">{/**Render the video player */}
       <Media url =  {data.url} />
-    </div>
+      </SpaceSpan>
+      
+      
+    </SpaceFriend>
+    
   );
 }
 

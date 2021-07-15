@@ -11,6 +11,6 @@ import React from "react";
 export default function Date({date})
 {
     //Return the date in h2 tag
-    return <h2>The date is:{date}</h2>;
+    return <h2>{date}</h2>;
 }
 
