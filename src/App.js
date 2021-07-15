@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import moment from 'moment'
 import axios from "axios";
 import "./App.css";
 
@@ -7,8 +8,11 @@ import Video from "./Components/Video";
 
 function App() {
   const [apodData, setApodData] = useState({});
+  const [date , setDate] = useState(moment(new Date()).format("YYYY-MM-DD"))
 
-  useEffect(() => {
+  console.log(date);
+
+  function getApodData(date) {
     axios
       .get(
         "https://api.nasa.gov/planetary/apod?api_key=cPnxYU2eBFaVE84dw9qlg6kWLIjYaVwMOSeSbIbK"
@@ -17,6 +21,10 @@ function App() {
         console.log(response.data)
         setApodData(response.data);
       });
+  }
+
+  useEffect(() => {
+    getApodData()
   }, []);
 
   function changeDateBackwards(date) {

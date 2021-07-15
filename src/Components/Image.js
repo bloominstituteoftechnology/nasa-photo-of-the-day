@@ -6,7 +6,7 @@ function Image(props) {
   if (!url) return <h3> Loading... </h3>;
 
   return (
-    <div style={{ display:'flex', width: "100%", padding: '2vh 2vw' }}>
+    <div style={{ display:'flex', alignItems:'center', width: "100%", padding: '2vh 2vw' }}>
     <div style={{width: '50%', padding:'25px'}}>
      <img src={url} alt="of the day"/>
      </div>   
