@@ -44,8 +44,6 @@ function App() {
     <Page className="App">
       <h1>Nasa Photo of the Day 🚀</h1>
       <Date date={information.date}/>
-      {/* <img src={information.url} alt="space" /> 
-        */}
       {url.includes('youtube')?<Media url={information.url}/>:<img src={information.url} alt="space"/>}
       <Title title={information.title}/>
       <Paragraph explanation={information.explanation}/>
