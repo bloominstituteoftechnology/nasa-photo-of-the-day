@@ -1,13 +1,27 @@
-body {
+/**Thomas Bielawski
+ * Lambda School WEB45
+ * 2.2.3 Nasa APOD index.css
+ * 7/14/2021
+ * 2.2.4 Nasa APOD advanced styling
+ * 7/15/2021
+ */
+
+body 
+{
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Added background color to fix the white border that appeared around
+   * my advanced component style on app.js. Then, overrode that with advaced
+   * styling. */
+  background: black;
 }
 
-code {
+code 
+{
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
