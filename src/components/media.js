@@ -1,4 +1,10 @@
 import React from "react";
+import styled from 'styled-components'
+
+const ImgStyle = styled.div`
+ heigh
+`
+
 
 export default function Media({ url, picurl }) {
   const isVideo = () => {
@@ -19,9 +25,11 @@ export default function Media({ url, picurl }) {
 
   const isImage = () => {
     return (
+      <ImgStyle>
       <div>
         <img src={url} alt="stuff" />
       </div>
+      </ImgStyle>
     );
   };
 
