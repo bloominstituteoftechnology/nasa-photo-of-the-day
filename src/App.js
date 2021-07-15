@@ -29,6 +29,7 @@ function App() {
     <div className="App">
       <Title title={information.title}/>
       <Date date={information.date}/>
+      {/* <img src={information.url} alt="space" /> */}
       <Media url={information.url}/>
       <Paragraph explanation={information.explanation}/>
     </div>

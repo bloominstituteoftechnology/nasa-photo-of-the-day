@@ -1,6 +1,6 @@
 import React from 'react'
-
 export default function Media({ url }){
+    if ({ url }.includes('youtube')){
     return <div className="video">
         <iframe 
         width = "853"
@@ -12,4 +12,10 @@ export default function Media({ url }){
         title="Embedded youtube"
         />
     </div>;
+     }else{
+         return (
+        <div className="image">
+            <img src={`${url}`} alt='space img'/>
+         </div>)
+     }
 }
