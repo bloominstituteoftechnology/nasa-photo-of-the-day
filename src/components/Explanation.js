@@ -5,7 +5,7 @@ const DateP = styled.p`
   background-color: mistyrose;
   border:1px #4F4F4F;
   margin: 0%;
-  padding: 1% 14%;
+  padding: 1% 12.5%;
   
 `
 
