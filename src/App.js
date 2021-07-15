@@ -55,6 +55,7 @@ import styled from "styled-components";
 
     <Container className="container1">
       <Header title={contents.title}/>
+      {/* {url.includes('youtube')?<div className ='player-wrapper'><ReactPlayer url={url} /></div>:<Pic pic={url}/>} */}
       <div className="App"></div>
     </Container>
   );
