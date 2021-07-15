@@ -2,6 +2,11 @@ import React, {useState, useEffect} from "react";
 import "./App.css";
 import axios from 'axios';
 import { BASE_URL, API_KEY} from './constants/key';
+import Nasa from './components/Nasa';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Pic from './components/Pic';
+
 
 
 
