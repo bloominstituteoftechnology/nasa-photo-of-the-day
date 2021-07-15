@@ -5,10 +5,10 @@ function Header(props){
     const {title} = props;
     const Headers = styled.div``;
     return (
-        <Header>
+        <Headers>
             <h1>Picture of The Day From Nasa</h1>
             <h3>{title}</h3>
-        </Header>
+        </Headers>
     )
 }
 export default Header;
