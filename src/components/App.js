@@ -11,7 +11,9 @@ import styled from "styled-components";
 function addDay(date) {
   var result = new Date(date);
   result.setDate(result.getDate() + 1);
-  return result;
+  return `${result.getFullYear()}-${result.getMonth() + 1}-${
+    result.getDate() + 1
+  }`;
 }
 function subtractDay(date) {
   var result = new Date(date);
@@ -55,9 +57,7 @@ function App() {
           Previous Day
         </button>
         <DateP date={apod.date} />
-        <button onClick={() => (apod.date = addDay(apod.date))}>
-          Next Day
-        </button>
+        <button onClick={() => setDate(addDay(apod.date))}>Next Day</button>
       </StyledDate>
       <Media url={apod.url} media_type={apod.media_type} />
 
