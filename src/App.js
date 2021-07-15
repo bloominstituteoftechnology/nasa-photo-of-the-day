@@ -21,7 +21,7 @@ import Pic from './components/Pic';
     })
     .catch(err => {
       debugger
-    })
+    });
   }
   fetchNasaData();
   }, []);
