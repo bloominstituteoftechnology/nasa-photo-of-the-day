@@ -54,15 +54,8 @@ import styled from "styled-components";
   return (
 
     <Container className="container1">
-      {/* <Header title={contents.title/> */}
-      <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
-      <h1>TESTING</h1>
-    </div>
-
+      <Header title={contents.title/>
+      <div className="App"></div>
     </Container>
   );
 }
