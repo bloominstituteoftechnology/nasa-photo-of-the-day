@@ -24,8 +24,10 @@ function App() {
       <h1>NASA APOD</h1>
       <Title data={data}/>
       <Image data={data}/>
+      <div className="info">
       <Copyright data={data}/>
       <Date data={data}/>
+      </div>
       <Explanation data={data}/>
     </div>
   );
