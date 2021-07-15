@@ -36,7 +36,7 @@
     transform: rotate(360deg);
   }
 }
-.title {
+/* .header {
   color: blue;
   font-size: .8rem;
 }
@@ -45,10 +45,12 @@
   color: purple;
   font-weight: bold;
 }
-body {
-  background-color: black;
-}
+
 .date {
   color: green;
   font-size: 0.5rem;
+} */
+
+body {
+  background-color: black;
 }

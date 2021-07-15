@@ -3,39 +3,42 @@ import React, {useState, useEffect} from "react";
 import "./App.css";
 import { BASE_URL, API_KEY} from './apiIndex'
 import axios from "axios";
+//importing components
 import Title from  "./components/title"
 import Media from "./components/media";
 import Date from "./components/date";
 import Explnation from "./components/explanation";
+
 function App() {
-  const [data, setData] = useState ({})
+  const [data, setData] = useState ([])
+  
   useEffect(() => {
-    // const getData = () => {
       axios.get(`${BASE_URL}${API_KEY}`)
       .then(result => {
         console.log(result)
         setData(result.data)
+        console.log(result.data)
         
       })
       .catch (err =>{
         console.log(err)
       })
     
-    // getData()
+
   }, [])
 
   return (
     <div className="App">
-      <div className='title'>
+      
       <Title title={data.title} />
-      </div>
-     <Media url={data.url}/>
-     <div className='date'>
+    
+     <Media url={data.url} picurl={data.media_type}/>
+     
       <Date date={data.date}/>
-      </div>
-      <div className="exp" >
+    
+      
       <Explnation explanation={data.explanation}/>
-      </div>
+      
     </div>
   );
 }
