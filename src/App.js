@@ -11,7 +11,7 @@ import Header from "./Components/Header";
 
 const Button = styled.button`
   font-family: 'Poppins', sans-serif;
-  background-color: #00A9AC;
+  background-color: ${props => props.theme.primaryColor};
   color:white;
   outline: 0;
   border: 0;

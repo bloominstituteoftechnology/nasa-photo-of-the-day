@@ -17,7 +17,7 @@ const HeaderLeft = styled.div`
 
   h1 {
     margin-left: 1vw;
-    color: #00a9ac;
+    color: ${props => props.theme.primaryColor};
     font-size: 2.25rem;
     font-weight: 500;
     line-height: 1;
@@ -29,6 +29,7 @@ const HeaderRight = styled.div`
   width: 40%;
 
   h1{
+      color: ${props => props.theme.primaryColor};
       font-weight: 400;
   }
 `;
