@@ -2,6 +2,16 @@
 import React, { useEffect, useState } from 'react';
 import PicCard from './PicCard';
 import axios from 'axios';
+import DetailsCard from './DetailsCard';
+import styled from 'styled-components'
+
+const StyledAPOD = styled.div`
+    background-color: #B0C4DE;
+    padding: 5%;
+    margin: 4%;
+    border-radius: 8px;
+    box-shadow: 0px 1px 6px -2px #807f7f;
+`
 
 export default function APOD(props) {
     
@@ -18,13 +28,15 @@ export default function APOD(props) {
     }, []);
 
     return (
-        <div>
+        <StyledAPOD>
             <PicCard 
                 title={media.title}
                 url={media.url}
-                explanation={media.explanation}
                 date={media.date}
             />
-        </div>
+            <DetailsCard
+                explanation={media.explanation}
+            />
+        </StyledAPOD>
     );
 }

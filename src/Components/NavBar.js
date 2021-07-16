@@ -1,26 +1,54 @@
 import React from 'react';
+import styled from 'styled-components';
+
+
+
+const StyledNavBar = styled.div`
+    
+    nav {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.3rem;
+    background-color: #778899;
+    transform: scale(1.1);
+    border-radius: 8px;
+    box-shadow: 0px 3px 10px -5px #807f7f;
+    border: 2px solid #B0E0E6
+;
+
+
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+        border: 3px solid #B0E0E6
+;
+        box-shadow: 0px 1px 6px -2px #807f7f;
+        border-radius: 8px;
+        background-color: gray;
+
+        margin: 16px;
+        padding: 3px 20px;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+`
+
+
 
 export default function NavBar () {
-    const style = {
-        display: 'flex',
-        justifyContent: 'space-around',
-        fontSize: '1.3rem',
-        backgroundColor: '#5F9EA0',
-    };
-
-    const styleA = {
-        textDecoration: 'none',
-        color: 'white',
-    };
 
     return (
-        <div>
-            <nav style = {style}>
-                <a href='#NASA' style = {styleA}>NASA</a>
-                <a href='#random' style = {styleA}>Random</a>
-                <a href='#yesterday' style = {styleA}>Yesterday</a>
-                <a href='#about' style = {styleA}>About</a>
+        <StyledNavBar>
+            <nav>
+                <a href='#NASA'>NASA</a>
+                <a href='#random'>Random</a>
+                <a href='#yesterday'>Yesterday</a>
+                <a href='#about'>About</a>
             </nav>
-        </div>
+        </StyledNavBar>
     );
 }
