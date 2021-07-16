@@ -28,19 +28,4 @@ code {
     monospace;
 }
 
-button{
-  font-family: 'Poppins', sans-serif;
-  background-color: #00A9AC;
-  color:white;
-  outline: 0;
-  border: 0;
-  margin: 0 15px;
-  padding: 5px 25px;
-  font-size: 1rem;
-  font-weight: 500;
-  border-radius: 2px;
-}
 
-button:hover{
-  cursor: pointer;
-}

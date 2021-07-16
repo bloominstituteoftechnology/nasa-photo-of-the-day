@@ -6,6 +6,41 @@ import "./App.css";
 import Image from "./Components/Image";
 import Video from "./Components/Video";
 
+import styled from 'styled-components'
+import Header from "./Components/Header";
+
+const Button = styled.button`
+  font-family: 'Poppins', sans-serif;
+  background-color: #00A9AC;
+  color:white;
+  outline: 0;
+  border: 0;
+  margin: 0 15px;
+  padding: 5px 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 2px;
+
+  &:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+  }
+`
+
+const ButtonContainer = styled.div`
+  display:flex;
+  justify-content:center;
+  padding: 5px;
+`
+
+const MediaContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+`
+
 function App() {
   const [apodData, setApodData] = useState({});
   const [date, setDate] = useState(moment(new Date()).format("YYYY-MM-DD"));
@@ -38,38 +73,26 @@ function App() {
 
   return (
     <div className="App">
-      <div className="header-container">
-        <div className="header-left">
-          <img id="header-logo" src="NASA.png" alt="NASA Logo" />
-          <h1>
-            {" "}
-            Picture of <br /> The Day
-          </h1>
-        </div>
-        <div className="header-right">
-          <h1>Gallery</h1>
-        </div>
-      </div>
-
+      <Header/>
       { error ? (<h1>{error}</h1>) : (<></>)}
-      <div className="media-container">
+      <MediaContainer>
         {apodData.media_type === "image" ? (
           <Image data={apodData} />
         ) : (
           <Video data={apodData} />
         )}
 
-        <div className="button-container">
-          <button className="button" onClick={() => changeDateBackwards()}>
+        <ButtonContainer>
+          <Button onClick={() => changeDateBackwards()}>
             {" "}
             Go Back
-          </button>
-          <button className="button" onClick={() => changeDateForwards()}>
+          </Button>
+          <Button onClick={() => changeDateForwards()}>
             {" "}
             Go Ahead
-          </button>
-        </div>
-      </div>
+          </Button>
+        </ButtonContainer>
+      </MediaContainer>
     </div>
   );
 }

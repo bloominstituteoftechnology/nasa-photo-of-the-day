@@ -13,37 +13,6 @@
   }
 }
 
-/* Header Styles */
-
-.header-container {
-  width: 100%;
-  min-height: 15vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5vh 2vw;
-}
-
-.header-left{
-  display: flex;
-  align-items: center;
-  width:60%;
-}
-
-.header-left h1{
-  margin-left: 1vw;
-  color:#00A9AC;
-  font-size: 2.25rem;
-  font-weight: 500;
-  line-height: 1;
-}
-
-.header-right{
-  display:flex;
-  justify-content: flex-end;
-  width: 40%;
-}
-
 #header-logo{
   width:6vw;
   height: 100%;
@@ -60,19 +29,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-.media-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.responsive-video{
-  width: 100%;
-  height: 50vh;
-  border: 0;
-  border-radius: 3px;
 }
