@@ -1,5 +1,10 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
+import styled from 'styled-components'
+
+const StyledTitle = styled.div`
+    color: ${props => props.theme.secondaryColor}
+`
 
 export default function Title(){
     const [title, setTitle] = useState(null)
@@ -13,9 +18,9 @@ export default function Title(){
     }, [Title])
 
     return (
-        <div>
-            <h1>{title}</h1>
-        </div>
+        <StyledTitle>
+            <h2>{title}</h2>
+        </StyledTitle>
     )
 
 }

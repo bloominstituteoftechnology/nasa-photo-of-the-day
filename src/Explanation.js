@@ -1,5 +1,18 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
+import styled from 'styled-components'
+
+const StyledExplnation = styled.div`
+    padding: 1% 3%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 4px solid ${props => props.theme.primaryColor};
+    border-radius: 10px;
+    margin:10%;
+    background-color: ${props => props.theme.white};
+
+`
 
 export default function Explanation(){
     const [ex, setEx] = useState(null)
@@ -13,10 +26,10 @@ export default function Explanation(){
     }, [Explanation])
 
     return (
-        <div>
+        <StyledExplnation>
             <h3>Explanation:</h3>
             <p>{ex}</p>
-        </div>
+        </StyledExplnation>
     )
 //fixing a push
 }
