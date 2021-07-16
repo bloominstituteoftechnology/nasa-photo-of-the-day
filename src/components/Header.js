@@ -46,7 +46,7 @@ nav{
     return (
         <Headers>
             <div>
-            <h1>Picture of The Day From Nasa</h1>
+            <h1>Picture of The Day From</h1>
             </div>
             
             <section className="logo">
