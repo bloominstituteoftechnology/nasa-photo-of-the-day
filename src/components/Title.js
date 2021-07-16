@@ -43,11 +43,22 @@ h3 {
 }`
 //added styled components
 const Title = (props) => {
+    console.log(props.media)
+    if (props.media == "image")
+    {
     return <StyledTitle>
     <h1>{props.title}</h1>
     <h2>{props.date}</h2> 
     <img src={props.url} allow="encrypted-media" width='50%' height='30%'  />
     <h3>{props.explanation}</h3>
     </StyledTitle>
+    } else{
+        return <StyledTitle>
+        <h1>{props.title}</h1>
+        <h2>{props.date}</h2> 
+        <iframe src={props.url} />
+        <h3>{props.explanation}</h3>
+        </StyledTitle> 
+    }
 }
 export default Title;

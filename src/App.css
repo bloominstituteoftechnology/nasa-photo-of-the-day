@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  background-color: Maroon;
+}
+.App:hover {
+  transition: all 0.2s ease-in-out;
+  background-color: black; 
 }
 
 .App-logo {
