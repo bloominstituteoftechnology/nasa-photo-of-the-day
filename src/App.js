@@ -11,6 +11,7 @@ import styled from "styled-components";
 
 
 
+
  function App() {
    const [contents, setContents] =useState([]);
    const [url, setUrl] =useState("");
@@ -55,9 +56,10 @@ import styled from "styled-components";
   return (
 
     <Container className="container1">
-      <Header title={contents.title}/>
+      <Header />
       <Pic pic={url}/>
       {/* {url.includes('youtube')?<div className ='player-wrapper'><ReactPlayer url={url} /></div>:<Pic pic={url}/>} */}
+      <Content explanation={contents.explanation} title={contents.title}/>
       <div className="App"></div>
     </Container>
   );
