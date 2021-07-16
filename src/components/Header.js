@@ -2,7 +2,7 @@ import React from 'react';
 import styled from  'styled-components';
 
 export default function Header(props){
-    const {title} = props;
+    // const {title} = props;
     const Headers = styled.div`
     h1{
         font-family: 'Chelsea Market', cursive;
@@ -11,7 +11,38 @@ export default function Header(props){
         padding-left: 2%;
         
     }
+    h2{
+    font-family: 'Chelsea Market', cursive;
+    font-size: 4rem;
+	color: black;
+	padding-left: 2%;
+}
+
+a{
+    text-decoration: none;
+	background-color: rgb(179, 170, 170);
+	padding: 1%;
+	border-radius: 25%;
+	margin: 0 1%;
+    &:hover{
+        background-color: rgb(11, 223, 57);
+        transform:scale(2);
+        transition: all 0.5s ease-in-out;
+}
+transition: all 0.5s ease-in-out;
+
+header{
+	background-color:#444c55;
+}
+nav{
+	display:flex;
+	flex-direction: row;
+    justify-content:flex-start;
+	margin: 1%;	
+}
+
     `;
+
     return (
         <Headers>
             <div>
@@ -26,7 +57,6 @@ export default function Header(props){
                 <a href="index.html">LogIn/Out</a>
                 <a href="index.html">Subscribe</a>
             </nav>
-            {/* <h3>{title}</h3> */}
         </Headers>
     )
 }

@@ -10,6 +10,14 @@ export default function Content(props) {
             <div>
             <h3>{title}</h3>
             </div>
+            <div>
+                <a id="resume-link" href="https://resume.creddle.io/resume/4uxc0m7zngm">My Resume</a>
+            </div>
+            <div>
+                <p>
+                    {explanation}
+                </p>
+            </div>
         </Contents>
     )
 }
