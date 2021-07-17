@@ -10,26 +10,6 @@ import styled from "styled-components";
 
 
 
-
-
- function App() {
-   const [contents, setContents] =useState([]);
-   const [url, setUrl] =useState("");
-
-  useEffect(() => {
-    const fetchNasaData = () =>{
-    axios.get(`${BASE_URL}${API_KEY}`)
-    .then(res => {
-      setContents(res.data);
-      setUrl(res.data.url)
-    })
-    .catch(err => {
-      debugger
-    });
-  }
-  fetchNasaData();
-  }, []);
-
   const Container = styled.div`
   *{
     padding:0px;
@@ -51,6 +31,23 @@ import styled from "styled-components";
 
   `;
 
+ function App() {
+   const [contents, setContents] =useState([]);
+   const [url, setUrl] =useState("");
+
+  useEffect(() => {
+    const fetchNasaData = () =>{
+    axios.get(`${BASE_URL}${API_KEY}`)
+    .then(res => {
+      setContents(res.data);
+      setUrl(res.data.url)
+    })
+    .catch(err => {
+      debugger
+    });
+  }
+  fetchNasaData();
+  }, []);
 
 
   return (

@@ -135,6 +135,7 @@ Follow these steps for completing your project.
 ## Date Picker
 
 - [react date picker](https://www.npmjs.com/package//react-datepicker)
+- [Date Picker Formating](https://www.npmjs.com/package/dateformat)
 - [react video player](https://www.npmjs.com/package/react-player)
 
 ## Rick's Notes

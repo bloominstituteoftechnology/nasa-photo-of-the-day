@@ -2,6 +2,7 @@ import React from 'react';
 import styled from  'styled-components';
 export default function Content(props) {
     const {explanation, title} = props;
+    console.log(`OVER HERE`,explanation);
     const Contents = styled.div`
     //FILL ME IN
     `;
