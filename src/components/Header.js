@@ -40,7 +40,6 @@ nav{
     justify-content:flex-start;
 	margin: 1%;	
 }
-
     `;
 
     return (
@@ -60,4 +59,3 @@ nav{
         </Headers>
     )
 }
-// export default Header;
