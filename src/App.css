@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+
 }
 
 .App-logo {
@@ -26,6 +27,23 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.background1 {
+  background-color:rgb(139, 126, 126);
+}
+
+.homecontent {
+  text-align: center;
+  font-family: 'Zen Tokyo Zoo', cursive;
+ 
+}
+.content1 {
+  text-align: center;
+  font-family: 'Zen Tokyo Zoo', cursive;
+  color:red;
+  
+
 }
 
 @keyframes App-logo-spin {
