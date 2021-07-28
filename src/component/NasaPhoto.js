@@ -7,8 +7,6 @@ const [photoData, setPhotoData] = useState(null)
 
 useEffect(() => { //function that fetches the photo
     fetchPhoto();
-
-
     async function fetchPhoto() {
         const res = await fetch(
             'https://api.nasa.gov/planetary/apod?api_key=nu7dbTn2OBoMfqqh3EvuS9qQMx7b8BMkgF1uNTx0'
@@ -26,6 +24,7 @@ if (!photoData) return <div />;
         <>
 <NavBar />
 <div>
+    <div className="content1">
  
     <img src={photoData.url} alt={photoData.title} />
     <div>
@@ -34,6 +33,7 @@ if (!photoData) return <div />;
         </h1>
         <p>{photoData.date}</p>
         <p>{photoData.explanation}</p>
+        </div>
     </div>
 </div>
 </>
