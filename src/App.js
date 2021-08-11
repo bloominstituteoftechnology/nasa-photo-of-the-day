@@ -1,5 +1,16 @@
 import React from "react";
 import "./App.css";
+import axios from "axios";
+import { BASE_URL, API_KEY} from "./constants/index"
+
+axios.get(`${BASE_URL}?api_key=${API_KEY}`)
+  .then(res => {
+    console.log(res.data);
+  })
+  .catch(err => {
+    console.error(err);
+  })
+
 
 function App() {
   return (
