@@ -17,7 +17,6 @@ function App() {
   useEffect(() => {
     axios.get(`${BASE_URL}?api_key=${API_KEY}`)
     .then(res => {
-      setHead(res)
       setImg(res.data.hdurl)
       setTitle(res.data.title)
       setCopyright(res.data.copyright)
