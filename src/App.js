@@ -23,13 +23,14 @@ function App() {
     width: '70%',
     border: '1px solid black',
     margin: '0 auto',
-    marginBottom: '50px'
+    marginBottom: '50px',
+    marginTop: '30px'
   }
   
   return (
     <div className="App">
       <h1>Nasa Photo of the Day</h1>
-      <p style={pStyle}>{caption}</p>
+      <p style={pStyle}>{caption}</p> 
       <Main image={image} />
     </div>
   );
