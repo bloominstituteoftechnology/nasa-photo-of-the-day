@@ -6,10 +6,10 @@ export default function PhotoHeader(props) {
     return (
         <div className='photoHeader'>
             <div className='title'>
-                <h2>{title}</h2>
+                <h3>Title: {title}</h3>
             </div>
             <div className='date'>
-                <h3>{date}</h3>
+                <h5>Date: {date}</h5>
             </div>
         </div>
     )

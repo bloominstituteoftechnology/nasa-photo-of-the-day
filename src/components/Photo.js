@@ -55,19 +55,21 @@ export default function Photo(props) {
                 title={photo.title}
                 date={photo.date}
             />
-            <button onClick={() => detailsButtonHandler()}>
-                {show ? 'Close details' : 'More details'}
-            </button>
             <button onClick={() => randomButtonHandler()}>
                 Get another photo
             </button>
-            <label for="html">Date:</label>
+            <br /><br />
+            <label for="html">Select date: </label>
             <input type="date" id="dateSelector" name="select-day"
                    min="1995-06-16" max={ getTodayDate() } />
             <button onClick={() => getDatePhoto()}>
                 Submit
             </button>
-
+            <br /><br />
+            <button onClick={() => detailsButtonHandler()}>
+                {show ? 'Close details' : 'More details'}
+            </button>
+            <br /><br />
             {show && <Details
                 explanation={photo.explanation}
                 copyright={photo.copyright}
