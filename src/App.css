@@ -3,7 +3,8 @@
   padding: 0;
   margin: 0;
   max-width: 100%;
-  border: 1px solid red; /*while building to see content spacing*/
+  /* border: 1px solid red;  */
+  /*while building to see content spacing*/
 }
 
 html, body, div, span, applet, object, iframe, table, caption, tbody, tfoot, thead, tr, th, td,
@@ -54,3 +55,13 @@ body{
 /* section{
    padding: 4% 0;
 } */
+
+.App{
+  height: 100vh;
+}
+
+h1{
+  font-style: italic;
+  font-size: 3rem;
+}
+

@@ -5,17 +5,18 @@ header{
 
 .apod-container{
     display:flex;
-    height: 60vh;
+    max-height: 60vh;
     margin: 2% 5%;
+    border: 1px solid #4f4f4f;
+    padding: 2%;
   }
   
   .description-container{
       width: 40%;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      
+      justify-content: space-evenly;
+      align-items:center;
+      flex-direction: column;      
   }
   
   .image-container{
@@ -29,4 +30,8 @@ header{
     object-fit:contain;
     margin: 0 auto;
     
+  }
+
+  .description{
+    text-indent: 30px; 
   }

@@ -23,10 +23,10 @@ export default function Apod() {
 
        <div className='apod-container'>
            <div className='description-container'>
-               <h3>Date: {now.date}</h3>
-               <h2>Title: {now.title}</h2>
-               <p>Description: {now.explanation}</p>
-               <p>copyright:{now.copyright}</p>
+               <h3>{now.date}</h3>
+               <h2>{now.title}</h2>
+               <p className="description">{now.explanation}</p>
+               <p>Copyright: {now.copyright}</p>
             </div>
             <div className='image-container'>
                 <img src={now.url}></img>
