@@ -9,7 +9,8 @@ const StyledTitle = styled.div`
     h2 {
         color: ${pr => pr.theme.primaryColor};
         &:hover{
-            transform: rotate(-20deg);
+            transform: rotate(-10deg);
+            font-size: 250%;
         }
     }
 `
