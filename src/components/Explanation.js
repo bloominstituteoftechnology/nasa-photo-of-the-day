@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 function Explanation(props) {
     const { explanation } = props;
