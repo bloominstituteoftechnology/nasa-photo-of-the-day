@@ -8,9 +8,13 @@ import Copyright from './Copyright'
 import Date from './Date'
 import Explanation from './Explanation'
 
+import { Alert, Button, Fade } from 'reactstrap'
+
 function App() {
   const [nasaData, setNasaData] = useState({})
+  const [fadeIn, setFadeIn] = useState(true)
 
+  const toggle = () => setFadeIn(!fadeIn)
 
   useEffect(() => {
     axios.get(`${BASE_URL}/?api_key=${API_KEY}`)
@@ -23,15 +27,18 @@ function App() {
   return (
     <div className="App">
       <Title className="title" title={nasaData.title}/>
-      <p>
+      <Alert color="primary">NEW CONTENT EACH DAY</Alert>
+      {/* <p>
         Read through the instructions in the README.md file to build your NASA
         app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
-      <Image className="image" url={nasaData.url}/>
+      </p> */}
+      <Button color="success" onClick={toggle}>Toggle Picture</Button>
+        <Fade in={fadeIn} tag="h5">
+          <Image className="image" url={nasaData.url}/>
+        </Fade>
       <Copyright className="copyright" copyright={nasaData.copyright}/>
       <Date className="date" date={nasaData.date}/>
       <Explanation className="explanation" explanation={nasaData.explanation}/>
-
     </div>
   );
 }
