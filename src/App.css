@@ -60,10 +60,12 @@ body{
   height: 100vh;
 }
 
-h1{
+/* h1{
   font-style: italic;
   font-size: 7rem;
   margin-bottom: 2%;
-  text-shadow: 2px 2px #4f4f4f;
-}
+  color: rgba(0,0,0,0.6);
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+} */
+
 

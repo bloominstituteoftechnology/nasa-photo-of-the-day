@@ -25,10 +25,10 @@ export default function PastApod(props) {
     
         <StyledApodDiv>
            <div className='description-container'>
-               <h3>{pastApod.date}</h3>
-               <h2>{pastApod.title}</h2>
+               {<h3>{pastApod.date}</h3>}
+               <h2>"{pastApod.title}"</h2>
                <p className='description'>{pastApod.explanation}</p>
-               <p>{pastApod.copyright && `Copyright: ${pastApod.copyright}`}</p>
+               <p className='copyright'>{pastApod.copyright && `Copyright: ${pastApod.copyright}`}</p>
             </div>
             <div className='image-container'>
                <img src={pastApod.url} alt='Apod'></img> 

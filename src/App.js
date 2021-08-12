@@ -8,6 +8,15 @@ import styled from 'styled-components'
 const HeaderWrapper = styled.header`
     text-align: center;
     margin: 4% 20% 5% 20%;
+
+    h1{
+  font-style: italic;
+  font-size: 7rem;
+  margin-bottom: 2%;
+  /* text-shadow: 2px 2px #4f4f4f; */
+  color: rgba(0,0,0,0.6);
+  text-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+}
     
 `
 

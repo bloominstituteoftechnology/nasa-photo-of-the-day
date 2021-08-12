@@ -8,8 +8,12 @@ const StyledApodDiv = styled.div `
   display:flex;
     max-height: 60vh;
     margin: 2% 5%;
-    border: 1px solid #4f4f4f;
+    border: 4px outset grey;
+    border-radius: 10px;
     padding: 2% 2%;
+
+   
+
 
     .description-container{
       width: 40%;
@@ -20,6 +24,7 @@ const StyledApodDiv = styled.div `
       overflow-y: scroll;    
       padding: 2% 2%;
   }
+
   
   .image-container{
     max-width:55%;
@@ -28,20 +33,44 @@ const StyledApodDiv = styled.div `
     justify-content: center;
   }
   h2{
-      font-size: 2rem;
-      padding: 2% 0;
+      font-size: 2.5rem;
+      padding: 3% 0;
       text-align: center;
   }
   
   img{
     object-fit:contain;
     margin: 0 auto;
+    /* border-radius: 10px; */
     
   }
 
   .description{
     text-indent: 30px; 
+    margin-bottom: 1ch;
   }
+  .copyright{
+      text-align: center;
+      font-style: oblique;
+  }
+  @media ${props => props.theme.breakpointMobile} {
+        flex-direction: column-reverse;
+        align-items: center;
+       
+        .image-container{
+            max-width: fit-content;
+            max-height: max-content;
+        }
+
+        img {
+            max-height: 100%;
+        }
+
+        .description-container{
+            width:100%;
+           
+        }
+    }
 
 `
 
@@ -66,12 +95,12 @@ export default function Apod() {
        <StyledApodDiv>
            <div className='description-container'>
                <h3>{now.date}</h3>
-               <h2>{now.title}</h2>
+               <h2>"{now.title}"</h2>
                <p className="description">{now.explanation}</p>
-               <p>Copyright: {now.copyright}</p>
+               <p className='copyright'>Copyright: {now.copyright}</p>
             </div>
             <div className='image-container'>
-                <img src={now.url}></img>
+                <img src={now.url} alt='apod for today'></img>
             </div>    
        </StyledApodDiv>
    ) 
