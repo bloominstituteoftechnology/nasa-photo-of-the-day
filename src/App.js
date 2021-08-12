@@ -9,37 +9,29 @@ import Date from './Date'
 import Explanation from './Explanation'
 
 function App() {
-  const [title, setTitle] = useState(null)
-  const [url, setImage] = useState(null)
-  const [copyright, setCopyright] = useState(null)
-  const [date, setDate] = useState(null)
-  const [explanation, setExplanation] = useState(null)
+  const [nasaData, setNasaData] = useState({})
 
 
   useEffect(() => {
     axios.get(`${BASE_URL}/?api_key=${API_KEY}`)
       .then(res => {
-        console.log(res)
-        setTitle(res.data.title)
-        setImage(res.data.url)
-        setCopyright(res.data.copyright)
-        setDate(res.data.date)
-        setExplanation(res.data.explanation)
+        setNasaData(res.data)
       })
   }, [])
 
 
   return (
     <div className="App">
-      <Title title={title}/>
-      <p>TEST
+      <Title className="title" title={nasaData.title}/>
+      <p>
         Read through the instructions in the README.md file to build your NASA
         app! Have fun <span role="img" aria-label='go!'>🚀</span>!
       </p>
-      <Image url={url}/>
-      <Copyright copyright={copyright}/>
-      <Date date={date}/>
-      <Explanation explanation={explanation}/>
+      <Image className="image" url={nasaData.url}/>
+      <Copyright className="copyright" copyright={nasaData.copyright}/>
+      <Date className="date" date={nasaData.date}/>
+      <Explanation className="explanation" explanation={nasaData.explanation}/>
+
     </div>
   );
 }
