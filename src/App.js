@@ -1,15 +1,35 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import "./App.css";
+import { BASE_URL, API_KEY } from '../constants'
+import axios from 'axios'
 
-function App() {
+
+
+
+export default function App() {
+  const [photo, setPhoto] = useState()
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+      <di>
+        <h1>NASA Photo of the Day</h1>
+        <img src= />
+      </di>
     </div>
   );
 }
 
-export default App;
+
