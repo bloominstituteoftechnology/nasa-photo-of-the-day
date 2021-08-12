@@ -49,6 +49,7 @@ html{
 body{
    font-size:1.6rem;
    color:#4F4F4F; /*easier to read then back on white*/
+   background-color: #f4f0ec;
 }
 /* section{
    padding: 4% 0;

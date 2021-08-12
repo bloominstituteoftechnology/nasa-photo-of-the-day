@@ -6,7 +6,7 @@ header{
 .apod-container{
     display:flex;
     height: 60vh;
-    margin: 2% 5%
+    margin: 2% 5%;
   }
   
   .description-container{
@@ -19,7 +19,8 @@ header{
   }
   
   .image-container{
-    max-width:60%;
+    max-width:55%;
+    margin-left: 5%;
     display: flex;
     justify-content: center;
   }
