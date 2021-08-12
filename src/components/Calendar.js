@@ -12,7 +12,7 @@ function Calendar(props) {
 
     return (
         <StyledDetails>
-            <p>Select Another Days Photo</p>
+            <p>Select Another Dates Photo</p>
             <input id='calendar' type='date' onChange={ (e) => {
                 e.persist();
                 dateSelect(e.target.value);

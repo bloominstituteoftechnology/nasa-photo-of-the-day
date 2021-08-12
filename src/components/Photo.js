@@ -2,12 +2,10 @@ import React, { useState } from "react";
 import styled from 'styled-components';
 import { Collapse, Button, CardBody, Card } from 'reactstrap';
 
-const StyledDetails = styled.div`
-    height: 60%;
-    border-radius: 10px;
-`
 const StyledImage = styled.img`
     border-radius: 100px;
+    max-height: 80vh;
+    max-width: 100%;
 `
 
 function Photo(props) {
@@ -17,7 +15,7 @@ function Photo(props) {
     const toggle = () => setIsOpen(!isOpen);
 
     return (
-        <StyledDetails>
+        <div>
             <Button onClick={toggle} style={{ margin: '1rem' }}>Toggle Picture</Button>
                 <Collapse isOpen={isOpen}>
                     <Card>
@@ -26,7 +24,7 @@ function Photo(props) {
                         </CardBody>
                     </Card>
                 </Collapse>
-        </StyledDetails>
+        </div>
     )
 }
 
