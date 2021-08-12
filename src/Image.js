@@ -3,7 +3,10 @@ import React from 'react'
 import styled from 'styled-components'
 
 const StyledImage = styled.div`
-    width: 500px;
+    img {
+        margin-top: 10px;
+        width: 50%
+    }
 `
 
 function Image(props) {

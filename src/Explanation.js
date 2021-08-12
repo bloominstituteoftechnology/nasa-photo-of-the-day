@@ -1,12 +1,21 @@
 import React from 'react'
 
+import styled from 'styled-components'
+
+const StyledExp = styled.div`
+    p {
+        margin-left: 15%;
+        width: 70%;
+    }
+`
+
 function Explanation(props) {
     const { explanation } = props
 
     return (
-        <div>
+        <StyledExp>
             <p>{explanation}</p>
-        </div>
+        </StyledExp>
     )
 }
 

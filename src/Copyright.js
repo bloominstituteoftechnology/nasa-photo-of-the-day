@@ -3,7 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const StyledCopy = styled.div`
-    color: ${pr => pr.theme.primaryColor};
+    color: ${pr => pr.theme.secondaryColor};
 `;
 
 function Copyright(props) {
