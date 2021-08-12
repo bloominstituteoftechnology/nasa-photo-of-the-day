@@ -1,15 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
+import { linksArray } from "./links";
 
-function App() {
-  return (
-    <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
-    </div>
-  );
+export default function App()
+{
+    const [links] = useState(linksArray);
+
+
+
+    const Link = props =>
+    (
+        <button><a href={props.info.link}>{props.info.name}</a></button>
+    );
+
+
+
+
+    return (
+        <div className="App">
+            <header>
+                <nav>
+                    <h1>ANASTASIA LAPTEVA</h1>
+                    {
+                        links.map(item =>
+                        {
+                            return <Link key={item.id} info={item} />;
+                        })
+                    }
+                </nav>
+            </header>
+
+        </div>
+    );
 }
-
-export default App;
