@@ -56,6 +56,7 @@ const StyledApodDiv = styled.div `
   @media ${props => props.theme.breakpointMobile} {
         flex-direction: column-reverse;
         align-items: center;
+        max-height: max-content;
        
         .image-container{
             max-width: fit-content;
