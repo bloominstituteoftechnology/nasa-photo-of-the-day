@@ -10,10 +10,10 @@ const StyledCardsContainer = styled.div`
 `
 
 const Cards = (props) => {
-    const { title, imageURL, explanation, date, copyright } = props
+    const { title, imageURL, explanation, date, copyright, getRandomDate } = props
     return (
         <StyledCardsContainer className="cards-container">
-            <Card title={title} imageURL={imageURL} explanation={explanation} date={date} copyright={copyright}/>
+            <Card title={title} imageURL={imageURL} explanation={explanation} date={date} copyright={copyright} getRandomDate={getRandomDate}/>
         </StyledCardsContainer>
     )
 }

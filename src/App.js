@@ -13,6 +13,7 @@ const StyledApp = styled.div `
     margin: 50px;
     color: #0F044C;
     font-size: 3rem;
+    font-family: 'Anton';
   }
 `
 
@@ -37,18 +38,22 @@ function App() {
     const dayFor30 = Math.floor(Math.random()* (30-1+1)+1);
     // February 
     const dayFor28 = Math.floor(Math.random()* (28-1+1)+1);
-    if(month === 1 || month === 3 || month === 5 || month === 7 || month === 8 || month === 10 || month === 12) {
-      return `${year}-${month}-${dayFor31}`;
-    } else if (month === 4 || month === 6 || month === 9 || 11){
+    if(month === 1 || month === 3 || month === 5 || month === 7 || month === 8) {
+      return `${year}-0${month}-${dayFor31}`;
+    } else if(month === 10 || month === 12){
+      return `${year}-${month}-${dayFor31}`
+    }else if (month === 4 || month === 6 || month === 9){
+      return `${year}-0${month}-${dayFor30}`;
+    } else if(month === 11){
       return `${year}-${month}-${dayFor30}`;
     } else if (month === 2){
-      return `${year}-${month}-${dayFor28}`;
+      return `${year}-0${month}-${dayFor28}`;
     } 
   }
   
 
   useEffect(()=>{
-    axios.get(`${BASE_URL}?api_key=${API_KEY}&${date}`)
+    axios.get(`${BASE_URL}?api_key=${API_KEY}&date=${date}`)
       .then(res => {
         console.log(res.data);
         console.log(res.data.date);
@@ -62,14 +67,14 @@ function App() {
         console.error(err);
         setError("Sorry! An Error Occured")
       })
-  },[])
+  },[date])
   return (
     <StyledApp className="App">
-      <Search />
+      <Search getRandomDate={getRandomDate} setDate={setDate}/>
       {error && <h1>{error}</h1>}
       <h1>Astronomy Picture of the Day</h1>
       <Cards title={title} imageURL={imageURL} explanation={explanation} date={date} copyright={copyright} getRandomDate ={getRandomDate}/>
-      <Buttons getRandomDate ={getRandomDate}/>
+      <Buttons getRandomDate ={getRandomDate} setDate={setDate}/>
     </StyledApp>
   );
 }

@@ -35,12 +35,13 @@ const StyledCard = styled.div `
         background-color: #0F044C;
         }
     button:hover{
-         color:#DDDDDD;
-         border-color:#DDDDDD;
+        color:#0F044C;
+        border-color:#EEEEEE;
+        background-color: #EEEEEE;
         }
     button:active{
-         color:#EEEEEE;
-         border-color:#EEEEEE;
+        color:#EEEEEE;
+        border-color:#EEEEEE;
         background-color: #0F044C;
         }
     img{

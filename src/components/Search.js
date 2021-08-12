@@ -17,14 +17,39 @@ const StyledHeader = styled.div `
         width: 100px;
         margin-left: 50px;
     }
-    a{
-        text-decoration: none;
-        color: white;
-        margin-right: 25px
-    }
+    button{
+        width: 200px;
+        font-family: 'Anton';
+        letter-spacing: 1.5px;
+        padding: 10px 20px;
+        margin: 0 auto;
+        border: none;
+        box-sizing: border-box;
+        text-decoration:none;
+        text-transform:uppercase;
+        color:#EEEEEE;
+        text-align:center;
+        transition: all 0.15s;
+        background-color: #0F044C;
+        }
+    button:hover{
+        color:grey;
+        border-color:#EEEEEE;
+        
+    button:active{
+        color:#EEEEEE;
+        border-color:#EEEEEE;
+        background-color: #0F044C;
+        }
 `
 
 const Search = (props) => {
+    const { getRandomDate, setDate } = props;
+   
+    const clicked = () => {
+        console.log(getRandomDate());
+        setDate(getRandomDate());
+    }
 
     return (
         <StyledHeader>
@@ -33,7 +58,7 @@ const Search = (props) => {
                 <nav>
                     <input type="date" />
                 </nav>
-                <a href="">Random Picture</a>
+                <button onClick={clicked}>Random Picture</button>
 
             </header>
         </StyledHeader>
