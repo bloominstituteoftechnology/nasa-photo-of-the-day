@@ -1,11 +1,19 @@
 import React from 'react'
 
+import styled from 'styled-components'
+
+const StyledImage = styled.div`
+    width: 500px;
+`
+
 function Image(props) {
     const { url } = props
 
     return (
         <div>
-            <img src={url}></img>
+            <StyledImage>
+                <img src={url}></img>
+            </StyledImage>
         </div>
     )
 }
