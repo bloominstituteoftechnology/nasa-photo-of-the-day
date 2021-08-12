@@ -5,7 +5,6 @@ import { BASE_URL, API_KEY } from './constants/index'
 import Title from './Title'
 import Image from './Image'
 import Copyright from './Copyright'
-import Date from './Date'
 import Explanation from './Explanation'
 
 import { Alert, Button, Fade } from 'reactstrap'
@@ -36,8 +35,7 @@ function App() {
         <Fade in={fadeIn} tag="h5">
           <Image className="image" url={nasaData.url}/>
         </Fade>
-      <Copyright className="copyright" copyright={nasaData.copyright}/>
-      <Date className="date" date={nasaData.date}/>
+      <Copyright className="copyright" copyright={nasaData.copyright} date={nasaData.date}/>
       <Explanation className="explanation" explanation={nasaData.explanation}/>
     </div>
   );

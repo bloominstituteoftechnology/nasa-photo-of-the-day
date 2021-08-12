@@ -6,6 +6,7 @@ const StyledExp = styled.div`
     p {
         margin-left: 15%;
         width: 70%;
+        color: ${pr => pr.theme.secondaryColor}
     }
 `
 
@@ -14,6 +15,7 @@ function Explanation(props) {
 
     return (
         <StyledExp>
+            <p>Description: </p>
             <p>{explanation}</p>
         </StyledExp>
     )

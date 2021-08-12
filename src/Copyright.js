@@ -3,15 +3,15 @@ import React from 'react'
 import styled from 'styled-components'
 
 const StyledCopy = styled.div`
-    color: ${pr => pr.theme.secondaryColor};
+    color: ${pr => pr.theme.tertiaryColor};
 `;
 
 function Copyright(props) {
-    const { copyright } = props
+    const { copyright, date } = props
 
     return (
         <StyledCopy>
-            <p>{copyright}</p>
+            <p>Copyright: {copyright}, {date}</p>
         </StyledCopy>
     )
 }
