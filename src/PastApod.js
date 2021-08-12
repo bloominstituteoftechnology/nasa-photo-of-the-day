@@ -2,6 +2,8 @@ import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 import { BASE_URL, API_KEY } from '../src/constants/index'
 import "./ApodDisplay.css"
+import styled from 'styled-components'
+import { StyledApodDiv } from '../src/ApodDisplay'
 
 
 export default function PastApod(props) {
@@ -21,8 +23,7 @@ export default function PastApod(props) {
    
     return (
     
-
-       <div className='apod-container'>
+        <StyledApodDiv>
            <div className='description-container'>
                <h3>{pastApod.date}</h3>
                <h2>{pastApod.title}</h2>
@@ -30,8 +31,8 @@ export default function PastApod(props) {
                <p>{pastApod.copyright && `Copyright: ${pastApod.copyright}`}</p>
             </div>
             <div className='image-container'>
-                <img src={pastApod.url} alt='Apod'></img>
+               <img src={pastApod.url} alt='Apod'></img> 
             </div>    
-       </div>
+       </StyledApodDiv>
    ) 
 }

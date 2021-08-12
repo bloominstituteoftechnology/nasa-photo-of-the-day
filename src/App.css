@@ -62,6 +62,8 @@ body{
 
 h1{
   font-style: italic;
-  font-size: 3rem;
+  font-size: 7rem;
+  margin-bottom: 2%;
+  text-shadow: 2px 2px #4f4f4f;
 }
 
