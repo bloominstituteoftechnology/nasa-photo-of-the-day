@@ -1,4 +1,5 @@
 import React from 'react';
+import { Gallery } from "./theme";
 
 export default function Icons(props)
 {
@@ -8,10 +9,11 @@ export default function Icons(props)
                 props.gallery.map(item =>
                 {
                     return (
-                        <div key={item.id} >
-                            <img src={item.img} alt={item.iconName} className="projectIcon" />
+                        <Gallery key={item.id}>
+                            <img src={item.img} alt={item.iconName} />
                             <p>{item.iconName}</p>
-                        </div>
+
+                        </Gallery>
                     );
                 })
             }
