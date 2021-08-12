@@ -11,10 +11,15 @@ import Calendar from './Calendar';
 function App() {
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
-  const [theDate, setTheDate] = useState(Date());
-  
+
+  let year = (new Date()).getFullYear();
+  let month = (new Date()).getMonth();
+  let day = (new Date()).getDate();
+  let fullDate = `${year}-${month + 1}-${day}`
+
+
   useEffect(() => {
-    axios.get(`${BASE_URL}?api_key=${API_KEY}`) // add &date=2012-03-14 after API_KEY
+    axios.get(`${BASE_URL}?api_key=${API_KEY}`)
       .then(res => {
         setData(res.data)
       })
@@ -24,14 +29,20 @@ function App() {
   }, [])
 
   const dateSelect = input => {
-    setTheDate(input);
+    axios.get(`${BASE_URL}?api_key=${API_KEY}&date=${input}`)
+      .then(res => {
+        setData(res.data)
+      })
+      .catch(err => {
+        setError(`We're experiencing technical difficulties, please try again...`)
+      })
   }
 
   return (
     <>
     <div className='App'>
       { error && <h1>{error}</h1> }
-      {/* <Calendar dateSelect={dateSelect} /> */}
+      <Calendar dateSelect={dateSelect} />
     </div>
     <div className="App">
         <Header copyright={data.copyright} date={data.date} title={data.title} />
