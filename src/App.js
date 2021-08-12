@@ -1,19 +1,26 @@
 import React, { useState } from "react";
 import "./App.css";
-import { linksArray } from "./links";
+import { linksArray, bannerInfo, portfolioElements } from "./defaultData";
+import Icons from "./gallery";
 
 export default function App()
 {
     const [links] = useState(linksArray);
-
-
+    const [banner] = useState(bannerInfo);
+    const [gallery] = useState(portfolioElements);
 
     const Link = props =>
     (
         <button><a href={props.info.link}>{props.info.name}</a></button>
     );
 
-
+    const ImageButton = props =>
+    (
+        <div>
+            <h1>{props.info.title}</h1>
+            <button><a href={props.info.link}>{props.info.name}</a></button>
+        </div>
+    );
 
 
     return (
@@ -30,6 +37,8 @@ export default function App()
                 </nav>
             </header>
 
+            <ImageButton info={banner} />
+            <Icons key={gallery.id} gallery={gallery} />
         </div>
     );
 }
