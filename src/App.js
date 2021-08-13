@@ -3,29 +3,32 @@ import "./App.css";
 import styled from 'styled-components';
 // import imgDate from './Components/image-info';
 import axios from "axios";
-import ImageContainer from "./Components/image-info";
+
+
+const Page = styled.div`
+  width: 90vw;
+`
 
 function App() {
-  const [dailyPic, setDailyPic] = useState('');
+  const [NasaData, setNasaData] = useState('');
+
   useEffect(() => {
     axios
       .get(`https://api.nasa.gov/planetary/apod?api_key=BZR4pKnRyIJnc6h8hTbL9z45MturqMMxyGLA7ovR`)
-      .then(res => setDailyPic(res.data.hdurl))
-      .catch(err => console.log(err));
-  }, []);
-
-  const MainContainer = styled.div`
-    width: 90vw;
-    height: 100%;
-`;
+      .then(res => {
+        console.log(res.data)
+        setNasaData(res.data)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  }, [])
 
   return (
-    <MainContainer className='App'>
-      <ImageContainer>
-      <h1>NASA Picture of the Day</h1>
-      <img src={dailyPic} alt='NASA APOD'/>
-      </ImageContainer>
-    </MainContainer>
+    <Page className='App'>
+      <h1>Nasa Photo of the Day</h1>
+      
+    </Page>
   );
 }
 
