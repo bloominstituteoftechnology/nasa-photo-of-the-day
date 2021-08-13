@@ -2,15 +2,24 @@ import React, {useState, useEffect} from "react";
 import "./App.css";
 import styled from 'styled-components';
 import Date from './Components/imgDate';
+import Explanation from './Components/Explanation';
 import axios from "axios";
 
 
 const Page = styled.div`
-  width: 90vw;
+  background-color: lightgray;
+  color: white;
+  width: 100vw;
+
+  h1, h2 {
+    text-shadow: 2px 2px purple;
+  }
 `
 const NasaImg = styled.img`
-    width: 300px;
-    height: 300px;
+    // border: 10px solid purple;
+    border-radius: 10px;
+    width: 500px;
+    height: 400px;
     `
 
 function App() {
@@ -37,6 +46,7 @@ function App() {
       <h1>Nasa Photo of the Day</h1>
       <Date date={NasaData.date}/>
       <NasaImg src={DailyPic} alt='NASA APOD'/>
+      <Explanation explanation={NasaData.explanation}/>
 
     </Page>
   );
