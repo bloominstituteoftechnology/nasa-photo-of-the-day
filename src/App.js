@@ -3,6 +3,7 @@ import "./App.css";
 import styled from 'styled-components';
 import Date from './Components/imgDate';
 import Explanation from './Components/Explanation';
+import Title from './Components/Title';
 import axios from "axios";
 
 
@@ -11,7 +12,7 @@ const Page = styled.div`
   color: white;
   width: 100vw;
 
-  h1, h2 {
+  h1 {
     text-shadow: 2px 2px purple;
   }
 `
@@ -46,6 +47,7 @@ function App() {
       <h1>Nasa Photo of the Day</h1>
       <Date date={NasaData.date}/>
       <NasaImg src={DailyPic} alt='NASA APOD'/>
+      <Title title={NasaData.title}/>
       <Explanation explanation={NasaData.explanation}/>
 
     </Page>
