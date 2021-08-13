@@ -1,11 +1,11 @@
 import React from "react";
 
-function Copyright () {
+function Copyright ({copyright}) {
 
 return (
-    <div className="title">
-        <h1>Michael F Johnston</h1>
-    </div>
+    <div className="copyright">
+        <h1>{copyright}</h1>
+    </div> 
 )
 }
 

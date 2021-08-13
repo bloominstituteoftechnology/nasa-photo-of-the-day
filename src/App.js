@@ -4,9 +4,23 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import { BASE_URL, API_KEY } from './api';
 import Photo from './components/Photo';
-import Explanantion from './components/Explanation';
+import Explanation from './components/Explanation';
 import Copyright from './components/Copyright';
 import Date from './components/Date';
+import Title from './components/Title';
+import styled from 'styled-components'
+
+const StyledApp = styled.div`
+  
+  width: 100vw;
+  background-color: #22223B;
+`
+const StyledHeader = styled.div`
+background-color: #C9ADA7;
+
+`
+
+
 
 function App() {
 
@@ -20,17 +34,32 @@ function App() {
   })
 }, [])
   return (
+    <StyledApp>
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-        <Copyright title={nasaInfo.title} />
+
+      <StyledHeader>
+        <Title title={nasaInfo.title} />
+        <Copyright copyright={nasaInfo.copyright} />
         <Date date={nasaInfo.date} />
+        
+        </StyledHeader>
+
+        
+        <div className="midSection">
+
+          
         <Photo image={nasaInfo.url} />
-        <Explanantion explanantion={nasaInfo.explanantion} />
-      </p>
+        
+
+        <Explanation explanation={nasaInfo.explanation} />
+
+        </div>
+       
+
     </div>
+    </StyledApp>
   );
 }
+
 
 export default App;

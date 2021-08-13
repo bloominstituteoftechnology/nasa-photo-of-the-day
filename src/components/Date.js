@@ -1,10 +1,10 @@
 import React from "react";
 
-function Date () {
+function Date ({date}) {
 
 return (
     <div className="date">
-        <h2>2021-08-11</h2>
+        <h2>{date}</h2>
     </div>
 )
 }
