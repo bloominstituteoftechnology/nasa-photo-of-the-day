@@ -2,25 +2,28 @@ import React from 'react';
 import styled from 'styled-components';
 
 
-const StyledDiv = styled.div`
+const Styledimgdiv = styled.div`
 
-h1 {
-    font-family: 'Helvetica Neue';
-    font-size: 4rem;
-    color: ${pr => pr.theme.primaryColor};
-    background-color: ${pr => pr.theme.secondaryColor} 03;
- 
+    margin: -42.88px 0px;
+    background-color: #032357 ;
 
-}
+    h1{
+       padding: 1%;
+        font-family: 'Helvetica Neue';
+        font-size: 4rem;
+        color: ${pr => pr.theme.white};
+    }
 
 `
 
 
 function Title(props){
     return( 
-        <StyledDiv>
-        <h1>{props.title}</h1>
-        </StyledDiv>
+    
+        <Styledimgdiv>
+         <h1> {props.title} </h1>
+        </Styledimgdiv>
+        
     )
 }
 
