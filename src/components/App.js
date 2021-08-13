@@ -2,12 +2,18 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from 'axios';
 import { BASE_URL, API_KEY } from '../constants/index';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import globalStyles from './globalStyles';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css'
+
 
 import Title from './Title';
 import Date from './Date';
 import Picture from './Picture';
 import Copyright from './Copyright';
 import Explanation from './Explanation';
+import Navbar from './Navbar';
 
 
 
@@ -33,13 +39,17 @@ function App() {
       })
   })
 
+  const [selectedDate, setSelectedDate] = useState(null)
   return (
     <div className="App">
       {/* <p>
         Read through the instructions in the README.md file to build your NASA
         app! Have fun <span role="img" aria-label='go!'>🚀</span>!
       </p> */}
-      <h1>Nasa Photo of the Day</h1>
+      <DatePicker selected={selectedDate} onChange={date => setSelectedDate(date)} />
+      <Router>
+        <Navbar />
+      </Router>
       <p>Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer.</p>
       <Title title={title}/>
       <Date date={date}/>
