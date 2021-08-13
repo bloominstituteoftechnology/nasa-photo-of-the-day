@@ -1,22 +1,21 @@
 import React from 'react';
-import { Gallery } from "./theme";
+import styled from 'styled-components';
 
 export default function Icons(props)
 {
-    return (
-        <div className="portfolio-element">
-            {
-                props.gallery.map(item =>
-                {
-                    return (
-                        <Gallery key={item.id}>
-                            <img src={item.img} alt={item.iconName} />
-                            <p>{item.iconName}</p>
+    const PortfolioElement = styled.div`
+        text-align: center;
+    `;
 
-                        </Gallery>
-                    );
-                })
-            }
-        </div >
+    return (
+        props.gallery.map(item =>
+        {
+            return (
+                <PortfolioElement key={item.id}>
+                    <img src={item.img} alt={item.iconName} />
+                    <p>{item.iconName}</p>
+                </PortfolioElement>
+            );
+        })
     );
 };
