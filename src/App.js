@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import "./App.css";
+import styled from 'styled-components';
 import axios from "axios";
 
 function App() {
@@ -11,11 +12,16 @@ function App() {
       .catch(err => console.log(err));
   }, []);
 
+  const MainContainer = styled.div`
+    width: 90vw;
+    height: 100%;
+`;
+
   return (
-    <div className='App'>
+    <MainContainer className='App'>
       <h1>NASA Picture of the Day</h1>
       <img src={dailyPic} alt='NASA APOD'/>
-    </div>
+    </MainContainer>
   );
 }
 
