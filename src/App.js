@@ -26,7 +26,6 @@ function App() {
       </div>
       <h2>{info.title}</h2>
       <p> {info.explanation} </p>
-      <button>LIKE</button>
     </div>
   );
 }
