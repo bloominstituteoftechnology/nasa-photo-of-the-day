@@ -47,37 +47,35 @@ body{
 }
 
 .picDiv {
-  
-  height: 80%;
-  width: 55%;
-  min-width: 400px;
+  height: 100%;
+  width: 60%;
   margin: auto;
-  margin-top: 5%;
-  margin-bottom: 2%;
 }
 
 .pic{
-  width: 100%;
-  
+  width: 50%;
+    border: solid 1px rgb(44, 42, 44);
 }
 
-.picpic{
-  width: 100%;
-  border: solid 1px rgb(44, 42, 44);
-}
-
-#h1{
+h1{
   font-size: 7vh;
   font-family: 'Play', sans-serif;
   color: #332e33;
+  margin-top: 1%;
+}
+
+h2{
+    color: #7c707c;
+    font-size: 2.6vh;
+    text-align: center;
+    margin: 3% 13% -1% 13%;
 }
 
 p{
   color: #7c707c;
-  font-size: 1.5vh;
+  font-size: 2vh;
   text-align: center;
   margin: 3% 13% 1% 13%;
-
 }
 
 button{
