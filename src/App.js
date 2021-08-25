@@ -1,22 +1,30 @@
-import React { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 import "./App.css";
 
-const [data, setData] = useState([])
+
 
 function App() {
 
+  const [data, setData] = useState([])
+
   useEffect(() => {
-    axios.get("http//WhateverAPIcallGoesHere")
+    axios.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
      .then(response => {
        setData(response.data)
-      const dataKeys = Object.keys(data)
      })
       .catch(error => {
        console.log(error)
+       debugger
       })
 
     }, [])
+
+    const Photo = props => (
+      <div>
+    {props.data.explanation}
+      </div>
+    )
 
 
 
@@ -24,8 +32,9 @@ function App() {
     <div className="App">
       <p>
 
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
+      <Photo key={data.date} apiData={data} />
+
+        <span role="img" aria-label='go!'>🚀</span>!
       </p>
     </div>
   );
