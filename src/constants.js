@@ -1,0 +1,1 @@
+export const BASE_URL = 'https://api.nasa.gov/planetary/apod?api_key=XeNeVH2fxcCWNoatgYJ0nBaXpQ491Fk1keVv2ufv'
