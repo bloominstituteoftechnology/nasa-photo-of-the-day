@@ -11,7 +11,9 @@ function App() {
   useEffect(() => {
     axios.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
      .then(response => {
+       console.log('RESPONSE', response.data)
        setData(response.data)
+
      })
       .catch(error => {
        console.log(error)
@@ -22,7 +24,7 @@ function App() {
 
     const Photo = props => (
       <div>
-    {props.data.explanation}
+    {props.apiData.explanation}
       </div>
     )
 
