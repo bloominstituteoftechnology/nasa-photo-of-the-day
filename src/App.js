@@ -2,7 +2,7 @@ import React, { useState,useEffect } from "react";
 import "./App.css";
 import axios from 'axios';
 import Title from './components/Title';
-import Image from './components/Image';
+import Card from './components/Card';
 
 function App() {
   // const title = "My title";
@@ -20,9 +20,8 @@ function App() {
   },[])
   return (
     <div className="App">
-      <h1>Nasa Photo of the Day</h1>
-      <Title title={data.title}/>
-      <Image image={data.url}/>
+      <Title title={data.title} copyright={data.copyright}/>
+      <Card image={data.hdurl} explanation={data.explanation} date={data.date}/>
     </div>
   );
 }
