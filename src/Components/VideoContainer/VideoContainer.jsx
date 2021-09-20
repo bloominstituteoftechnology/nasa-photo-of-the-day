@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const VideoWrapper = styled.iframe`
-  width: 100%;
+  width: 70%;
   height: 600px;
   border: none;
   padding: 10px 0;

@@ -6,7 +6,7 @@ import PageTitle from "./Components/PageTitle/PageTitle";
 
 const WrapperDiv = styled.div`
   margin: auto;
-  padding: 40px;
+  padding: 10%;
   max-width: 1024px;
   text-align: center;
   background-color: #fbfbfb;

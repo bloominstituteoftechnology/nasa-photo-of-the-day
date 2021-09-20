@@ -6,7 +6,7 @@ const ImageWrapper = styled.div`
 `;
 
 const ImageSize = styled.img`
-  width: 100%;
+  width: 70%;
 `;
 
 function ImageContainer(props) {
