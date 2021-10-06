@@ -10,12 +10,16 @@ function App() {
 
   const [ photoURL, setPhotoURL ] = useState('')
   const [ photoDescription, setPhotoDescription ] = useState('')
+  const [ photoTitle, setPhotoTitle ] = useState('')
+  const [ photoDate, setPhotoDate ] = useState('')
 
   useEffect(() => {
       axios.get(`${BASE_URL}${API_KEY}`)
       .then( res => {
           setPhotoURL(res.data.url)
           setPhotoDescription(res.data.explanation)
+          setPhotoTitle(res.data.title)
+          setPhotoDate(res.data.date)
       })
       .catch( err => {
           console.error(err)
@@ -24,7 +28,7 @@ function App() {
 
   return (
     <div className="App">
-      < Header />
+      < Header photoTitle={photoTitle} photoDate={photoDate}/>
       < Photo photoDescription={photoDescription} photoURL={photoURL}/>
       < Footer photoURL={photoURL}/>
     </div>

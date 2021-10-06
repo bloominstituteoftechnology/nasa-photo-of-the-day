@@ -1,9 +1,13 @@
 import React from 'react'
 
-function Header () {
+function Header (props) {
+
+    const { photoDate, photoTitle } = props
+
     return (
         <div>
-            <h4>Header</h4>
+            <h1>Photo Title: {photoTitle}</h1>
+            <h2>Date: {photoDate}</h2>
         </div>
     )
 }
