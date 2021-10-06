@@ -6,27 +6,34 @@ import Image from "./Image"
 import Explanation from "./Explanation"
 
 
+
 function App() {
 
-  const [image, setImage] = useState('')
+  const [data, setData] = useState([])
   
 
-
-  axios.get('https://api.nasa.gov/planetary/apod?api_key=JPdEuTaesq36aLpUHKFaSl9AfGzypW2GMFeDDa86')
+useEffect(()=>{
+axios.get('https://api.nasa.gov/planetary/apod?api_key=JPdEuTaesq36aLpUHKFaSl9AfGzypW2GMFeDDa86')
   .then(resp=>{
     console.log(resp)
+    const data = resp.data;
+    console.log(data)
+    setData(data)
   })
   .catch(err=>{
-    console.error(err);
-  })
-  return (
+    console.log(err);
+  })}, [])
+  
+
+  return(
     <div className="App">
       <h1>Nasa Picture of the Day</h1>
-      <Title />
-      <Image />
-      <Explanation />
+      <Title title={data.title}/>
+
+      {/* <Image />
+      <Explanation /> */}
     </div>
-  );
-}
+  )}
+    
 
 export default App;
