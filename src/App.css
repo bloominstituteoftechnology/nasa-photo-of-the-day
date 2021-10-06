@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+.App p {
+  padding: 5%;
+  margin: 0 5%;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

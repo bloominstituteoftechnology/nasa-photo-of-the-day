@@ -19,7 +19,7 @@ function Photo () {
     } ,[])
 
     return (
-        <div>
+        <div className="App">
             <center>
             <img src={photoURL} />
             <p>{photoDescription}</p>
