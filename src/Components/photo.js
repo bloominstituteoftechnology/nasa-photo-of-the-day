@@ -5,11 +5,13 @@ import { BASE_URL, API_KEY } from '../Constants/index'
 function Photo () {
 
     const [ photoURL, setPhotoURL ] = useState('')
+    const [ photoDescription, setPhotoDescription ] = useState('')
 
     useEffect(() => {
         axios.get(`${BASE_URL}${API_KEY}`)
         .then( res => {
             setPhotoURL(res.data.url)
+            setPhotoDescription(res.data.explanation)
         })
         .catch( err => {
             console.error(err)
@@ -18,7 +20,10 @@ function Photo () {
 
     return (
         <div>
-            <img src={photoURL} height='450' width='250'/>
+            <center>
+            <img src={photoURL} />
+            <p>{photoDescription}</p>
+            </center>
         </div>
     )
 }
