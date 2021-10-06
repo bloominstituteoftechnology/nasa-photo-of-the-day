@@ -29,7 +29,7 @@ function App() {
         </span>
         !
       </p>
-      <img src={`{photo.url}`} />
+      <img src={`${photo.url}`} />
     </div>
   );
 }
