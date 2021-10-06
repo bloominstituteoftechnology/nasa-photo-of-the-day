@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import axios from 'axios';
 import { BASE_URL, API_KEY } from './constants';
+import Explanation from "./Explanation";
 
 function App() {
 
@@ -24,12 +25,11 @@ useEffect (() => {
 
   return (
     <div className="App">
+      {/* <Header />
+      <Article /> */}
+      <Explanation  explanation={`${nasaData.explanation}`} />
       <p>
-        {/* <Header />
-        <Article />
-        <Description /> */}
         <h1>0o0o0o0o0o0o spAaAaAaAaAaAce</h1>
-        <button>Click me!</button>
         <img src = {`${nasaData.url}`} alt='space shit'/>
       </p>
     </div>
