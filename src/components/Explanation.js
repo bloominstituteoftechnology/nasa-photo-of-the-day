@@ -1,6 +1,11 @@
 import React from 'react'
 
-function Image (){
+function Explanation (props){
+    return(
+        <div>   
+            {props.explanation}
+        </div>
+    )
+    }
 
-}
-export default Image
+export default Explanation;
