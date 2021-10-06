@@ -3,6 +3,8 @@ import "./App.css";
 import axios from 'axios';
 import { BASE_URL, API_KEY } from './constants';
 import Explanation from "./Explanation";
+import Header from './Header'
+import Footer from "./Footer";
 
 function App() {
 
@@ -25,9 +27,10 @@ useEffect (() => {
 
   return (
     <div className="App">
-      {/* <Header />
-      <Article /> */}
+      <Header date={nasaData.date} />
+      {/* <Article /> */}
       <Explanation  explanation={`${nasaData.explanation}`} />
+      <Footer copyright={nasaData.copyright}/>
       <p>
         <h1>0o0o0o0o0o0o spAaAaAaAaAaAce</h1>
         <img src = {`${nasaData.url}`} alt='space shit'/>
