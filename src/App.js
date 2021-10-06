@@ -1,5 +1,10 @@
-import React from "react";
+// Import the state and effect hooks 
+import React, { useState, useEffect } from "react";
+
 import "./App.css";
+
+// Import the axios lib from node_modules
+import axios from 'axios';
 
 function App() {
   return (
