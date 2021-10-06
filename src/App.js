@@ -34,7 +34,7 @@ console.log(data)
       <button onClick={() => setIsToggled(!isToggled)}>
       CLICK FOR IMAGE
     </button>
-      {isToggled && <Image data={data}/>}
+      {isToggled ? <Image data={data}/> : <h3>Don't you want to see the image? CLICK ON THE BUTTON!!!</h3>}
     </div>
   );
 }
