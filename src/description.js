@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react'
 
-const Description = () => {
+const Description = (props) => {
 
-    const [image, setImage] = useState(null);
-    const [description, setDescription] = useState('');
+    // const [ image, setImage ] = useState(null);
+    const [ description, setDescription ]  = useState(props.data.explanation);
+    const [ title, setTitle] = useState(props.data.title);
+    console.log(title)
 
     return (
         <div className = "description-containter">
-            <h2>Description</h2>
-            <p>placeholder</p>
+            <h2>{title}</h2>
+            <p></p>
         </div>
     )
 }
