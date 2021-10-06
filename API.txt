@@ -1,0 +1,10 @@
+Your API key for christiansmith2394@gmail.com is:
+
+8k06eR62exmxORN8TQZFVRO6MfkBR2i7aVtViPJy
+You can start using this key to make web service requests. Simply pass your key in the URL when making a web request. Here's an example:
+
+https://api.nasa.gov/planetary/apod?api_key=8k06eR62exmxORN8TQZFVRO6MfkBR2i7aVtViPJy
+For additional support, please contact us. When contacting us, please tell us what API you're accessing and provide the following account details so we can quickly find you:
+
+Account Email: christiansmith2394@gmail.com
+Account ID: fad78fda-778d-4e49-987b-a8e94896a1a5
