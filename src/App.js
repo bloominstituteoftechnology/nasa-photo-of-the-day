@@ -4,6 +4,20 @@ import axios from 'axios';
 
 
 function App() {
+
+  const [image, setImage] = useState(null);
+  const [description, setDescription] = useState('');
+
+  useEffect(() => {
+    axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
+      .then(res => {
+        setImage(res.data.url);
+        setImage(res.data.explanation);
+      }).catch(err => {
+        console.error(err);
+      })
+  }, [])
+
   return (
     <div className="App">
       <p>
