@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from 'axios';
-import Description from "./description";
+import Description from "./Description";
 import Image from "./Image";
 
 
