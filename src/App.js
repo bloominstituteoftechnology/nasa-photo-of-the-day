@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
 
-// export const BASE_URL = "https://api.nasa.gov/planetary/apod?api_key=qXYnhDSG0waj3uWYCmaxNAhsF5ghT3Wf7o1fHiby≈";
-// export const API_KEY = "qXYnhDSG0waj3uWYCmaxNAhsF5ghT3Wf7o1fHiby";
+export const BASE_URL = "https://api.nasa.gov/planetary/apod";
+export const API_KEY = "qXYnhDSG0waj3uWYCmaxNAhsF5ghT3Wf7o1fHiby";
 
 function App() {
 
@@ -12,7 +12,7 @@ function App() {
   // useEffect
   useEffect(() => {
     const pictureOfTheDay = () => {
-      axios.get("https://api.nasa.gov/planetary/apod?api_key=qXYnhDSG0waj3uWYCmaxNAhsF5ghT3Wf7o1fHiby")
+      axios.get("https://api.nasa.gov/planetary/apod")
        .then(res => {
          setNasaPOD(res.data);
   
