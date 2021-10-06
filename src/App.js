@@ -9,7 +9,7 @@ function App() {
 
   
   const [data, setData] = useState([])
-  const [isToggled, setIsToggled] = useState(true)
+  const [isToggled, setIsToggled] = useState(false)
   // https://api.nasa.gov/planetary/apod?api_key=eZ9SoGT9vzhRWxb96gplCe8kADvwAfuKbtVaVnRj
   // https://api.nasa.gov/planetary/apod?api_key=WZW4y7Tt3gRhfUUFBWb6ml29HpVbuL30dFinJ7rV
 
@@ -32,7 +32,7 @@ console.log(data)
       <Description data={data}/>
       <p>The photo was taken on {data.date}</p>
       <button onClick={() => setIsToggled(!isToggled)}>
-      Click me!
+      CLICK FOR IMAGE
     </button>
       {isToggled && <Image data={data}/>}
     </div>
