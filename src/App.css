@@ -1,38 +1,452 @@
-.App {
-  text-align: center;
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* STYLES START HERE */
+
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.top-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  height: 100vh;
+}
+
+.gradient_wrapper {
+  background: -o-linear-gradient(
+    right,
+    rgb(148, 91, 177),
+    rgb(73, 66, 173),
+    rgb(14, 113, 226)
+  );
+  background: -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    from(rgb(148, 91, 177)),
+    color-stop(rgb(73, 66, 173)),
+    to(rgb(14, 113, 226))
+  );
+  background: linear-gradient(
+    -90deg,
+    rgb(148, 91, 177),
+    rgb(73, 66, 173),
+    rgb(14, 113, 226)
+  );
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 50%;
+}
+
+.button-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.date-select,
+.gradient_wrapper .learn {
+  padding: 0.75em 1.4em;
+  border: none;
+  font-size: 1em;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif;
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+.gradient_wrapper .learn {
+  margin-right: 20px;
+  background: #ffffff;
+}
+
+.date-select {
+  background: #ce2525;
+  color: #ffffff;
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 50px;
+  padding: 32px 32px 36px;
+  color: #ffffff;
+}
+
+h3 {
+  font-size: 1.9em;
+  font-weight: bold;
+  color: #ecf117;
+  border: 1px solid rgba(236, 241, 23, 0.15);
+  padding: 8px 15px;
+  border-radius: 3px;
+  margin-top: auto;
+}
+
+.image_container {
+  width: 50%;
+  background: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.image_container img {
+  display: block;
+}
+
+.copyright {
   color: white;
+  font-size: 12px;
+  margin: auto 0 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.modal {
+  padding: 30px;
+  border: 2px solid #980033;
+}
+.popup-overlay {
+  cursor: pointer;
+}
+.popup-content {
+  padding: 10px !important;
+  -webkit-box-shadow: 20px 20px 40px #000000;
+  box-shadow: 20px 20px 40px #000000;
+  cursor: auto;
+  max-width: 850px;
+}
+.modal > .content {
+  width: 100%;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  color: rgb(0, 0, 0);
+  line-height: 1.4;
+  font-size: 19px;
+}
+.modal > .content:first-letter {
+  color: #903;
+  float: left;
+  font-family: Georgia;
+  font-size: 67px;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+}
+.modal > .close {
+  position: absolute;
+  right: -1px;
+  top: -1px;
+  font-size: 40px;
+  background: #f5f3f3;
+  color: #2d282a;
+  width: 45px;
+  height: 45px;
+  -webkit-box-shadow: 1px 1px 2px #484848;
+  box-shadow: 1px 1px 2px #484848;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.react-player {
+  background: black;
+}
+
+.react-datepicker {
+  font-size: 1em;
+}
+.react-datepicker__header {
+  padding-top: 0.8em;
+}
+.react-datepicker__month {
+  margin: 0.4em 1em;
+}
+.react-datepicker__day-name,
+.react-datepicker__day {
+  width: 1.9em;
+  line-height: 1.9em;
+  margin: 0.166em;
+}
+.react-datepicker__current-month {
+  font-size: 1em;
+}
+.react-datepicker__navigation {
+  top: 1em;
+  line-height: 1.7em;
+  border: 0.45em solid transparent;
+}
+.react-datepicker__navigation--previous {
+  border-right-color: #ccc;
+  left: 1em;
+}
+.react-datepicker__navigation--next {
+  border-left-color: #ccc;
+  right: 1em;
+}
+
+@media screen and (min-width: 1900px) {
+  h1 {
+    max-width: 1000px;
+    font-size: 70px;
   }
-  to {
-    transform: rotate(360deg);
+  h3 {
+    font-size: 2.3em;
+  }
+  .date-select,
+  .gradient_wrapper .learn {
+    font-size: 1.3em;
+  }
+  .copyright {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .top-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+  }
+  .gradient_wrapper,
+  .image_container {
+    width: 100%;
+    height: 100vh;
+  }
+  .popup-content {
+    width: 100% !important;
+  }
+  .react-player {
+    width: 100% !important;
+    height: 100vh !important;
+  }
+  .box {
+    margin-top: 20px;
+  }
+
+  .box span {
+    width: 20px;
+    height: 20px;
+    display: block;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin: -10px;
+    -webkit-animation: animate 2s infinite;
+    animation: animate 2s infinite;
+  }
+
+  .box span:nth-child(2) {
+    -webkit-animation-delay: -0.2s;
+    animation-delay: -0.2s;
+  }
+
+  .box span:nth-child(3) {
+    -webkit-animation-delay: -0.4s;
+    animation-delay: -0.4s;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  h1 {
+    font-size: 40px;
+  }
+  .popup-content {
+    width: 100% !important;
+  }
+  .button-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 70%;
+  }
+  .gradient_wrapper .learn {
+    width: 100%;
+    margin: 0 auto 10px;
+  }
+  .date-select {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes animate {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: rotate(45deg) translate(10px, 10px);
+    transform: rotate(45deg) translate(10px, 10px);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: rotate(45deg) translate(10px, 10px);
+    transform: rotate(45deg) translate(10px, 10px);
+  }
+  100% {
+    opacity: 0;
   }
 }
