@@ -26,12 +26,14 @@ axios.get('https://api.nasa.gov/planetary/apod?api_key=JPdEuTaesq36aLpUHKFaSl9Af
   
 
   return(
-    <div className="App">
+    <div className="App container" >
       <h1>Nasa Picture of the Day</h1>
       <Title title={data.title}/>
-
-      <Image img = {data.url}/>
+    <div className='section2'>
+      <div className="image">
+      <Image img = {data.url}/></div>
       <Explanation explanation = {data.explanation}/> 
+      </div>
     </div>
   )}
     
