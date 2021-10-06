@@ -2,18 +2,9 @@ import React, {useState, useEffect} from "react";
 import {BASE_URL, API_KEY} from '../Constants/index'
 import axios from 'axios'
 
-function Footer () {
+function Footer (props) {
 
-    const [photoURL, setPhotoURL] = useState('')
-
-    useEffect(() => {
-        axios.get(`${BASE_URL}${API_KEY}`)
-        .then(resp => {
-          setPhotoURL(resp.data.hdurl)
-        }) .catch(err => {
-          console.log(err)
-        })
-      }, [])
+    const { photoURL } = props
 
     return (
         <div>

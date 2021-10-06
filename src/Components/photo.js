@@ -1,22 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios'
-import { BASE_URL, API_KEY } from '../Constants/index'
 
-function Photo () {
+function Photo (props) {
 
-    const [ photoURL, setPhotoURL ] = useState('')
-    const [ photoDescription, setPhotoDescription ] = useState('')
-
-    useEffect(() => {
-        axios.get(`${BASE_URL}${API_KEY}`)
-        .then( res => {
-            setPhotoURL(res.data.url)
-            setPhotoDescription(res.data.explanation)
-        })
-        .catch( err => {
-            console.error(err)
-        })
-    } ,[])
+    const { photoDescription, photoURL} = props
 
     return (
         <div className="App">
