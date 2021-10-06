@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Date() {
+export default function Date({date}) {
     return (
         <div>
-            Date
+            {date}
         </div>
     )
 }
