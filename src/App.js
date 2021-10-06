@@ -3,7 +3,7 @@ import "./App.css";
 import axios from 'axios';
 import Description from "./Description";
 import Image from "./Image";
-
+import Button from "./Button"
 
 function App() {
 
@@ -23,15 +23,15 @@ function App() {
       })
   }, [])
 
+console.log(data)
 
 
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+      <h1>NASA Photo of the Day!</h1>
       <Description data={data}/>
+      <p>The photo was taken on {data.date}</p>
+      <Button data={data} className='off'/>
       <Image data={data}/>
     </div>
   );
