@@ -3,14 +3,13 @@ import React, { useState, useEffect } from 'react'
 const Description = (props) => {
 
     // const [ image, setImage ] = useState(null);
-    const [ description, setDescription ]  = useState(props.data.explanation);
-    const [ title, setTitle] = useState(props.data.title);
-    console.log(title)
-
+    const description  = props.data.explanation;
+    const dataTitle= props.data.title;
+    
     return (
-        <div className = "description-containter">
-            <h2>{title}</h2>
-            <p></p>
+        <div className = "description-container">
+            <h2>{ dataTitle }</h2>
+            <p>{ description }</p>
         </div>
     )
 }
