@@ -9,22 +9,21 @@ function App() {
   const [photo, setPhoto] = useState('URL');
 
 useEffect (() => {
-  axios.get(`${BASE_URL}?api_key=${API_KEY}`)
+  axios.get(`${BASE_URL}?api_key=${API_KEY}`) 
     .then(res => {
-      const setNasaData = [res.data];
-      console.log(setNasaData);
-      return nasaData;
+      setNasaData(res.data);
+      console.log(nasaData);
+      return setNasaData(res.data);
     })
     .catch(err => {
       console.error(err)
     })
-  }, [])
+  }, [photo])
 
   return (
     <div className="App">
       <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
+        <img src = {`${nasaData.url}`} alt='space shit'/>
       </p>
     </div>
   );
