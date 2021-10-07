@@ -1,10 +1,5 @@
-import React from 'react'
+import React from "react";
 
-export default function Image({imageUrl, copyright}) {
-    return (
-        <div>
-            <img src={imageUrl} alt="Cool Image From Nasa"></img>
-            <p>{copyright}</p>
-        </div>
-    )
+export default function Image({ imageUrl }) {
+  return <img src={imageUrl} alt="Space themed"></img>;
 }

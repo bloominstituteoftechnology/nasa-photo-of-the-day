@@ -1,9 +1,5 @@
-import React from 'react'
+import React from "react";
 
-export default function Explanation({explanation}) {
-    return (
-        <div>
-            <p>{explanation}</p>
-        </div>
-    )
+export default function Explanation({ explanation }) {
+  return <p>{explanation}</p>;
 }

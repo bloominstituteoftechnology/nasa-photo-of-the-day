@@ -23,18 +23,25 @@ export default function Card() {
   }, []);
 
   return (
-
-    <div className="card-container">
-        {console.log(cardData)}
+    <div className="card">
       {cardData ? (
         <>
-          <Title title={cardData.title} />
-          <Date date={cardData.date} />
-          <Image imageUrl={cardData.url} copyright={cardData.copyright} />
-          <Explanation explanation={cardData.explanation} />
+          <Image imageUrl={cardData.url} />
+          <div className="text-content">
+            <Date date={cardData.date} />
+            <Title title={cardData.title} />
+            <Explanation explanation={cardData.explanation} />
+          </div>
         </>
       ) : (
-        console.log("loading")
+        <div className="loading-icon-container">
+          <div className="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
       )}
     </div>
   );
