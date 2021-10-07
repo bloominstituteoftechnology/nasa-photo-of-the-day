@@ -3,10 +3,41 @@ import "./App.css";
 import axios from 'axios';
 import Description from "./Description";
 import Image from "./Image";
+import styled, { keyframes } from 'styled-components';
 
+
+
+const BackgroundStyledDiv = styled.div`
+  background-image: url(https://images.unsplash.com/photo-1542228846-2d791a09d7d1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80);
+  height:100%;
+  width:auto;
+  padding:5%;
+`
+
+const StyledDiv = styled.div`
+  color:yellow;
+  font-family:roboto-motion-offset;
+
+  p{
+    font-size:1.4rem;
+    line-height: 150%;
+  }
+  h1{
+    color:red;
+    font-size:2.4rem;
+    }
+  }
+  button{
+    margin:2%;
+    padding:10px;
+    border-radius:25px;
+    font-weight:bold;
+    :hover{
+      cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='100' height='120' viewport='0 0 100 100' style='fill:black;font-size:60px;'><text y='50%'>🤖</text></svg>") 16 0,auto; /*!emojicursor.app*/
+  }
+`
 
 function App() {
-
   
   const [data, setData] = useState([])
   const [isToggled, setIsToggled] = useState(false)
@@ -28,14 +59,19 @@ console.log(data)
 
   return (
     <div className="App">
-      <h1>NASA Photo of the Day!</h1>
-      <Description data={data}/>
-      <p>The photo was taken on {data.date}</p>
-      <button onClick={() => setIsToggled(!isToggled)}>
-      CLICK FOR IMAGE
-    </button>
-      {isToggled ? <Image data={data}/> : <h3>Don't you want to see the image? CLICK ON THE BUTTON!!!</h3>}
+      <BackgroundStyledDiv>
+        <StyledDiv>
+          <h1>NASA Photo of the Day presents...</h1>
+          <Description data={data}/>
+          <p>The photo was taken on {data.date}</p>
+          <button onClick={() => setIsToggled(!isToggled)}>
+          CLICK FOR IMAGE
+          </button>
+          {isToggled ? <Image data={data}/> : <h3>Dont you want to see the image?CLICK  ON   THE BUTTON!!!</h3>}
+        </StyledDiv>
+      </BackgroundStyledDiv>
     </div>
+    
   );
 }
 

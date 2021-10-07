@@ -1,5 +1,15 @@
 import React from 'react'
+import styled, { keyframes } from 'styled-components';
 
+const ImageStyledDiv = styled.div`
+  
+  box-sizing:border-box;
+
+  img{
+      width:100%;
+      height:auto;
+  }
+`
 
 const Image = (props) => {
 
@@ -8,9 +18,9 @@ const Image = (props) => {
     
     
     return (
-        <div className = "description-container">
+        <ImageStyledDiv className = "image-container">
             <img src={image} alt='something'/>
-        </div>
+        </ImageStyledDiv>
     )
 }
 
