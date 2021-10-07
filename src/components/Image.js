@@ -7,7 +7,8 @@ img{
     border: 5px solid ${props=>props.theme.black};
 
 &:hover {
-  border:5px solid ${props=>props.theme.tertiaryColor}
+  border:5px solid ${props=>props.theme.tertiaryColor};
+  transform: scale(1.1);
 }
 }
 `

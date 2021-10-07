@@ -1,6 +1,6 @@
 export default {
     primaryColor: 'red',
-    secondaryColor: 'green',
+    secondaryColor: 'palevioletred',
     tertiaryColor: 'mediumseagreen',
     black: 'black',
     white: 'white',

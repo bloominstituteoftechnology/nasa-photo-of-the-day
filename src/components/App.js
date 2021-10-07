@@ -5,8 +5,9 @@ import Title from "./Title"
 import Image from "./Image"
 import Explanation from "./Explanation"
 import { BASE_URL, API_KEY } from '../constants/index.js'
+//rimport styled from 'styled-components';
 
-import { Spinner } from 'reactstrap';
+// import { Spinner } from 'reactstrap';
 
 
 function App() {
@@ -37,7 +38,7 @@ axios.get(`${BASE_URL}/planetary/apod?api_key=${API_KEY}`)
       <Title title={data.title}/>
       <div className='section2'>
       <Image img = {data.hdurl}/>
-      <Explanation explanation = {data.explanation} /> 
+      <Explanation explanation = {data.explanation}  color={'blue'}/> 
       </div>
    </div>
   )}
