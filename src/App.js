@@ -25,20 +25,20 @@ function App() {
       <div className ="container">
       <h1>Nasa Photo of the Day</h1>
       <div className=" date-first">
-      <h2>{data.title}</h2>
-        <h3>the Date of this great photo: {data.date}</h3>
+      <h2>Title: {data.title}</h2>
+        <h3>The Date of this great Photo: {data.date}</h3>
        </div>
-      <p> I put two pictures the url and hdurl
-        {/* Read through the instructions in the README.md file to build your NASA */}
-        {/* app! Have fun <span role="img" aria-label='go!'>🚀</span>! */}
-      </p>
-      <div className=" pic-div">
-      <img src={data.url} alt='best' width="400" height="300"/>
-      <br />
-      <img src={data.hdurl} alt='best' width="400" height="300"/>
-
+       <div className="ptags">
+      <p className="first-p" type="text"> This is the Image from Data:URL </p>
+      <p className="second-p" type="text"> This is the Image from Data:Hdurl</p>
       </div>
-      <h3 className='artis-name'>{data.copyright}</h3>
+      <div className=" pic-div">
+      <img src={data.url} alt='best' width="600" height="300"/>
+      <br />
+      <img src={data.hdurl} alt='best' width="600" height="300"/>
+      </div >
+
+      <h3 className='artis-name'>Artist Name: {data.copyright}</h3>
       <p className =' explanation-data'>{data.explanation}</p>
 
       </div>
