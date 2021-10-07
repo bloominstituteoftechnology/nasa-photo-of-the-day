@@ -11,3 +11,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.CardSection {
+  /* border : 5px solid red; */
+  display: flex;
+  justify-content: center;
+}
+
+.Card { 
+  border : 5px solid purple;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+
+}
+header{
+  border-bottom: 5px solid blue;
+}
+footer{
+  border-top: 5px solid red;
+}
+.footerNote{
+  font-size: .65em;
+}
