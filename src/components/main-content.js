@@ -1,6 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { BASE_URL, API_KEY} from './constants/constantsIndex';
+import styled from 'styled-components';
+
+const StyledMainContent = styled.div`
+    width: 100%;
+    height: 40rem;
+    display: flex;
+    border: 2px solid black;
+    margin-top: 5rem;
+`
+
+const StyledContent = styled.div`
+display: flex;
+    h3 {
+        height: 35%;
+        border: 2px solid black;
+        margin-right: 25%;
+    }
+`
 
 export default function MainContent(props) {
     const [details, setDetails] = useState([])
@@ -16,12 +34,14 @@ useEffect(() => {
 },[])
 
 return (
-    <div className='main-content container'>
-        <h5>{details.explanation}</h5>
-        <img className='main-image'src={details.url} alt='https://api.nasa.gov/planetary/apod?api_key=Lz5GYCNcSITHrvzhFNWk88bVLBaufh2quaqEyOZy'></img>
-        <h3 className='title'>{details.title}</h3>
-        <h6 className='copyright'>{details.copyright}</h6>
-    </div>
+    <StyledMainContent>
+        <StyledContent>
+            <h5>{details.explanation}</h5>
+            <img className='main-image'src={details.url} alt='https://api.nasa.gov/planetary/apod?api_key=Lz5GYCNcSITHrvzhFNWk88bVLBaufh2quaqEyOZy'></img>
+            <h3 className='title'>{details.title}</h3>
+            <h6 className='copyright'>{details.copyright}</h6>
+        </StyledContent>
+    </StyledMainContent>
 )
 }
 
