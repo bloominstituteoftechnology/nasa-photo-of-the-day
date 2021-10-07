@@ -3,13 +3,12 @@ import "./App.css";
 import axios from 'axios';
 import { BASE_URL, API_KEY } from './constants';
 import Explanation from "./Explanation";
-import Header from './Header'
+import Header from './Header';
 import Footer from './Footer';
 
 function App() {
-
   const [nasaData, setNasaData] = useState([]);
-  // const [photo, setPhoto] = useState('URL');
+  // ? const [photo, setPhoto] = useState('URL');
 
 useEffect (() => {
   function getData() {
@@ -28,11 +27,11 @@ useEffect (() => {
   return (
     <div className="App">
       <Header date={nasaData.date} />
-      {/* <Article /> */}
+      {/* ! <Article /> */}
       <Explanation  explanation={`${nasaData.explanation}`} />
       <Footer copyright={nasaData.copyright}/>
       <p>
-        <h1>0o0o0o0o0o0o spAaAaAaAaAaAce</h1>
+        <h1>NASA's space image of the day</h1>
         <img src = {`${nasaData.url}`} alt='space shit'/>
       </p>
     </div>
