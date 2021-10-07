@@ -34,7 +34,7 @@ axios.get(`${BASE_URL}/planetary/apod?api_key=${API_KEY}`)
       <h1>Nasa Picture of the {data.date}</h1>
       <Title title={data.title}/>
       <div className='section2'>
-      <Image img = {data.url}/>
+      <Image img = {data.hdurl}/>
       <Explanation explanation = {data.explanation} /> 
       </div>
    </div>
