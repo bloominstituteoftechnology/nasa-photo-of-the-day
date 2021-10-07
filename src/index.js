@@ -1,6 +1,15 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
+//import ReactDOM from "react-dom";
+import { render } from "react-dom";
+import { ThemeProvider } from 'styled-components';
 
-ReactDOM.render(<App />, document.getElementById("root"));
+import "./index.css";
+import App from "./components/App";
+import theme from './theme';
+
+render(
+  <ThemeProvider theme={theme}>
+    <App />
+    </ThemeProvider>,
+    document.querySelector('#root')
+  )
