@@ -5,14 +5,14 @@ const Image = styled.div`
     background-color: #c2c2c2;
     opacity: 11;
     width: 70%;
-    padding 10px;
+    padding: 10px;
     maargin: 0 auto;
     borderL 1rem solid #ba55d3;
     border-raduis: 2rem;
 `;
 
 const ImageConfig = styled.img`
-    max-width: 80%;
+    max-width: 90%;
     border-radius: 3rem;
 `
 

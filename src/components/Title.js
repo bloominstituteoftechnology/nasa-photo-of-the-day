@@ -6,7 +6,7 @@ const TitleCard = styled.div `
     color: #800080;
     background-color: #c2c2c2;
     border: 2rem dashed #ba55d3;
-    widthL 80%;
+    width: 80%;
     margin: 0 auto;
     padding 2rem;
 `;

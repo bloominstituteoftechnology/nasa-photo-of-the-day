@@ -1,30 +1,67 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { Card, Col } from "reactstrap";
 import "./App.css";
-import axios from 'axios';
 
+export const BASE_URL = "https://api.nasa.gov/planetary/apod";
+export const API_KEY = "DEMO_KEY";
 
 function App() {
+  const [picOfDay, setPicOfDay] = useState([]);
 
-  const [nasa, setNasa] = useState([]);
+  const colorStyling = {
+    backgroundColor: "#c2c2c2",
+    color: "#800080",
+    
+  };
+
+  const img = {
+    maxHeight: "40rem",
+    maxWidth: "50rem",
+  };
+
+  const text = {
+    width: "60rem",
+    // marginLeft: "10%",
+    // marginRight: "30%",
+    paddingBottom: "5rem",
+    color: "#0000ff",
+  };
 
   useEffect(() => {
-    axios.get("https://api.nasa.gov/planetary/apod?api_key=qXYnhDSG0waj3uWYCmaxNAhsF5ghT3Wf7o1fHiby")
-     .then(res => {
-       const nasaData = res.data;
-       setNasa(nasaData);
-     }).catch(err => {
-       console.error(err);
-     })
-  }, [])
+    const getPicOfDay = () => {
+      axios
+        .get(`${BASE_URL}?api_key=${API_KEY}`)
+        .then((res) => {
+          console.log(res);
+          setPicOfDay(res.data);
+        })
+
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+    getPicOfDay();
+  }, []);
 
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+      <Card style={colorStyling}>
+        <Col sm="12" md={{ size: 6, offset: 3 }}>
+          <h1>Nasa Photo Of The Day!</h1>
+          <img
+            src={picOfDay.url}
+            alt="NASA Photo Of The Day"
+            style={img}
+          />
+          <div className="text">
+            <h2>{picOfDay.title}</h2>
+            <h3>{picOfDay.date}</h3>
+            <p style={text}>{picOfDay.explanation}</p>
+          </div>
+        </Col>
+      </Card>
     </div>
   );
 }
-
 export default App;
