@@ -1,4 +1,4 @@
-# Module Project: Component Side Effects- NASA APOD
+# Module Project: Component Side Effects- NASA APOD 1st push 
 
 This will be a two-module project. In it you will consume the NASA API to fetch the "Astronomy Photo Of The Day" or APOD. Once you fetch the data, you will build a few components that will render different pieces of data in your interface. After the second module (in the [DAY_TWO_README.md](DAY_TWO_README.md) file) you will re-style your app using [Styled Components](https://github.com/LambdaSchool/nasa-photo-of-the-day.git).
 
@@ -49,7 +49,7 @@ This project was put together using create-react-app (CRA). You will not need to
 - [ ] Take a look at your planned components. Create the folders and files you need for each component.
 - [ ] Leave most of them blank for now - you need to get your data from the API before you can really get these built.
 
-**Fetching the Data**
+**Fetching the Data my api key  https://api.nasa.gov/planetary/apod?api_key=LJkEgFGXcCCh1veJkkPTpi6Vgaj1ENGWBi6e8nl7      GET https://api.nasa.gov/planetary/apod**
 
 - [ ] In `App.js` (or where ever you wanted to fetch the data) add state for the data you'll be getting from NASA.
 - [ ] Add an effect hook to handle the API call side effect.
