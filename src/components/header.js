@@ -1,9 +1,10 @@
-import React from "React"
+import React from "React";
 
 export default function Header() {
-    //something
 
     return (
-        //something
+        <div>
+            <img src={"../../public/favicon.ico"} alt={"error loading image"}>NASA</img>
+        </div>
     )
 }
