@@ -7,13 +7,17 @@ import Summary from "./Summary";
 import styled from 'styled-components'
 
 
-const StyledWrapper = styled.div`
+const StyledWrapper = styled.section`
+display:flex;
+flex-direction:column;
+width:100%;
+height:auto;
+align-items:center;
 text-align:center;
 background-color:black;
 color:white;
 border: black 2px solid;
 padding:20px;
-
 `
 
 
