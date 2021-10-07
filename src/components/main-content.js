@@ -18,9 +18,9 @@ useEffect(() => {
 return (
     <div className='main-content container'>
         <h5>{details.explanation}</h5>
-        <img className='main-image'src={details.url}></img>
-        <p className='title'>{details.title}</p>
-        <p className='copyright'>{details.copyright}</p>
+        <img className='main-image'src={details.url} alt='https://api.nasa.gov/planetary/apod?api_key=Lz5GYCNcSITHrvzhFNWk88bVLBaufh2quaqEyOZy'></img>
+        <h3 className='title'>{details.title}</h3>
+        <h6 className='copyright'>{details.copyright}</h6>
     </div>
 )
 }
