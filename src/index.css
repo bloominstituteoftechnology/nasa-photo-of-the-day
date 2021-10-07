@@ -1,17 +1,30 @@
 html{
   display: flex;
   height: 100%;
+  width: auto;
+}
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  width: auto;
 }
 body {
   display: flex;
+  justify-content: center;
+  width: 100%;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image:  url(https://images.unsplash.com/photo-1520034475321-cbe63696469a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80);
-  background-position: right;
+  background-image:  url(https://media.giphy.com/media/xT9IgLn1wzhNpRQfTy/giphy.gif);
+  background-color: black;
+  background-size:cover;
+  background-position:center;  
   
   
 }
@@ -25,7 +38,7 @@ code {
 .CardSection {
   display: flex;
   justify-content: center;
-  background-color: white; opacity: 0.83;
+  
   
  
 }
@@ -35,7 +48,13 @@ code {
   display:flex;
   flex-direction: column;
   justify-content: center;
+  background-color: #f0efeb; 
+  
   padding: 2rem;
+
+}
+.Card p{
+  color: 
 
 }
 header{
