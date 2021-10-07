@@ -5,7 +5,8 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>NASA APP : Learn React.js While Traveling The Universe</h1>
+        <img src = "https://www.nasa.gov/sites/all/themes/custom/nasatwo/images/nasa-logo.svg" />
+        <h1>NASA App : Learn React.js While Traveling The Universe</h1>
       </header>
       <div class = "CardSection">
         <div class = "Card">
