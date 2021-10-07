@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
+import styled from "styled-components";
+
+
 
 export default function ImageSect() {
 
+  const Image = styled.img`
+border-radius: 8px;
+max-height: 60vh;
+`
     const [image, setImage] = useState('')
 
     useEffect(() => {
@@ -17,7 +24,7 @@ export default function ImageSect() {
   
     return (
       <div className="ImageContainer">
-        <img src = {image} alt = '*insert image here'></img>
+        <Image src = {image} alt = '*insert image here'/>
       </div>
     );
 }

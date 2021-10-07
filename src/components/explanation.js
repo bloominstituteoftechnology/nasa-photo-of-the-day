@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
+import styled from "styled-components";
+
+const Paragraph = styled.p`
+font-family: comic sans;
+color: yellow;
+`
 
 export default function ExplanationSect() {
 
@@ -17,7 +23,9 @@ export default function ExplanationSect() {
   
     return (
       <div className="ExplanationContainer">
+        <Paragraph>
         <p>{explanation}</p>
+        </Paragraph>
       </div>
     );
 }
