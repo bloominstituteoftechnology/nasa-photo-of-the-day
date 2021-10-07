@@ -4,6 +4,7 @@ import axios from "axios";
 import Title from "./Title"
 import Image from "./Image"
 import Explanation from "./Explanation"
+import { BASE_URL, API_KEY } from '../constants/index.js'
 
 
 
@@ -13,7 +14,7 @@ function App() {
   
 
 useEffect(()=>{
-axios.get('https://api.nasa.gov/planetary/apod?api_key=JPdEuTaesq36aLpUHKFaSl9AfGzypW2GMFeDDa86')
+axios.get(`${BASE_URL}/planetary/apod?api_key=${API_KEY}`)
   .then(resp=>{
     console.log(resp)
     const data = resp.data;
@@ -24,17 +25,19 @@ axios.get('https://api.nasa.gov/planetary/apod?api_key=JPdEuTaesq36aLpUHKFaSl9Af
     console.log(err);
   })}, [])
   
+  useEffect(() => {
+    console.log("I run ONLY after the first render!!!");
+  }, [])
 
   return(
-    <div className="App container" >
-      <h1>Nasa Picture of the Day</h1>
+    <div className="App container">
+      <h1>Nasa Picture of the {data.date}</h1>
       <Title title={data.title}/>
-    <div className='section2'>
-      <div className="image">
-      <Image img = {data.url}/></div>
-      <Explanation explanation = {data.explanation}/> 
+      <div className='section2'>
+      <Image img = {data.url}/>
+      <Explanation explanation = {data.explanation} /> 
       </div>
-    </div>
+   </div>
   )}
     
 

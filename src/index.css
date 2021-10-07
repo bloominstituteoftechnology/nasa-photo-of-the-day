@@ -31,3 +31,8 @@ body {
   display: flex;
   margin: 4px 0 4px 0;
 }
+.button{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
