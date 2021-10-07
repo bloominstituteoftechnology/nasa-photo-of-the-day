@@ -8,14 +8,20 @@ function NasaPhoto () {
     const [nasaPic, setNasaPic] = useState("");
 
     useEffect(() => {
-        axios.get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
+        axios.get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`)
          .then(res => {
              console.log(res.data.url);
              setNasaPic(res.data.url);
+         }).catch(err => {
+             console.error(err);
          })
-    }, [])
+    }, []);
+
+    return (
+        <img src = {nasaPic}/>
+    )
 
 
 }
 
-export default NasaPhoto
+export default NasaPhoto;
