@@ -22,6 +22,9 @@ const StyledDiv = styled.div`
     font-size:1.4rem;
     line-height: 150%;
   }
+  .theDate{
+    color:white;
+  }
   h1{
     color:red;
     font-size:2.4rem;
@@ -56,6 +59,7 @@ function App() {
 
 console.log(data)
 
+const altText= "To see the image of the day, you must click the button!"
 
   return (
     <div className="App">
@@ -63,11 +67,11 @@ console.log(data)
         <StyledDiv>
           <h1>NASA Photo of the Day presents...</h1>
           <Description data={data}/>
-          <p>The photo was taken on {data.date}</p>
+          <p className='theDate'>The photo was taken on {data.date}</p>
           <button onClick={() => setIsToggled(!isToggled)}>
           CLICK FOR IMAGE
           </button>
-          {isToggled ? <Image data={data}/> : <h3>Dont you want to see the image?CLICK  ON   THE BUTTON!!!</h3>}
+          {isToggled ? <Image data={data}/> : <h3>{altText}</h3>}
         </StyledDiv>
       </BackgroundStyledDiv>
     </div>
