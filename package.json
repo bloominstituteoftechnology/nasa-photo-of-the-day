@@ -10,7 +10,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
-    "server": "^1.0.36"
+    "server": "^1.0.36",
+    "styled-components": "^5.3.1"
   },
   "scripts": {
     "start": "react-scripts start",
