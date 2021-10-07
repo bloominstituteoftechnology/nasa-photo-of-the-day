@@ -9,6 +9,9 @@ function App() {
 
   const [nasaPOD, setNasaPOD] = useState([]);
 
+  // styling
+  
+
   // useEffect
   useEffect(() => {
     const pictureOfTheDay = () => {
