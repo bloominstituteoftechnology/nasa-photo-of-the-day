@@ -12,11 +12,14 @@ const BackgroundStyledDiv = styled.div`
   height:100%;
   width:auto;
   padding:5%;
+  
 `
 
 const StyledDiv = styled.div`
   color:yellow;
   font-family:roboto-motion-offset;
+  border:2px solid white;
+  padding:2%;
 
   p{
     font-size:1.4rem;

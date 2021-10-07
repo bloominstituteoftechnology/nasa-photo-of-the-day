@@ -6,7 +6,7 @@ const ImageStyledDiv = styled.div`
   box-sizing:border-box;
 
   img{
-      width:100%;
+      width:90%;
       height:auto;
   }
 `
