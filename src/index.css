@@ -1,3 +1,4 @@
+
 html{
   display: flex;
   height: 100%;
@@ -7,15 +8,12 @@ html{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
-  width: 100%;
-  width: auto;
+ 
 }
 body {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -38,8 +36,6 @@ code {
 .CardSection {
   display: flex;
   justify-content: center;
-  margin: auto;
-  
  
 }
 
@@ -48,23 +44,20 @@ code {
   display:flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #f0efeb;
-  opacity: 0.8; 
+  
   border-top: 4px solid #3626a7;
   border-bottom: 4px solid  red;
   padding: 2rem;
 
 }
-.Card p{
-  
 
-}
 header{
   display: flex;
+  justify-content: center;
   /* border-bottom: 8px solid #3626a7; */
-  margin-top: 15px;
-  margin-bottom: 2px;
+  margin-top: 8px;
   color: white;
+  
   
   
 }
@@ -81,4 +74,23 @@ footer{
   color: white;
   text-transform:uppercase;
   opacity: 0.95;
+}
+.NASACard{
+  display: flex;
+  flex-direction: row;
+  
+  opacity: 0.98; 
+}
+.NASAImage{ 
+height:250px;
+width: 350px;
+
+}
+.DailyNasaPost{
+  margin-left: 500px;
+  margin-right: 500px;
+  background-color: #f0efeb;
+  opacity: 0.9;
+  padding-left: 1em;
+  padding-right: 1em;
 }
