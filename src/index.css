@@ -10,6 +10,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image:  url(https://images.unsplash.com/photo-1520034475321-cbe63696469a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80);
+  background-position: right;
   
   
 }
@@ -23,12 +25,13 @@ code {
 .CardSection {
   display: flex;
   justify-content: center;
+  background-color: white; opacity: 0.83;
   
  
 }
 
 .Card { 
-  
+
   display:flex;
   flex-direction: column;
   justify-content: center;
@@ -40,7 +43,7 @@ header{
   border-bottom: 8px solid #3626a7;
   margin-bottom: 2px;
   color: white;
-  background-image:  url(https://images.unsplash.com/photo-1520034475321-cbe63696469a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80);
+  
   
 }
 footer{
@@ -48,11 +51,12 @@ footer{
   
   justify-content: center;
   border-top: 8px solid red;
-background-image: url(https://images.unsplash.com/photo-1520034475321-cbe63696469a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80);
-background-position: right;
+  background-color: black;
+  opacity: 0.64;
 }
 .footerNote{
   font-size: .75em;
   color: white;
   text-transform:uppercase;
+  opacity: 0.95;
 }
