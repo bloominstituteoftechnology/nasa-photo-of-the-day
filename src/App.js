@@ -1,6 +1,16 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import Header from "./Header";
+import styled from 'styled-components'
+
+
+const imgStyle = styled.div`
+
+
+`
+
+
 
 function App() {
   const [apiData, setApiData] = useState([])
@@ -25,11 +35,12 @@ function App() {
 
 
   return (
-    <div className="App">
-      <h1>{apiData.title}</h1>
+    <div className='App'>
+      <Header/>
       <h2> {apiData.copyright}</h2>
+      <input type="date" />
       <p>
-      <img src={`${apiData.url}`} alt="image of nasa" />
+      <img src={`${apiData.url}`} alt="img" />
       </p>
       <h3>
       {apiData.date}
@@ -37,8 +48,9 @@ function App() {
       <p>
         {apiData.explanation}
       </p>
+      </div>
       
-    </div>
+    
   );
 }
 
