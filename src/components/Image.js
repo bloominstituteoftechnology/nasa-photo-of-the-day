@@ -1,10 +1,21 @@
 import React from 'react'
- 
+import styled from 'styled-components';
+
+const StyledImage = styled.div`
+img{
+    border-radius: 10%;
+    border: 5px solid ${props=>props.theme.black};
+
+&:hover {
+  border:5px solid ${props=>props.theme.tertiaryColor}
+}
+}
+`
 
 export default function Image (props){
 return(
-    <div className="image">   
+    <StyledImage>   
         <img src = {props.img} alt="space and stars nasa"/>
-    </div>
+    </StyledImage>
 )
 }

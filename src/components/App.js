@@ -6,6 +6,7 @@ import Image from "./Image"
 import Explanation from "./Explanation"
 import { BASE_URL, API_KEY } from '../constants/index.js'
 
+import { Spinner } from 'reactstrap';
 
 
 function App() {
@@ -31,6 +32,7 @@ axios.get(`${BASE_URL}/planetary/apod?api_key=${API_KEY}`)
 
   return(
     <div className="App container">
+      
       <h1>Nasa Picture of the {data.date}</h1>
       <Title title={data.title}/>
       <div className='section2'>
