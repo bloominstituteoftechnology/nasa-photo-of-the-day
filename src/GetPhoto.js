@@ -10,7 +10,7 @@ const [nasaPhoto, setNasaPhoto] = useState('');
     useEffect(() => {
         axios.get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
         .then(res => {
-            console.log(res.data.url);
+            console.log(res.data)
             setNasaPhoto(res.data.url);
           //setDetails(res.data)
         }).catch(err => {
