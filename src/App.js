@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { BASE_URL, API_KEY } from './constants';
+import { ThemeProvider } from 'styled-components';
 import Img from './img';
 import "./App.css";
 
@@ -17,7 +18,7 @@ function App() {
       }).catch(err => {
         console.error(err);
       })
-  }, )
+  }, [])
   
   
   const Nasa =dataNasa => (
@@ -29,8 +30,8 @@ function App() {
   return (
     <div className="App">
       <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
+         NASA app! Have fun
+         <span role="img" aria-label='go!'>🚀</span>!
        
         <button onClick={e => i++}>See pics!</button>
         
