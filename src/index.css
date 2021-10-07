@@ -38,7 +38,7 @@ code {
 .CardSection {
   display: flex;
   justify-content: center;
-  
+  margin: auto;
   
  
 }
@@ -48,18 +48,21 @@ code {
   display:flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #f0efeb; 
-  
+  background-color: #f0efeb;
+  opacity: 0.8; 
+  border-top: 4px solid #3626a7;
+  border-bottom: 4px solid  red;
   padding: 2rem;
 
 }
 .Card p{
-  color: 
+  
 
 }
 header{
   display: flex;
-  border-bottom: 8px solid #3626a7;
+  /* border-bottom: 8px solid #3626a7; */
+  margin-top: 15px;
   margin-bottom: 2px;
   color: white;
   
@@ -67,9 +70,9 @@ header{
 }
 footer{
   display: flex;
-  
+  margin-bottom: 5px;
   justify-content: center;
-  border-top: 8px solid red;
+  /* border-top: 8px solid red; */
   background-color: black;
   opacity: 0.64;
 }
