@@ -9,7 +9,7 @@ export default function Nasa(props) {
     const [ nasa, setNasa] = useState(null);
 
     useEffect(() => {
-        axios.get("https://api.nasa.gov/planetary/apod?api_key=qXYnhDSG0waj3uWYCmaxNAhsF5ghT3Wf7o1fHiby")
+        axios.get("https://api.nasa.gov/planetary/apod")
          .then(res => {
              setNasa(res.data);
          }).catch(err => {
