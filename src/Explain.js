@@ -10,4 +10,5 @@ const Explain = (props) =>{
         </div>
     )
 }
+
 export default Explain
