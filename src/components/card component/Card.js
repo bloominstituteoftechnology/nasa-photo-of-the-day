@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from "react";
+import { API_KEY } from "../../constants/constants";
+
+import { StyledCard } from "./StyledCard.js";
 
 import axios from "axios";
-import "./card.css";
-import { API_KEY } from "../../constants/constants";
+import React, { useState, useEffect } from "react";
 
 import Title from "./Title/Title.js";
 import Date from "./Date/Date.js";
 import Image from "./Image/Image.js";
 import Explanation from "./Explanation/Explanation.js";
+import StyledLoader from "./StyledLoader/StyledLoader.js";
 
 export default function Card() {
   const [cardData, setCardData] = useState(null);
@@ -21,14 +23,13 @@ export default function Card() {
         // The card requires a "url" property, a "title" property, and a "explination" property.
       })
       .catch((err) => {
-        console.error(err);
         // If there is an error, then the loading screen will render.
-        setCardData(null)
+        setCardData(null);
       });
   }, []);
 
   return (
-    <div className="card">
+    <StyledCard>
       {cardData ? (
         <>
           <Image imageUrl={cardData.url} />
@@ -40,15 +41,8 @@ export default function Card() {
           </div>
         </>
       ) : (
-        <div className="loading-icon-container">
-          <div className="lds-ring">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-        </div>
+        <StyledLoader></StyledLoader>
       )}
-    </div>
+    </StyledCard>
   );
 }
