@@ -5,7 +5,7 @@ import { BASE_URL, API_KEY } from './constants';
 import Explanation from "./Explanation";
 import Header from './Header';
 import Footer from './Footer';
-import styled from 'styled-components'
+// import styled from 'styled-components'
 
 function App() {
   const [nasaData, setNasaData] = useState([]);
@@ -31,10 +31,10 @@ useEffect (() => {
       {/* ! <Article /> */}
       <Explanation  explanation={`${nasaData.explanation}`} />
       <Footer copyright={nasaData.copyright}/>
-      <p>
+      <div>
         <h1>NASA's Astronomy Image of the Day</h1>
         <img src = {`${nasaData.url}`} alt='space shit'/>
-      </p>
+      </div>
     </div>
   );
 }

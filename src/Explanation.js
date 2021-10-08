@@ -1,12 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import './theme';
+// import theme from './theme';
+
+// const { theme } = props
 
 const StyledExplanation = styled.div`
     // ! Theme styles
     background-color: ${props => props.theme.primaryColor};
     h4{
-        color: ${props => props.theme.tertiaryColor}
+        color: ${props => props.theme.tertiaryColor};
     }
     p{
         color: ${props => props.theme.secondaryColor};
@@ -14,7 +16,7 @@ const StyledExplanation = styled.div`
     }
 
     //! Media query
-    @media ${props => props.theme.breakpointMobile}
+    // @media ${props => props.theme.mobileBreakpoint}
 `
 
 const Explanation = (props) => {

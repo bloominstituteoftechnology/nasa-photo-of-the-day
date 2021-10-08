@@ -1,6 +1,6 @@
 export default {
-    primaryColor: 'blue',
-    secondaryColor: 'red',
-    tertiaryColor: 'orange',
-    mobileBreakpoint: '(max-width: 550px)'
+    primaryColor: 'gray',
+    secondaryColor: 'white',
+    tertiaryColor: 'red',
+    mobileBreakpoint: '(max-width: 550px)',
 }
