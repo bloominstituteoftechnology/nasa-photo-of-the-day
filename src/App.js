@@ -5,6 +5,7 @@ import { BASE_URL, API_KEY } from './constants';
 import Explanation from "./Explanation";
 import Header from './Header';
 import Footer from './Footer';
+import styled from 'styled-components'
 
 function App() {
   const [nasaData, setNasaData] = useState([]);
@@ -15,7 +16,7 @@ useEffect (() => {
     axios.get(`${BASE_URL}?api_key=${API_KEY}`) 
       .then(res => {
         setNasaData(res.data);
-        console.log(nasaData);
+        // console.log(nasaData);
         return setNasaData(res.data);
       })
       .catch(err => {
@@ -31,7 +32,7 @@ useEffect (() => {
       <Explanation  explanation={`${nasaData.explanation}`} />
       <Footer copyright={nasaData.copyright}/>
       <p>
-        <h1>NASA's space image of the day</h1>
+        <h1>NASA's Astronomy Image of the Day</h1>
         <img src = {`${nasaData.url}`} alt='space shit'/>
       </p>
     </div>
