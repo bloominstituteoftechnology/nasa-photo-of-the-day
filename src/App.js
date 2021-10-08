@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from "react";
 import "./App.css";
-import Image from './components/Image'
+import Image from './components/Image';
 import axios from 'axios';
+import styled from 'styled-components';
 
 function App() {
   const [data, setData] = useState('');
@@ -18,7 +19,7 @@ function App() {
   },[]);
 
   return (
-    <div className="App">
+    <div >
       <Image data = {data} />
     </div>
   );
