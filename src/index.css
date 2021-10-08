@@ -1,13 +1,94 @@
+
+
+.App{
+  
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+ 
+}
 body {
-  margin: 0;
+  display: flex;
+  justify-content: center;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image:  url(https://media.giphy.com/media/xT9IgLn1wzhNpRQfTy/giphy.gif);
+  background-color: black;
+  background-size:cover;
+  background-position:center;  
+  
+  
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.CardSection {
+  display: flex;
+  justify-content: center;
+ 
+}
+
+.Card { 
+
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+
+}
+
+header{
+  display: flex;
+  justify-content: center;
+  /* border-bottom: 8px solid #3626a7; */
+  max-width: 100%;
+  margin-top: 8px;
+  color: white;
+  
+  
+  
+}
+footer{
+  display: flex;
+  margin-bottom: 5px;
+  justify-content: center;
+  /* border-top: 8px solid red; */
+  background-color: black;
+  opacity: 0.64;
+}
+.footerNote{
+  font-size: .75em;
+  color: white;
+  text-transform:uppercase;
+  opacity: 0.95;
+}
+.NASACard{
+  display: flex;
+  flex-direction: row;
+  
+  opacity: 0.98; 
+}
+.NASAImage{ 
+height:250px;
+width: 400px;
+
+}
+.DailyNasaPost{
+  margin-left: 500px;
+  margin-right: 500px;
+  background-color: #f0efeb;
+  border-top: 4px solid #3626a7;
+  border-bottom: 4px solid  red;
+  opacity: 0.9;
+  padding-left: 1em;
+  padding-right: 1em;
 }
