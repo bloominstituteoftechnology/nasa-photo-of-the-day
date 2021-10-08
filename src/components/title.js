@@ -6,13 +6,13 @@ const kf = keyframes`
 100% {
     opacity: 1;
     transform: scale(1) rotateZ(0);
-    color: blue;
+    color: pink;
 }
 `
 const Title = styled.h1`
 opacity: 0%;
 transform: scale(4) rotateZ(2000deg);
-animation: ${kf} infinite ease-in-out forwards;
+animation: ${kf} 2s ease-in-out forwards;
 color: yellow;
 `
 

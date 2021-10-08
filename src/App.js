@@ -11,14 +11,19 @@ import { Spinner } from 'reactstrap';
 import styled, { keyframes } from "styled-components";
 
 const kf = keyframes`
+0% {
+  background-color: #1831ad;
+}
+50% {
+  background-color: #0e1c5e;
+}
 100% {
-  background-color: yellow;
+  background-color: #1831ad;
 }
 `
 
 const BodyStyle = styled.body`
-background-color: red;
-animation: ${kf} pulse 2s infinite;
+animation: ${kf} 2.5s infinite;
 `
 
 export const LoadSpinner = (props) => {
