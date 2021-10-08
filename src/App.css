@@ -37,28 +37,3 @@
   }
 }
 
-.footer{
-  display: flex;
-  
-}
-a{
-  text-decoration: none;
-  padding: 5%;
-}
-.info{
-  display: flex;
-  background-color: lightgray;
-  color: black;
-}
-.exp{
-  width: 75%;
-}
-
-.main{
-  width: 100%;
-  margin: auto;
-}
-
-.header-cont{
-  background-color: lightgray;
-}
