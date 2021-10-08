@@ -1,5 +1,6 @@
 import React, { useEffect, useState }  from "react";
 import axios from "axios";
+import { Jumbotron } from "reactstrap";
 
 
 
@@ -20,22 +21,15 @@ useEffect ( () => {
         photoData &&
     <div className = "NASACard">
             <div className ="DailyNasaPost">
+            <Jumbotron>
             <h2>{photoData.title}</h2>
             <img src = {photoData.hdurl}  alt = {photoData.title} className = "NASAImage"/>
             <p>{photoData.explanation}</p>
             <p>Copyright: {photoData.copyright}</p>
+            </Jumbotron>
             </div>
     </div>
     )
 
 
 }
-
-
-// useEffect(() => {
-//     // console.log(`${BASE_URL}/friends?api_key=${API_KEY}`)
-//     axios.get(`${BASE_URL}/friends?api_key=${API_KEY}`)
-//       .then(res => {
-//         setFriends(res.data);
-//       }).catch(err => console.error(err));
-//   }, [])

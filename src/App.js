@@ -2,8 +2,10 @@ import React from "react";
 import "./App.css";
 import APOD from "./components/APOD";
 
+
 function App() {
   return (
+    
     <div className="App">
       <header>
         <img src = "https://www.nasa.gov/sites/all/themes/custom/nasatwo/images/nasa-logo.svg" alt = "nasa logo" />
@@ -22,6 +24,7 @@ function App() {
         </div>
       </footer>
     </div>
+    
   );
 }
 
