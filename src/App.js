@@ -22,8 +22,7 @@ const [nasaData, setNasaData] = useState('')
   return (
     <div className="App">
       <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
+        Image of the Day <span role="img" aria-label='go!'>🚀</span>!
       </p>
       <Component1 nasaAPI = {nasaData} />
     </div>
