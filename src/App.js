@@ -23,8 +23,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Nasa image of the day</h1>
+      <h1>Nasa Image Of the Day</h1>
       <Extra nasaExtra = {nasa}/>
+      <input/> <button>Reset</button>
       <Img nasaImg = {nasa}/>
       <Explain nasaInfo = {nasa}/>
     </div>
