@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 const BigComponent = (props) => {
     const {nasaAPI} = props;
@@ -7,10 +7,10 @@ const BigComponent = (props) => {
     // like a lunatic, and can instead just refer to info as...info.
     return (
         <div>
+            <img src= {nasaAPI.hdurl}></img>
             <p>Copyright :{nasaAPI.copyright} </p>
             <p>Date :{nasaAPI.date} </p>
             <p>Explanation :{nasaAPI.explanation} </p>
-            <img src= {nasaAPI.hdurl}></img>
         </div>
   )
 }
