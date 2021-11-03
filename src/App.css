@@ -1,5 +1,5 @@
 *{
-  border: 1px solid black;
+  
   padding:0px;
   margin: 0px;
 }
@@ -71,14 +71,10 @@ img{
   width: 60%;
   padding: 4% 0%;
 }
-.main{
-  background-color: pink;
-  /* padding: 2% 0%; */
 
-}
 .main-content{
-  border: 1px solid black;
+
   padding: 4%;
   width:40%;
-  background-color: yellow;
+  
 }
