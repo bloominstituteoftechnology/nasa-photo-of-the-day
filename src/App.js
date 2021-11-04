@@ -3,6 +3,8 @@ import "./App.css";
 import axios from "axios";
 import Card from "./components/Card.js";
 import Footer from "./components/Footer.js";
+import NavBar from "./components/NavBar.js";
+
 
 function App() {
   const [data, setData] = useState([]);
@@ -30,6 +32,7 @@ function App() {
 
   return (
     <div className="App">
+      <NavBar menuItems={navMenuItems}/>
       <h1>Nasa's World</h1>
       <div className="card-container">
         {data.map((item, index) => {
