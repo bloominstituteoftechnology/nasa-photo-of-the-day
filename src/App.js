@@ -6,13 +6,13 @@ import Body from './Components/Body';
 import "./App.css";
 
 function App() {
-  const [data, setData] = useState([]);
+  const [nasaData, setNasaData] = useState([]);
 
   useEffect(() => {
     axios.get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`)
     .then(res => {
       // console.log(res.data)
-      setData(res.data);
+      setNasaData(res.data);
     })
     .catch(err => {
       console.error(err);
