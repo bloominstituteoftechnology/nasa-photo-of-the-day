@@ -3,6 +3,15 @@
   padding: 5%;
 }
 
+ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 4%;
+}
+
 button:hover {
+    
+    padding: 5%;
     background-color: lime;
 }
+
