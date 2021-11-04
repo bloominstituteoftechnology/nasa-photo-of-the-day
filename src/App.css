@@ -1,3 +1,8 @@
+*{
+  
+  padding:0px;
+  margin: 0px;
+}
 .App {
   text-align: center;
 }
@@ -36,3 +41,40 @@
     transform: rotate(360deg);
   }
 }
+/* .container{
+  padding: 0% 10%;
+  margin: 0%;
+
+}
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-item{
+  display: flex;
+  justify-content: center;
+  padding: 3% 12%;
+
+}
+.nav-item a{
+  padding: 2% 7%;
+  text-decoration: none;
+  width: 24%;
+}
+.main{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+img{
+  width: 60%;
+  padding: 4% 0%;
+}
+
+.main-content{
+
+  padding: 4%;
+  width:40%;
+  
+} */
