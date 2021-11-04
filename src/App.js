@@ -23,6 +23,7 @@ function App() {
       console.error(err);
     })
   },[]) //empty array tells js 'mount this on first load'
+  //currently it is a dummy api - we will use a real one soon
   
 
   return (
