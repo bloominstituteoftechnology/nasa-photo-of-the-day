@@ -47,7 +47,11 @@
 
 
 .footerCard {
-  margin: 5%;
+  margin: 2%;
   padding: 5%;
   text-align: center;
+}
+
+button:hover {
+ background-color:;
 }

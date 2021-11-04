@@ -3,8 +3,6 @@
   padding: 5%;
 }
 
-button {
-    justify-content: space-between;
-    margin: 5%;
-    padding: 8%;
+button:hover {
+    background-color: lime;
 }
