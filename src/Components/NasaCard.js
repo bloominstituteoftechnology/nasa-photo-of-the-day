@@ -1,7 +1,11 @@
 //this the nasa card component!
 //we will use this to fill out the info for display
 
+
+
 import React from 'react';
+
+
 const NasaCard = (props) => {
     const {data} = props;
 
