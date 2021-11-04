@@ -1,10 +1,26 @@
 import React from 'react';
 import '../App.css';
+import styled from 'styled-components';
+
+const StyledNavBar = styled.div`
+    display: flex;
+    justify-content: space-evenly;
+    padding: 8px;
+
+    h1{
+        display: flex;
+        flex-direction: left;
+    }
+    .nav-list a{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+`
 
 const Header = (props) => {
     return (
-        <div className='container'>
-            <div className='navbar'>
+            <StyledNavBar className='navbar'>
                 <h1>NASA</h1>
                 <div className='nav-list'>
                     <a href='#' >Home</a>
@@ -12,8 +28,7 @@ const Header = (props) => {
                     <a href='#' >Shop</a>
                     <a href='#' >Contact</a>
                 </div>
-            </div>
-        </div>
+            </StyledNavBar>
     )
 }
 

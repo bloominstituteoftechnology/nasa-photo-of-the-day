@@ -21,7 +21,9 @@ function App() {
 
 
   return (
+
     <div className="App">
+      <Header />
       <p> NASA Photo of the Day! <span role="img" aria-label='go!'>🚀</span>!
       </p>
       <Body nasaAPI ={nasaData}/>
