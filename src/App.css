@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  border:mediumpurple solid 2px;
 }
 
 .App-logo {
@@ -37,21 +38,27 @@
   }
 }
 
+h1 {
+  margin: 0;
+  padding: 4%;
+}
+
 .card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  background-color:#58151A, #BC2909, #b36453c4, #71A8EE, #3072EB, #1552C6, #0542A8;
   
 }
 
 
 
 .footerCard {
-  margin: 2%;
-  padding: 5%;
+  margin: 0;
+  padding: 2%;
   text-align: center;
 }
 
 button:hover {
- background-color:;
+ background-color:lime;
 }
