@@ -9,6 +9,11 @@ import Button from './Button';
 
 import { ThemeProvider } from 'styled-components';
 import theme from './theme';
+import styled from 'styled-components';
+
+const StyledDiv = styled.div`
+  height: 100vh;
+`
 
 function App() {
   const [url, setUrl] = useState('')
@@ -26,13 +31,13 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-    <div className="App">
+    <StyledDiv className="App">
       <Logo />
       <Image url={url}/>
       <Paragraph paragraph={paragraph}/>
       <Button btnText='Get Started' btnClass='cta-btn'/>
       <Button />
-    </div>
+    </StyledDiv>
     </ThemeProvider>
   );
 }
