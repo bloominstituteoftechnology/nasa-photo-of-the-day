@@ -1,17 +1,36 @@
 import React from "react";
+import styled from 'styled-components';
+
+const StyledDiv = styled.div `
+    border: 20px ;
+    padding: 5%;
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 62.5%;
+    background: #12577D;
+    border-radius: 10px;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+    }
+`
+
+
 
 const BigComponent = (props) => {
     const {nasaAPI} = props;
-    // const { info } = props; --> Could also see it this way
-    // This just means one doesn't have to keep on typing 'props' everywhere
-    // like a lunatic, and can instead just refer to info as...info.
     return (
-        <div>
+         <StyledDiv>
             <img src= {nasaAPI.hdurl}></img>
-            <p>Copyright :{nasaAPI.copyright} </p>
-            <p>Date :{nasaAPI.date} </p>
-            <p>Explanation :{nasaAPI.explanation} </p>
-        </div>
+            <h1>Date : {nasaAPI.date} </h1>
+            <h2>Copyright :{nasaAPI.copyright} </h2>
+            <h2>Explanation :{nasaAPI.explanation} </h2>
+         </StyledDiv>
+
   )
 }
 
