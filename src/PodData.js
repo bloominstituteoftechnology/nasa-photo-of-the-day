@@ -9,7 +9,8 @@ const PodData = props => {
             <p>{props.date}</p>
             <p>{props.version}</p>
             <p>{props.explanation}</p>
-
+            <button><a href={props.url}>View Image</a></button>
+            
         </div>
     );
 };

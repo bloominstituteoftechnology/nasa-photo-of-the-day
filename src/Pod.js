@@ -9,7 +9,7 @@ function Pod() {
     useEffect(() => {
         axios.get('https://api.nasa.gov/planetary/apod?api_key=VivAhNalbXGkj707tqxVNaVJ6v1p5LPCqXs7kLYy')
         .then(res => {
-            
+            console.log(res.data);
             setPodList(res.data);
         })
         .catch(error => {
@@ -26,6 +26,9 @@ return (
         date ={podList.date}
         explanation = {podList.explanation}
         Img = {podList.url}
+        version = {podList.service_version}
+        media = {podList.media_type}
+        url = {podList.hdurl}
         
         />
     </div>
