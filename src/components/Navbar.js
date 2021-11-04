@@ -1,9 +1,31 @@
 import React from "react";
 import "../App.css";
+import styled from 'styled-components';
+
+const StyledNav = styled.div`
+    padding: 0% 10%;
+
+    .nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .nav-item{
+        display: flex;
+        justify-content: center;
+        padding: 3% 12%;
+      
+      }
+      .nav-item a{
+        padding: 2% 7%;
+        text-decoration: none;
+        width: 24%;
+      }
+`;
 
 function Navbar(){
     return(
-        <div className ="container">
+        <StyledNav>
             <div className="nav">
             <h1>NASA</h1>
             <div className="nav-item">
@@ -15,7 +37,7 @@ function Navbar(){
             </div>
 
         </div>
-        </div>
+        </StyledNav>
         
     )
 }
