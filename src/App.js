@@ -7,6 +7,9 @@ import axios from 'axios';
 import { API_KEY } from './secrets';
 import Button from './Button';
 
+import { ThemeProvider } from 'styled-components';
+import theme from './theme';
+
 function App() {
   const [url, setUrl] = useState('')
   const [paragraph, setParagraph] = useState('')
@@ -22,6 +25,7 @@ function App() {
     }, [])
 
   return (
+    <ThemeProvider theme={theme}>
     <div className="App">
       <Logo />
       <Image url={url}/>
@@ -29,6 +33,7 @@ function App() {
       <Button btnText='Get Started' btnClass='cta-btn'/>
       <Button />
     </div>
+    </ThemeProvider>
   );
 }
 
