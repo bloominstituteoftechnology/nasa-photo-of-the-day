@@ -1,9 +1,7 @@
 import React, {useState, useEffect} from "react";
 import axios from 'axios';
-import Header from './Components/header';
-import Top from './Components/topsection';
-import Info from './Components/infosection';
-import Image from './Components/image';
+import Header from './Components/Header';
+import Body from './Components/Body';
 
 import "./App.css";
 
@@ -24,10 +22,9 @@ function App() {
 
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
+      <p> NASA Photo of the Day! <span role="img" aria-label='go!'>🚀</span>!
       </p>
+      <Body nasaAPI ={nasaData}/>
     </div>
   );
 }
