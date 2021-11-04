@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from "react";
 import "./App.css";
-import axios from 'axios'
+import axios from 'axios';
 import {API_KEY, BASE_URL} from './Constants/index'
-import Image from "./components/image";
-export default function App() {
+import Image from './components/image';
 
+function App() {
   const [nasaData, setNasaData] = useState();
   const [image, setImage] = useState();
   
@@ -13,7 +13,7 @@ export default function App() {
         .then(res => {
           setNasaData(res.data);
         console.log(res.data);
-        setImage(nasaData.hdurl);
+        setImage(res.data.url);
         })
         .catch(err => {
           console.log(err)
@@ -21,7 +21,7 @@ export default function App() {
    
     }, [])
 
-function App() {
+
   return (
     <div className="App">
       <p> Picture of the Day</p>
@@ -30,7 +30,6 @@ function App() {
   );
 }
 
-}
-
+export default App;
 
   
