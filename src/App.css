@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.img {
+  height: 55vh;
+  width: 45vw;
+}
+
+.button {
+  height: 6vh;
+  width: 8vw;
+  margin-top: 10px;
+  background-color: #cacfd9;
+  border-color: black;
+}
