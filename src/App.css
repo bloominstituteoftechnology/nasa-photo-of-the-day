@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+}
+
+
+
+.footerCard {
+  margin: 5%;
+  padding: 5%;
+  text-align: center;
+}
