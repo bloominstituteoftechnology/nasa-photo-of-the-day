@@ -1,0 +1,13 @@
+.card-container {
+    background-color: lightskyblue;
+}
+
+.nasaCard {
+    height: auto;
+    width: 35%;
+    border: blueviolet solid 5px;
+    margin: 5%;
+}
+img {
+    width: 100%;
+}

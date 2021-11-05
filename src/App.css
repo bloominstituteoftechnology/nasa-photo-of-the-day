@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  border:mediumpurple solid 2px;
 }
 
 .App-logo {
@@ -35,4 +36,29 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+h1 {
+  margin: 0;
+  padding: 4%;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+  
+}
+
+
+
+.footerCard {
+  margin: 0;
+  padding: 2%;
+  text-align: center;
+}
+
+button:hover {
+ background-color:lime;
 }
