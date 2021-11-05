@@ -1,7 +1,26 @@
 import axios from "axios";
 import React, {useState, useEffect} from "react";
-import "./App.css";
+import styled from 'styled-components'
 
+
+const Styling = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .img {
+  height: 55vh;
+  width: 45vw;
+}
+
+.button {
+  height: 6vh;
+  width: 8vw;
+  margin-top: 10px;
+  background-color: #cacfd9;
+  border-color: black;
+}
+`
 function App() {
   const [url, setUrl] = useState('')
   useEffect(() => {
@@ -23,11 +42,11 @@ function App() {
     window.location.reload();
   }
   return (
-    <div className="App">
+    <Styling>
       <h1>NASA IMAGE OF THE DAY</h1>
       <IOFD url={url}/><br></br>
       <button className='button' onClick={refresh}>Reload</button>
-    </div>
+    </Styling>
   );
 }
 
