@@ -1,19 +1,25 @@
 import React, {useState, useEffect} from "react";
-import "./App.css";
 import axios from 'axios';
-import {API_KEY, BASE_URL} from './Constants/index'
+
+import "./App.css";
+import {API_KEY, BASE_URL} from './Constants/index';
 import Image from './components/image';
 
+
 function App() {
-  const [nasaData, setNasaData] = useState();
+  const [data, setData] = useState();
   const [image, setImage] = useState();
+  const [title, setTitle] = useState();
+
   
   useEffect(() => {
-      axios.get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`)
+      axios.get(`${BASE_URL}?api_key=${API_KEY}`)
         .then(res => {
-          setNasaData(res.data);
+          setData(res.data.data);
         console.log(res.data);
         setImage(res.data.url);
+        setTitle(res.data.title);
+    
         })
         .catch(err => {
           console.log(err)
@@ -21,14 +27,15 @@ function App() {
    
     }, [])
 
-
-  return (
-    <div className="App">
-      <p> Picture of the Day</p>
-      <Image image={image} setImage={setImage}/>
-    </div>
-  );
-}
+    return (
+      <div className="App">
+        <p> Picture of the Day</p>
+        <Image image={image} setImage={setImage}/>
+        
+      </div>
+    );
+  }
+  
 
 export default App;
 
