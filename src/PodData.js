@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 const Div = styled.div`
   width: 75%;
-
   margin: 0 auto;
+  margin-bottom: 1em;
 `
 
 const H2 = styled.div`
@@ -20,21 +20,37 @@ const Head = styled.h1`
 `
 const Image = styled.img`
   border-radius: 50px;
-  width: 75%;
+  width: 75vw;
+`
+const Button = styled.button`
+  background-color: black;
+  font-weight: 300;
+  display: inline-block;
+  padding: .4em 1.5em;
+  box-sizing: border-box;
+  border-radius: 2em;
+  
+  &:hover{
+      background-color: grey;
+  }
 
+`
+const Anchor = styled.a`
+  text-decoration: none;
+  color: #ffff;
 
 `
 
 const PodData = props => {
     return (
         <Div className = 'podData' key={props.data}>
-<Head> NASA Photo of The Day </Head>
+            <Head> NASA Photo of The Day </Head>
             <H2>{props.title}</H2>
             <Image className='img' src={props.Img} alt=''/>
             <p>{props.date}</p>
             <p>{props.version}</p>
             <p>{props.explanation}</p>
-            <button><a href={props.url}>View Image</a></button>
+            <Button><Anchor href={props.url}>View Image</Anchor></Button>
             
         </Div>
     );
