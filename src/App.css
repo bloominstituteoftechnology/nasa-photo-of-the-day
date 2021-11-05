@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+html {
+  background-image: url(https://astronomy.com/-/media/Images/News%20and%20Observing/Sky%20this%20Week/STW%202020/October/DelphinusStars.jpg?mw=600);
+} 
