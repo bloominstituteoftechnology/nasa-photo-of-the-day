@@ -6,7 +6,8 @@ background: linear-gradient(#03071e, #ffba08);
 margin:0;
 color: #ffba08;
 font-family:'Orbitron', sans-serif;
-padding-bottom: 4%;
+padding-bottom: 8%;
+
 `
 
 
