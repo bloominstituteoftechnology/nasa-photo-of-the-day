@@ -41,15 +41,24 @@ const Anchor = styled.a`
 
 `
 
+const Ptag = styled.p`
+  letter-spacing: .5px;
+  font-size: 1em;
+`
+
+const Date = styled.p` 
+  font-weight: bold;
+`
+
 const PodData = props => {
     return (
         <Div className = 'podData' key={props.data}>
             <Head> NASA Photo of The Day </Head>
             <H2>{props.title}</H2>
             <Image className='img' src={props.Img} alt=''/>
-            <p>{props.date}</p>
+            <Date>{props.date}</Date>
             <p>{props.version}</p>
-            <p>{props.explanation}</p>
+            <Ptag>{props.explanation}</Ptag>
             <Button><Anchor href={props.url}>View Image</Anchor></Button>
             
         </Div>
