@@ -57,7 +57,7 @@ margin: 0 auto;
 /* perspective: 450px; */
 `
 
-export default function body (props) {
+export default function Body (props) {
        
     return (
         <div class='bod'>

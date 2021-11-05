@@ -8,6 +8,9 @@ border: #03071e;
 color: #ffba08;
 font-size: 2rem;
 font-family: 'Orbitron', sans-serif;
+padding: 7%;
+margin-bottom: 10%;
+
 `
 
 export default function Button (props) {
@@ -19,7 +22,7 @@ export default function Button (props) {
     
     return (
         <div class='click'>
-        <Click onClick={showPic}>{!toggle ? 'Amaze Me!' : showPic }</Click>
+        <Click onClick={showPic}>{!toggle ? 'Amaze Me!' : 'Hide Amazement' }</Click>
         {toggle && <img src={photo} alt={title}/>}
         </div>
     )
