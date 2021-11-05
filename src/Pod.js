@@ -3,6 +3,7 @@ import PodData from './PodData';
 import axios from 'axios';
 
 
+
 function Pod() {
     const[podList, setPodList] = useState([]);
 
@@ -22,6 +23,7 @@ function Pod() {
 return (
     <div className = 'card'>
         <PodData key = {podList.data}
+
         title = {podList.title}
         date ={podList.date}
         explanation = {podList.explanation}
