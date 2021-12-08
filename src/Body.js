@@ -5,14 +5,11 @@ const Body = (props) =>{
     const{nasaAPI} = props;
     return(
         <div>
-            <p> Date: {nasaAPI.date} </p>
-            <p> Explanation: {nasaAPI.explanation} </p>
-            <img src={nasaAPI.url} alt = 'Item of the day' />
-            
-            
-            
-            
-            <p> CopyRight: {nasaAPI.copyright}</p>
+            <p> {nasaAPI.date} </p>
+            <p>{nasaAPI.title}</p>
+            <p> {nasaAPI.explanation} </p>
+            <img src={nasaAPI.url} alt = 'NASA Photo of the Day' />
+            <p> Copyright: {nasaAPI.copyright}</p>
         </div>
     )
 }

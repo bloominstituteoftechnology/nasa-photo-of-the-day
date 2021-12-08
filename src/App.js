@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import axios from 'axios';
 import "./App.css";
 import Body from './Body.js';
+import Navbar from "./Navbar";
 
 function App() {
 const [nasaData, setNasaData] = useState('')
@@ -20,6 +21,7 @@ const [nasaData, setNasaData] = useState('')
 
   return (
     <div className="App">
+      <Navbar />
       <p>
        NASA app!<span role="img" aria-label='go!'>🚀</span>!
       </p>
