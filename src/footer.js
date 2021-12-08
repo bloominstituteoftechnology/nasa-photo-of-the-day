@@ -23,6 +23,7 @@ export default function Footer(props) {
         <div className='containerImage'>
             <p>{ todaysDate }</p>
             <p>{ copyright }</p>
+            <img src='../logo512.png' />
             
         </div>
     )
