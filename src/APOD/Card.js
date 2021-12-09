@@ -7,12 +7,14 @@ export default function Card(props){
     <div className="Card">
 
         <div className='card-image'>
-        <img src={data.url} alt=""/>
+        <img src={data.hdurl} alt=""/>
         </div>
         <div className='card-info'>
-        <h2>{data.title}</h2>
-        <h3>{data.date}</h3>
-        <p>{data.explanation}</p>
+        <h3>{data.title}</h3>
+        <h4>{data.date}</h4>
+            <div className='card-explanation'>
+                <p>{data.explanation}</p>
+            </div>
         </div>
     </div>
     )
