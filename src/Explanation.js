@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 
-// const Explanation = props => {
-//     const { nasaData } = props;
+const Explanation = props => {
+    const { explanation } = props;
     
-//     return (
-//         <div className ='explanationText'>    
-//          <Explanation explantionText={nasaData.explanation}/>
-//         </div>
-//     )
-//     // console.log(nasaData.url)
-// }
+    return (
+        <div className ='explanation'>    
+         <h3>{explanation}</h3>
+        </div>
+    )
+    // console.log(nasaData.url)
+}
 
 
-// export default Explanation;
+export default Explanation;

@@ -25,7 +25,7 @@ return (
   <div className="App">
   <h1>Astronomy Picture Of the Day</h1>
   <NasaPhoto nasaData={nasaData}/>
-  {/* <Explanation explanationText={nasaData.explanation}/> */}
+  <Explanation explanation={nasaData.explanation}/>
   {/* <Explanation nasaData={explanationText} /> */}
   </div>
 );
