@@ -7,8 +7,6 @@ import ImageInfo from "./ImageInfo";
 function App() {
   const [nasaData, setNasaData] = useState({});
 
-  console.log(nasaData);
-
   useEffect(() => {
     axios
       .get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
@@ -19,6 +17,8 @@ function App() {
         console.log(error);
       });
   }, []);
+
+  const { date, title, hdurl, explanation, copyright } = nasaData;
 
   return (
     <div className="App">
@@ -31,9 +31,9 @@ function App() {
           🚀
         </span>
       </p>
-      <p>{nasaData.date}</p>
-      <NasaImage nasaImage={nasaData} />
-      <ImageInfo imageInfo={nasaData} />
+      <p>{date}</p>
+      <NasaImage nasaImage={hdurl} />
+      <ImageInfo imageInfo={{ title, copyright, explanation }} />
     </div>
   );
 }

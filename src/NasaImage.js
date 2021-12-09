@@ -6,7 +6,7 @@ export default function NasaImage(props) {
 
   return (
     <div className="Photo">
-      <img src={nasaImage.url} alt="Comet over the Alps in Italy" />
+      <img src={nasaImage} alt="Comet over the Alps in Italy" />
     </div>
   );
 }
