@@ -8,6 +8,7 @@ const Pic = styled.div`
 const PicChild = styled.img`
   width: 100%;
   margin-top: 2rem;
+  margin-bottom: 2rem;
 `;
 
 const Photo = (props) => {
