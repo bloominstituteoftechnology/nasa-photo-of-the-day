@@ -5,13 +5,14 @@ import Photo from './components/Photo'
 import Title from './components/Title'
 import Information from "./components/Information";
 
+
 function App() {
   const [photoOfTheDay, setPhoto] = useState([])
 
 
 useEffect( () => {
   const fetchPhoto = () => {
-    axios.get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`)
+    axios.get(`https://api.nasa.gov/planetary/apod?api_key=O9CM4uImEaPjNABgx3aiwZTfUzeoWy1xjhPzPDoP`)
     .then(resp => {
       console.log(resp.data)
       setPhoto(resp.data)
@@ -28,21 +29,19 @@ fetchPhoto()
   return (
     <div className = "container">
       
-        <Title photo={photoOfTheDay} />  
+        <Title photo={photoOfTheDay}/> 
+        <Photo photo={photoOfTheDay}  /> 
         <Information photo={photoOfTheDay} />
-        <Photo photo={photoOfTheDay}  />
+
+        {/**
+         * const props = {
+         *   leila: photoOfTheDay,
+         * 
+         * }
+         */}
+        
     </div>
   )
-
-
-//   return (
-//     <div className="App">
-//       <p>
-//         Read through the instructions in the README.md file to build your NASA
-//         app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-//       </p>
-//     </div>
-//   );
 }
 
 export default App;
