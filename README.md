@@ -49,8 +49,6 @@ This project was put together using create-react-app (CRA). You will not need to
 - [ ] Take a look at your planned components. Create the folders and files you need for each component.
 - [ ] Leave most of them blank for now - you need to get your data from the API before you can really get these built.
 
-**Fetching the Data**
-
 - [ ] In `App.js` (or where ever you wanted to fetch the data) add state for the data you'll be getting from NASA.
 - [ ] Add an effect hook to handle the API call side effect.
 - [ ] Go to the [NASA APOD API docs](https://api.nasa.gov/#apod) and read through the docs to see how to make the API call.
@@ -88,9 +86,9 @@ Now is the time to build out your other components. Compose your UI, and then pa
 if (!props.photoOfTheDay) return <h3>Loading...</h3>;
 
 // Display your component as normal after the data has been fetched
-return (
-  {/* your normal JSX here */}
-);
+return {
+  /* your normal JSX here */
+};
 ```
 
 - Read through the API docs carefully. You will read through many technical docs as a developer, so start now to try and understand them.
@@ -108,6 +106,6 @@ Follow these steps for completing your project.
 
 - [ ] Submit a Pull-Request to merge Branch into `main` (student's Repository).
 
-----
+---
 
 ## Part II - [Advanced Styling Techniques](DAY_TWO_README.md)
