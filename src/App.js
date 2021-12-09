@@ -16,11 +16,11 @@ function App() {
       console.log(err)
     })
   }, [])
-
+  
   return (
     <div className="App">
       <Header/>
-      <Card/>
+      <Card data= {info}/>
       <p>
         Read through the instructions in the README.md file to build your NASA
         app! Have fun <span role="img" aria-label='go!'>🚀</span>!
