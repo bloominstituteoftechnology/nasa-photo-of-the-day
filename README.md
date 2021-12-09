@@ -51,13 +51,13 @@ This project was put together using create-react-app (CRA). You will not need to
 
 **Fetching the Data**
 
-- [ ] In `App.js` (or where ever you wanted to fetch the data) add state for the data you'll be getting from NASA.
-- [ ] Add an effect hook to handle the API call side effect.
-- [ ] Go to the [NASA APOD API docs](https://api.nasa.gov/#apod) and read through the docs to see how to make the API call.
-- [ ] You don't _need_ an API key. However you may need one if you exceed the API request limits.
-- [ ] Using the endpoint given, fetch the data using `axios`.
-- [ ] In your `.then()` make sure to `console.log` the response so you can look at the shape of the data. 😃
-- [ ] Before you add your data to state, make sure your effect hook has a dependency array (probably empty, since we don't want this effect synced up to any state/props), otherwise you will start an **infinite loop, and you will exceed the API rate limits of the DEMO_KEY and need to use a real API_KEY.**
+- [X] In `App.js` (or where ever you wanted to fetch the data) add state for the data you'll be getting from NASA.
+- [X] Add an effect hook to handle the API call side effect.
+- [X] Go to the [NASA APOD API docs](https://api.nasa.gov/#apod) and read through the docs to see how to make the API call.
+- [X] You don't _need_ an API key. However you may need one if you exceed the API request limits.
+- [X] Using the endpoint given, fetch the data using `axios`.
+- [X] In your `.then()` make sure to `console.log` the response so you can look at the shape of the data. 😃
+- [X] Before you add your data to state, make sure your effect hook has a dependency array (probably empty, since we don't want this effect synced up to any state/props), otherwise you will start an **infinite loop, and you will exceed the API rate limits of the DEMO_KEY and need to use a real API_KEY.**
 
 DEMO KEY rate limits:
 
@@ -69,7 +69,7 @@ _Note: if the photo url is NOT a photo, you will need to learn how to display a 
 
 **Adding the Data to State**
 
-- [ ] Once you have made the call correctly, and logged the data, add the data to the state property you built.
+- [X] Once you have made the call correctly, and logged the data, add the data to the state property you built.
 
 **Display the Data**
 Now is the time to build out your other components. Compose your UI, and then pass the data to your children components via props so you can render it on the DOM.
