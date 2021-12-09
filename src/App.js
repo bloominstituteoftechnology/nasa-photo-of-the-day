@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import "./App.css";
-import Header from './components/Header';
-import Image from './components/Image';
-import Caption from './components/Caption';
+import Card from './components/Card';
 
 function App() {
 
@@ -25,9 +23,7 @@ useEffect(() => {
 
   return (
     <div className="App">
-      <Header data={data} />
-      <Image data={data} />
-      <Caption data={data} />
+      <Card data={data}/>
       {/* <p>
         Read through the instructions in the README.md file to build your NASA
         app! Have fun <span role="img" aria-label='go!'>🚀</span>!
