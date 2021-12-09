@@ -3,11 +3,11 @@ import axios from 'axios';
 import "./App.css";
 
 // import the children components
-import Main from './components/Main';
-import Sidebar from './components/Sidebar';
+import Main from "./Components/Main";
+import Sidebar from "./Components/Sidebar";
 
 //import axios key
-import { BASE_URL, API_KEY} from './components/Constents';
+import { BASE_URL, API_KEY } from './Components/Keys';
 
 function App() {
   const [ nasaTitle, setNasaTitle ] = useState(null);
