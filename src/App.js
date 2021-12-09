@@ -21,9 +21,7 @@ function App() {
 
   return (
     <div className="App">
-      <p>
-        {nasaData && <Body data = {nasaData} /> }
-      </p>
+        <Body nasaAPI = {nasaData} />
     </div>
   );
 }
