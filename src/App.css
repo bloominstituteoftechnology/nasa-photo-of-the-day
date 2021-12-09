@@ -6,6 +6,11 @@
   height: 40vmin;
   pointer-events: none;
 }
+h2 {
+  font-family:'Smooch', cursive;
+  font-size: 50px;
+ 
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
