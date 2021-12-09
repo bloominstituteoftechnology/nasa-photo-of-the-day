@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import { BASE_URL, API_KEY } from './data'
+import { BASE_URL, API_KEY} from './data'
 import axios from 'axios'
 import Image from './image'
-import About from './about'
-import Footer from './footer'
+
 
 function App() {
 
-  const [nasaInfo, setNasaInfo] = useState([])
-  const [date, setDate] =useState(null)
- 
+  const [nasaInfo, setNasaInfo] = useState('')
 
-  useEffect(() => { 
+
+ 
+   useEffect(() => { 
     const fetchNasaInfo = () => {
       axios.get(`${BASE_URL}/apod?api_key=${API_KEY}`)
       .then(res => {
-        console.log(res.data)
+
+        setNasaInfo(res.data)
       })
       .catch(err => {
         console.log(err)
@@ -37,9 +37,7 @@ function App() {
         app! Have fun <span role="img" aria-label='go!'>🚀</span>!
       </p>
 
-    <Image date={date}  />
-    <About date={date} />
-    <Footer date={date} />
+    <Image nasaInfo={nasaInfo}  />
     </div>
   );
 }

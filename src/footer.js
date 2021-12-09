@@ -1,29 +1,27 @@
-import React, { useState, useEffect } from 'react'
-import { BASE_URL, API_KEY } from './data'
+import React, { useState } from 'react'
+import { BASE_URL, API_KEY, DATE_DATA  } from './data'
 import axios from 'axios'
 
 
 export default function Footer(props) {
-    const [todaysDate, setTodaysDate] = useState([])
+    const { chooseDate } = props;
     const [copyright, setCopyright] = useState([])
     
-    useEffect(() => {
-        axios.get(`${BASE_URL}/apod?api_key=${API_KEY}`)
+
+        axios.get(`${BASE_URL}/apod?api_key=${API_KEY}${DATE_DATA}${chooseDate}`)
         .then(res => {
-            setTodaysDate(res.data.date)
             setCopyright(res.data.copyright)
         })
         .catch(err => {
             console.log(err)
         })
-    }, [])
+
 
 
     return (
         <div className='containerImage'>
-            <p>{ todaysDate }</p>
-            <p>{ copyright }</p>
-            <img src='../logo512.png' />
+            <p>Copyright { copyright }</p>
+            {/* <img src='../logo512.png' /> */}
             
         </div>
     )
