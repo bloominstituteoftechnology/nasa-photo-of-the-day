@@ -6,10 +6,10 @@ export default function Card(props){
     return (
     <div className="Card">
 
-        <div class='card-image'>
+        <div className='card-image'>
         <img src={data.url} alt=""/>
         </div>
-        <div class='card-info'>
+        <div className='card-info'>
         <h2>{data.title}</h2>
         <h3>{data.date}</h3>
         <p>{data.explanation}</p>
