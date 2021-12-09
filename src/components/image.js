@@ -1,57 +1,41 @@
-import React, { useState } from 'react'
-import { BASE_URL, API_KEY, DATE_DATA } from './data'
-import axios from 'axios'
+import React from 'react'
+import styled, { keyframes } from 'styled-components';
 
-import About from './about'
-import Footer from './footer'
-
-
-export default function Image(props) {
-    // const { chooseDate, getDate } = props;
-
-    const [todaysImage, setTodaysImage] = useState([])
-    const [chooseDate, setChooseDate] = useState('')
-    const [todaysVideo, setTodaysVideo] = useState('')
-    
-
-    const getDate = event => {
-        const { value } = event.target;
-        setChooseDate(value);
+const kf = keyframes`
+    50% {
+        transform: scale(0.8);
     }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+`
+
+const StyledIntro = styled.div`
+    img {
+        border: 10px solid ${props => props.theme.secondaryColor};
+        width: 50%;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            transition: all 0.2s ease-in-out;
+            border: 15px solid ${props => props.theme.tertiaryColor}
+        }
+    }
+
     
-    
-
-        axios.get(`${BASE_URL}/apod?api_key=${API_KEY}${DATE_DATA}${chooseDate}`)
-        .then(res => {
-            if ( res.data.media_type === 'image') {
-                setTodaysImage(res.data.url)
-            } else {
-                setTodaysVideo(res.data.url)
-            }
-            
-        })
-        .catch(err => {
-            console.log(err)
-        })
+`
 
 
+export default function Image({todaysImage}) {
+   
 
     return (
-        <div className='containerImage'>
-            <div>
-            <h1>NASA's Daily Image</h1>
-            <p>Select Date: <input type='date' id='dateBox' onChange={getDate} /> </p>  
-            </div>
-            <div>
-            <img src={todaysImage} alt={`NASA's Daily Image Not Working`} />
-            
-            {/* <iframe width='800' height='600' src={todaysImage} /> */}
+        <StyledIntro className='containerImage'>
 
-            </div>
-           
-            <About chooseDate={chooseDate}  />
-            <Footer chooseDate={chooseDate}  />
-        </div>
+            <img src={todaysImage} alt={`NASA's Daily Image Not Working`} />
+                       
+
+        </StyledIntro>
     )
 
 

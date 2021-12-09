@@ -1,29 +1,21 @@
-import React, { useState } from 'react'
-import { BASE_URL, API_KEY, DATE_DATA  } from './data'
-import axios from 'axios'
+import React from 'react'
+import styled from 'styled-components';
 
 
-export default function Footer(props) {
-    const { chooseDate } = props;
-    const [copyright, setCopyright] = useState([])
-    
+const StyledIntro = styled.div`
+    color: ${props => props.theme.accentColor};
+`
 
-        axios.get(`${BASE_URL}/apod?api_key=${API_KEY}${DATE_DATA}${chooseDate}`)
-        .then(res => {
-            setCopyright(res.data.copyright)
-        })
-        .catch(err => {
-            console.log(err)
-        })
-
+export default function Footer({copyright}) {
+  
 
 
     return (
-        <div className='containerImage'>
+        <StyledIntro className='containerImage'>
             <p>{ copyright }</p>
             {/* <img src='../logo512.png' /> */}
             
-        </div>
+        </StyledIntro>
     )
 
 

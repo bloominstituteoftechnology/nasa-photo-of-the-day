@@ -1,28 +1,28 @@
-import React, { useState } from 'react'
-import { BASE_URL, API_KEY, DATE_DATA } from './data'
-import axios from 'axios'
-
-export default function About (props) {
-    const { chooseDate } = props;
-    const [title, setTitle] = useState([])
-    const [about, setAbout] = useState([])
+import React from 'react'
+import styled from 'styled-components';
 
 
+const StyledIntro = styled.div`
+    
+    color: ${props => props.theme.primaryColor};
+    h3 {
+        color: ${props => props.theme.accentColor};
+    }
+    .aboutSection {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+`
 
-        axios.get(`${BASE_URL}/apod?api_key=${API_KEY}${DATE_DATA}${chooseDate}`)
-        .then(res => {
-            setTitle(res.data.title)
-            setAbout(res.data.explanation)
-        })
-        .catch(err => {
-            console.log(err)
-        })
- 
+export default function About ({about}) {
+    
+
+
 
     return (
-        <div className='about'>
-            <h2 className='title'>{ title }</h2>
+        <StyledIntro className='about'>   
+            <h3>About the Photo:</h3>         
             <p className='aboutSection'>{ about }</p>
-        </div>
+        </StyledIntro>
     )
 }
