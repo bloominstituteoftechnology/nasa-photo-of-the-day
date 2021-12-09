@@ -6,7 +6,17 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+h2 {
+  font-family:'Smooch', cursive;
+  font-size: 50px;
+}
+img {
+  border-radius: 5%;
+}
+.photo img :hover{
+  border-radius: 0%;
+  transform: scale(0.7);
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
