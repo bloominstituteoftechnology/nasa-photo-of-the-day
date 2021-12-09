@@ -1,4 +1,17 @@
 import React, { useEffect, useState } from "react";
+import styled from 'styled-components';
+
+const StyledPhoto = styled.div`
+ width: 50%;
+ display: flex;
+ justify-content; space-evenly;
+ flex-wrap: wrap;
+ padding: 6px;
+ background-color: ${pr => pr.theme.primaryColor};
+ color: ${pr => pr.theme.white};
+ font-size: 2rem;
+`
+
 
 function Photo() {
 const [nasa,setNasa] = useState([])
@@ -12,7 +25,7 @@ useEffect(() => {
       })
     }, [])
 return (
-    <div className='Photo'>
+    <StyledPhoto>
         <h2>{nasa.title}</h2>
         {
         nasa &&
@@ -22,7 +35,6 @@ return (
             <p>Date: {nasa.date}</p>
         </>
         }
-        <button onClick={close}>Close</button>
-    </div>
+    </StyledPhoto>
     )
 }
