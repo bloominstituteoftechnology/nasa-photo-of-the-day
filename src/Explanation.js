@@ -5,7 +5,7 @@ const Explanation = props => {
     
     return (
         <div className ='explanation'>    
-         <h3>{explanation}</h3>
+         <p>{explanation}</p>
         </div>
     )
     // console.log(nasaData.url)

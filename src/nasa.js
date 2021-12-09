@@ -7,7 +7,6 @@ const NasaPhoto = props => {
     return (
         <div className ='NasaPhoto'>
             <img src={nasaData.url} alt='Nasa pic of the day'/>
-            {/* <Explanation text={nasaData.explanation}/> */}
         </div>
     )
     // console.log(nasaData.url)
