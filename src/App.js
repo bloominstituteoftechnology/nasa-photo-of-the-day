@@ -1,15 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
+import axios from 'axios';
+import NasaPhoto from "./nasa";
+import Explanation  from "./Explanation";
 
-function App() {
-  return (
-    <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
-    </div>
-  );
-}
 
 export default App;
+
+function App() {
+  const [nasaData, setNasaData] = useState([]);
+
+useEffect(() => {
+  axios.get('https://api.nasa.gov/planetary/apod?api_key=jWaCWGvDdPdY2207ALzpXNfw5arVUICq624WiDDR')
+  .then(res => {
+    // console.log(res.data);
+    setNasaData(res.data);
+  })
+  .catch((error) => {
+    console.log(error);
+  })
+}, []);
+
+return (
+  <div className="App">
+  <h1>Astronomy Picture Of the Day</h1>
+  <NasaPhoto nasaData={nasaData}/>
+  {/* <Explanation nasaData={explanationText} /> */}
+  </div>
+);
+}
