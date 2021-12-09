@@ -25,12 +25,7 @@ function App() {
       <Header />
       <Card data={info} />
       <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun{" "}
-        <span role="img" aria-label="go!">
-          🚀
-        </span>
-        !
+        Made with ❤️ on 🌎
       </p>
     </div>
   );
