@@ -3,6 +3,15 @@ import "./App.css";
 import axios from "axios";
 import NasaImage from "./NasaImage";
 import ImageInfo from "./ImageInfo";
+import styled from "styled-components";
+
+const StyledApp = styled.div`
+  background-color: ${(props) => props.theme.mainBackgroundColor};
+`;
+
+const StyledDate = styled.p`
+  font-weight: bold;
+`;
 
 function App() {
   const [nasaData, setNasaData] = useState({});
@@ -21,20 +30,22 @@ function App() {
   const { date, title, hdurl, explanation, copyright } = nasaData;
 
   return (
-    <div className="App">
-      <h1>Astronomy Picture of the Day</h1>
-      <p>
-        Each day a different image or photograph of our fascinating universe is
-        featured, along with a brief explanation written by a professional
-        astronomer.{" "}
-        <span role="img" aria-label="go!">
-          🚀
-        </span>
-      </p>
-      <p>{date}</p>
-      <NasaImage nasaImage={hdurl} />
-      <ImageInfo imageInfo={{ title, copyright, explanation }} />
-    </div>
+    <StyledApp>
+      <div className="App">
+        <h1>Astronomy Picture of the Day</h1>
+        <p>
+          Each day a different image or photograph of our fascinating universe
+          is featured, along with a brief explanation written by a professional
+          astronomer.{" "}
+          <span role="img" aria-label="go!">
+            🚀
+          </span>
+        </p>
+        <StyledDate>{date}</StyledDate>
+        <NasaImage nasaImage={hdurl} />
+        <ImageInfo imageInfo={{ title, copyright, explanation }} />
+      </div>
+    </StyledApp>
   );
 }
 
