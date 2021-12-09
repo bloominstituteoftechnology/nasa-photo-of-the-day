@@ -1,12 +1,22 @@
 import React from "react";
+import styled from "styled-components";
+
+const Pic = styled.div`
+  width: 80%;
+  margin: 0 auto;
+`;
+const PicChild = styled.img`
+  width: 100%;
+  margin-top: 2rem;
+`;
 
 const Photo = (props) => {
   const { photo } = props;
 
   return (
-    <div className="photo">
-      <img src={photo.hdurl} alt="space" />
-    </div>
+    <Pic className="photo">
+      <PicChild src={photo.hdurl} alt="space" />
+    </Pic>
   );
 };
 
