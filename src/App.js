@@ -31,6 +31,7 @@ function App() {
           🚀
         </span>
       </p>
+      <p>{nasaData.date}</p>
       <NasaImage nasaImage={nasaData} />
       <ImageInfo imageInfo={nasaData} />
     </div>
