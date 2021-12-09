@@ -10,6 +10,7 @@ function App() {
 const [data, setData] = useState([]);
 
 useEffect(() => {
+  const fetchData = () => {
   axios.get('https://api.nasa.gov/planetary/apod?api_key=LtbYC1cZ97Dm9BeUVxauVTdTqSlKwET4micWPNzT')
   .then(res => {
     console.log('res:', res.data)
@@ -18,6 +19,8 @@ useEffect(() => {
   .catch(err => {
     console.error(err)
   })
+}
+  fetchData()
 }, [])
 
   return (
