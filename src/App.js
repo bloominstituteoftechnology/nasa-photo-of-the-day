@@ -15,14 +15,19 @@ const kf = keyframes`
 
 const StyledApp = styled.div`
   display: flex;
-  background-color: 'royalblue'
-  border-bottom: 2px solid blue;
-  p {
-    border: 'royalblue'
+  background-color: royalblue;
+  border: 2px solid pink;
+  color: darkred;
+ 
+  h1 {
+    width: 80;
+    justify-content: center;
+    background-color: pink;
+    border: 2px solid crimson;
   }
 
-  h1 {
-    text: 'royalblue'
+  p {
+    color: hotpink;
   }
 
   img {
