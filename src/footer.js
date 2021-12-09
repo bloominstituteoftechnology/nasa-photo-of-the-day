@@ -20,7 +20,7 @@ export default function Footer(props) {
 
     return (
         <div className='containerImage'>
-            <p>Copyright { copyright }</p>
+            <p>{ copyright }</p>
             {/* <img src='../logo512.png' /> */}
             
         </div>

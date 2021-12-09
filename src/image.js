@@ -11,6 +11,7 @@ export default function Image(props) {
 
     const [todaysImage, setTodaysImage] = useState([])
     const [chooseDate, setChooseDate] = useState('')
+    const [todaysVideo, setTodaysVideo] = useState('')
     
 
     const getDate = event => {
@@ -22,7 +23,12 @@ export default function Image(props) {
 
         axios.get(`${BASE_URL}/apod?api_key=${API_KEY}${DATE_DATA}${chooseDate}`)
         .then(res => {
-            setTodaysImage(res.data.url)
+            if ( res.data.media_type === 'image') {
+                setTodaysImage(res.data.url)
+            } else {
+                setTodaysVideo(res.data.url)
+            }
+            
         })
         .catch(err => {
             console.log(err)
@@ -30,13 +36,18 @@ export default function Image(props) {
 
 
 
-
     return (
         <div className='containerImage'>
-            <img src='../logo192.png' alt={'NASA logo'}/>
+            <div>
             <h1>NASA's Daily Image</h1>
-            <p>Date: <input type='date' id='dateBox' onChange={getDate} /> </p>            
+            <p>Select Date: <input type='date' id='dateBox' onChange={getDate} /> </p>  
+            </div>
+            <div>
             <img src={todaysImage} alt={`NASA's Daily Image Not Working`} />
+            
+            {/* <iframe width='800' height='600' src={todaysImage} /> */}
+
+            </div>
            
             <About chooseDate={chooseDate}  />
             <Footer chooseDate={chooseDate}  />

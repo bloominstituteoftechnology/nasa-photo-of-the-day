@@ -9,7 +9,7 @@ function App() {
 
   const [nasaInfo, setNasaInfo] = useState('')
 
-
+  console.log(nasaInfo);
  
    useEffect(() => { 
     const fetchNasaInfo = () => {
