@@ -4,6 +4,37 @@ import "./App.css";
 import styled, { keyframes } from 'styled-components';
 import Nasa from './nasa';
 
+const kf = keyframes`
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }`
+
+const StyledApp = styled.div`
+  display: flex;
+  background-color: 'royalblue'
+  border-bottom: 2px solid blue;
+  p {
+    border: 'royalblue'
+  }
+
+  h1 {
+    text: 'royalblue'
+  }
+
+  img {
+    border-radius: 10px;
+  }
+
+  transform: scale(2); // start of animation
+  opacity: 0; // start of animation;
+  animation: ${kf} 3s ease-in-out forwards;
+`
+
+
 function App() {
   const [nasaData, setNasaData] = useState();
 
@@ -14,9 +45,9 @@ function App() {
       }).catch(err => console.error(err))
   }, [])
   return (
-    <div className="App">
+    <StyledApp className="App">
       {nasaData && <Nasa nasaData={nasaData} /> }
-    </div>
+    </StyledApp>
   );
 }
 
