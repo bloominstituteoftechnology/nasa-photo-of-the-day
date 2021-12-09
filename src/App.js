@@ -1,9 +1,36 @@
 import React, { useState, useEffect } from "react";
+import styled, { keyframes } from 'styled-components';
 import axios from "axios";
 import "./App.css";
 import Header from "./APOD/Header";
 import Card from "./APOD/Card";
 
+
+const kf = keyframes`
+    50% {
+    transform: scale(0.8);
+    }
+    100% {
+    opacity: 1;
+    transform: scale(1);
+}
+`
+const StyledApp = styled.div`
+    opacity: 0;
+    transform: scale(2);
+    animation: ${kf} 1s ease-in-out forwards;
+
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow : column;
+`
+
+const StyledAppFooter = styled.div`
+    padding: 25px;
+`
 function App() {
   const [info, setInfo] = useState([]);
 
@@ -21,13 +48,16 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <StyledApp>
       <Header />
       <Card data={info} />
+      <StyledAppFooter>
       <p>
         Made with ❤️ on 🌎
       </p>
-    </div>
+      </StyledAppFooter>
+      
+    </StyledApp>
   );
 }
 

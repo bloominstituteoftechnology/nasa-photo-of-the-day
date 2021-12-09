@@ -25,8 +25,7 @@ const StyledCard = styled.div`
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 10px;
-    border-bottom: 2px solid white;
-    background-color: slategrey;
+    background-color: black;
 `
 const StyledCardImage = styled.div`
 
