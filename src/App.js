@@ -22,7 +22,7 @@ function App() {
     <div className="App">
       <h1>Nasa Image of the Year</h1>
       <Extra nasaExtra = {nasa}/>
-      <input/><button>reset</button>
+      <input/><button>RESET</button>
       <Img nasaImg = {nasa}/>
       <Explain nasaInfo = {nasa}/>
     </div>
@@ -30,3 +30,6 @@ function App() {
 }
 
 export default App;
+
+
+//slight
