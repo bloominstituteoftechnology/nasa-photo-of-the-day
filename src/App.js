@@ -1,15 +1,19 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
+import NasaImage from "./NasaImage";
+import ImageInfo from "./ImageInfo";
 
 function App() {
-  const [nasaData, setNasaData] = useState();
+  const [nasaData, setNasaData] = useState({});
+
+  console.log(nasaData);
 
   useEffect(() => {
     axios
       .get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
       .then((resp) => {
-        console.log(resp);
+        setNasaData(resp.data);
       })
       .catch((error) => {
         console.log(error);
@@ -18,14 +22,17 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Astronomy Picture of the Day</h1>
       <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun{" "}
+        Each day a different image or photograph of our fascinating universe is
+        featured, along with a brief explanation written by a professional
+        astronomer.{" "}
         <span role="img" aria-label="go!">
           🚀
         </span>
-        !
       </p>
+      <NasaImage nasaImage={nasaData} />
+      <ImageInfo imageInfo={nasaData} />
     </div>
   );
 }
