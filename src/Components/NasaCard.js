@@ -4,13 +4,24 @@ import styled from 'styled-components'
 const StyledContent = styled.div`
 color: purple;
 background-color: black;
+
+h1 {
+    font-size: 4em;
+}
+
 p {
     color: gold;
+    font-size: 2em;
 };
 
 img {
     max-width: 100%;
     border: 3px solid;
+}
+
+footer {
+    font-size: 2em;
+    color: white;
 }
 `
 
