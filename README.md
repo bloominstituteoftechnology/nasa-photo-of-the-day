@@ -27,13 +27,13 @@ In this project you will build out a application to show the NASA photo of the d
 
 This project was put together using create-react-app (CRA). You will not need to install CRA in order to make this project work. Follow the steps below to setup the project with the proper dependencies.
 
-- [ ] Create a forked copy of this project.
-- [ ] Clone your OWN version of the repository in your terminal
-- [ ] Download project dependencies by running `npm install`
-- [ ] Start up the app using `npm start`
-- [ ] Create a new branch: `git checkout -b <firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [ ] Push commits: `git push origin <firstName-lastName>`.
+- [y] Create a forked copy of this project.
+- [y] Clone your OWN version of the repository in your terminal
+- [y] Download project dependencies by running `npm install`
+- [y] Start up the app using `npm start`
+- [y] Create a new branch: `git checkout -b <firstName-lastName>`.
+- [y] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+- [y] Push commits: `git push origin <firstName-lastName>`.
 
 ### Task 2: MVP
 
@@ -51,8 +51,8 @@ This project was put together using create-react-app (CRA). You will not need to
 
 **Fetching the Data**
 
-- [ ] In `App.js` (or where ever you wanted to fetch the data) add state for the data you'll be getting from NASA.
-- [ ] Add an effect hook to handle the API call side effect.
+- [y] In `App.js` (or where ever you wanted to fetch the data) add state for the data you'll be getting from NASA.
+- [y] Add an effect hook to handle the API call side effect.
 - [ ] Go to the [NASA APOD API docs](https://api.nasa.gov/#apod) and read through the docs to see how to make the API call.
 - [ ] You don't _need_ an API key. However you may need one if you exceed the API request limits.
 - [ ] Using the endpoint given, fetch the data using `axios`.
@@ -76,8 +76,8 @@ Now is the time to build out your other components. Compose your UI, and then pa
 
 #### _MVP Requirements:_
 
-- [ ] Use the effect hook to fetch the APOD data when the component mounts.
-- [ ] Display the APOD data in different components that are composed together to build your UI.
+- [y] Use the effect hook to fetch the APOD data when the component mounts.
+- [y] Display the APOD data in different components that are composed together to build your UI.
 
 #### Pro Tips
 
@@ -88,9 +88,9 @@ Now is the time to build out your other components. Compose your UI, and then pa
 if (!props.photoOfTheDay) return <h3>Loading...</h3>;
 
 // Display your component as normal after the data has been fetched
-return (
-  {/* your normal JSX here */}
-);
+return {
+  /* your normal JSX here */
+};
 ```
 
 - Read through the API docs carefully. You will read through many technical docs as a developer, so start now to try and understand them.
@@ -108,6 +108,6 @@ Follow these steps for completing your project.
 
 - [ ] Submit a Pull-Request to merge Branch into `main` (student's Repository).
 
-----
+---
 
 ## Part II - [Advanced Styling Techniques](DAY_TWO_README.md)
