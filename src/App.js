@@ -36,8 +36,8 @@ function App() {
       <p>
         
         {/* {title} */}
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
+        {/* Read through the instructions in the README.md file to build your NASA
+        app! Have fun <span role="img" aria-label='go!'>🚀</span>! */}
       </p>
       {/* <img src={nasaData} alt="Girl in a jacket"> */}
       {/* <h1>{nasaData}</h1> */}
