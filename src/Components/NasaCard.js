@@ -10,7 +10,7 @@ p {
 
 img {
     max-width: 100%;
-    border: 1px solid;
+    border: 3px solid;
 }
 `
 
@@ -21,7 +21,7 @@ const NasaCard = (props) => {
             <p>{props.data.date}</p>
             <p>{props.data.title}</p>
             <img src={props.data.url} alt='Nasa photo of the day' />
-            <footer>This is my footer section</footer>
+            <footer>Every now and then I get a little bit lonely</footer>
         </StyledContent>
     )
 }
