@@ -5,4 +5,5 @@ export default {
     accentColor: '#ECB365',
     darkGrey: '#353839',
     white: '#fafafa',
+    breakpointMobile: '500px',
 }

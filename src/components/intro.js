@@ -21,8 +21,7 @@ export default function Intro({title}) {
     return (
         <StyledIntro className='containerImage'>
 
-            <h1>NASA's Daily Image</h1>
-            {/* <p>Select Date: <input type='date' id='dateBox'  /> </p>   */}
+            <h1>NASA's Astronomy Picture of the Day</h1>
             <h2 className='title'>{ title }</h2>
 
         </StyledIntro>
@@ -32,4 +31,3 @@ export default function Intro({title}) {
 
 }
 
-// onChange={}

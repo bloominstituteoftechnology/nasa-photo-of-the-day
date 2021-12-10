@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 
 
-const StyledIntro = styled.div`
+const StyledAbout = styled.div`
     
     color: ${props => props.theme.primaryColor};
     h3 {
@@ -20,9 +20,9 @@ export default function About ({about}) {
 
 
     return (
-        <StyledIntro className='about'>   
+        <StyledAbout className='about'>   
             <h3>About the Photo:</h3>         
             <p className='aboutSection'>{ about }</p>
-        </StyledIntro>
+        </StyledAbout>
     )
 }

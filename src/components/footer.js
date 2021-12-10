@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 
 
-const StyledIntro = styled.div`
+const StyledFooter = styled.div`
     color: ${props => props.theme.accentColor};
 `
 
@@ -11,11 +11,11 @@ export default function Footer({copyright}) {
 
 
     return (
-        <StyledIntro className='containerImage'>
+        <StyledFooter className='containerImage'>
             <p>{ copyright }</p>
             {/* <img src='../logo512.png' /> */}
             
-        </StyledIntro>
+        </StyledFooter>
     )
 
 

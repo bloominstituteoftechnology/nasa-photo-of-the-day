@@ -11,14 +11,15 @@ const kf = keyframes`
     }
 `
 
-const StyledIntro = styled.div`
+const StyledImage = styled.div`
     img {
-        border: 10px solid ${props => props.theme.secondaryColor};
+        border: 10px solid ${props => props.theme.darkGrey};
         width: 50%;
         transition: all 0.2s ease-in-out;
         &:hover {
             transition: all 0.2s ease-in-out;
-            border: 15px solid ${props => props.theme.tertiaryColor}
+            border: 10px solid ${props => props.theme.tertiaryColor};
+            transform: scale(1.05);
         }
     }
 
@@ -30,12 +31,12 @@ export default function Image({todaysImage}) {
    
 
     return (
-        <StyledIntro className='containerImage'>
+        <StyledImage className='containerImage'>
 
-            <img src={todaysImage} alt={`NASA's Daily Image Not Working`} />
+            <img src={todaysImage} alt={`NASA's APOD Not Working`} />
                        
 
-        </StyledIntro>
+        </StyledImage>
     )
 
 
