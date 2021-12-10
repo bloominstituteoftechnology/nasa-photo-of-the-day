@@ -2,8 +2,16 @@ import React from "react";
 import styled from 'styled-components'
 
 const StyledContent = styled.div`
-color: dodgerblue;
-img-width: 60%;
+color: purple;
+background-color: black;
+p {
+    color: gold;
+};
+
+img {
+    max-width: 100%;
+    border: 1px solid;
+}
 `
 
 const NasaCard = (props) => {
