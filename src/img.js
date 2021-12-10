@@ -1,6 +1,7 @@
 import React from 'react'
 
 
+//export img
 const Img = (props) =>{
     const { nasaImg } = props
 
