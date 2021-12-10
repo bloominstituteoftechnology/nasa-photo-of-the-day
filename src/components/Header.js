@@ -1,12 +1,18 @@
 import React from "react";
+import styled from "styled-components";
+
+const StyledHeader = styled.div`
+    text-transform: uppercase;
+    margin: 0 5% 0 5%;
+`
 
 const Header = props => {
     const { data } = props;
     return (
-        <div>
-            <h1>🪐 NASA  Astronomy Pic of the Day:</h1>
+        <StyledHeader>
+            <h1>🪐 NASA  Astronomy Photo of the Day:</h1>
             <h2>{data.title}</h2>
-        </div>
+        </StyledHeader>
     )
 }
 
