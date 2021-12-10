@@ -17,12 +17,18 @@ p {
 img {
     max-width: 100%;
     border: 3px solid;
+
+}
+
+img:hover{
+    border-color: yellow;
 }
 
 footer {
     font-size: 2em;
     color: white;
 }
+
 `
 
 const NasaCard = (props) => {
@@ -32,7 +38,7 @@ const NasaCard = (props) => {
             <p>{props.data.date}</p>
             <p>{props.data.title}</p>
             <img src={props.data.url} alt='Nasa photo of the day' />
-            <footer>Every now and then I get a little bit lonely</footer>
+            <footer data-hover= 'And youre never coming round'>Every now and then I get a little bit lonely</footer>
         </StyledContent>
     )
 }
