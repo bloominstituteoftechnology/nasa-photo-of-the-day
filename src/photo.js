@@ -5,7 +5,7 @@ const Photo = props => {
 
     return (
         <div className="photo">
-            <img src='https://apod.nasa.gov/apod/image/2201/M31_HstSubaruGendler_960.jpg'></img>
+            <img src= {photo.url} alt='dailyPhoto'></img>
 '
         </div>
     )
