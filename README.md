@@ -31,9 +31,8 @@ This project was put together using create-react-app (CRA). You will not need to
 - [ ] Clone your OWN version of the repository in your terminal
 - [ ] Download project dependencies by running `npm install`
 - [ ] Start up the app using `npm start`
-- [ ] Create a new branch: `git checkout -b <firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [ ] Push commits: `git push origin <firstName-lastName>`.
+- [ ] Implement the project on the `main` branch, committing changes regularly.
+- [ ] Push commits: `git push origin main`.
 
 ### Task 2: MVP
 
@@ -106,7 +105,7 @@ Do not attempt stretch problems until MVP has been reached and a final commit ha
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge Branch into `main` (student's Repository).
+- [ ] Submit a link to your repository in Canvas.
 
 ----
 
