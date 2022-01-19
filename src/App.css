@@ -1,12 +1,73 @@
 .App {
   text-align: center;
 }
+.container {
+max-width: 100%;
+}
+h1 {
+font-size:100px;
+color:red;
+}
+
+.date-first{
+  display:flex;
+  justify-content: space-between;
+  border:1px solid red;
+  background-color: blue;
+  margin-top:0px;
+}
+
+.date-first h2{
+margin-left: 50px;
+color: white;
+}
+
+.date-first h3{
+  margin-right: 20px;
+  color: white;
+  font-size:24px;
+  }
+  .ptags {
+    /* width:100%; */
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.first-p{
+  color:red;
+  font-size: 1.5;
+   width:150px; 
+  font-family: 'Times New Roman', Times, serif;
+  }
+
+p.second-p{
+  color:red;
+   width:150px; 
+   font-family: 'Times New Roman', Times, serif;
+  
+}
+
+
+.pic-div{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.artis-name {
+      font-size: 30px;
+      font-family: fantasy;
+}
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
+.explanation-data {
+color:red;
+font-family: 'Times New Roman', Times, serif;
+font-size: medium;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
