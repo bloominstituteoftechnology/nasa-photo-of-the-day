@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import "./App.css";
 import Header from "./header";
+import Body from "./body";
 
 function App() {
 const [photoOfTheDay, setPhoto] = useState([])
@@ -25,6 +26,7 @@ useEffect(() => {
   return (
     <div className="App">
      <Header photo={photoOfTheDay} />
+     <Body photo={photoOfTheDay} />
     </div>
   );
 }
