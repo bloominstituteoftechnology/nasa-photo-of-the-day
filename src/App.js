@@ -27,7 +27,7 @@ const StyledApp = styled.div`
   }
 
   p {
-    color: hotpink;
+    color: black;
   }
 
   img {
