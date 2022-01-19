@@ -4,6 +4,7 @@ import "./App.css";
 import Header from "./header";
 import Photo from "./photo";
 import Body from "./body";
+import Footer from "./footer";
 
 function App() {
 const [photoOfTheDay, setPhoto] = useState([])
@@ -29,6 +30,7 @@ useEffect(() => {
      <Header photo={photoOfTheDay} />
      <Photo photo={photoOfTheDay} />
      <Body photo={photoOfTheDay} />
+     <Footer photo={photoOfTheDay}/>
     </div>
   );
 }
