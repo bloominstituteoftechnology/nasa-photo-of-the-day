@@ -12,6 +12,10 @@ padding: 20px;
 border-radius: 10px;
 background-color: ${props => props.theme.primaryColor};
 border: 20px solid ${props => props.theme.secondaryColor};
+
+img{
+    border-radius: 50%;
+}
 `
 
 const Photo = props => {
@@ -19,8 +23,8 @@ const Photo = props => {
 
     return (
         <StyledPhoto className="photo">
-            <img src= {photo.url} alt='dailyPhoto'></img>
-'
+            <img src= {photo.url} alt='dailyPhoto'/>
+
         </StyledPhoto>
     )
 }
