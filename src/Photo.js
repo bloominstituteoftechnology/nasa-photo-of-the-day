@@ -10,6 +10,7 @@ const StyledPhoto = styled.div`
  background-color: ${pr => pr.theme.primaryColor};
  color: ${pr => pr.theme.white};
  font-size: 2rem;
+ margin: 6%;
 `
 
 
