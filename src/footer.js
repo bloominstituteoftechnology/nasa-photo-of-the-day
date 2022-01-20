@@ -1,12 +1,19 @@
 import React from "react";
+import styled from 'styled-components';
+
+const StyledFooter = styled.div`
+display: flex;
+justify-content: space-evenly;
+background-color: gray;
+`
 
 const Footer = props => {
     const { photo } = props
 
     return (
-    <div className="footer">
+    <StyledFooter className="footer">
         <h6>Copyright: {photo.copyright}</h6>
-    </div>
+    </StyledFooter>
     )
 }
 
