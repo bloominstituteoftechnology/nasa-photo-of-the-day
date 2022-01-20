@@ -4,7 +4,11 @@ import styled from 'styled-components';
 const StyledBody = styled.div`
 display: flex;
 justify-content: space-evenly;
-background-color: gray;
+background-color: ${props => props.theme.primaryColor};
+
+h2{
+color: ${props => props.theme.white};
+}
 `
 
 const Body = props => {

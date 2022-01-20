@@ -4,7 +4,16 @@ import styled from 'styled-components';
 const StyledHeader = styled.div`
 display: flex;
 justify-content: space-evenly;
-background-color: gray;
+background-color: ${props => props.theme.primaryColor};
+
+
+h1{
+    color: ${props => props.theme.secondaryColor};    
+}
+
+h3{
+    color: ${props => props.theme.white};
+}
 `
 
 
@@ -21,7 +30,3 @@ const Header = props => {
 
 export default Header;
 
-
-// display: flex;
-// justify-content: space-evenly;
-// background-color: gray;

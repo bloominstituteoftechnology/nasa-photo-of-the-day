@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const StyledFooter = styled.div`
 display: flex;
 justify-content: space-evenly;
-background-color: gray;
+background-color: ${props => props.theme.tertiaryColor};
 `
 
 const Footer = props => {
