@@ -22,7 +22,7 @@ const StyledApp = styled.div`
   h1 {
     width: 80;
     justify-content: center;
-    background-color: pink;
+    background-color: orange;
     border: 2px solid crimson;
   }
 
