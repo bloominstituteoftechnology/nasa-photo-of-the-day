@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import styled, { keyframes } from 'styled-components';
 import axios from "axios";
 import "./App.css";
-import Header from "./components/Header";
-import Card from "./components/Card";
+import Header from "./APOD/Header";
+import Card from "./APOD/Card";
 
 
 const kf = keyframes`
