@@ -1,35 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { BASE_URL, API_KEY } from "./constants";
 import "./App.css";
 
+import Title from "./components/Title";
+import NasaImg from "./components/Nasa_img";
+import Copyright from "./components/Copyright";
+import Explanation from "./components/Explanation";
+
 function App() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`${BASE_URL}?api_key=${API_KEY}`)
+      .then((res) => {
+        setData(res.data);
+      })
+      .catch((err) => console.error(err));
+  }, []);
+
   return (
     <div className="App">
-      <header>
-        {/* This does NOT need a componet as it will not change */}
-        {/* this is where the entire page title will go */}
-      </header>
-      <h1>
-        {/* this needs a componet */}
-        {/* this is where todays photo name will go */}
-      </h1>
-      <p>
-        {/* this needs a componet */}
-        {/* this is where the date will go */}
-      </p>
-      <img>
-      {/* this needs a componet */}
-      {/* this is where todays photo will go */}
-      </img>
-      <p>
-        {/* this needs a componet */}
-        {/* this is where todays photos copyright will go */}
-        </p>
-      <p>
-        {/* this needs a componet */}
-        {/* this is where todays photo explanation will go */}
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun{" "}
-      </p>
+      <Title title={data.title} date={data.date} />
+      <NasaImg photo={data.url} />
+      <Copyright copyright={data.copyright}/>
+       <Explanation explanation={data.explanation} />
     </div>
   );
 }
