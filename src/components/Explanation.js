@@ -1,11 +1,7 @@
 import React from "react";
 
 const Explanation = (props) => {
-  return (
-    <div>
-      <p>{props.explanation}</p>
-    </div>
-  );
+  return <p>{props.explanation}</p>;
 };
 
 export default Explanation;
