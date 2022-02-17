@@ -35,7 +35,7 @@ Do not attempt stretch problems until MVP has been reached and a final commit ha
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge Branch into `main` (student's Repository).
+- [ ] Submit a link to your github repo in canvas.
 
 -----
 
