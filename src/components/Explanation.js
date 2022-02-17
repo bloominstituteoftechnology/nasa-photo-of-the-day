@@ -1,6 +1,40 @@
 import React,{useState,useEffect} from 'react';
 import axios from 'axios';
 import {BASE_URL, API_KEY} from '../constants'
+import style,{keyframes} from 'styled-components';
+
+
+const PStyling = style.p`
+background-color:${(props)=>props.theme.primaryColor};
+font-size:1.5rem;
+font-variant:normal;
+color:${pr=>pr.theme.backgroundColor};
+`;
+const TitleStyle = style.div`
+    color:${pr=>pr.theme.secondaryColor};
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 2rem;
+    font-variant:small-caps;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-content:center;
+    margin:0px;
+    `;
+
+const ButtonStyle = style.button`
+    width:20%;
+    display:flex;
+    flex-direction:center;
+    align-content:center;
+    justify-content:center;
+    margin:0px;
+    border-radius: 20px;
+    background-color:${(props)=>props.theme.primaryColor};
+
+`;
 
 export default function Explanation(props){
     const{close,explanationInfo,show} = props;
@@ -18,19 +52,19 @@ export default function Explanation(props){
 
 
     return(
-        <div>
+        <TitleStyle>
             <h2> Explanation :</h2>
             {
             explanationInfo && 
-                <p>{explanation}</p>
+                <PStyling>{explanation}</PStyling>
             }
             { explanationInfo&&
-                <button onClick ={close}>-hide-</button>
+                <ButtonStyle onClick ={close}>hide</ButtonStyle>
             }
             { !explanationInfo&&
-                <button onClick ={show}>+show+</button>
+                <ButtonStyle onClick ={show}>show</ButtonStyle>
 
             }
-        </div>
+        </TitleStyle>
     )
 }

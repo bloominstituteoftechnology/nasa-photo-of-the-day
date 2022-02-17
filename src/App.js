@@ -7,6 +7,11 @@ import {BASE_URL,API_KEY} from './constants';
 import Explanation from "./components/Explanation";
 import Title from "./components/Title";
 import Content from "./components/Content";
+import style,{keyframes} from 'styled-components';
+
+const PageStyle = style.div`
+  background-color:${pr=>pr.theme.backgroundColor};
+`;
 
 function App() {
   const[photos,setPhotos] = useState([]);
@@ -34,12 +39,12 @@ function App() {
 
 
   return (
-    <div className="App">
+    <PageStyle className="App">
       <Title photos ={photos}/>
       <Content photos={photos}/>
       <Explanation close ={closeExplanation} show = {showExplanation} explanationInfo = {explanationInfo}/>
       
-    </div>
+    </PageStyle>
   );
 }
 
