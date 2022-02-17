@@ -1,22 +1,43 @@
 import React from "react";
+import styled, { keyframes } from "styled-components"
 
-const dummyData = {
-    copyright: "Hawk Wolinski",
-    date: "2022-02-16",
-    explanation: "What's that on the Sun? Although it may look like a flowing version of the Eiffel Tower, it is a solar prominence that is actually much bigger -- about the height of Jupiter. The huge prominence emerged about ten days ago, hovered over the Sun's surface for about two days, and then erupted -- throwing a coronal mass ejection (CME) into the Solar System. The featured video, captured from the astrophotographer's backyard in Hendersonville, Tennessee, USA, shows an hour time-lapse played both forwards and backwards. That CME did not impact the Earth, but our Sun had unleashed  other recent CMEs that not only triggered Earthly auroras, but puffed out the Earth's atmosphere enough to cause just-launched Starlink satellites to fall back. Activity on the Sun, including sunspots, prominences, CMEs and flares, continues to increase as the Sun evolves away from a deep minimum in its 11-year magnetic cycle.   Birthday Surprise: What picture did APOD feature on your birthday? (post 1995)",
-    service_version: "v1",
-    title: "Eiffel Tower Prominence on the Sun",
-    url: "https://www.youtube.com/embed/liapnqj9GDc?rel=0"
-  }
+const kf = keyframes `
+100% {
+    opacity:1;
+    transform: scale(1) rotateZ(0);
+}
+`
+//  Next two lines were within StyledMediaDiv, but wouldn't change anything.
+//  color: ${pr => pr.theme.primaryColor};
+//     background-color: ${props => props.theme.white};
+const StyledMediaDiv = styled.div`
+
+
+
+img {
+    opacity: 0;
+    max-width: 80%;
+    height: auto;
+    transform: scale(0) rotate(360deg);
+    animation: ${kf} 1s ease-in-out forwards;
+}
+
+`
+
 
 const NasaVideo = (props) => {
     return (
-        <div className="Nasa-video-wrapper">
-            <h3>{props.video.title}</h3>
+        <StyledMediaDiv className="apod-wrapper">
+            <h1>{props.video.title}</h1>
             <p>{props.video.date}</p>
-            <iframe width='853' heigh='480' src={props.video.url}/>
+            <div className="Nasa-media">
+                {props.video.media_type === "video" ? 
+                ( <iframe title="apod-video" width="853" height="480" src={props.video.url}/>
+                ) : ( <img src={props.video.url} alt='Nasa selection of the day'/>
+                )}
+            </div>
             <p>{props.video.explanation}</p>
-        </div>
+        </StyledMediaDiv>
     )
 }
 
