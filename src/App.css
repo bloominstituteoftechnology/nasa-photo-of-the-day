@@ -144,39 +144,9 @@ section {
   width: 90%;
   margin: 0 auto;
 }
-/* for background images */
+
 body{
-    background-color: black;
-    color: aliceblue;
-}
-
-.App {
+  background-color: black;
+  color: aliceblue;
   text-align: center;
-}
-
-.photoTitle {
-  display: flex;
-  justify-content: space-around;
-  font-size: 3rem;
-  padding: 3%;
-  background-color: rgba(255, 255, 255, 0.856);
-  color: black;
-  /* border-radius: 20px; */
-}
-
-.nasaview{
-  margin-bottom: 2%;
-  width: 90%;
-  border-radius: 10px;
-}
-
-.copy{
-  font-size: 1rem;
-  margin-top: 2%;
-  margin-bottom: .5%;
-}
-
-.info{
-  margin: 3%;
-  text-align: justify;
 }
