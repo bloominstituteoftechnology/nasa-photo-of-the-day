@@ -2,7 +2,7 @@ import React from "react";
 
 const Title = (props) => {
   return (
-    <div>
+    <div className="photoTitle">
       <h1>{props.title}</h1>
       <p>{props.date}</p>
     </div>

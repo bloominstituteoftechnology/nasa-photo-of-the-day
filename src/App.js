@@ -24,12 +24,12 @@ function App() {
   return (
     <div className="App">
       <Title title={data.title} date={data.date} />
+      <Copyright copyright={data.copyright} />
       {data.media_type === "video" ? (
         <NasaVid video={data.url} />
       ) : (
         <NasaImg photo={data.url} />
       )}
-      <Copyright copyright={data.copyright} />
       <Explanation explanation={data.explanation} />
     </div>
   );
