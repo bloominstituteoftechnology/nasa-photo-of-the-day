@@ -5,9 +5,9 @@ import "./App.css";
 
 import Title from "./components/Title";
 import NasaImg from "./components/Nasa_img";
+import NasaVid from "./components/Nasa_vid";
 import Copyright from "./components/Copyright";
 import Explanation from "./components/Explanation";
-import NasaVid from "./components/Nasa_vid";
 
 function App() {
   const [data, setData] = useState([]);
@@ -24,7 +24,11 @@ function App() {
   return (
     <div className="App">
       <Title title={data.title} date={data.date} />
-      <NasaVid photo={data.url} />
+      {data.media_type === "video" ? (
+        <NasaVid video={data.url} />
+      ) : (
+        <NasaImg photo={data.url} />
+      )}
       <Copyright copyright={data.copyright} />
       <Explanation explanation={data.explanation} />
     </div>
