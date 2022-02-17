@@ -24,21 +24,10 @@
 }
 
 .half-width{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 50vw;
-  height: 500px;
+
 }
 
-.date-selector{
-  margin-top: 4%;
-}
 
-.info-left{
-  
-}
 .info-right{
 
   margin: 0 2% 0 0;

@@ -1,10 +1,17 @@
 import React from "react";
+import SC from "styled-components";
+
+const HalfWidth = SC.div`
+padding:1%;
+width: 50vw;
+height: 500px;
+`
 
 export default function PodPictue(props){
     console.log(props.media_type)
     return(
-        <div className={props.cName}>
-            { props.media_type === 'video' &&
+        <HalfWidth>
+            { props.media_type === 'video' ?
             <iframe
             width="100%"
             height="100%"
@@ -14,13 +21,10 @@ export default function PodPictue(props){
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             title="Embedded youtube"
-          />
-            }
-            {
-                props.media_type === 'image' && 
-                <img height="100%" alt="could not load img" src={props.media_src}></img>
+          />:
+          <img height="100%" alt="could not load img" src={props.media_src}></img>
             }
             
-        </div>
+        </HalfWidth>
     )
 }

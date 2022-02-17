@@ -5,11 +5,25 @@ import PodData from "./components/PodData.js"
 import PodPicture from './components/PodPicture.js'
 import "./App.css";
 import DateSelect from "./components/DateSelect";
-const possibleTags = ['concept_tags','start_date','end_date','date']
+import SC from "styled-components";
+
+const DarkTheme = SC.div`
+background-color:${props=>props.theme.background_color};
+height:100vh;
+overflow: hidden;
+color:${props=>props.theme.text_color};
+`
+
 const formatDate = (date) => `${date.getFullYear()}-${("0" + (date.getMonth()+1)).slice(-2)}-${("0" + (date.getDate())).slice(-2)}`
+
+
+const MainTitle = SC.h1`
+  font-size:${props=>props.theme.main_title_size};
+`
+
 function App() {
   const [currentDate,setCurrentDate] = useState(formatDate(new Date())); 
- const [queryParams,setQueryParams] = useState('&concept_tags=true'); 
+//  const [queryParams,setQueryParams] = useState('&concept_tags=true'); 
  const [nasaData,setNasaData] = useState(null); 
  const [loading,setIsLoading] = useState(true); 
  const  safeSetCurrentDate = (val)=> {
@@ -18,20 +32,20 @@ function App() {
     setCurrentDate(formatDate(val)); 
   } 
   useEffect(()=>{
-    axios.get(`${API.URL}?api_key=${API.KEY}${queryParams}${currentDate ? `&date=${currentDate}` :''}`).then((data)=>{
+    axios.get(`${API.URL}?api_key=${API.KEY}${currentDate ? `&date=${currentDate}` :''}`).then((data)=>{
       setNasaData(data.data); 
       setIsLoading(false); 
     }).catch(err=>console.log(err))
-  },[queryParams, currentDate])
+  },[currentDate])
 
   return (
-    <div className="App">
-      <h1> NASA: Picture of the Day </h1>
+    <DarkTheme className="App">
+      <MainTitle> NASA: Picture of the Day </MainTitle>
       {loading && <h2>LOADING NASA'S PICTURE OF THE DAY!</h2>}
       {nasaData && 
       <div className="container">
-        <PodPicture cName="half-width" media_type={nasaData.media_type} media_src={nasaData.url} /> 
-        <PodData cName={'half-width'} title={nasaData.title} description={nasaData.explanation} date={nasaData.date} copyright={nasaData.copyright} tags={nasaData.concepts} /> 
+        <PodPicture media_type={nasaData.media_type} media_src={nasaData.url} /> 
+        <PodData title={nasaData.title} description={nasaData.explanation} date={nasaData.date} copyright={nasaData.copyright} tags={nasaData.concepts} /> 
       </div>
       }
       {
@@ -40,7 +54,7 @@ function App() {
       </div> 
       }
     
-    </div>
+    </DarkTheme>
   );
 }
 
