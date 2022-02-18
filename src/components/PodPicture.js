@@ -8,7 +8,6 @@ height: 500px;
 `
 
 export default function PodPictue(props){
-    console.log(props.media_type)
     return(
         <HalfWidth>
             { props.media_type === 'video' ?

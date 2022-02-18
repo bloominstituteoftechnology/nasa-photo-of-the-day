@@ -1,4 +1,4 @@
-import React, {useState} from "react"; 
+import React from "react"; 
 import SC from "styled-components";
 const HalfWidth = SC.div`
 display: flex;
@@ -15,8 +15,6 @@ color:${props=>props.theme.title_color};
 font-size:${props=>props.theme.title_size};
 `
 
-const InfoRight = SC.div``
-const InfoLeft  = SC.div``
 const Copyright = SC.p`
 color:${props=>props.theme.title_color};
 `
@@ -25,16 +23,20 @@ white-space: nowrap;
 `
 const Description = SC.p`
 font-size:${props=>props.theme.content_text_size};
+padding: 2%;
 `
+const InfoRight = SC.div``
+
+const InfoLeft  = SC.div``
+
 //<div className={props.cName}>
 export default function PodData(props){
     return(
         <HalfWidth>
-            {/*centered title, bottom left: description, buttom right: -> top centered date, bottom list of tags*/}
             <Title>{props.title}</Title>
-            <div className="LR">
+            <div>
                 <InfoLeft>
-                    <Description className="description">{props.description}</Description>
+                    <Description>{props.description}</Description>
                 </InfoLeft>
                 <InfoRight>
                     <Date>Date: {props.date}</Date>

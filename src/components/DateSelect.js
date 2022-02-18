@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import SC from "styled-components";
 
 const DateSelector = SC.div`

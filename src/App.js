@@ -8,25 +8,32 @@ import DateSelect from "./components/DateSelect";
 import SC from "styled-components";
 
 const DarkTheme = SC.div`
+text-align:center;
 background-color:${props=>props.theme.background_color};
 height:100vh;
 overflow: hidden;
 color:${props=>props.theme.text_color};
 `
 
-const formatDate = (date) => `${date.getFullYear()}-${("0" + (date.getMonth()+1)).slice(-2)}-${("0" + (date.getDate())).slice(-2)}`
-
-
 const MainTitle = SC.h1`
   font-size:${props=>props.theme.main_title_size};
 `
 
+const Container = SC.div`
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 5%;
+`
+
+const formatDate = (date) => `${date.getFullYear()}-${("0" + (date.getMonth()+1)).slice(-2)}-${("0" + (date.getDate())).slice(-2)}`
+
+
 function App() {
   const [currentDate,setCurrentDate] = useState(formatDate(new Date())); 
-//  const [queryParams,setQueryParams] = useState('&concept_tags=true'); 
- const [nasaData,setNasaData] = useState(null); 
- const [loading,setIsLoading] = useState(true); 
- const  safeSetCurrentDate = (val)=> {
+  const [nasaData,setNasaData] = useState(null); 
+  const [loading,setIsLoading] = useState(true); 
+  const  safeSetCurrentDate = (val)=> {
     val = new Date(val); 
     if(val.getDate() > new Date().getDate()) return; 
     setCurrentDate(formatDate(val)); 
@@ -39,14 +46,14 @@ function App() {
   },[currentDate])
 
   return (
-    <DarkTheme className="App">
+    <DarkTheme>
       <MainTitle> NASA: Picture of the Day </MainTitle>
       {loading && <h2>LOADING NASA'S PICTURE OF THE DAY!</h2>}
       {nasaData && 
-      <div className="container">
+      <Container>
         <PodPicture media_type={nasaData.media_type} media_src={nasaData.url} /> 
         <PodData title={nasaData.title} description={nasaData.explanation} date={nasaData.date} copyright={nasaData.copyright} tags={nasaData.concepts} /> 
-      </div>
+      </Container>
       }
       {
       <div>
