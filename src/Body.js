@@ -2,9 +2,13 @@ import React, { useState } from "react";
 import axios from 'axios'
 import Text from './Text'
 import Image from './Image'
+import styled from 'styled-components'
 
 
-const BodyBuild = () => {
+const StyledDate = styled.div`
+background-color: lightgray;
+`
+const BodyBuild = (props) => {
     const [date, setDate] = useState()
 
 
@@ -15,11 +19,11 @@ const BodyBuild = () => {
             .catch (err => console.error(err))
 
 return (
-    <div className="container">
+    <StyledDate className="container">
         <div> Date: {date}</div>
       {<Image />}
       {<Text/> }
-    </div>
+    </StyledDate>
 )
 
 }
