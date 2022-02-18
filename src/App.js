@@ -12,6 +12,7 @@ import NasaPhoto from './components/NasaPhoto';
 // }
 
 function App() {
+  
   const [data,setData] = useState();
 
   useEffect(() => {
