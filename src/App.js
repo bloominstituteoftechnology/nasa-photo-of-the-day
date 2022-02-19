@@ -2,7 +2,12 @@ import React, {useState, useEffect} from "react";
 import axios from 'axios'
 import "./App.css";
 import NasaPhoto from "./NasaPhoto";
+import Theme from './Theme';
+// import styled, {keyframes} from 'styled-components'
 
+const TitleStyle = Theme.div`
+background-color: ${pr => pr.theme.primaryColor}
+`
 
 
 function App() {
@@ -16,9 +21,9 @@ function App() {
     .catch(err => console.error(err))
   }, [])
   return (
-    <div className="App">
+    <TitleStyle className="App">
       {data && <NasaPhoto photo={data} />}
-    </div>
+    </TitleStyle>
   );
 }
 
