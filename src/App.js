@@ -1,23 +1,30 @@
-import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom";
-import axios from "axios";
-import "./App.css";
+import React from "react";
+import Photo from "./components/Photo";
+import styled from "styled-components";
+
+const StyledApp = styled.div`
+  text-align: center;
+  background: rgb(169, 50, 38);
+  background: linear-gradient(
+    90deg,
+    rgba(244, 208, 63) 5%,
+    rgba(255, 87, 51) 30%,
+    rgba(231, 76, 60) 50%,
+    rgba(202, 111, 30) 70%,
+    rgba(169, 50, 38) 95%
+  );
+`;
+const StyledH1 = styled.h1`
+  color: white;
+  padding-top: 20px;
+`;
 
 function App() {
-  const [nasaPic, setNasaPic] = useState("");
-  useEffect(() => {
-    axios
-      .get(
-        "`https://api.nasa.gov/planetary/apod?api_key=2IHlxCsWWLtexHqizaiDCbZeuFMy929Fb9XqdxOx&date"
-      )
-      .then((res) => setNasaPic(res.data.message));
-  }, []);
-
   return (
-    <div className="App">
-      <h1>Nasa Photo of the Day !</h1>
-      <img src={nasaPic} alt=" a random pic" />
-    </div>
+    <StyledApp>
+      <StyledH1>NASA Photo of the Day!</StyledH1>
+      <Photo />
+    </StyledApp>
   );
 }
 
