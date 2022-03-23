@@ -5,7 +5,7 @@ import "./App.css";
 function App() {
   const [spaceData, setSpaceData] = useState([]);
   useEffect(() => {
-    axios.get('https://api.nasa.gov/planetary/apod?api_key=hm1ZzTejYicWaa4IGPQovdxqa9tuz4OKHU9o4kO0')
+    axios.get(`https://api.nasa.gov/planetary/apod?api_key=ZagyIDXasA0tIVvA18qfaacgivxsjIulC7q1QtTf`)
     .then (res => {
       setSpaceData(res.data);
     })
@@ -13,14 +13,15 @@ function App() {
 
   return (
     <div className="App">
-      <h1>
-        I'm escaping to the one place that hasn't been corrupted by capitalism......
-        S P A C E!</h1>
+      <div className="App-header">
+      <h1>The NASA Astronomy Photo Of The Day</h1>
+        </div>
         <h1>{spaceData.title}</h1>
         <h4>{spaceData.explanation}</h4>
-        <img src={spaceData.hdurl} width={200} height={200} alt="the bubble nebula"/>
-      
-      
+        <img className="App-picture" src={spaceData.hdurl} alt="the bubble nebula"/>
+        <div>
+          <p>Made courtesy of the NASA APOD API, link to it can be found <a href = "https://api.nasa.gov/#apod" target="_blank" rel='noreferrer'>here.</a></p>
+        </div>
     </div>
   );
 }
