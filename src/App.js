@@ -1,15 +1,22 @@
-import React from "react";
+import axios from "axios";
+import React, {useState, useEffect} from "react";
+import { BASE_URL, API_KEY } from "./index";
+import Title from "./Title";
+import Details from "./Details";
+import Photo from "./Photo";
 import "./App.css";
 
 function App() {
+  
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+      <h1>Nasa Photo of the Day</h1>
+      <Title />
+      <Photo />
+      <Details />
     </div>
   );
 }
+
 
 export default App;
