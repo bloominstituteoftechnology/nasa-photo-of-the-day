@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./photo.css";
-
+import Details from './details';
 
 const Photo = props => {
+  const [isOpen, setIsOpen] = useState(false)
   return (
-      <div>
+    <div>
+       <div>
         {/* {props.info.explanation} */}
-        <img className="images" src={props.info.hdurl} alt="Astronomy Pic" />
-        <button onClick={() => props.openDetails(props.info.date)}>More Info</button>
+        <img className="images" src={props.photoInfo.hdurl} alt="Astronomy Pic" />
+        <button onClick={() => setIsOpen(!isOpen)}>Toggle Info</button>
       </div>
+      <div>
+        { isOpen && <Details photoDate={props.currentPhotoDate} photos={props.photoInfo} />}
+      </div>
+    </div>  
 )
 }
 

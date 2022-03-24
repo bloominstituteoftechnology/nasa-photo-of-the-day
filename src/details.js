@@ -1,41 +1,34 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios'
+import styled, { keyframes } from 'styled-components';
 
+const kf = keyframes`
+  100% {
+    opacity: 1;
+    transform: scale(1) rotateZ(0);
+  }
+`
+
+const StyledDetails = styled.div`
+  opacity: 0;
+  transform: scale(2) rotateZ(180deg);
+  animation: ${kf} 0.5s ease-in-out forwards;
+  background-color: orange;
+  p {
+    color: ${props => props.theme.tertiaryColor};
+  }
+  h2 {
+    color: ${props => props.theme.primaryColor};
+  }
+`
 
 const Details = props => {
-
-  // const [details, setDetails] = useState(null)
-
-  // useEffect(() => {
-  //   axios.get(`https://api.nasa.gov/planetary/apod?count=3&api_key=o5nP3CqAEStW8O13S9a8TdN9jWmNaaQFhiks7Wbi`)
-  //     .then(res => {
-  //       console.log(res);
-  //       console.log("Details");
-  //       setDetails(res.data);
-  //     })
-  //     .catch(err => console.error(err))
-  // }, [props.photoDate])
-
-
-
   return (
-      <div>
-        <h2>Details of Photo taken {props.photoDate}:</h2>
-        {/* <h2>Details of Photo taken {props}:</h2> */}
-        {props.photos.map(photo => {
-          if (photo.date === props.photoDate) {
-            console.log("photo", photo);
-            console.log("photo explanation", photo.explanation);
-            return <p key={photo.date}>{photo.explanation}</p>
-          }
-
-        })}
-      {
-        <>
-        </>
-      }
-        {/* <button onClick={props.closeDetails()}>Close</button> */}
-      </div>
+      <StyledDetails>
+        <h2>{props.photos.title}</h2>
+        <h3>Date: {props.photos.date}</h3>
+        <h4>Explanation: {props.photos.explanation}</h4>
+      </StyledDetails>
   )
 }
 
