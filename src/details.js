@@ -21,12 +21,17 @@ const Details = props => {
   return (
       <div>
         <h2>Details of Photo taken {props.photoDate}:</h2>
-      {
-        props.photos &&
-        <>
-          <p></p>
-          <p>HIIIII</p>
+        {/* <h2>Details of Photo taken {props}:</h2> */}
+        {props.photos.map(photo => {
+          if (photo.date === props.photoDate) {
+            console.log("photo", photo);
+            console.log("photo explanation", photo.explanation);
+            return <p key={photo.date}>{photo.explanation}</p>
+          }
 
+        })}
+      {
+        <>
         </>
       }
         {/* <button onClick={props.closeDetails()}>Close</button> */}
