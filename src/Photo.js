@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { BASE_URL, API_KEY } from "./index";
 import axios from "axios";
-import App from "./App";
+
 
 export default function Photo() {
     const [photo, setPhoto] = useState(null);
@@ -15,5 +15,5 @@ export default function Photo() {
             console.error(err);
         })
     }, [])
-    return <img src={photo} />
+    return <img src={photo} alt='' />
 }
