@@ -1,6 +1,7 @@
 import React, {useState,useEffect} from "react";
 import "./App.css";
 import axios from 'axios';
+import {API_KEY} from './api/keys';
 
 
 import NasaCard from './Components/NasaCard';
@@ -10,7 +11,7 @@ function App() {
   const [nasaData,setNasaData] = useState(null); //initialize to null
 
   useEffect(() => {
-    axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
+    axios.get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`)
     .then(res => {
     // console.log(res);
     setNasaData(res.data);
