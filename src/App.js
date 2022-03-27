@@ -5,12 +5,6 @@ import axios from 'axios';
 
 import NasaCard from './Components/NasaCard';
 
-//WSuGWUvpsGgHCWOhxmXoCxGrGufqm6zVfAfSZeVx
-//key
-//https://api.nasa.gov/planetary/apod
-//URL
-//I swear this better still work!
-
 function App() {
 
   const [nasaData,setNasaData] = useState(null); //initialize to null
