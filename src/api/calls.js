@@ -15,11 +15,12 @@ export const getAll = () => {
 export const getToday = () => {
     return axios.get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`)
         .then(res=>{
-
+            //instead of returning this call itself, return res
         }).catch(err=>{
-            console.error(err);
+            //...or return error
         })
 }
+//then in App.js, setNasaData(getToday()) --> SINCE we are setting it to what is returned by that function ( the RESULT) in the useEffect call there!
 
 //get RANDOM
 export const getRandom = () => {
