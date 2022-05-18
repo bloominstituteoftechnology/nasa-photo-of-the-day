@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
+import NavBar from "./Components/navBar";
 import "./App.css";
 
 function App() {
+  const [typeOfImg, setTypeOfImg] = useState('auto');
+  
+
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+      <NavBar setTypeOfImg={setTypeOfImg} />
     </div>
   );
 }
