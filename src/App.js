@@ -6,15 +6,17 @@ import "./App.css";
 
 function App() {
   const [typeOfImg, setTypeOfImg] = useState('auto');
-  
-  axios.get(`${BASE_URL}?api_key=${API_KEY}`)
-    .then(res=>{
-      console.log(res);
-    })
-    .catch(
-      console.log('Something went wrong grabbing the API')
-      )
+  const [dataObj, setDataObj] = useState(null);
 
+  useEffect(()=>{
+    axios.get(`${BASE_URL}?api_key=${API_KEY}`)
+    .then(res=>{
+        setDataObj(res.data);
+        console.log(dataObj);
+    })
+    .catch(res=>{console.log(res)})
+  }, [])
+  
   return (
     <div className="App">
       <NavBar setTypeOfImg={setTypeOfImg} />
