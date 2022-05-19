@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import NavBar from "./components/navBar";
+import NavBar from "./components/header";
 import ImageContainer from "./components/imageContainer";
 import axios from "axios";
 import { BASE_URL, API_KEY } from "./constants/index";
@@ -20,7 +20,6 @@ function App() {
     axios.get(`${BASE_URL}?api_key=${API_KEY}&date=${date}`)
     .then(res=>{
       setDataObj(res.data);
-      console.log(dataObj);
     })
     .catch(res=>{'error?'})
   }, [])
@@ -28,7 +27,7 @@ function App() {
   return (
     <div className="App">
       <NavBar setTypeOfImg={setTypeOfImg} />
-      <ImageContainer hdurl={dataObj.hdurl} />
+      <ImageContainer hdurl={dataObj.hdurl} data={dataObj} />
     </div>
   );
 }
