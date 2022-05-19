@@ -1,5 +1,14 @@
 .App {
   text-align: center;
+  margin: 0%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(https://c.pxhere.com/photos/1a/9d/stars_background_blue_photoshop_color_space_sky_dark-610854.jpg!d);
+  min-height: 100vh;
+  max-width: 100vw;
+  padding: 0%;
 }
 
 .App-logo {
