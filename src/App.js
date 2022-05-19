@@ -24,12 +24,14 @@ function App() {
     .catch(res=>{'error?'})
   }, [])
   
+
+
   return (
     <div className="App">
       <NavBar setTypeOfImg={setTypeOfImg} />
       <ImageContainer hdurl={dataObj.hdurl} data={dataObj} />
     </div>
   );
-}
+};
 
 export default App;
