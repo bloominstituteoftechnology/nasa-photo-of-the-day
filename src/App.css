@@ -58,4 +58,19 @@
   margin-top: .5%;
 }
 
+.marsPhoto{
+  width: 80%;
+}
+
+.date{
+  width: 30%;
+  display: block;
+  margin: 0 auto;
+  padding: 1%;
+}
+
+.date{
+  padding: 1%;
+}
+
 

@@ -4,13 +4,13 @@ import "./App.css";
 import Header from './Header'
 import PhotoOfTheDay from './PhotoOfTheDay'
 import Description from './Description'
+import MarsRoverPhotos from './MarsRoverPhotos'
 
 import {API_KEY} from './index'
 
 function App() {
 const [data, setData] = useState([])
 const[desc, setDesc] = useState(null)
-console.log(data)
 
 const openDesc = () => {
   setDesc(true)
@@ -33,10 +33,10 @@ useEffect (() => {
 }, [])   
   return (
     <div className="App">
-        <Header date={data.date} title={data.title}/>
+        <Header date={data.date} title={data.title} />
         <PhotoOfTheDay hdurl={data.hdurl}/>
        <Description explanation={data.explanation}  closeDesc={closeDesc} openDesc={openDesc} desc={desc} />
-        
+        <MarsRoverPhotos/>
     </div>
   );
 }

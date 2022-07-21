@@ -6,6 +6,7 @@ const Header = props => {
         <div className = 'headerItems'>
         <p className='text text1'>Photo Of The Day: {props.title}</p> 
         <p className='text'>Date: {props.date}</p>  
+
         </div>
         </header>
     )
