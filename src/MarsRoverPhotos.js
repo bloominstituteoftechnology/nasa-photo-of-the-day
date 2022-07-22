@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import MarsPhotos from './MarsRoverPhotosChild'
 import axios from 'axios'
 import {API_KEY} from './index'
+import {MarsButtonsContainer, Button} from './css/MarsCSS'
 
 function MarsRoverPhotos(){
 
@@ -38,25 +39,25 @@ function MarsRoverPhotos(){
         }
     }, [img, date])
 
-    console.log(marsData)
     const indexOne = marsData[0]
         
     return(
-         <div className = 'marsContainer'>
-         <h1>Mars Photos</h1>
-         <button className = 'date'onClick ={increaseDate}>Increase Day</button>
-         <button className = 'date' onClick ={decreaseDate}>Decrease Day</button>
+         <div>
+         <MarsButtonsContainer>
+            <h2>Mars Photo<br></br>Selector</h2>
+         <Button onClick ={increaseDate}>Increase Day</Button>
+         <Button onClick ={decreaseDate}>Decrease Day</Button>
          <p> Date: {date === date ? indexOne?.earth_date
          : <p>Too far.  Reverse!</p>} </p>
-         <button className ='page' onClick={nextPage}>Next Page</button>
-         <button className ='page' onClick={prevPage}>Prev Page</button>
+         <Button className ='page' onClick={nextPage}>Next Page</Button>
+         <Button className ='page' onClick={prevPage}>Prev Page</Button>
          <p>Page: {img}</p>
-
+            </MarsButtonsContainer>
          {
           marsData.length > 0 ? marsData.map(e=>
             <MarsPhotos img={e.img_src} key={e.id} camera={e.camera.full_name} />
          )
-         : <p>No pictures taken on this day...</p>
+         : <p>No pictures taken on this day...npm</p>
          }
         </div>
     

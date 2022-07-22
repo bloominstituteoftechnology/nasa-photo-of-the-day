@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
-import "./App.css";
+import "./css/App.css";
+import './css/Description.css'
 import Header from './Header'
 import PhotoOfTheDay from './PhotoOfTheDay'
 import Description from './Description'

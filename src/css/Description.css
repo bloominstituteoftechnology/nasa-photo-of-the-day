@@ -1,0 +1,23 @@
+.button{
+    display: block;
+    padding: 1%;
+    margin: 0 auto;
+    width: 50%;
+    margin-top: 1%;
+  }
+  
+  .button:hover{
+    cursor: pointer;
+  }
+  
+  .description{
+    width: 100%;
+    font-size: 1.3rem;
+  }
+  
+  .descriptionContainer{
+    width: 80%;
+    margin: 0 auto;
+    padding: 2%;
+    margin-top: .5%;
+  }

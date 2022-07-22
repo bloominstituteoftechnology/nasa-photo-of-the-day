@@ -1,13 +1,14 @@
 import react from  'react'
-
+import styled from 'styled-components'
+import {Container, Img} from './css/MarsCSS'
 
 function MarsPhotos(props){
     const {img, camera} = props
     return(
-        <div>
+        <Container>
         <p>Picture taken from: {camera}</p>
-        <img className = 'marsPhoto' src = {img}></img>
-        </div>
+        <Img src = {img}></Img>
+        </Container>
     )
 } 
 
