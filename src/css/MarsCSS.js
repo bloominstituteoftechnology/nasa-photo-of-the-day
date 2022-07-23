@@ -7,28 +7,28 @@ const MarsButtonsContainer = styled.div`
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    border-radius: 50%;
+    border-radius: 200px;
     `
 
-    const Button = styled.button`
+const Button = styled.button`
     display: inline;
     margin: 0 auto;
     width: 50%;
     padding: 1%;
     `
 
-    const Container = styled.div`
-display: inline-block;
-border: 1px solid;
-width: 29%;
-margin: 2%;
-padding-bottom: 2%;
-border-radius: 30px;
-box-shadow: 0 0 10px;
+const Container = styled.div`
+    display: inline-block;
+    border: 1px solid;
+    width: 29%;
+    margin: 2%;
+    padding-bottom: 2%;
+    border-radius: 30px;
+    box-shadow: 0 0 10px;
 `
 
 const Img = styled.img`
-width: 80%;
+    width: 80%;
 `
 
 

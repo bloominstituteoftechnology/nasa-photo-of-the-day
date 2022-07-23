@@ -1,5 +1,4 @@
 import react from  'react'
-import styled from 'styled-components'
 import {Container, Img} from './css/MarsCSS'
 
 function MarsPhotos(props){
