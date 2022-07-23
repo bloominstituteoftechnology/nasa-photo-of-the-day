@@ -4,6 +4,15 @@
     margin: 0 auto;
     width: 50%;
     margin-top: 1%;
+    color: white;
+    border: 1px solid blue;
+    transition: 500ms;
+  }
+
+  .button:hover{
+      color: blue;
+      border: 2px solid white;
+      transform: scale(1.05)
   }
   
   .button:hover{
@@ -12,9 +21,8 @@
   
   .description{
     width: 100%;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: white;
-    font-family: cursive;
   }
   
   .descriptionContainer{
