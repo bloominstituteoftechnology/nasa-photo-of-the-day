@@ -13,6 +13,8 @@
   .description{
     width: 100%;
     font-size: 1.3rem;
+    color: white;
+    font-family: cursive;
   }
   
   .descriptionContainer{
