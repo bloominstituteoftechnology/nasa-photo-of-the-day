@@ -1,0 +1,16 @@
+.homePagePhotoOfDay{
+    width: 100%;
+    border-radius: 200px;
+}
+
+.homePageSections{
+    display: flex;
+    width: 25%;
+}
+
+.homePageContainer{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}

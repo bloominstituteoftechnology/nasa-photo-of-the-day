@@ -54,6 +54,13 @@ margin: 0 auto;
 padding: 1%
 `
 
+const ParaDiv = styled.div`
+color: white;
+width: 50%;
+margin: 0 auto;
+padding: 1%
+`
+
 const Para2 = styled.p`
 color: white;
 width: 50%;
@@ -78,4 +85,4 @@ margin-bottom: 1%;
 
 
 export {MarsButtonsContainer, Button, Container, 
-    Img, MarsH2, Para, MarsRoverCamera, DateInput, Para2}
+    Img, MarsH2, Para, MarsRoverCamera, DateInput, Para2, ParaDiv}

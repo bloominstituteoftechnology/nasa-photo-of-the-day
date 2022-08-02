@@ -18,11 +18,20 @@
     border: none;
     background-color: black;
     color: blue;
-    font-size: 2rem;
+    font-size: 2.5rem;
     transition: 300ms;
+    position: absolute;
+    right: 8%;
+    top: 7.4%;
   }
   
   .dateButton:hover{
     cursor: pointer;
     transform: scale(1.2);
   }
+
+  .img{
+    height: 80vh;
+    width: 60%;
+  }
+

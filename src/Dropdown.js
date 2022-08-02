@@ -4,12 +4,6 @@ const Dropdown = props =>{
 
     const [toggleCSS, setToggleCSS] = useState(false)
 
-    
-    // useEffect(()=>{
-    //     setTimeout(() => setToggleCSS(false), 7000)
-    // },[toggleCSS])
-
-
 return (
     <>
     <div>
