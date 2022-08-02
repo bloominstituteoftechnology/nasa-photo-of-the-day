@@ -1,0 +1,8 @@
+.globalNavBar{
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    margin: 0 auto;
+    margin-left: 28%;
+    padding: .5%;
+}

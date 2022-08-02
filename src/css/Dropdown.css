@@ -1,0 +1,24 @@
+.dateContainer{
+position: absolute;
+right: 7%;
+top: 11%;
+box-shadow: 0 0 3px;
+display: flex;
+flex-direction: column;
+width: 10%;
+background-color: blue ;
+transition-timing-function: ease;
+}
+
+.textAboveDateInput{
+    margin-top: 10%;
+margin-bottom: 10%;
+color: white;
+background-color: blue;
+}
+
+.dateInput{
+background-color: blue;
+border: 2px solid white;
+color: white;
+}

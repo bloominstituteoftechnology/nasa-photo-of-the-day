@@ -1,0 +1,48 @@
+
+.App {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 0 10px 0;
+}
+
+.header{
+  height: 11vh;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.img{
+  margin-top: 2%;
+  max-width: 80%;
+  border-radius: 100px;
+  box-shadow: 0 0 10px 0 white;
+}
+
+*{
+  background-color: black;
+  font-family: cursive;
+  color: white;
+}
+
+/* Move to MARSCSS when you feel like googling how to add keyframes in components- 
+yes its 4:35am laziness kicking in */
+.icn-spinner {
+  animation: spin-animation .7s infinite;
+  display: inline-block;
+}
+
+@keyframes spin-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+
+
+
+

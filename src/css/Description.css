@@ -1,0 +1,33 @@
+.button{
+    display: block;
+    padding: 1%;
+    margin: 0 auto;
+    width: 50%;
+    margin-top: 1%;
+    color: white;
+    border: 1px solid blue;
+    transition: 500ms;
+  }
+
+  .button:hover{
+      color: blue;
+      border: 2px solid white;
+      transform: scale(1.05)
+  }
+  
+  .button:hover{
+    cursor: pointer;
+  }
+  
+  .description{
+    width: 100%;
+    font-size: 1.5rem;
+    color: white;
+  }
+  
+  .descriptionContainer{
+    width: 80%;
+    margin: 0 auto;
+    padding: 2%;
+    margin-top: .5%;
+  }
