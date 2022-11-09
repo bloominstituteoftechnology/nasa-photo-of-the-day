@@ -1,21 +1,37 @@
 import React, {useState,useEffect} from "react";
-import Axios from "axios"
 import Vimeo from '@u-wave/react-vimeo'
+import "./NasaImage.css"
 
-const apod = "https://api.nasa.gov/planetary/apod?api_key=5KK1Puwl9h9XomQH3Bky6mWLTv3CC7mGKDOsTd1n"
+  const NasaImage = (props) => {
+    
+    const [isImg,setIsImg] = useState(false)
+    const [isVideo,setIsVideo] = useState(false)
 
-  const NasaImage = () => {
-    const [apiObj,setApiObj] = useState()
+    const mediaSorter = () => {
+      // API object has a "Media" key, use that to tighten up this sorter
+      // Format code to handle the following: Youtube - GIF's - PNG's
+      if(props.url.slice(props.url.length - 3,props.url.length) == "jpg"){
+        setIsImg(true)
+        setIsVideo(false)
+      }else{
+        setIsImg(false)
+        setIsVideo(true)
+      }
+    }
+    
+    useEffect(()=> {
+      mediaSorter()
+    },[props.url])
 
-    useEffect(() => {
-      Axios.get(apod).then(res => {
-      setApiObj(res.data)
-      console.log("hits the then")
-      })},[])
+    return(
+      <div>
+        {isVideo && <Vimeo video={props.url} autoplay/>}
+        {isVideo && props.copyright && <p>Video Copyright {props.copyright}</p>}
 
-    return <div>
-      <Vimeo video={apiObj} autoplay/>
-    </div>
+        {isImg && <img className="nasa-image" src={props.url}/>}
+        {isImg && props.copyright && <p>Image Copyright {props.copyright}</p>}
+      </div>
+    )
   }
 
   export default NasaImage
