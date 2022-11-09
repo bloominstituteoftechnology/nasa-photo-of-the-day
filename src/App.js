@@ -1,9 +1,8 @@
 import React, {useState,useEffect} from "react";
 import axios from "axios"
 import Photo from "./components/Photo"
+import Header from "./components/Header"
 import "./App.css";
-
-const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 
 function App() {
@@ -17,6 +16,7 @@ function App() {
   }, [])
   return (
     <div className="App">
+      {nasaData && <Header header={nasaData}/>}
       {nasaData && <Photo photo={nasaData} />}
     </div>
   );

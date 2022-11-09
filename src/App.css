@@ -28,15 +28,22 @@
   color: #61dafb;
 }
 
+p, h1, h2, h3 {
+  font-family: 'Inconsolata', monospace;
+}
+
 img {
   max-width: 40%;
   object-fit: cover;
+  border: ridge 0.2rem;
 }
 
 .nasa-data-wrapper {
+  margin: 2%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: groove 0.2rem #a9a9ab;
 }
 
 .nasa-data-wrapper p{
