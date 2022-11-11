@@ -3,13 +3,18 @@ import styled from 'styled-components'
 
 
 const StyledWrapper = styled.div`
-    background-color: ${pr => pr.theme.wildcard};
+    background-color: ${pr => pr.theme.primary};
     margin: 2%;
     align-items: center;
     border: groove 0.2rem #a9a9ab;
 
+    h2, h3 {
+        background-color: ${pr => pr.theme.primary};
+    }
+
     h2 {
         font-style: bold;
+        font-family: 'Anybody', cursive;
     }
 
     h3 {
@@ -26,14 +31,17 @@ const StyledWrapper = styled.div`
         margin: 3%;
         display: flex;
         flex-direction: row;
+        background-color: ${pr => pr.theme.primary};
     }
 
     .content p {
         padding: 2%;
         width: 50%;
         margin: 5%;
-        border: thick double;
-        background-color: ${pr=> pr.theme.primaryColor};
+        border: thick double black;
+        background-color: ${pr=> pr.theme.secondary};
+        color: white;
+        font-family: 'Exo 2', sans-serif;
     }
 `;
 
