@@ -9,6 +9,7 @@ const TextBackground = styled.div`
     border-radius: 25px;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    width: 50%;
 `
 
 export default TextBackground

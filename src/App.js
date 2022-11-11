@@ -17,6 +17,7 @@ function App() {
   useEffect(()=> {
     Axios.get(apodUrl).then(res => {
       setApodObj(res.data)
+      console.log(res.data)
     })
   },[apodUrl])
 
