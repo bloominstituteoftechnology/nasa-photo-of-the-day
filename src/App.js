@@ -1,15 +1,39 @@
-import React from "react";
+import React, { useState} from "react";
 import "./App.css";
+import { useEffect } from "react";
+import axios from "axios";
+import NasaPhoto from './Compoents/NasaPhoto.js';
+
+// const dummyData = {
+//   date: "2021-12-23",
+//   explantion: "are you",
+//   hdurl: "https://apod.nasa.gov/apod/image/2112/20211221Tezel.jpg",
+//   title: "Three Plants and a Comet"
+// }
 
 function App() {
+  const [data, setData] = useState();
+  useEffect(() =>{
+axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY ')
+.then( res => {
+console.log(res)
+setData(res.data);
+})
+.catch(err => 
+  console.log(err)
+)
+  }, [])
+
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+      {data && <NasaPhoto photo={data} /> }
+
     </div>
   );
 }
 
 export default App;
+
+
+// https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY 
+/// date
