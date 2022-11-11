@@ -5,6 +5,7 @@ import Header from "./components/Header"
 import "./App.css";
 
 
+
 function App() {
   const [nasaData, setNasaData] = useState()
   useEffect(() => {
@@ -16,8 +17,8 @@ function App() {
   }, [])
   return (
     <div className="App">
-      {nasaData && <Header header={nasaData}/>}
-      {nasaData && <Photo photo={nasaData} />}
+        {nasaData && <Header header={nasaData}/>}
+        {nasaData && <Photo photo={nasaData} />}
     </div>
   );
 }
