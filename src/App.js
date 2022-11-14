@@ -3,6 +3,8 @@ import "./App.css";
 import { useEffect } from "react";
 import axios from "axios";
 import NasaPhoto from './Compoents/NasaPhoto.js';
+import StyledDiv from "./Compoents/styling";
+import styledP from "./Compoents/stylep";
 
 // const dummyData = {
 //   date: "2021-12-23",
@@ -10,6 +12,7 @@ import NasaPhoto from './Compoents/NasaPhoto.js';
 //   hdurl: "https://apod.nasa.gov/apod/image/2112/20211221Tezel.jpg",
 //   title: "Three Plants and a Comet"
 // }
+
 
 function App() {
   const [data, setData] = useState();
@@ -26,8 +29,8 @@ setData(res.data);
 
   return (
     <div className="App">
-      {data && <NasaPhoto photo={data} /> }
-
+     <StyledDiv> {data && <NasaPhoto photo={data}  /> } </StyledDiv>
+     <styledP>hello from inside this Compoent</styledP>
     </div>
   );
 }
