@@ -28,6 +28,21 @@
   color: #61dafb;
 }
 
+.nasa-photo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.explanation {
+  max-width: 50%;
+}
+
+img {
+  max-width: 60%;
+  object-fit: cover;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
