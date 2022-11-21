@@ -1,15 +1,23 @@
 import React from "react";
 import "./App.css";
+import NasaApi from './data';
+import {  Header, Cards } from './containers';
+
+
 
 function App() {
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+      <NasaApi /> 
+      <Header />
+      <Cards />
     </div>
+    
+    
+  
+    
   );
 }
 
 export default App;
+ 
