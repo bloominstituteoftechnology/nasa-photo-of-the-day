@@ -1,6 +1,5 @@
 import React from 'react';
 import CardStyles from './styles';
-import NasaApi from './data';
 
 import {
     Card, CardImg, CardText, CardBody,

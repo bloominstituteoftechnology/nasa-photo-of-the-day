@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import StyledContent from './styles';
-import CardContainer from './containers';
-
+import CardContainer from "./containers/Cards/styles";
 
 
 
