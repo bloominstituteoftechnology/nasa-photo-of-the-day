@@ -1,21 +1,58 @@
 import React from 'react';
-import CardStyles from './styles';
+//import CardStyles from './styles';
 
 import {
     Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle
   } from 'reactstrap';
 
-  const CardContainer = (props) => {
-    const { date, title, explanation, url } = props.data;
-    console.log(data)
-    return (
-        <CardStyles>
+  const CardContainer = ({data}) => {
+    const { date, title, explanation, url } = data;
+    console.log("DATA", data)
+        
+        return (
+        <div className="card-container">
             <Card>
                 <CardBody>
                 <CardTitle>{title}</CardTitle>
                 <CardSubtitle>{date}</CardSubtitle>
-                <CardImg top-width = "80%" src = {url} alt = "nasa photo of the day"/>
+                <CardImg width = "50%" src = {url} alt = "nasa photo of the day"/>
+                <CardText>{explanation}</CardText>      
+
+                </CardBody>
+            
+
+            </Card>
+
+            <Card>
+                <CardBody>
+                <CardTitle>{title}</CardTitle>
+                <CardSubtitle>{date}</CardSubtitle>
+                <CardImg width = "50%" src = {url} alt = "nasa photo of the day"/>
+                <CardText>{explanation}</CardText>      
+
+                </CardBody>
+            
+
+            </Card>
+
+            <Card>
+                <CardBody>
+                <CardTitle>{title}</CardTitle>
+                <CardSubtitle>{date}</CardSubtitle>
+                <CardImg width = "50%" src = {url} alt = "nasa photo of the day"/>
+                <CardText>{explanation}</CardText>      
+
+                </CardBody>
+            
+
+            </Card>
+
+            <Card>
+                <CardBody>
+                <CardTitle>{title}</CardTitle>
+                <CardSubtitle>{date}</CardSubtitle>
+                <CardImg width = "50%" src = {url} alt = "nasa photo of the day"/>
                 <CardText>{explanation}</CardText>      
 
                 </CardBody>
@@ -26,7 +63,7 @@ import {
 
 
 
-        </CardStyles>
+        </div>
     )
 }
 

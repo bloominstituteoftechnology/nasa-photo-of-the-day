@@ -39,3 +39,8 @@
 body {
 background-color: #282c34;
 }
+.card-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}

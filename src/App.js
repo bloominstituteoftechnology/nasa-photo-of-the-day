@@ -8,9 +8,10 @@ import {  Header, Cards } from './containers';
 function App() {
   return (
     <div className="App">
-      <NasaApi /> 
       <Header />
-      <Cards />
+      <NasaApi /> 
+      
+      {/* <Cards /> */}
     </div>
     
     
