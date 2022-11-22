@@ -10,12 +10,13 @@ import CardContainer from "./containers/Cards";
 function NasaApi() {
     const [photos, setPhotos] = useState([])
 
-
-
+   const urls= ["url1", "url2", "url3"];
+// change
     
 
     useEffect(() => {
        // axios.all([
+       
         axios.get(
           "https://api.nasa.gov/planetary/apod?api_key=faHZawcTjQQrLRXilzcZEYJDOU87wLPSehtNpb2W&date=2020-03-05 "
         )
