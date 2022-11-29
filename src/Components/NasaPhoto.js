@@ -1,13 +1,32 @@
 import React from "react";
+import styled from "styled-components";
+
+const NasaTitle = styled.h3 `
+    color: turquoise;
+    font-size: 3em;
+    font-family: georgia;
+`
+const Explanation = styled.p `
+    color: magenta;
+    font-family: georgia;
+    font-size: 2em;
+`
+
+const WrapperDiv = styled.div`
+    background: black;
+`
+const NasaPic = styled.img`
+    border-color: white;
+`
 
 const NasaPhoto = (props)=>{
     return(
-        <div ClassName="nasa-photo-wrapper">
-            <h3>{props.photo.title}</h3>
+        <WrapperDiv>
+            <NasaTitle>{props.photo.title}</NasaTitle>
             <p>{props.photo.data}</p>
             <img src={props.photo.hdurl}/>
-            <p ClassName='explanation'>{props.photo.explanation}</p>
-        </div>
+            <Explanation>{props.photo.explanation}</Explanation>
+        </WrapperDiv>
     )
 }
 
