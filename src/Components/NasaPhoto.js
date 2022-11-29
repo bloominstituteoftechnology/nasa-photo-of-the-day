@@ -11,12 +11,12 @@ const Explanation = styled.p `
     font-family: georgia;
     font-size: 2em;
 `
-
 const WrapperDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background: black;
-`
-const NasaPic = styled.img`
-    border-color: white;
 `
 
 const NasaPhoto = (props)=>{
