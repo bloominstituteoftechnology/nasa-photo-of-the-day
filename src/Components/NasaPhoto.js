@@ -1,13 +1,25 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const StyledNasaPhoto = styled.div`
+    h2 {
+        color: ${props => props.theme.secondaryColor};
+        padding-top: 20px;
+    }
+    p {
+        color: ${props => props.theme.black};
+        padding: 15px;
+   } 
+`;
 
 const NasaPhoto = (props) => {
     return (
-        <div className='nasa-photo-wrapper'>
-            <h3>{props.photo.title}</h3>
+        <StyledNasaPhoto className='nasa-photo-wrapper'>
+            <h2>{props.photo.title}</h2>
             <p>{props.photo.date}</p>
             <img src={props.photo.hdurl} />
             <p>{props.photo.explanation}</p>
-        </div>
+        </StyledNasaPhoto>
     )
 }
 

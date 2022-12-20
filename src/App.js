@@ -4,6 +4,7 @@ import axios from 'axios';
 import "./App.css";
 
 import NasaPhoto from "./Components/NasaPhoto";
+import Header from "./Components/Header";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
   
   return (
     <div className="App">
+      { <Header /> }
       { data && <NasaPhoto photo={data} /> } 
     </div>
   );
