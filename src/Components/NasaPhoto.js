@@ -29,11 +29,25 @@ const NasaAppWrap = styled.div`
   .copyright{
     display:flex;
   }
+  select{
+    background-color:lightgrey;
+    border:1px solid lightgrey;
+    &:hover{
+      border:1px solid black;
+    }
+    width:50%;
+    text-align:center;
+    font-size:20px;
+  }
 `
 const NasaPhoto = (props) => {
     return(
       <NasaAppWrap className='Nasa-image-wrapper'>
         <h1 className='Main-title'>{props.Data.title}</h1>
+        <select>
+          <option value= 'TodaysDate'>{props.Data.date}</option>
+          <option value= 'YesterdaysDate'>Yesterday date</option>
+        </select>
         <h3 className='Date'>{props.Data.date}</h3>
         <img src = {props.Data.hdurl} alt = 'An image os a galaxy that is far far away'/>
         <p className='Detailed-report'>{props.Data.explanation}</p>
