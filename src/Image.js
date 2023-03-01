@@ -2,10 +2,10 @@ import React from "react";
 
 function Image({ title, img, date }) {
   return (
-    <div className="Photo">
+    <div className="imageContainer">
       <h2>{title}</h2>
       <p>{date}</p>
-      <img src={img} alt={title} />
+      <img className="photo" src={img} alt={title} />
     </div>
   );
 }
