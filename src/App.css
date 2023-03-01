@@ -8,12 +8,14 @@
 }
 
 img {
-  display: flex;
-  flex-direction: row;
-  width: 950px;
-  border: solid red 5px;
+  width: 1000px;
 }
 
+.imageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .description {
   width: 50%;
   font-size: 25px;

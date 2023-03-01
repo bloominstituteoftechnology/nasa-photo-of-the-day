@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
 import Title from "./Title";
-import Image from "./Image";
-import Explanation from "./Explanation";
+import Body from "./body";
 
 function App() {
   const [data, setData] = useState();
@@ -21,12 +20,16 @@ function App() {
   return (
     <div className="App">
       <Title />
-      {!data
-        ? "Loading..."
-        : [
-            <Image title={data.title} img={data.hdurl} date={data.date} />,
-            <Explanation description={data.explanation} />,
-          ]}
+      {!data ? (
+        "Loading..."
+      ) : (
+        <Body
+          title={data.title}
+          img={data.hdurl}
+          date={data.date}
+          description={data.explanation}
+        />
+      )}
     </div>
   );
 }
