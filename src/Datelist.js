@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import axios from "axios";
+import { useEffect } from "react";
 
 const SelectStyleDiv = styled.div`
   display: flex;
@@ -17,8 +19,9 @@ const SelectStyle = styled.select`
   padding: 0 30px 0 15px;
   width: 45%;
   color: white;
-  background-color: #2873ff;
+  background-color: rgb(135, 187, 162);
   text-align: center;
+  font-size: 25px;
 `;
 
 function DateList() {
@@ -38,19 +41,34 @@ function DateList() {
     listDate.push(strDate);
     dateMove.setDate(dateMove.getDate() + 1);
   }
+
   const [date, setDate] = useState(endDate);
+  useEffect(() => {
+    axios
+      .get(`https://api.nasa.gov/planetary/apod?date=${date}&API_KEY=DEMO_KEY`)
+      .then((res) => {
+        console(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [date]);
+
   function selectedDate(e) {
     setDate(e.target.value);
   }
-
   console.log(date);
-
   return (
     <SelectStyleDiv>
       <h3 style={{ fontSize: "40px" }}>Select Photos of The Week Below</h3>
       <SelectStyle onClick={selectedDate}>
+        <option>Select Date ▼ </option>
         {listDate.map((dates, idx) => {
-          return <option key={idx}>{dates}</option>;
+          return (
+            <option value={dates} key={idx}>
+              {dates}
+            </option>
+          );
         })}
       </SelectStyle>
     </SelectStyleDiv>

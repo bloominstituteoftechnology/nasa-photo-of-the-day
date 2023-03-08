@@ -6,7 +6,7 @@ const HeadingColor = styled.div`
   text-align: center;
   font-size: 50px;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: rgba(10, 60, 145, 0.5);
+  background-color: rgba(59, 96, 100, 0.75);
   height: 200px;
   display: flex;
   justify-content: center;
@@ -20,7 +20,7 @@ function Title() {
     <HeadingColor>
       Welcome To NASA's Photo of the Day
       <h5 style={{ textAlign: "center", fontSize: "25px", color: "white" }}>
-        By Aaron Belmore
+        <p style={{ marginTop: "20px" }}>By Aaron Belmore</p>
       </h5>
     </HeadingColor>
   );

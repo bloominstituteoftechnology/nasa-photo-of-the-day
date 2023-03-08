@@ -4,7 +4,7 @@ import styled from "styled-components";
 const SecondaryTitle = styled.div`
   text-align: center;
   font-size: 50px;
-  padding-top: 20px;
+  padding-top: 45px;
 `;
 
 const ImageInfo = styled.div`
@@ -18,8 +18,13 @@ const ImageInfo = styled.div`
 
 const InfoText = styled.p`
   padding: 20px;
+  margin: 10px auto;
   font-size: 20px;
   width: 50%;
+  border: 4px solid #364958;
+  background-color: #3b6064;
+  border-radius: 15px;
+  color: white;
 `;
 
 function Body({ title, img, description }) {
@@ -34,7 +39,8 @@ function Body({ title, img, description }) {
           style={{
             border: "4px solid grey",
             borderRadius: "2px",
-            width: "50%",
+            maxWidth: "75%",
+            height: "50%",
           }}
           src={img}
           alt={title}
