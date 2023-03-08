@@ -3,6 +3,7 @@ import "./App.css";
 import axios from "axios";
 import Title from "./Title";
 import Body from "./body";
+import Datelist from "./Datelist";
 
 function App() {
   const [data, setData] = useState();
@@ -16,20 +17,21 @@ function App() {
         console.log(err);
       });
   }, []);
-  console.log(data);
+
   return (
     <div className="App">
       <Title />
-      {!data ? (
-        "Loading..."
-      ) : (
-        <Body
-          title={data.title}
-          img={data.hdurl}
-          date={data.date}
-          description={data.explanation}
-        />
-      )}
+
+      {!data
+        ? "Loading..."
+        : [
+            <Body
+              title={data.title}
+              img={data.hdurl}
+              description={data.explanation}
+            />,
+            <Datelist />,
+          ]}
     </div>
   );
 }
