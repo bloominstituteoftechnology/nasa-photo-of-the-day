@@ -1,52 +1,42 @@
 import axios from "axios";
-import React, { useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 
 
 function App() {
-const [showbutton, setShowbutton] = useState(false)
-const [image, setImage] = useState("")
+  const [image, setImage] = useState("")
+  const [titleAnimationFinished, setTitleAnimationFinished] = useState(false);
 
-setTimeout(()=>{
-  setShowbutton(true)
-}, 6000)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setTitleAnimationFinished(true);
+    }, 6000);
 
-let timeoutID;
+    return () => clearTimeout(timer);
+  }, []);
 
-function startTimer() {
-  timeoutID = setTimeout(() => {
-    setShowbutton(true);
-  }, 6000);
-}
+  const getImage = () => {
+    // window.location.href = "http://google.com"
+    axios.get("https://api.nasa.gov/planetary/apod?api_key=wiaCGZbAYr12ybcE87dk6myOc7rjsu3B0sJUEUkf").then(res => {
+      setImage(res.data.url); 
+      clearbutton()
+    })
+  }
 
-function stopTimer() {
-  clearTimeout(timeoutID);
-}
-
-const getImage = () =>{
-  // window.location.href = "http://google.com"
-  axios.get("https://api.nasa.gov/planetary/apod?api_key=wiaCGZbAYr12ybcE87dk6myOc7rjsu3B0sJUEUkf").then(res=>{
-    setImage(res.data.url);
-    setShowbutton(false);
-    
-  })
-}
-
-
-// const removeButton =()=>{
-//   setShowbutton(false)
- 
-// }
-
+  function clearbutton (){
+    setTitleAnimationFinished(false)
+  }
 
   return (
     <div className="App containter">
-      
-        <p className="line-1 anim-typewriter">Welcome to NASA Photo of the Day </p>
-        <button 
-        onClick={getImage} 
-        className="fade-in-button" 
-        style={{display: showbutton ? "": "none"}}>Enter</button>
+
+      <h1
+        onAnimationEnd={() => setTitleAnimationFinished(true)}
+        className="line-1 anim-typewriter"> Welcome to NASA Photo of the Day </h1>
+        {titleAnimationFinished && (<button
+        onClick={getImage}
+        className="fade-in-button">
+        Enter </button>)}
       {image && (<img src={image} />)}
     </div>
   );
