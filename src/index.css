@@ -23,7 +23,7 @@ html{
 
     top: 50%;  
     width: 24em;
-    margin-top: 10rem;
+    margin-top: 5rem;
     margin-left: 37rem;
     border-right: 2px solid rgba(255,255,255,.75);
     font-size: 180%;
@@ -60,4 +60,10 @@ color: black; }
 img{
   height: 600px;
   width: 600px;
+}
+
+p{
+ padding-left: 100px;
+ padding-right: 100px;
+ 
 }

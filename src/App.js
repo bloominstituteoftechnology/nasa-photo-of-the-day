@@ -10,7 +10,7 @@ function App() {
  const [pcontent, setpcontent] = useState("")
 
 
- 
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setTitleAnimationFinished(true);
@@ -43,7 +43,7 @@ function App() {
         {titleAnimationFinished && (<button
         onClick={getImage}
         className="fade-in-button">
-        Enter </button>)}
+        Generate Today's Photo </button>)}
         <h2>{h2content}</h2>
         {image && (<img src={image} /> )}
         <p>{pcontent}</p>
