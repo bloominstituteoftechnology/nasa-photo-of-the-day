@@ -57,4 +57,7 @@ color: black; }
   100% { opacity: 1; }
 }
 
-
+img{
+  height: 600px;
+  width: 600px;
+}

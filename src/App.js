@@ -6,7 +6,11 @@ import "./App.css";
 function App() {
   const [image, setImage] = useState("")
   const [titleAnimationFinished, setTitleAnimationFinished] = useState(false);
+ const [ h2content, seth2content] = useState("")
+ const [pcontent, setpcontent] = useState("")
 
+
+ 
   useEffect(() => {
     const timer = setTimeout(() => {
       setTitleAnimationFinished(true);
@@ -18,8 +22,11 @@ function App() {
   const getImage = () => {
     // window.location.href = "http://google.com"
     axios.get("https://api.nasa.gov/planetary/apod?api_key=wiaCGZbAYr12ybcE87dk6myOc7rjsu3B0sJUEUkf").then(res => {
+        clearbutton();
       setImage(res.data.url); 
-      clearbutton()
+      seth2content(res.data.date);
+      setpcontent(res.data.explanation);
+    
     })
   }
 
@@ -37,7 +44,11 @@ function App() {
         onClick={getImage}
         className="fade-in-button">
         Enter </button>)}
-      {image && (<img src={image} />)}
+        <h2>{h2content}</h2>
+        {image && (<img src={image} /> )}
+        <p>{pcontent}</p>
+   
+     
     </div>
   );
 }
