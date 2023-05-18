@@ -36,3 +36,11 @@ img {
   flex-direction: column;
   align-items: center;
   }
+
+.title {
+  background-color: antiquewhite;
+}
+
+.App {
+  background-color: bisque;
+}
