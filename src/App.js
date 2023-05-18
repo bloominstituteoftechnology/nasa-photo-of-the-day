@@ -22,6 +22,8 @@ function App() {
   
   return (
     <div className="App">
+      <h1>Picture of the Day</h1>
+      {console.log(data)}
       { data && <NasaPhoto photo={data}></NasaPhoto>}
     </div>
   );
