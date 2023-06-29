@@ -56,7 +56,7 @@ In this project you will build out a application to show the NASA photo of the d
     - Hourly Limit: 30 requests per IP address per hour
     - Daily Limit: 50 requests per IP address per day
 
-3. If you end up needing to request an API key, **do not commit it to GitHub** along with your code. This is a security risk!
+3. If you end up needing to request an API key, **do not push it to GitHub** along with your code. This is a security risk!
 
 4. As an "emergency" alternative to the NASA API you can make GET requests to `http://localhost:9009/api/apod?api_key=DEMO_KEY`.
 
