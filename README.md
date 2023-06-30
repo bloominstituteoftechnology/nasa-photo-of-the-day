@@ -87,7 +87,7 @@ In this project you will build out a application to show the NASA photo of the d
 
 ## Submission Format
 
-- [ ] Submit a link to your repository in Canvas.
+- [ ] Submit a link to your github repo in your learning platform.
 
 -----
 
