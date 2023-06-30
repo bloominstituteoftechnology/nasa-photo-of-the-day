@@ -58,7 +58,7 @@ In this project you will build out a application to show the NASA photo of the d
 
 3. If you end up needing to request an API key, **do not push it to GitHub** along with your code. This is a security risk!
 
-4. As an "emergency" alternative to the NASA API you can make GET requests to `http://localhost:9009/api/apod?api_key=DEMO_KEY`.
+4. As an "emergency" alternative to the NASA API, you can make GET requests to `http://localhost:9009/api/apod?api_key=DEMO_KEY`.
 
 ## Task 5: Consuming the data
 
