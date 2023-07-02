@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+.nasa-photo-wrapper {
+  display: flex;
+  align-items: center;
+flex-direction: column;
+}
+
+.pe {
+  max-width: 50%;
+
+}
+
+img {
+  display: flex;
+  max-width: 60%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+P {
+  display: flex;
+  text-align: left;
+}
