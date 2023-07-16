@@ -37,6 +37,10 @@
   }
 }
 
+* {
+  background-color: #191970;
+}
+
 .nasa-photo-wrapper {
   display: flex;
   flex-direction: column;
@@ -46,8 +50,21 @@
 img {
   max-width: 70%;
   object-fit: cover;
+  padding-bottom: 2%;
 }
 
 .nasa-photo-wrapper p {
   max-width: 90%;
+}
+
+h1 {
+  color: #FF5003;
+}
+
+h2 {
+  color: #FF8E00;
+}
+
+p {
+  color: #FD7702;
 }
