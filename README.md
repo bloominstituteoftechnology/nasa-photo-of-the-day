@@ -8,7 +8,7 @@ This will be a two-module project. In it, you will consume the NASA API to fetch
 
 Read these instructions carefully. Make sure you understand the requirements before starting this project.
 
-## Commits
+## Commits////
 
 Commit your code regularly and meaningfully. Doing so helps you and your team lead in case you ever need to return to old code for any number of reasons.
 
