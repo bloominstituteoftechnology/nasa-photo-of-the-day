@@ -86,9 +86,9 @@ You may run into an error where your components try to access object properties 
 if (!props.photoOfTheDay) return <h3>Loading...</h3>;
 
 // Display your component as normal after the data has been fetched
-return (
-  {/* your normal JSX here */}
-);
+return {
+  /* your normal JSX here */
+};
 ```
 
 Read through the API docs carefully. As a developer, you will read through many technical docs, so start now to try and understand them.
@@ -106,6 +106,6 @@ Follow these steps to complete your project.
 
 - [ ] Submit a link to your repository in Canvas.
 
-----
+---
 
 ## Part II - [Advanced Styling Techniques](DAY_TWO_README.md)
